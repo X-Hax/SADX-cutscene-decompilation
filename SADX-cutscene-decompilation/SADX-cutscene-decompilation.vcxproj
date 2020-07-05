@@ -102,6 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\josh\source\repos\SADX-cutscene-decompilation\sadx-mod-loader\SADXModLoader\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,12 +140,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ev0001_s_intro.cpp" />
     <ClCompile Include="ev0020_s_mural.cpp" />
     <ClCompile Include="mod.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h" />
     <ClInclude Include="SADXEventList.h" />
+    <ClInclude Include="SADXEventStructs.h" />
+    <ClInclude Include="SADXEventVariables.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

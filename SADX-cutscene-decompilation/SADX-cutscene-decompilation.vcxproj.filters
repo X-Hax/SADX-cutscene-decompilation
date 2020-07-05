@@ -21,12 +21,21 @@
     <ClCompile Include="mod.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ev0001_s_intro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SADXEventList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SADXEventStructs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SADXEventVariables.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

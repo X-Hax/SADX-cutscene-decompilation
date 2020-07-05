@@ -10,5 +10,7 @@ extern "C"
     {
         //TODO: Figure out how to replace the CutsceneData entry properly lol
         WriteJump((void*)0x6D3640, ev0020_s_mural);
+        WriteJump((void*)0x6EA520, ev0001_s_intro);
+        
     }
 }
