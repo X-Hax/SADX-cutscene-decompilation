@@ -3,7 +3,7 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
-void __cdecl ev0001_s_intro(int state)
+void ev0001_s_intro(int state)
 {
     ObjectMaster* player = EV_GetPlayer(0);
     ObjectMaster* PAT_01 = 0;
