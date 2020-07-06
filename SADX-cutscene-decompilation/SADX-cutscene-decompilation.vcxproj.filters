@@ -24,6 +24,15 @@
     <ClCompile Include="ev0001_s_intro.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ev002B_s_beforechaos0.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0002_s_chaos0defeated.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0003_s_tailscrash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
