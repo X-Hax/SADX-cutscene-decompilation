@@ -15,6 +15,7 @@ VoidFunc(EV_PadOff, 0x42F620);
 VoidFunc(EV_CanselOn, 0x42F630);
 FunctionPointer(void, EV_Msg, (char* str), 0x42FB20);
 VoidFunc(EV_MsgClose, 0x42FBB0);
+VoidFunc(EV_MsgCls, 0x42FC20);
 FunctionPointer(ObjectMaster*, EV_GetPlayer, (int no), 0x42FC40);
 FunctionPointer(void, EV_FreeObject, (ObjectMaster** tp), 0x42FC50);
 FunctionPointer(void, EV_SetPos, (ObjectMaster* tp, float x, float y, float z), 0x42FC70);
@@ -29,6 +30,7 @@ ObjectFunc(EV_ClrAction, 0x42FE40);
 FunctionPointer(void, EV_SetPath, (ObjectMaster* tp, EPATHTAG* path, float speed, int mode), 0x42FE60);
 ObjectFunc(EV_ClrPath, 0x42FE80);
 ObjectFunc(EV_LookFree, 0x42FFB0);
+FunctionPointer(void, EV_LookObject, (ObjectMaster* tp, ObjectMaster* target, float x, float y, float z), 0x42FFD0);
 FunctionPointer(void, EV_LookPoint, (ObjectMaster* tp, float x, float y, float z), 0x430000);
 FunctionPointer(void, EV_MovePoint2, (ObjectMaster* tp, float x, float y, float z, float s, float a), 0x4300D0);
 FunctionPointer(void, EV_MoveRotation, (ObjectMaster* tp, int x, int y, int z), 0x430120);
@@ -84,6 +86,23 @@ FunctionPointer(ObjectMaster*, CIchimaie2_Create, (NJS_TEXLIST* texlistp, char m
 FunctionPointer(void, CIchimaie2_SetDstAlpha, (ObjectMaster* _this, float alpha, int frame), 0x6EF6F0);
 FunctionPointer(ObjectMaster*, CIchimaie2_SetPriority, (ObjectMaster* _this, float pri), 0x6EF710);
 FunctionPointer(ObjectMaster*, CSkyWalk_create2, (ObjectMaster* obj, float height), 0x6EF9C0);
+FunctionPointer(void, create_eggmoble, (float x, float y, float z, int ax, int ay, int az), 0x6F0940);
+VoidFunc(delete_eggmoble, 0x6F09A0);
+FunctionPointer(void, ChgEggMobleMod, (char mode), 0x6F09C0);
+FunctionPointer(void, ChgEggMobleSMod, (char mode), 0x6F09E0);
+FunctionPointer(void, eggmoble_move_normal, (float x, float y, float z, signed int frame), 0x6F0A00);
+FunctionPointer(void, eggmoble_turn, (signed int ax, signed int ay, signed int az, signed int frame, char efmode), 0x6F0AC0);
+FunctionPointer(void, eggmoble_moveandturn, (float x, float y, float z, signed int ax, signed int ay, signed int az, signed int frame, char efmode), 0x6F0B20);
+FunctionPointer(ObjectMaster*, GetEggMobleTask, (), 0x6F0BF0);
+VoidFunc(DeleteEggmoble1, 0x6F7020);
+FunctionPointer(void, MoveEggmoble1, (float tar_x, float tar_y, float tar_z), 0x6F7040);
+FunctionPointer(void, SetEggmoble1, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z), 0x6F7090);
+VoidFunc(JetNoneEggmoble1, 0x6F70D0);
+VoidFunc(JetNormalEggmoble1, 0x6F70E0);
+VoidFunc(JetLargeEggmoble1, 0x6F70F0);
+VoidFunc(JetMaxEggmoble1, 0x6F7100);
+FunctionPointer(void, ChangeSpeedEggmoble1, (float speed), 0x6F7110);
+FunctionPointer(void, CreateEggmoble1, (float x, float y, float z, int angx, int angy, int angz), 0x6F78A0);
 VoidFunc(StgChaos0CtrlOff, 0x6F95D0);
 FunctionPointer(void, StgChaos0SetPos, (float pos_x, float pos_y, float pos_z), 0x6F9650);
 FunctionPointer(void, StgChaos0SetAng, (int ang_x, int ang_y, int ang_z), 0x6F96A0);
@@ -91,12 +110,13 @@ FunctionPointer(void, StgChaos0CtrlOn, (float pos_x, float pos_y, float pos_z,
 	int ang_x, int ang_y, int ang_z, int rot_spd), 0x6F9840);
 
 
-//Unofficial names
-VoidFunc(LoadPrototypePlane, 0x6E8E10);  
-VoidFunc(FreePrototypePlane, 0x6E8E30); 
-FunctionPointer(void, MoveChaosPuddle, (float pos_x, float pos_y, float pos_z, signed int frame), 0x6E9A60);
-FunctionPointer(void, Chaos0_EnterDrain, (signed int spd), 0x6E9AC0);
-FunctionPointer(void, initElemChaos0Task_2, (float xPos, float yPos, float zPos, int yAng), 0x6E9D90);
+/*Unofficial names, a few of these seem to be local to specific events
+so I'll probably add them to their files eventually.*/
+VoidFunc(tornado_cons_EV0003, 0x6E8E10);
+VoidFunc(tornado_dest_EV0003, 0x6E8E30);
+FunctionPointer(void, MoveChaosPuddle_EV0002, (float pos_x, float pos_y, float pos_z, signed int frame), 0x6E9A60);
+FunctionPointer(void, Chaos0_EnterDrain_EV0002, (signed int spd), 0x6E9AC0);
+FunctionPointer(void, initElemChaos0Task_EV0002, (float xPos, float yPos, float zPos, int yAng), 0x6E9D90);
 VoidFunc(EV_FreeFadeToWhite, 0x6EFB30);
 FunctionPointer(void, EV_FadeToWhite, (int a1, int a2, int a3), 0x6EFD00);
 FunctionPointer(void, EV_FreeWaterRipple, (int a1), 0x6F1B80);

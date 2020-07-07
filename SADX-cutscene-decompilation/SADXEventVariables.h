@@ -30,6 +30,16 @@ DataPointer(NJS_ACTION, action_s_s0031_sonic, 0x3C851F8);
 DataPointer(NJS_ACTION, action_s_s0032_sonic, 0x3C85200);
 DataPointer(NJS_ACTION, action_s_s0033_sonic, 0x3C85208);
 
+//EV0006
+DataPointer(NJS_ACTION, action_m_m0104cp_m_em_purple, 0x2CF270C);
+DataPointer(NJS_ACTION, action_m_m0104_miles, 0x3C848D0);
+DataPointer(NJS_ACTION, action_s_s0022_sonic, 0x3C848D8);
+
+//EV0007
+DataPointer(NJS_ACTION, action_gm_gm0001_eggmoble, 0x2EEC334);
+DataPointer(NJS_ACTION, action_s_s0006_sonic, 0x3C84878);
+DataPointer(NJS_ACTION, action_m_m0001_miles, 0x3C848C0);
+
 //EV002B
 DataPointer(int, pause_flg, 0x3B28114);
 DataPointer(NJS_ACTION, action_mp_10001_POLICE, 0x337E734);
@@ -59,5 +69,7 @@ DataPointer(PADREC_DATA_TAG, EV002B_S_JUMP, 0x8724CC);
 DataArray(char**, msgTbl_ev0001, 0x2C12BD8, 5);
 DataArray(char**, msgTbl_ev0002, 0x2C0F2B8, 5);
 DataArray(char**, msgTbl_ev0003, 0x2C0F064, 5);
+DataArray(char**, msgTbl_ev0006, 0x2C0EFC8, 5);
+DataArray(char**, msgTbl_ev0007, 0x2C0EE08, 5);
 DataArray(char**, msgTbl_ev0020, 0x2BF4044, 5);
 DataArray(char**, msgTbl_ev002B, 0x2BF1458, 5);

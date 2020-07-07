@@ -8,9 +8,9 @@ void ev0002_s_chaos0defeated(int state)
     ObjectMaster* player = EV_GetPlayer(0);
     ObjectMaster* eggman; 
 
-    ObjectMaster* BLACK_18 = 0; //Fade overlay
-    ObjectMaster* task_skywalk_6 = 0; //Temp ground collision for Eggman
-    ObjectMaster* p_Chaos0Task_2 = 0; //Chaos puddle
+    ObjectMaster* BLACK = 0; //Fade overlay
+    ObjectMaster* task_skywalk = 0; //Temp ground collision for Eggman
+    ObjectMaster* p_Chaos0Task = 0; //Chaos puddle
 
     switch(state) {
     case 1:
@@ -29,7 +29,7 @@ void ev0002_s_chaos0defeated(int state)
         EV_CameraAng(1, 0, 6912, 21325, 0);
         EV_CameraPos(1, 0, 275.79999f, 3.4300001f, 262.60001f);
         EV_Wait(30);
-        initElemChaos0Task_2(271.09f, 2.2f, 306.28f, 0);
+        initElemChaos0Task_EV0002(271.09f, 2.2f, 306.28f, 0);
         EV_Wait(1);
         EV_CameraPerspective(0, 90, 12743);
         EV_CameraAng(1, 100, 3328, 4689, 0);
@@ -41,9 +41,9 @@ void ev0002_s_chaos0defeated(int state)
         EV_SetPos(eggman, 100.66f, 122.8f, 421.42001f);
         EV_SetAng(eggman, 0, 19712, 0);
         EV_Wait(1);
-        task_skywalk_6 = CSkyWalk_create2(eggman, 122.8f);
+        task_skywalk = CSkyWalk_create2(eggman, 122.8f);
         EV_Wait(145);
-        MoveChaosPuddle(217.2f, 0.0f, 387.60001f, 100);
+        MoveChaosPuddle_EV0002(217.2f, 0.0f, 387.60001f, 100);
         EventSe_Play(0, 1345, 1800);
         EventSe_Volume(0, -30, 1);
         EV_Wait(10);
@@ -64,7 +64,7 @@ void ev0002_s_chaos0defeated(int state)
         EV_CameraAng(1, 60, 56832, 2816, 0);
         EV_CameraPos(1, 60, 219.22f, 7.1999998f, 394.79999f);
         EV_Wait(60);
-        Chaos0_EnterDrain(50);
+        Chaos0_EnterDrain_EV0002(50);
         EventSe_Volume(0, -100, 60);
         EV_Wait(65);
         EV_ClrAction(player);
@@ -107,30 +107,30 @@ void ev0002_s_chaos0defeated(int state)
         EV_SerifPlay(413);
         EV_Msg(msgTbl_ev0002[TextLanguage][2]); //"\aHa ha ha ha ha ha ha ha ha ha ha!"
         EV_Wait(70);
-        BLACK_18 = COverlayCreate(0.016666668f, 0.1f, 0.0f, 0.0f, 0.0f);
+        BLACK = COverlayCreate(0.016666668f, 0.1f, 0.0f, 0.0f, 0.0f);
         EV_Wait(40);
         EV_MsgClose();
         break;
     case 2:
         EV_CameraOff();
         EV_PadOn();
-        if (task_skywalk_6)
+        if (task_skywalk)
         {
-            FreeTask(task_skywalk_6);
-            task_skywalk_6 = 0;
+            FreeTask(task_skywalk);
+            task_skywalk = 0;
         }
         EV_InitPlayer(0);
         EV_RemovePlayer(2);
-        if (BLACK_18)
+        if (BLACK)
         {
-            FreeTask(BLACK_18);
-            BLACK_18 = 0;
+            FreeTask(BLACK);
+            BLACK = 0;
         }
         EventSe_Close();
-        if (p_Chaos0Task_2)
+        if (p_Chaos0Task)
         {
-            FreeTask(p_Chaos0Task_2);
-            p_Chaos0Task_2 = 0;
+            FreeTask(p_Chaos0Task);
+            p_Chaos0Task = 0;
         }
         break;
     }

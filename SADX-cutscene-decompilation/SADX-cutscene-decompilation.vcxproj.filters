@@ -33,6 +33,12 @@
     <ClCompile Include="ev0003_s_tailscrash.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ev0006_s_poolsidewithtails.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0007_s_egghornetintro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

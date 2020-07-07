@@ -13,6 +13,8 @@ extern "C"
         WriteJump((void*)0x6CA590, ev002B_s_beforechaos0);
         WriteJump((void*)0x6E9E00, ev0002_s_chaos0defeated);
         WriteJump((void*)0x6E8E50, ev0003_s_tailscrash);
+        WriteJump((void*)0x6E7720, ev0006_s_poolsidewithtails);
+        WriteJump((void*)0x6E6640, ev0007_s_egghornetintro);
         WriteJump((void*)0x6D3640, ev0020_s_mural);
        
     }

@@ -7,7 +7,7 @@
 void ev0003_s_tailscrash(int state)
 {
     ObjectMaster* player = EV_GetPlayer(0);
-    ObjectMaster * BLACK_17 = 0;
+    ObjectMaster* BLACK = 0;
 
     switch (state) {
     case 1:
@@ -19,7 +19,7 @@ void ev0003_s_tailscrash(int state)
         SetBankDir(74);
         EventSe_Init(3);
         BGM_Play(MusicIDs_s_square);
-        BLACK_17 = COverlayCreate(1.0f, 0.1f, 0.0f, 0.0f, 0.0f);
+        BLACK = COverlayCreate(1.0f, 0.1f, 0.0f, 0.0f, 0.0f);
         EV_LookFree(player);
         EV_CameraPerspective(1, 1, 17294);
         EV_SetPos(player, -225.23199f, 0.30000001f, 1813.276f);
@@ -28,7 +28,7 @@ void ev0003_s_tailscrash(int state)
         EV_CameraAng(1, 0, 3296, 29300, 64512);
         EV_CameraPos(1, 0, -251.89999f, 34.125999f, 1907.423f);
         EV_Wait(20);
-        COverlaySetSpeed(BLACK_17, -0.025f);
+        COverlaySetSpeed(BLACK, -0.025f);
         EV_Wait(10);
         EV_CameraAng(0, 105, 2816, 29440, 65280);
         EV_CameraPos(0, 105, -221.1626f, 6.3270001f, 1814.416f);
@@ -45,7 +45,7 @@ void ev0003_s_tailscrash(int state)
         EV_CameraPos(1, 0, -222.39999f, 13.5f, 1820.92f);
         EV_CameraPos(0, 100, -223.19f, 10.4f, 1818.5f);
         EV_Wait(40);
-        LoadPrototypePlane();                      
+        tornado_cons_EV0003();                      
         EventSe_Play(0, 1333, 1800);
         EventSe_Volume(0, -60, 1);
         EV_SetFace(player, (char*)"W");
@@ -192,12 +192,12 @@ void ev0003_s_tailscrash(int state)
         EV_InitPlayer(0);
         EV_CameraOff();
         EV_PadOn();
-        FreePrototypePlane();                      
+        tornado_dest_EV0003();
         EventSe_Close();
-        if (BLACK_17)
+        if (BLACK)
         {
-            FreeTask(BLACK_17);
-            BLACK_17 = 0;
+            FreeTask(BLACK);
+            BLACK = 0;
         }
         break;
     }
