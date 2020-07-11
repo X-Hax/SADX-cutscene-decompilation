@@ -54,6 +54,7 @@ FunctionPointer(void, EV_CreateObject, (ObjectMaster** tp, float px, float py, f
 FunctionPointer(void, EV_InitPlayer, (int n), 0x431780);
 ObjectFunc(EV_WaitAction, 0x431810);
 FunctionPointer(void, EV_PlayPad, (int no, PADREC_DATA_TAG* tag), 0x431870);
+ObjectFunc(EV_WaitMove, 0x4318D0);
 VoidFunc(EV_SerifWait, 0x431900);
 FunctionPointer(void, EV_SerifPlay, (int id), 0x431930);
 FunctionPointer(void, tikal_dispSwitch, (int sw), 0x4A3520);
@@ -63,21 +64,33 @@ FunctionPointer(void, EventSe_Play, (int id, int se, int frame), 0x64FD00);
 FunctionPointer(void, EventSe_Stop, (int id), 0x64FD40);
 FunctionPointer(void, EventSe_Volume, (int id, int volume, int frame), 0x64FD80);
 FunctionPointer(void, EventSe_Pan, (int id, int pan, int frame), 0x64FDB0);
+FunctionPointer(void, EventSe_Pitch, (int id, int pitch, int frame), 0x64FDE0);
 FunctionPointer(void, EventSe_Oneshot, (int se, int volume, int pan, int pitch), 0x64FE10);
 ObjectFunc(stopObject, 0x6EBAB0);
 VoidFunc(stopObjectAll, 0x6EBB00);
 FunctionPointer(void, moveObject, (ObjectMaster* obj, float st_x, float st_y, float st_z, float end_x, float end_y, float end_z, int frame), 0x6EC2B0);
+FunctionPointer(void, moveObjectAngle2, (ObjectMaster* obj, float st_x, float st_y, float st_z,
+	float en_x, float en_y, float en_z, int st_ang_x, int st_ang_y, int st_ang_z,
+	int en_ang_x, int en_ang_y, int en_ang_z, signed int frame), 0x6EC580);
+FunctionPointer(void, moveObjectOn, (ObjectMaster* tp, float x, float y, float z, int frame, ObjectMaster* dest_obj), 0x6EC6D0);
 FunctionPointer(ObjectMaster*, CTikalLight_Create, (float x, float y, float z), 0x6ED090);
 FunctionPointer(void, effect_delete, (__int16 ef_num), 0x6ED490);
 FunctionPointer(void, effect_create2, (ObjectMaster* obj, int ef_num, float ef_x,
 	float ef_y, float ef_z, char* ef_name), 0x6ED770);
+VoidFunc(crushLightOff, 0x6ED9A0);
+FunctionPointer(void, crushLightOn, (float pos_x, float pos_y, float pos_z, int crushLightNum, int life,
+	float start_width, float end_width, int start_col, int end_col), 0x6EDA20);
 FunctionPointer(void, effect_scl, (int ef_num, float sx, float sy), 0x6ED8E0);
 VoidFunc(DeleteChaos0, 0x6EDAB0);
 FunctionPointer(void, Jump2Chaos0, (float pos_x, float pos_y, float pos_z,
 	float jumph, signed int frame), 0x6EDAD0);
 FunctionPointer(void, Jump3Chaos0, (float pos_x, float pos_y, float pos_z,
 	float jumph, signed int frame), 0x6EDBA0);
+FunctionPointer(void, MoveChaos0, (float pos_x, float pos_y, float pos_z, signed int frame), 0x6EDC70);
 FunctionPointer(ObjectMaster*, GetChaos0, (), 0x6EDCD0);
+VoidFunc(ToWaterChaos0, 0x6EDD00);
+VoidFunc(ToHumanChaos0, 0x6EDD20);
+FunctionPointer(void, SetWaterChaos0, (), 0x6EDD80);
 FunctionPointer(void, CreateChaos0, (float pos_x, float pos_y, float pos_z,
 	int ang_x, int ang_y, int ang_z, signed int cng_int), 0x6EE930);
 FunctionPointer(ObjectMaster*, COverlayCreate, (float s, float a, float r, float g, float b), 0x6EF480);
@@ -94,6 +107,16 @@ FunctionPointer(void, eggmoble_move_normal, (float x, float y, float z, signed i
 FunctionPointer(void, eggmoble_turn, (signed int ax, signed int ay, signed int az, signed int frame, char efmode), 0x6F0AC0);
 FunctionPointer(void, eggmoble_moveandturn, (float x, float y, float z, signed int ax, signed int ay, signed int az, signed int frame, char efmode), 0x6F0B20);
 FunctionPointer(ObjectMaster*, GetEggMobleTask, (), 0x6F0BF0);
+FunctionPointer(ObjectMaster*, CObjSmoke_Create, (), 0x6F3450);
+VoidFunc(DeleteChaos1, 0x6F5BE0);
+VoidFunc(ToHumanChaos1, 0x6F5C20);
+FunctionPointer(void, ChangeMotionSpeedChaos1, (float mot_spd), 0x6F5C40);
+VoidFunc(SetWaterChaos1, 0x6F5C80);
+FunctionPointer(void, CreateChaos1, (float pos_x, float pos_y, float pos_z, int ang_x,
+    int ang_y, int ang_z, int cng_int), 0x6F6120);
+FunctionPointer(ObjectMaster*, mghand_init, (float x, float y, float z, int ax, int ay, int az), 0x6F6F30);
+FunctionPointer(void, chgMghandMod, (ObjectMaster* obj, char a2), 0x6F6FC0);
+FunctionPointer(void, mghandsetspd, (ObjectMaster* obj, int angspd_x, int angspd_y), 0x6F6FE0);
 VoidFunc(DeleteEggmoble1, 0x6F7020);
 FunctionPointer(void, MoveEggmoble1, (float tar_x, float tar_y, float tar_z), 0x6F7040);
 FunctionPointer(void, SetEggmoble1, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z), 0x6F7090);
@@ -104,6 +127,8 @@ VoidFunc(JetMaxEggmoble1, 0x6F7100);
 FunctionPointer(void, ChangeSpeedEggmoble1, (float speed), 0x6F7110);
 FunctionPointer(void, CreateEggmoble1, (float x, float y, float z, int angx, int angy, int angz), 0x6F78A0);
 VoidFunc(StgChaos0CtrlOff, 0x6F95D0);
+FunctionPointer(ObjectMaster*, CSukiari_Create, (int color, NJS_POINT2* a2, int pointn), 0x6F8AB0);
+FunctionPointer(void, CSukiari_Alpha, (ObjectMaster* a1, unsigned char alpha, int frame), 0x6F8B40);
 FunctionPointer(void, StgChaos0SetPos, (float pos_x, float pos_y, float pos_z), 0x6F9650);
 FunctionPointer(void, StgChaos0SetAng, (int ang_x, int ang_y, int ang_z), 0x6F96A0);
 FunctionPointer(void, StgChaos0CtrlOn, (float pos_x, float pos_y, float pos_z,

@@ -15,6 +15,7 @@ extern "C"
         WriteJump((void*)0x6E8E50, ev0003_s_tailscrash);
         WriteJump((void*)0x6E7720, ev0006_s_poolsidewithtails);
         WriteJump((void*)0x6E6640, ev0007_s_egghornetintro);
+        WriteJump((void*)0x6E41B0, ev0008_s_chaos1);
         WriteJump((void*)0x6D3640, ev0020_s_mural);
        
     }

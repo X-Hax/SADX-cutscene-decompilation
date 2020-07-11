@@ -40,6 +40,29 @@ DataPointer(NJS_ACTION, action_gm_gm0001_eggmoble, 0x2EEC334);
 DataPointer(NJS_ACTION, action_s_s0006_sonic, 0x3C84878);
 DataPointer(NJS_ACTION, action_m_m0001_miles, 0x3C848C0);
 
+//EV0008
+DataPointer(NJS_POINT2, sukiari1, 0x2C0EC84); //Unofficial
+DataPointer(NJS_POINT2, sukiari2, 0x2C0ECA4); //Unofficial
+DataPointer(NJS_ACTION, action_s_s0009_sonic, 0x3C84888);
+DataPointer(NJS_ACTION, action_s_s0038_sonic, 0x3C84890);
+DataPointer(NJS_ACTION, action_s_s0042_sonic, 0x3C84898);
+DataPointer(NJS_ACTION, action_s_s0044_sonic, 0x3C848A8);
+DataPointer(NJS_ACTION, action_s_s0045_sonic, 0x3C848C8);
+DataPointer(NJS_ACTION, action_m_m0136_miles, 0x3C84880);
+DataPointer(NJS_ACTION, action_m_m0137_miles, 0x3C848B0);
+DataPointer(NJS_ACTION, action_m_m0138_miles, 0x3C848B8);
+DataPointer(NJS_ACTION, action_m_m0136d_m_em_purple, 0x2CECB5C);
+DataPointer(NJS_ACTION, action_m_em_purple, 0x2CED244);
+DataPointer(NJS_ACTION, action_gm_gm0023cp_m_em_purple, 0x3016AB4);
+DataPointer(NJS_ACTION, action_gm_gm0020_eggmoble, 0x3018C44);
+DataPointer(NJS_ACTION, action_gm_gm0021_eggmoble, 0x3019E5C);
+DataPointer(NJS_ACTION, action_gm_gm0022_eggmoble, 0x301B074);
+DataPointer(NJS_ACTION, action_gm_gm0023_eggmoble, 0x301C41C);
+DataPointer(NJS_ACTION, action_gm_gm0024_eggmoble, 0x301DE94);
+DataPointer(NJS_ACTION, action_gm_gm0025_eggmoble, 0x302015C);
+DataPointer(NJS_ACTION, action_gm_gm0026_eggmoble, 0x3021854);
+DataPointer(NJS_ACTION, action_gm_gm0028_eggmoble, 0x30220EC);
+
 //EV002B
 DataPointer(int, pause_flg, 0x3B28114);
 DataPointer(NJS_ACTION, action_mp_10001_POLICE, 0x337E734);
@@ -71,5 +94,7 @@ DataArray(char**, msgTbl_ev0002, 0x2C0F2B8, 5);
 DataArray(char**, msgTbl_ev0003, 0x2C0F064, 5);
 DataArray(char**, msgTbl_ev0006, 0x2C0EFC8, 5);
 DataArray(char**, msgTbl_ev0007, 0x2C0EE08, 5);
+DataArray(char**, msgTbl_ev0008, 0x2C0EC70, 5);
+
 DataArray(char**, msgTbl_ev0020, 0x2BF4044, 5);
 DataArray(char**, msgTbl_ev002B, 0x2BF1458, 5);
