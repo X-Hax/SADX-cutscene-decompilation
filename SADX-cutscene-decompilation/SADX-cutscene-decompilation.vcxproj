@@ -146,6 +146,7 @@
     <ClCompile Include="ev0006_s_poolsidewithtails.cpp" />
     <ClCompile Include="ev0007_s_egghornetintro.cpp" />
     <ClCompile Include="ev0008_s_chaos1.cpp" />
+    <ClCompile Include="ev0009_s_aftercasinopolis.cpp" />
     <ClCompile Include="ev0020_s_mural.cpp" />
     <ClCompile Include="ev002B_s_beforechaos0.cpp" />
     <ClCompile Include="mod.cpp" />
