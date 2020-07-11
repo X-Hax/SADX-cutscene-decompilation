@@ -39,7 +39,7 @@
     <ClCompile Include="ev0007_s_egghornetintro.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ev0008_chaos1.cpp">
+    <ClCompile Include="ev0008_s_chaos1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
