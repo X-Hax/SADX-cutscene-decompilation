@@ -59,7 +59,7 @@ void ev000C_s_afterchaos4(int state)
         EV_CameraAng(0, 125, 6836, 37862, 0);
         EV_Wait(10);
         EV_SerifPlay(702);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[0]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[0]); //"\aBehold my floating masterpiece,\nthe "..
         EV_Wait(70);
         EV_CameraPos(0, 60, 63.380001f, 72.220001f, 223.58f);
         EV_Wait(60);
@@ -72,7 +72,7 @@ void ev000C_s_afterchaos4(int state)
         EV_CameraPerspective(0, 90, 13653);
         EV_SerifPlay(703);
         EV_SetAng(player, 0, 0x8000, 0);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[1]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[1]); //"\aBut it pales in comparison to\nthe po"...
         EV_Wait(90);
         EV_CameraPerspective(0, 120, 9102);
         EV_CameraPos(0, 0, 53.610001f, 74.32f, 172.56f);
@@ -80,9 +80,9 @@ void ev000C_s_afterchaos4(int state)
         EV_CameraPos(0, 200, 48.990002f, 77.360001f, 102.96f);
         EV_Wait(30);
         EV_SerifPlay(704);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[2]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[2]); //"\aAdieu... \nUntil we meet again, my fr"...
         EV_Wait(80);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[3]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[3]); //"\aHa ha ha ha ha ha ha!"
         EV_Wait(35);
         ChgCaptureMod(CAP_01, 1);
         QueueSound_XYZ(1336, (EntityData1*)0xCB80001, 1, 120, 185, 80.0f, 80.0f, 160.0f);
@@ -123,7 +123,7 @@ void ev000C_s_afterchaos4(int state)
         EV_SetFace(tails, (char*)"CDCD");
         EV_Wait(5);
         EV_SerifPlay(705);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[4]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[4]); //"\aHey, we can't let him \nget away!"
         EV_Wait(45);
         EV_ClrFace(tails);
         stopObject(getobjModel(0));
@@ -133,7 +133,7 @@ void ev000C_s_afterchaos4(int state)
         EV_SetFace(tails, (char*)"CDCD");
         EV_Wait(5);
         EV_SerifPlay(706);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[5]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[5]); //"\aLet's get to my workshop \nand we'll "...
         EV_Wait(55);
         EV_SerifWait();
         EV_LookFree(player);
@@ -141,7 +141,7 @@ void ev000C_s_afterchaos4(int state)
         EV_ClrFace(player);
         EV_Wait(5);
         EV_ClrFace(tails);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[6]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[6]); //"\aYeah!"
         EV_SerifPlay(707);
         EV_Wait(6);
         switch (VoiceLanguage) {
@@ -160,7 +160,7 @@ void ev000C_s_afterchaos4(int state)
         EV_SetAng(knuckles, 65430, 56608, 18);
         EV_CameraPos(1, 65, 105.57f, 77.510002f, 268.32001f);
         EV_CameraAng(1, 65, 1024, 5376, 0);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[7]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[7]); //"\aYou guys go! "
         EV_Wait(10);
         EV_ClrAction(player);
         EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 8);
@@ -176,7 +176,7 @@ void ev000C_s_afterchaos4(int state)
         EV_SetFace(knuckles, (char*)"CDCD");
         EV_Wait(10);
         EV_SerifPlay(709);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[8]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[8]); //"\aI have some unfinished business\nto t"...
         EV_Wait(20);
         EV_SerifWait();
         EV_ClrFace(knuckles);
@@ -187,14 +187,14 @@ void ev000C_s_afterchaos4(int state)
         EV_SetFace(player, (char*)"CDCD");
         EV_SerifPlay(710);
         EV_Wait(5);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[9]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[9]); //"\aNo problem, Knuckles."
         EV_ClrFace(player);
         EV_Wait(10);
         EV_ClrFace(player);
         EV_SetFace(player, (char*)"CDFE");
         EV_SerifPlay(711);
         EV_Wait(5);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[10]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[10]); //"\aWe'll take care of everything\nhere!"
         EV_Wait(35);
         if (VoiceLanguage == 1) EV_ClrFace(player);
         EV_Wait(50);
@@ -207,7 +207,7 @@ void ev000C_s_afterchaos4(int state)
         EV_CameraAng(0, 0, 62208, 50944, 0);
         EV_CameraPos(0, 60, -79.220001f, 131.35001f, 262.45999f);
         EV_SerifPlay(712);
-        EV_Msg((msgTbl_ev000C[TextLanguage])[11]);
+        EV_Msg((msgTbl_ev000C[TextLanguage])[11]); //"\aCome on, let's get going!"
         EV_LookFree(player);
         EV_SetAng(player, 0, 45056, 0);
         EV_Wait(60);

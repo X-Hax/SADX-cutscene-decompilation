@@ -149,6 +149,7 @@
     <ClCompile Include="ev0009_s_aftercasinopolis.cpp" />
     <ClCompile Include="ev000B_s_beforechaos4.cpp" />
     <ClCompile Include="ev000C_s_afterchaos4.cpp" />
+    <ClCompile Include="ev000D_s_tornado1.cpp" />
     <ClCompile Include="ev0020_s_mural.cpp" />
     <ClCompile Include="ev002B_s_beforechaos0.cpp" />
     <ClCompile Include="mod.cpp" />

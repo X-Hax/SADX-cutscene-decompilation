@@ -51,6 +51,9 @@
     <ClCompile Include="ev000C_s_afterchaos4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ev000D_s_tornado1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

@@ -152,9 +152,10 @@ VoidFunc(JetLargeEggmoble1, 0x6F70F0);
 VoidFunc(JetMaxEggmoble1, 0x6F7100);
 FunctionPointer(void, ChangeSpeedEggmoble1, (float speed), 0x6F7110);
 FunctionPointer(void, CreateEggmoble1, (float x, float y, float z, int angx, int angy, int angz), 0x6F78A0);
-VoidFunc(StgChaos0CtrlOff, 0x6F95D0);
+FunctionPointer(ObjectMaster*, object_tr1_s_t1_body_s_t1_body, (), 0x6F89A0);
 FunctionPointer(ObjectMaster*, CSukiari_Create, (int color, NJS_POINT2* a2, int pointn), 0x6F8AB0);
 FunctionPointer(void, CSukiari_Alpha, (ObjectMaster* a1, unsigned char alpha, int frame), 0x6F8B40);
+VoidFunc(StgChaos0CtrlOff, 0x6F95D0);
 FunctionPointer(void, StgChaos0SetPos, (float pos_x, float pos_y, float pos_z), 0x6F9650);
 FunctionPointer(void, StgChaos0SetAng, (int ang_x, int ang_y, int ang_z), 0x6F96A0);
 FunctionPointer(void, StgChaos0CtrlOn, (float pos_x, float pos_y, float pos_z,
@@ -173,6 +174,8 @@ VoidFunc(EV_FreeFadeToWhite, 0x6EFB30);
 FunctionPointer(void, EV_FadeToWhite, (int a1, int a2, int a3), 0x6EFD00);
 FunctionPointer(void, EV_FreeWaterRipple, (int a1), 0x6F1B80);
 FunctionPointer(void, EV_CreateWaterRipple, (float x, float y, float z, float a4, float a5, int a6, int a7, int a8), 0x6F1D30);
+VoidFunc(p_SonicObj_initializer_EV000D, 0x6DF420);
+VoidFunc(p_SonicObj_EV000D, 0x6DF440);
 
 
 
