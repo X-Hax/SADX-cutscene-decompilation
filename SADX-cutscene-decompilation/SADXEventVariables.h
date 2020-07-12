@@ -94,6 +94,11 @@ DataPointer(NJS_ACTION, action_gm_gm0002_eggmoble, 0x2D41A34);
 DataPointer(NJS_ACTION, action_gm_gm0030_eggmoble, 0x2D42BBC);
 DataPointer(NJS_ACTION, action_gm_gm0032_eggmoble, 0x2D44434);
 
+//EV000C
+DataPointer(NJS_OBJECT, object_ecff_bf_s_fbody_bf_s_fbody, 0x24960A8);
+DataPointer(NJS_TEXLIST, texlist_ec_light, 0x2BF4F2C);
+DataPointer(NJS_ACTION, action_ecff_bf_s_fbody, 0x24983CC);
+
 
 //EV002B
 DataPointer(int, pause_flg, 0x3B28114);
@@ -129,5 +134,6 @@ DataArray(char**, msgTbl_ev0007, 0x2C0EE08, 5);
 DataArray(char**, msgTbl_ev0008, 0x2C0EC70, 5);
 DataArray(char**, msgTbl_ev0009, 0x2C0EA98, 5);
 DataArray(char**, msgTbl_ev000B, 0x2C0E9AC, 5);
+DataArray(char**, msgTbl_ev000C, 0x2C0E840, 5);
 DataArray(char**, msgTbl_ev0020, 0x2BF4044, 5);
 DataArray(char**, msgTbl_ev002B, 0x2BF1458, 5);

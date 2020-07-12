@@ -48,6 +48,9 @@
     <ClCompile Include="ev000B_s_beforechaos4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ev000C_s_afterchaos4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

@@ -74,6 +74,13 @@ FunctionPointer(void, moveObjectAngle2, (ObjectMaster* obj, float st_x, float st
 	float en_x, float en_y, float en_z, int st_ang_x, int st_ang_y, int st_ang_z,
 	int en_ang_x, int en_ang_y, int en_ang_z, signed int frame), 0x6EC580);
 FunctionPointer(void, moveObjectOn, (ObjectMaster* tp, float x, float y, float z, int frame, ObjectMaster* dest_obj), 0x6EC6D0);
+FunctionPointer(void, addmotModel, (int model, NJS_ACTION* action, int mot_id), 0x6ECAC0);
+FunctionPointer(void, playModel, (int model_id, int mot_id, float mot_spd, int loop_num), 0x6ECAE0);
+FunctionPointer(ObjectMaster*, getobjModel, (int model_id), 0x6ECB40);
+FunctionPointer(void, deleteModel, (int model_id), 0x6ECB50);
+FunctionPointer(void, createModelEC, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y,
+	int ang_z, float scl_x, float scl_y, float scl_z, NJS_OBJECT* model, NJS_TEXLIST* texlist,
+	int model_id), 0x6ECF20);
 FunctionPointer(ObjectMaster*, CTikalLight_Create, (float x, float y, float z), 0x6ED090);
 FunctionPointer(void, effect_delete, (__int16 ef_num), 0x6ED490);
 FunctionPointer(void, effect_create2, (ObjectMaster* obj, int ef_num, float ef_x,
@@ -156,6 +163,7 @@ FunctionPointer(void, StgChaos0CtrlOn, (float pos_x, float pos_y, float pos_z,
 
 /*Unofficial names, a few of these seem to be local to specific events
 so I'll probably add them to their files eventually.*/
+FunctionPointer(void, SetClip_ECScene, (int clipLevel), 0x52F400);
 VoidFunc(tornado_cons_EV0003, 0x6E8E10);
 VoidFunc(tornado_dest_EV0003, 0x6E8E30);
 FunctionPointer(void, MoveChaosPuddle_EV0002, (float pos_x, float pos_y, float pos_z, signed int frame), 0x6E9A60);
