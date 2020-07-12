@@ -45,6 +45,9 @@
     <ClCompile Include="ev0009_s_aftercasinopolis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ev000B_s_beforechaos4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
