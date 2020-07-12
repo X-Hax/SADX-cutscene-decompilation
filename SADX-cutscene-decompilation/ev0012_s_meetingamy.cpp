@@ -8,7 +8,7 @@ void ev0012_s_meetingamy(int state)
 	ObjectMaster* player = EV_GetPlayer(0);
 	ObjectMaster* amy = 0;
 
-	ObjectMaster* obj_wing1_ev0012 = 0;
+	ObjectMaster* obj_wing1 = 0;
 
 	switch (state) {
 	case 0:
@@ -27,20 +27,20 @@ void ev0012_s_meetingamy(int state)
 		amy = EV_GetPlayer(2);
 		EV_SetPos(amy, -623.20001f, 5.5999999f, 1079.0f);
 		EV_SetAng(amy, 0, 0, 0);
-		obj_wing1_ev0012 = SetEventBirdie0();
-		EV_SetPos(obj_wing1_ev0012, amy->Data1->Position.x + 4.8000002f, 
+		obj_wing1 = SetEventBirdie0();
+		EV_SetPos(obj_wing1, amy->Data1->Position.x + 4.8000002f, 
 			amy->Data1->Position.y + 2.5f,
 			amy->Data1->Position.z + 0.40000001f);
-		EV_SetAng(obj_wing1_ev0012, amy->Data1->Rotation.x,
+		EV_SetAng(obj_wing1, amy->Data1->Rotation.x,
 			0x4000 - amy->Data1->Rotation.y,
 			amy->Data1->Rotation.z + 512);
 		EV_Wait(1);
-		EV_SetMode(obj_wing1_ev0012, 0);
-		EV_SetAction(obj_wing1_ev0012, &action_w_w9001_wing, &VER2_WING_TEXLIST, 0.80000001f, 1, 0);
-		EV_SetPos(obj_wing1_ev0012, amy->Data1->Position.x + 4.8f,
+		EV_SetMode(obj_wing1, 0);
+		EV_SetAction(obj_wing1, &action_w_w9001_wing, &VER2_WING_TEXLIST, 0.80000001f, 1, 0);
+		EV_SetPos(obj_wing1, amy->Data1->Position.x + 4.8f,
 			amy->Data1->Position.y + 2.5f,
 			amy->Data1->Position.z + 2.4000001f);
-		EV_SetAng(obj_wing1_ev0012, (int)(amy->Data1->Position.x),
+		EV_SetAng(obj_wing1, (int)(amy->Data1->Position.x),
 			(int) (amy->Data1->Position.y + 36864.0f),
 			(int)(amy->Data1->Position.z - 512.0f));
 		EV_ClrAction(player);
@@ -59,7 +59,7 @@ void ev0012_s_meetingamy(int state)
 		EV_MovePoint2(amy, -528.20001f, 0.0f, 1208.0f, 0.64999998f, 0.059999999f);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_s_s9001_sonic, &SONIC_TEXLIST, 0.25f, 0, 8);
-		moveObject(obj_wing1_ev0012, -520.70001f, 8.0f, 1269.4f, -525.40002f, 8.0f, 1210.4f, 117);
+		moveObject(obj_wing1, -520.70001f, 8.0f, 1269.4f, -525.40002f, 8.0f, 1210.4f, 117);
 		EV_Wait(10);
 		BGM_Play(MusicIDs_amy);
 		EV_CameraPos(1, 40, -531.40002f, 5.3000002f, 1191.7f);
@@ -96,7 +96,7 @@ void ev0012_s_meetingamy(int state)
 		EV_SetFace(player, (char*)"DBBAA0");
 		EV_SerifPlay(499);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[2]); //"\aHuh... A... Amy?"
-		moveObjectOn(obj_wing1_ev0012, 4.5f, 8.0f, 0.2f, 100, amy);
+		moveObjectOn(obj_wing1, 4.5f, 8.0f, 0.2f, 100, amy);
 		EV_Wait(2);
 		EV_SetPos(player, -534.20001f, 0.0099999998f, 1203.0f);
 		EV_Wait(1);
@@ -171,11 +171,11 @@ void ev0012_s_meetingamy(int state)
 		if (!VoiceLanguage) EV_ClrFace(amy);
 		EV_Wait(10);
 		EV_SerifStop();
-		EV_ClrAction(obj_wing1_ev0012);
-		EV_SetAction(obj_wing1_ev0012, &action_w_w0121_wing, &VER1_WING_TEXLIST, 0.69999999f, 1, 0);
-		EV_SetPos(obj_wing1_ev0012, amy->Data1->Position.x,
+		EV_ClrAction(obj_wing1);
+		EV_SetAction(obj_wing1, &action_w_w0121_wing, &VER1_WING_TEXLIST, 0.69999999f, 1, 0);
+		EV_SetPos(obj_wing1, amy->Data1->Position.x,
 			amy->Data1->Position.y + 1.0f, amy->Data1->Position.z - 0.60000002f);
-		EV_SetAng(obj_wing1_ev0012, (int)(amy->Data1->Position.x),
+		EV_SetAng(obj_wing1, (int)(amy->Data1->Position.x),
 			(int)(amy->Data1->Position.y + 36864.0f),
 			(int)(amy->Data1->Position.z - 512.0f));
 		EV_ClrAction(amy);
@@ -213,7 +213,7 @@ void ev0012_s_meetingamy(int state)
 		EV_SerifPlay(502);
 		EV_ClrFace(amy);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[6]); //"\aYou must be kidding!"
-		moveObjectOn(obj_wing1_ev0012, 0.2f, 1.0f, -0.60000002f, 300, amy);
+		moveObjectOn(obj_wing1, 0.2f, 1.0f, -0.60000002f, 300, amy);
 		EV_SerifWait();
 		EV_Wait(15);
 		EV_ClrFace(player);
@@ -244,7 +244,7 @@ void ev0012_s_meetingamy(int state)
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);
 		stopObjectAll();
-		EV_FreeObject(&obj_wing1_ev0012);
+		EV_FreeObject(&obj_wing1);
 		break;
 	}
 }

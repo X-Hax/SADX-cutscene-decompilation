@@ -33,6 +33,7 @@ ObjectFunc(EV_LookFree, 0x42FFB0);
 FunctionPointer(void, EV_LookObject, (ObjectMaster* tp, ObjectMaster* target, float x, float y, float z), 0x42FFD0);
 FunctionPointer(void, EV_LookPoint, (ObjectMaster* tp, float x, float y, float z), 0x430000);
 ObjectFunc(EV_MoveFree, 0x430060);
+FunctionPointer(void, EV_MovePoint, (ObjectMaster* tp, float x, float y, float z), 0x430080);
 FunctionPointer(void, EV_MovePoint2, (ObjectMaster* tp, float x, float y, float z, float s, float a), 0x4300D0);
 FunctionPointer(void, EV_MoveRotation, (ObjectMaster* tp, int x, int y, int z), 0x430120);
 VoidFunc(EV_CameraOn, 0x4303E0);
