@@ -10,5 +10,6 @@ void ev0009_s_aftercasinopolis(int state);
 void ev000B_s_beforechaos4(int state);
 void ev000C_s_afterchaos4(int state);
 void ev000D_s_tornado1(int state);
+void ev0011_s_fallingtoSS(int state);
 void ev0020_s_mural(int state);
 void ev002B_s_beforechaos0(int state);

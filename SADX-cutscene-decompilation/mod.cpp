@@ -20,7 +20,7 @@ extern "C"
         WriteJump((void*)0x6E0E00, ev000B_s_beforechaos4);
         WriteJump((void*)0x6DFF20, ev000C_s_afterchaos4);
         WriteJump((void*)0x6DF460, ev000D_s_tornado1);
+        WriteJump((void*)0x6DEAC0, ev0011_s_fallingtoSS);
         WriteJump((void*)0x6D3640, ev0020_s_mural);
-       
     }
 }
