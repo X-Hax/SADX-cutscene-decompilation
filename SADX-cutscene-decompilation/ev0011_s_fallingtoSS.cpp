@@ -3,7 +3,7 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
-void __cdecl ev0011_s_fallingtoSS(int state)
+void ev0011_s_fallingtoSS(int state)
 {
     ObjectMaster* player = EV_GetPlayer(0);
 

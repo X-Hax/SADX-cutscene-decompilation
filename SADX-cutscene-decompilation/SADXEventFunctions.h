@@ -107,6 +107,9 @@ FunctionPointer(ObjectMaster*, CIchimaie2_Create, (NJS_TEXLIST* texlistp, char m
 FunctionPointer(void, CIchimaie2_SetDstAlpha, (ObjectMaster* _this, float alpha, int frame), 0x6EF6F0);
 FunctionPointer(ObjectMaster*, CIchimaie2_SetPriority, (ObjectMaster* _this, float pri), 0x6EF710);
 FunctionPointer(ObjectMaster*, CSkyWalk_create2, (ObjectMaster* obj, float height), 0x6EF9C0);
+FunctionPointer(ObjectMaster*, SetEventBirdie0, (), 0x6F0070);
+FunctionPointer(ObjectMaster*, SetEventBirdie1, (), 0x6F00A0);
+FunctionPointer(ObjectMaster*, SetEventBirdie2, (), 0x6F00D0);
 FunctionPointer(void, create_eggmoble, (float x, float y, float z, int ax, int ay, int az), 0x6F0940);
 VoidFunc(delete_eggmoble, 0x6F09A0);
 FunctionPointer(void, ChgEggMobleMod, (char mode), 0x6F09C0);

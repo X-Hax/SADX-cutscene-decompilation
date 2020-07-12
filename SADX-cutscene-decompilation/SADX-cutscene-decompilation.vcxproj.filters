@@ -57,6 +57,9 @@
     <ClCompile Include="ev0011_s_fallingtoSS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ev0012_s_meetingamy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
