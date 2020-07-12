@@ -60,6 +60,7 @@ ObjectFunc(EV_WaitMove, 0x4318D0);
 VoidFunc(EV_SerifWait, 0x431900);
 FunctionPointer(void, EV_SerifPlay, (int id), 0x431930);
 FunctionPointer(void, tikal_dispSwitch, (int sw), 0x4A3520);
+FunctionPointer(void, SetClip_0500, (int ClipLevel), 0x6007E0);
 FunctionPointer(void, EventSe_Init, (int maxid), 0x64FC80);
 VoidFunc(EventSe_Close, 0x64FCB0);
 FunctionPointer(void, EventSe_Play, (int id, int se, int frame), 0x64FD00);

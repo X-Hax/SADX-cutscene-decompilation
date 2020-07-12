@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="e0179_s_idcard.cpp" />
     <ClCompile Include="ev0001_s_intro.cpp" />
     <ClCompile Include="ev0002_s_chaos0defeated.cpp" />
     <ClCompile Include="ev0003_s_tailscrash.cpp" />
@@ -156,6 +157,9 @@
     <ClCompile Include="ev0014_s_aftertwinklepark.cpp" />
     <ClCompile Include="ev0020_s_mural.cpp" />
     <ClCompile Include="ev002B_s_beforechaos0.cpp" />
+    <ClCompile Include="ev0176_s_icestone.cpp" />
+    <ClCompile Include="ev017A_s_angelislandwall.cpp" />
+    <ClCompile Include="ev0180_s_redmountainintro.cpp" />
     <ClCompile Include="mod.cpp" />
   </ItemGroup>
   <ItemGroup>

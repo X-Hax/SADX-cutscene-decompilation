@@ -16,3 +16,7 @@ void ev0013_s_beforetwinklepark(int state);
 void ev0014_s_aftertwinklepark(int state);
 void ev0020_s_mural(int state);
 void ev002B_s_beforechaos0(int state);
+void ev0176_s_icestone(int state);
+void ev0179_s_idcard(int state);
+void ev017A_s_angelislandwall(int state);
+void ev0180_s_redmountainintro(int state);

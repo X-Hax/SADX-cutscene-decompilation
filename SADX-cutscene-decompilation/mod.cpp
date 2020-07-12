@@ -25,5 +25,9 @@ extern "C"
         WriteJump((void*)0x6DC840, ev0013_s_beforetwinklepark);
         WriteJump((void*)0x6DC430, ev0014_s_aftertwinklepark);
         WriteJump((void*)0x6D3640, ev0020_s_mural);
+        WriteJump((void*)0x650460, ev0176_s_icestone);
+        WriteJump((void*)0x650270, ev0179_s_idcard);
+        WriteJump((void*)0x650180, ev017A_s_angelislandwall);
+        WriteJump((void*)0x64FE70, ev0180_s_redmountainintro);
     }
 }
