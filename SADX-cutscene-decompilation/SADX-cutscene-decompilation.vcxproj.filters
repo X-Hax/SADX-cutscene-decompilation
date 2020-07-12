@@ -63,6 +63,9 @@
     <ClCompile Include="ev0013_s_beforetwinklepark.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ev0014_s_aftertwinklepark.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

@@ -23,6 +23,7 @@ extern "C"
         WriteJump((void*)0x6DEAC0, ev0011_s_fallingtoSS);
         WriteJump((void*)0x6DD870, ev0012_s_meetingamy);
         WriteJump((void*)0x6DC840, ev0013_s_beforetwinklepark);
+        WriteJump((void*)0x6DC430, ev0014_s_aftertwinklepark);
         WriteJump((void*)0x6D3640, ev0020_s_mural);
     }
 }
