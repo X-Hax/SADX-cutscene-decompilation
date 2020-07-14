@@ -37,17 +37,17 @@ void ev0166_s_lightshoes(int state)
         EV_Wait(10);
         EV_SerifWait();
         EV_SerifPlay(1865);
-        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[0]);
+        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[0]); //"\aNow you've got Light Speed Shoes."
         EV_SetAction(player, &action_s_item_s1, &SONIC_TEXLIST, 0.1f, 0, 16);
         EV_Wait(33);
-        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[1]);
+        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[1]); //"\aPress and hold the action button \nto"...
         EV_Wait(40);
         EventSe_Stop(0);
         EV_SetAction(player, &action_s_item_s0, &SONIC_TEXLIST, 0.60000002f, 1, 16);
         EV_Wait(50);
-        EV_MsgW(40, (msgTbl_ev0166[TextLanguage])[2]);
-        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[3]);
-        EV_Wait(20);
+        EV_MsgW(40, (msgTbl_ev0166[TextLanguage])[2]); //"\aOnce you have enough power,"
+        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[3]); //"\arelease the button and\nyou can do th"...
+        EV_Wait(20); 
         EventSe_Play(0, 760, 1800);
         EV_ClrPath(tikal_ev0166);
         FreeTask(tikal_ev0166);
@@ -55,7 +55,7 @@ void ev0166_s_lightshoes(int state)
         EV_Wait(60);
         EV_CameraTargetObj(1, 0, player, 0.0f, 4.5f, 0.0f, 0);
         EV_CameraChaseRM(0, 170, player, 5.0f, 0, 10923, 0, 15.0f, 0, -38228, 0, 15.0f);
-        EV_MsgW(90, (msgTbl_ev0166[TextLanguage])[4]);
+        EV_MsgW(90, (msgTbl_ev0166[TextLanguage])[4]); //"\aThe Light Speed Dash lets you \nrace "...
         EV_Wait(1);
         tikalb_ev0166 = CTikalLight_Create(
             player->Data1->Position.x + 12.864f,
@@ -74,7 +74,7 @@ void ev0166_s_lightshoes(int state)
         EV_CameraAng(0, 160, 2769, 62232, 0);
         EV_Wait(50);
         EventSe_Volume(0, -120, 120);
-        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[5]);
+        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[5]); //"\aAs long as there's a trail of rings,"...
         EV_SetAction(player, &action_s_item_s2, &SONIC_TEXLIST, 0.2f, 0, 16);
         EV_SerifWait();
         EV_MsgClose();

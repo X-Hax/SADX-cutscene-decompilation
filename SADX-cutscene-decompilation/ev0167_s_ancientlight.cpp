@@ -50,7 +50,7 @@ void ev0167_s_ancientlight(int state)
         EV_Wait(40);
         EV_SerifWait();
         EV_SerifPlay(1623);
-        EV_MsgW(0, (msgTbl_ev0167[TextLanguage])[0]);
+        EV_MsgW(0, (msgTbl_ev0167[TextLanguage])[0]); //"\aThis is the Ancient Light."
         tikal = CTikalLight_Create(
             player->Data1->Position.x + 8.5349998f,
             player->Data1->Position.y + 27.0f, 
@@ -61,9 +61,9 @@ void ev0167_s_ancientlight(int state)
         EV_SetPath(tikal, &epathtbl_ev0167_tk, 2.0f, 2);
         EV_SetAction(player, &action_s_item_l2, &SONIC_TEXLIST, 0.5f, 1, 8);
         EV_Wait(30);
-        EV_MsgW(0, (msgTbl_ev0167[TextLanguage])[1]);
+        EV_MsgW(0, (msgTbl_ev0167[TextLanguage])[1]); //"\aTry the Light Speed Dash toward \nthe"...
         EV_Wait(60);
-        EV_MsgW(0, (msgTbl_ev0167[TextLanguage])[2]);
+        EV_MsgW(0, (msgTbl_ev0167[TextLanguage])[2]); //"\aWith this, you can now do \nthe Light"...
         EV_SerifWait();
         EventSe_Play(0, 760, 1800);
         EV_Wait(10);
