@@ -149,6 +149,24 @@ DataPointer(EPATHTAG, epathtag_EV002B_07NR, 0x2BF1710);
 DataPointer(EPATHTAG, epathtag_EV002B_08NR, 0x2BF17C8);
 DataPointer(PADREC_DATA_TAG, EV002B_S_JUMP, 0x8724CC);
 
+//EV0165
+DataPointer(NJS_ACTION, action_s_item_r0, 0x3C847E8);
+DataPointer(NJS_ACTION, action_s_item_r1, 0x3C847E0);
+DataPointer(NJS_ACTION, action_s_item_r2, 0x3C847D8);
+DataPointer(EPATHTAG, epathtbl_ev0165_tk, 0x2BD0990);
+
+//EV0166
+DataPointer(EPATHTAG, epathtbl_ev0166_tk, 0x2BD3AA8);
+DataPointer(NJS_ACTION, action_s_item_s0, 0x3C847C0);
+DataPointer(NJS_ACTION, action_s_item_s1, 0x3C847C8);
+DataPointer(NJS_ACTION, action_s_item_s2, 0x3C847D0);
+
+//EV0167
+DataPointer(NJS_ACTION, action_s_item_l0, 0x3C84758);
+DataPointer(NJS_ACTION, action_s_item_l2, 0x3C84760);
+DataPointer(NJS_ACTION, action_s_item_l1, 0x3C84768);
+DataPointer(char, ef_name, 0x2C496E8);
+DataPointer(EPATHTAG, epathtbl_ev0167_tk, 0x2BCEAB8);
 
 //Dialogue Tables
 DataArray(char**, msgTbl_ev0001, 0x2C12BD8, 5);
@@ -167,3 +185,7 @@ DataArray(char**, msgTbl_ev0013, 0x2C0DDB8, 5);
 DataArray(char**, msgTbl_ev0014, 0x2C0DCE8, 5);
 DataArray(char**, msgTbl_ev0020, 0x2BF4044, 5);
 DataArray(char**, msgTbl_ev002B, 0x2BF1458, 5);
+DataArray(char**, msgTbl_ev0165, 0x2BD3B6C, 5);
+DataArray(char**, msgTbl_ev0166, 0x2BD3B28, 5);
+DataArray(char**, msgTbl_ev0167, 0x2BD0A5C, 5);
+

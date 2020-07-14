@@ -87,6 +87,7 @@ FunctionPointer(ObjectMaster*, CTikalLight_Create, (float x, float y, float z), 
 FunctionPointer(void, effect_delete, (__int16 ef_num), 0x6ED490);
 FunctionPointer(void, effect_create2, (ObjectMaster* obj, int ef_num, float ef_x,
 	float ef_y, float ef_z, char* ef_name), 0x6ED770);
+FunctionPointer(void, effect_size_change, (int ef_num, float speed_x, float speed_y), 0x6ED950);
 VoidFunc(crushLightOff, 0x6ED9A0);
 FunctionPointer(void, crushLightOn, (float pos_x, float pos_y, float pos_z, int crushLightNum, int life,
 	float start_width, float end_width, int start_col, int end_col), 0x6EDA20);

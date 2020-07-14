@@ -69,13 +69,22 @@
     <ClCompile Include="ev0176_s_icestone.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="e0179_s_idcard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ev017A_s_angelislandwall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ev0180_s_redmountainintro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0179_s_idcard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0165_s_crystalring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0166_s_lightshoes.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0167_s_ancientlight.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

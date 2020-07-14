@@ -1,0 +1,111 @@
+#include "SADXModLoader.h"
+#include "SADXEventFunctions.h"
+#include "SADXEventStructs.h"
+#include "SADXEventVariables.h"
+
+void ev0166_s_lightshoes(int state)
+{
+    ObjectMaster* player = EV_GetPlayer(0);
+
+    ObjectMaster* tikal_ev0166 = 0;
+    ObjectMaster* tikalb_ev0166 = 0;
+
+    switch(state){
+    case 1:
+        EventSe_Init(1);
+        EV_CameraOn();
+        EV_PadOff();
+        EV_CanselOn();
+        EV_InitPlayer(0);
+        EV_SerifPlay(1718);
+        EV_Wait(1);
+        EV_SetPos(player, 505.0f, -91.900002f, 858.0f);
+        EV_SetAng(player, 0, 32848, 0);
+        EV_Wait(1);
+        EV_CameraChaseFree();
+        EV_CameraTargetFree();
+        EV_CameraTargetObj(1, 0, player, 0.0f, 4.5f, 0.0f, 0);
+        EV_CameraChaseRM(0, 500, player, 8.0f, 0, 54613, 0, 25.0f, 0, -100123, 0, 25.0f);
+        tikal_ev0166 = CTikalLight_Create(
+            player->Data1->Position.x + 12.864f,
+            player->Data1->Position.y + 25.0f,
+            player->Data1->Position.z - 5.7670002f);
+        EV_Wait(1);
+        EV_SetMode(tikal_ev0166, 0);
+        EV_ClrPath(tikal_ev0166);
+        EV_SetPath(tikal_ev0166, &epathtbl_ev0166_tk, 3.0f, 2);
+        EV_Wait(10);
+        EV_SerifWait();
+        EV_SerifPlay(1865);
+        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[0]);
+        EV_SetAction(player, &action_s_item_s1, &SONIC_TEXLIST, 0.1f, 0, 16);
+        EV_Wait(33);
+        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[1]);
+        EV_Wait(40);
+        EventSe_Stop(0);
+        EV_SetAction(player, &action_s_item_s0, &SONIC_TEXLIST, 0.60000002f, 1, 16);
+        EV_Wait(50);
+        EV_MsgW(40, (msgTbl_ev0166[TextLanguage])[2]);
+        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[3]);
+        EV_Wait(20);
+        EventSe_Play(0, 760, 1800);
+        EV_ClrPath(tikal_ev0166);
+        FreeTask(tikal_ev0166);
+        tikal_ev0166 = 0;
+        EV_Wait(60);
+        EV_CameraTargetObj(1, 0, player, 0.0f, 4.5f, 0.0f, 0);
+        EV_CameraChaseRM(0, 170, player, 5.0f, 0, 10923, 0, 15.0f, 0, -38228, 0, 15.0f);
+        EV_MsgW(90, (msgTbl_ev0166[TextLanguage])[4]);
+        EV_Wait(1);
+        tikalb_ev0166 = CTikalLight_Create(
+            player->Data1->Position.x + 12.864f,
+            player->Data1->Position.y + 25.0f,
+            player->Data1->Position.z - 5.7670002f);
+        EV_Wait(1);
+        EV_SetMode(tikalb_ev0166, 0);
+        EV_ClrPath(tikalb_ev0166);
+        EV_SetPath(tikalb_ev0166, &epathtbl_ev0166_tk, 3.0f, 2);
+        EV_Wait(1);
+        EV_CameraChaseFree();
+        EV_CameraTargetFree();
+        EV_CameraPos(0, 0, 510.0f, -88.199997f, 870.29999f);
+        EV_CameraAng(0, 0, 721, 2471, 0);
+        EV_CameraPos(0, 160, 495.20001f, -90.900002f, 812.5f);
+        EV_CameraAng(0, 160, 2769, 62232, 0);
+        EV_Wait(50);
+        EventSe_Volume(0, -120, 120);
+        EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[5]);
+        EV_SetAction(player, &action_s_item_s2, &SONIC_TEXLIST, 0.2f, 0, 16);
+        EV_SerifWait();
+        EV_MsgClose();
+        EV_Wait(20);
+        break;
+     case 2:
+        EV_CameraPos(0, 0, 495.20001f, -90.900002f, 812.5f);
+        EV_CameraAng(0, 0, 2769, 62232, 0);
+        EV_Wait(1);
+        EventSe_Close();
+        EV_ClrPath(tikal_ev0166);
+        EV_ClrPath(tikalb_ev0166);
+        EV_InitPlayer(0);
+        EV_CameraChaseFree();
+        EV_CameraTargetFree();
+        EV_SerifStop();
+        EV_MsgClose();
+        if (tikal_ev0166)
+        {
+            FreeTask(tikal_ev0166);
+            tikal_ev0166 = 0;
+        }
+        if (tikalb_ev0166)
+        {
+            FreeTask(tikalb_ev0166);
+            tikalb_ev0166 = 0;
+        }
+        EV_CameraOff();
+        EV_PadOn();
+        EV_CameraChaseFree();
+        EV_CameraTargetFree();
+        break;
+    }
+} 

@@ -140,7 +140,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="e0179_s_idcard.cpp" />
+    <ClCompile Include="ev0165_s_crystalring.cpp" />
+    <ClCompile Include="ev0166_s_lightshoes.cpp" />
+    <ClCompile Include="ev0167_s_ancientlight.cpp" />
+    <ClCompile Include="ev0179_s_idcard.cpp" />
     <ClCompile Include="ev0001_s_intro.cpp" />
     <ClCompile Include="ev0002_s_chaos0defeated.cpp" />
     <ClCompile Include="ev0003_s_tailscrash.cpp" />
