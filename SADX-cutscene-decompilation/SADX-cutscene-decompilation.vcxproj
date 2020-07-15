@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ev0015_s_chasingzero.cpp" />
     <ClCompile Include="ev0165_s_crystalring.cpp" />
     <ClCompile Include="ev0166_s_lightshoes.cpp" />
     <ClCompile Include="ev0167_s_ancientlight.cpp" />

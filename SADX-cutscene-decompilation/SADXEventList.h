@@ -14,6 +14,7 @@ void ev0011_s_fallingtoSS(int state);
 void ev0012_s_meetingamy(int state);
 void ev0013_s_beforetwinklepark(int state);
 void ev0014_s_aftertwinklepark(int state);
+void ev0015_s_chasingzero(int state);
 void ev0020_s_mural(int state);
 void ev002B_s_beforechaos0(int state);
 void ev0165_s_crystalring(int state);

@@ -146,6 +146,8 @@ FunctionPointer(void, ChangeMotionSpeedChaos1, (float mot_spd), 0x6F5C40);
 VoidFunc(SetWaterChaos1, 0x6F5C80);
 FunctionPointer(void, CreateChaos1, (float pos_x, float pos_y, float pos_z, int ang_x,
     int ang_y, int ang_z, int cng_int), 0x6F6120);
+FunctionPointer(ObjectMaster*, set_amy, (), 0x6F6B20);
+FunctionPointer(void, setamyparam, (float spd), 0x6F6B40);
 FunctionPointer(ObjectMaster*, mghand_init, (float x, float y, float z, int ax, int ay, int az), 0x6F6F30);
 FunctionPointer(void, chgMghandMod, (ObjectMaster* obj, char a2), 0x6F6FC0);
 FunctionPointer(void, mghandsetspd, (ObjectMaster* obj, int angspd_x, int angspd_y), 0x6F6FE0);
