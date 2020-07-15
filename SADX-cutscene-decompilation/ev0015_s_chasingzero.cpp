@@ -32,7 +32,7 @@ void ev0015_s_chasingzero(int state)
         EV_ClrFace(player);
         EV_SetFace(player, (char*)"DDDEDDAAEDDECAA0");
         EV_SerifPlay(516);
-        EV_Msg((msgTbl_ev0015[TextLanguage])[0]);
+        EV_Msg((msgTbl_ev0015[TextLanguage])[0]); //"\aAmy!  \nOh man, where can she be?"
         EV_Wait(60);
         EV_CameraPos(0, 75, -425.0f, 2.0f, 999.29999f);
         EV_CameraAng(0, 75, 2304, 31232, 0);
@@ -40,7 +40,7 @@ void ev0015_s_chasingzero(int state)
         EV_ClrFace(player);
         EV_Wait(40);
         EV_SerifPlay(517);
-        EV_Msg((msgTbl_ev0015[TextLanguage])[1]);
+        EV_Msg((msgTbl_ev0015[TextLanguage])[1]); //"\aAaaagh!   Sonic!   Help!"
         EV_SetAction(player, &action_s_s0038_sonic, &SONIC_TEXLIST, 2.7f, 0, 8);
         EV_WaitAction(player);
         BGM_Play(MusicIDs_eggrobo);
@@ -71,7 +71,7 @@ void ev0015_s_chasingzero(int state)
         EV_ClrFace(player);
         EV_SetFace(player, (char*)"GGGGIIJJJ");
         EV_SerifPlay(518);
-        EV_Msg((msgTbl_ev0015[TextLanguage])[2]);
+        EV_Msg((msgTbl_ev0015[TextLanguage])[2]); //"\aI'll cut 'em off at \nthe Mystic Ruin"...
         EV_Wait(30);
         EV_MsgClose();
         EV_CameraPos(0, 0, -413.0f, 3.2f, 1033.6f);

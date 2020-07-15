@@ -7,6 +7,7 @@ ObjectFunc(FreeTask, 0x40B6C0);
 FunctionPointer(void, SetBankDir, (signed int soundlist), 0x4238E0);
 FunctionPointer(void, BGM_Play, (MusicIDs song), 0x425690);
 FunctionPointer(void, dsStop_id, (int id), 0x424240);
+FunctionPointer(void, dsStop_all, (), 0x424460);
 FunctionPointer(void, dsPlay_oneshot_v, (int tone, int id, int pri,
 	int volofs, float x, float y, float z), 0x424FC0);
 VoidFunc(BGM_Stop, 0x4256B0);
@@ -173,6 +174,7 @@ FunctionPointer(void, StgChaos0CtrlOn, (float pos_x, float pos_y, float pos_z,
 /*Unofficial names, a few of these seem to be local to specific events
 so I'll probably add them to their files eventually.*/
 FunctionPointer(void, SetClip_ECScene, (int clipLevel), 0x52F400);
+FunctionPointer(void, SetClip_EV0016, (), 0x52FB20);
 VoidFunc(tornado_cons_EV0003, 0x6E8E10);
 VoidFunc(tornado_dest_EV0003, 0x6E8E30);
 FunctionPointer(void, MoveChaosPuddle_EV0002, (float pos_x, float pos_y, float pos_z, signed int frame), 0x6E9A60);
