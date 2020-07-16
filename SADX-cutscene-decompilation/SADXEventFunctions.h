@@ -56,6 +56,7 @@ FunctionPointer(void, EV_MsgW, (int time, char* str), 0x431640);
 FunctionPointer(void, EV_CreateObject, (ObjectMaster** tp, float px, float py, float pz, int ax, int ay, int az), 0x431670);
 FunctionPointer(void, EV_InitPlayer, (int n), 0x431780);
 ObjectFunc(EV_WaitAction, 0x431810);
+ObjectFunc(EV_WaitPath, 0x431840);
 FunctionPointer(void, EV_PlayPad, (int no, PADREC_DATA_TAG* tag), 0x431870);
 ObjectFunc(EV_WaitMove, 0x4318D0);
 VoidFunc(EV_SerifWait, 0x431900);
@@ -175,6 +176,8 @@ FunctionPointer(void, StgChaos0CtrlOn, (float pos_x, float pos_y, float pos_z,
 so I'll probably add them to their files eventually.*/
 FunctionPointer(void, SetClip_ECScene, (int clipLevel), 0x52F400);
 FunctionPointer(void, SetClip_EV0016, (), 0x52FB20);
+VoidFunc(SonicModel_EV0017, 0x6DA2B0);
+VoidFunc(SonicModel_initializer_EV0017, 0x6DA2C0);
 VoidFunc(tornado_cons_EV0003, 0x6E8E10);
 VoidFunc(tornado_dest_EV0003, 0x6E8E30);
 FunctionPointer(void, MoveChaosPuddle_EV0002, (float pos_x, float pos_y, float pos_z, signed int frame), 0x6E9A60);

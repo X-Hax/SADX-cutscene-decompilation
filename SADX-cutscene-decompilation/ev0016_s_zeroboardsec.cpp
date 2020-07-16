@@ -60,7 +60,7 @@ void ev0016_s_zeroboardsec(int state)
         EV_CameraAng(0, 0, 690, 54819, 0);
         EV_CameraChase(egg_amy);
         EV_Msg((msgTbl_ev0016[TextLanguage])[0]); //"\aLet me go you hunka junk, \nI mean it"...
-        moveObject(egg_amy, -157.48f, 78.0f, 1060.33f, -176.84f, 78.0f, 941.54999, 150);
+        moveObject(egg_amy, -157.48f, 78.0f, 1060.33f, -176.84f, 78.0f, 941.54999f, 150);
         EV_Wait(10);
         EV_SerifPlay(519);
         EV_Wait(50);
