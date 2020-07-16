@@ -8,10 +8,10 @@ void ev0016_s_zeroboardsec(int state)
     ObjectMaster* player = EV_GetPlayer(0);
     ObjectMaster* eggcarrier = 0;
 
-    ObjectMaster* egg_amy_EV0016 = 0;
-    ObjectMaster* CAP_01_EV0016 = 0;
-    ObjectMaster* EC_KAGE_EV0016 = 0;
-    int defClipLevel_EV0016 = 0;
+    ObjectMaster* egg_amy = 0;
+    ObjectMaster* CAP_01 = 0;
+    ObjectMaster* EC_KAGE = 0;
+    int defClipLevel = 0;
 
     switch(state){
     case 1:
@@ -19,13 +19,13 @@ void ev0016_s_zeroboardsec(int state)
         EV_CameraOn();
         EV_PadOff();
         EV_CanselOn();
-        defClipLevel_EV0016 = ClipLevel; //store default clip level
+        defClipLevel = ClipLevel; //store default clip level
         EV_Wait(1);
         EV_InitPlayer(0);
         SetBankDir(77);
         EV_SetPos(player, -52.189999f, 204.99001f, 1020.98f);
         EV_SetAng(player, 0, 42499, 0);
-        LoadEventObject(&egg_amy_EV0016, set_amy, -157.48f, 78.0f, 1060.33f, 0, 51712, 0);
+        LoadEventObject(&egg_amy, set_amy, -157.48f, 78.0f, 1060.33f, 0, 51712, 0);
         createModelEC(
             50.0f,
             -1600.0f,
@@ -40,34 +40,34 @@ void ev0016_s_zeroboardsec(int state)
             &texlist_ec_light,
             0);
         addmotModel(0, &action_ecff_bf_s_fbody, 0);
-        CAP_01_EV0016 = CreateCaptureBeam(-176.84f, 78.0f, 941.54999f, 1792, 0, -5376);
+        CAP_01 = CreateCaptureBeam(-176.84f, 78.0f, 941.54999f, 1792, 0, -5376);
         EV_Wait(1);
         BGM_Play(MusicIDs_eggrobo);
         EV_ClrAction(player);
         EV_SetAction(player, SONIC_ACTIONS[123], &SONIC_TEXLIST, 1.0f, 1, 0);
-        EV_LookObject(player, egg_amy_EV0016, 0.0f, 6.0f, 0.0f);
-        EV_SetMode(egg_amy_EV0016, 0);
-        EV_SetShadow(egg_amy_EV0016, 1.2f);
+        EV_LookObject(player, egg_amy, 0.0f, 6.0f, 0.0f);
+        EV_SetMode(egg_amy, 0);
+        EV_SetShadow(egg_amy, 1.2f);
         playModel(0, 0, 1.0f, -1);
-        SetCaptureParam(CAP_01_EV0016, 0.23f, 0.0f, 0.23f, 0.0f, 0.0f, 0);
-        SetCaptureParam(CAP_01_EV0016, 0.0f, 10.0f, 0.0f, 0.0f, 0.0f, 0);
-        SetCaptureParam(CAP_01_EV0016, 0.0f, 0.0f, 0.0f, 0.001f, 0.0f, 0);
-        SetCaptureParam(CAP_01_EV0016, 0.0f, 0.0f, 0.0f, 0.0f, 0.001f, 0);
-        SetCaptureParam(CAP_01_EV0016, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0);
+        SetCaptureParam(CAP_01, 0.23f, 0.0f, 0.23f, 0.0f, 0.0f, 0);
+        SetCaptureParam(CAP_01, 0.0f, 10.0f, 0.0f, 0.0f, 0.0f, 0);
+        SetCaptureParam(CAP_01, 0.0f, 0.0f, 0.0f, 0.001f, 0.0f, 0);
+        SetCaptureParam(CAP_01, 0.0f, 0.0f, 0.0f, 0.0f, 0.001f, 0);
+        SetCaptureParam(CAP_01, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0);
         EV_Wait(1);
         EV_CameraPerspective(0, 1, 9102);
         EV_CameraPos(0, 0, -171.32001f, 91.57f, 1056.03f);
         EV_CameraAng(0, 0, 690, 54819, 0);
-        EV_CameraChase(egg_amy_EV0016);
+        EV_CameraChase(egg_amy);
         EV_Msg((msgTbl_ev0016[TextLanguage])[0]); //"\aLet me go you hunka junk, \nI mean it"...
-        moveObject(egg_amy_EV0016, -157.48f, 78.0f, 1060.33f, -176.84f, 78.0f, 941.54999, 150);
+        moveObject(egg_amy, -157.48f, 78.0f, 1060.33f, -176.84f, 78.0f, 941.54999, 150);
         EV_Wait(10);
         EV_SerifPlay(519);
         EV_Wait(50);
         EV_MsgClose();
         EV_CameraChaseFree();
         EV_CameraPos(0, 0, -210.12f, 76.110001f, 917.42999f);
-        EV_CameraTargetObj(0, 0, egg_amy_EV0016, 0.0f, 6.0f, 0.0f, 0);
+        EV_CameraTargetObj(0, 0, egg_amy, 0.0f, 6.0f, 0.0f, 0);
         EV_CameraPerspective(0, 90, 11833);
         EV_Wait(45);
         EV_SerifPlay(520);
@@ -75,7 +75,7 @@ void ev0016_s_zeroboardsec(int state)
         EV_Msg((msgTbl_ev0016[TextLanguage])[1]); //"\aHey there, bolt brain!"
         EV_Wait(25);
         EV_Msg((msgTbl_ev0016[TextLanguage])[2]); //"\aYou better give Amy to me,\nor I'll s"...
-        stopObject(egg_amy_EV0016);
+        stopObject(egg_amy);
         EV_Wait(40);
         EV_CameraTargetFree();
         EV_CameraChaseFree();
@@ -84,7 +84,7 @@ void ev0016_s_zeroboardsec(int state)
         EV_CameraPos(0, 40, -63.91f, 202.25f, 1014.03f);
         EV_Wait(40);
         EV_MsgClose();
-        EV_SetAng(egg_amy_EV0016, 0, 55296, 0);
+        EV_SetAng(egg_amy, 0, 55296, 0);
         EV_CameraPos(0, 60, -61.02f, 204.42999f, 1015.73f);
         EV_Wait(10);
         EV_Wait(30);
@@ -111,9 +111,9 @@ void ev0016_s_zeroboardsec(int state)
         EV_CameraPos(0, 200, -153.25f, 63.939999f, 952.06f);
         EV_Wait(60);
         BGM_Stop();
-        EC_KAGE_EV0016 = COverlayCreate(0.1f, 0.0f, 0.0f, 0.0f, 0.0f);
+        EC_KAGE = COverlayCreate(0.1f, 0.0f, 0.0f, 0.0f, 0.0f);
         EV_Wait(6);
-        COverlaySetSpeed(EC_KAGE_EV0016, 0.0f);
+        COverlaySetSpeed(EC_KAGE, 0.0f);
         EV_SetAction(player, &action_s_s0027_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
         EV_Wait(20);
         EV_ClrFace(player);
@@ -137,7 +137,7 @@ void ev0016_s_zeroboardsec(int state)
         EV_CameraAng(0, 60, 5512, 40633, 0);
         BGM_Play(MusicIDs_egcarer1);
         EV_Wait(20);
-        COverlaySetSpeed(EC_KAGE_EV0016, -0.0099999998f);
+        COverlaySetSpeed(EC_KAGE, -0.0099999998f);
         EV_Wait(40);
         EV_CameraPerspective(0, 240, 12561);
         EV_Wait(90);
@@ -150,14 +150,14 @@ void ev0016_s_zeroboardsec(int state)
         EV_CameraPos(0, 45, -154.39f, 74.160004f, 1016.64f);
         EV_CameraAng(0, 45, 955, 1417, 0);
         EV_Wait(45);
-        ChgCaptureMod(CAP_01_EV0016, 1);
+        ChgCaptureMod(CAP_01, 1);
         QueueSound_XYZ(1336, (EntityData1*)0xCB80001, 1, 100, 300, 100.0f, 600.0f, 1150.0f);
-        EV_CameraTargetObj(0, 60, egg_amy_EV0016, 0.0f, 5.5f, 0.0f, 0);
+        EV_CameraTargetObj(0, 60, egg_amy, 0.0f, 5.5f, 0.0f, 0);
         EV_CameraPos(0, 200, -252.03999f, 95.900002f, 938.23999f);
         EV_Wait(90);
         EV_SerifPlay(523);
         EV_Msg((msgTbl_ev0016[TextLanguage])[4]); //"\aStop!"
-        moveObject(egg_amy_EV0016, -176.84f, 78.0f, 941.54999f, 232.52f, 800.02002f, 1089.03f, 300);
+        moveObject(egg_amy, -176.84f, 78.0f, 941.54999f, 232.52f, 800.02002f, 1089.03f, 300);
         EV_Wait(30);
         EV_MsgClose();
         EV_Wait(120);
@@ -165,9 +165,9 @@ void ev0016_s_zeroboardsec(int state)
         EV_Msg((msgTbl_ev0016[TextLanguage])[5]); //"\aSonic!   Help me!"
         EV_Wait(30);
         EV_MsgClose();
-        ChgCaptureMod(CAP_01_EV0016, 2);
-        stopObject(egg_amy_EV0016);
-        EV_FreeObject(&egg_amy_EV0016);
+        ChgCaptureMod(CAP_01, 2);
+        stopObject(egg_amy);
+        EV_FreeObject(&egg_amy);
         EV_CameraTargetFree();
         EV_Wait(15);
         DoSoundQueueThing(1336);
@@ -224,27 +224,27 @@ void ev0016_s_zeroboardsec(int state)
         EV_WaitMove(player);
         EV_ClrAction(player);
         stopObject(eggcarrier);
-        ClipLevel = defClipLevel_EV0016;
+        ClipLevel = defClipLevel;
         SetClip_EV0016();
         EV_Wait(60);
         break;
     case 2:
         dsStop_all();
-        ClipLevel = defClipLevel_EV0016;
+        ClipLevel = defClipLevel;
         SetClip_EV0016();
         EV_InitPlayer(0);
         EV_SetPos(player, -239.58f, 65.199997f, 921.73999f);
         EV_SetAng(player, 65308, 45926, 65148);
         stopObjectAll();
-        EV_FreeObject(&egg_amy_EV0016);
+        EV_FreeObject(&egg_amy);
         deleteModel(0);
-        if (EC_KAGE_EV0016)
+        if (EC_KAGE)
         {
-            FreeTask(EC_KAGE_EV0016);
-            EC_KAGE_EV0016 = 0;
+            FreeTask(EC_KAGE);
+            EC_KAGE = 0;
         }
-        delete_capturebeam(CAP_01_EV0016);
-        CAP_01_EV0016 = 0;
+        delete_capturebeam(CAP_01);
+        CAP_01 = 0;
         EV_CameraOff();
         EV_PadOn();
         SetClip_ECScene(ClipLevel);

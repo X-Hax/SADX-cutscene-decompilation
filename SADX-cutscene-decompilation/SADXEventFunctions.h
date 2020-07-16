@@ -102,7 +102,7 @@ FunctionPointer(void, MoveChaos0, (float pos_x, float pos_y, float pos_z, signed
 FunctionPointer(ObjectMaster*, GetChaos0, (), 0x6EDCD0);
 VoidFunc(ToWaterChaos0, 0x6EDD00);
 VoidFunc(ToHumanChaos0, 0x6EDD20);
-FunctionPointer(void, SetWaterChaos0, (), 0x6EDD80);
+VoidFunc(SetWaterChaos0, 0x6EDD80);
 FunctionPointer(void, CreateChaos0, (float pos_x, float pos_y, float pos_z,
 	int ang_x, int ang_y, int ang_z, signed int cng_int), 0x6EE930);
 FunctionPointer(ObjectMaster*, COverlayCreate, (float s, float a, float r, float g, float b), 0x6EF480);

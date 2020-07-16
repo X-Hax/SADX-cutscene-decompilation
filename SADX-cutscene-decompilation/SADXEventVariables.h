@@ -2,6 +2,9 @@
 #include "SADXModLoader.h"
 #include "SADXEventStructs.h"
 
+//Cutscene List
+DataArray(CutsceneData_*, CutsceneDataList_, 0x914790, 384);
+
 //EV0001
 DataArray(char, seqVars, 0x3B18808, 512);
 DataPointer(NJS_ACTION, action_sspatcar_body, 0x2DC028C);
