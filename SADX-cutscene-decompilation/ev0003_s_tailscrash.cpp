@@ -56,7 +56,7 @@ void ev0003_s_tailscrash(int state)
         EV_Wait(10);
         EV_WaitAction(player);
         EV_SetAction(player, &action_s_s0032_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 0);
-        EV_SetFace(player, (char*)0x87ADD4);
+        EV_SetFace(player, (char*)"BAX");
         EV_SerifPlay(402);
         EV_SetAction(player, &action_s_s0032_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 0);
         BGM_Stop();

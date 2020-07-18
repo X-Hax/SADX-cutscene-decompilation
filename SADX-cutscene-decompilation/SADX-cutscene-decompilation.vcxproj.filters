@@ -99,6 +99,9 @@
     <ClCompile Include="ev001A_s_eggmantakesbirdie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ev001B_s_aftergamma.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

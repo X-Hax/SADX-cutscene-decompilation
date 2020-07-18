@@ -19,7 +19,7 @@ void ev001A_s_eggmantakesbirdie(int state)
     ObjectMaster* e102;
     ObjectMaster* eggmoble;
 
-    //Tails and Gamma aren't created properly (no EV_Wait after EV_CreatePlayer) so some code doesn't get used.
+    //Tails and Gamma aren't created properly (Tried to get objects on the same frame as their creation)
     //Set this to true to enable it.
     bool enableUnusedCode = false;
 
@@ -42,6 +42,7 @@ void ev001A_s_eggmantakesbirdie(int state)
         EV_SetAng(player, 0, 0x8000, 0);
         EV_ClrAction(player);
         EV_SetAction(player, SONIC_ACTIONS[123], &SONIC_TEXLIST, 1.0f, 1, 0);
+
         if (enableUnusedCode) {
             EV_CreatePlayer(3, Tails_Main, 14.0f, 1525.6f, 3427.0f, 0, 0x8000, 0);
             EV_Wait(1);
@@ -56,6 +57,7 @@ void ev001A_s_eggmantakesbirdie(int state)
                 player->Data1->Position.z + 8.0f,
                 0, 0x8000, 0);
         }
+
         EV_CreatePlayer(4, Gamma_Main, -254.8f, 1525.67f, 3754.6001f, 0, 0x8000, 0);
         if (enableUnusedCode) {
             EV_Wait(1);

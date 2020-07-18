@@ -220,7 +220,7 @@ void ev0006_s_poolsidewithtails(int state)
         }
         if (VoiceLanguage == 1)
         {
-            EV_SetFace(tails, (char*)0x87A9F4);
+            EV_SetFace(tails, (char*)"GGC");
         }
         EV_SerifPlay(429);
         EV_MsgW(60, (msgTbl_ev0006[TextLanguage])[14]); //"\aYou gotta come over to \nmy workshop,"...

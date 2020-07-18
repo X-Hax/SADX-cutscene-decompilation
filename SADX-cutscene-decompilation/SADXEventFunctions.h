@@ -128,6 +128,8 @@ FunctionPointer(ObjectMaster*, GetEggMobleTask, (), 0x6F0BF0);
 VoidFunc(DeleteChaos4, 0x6F25A0);
 FunctionPointer(void, ChangeMotionSpeedChaos4, (float mod_spd), 0x6F25C0);
 FunctionPointer(void, CreateChaos4, (float pos_, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z, signed int cng_int), 0x6F2AB0);
+FunctionPointer(void, Create_e102lightning, (float x, float y, float z, int childtask_num), 0x6F2F60);
+VoidFunc(Delete_e102lightning, 0x6F2FB0);
 FunctionPointer(ObjectMaster*, CObjSmoke_Create, (), 0x6F3450);
 FunctionPointer(ObjectMaster*, CreateCaptureBeam, (float x, float y, float z, int ax, int ay, int az), 0x6F39C0);
 ObjectFunc(delete_capturebeam, 0x6F3A20);

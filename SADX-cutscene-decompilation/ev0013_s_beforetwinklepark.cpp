@@ -71,7 +71,7 @@ void ev0013_s_beforetwinklepark(int state)
         EV_CameraPos(1, 0, 336.31f, 10.02f, 1330.0f);
         EV_CameraAng(1, 0, 0, 0, 0);
         EV_ClrFace(amy);
-        EV_SetFace(amy, (char*)0x876B00);
+        EV_SetFace(amy, (char*)"MAM");
         EV_SerifPlay(870);
         EV_Msg(msgTbl_ev0013[TextLanguage][0]); //"\aAah, look!  \nEggman's Robot's on the"...
         EV_Wait(30);
@@ -183,7 +183,7 @@ void ev0013_s_beforetwinklepark(int state)
         EV_SetPos(zero, 334.92999f, 0.0f, 1204.71f);
         EV_Wait(1);
         EV_ClrFace(amy);
-        EV_SetFace(amy, (char*)0x8678D8);
+        EV_SetFace(amy, (char*)"GAE");
         EV_SerifPlay(510);
         EV_Msg((msgTbl_ev0013[TextLanguage])[6]); //"\aLet's go!"
         EV_Wait(90);
@@ -212,7 +212,7 @@ void ev0013_s_beforetwinklepark(int state)
         EV_FreeObject(&KOTORI);
         switch (VoiceLanguage) {
         case 0:
-            EV_SetFace(player, (char*)0x876AE4);
+            EV_SetFace(player, (char*)"CDC");
             break;
         case 1:
             EV_SetFace(player, (char*)"CBBCE");
