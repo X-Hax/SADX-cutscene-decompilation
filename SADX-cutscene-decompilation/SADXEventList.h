@@ -17,6 +17,7 @@ void ev0014_s_aftertwinklepark(int state);
 void ev0015_s_chasingzero(int state);
 void ev0016_s_zeroboardsec(int state);
 void ev0017_s_tailsreunion(int state);
+void ev001A_s_eggmantakesbirdie(int state);
 void ev0020_s_mural(int state);
 void ev002B_s_beforechaos0(int state);
 void ev0165_s_crystalring(int state);
