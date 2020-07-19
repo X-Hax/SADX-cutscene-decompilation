@@ -162,7 +162,7 @@ void ev001C_s_beforechaos6(int state)
         EV_SetAction(eggmoble, &action_gm_gm0025_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 0, 16);
         EV_SerifWait();
         EV_SerifPlay(572);
-        EV_Msg((msgTbl_ev001C[TextLanguage])[11]);
+        EV_Msg((msgTbl_ev001C[TextLanguage])[11]); //"\aI even found \nChaos' missing tail!"
         EV_Wait(1);
         EV_WaitAction(eggmoble);
         EV_CameraPos(1, 0, 73.755997f, 754.0f, -515.62f);
@@ -172,7 +172,7 @@ void ev001C_s_beforechaos6(int state)
         EV_CameraPerspective(0, 40, 6372);
         EV_SerifPlay(573);
         EV_SetFace(player, (char*)"FEF");
-        EV_Msg((msgTbl_ev001C[TextLanguage])[12]);
+        EV_Msg((msgTbl_ev001C[TextLanguage])[12]); //"\aYou won't get away \nwith this, you m"...
         EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 0.80000001f, 0, 4);
         EV_SetAction(player, &action_s_s0005_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 4);
         EV_Wait(20);
@@ -189,17 +189,17 @@ void ev001C_s_beforechaos6(int state)
         EV_SetAction(eggmoble, &action_gm_gm0022_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 0, 8);
         EV_SetAction(eggmoble, &action_gm_gm0004_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.3f, 1, 6);
         EV_SerifPlay(574);
-        EV_Msg((msgTbl_ev001C[TextLanguage])[13]);
+        EV_Msg((msgTbl_ev001C[TextLanguage])[13]); //"\aI will!"
         EV_SerifWait();
         EV_SerifPlay(575);
-        EV_Msg((msgTbl_ev001C[TextLanguage])[14]);
+        EV_Msg((msgTbl_ev001C[TextLanguage])[14]); //"\aYou're no match for Chaos - even\ntho"...
         EV_SerifWait();
         EV_SetAction(eggmoble, &action_gm_gm0024_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 0, 6);
         EV_SetAction(eggmoble, &action_gm_gm0020_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 1, 8);
         EV_MsgClose();
         EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
         EV_SerifPlay(576);
-        EV_Msg((msgTbl_ev001C[TextLanguage])[15]);
+        EV_Msg((msgTbl_ev001C[TextLanguage])[15]); // "\aOkay Chaos! Destroy them all...\nImme"...
         EV_Wait(45);
         EV_CameraPos(1, 40, 119.05f, 744.28998f, -519.79999f);
         EV_CameraAng(1, 40, 3840, 17152, 512);
