@@ -125,6 +125,10 @@ FunctionPointer(void, eggmoble_turn, (signed int ax, signed int ay, signed int a
 FunctionPointer(void, eggmoble_moveandturn, (float x, float y, float z, signed int ax, signed int ay, signed int az, signed int frame, char efmode), 0x6F0B20);
 FunctionPointer(void, seteggmobleparam, (float updown_rat, int updown_acc), 0x6F0BC0);
 FunctionPointer(ObjectMaster*, GetEggMobleTask, (), 0x6F0BF0);
+FunctionPointer(void, chg_frogshape, (char shapeNo), 0x6F1F60);
+FunctionPointer(ObjectMaster*, set_shapefrog, (), 0x6F2330);
+VoidFunc(StgChaos6CtrlOff, 0x6F2360);
+FunctionPointer(void, StgChaos6CtrlOn, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z, int rot_spd), 0x6F24B0);
 VoidFunc(DeleteChaos4, 0x6F25A0);
 FunctionPointer(void, ChangeMotionSpeedChaos4, (float mod_spd), 0x6F25C0);
 FunctionPointer(void, CreateChaos4, (float pos_, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z, signed int cng_int), 0x6F2AB0);

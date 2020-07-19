@@ -28,6 +28,7 @@ extern "C"
         CutsceneDataList_[0x0017]->Function = ev0017_s_tailsreunion;
         CutsceneDataList_[0x001A]->Function = ev001A_s_eggmantakesbirdie;
         CutsceneDataList_[0x001B]->Function = ev001B_s_aftergamma;
+        CutsceneDataList_[0x001C]->Function = ev001C_s_beforechaos6;
         CutsceneDataList_[0x0020]->Function = ev0020_s_mural;
         CutsceneDataList_[0x002B]->Function = ev002B_s_beforechaos0;
         CutsceneDataList_[0x0165]->Function = ev0165_s_crystalring;
