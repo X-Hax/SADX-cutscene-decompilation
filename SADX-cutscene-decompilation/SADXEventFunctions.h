@@ -106,6 +106,7 @@ VoidFunc(ToHumanChaos0, 0x6EDD20);
 VoidFunc(SetWaterChaos0, 0x6EDD80);
 FunctionPointer(void, CreateChaos0, (float pos_x, float pos_y, float pos_z,
 	int ang_x, int ang_y, int ang_z, signed int cng_int), 0x6EE930);
+FunctionPointer(ObjectMaster*, EV_Alife, (), 0x6EF2C0);
 FunctionPointer(ObjectMaster*, COverlayCreate, (float s, float a, float r, float g, float b), 0x6EF480);
 FunctionPointer(void, COverlaySetSpeed, (ObjectMaster* _this, float s), 0x6EF4C0);
 FunctionPointer(ObjectMaster*, CIchimaie2_Create, (NJS_TEXLIST* texlistp, char mode), 0x6EF680);

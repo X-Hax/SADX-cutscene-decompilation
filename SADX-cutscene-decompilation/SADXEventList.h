@@ -24,6 +24,8 @@ void ev001D_s_afterchaos6(int state);
 void ev001E_s_lostworld(int state);
 void ev0020_s_mural(int state);
 void ev0021_s_enterpast(int state);
+void ev0022_s_pastaltar(int state);
+void ev0023_s_afterpast(int state);
 void ev002B_s_beforechaos0(int state);
 void ev0165_s_crystalring(int state);
 void ev0166_s_lightshoes(int state);

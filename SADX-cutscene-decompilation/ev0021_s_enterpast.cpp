@@ -8,7 +8,6 @@ void ev0021_s_enterpast(int state)
 	ObjectMaster* player = EV_GetPlayer(0);
 	ObjectMaster* white = 0;
 	
-
 	switch (state) {
 	case 1:
 		EV_InitPlayer(0);
@@ -42,7 +41,7 @@ void ev0021_s_enterpast(int state)
 		EV_ClrFace(player);
 		EV_SetFace(player, (char*)"FAAAED");
 		EV_SerifPlay(593);
-		EV_Msg(msgTbl_ev0021[TextLanguage][0]);
+		EV_Msg(msgTbl_ev0021[TextLanguage][0]); //"\aWhat's this place?"
 		EV_SetAction(player, &action_s_s0033_sonic, &SONIC_TEXLIST, 0.25f, 0, 8);
 		EV_SerifWait();
 		EV_ClrFace(player);
@@ -51,7 +50,7 @@ void ev0021_s_enterpast(int state)
 		EV_Wait(40);
 		EV_SetFace(player, (char*)"DC");
 		EV_SerifPlay(594);
-		EV_Msg(msgTbl_ev0021[TextLanguage][1]);
+		EV_Msg(msgTbl_ev0021[TextLanguage][1]); //"\aWhere am I?   \nThis is really weird."
 		EV_Wait(50);
 		EV_ClrFace(player);
 		EV_MsgClose();
