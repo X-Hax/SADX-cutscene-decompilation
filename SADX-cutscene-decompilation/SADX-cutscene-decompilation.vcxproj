@@ -151,6 +151,8 @@
     <ClCompile Include="ev0021_s_enterpast.cpp" />
     <ClCompile Include="ev0022_s_pastaltar.cpp" />
     <ClCompile Include="ev0023_s_afterpast.cpp" />
+    <ClCompile Include="ev0024_s_eggviper.cpp" />
+    <ClCompile Include="ev0026_s_outro.cpp" />
     <ClCompile Include="ev0165_s_crystalring.cpp" />
     <ClCompile Include="ev0166_s_lightshoes.cpp" />
     <ClCompile Include="ev0167_s_ancientlight.cpp" />

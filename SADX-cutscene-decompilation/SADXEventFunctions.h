@@ -155,6 +155,8 @@ FunctionPointer(void, ChangeMotionSpeedChaos1, (float mot_spd), 0x6F5C40);
 VoidFunc(SetWaterChaos1, 0x6F5C80);
 FunctionPointer(void, CreateChaos1, (float pos_x, float pos_y, float pos_z, int ang_x,
 	int ang_y, int ang_z, int cng_int), 0x6F6120);
+VoidFunc(CEcCloud_Stop, 0x6F6690);
+FunctionPointer(void, CEcCloud_Start, (float scale, int num), 0x6F6810);
 FunctionPointer(ObjectMaster*, set_amy, (), 0x6F6B20);
 FunctionPointer(void, setamyparam, (float spd), 0x6F6B40);
 FunctionPointer(ObjectMaster*, mghand_init, (float x, float y, float z, int ax, int ay, int az), 0x6F6F30);
@@ -177,6 +179,13 @@ FunctionPointer(void, StgChaos0SetPos, (float pos_x, float pos_y, float pos_z), 
 FunctionPointer(void, StgChaos0SetAng, (int ang_x, int ang_y, int ang_z), 0x6F96A0);
 FunctionPointer(void, StgChaos0CtrlOn, (float pos_x, float pos_y, float pos_z,
 	int ang_x, int ang_y, int ang_z, int rot_spd), 0x6F9840);
+VoidFunc(EV_EggViperKesu, 0x7B5500);
+VoidFunc(EV_EggViperEggmanToujou, 0x7B5570);
+VoidFunc(EV_EggViperEggmanShaberu, 0x7B5580);
+VoidFunc(EV_EggViperEggmanShaberiYame, 0x7B5590);
+VoidFunc(EV_EggViperEggmanHikkomu, 0x7B55A0);
+VoidFunc(EV_EggViperJoushou, 0x7B55B0);
+FunctionPointer(void, EV_EggViperArawaru, (float xpos, float ypos, float zpos, int yang), 0x7B5CF0);
 
 
 /*Unofficial names, a few of these seem to be local to specific events
@@ -196,6 +205,8 @@ FunctionPointer(void, EV_FreeWaterRipple, (int a1), 0x6F1B80);
 FunctionPointer(void, EV_CreateWaterRipple, (float x, float y, float z, float a4, float a5, int a6, int a7, int a8), 0x6F1D30);
 VoidFunc(p_SonicObj_initializer_EV000D, 0x6DF420);
 VoidFunc(p_SonicObj_EV000D, 0x6DF440);
+FunctionPointer(ObjectMaster*, EggViperDebrisGenerator, (float x, float y, float z, float sx,
+	float sy, float sz, __int16 a7), 0x6F9B40);
 
 
 

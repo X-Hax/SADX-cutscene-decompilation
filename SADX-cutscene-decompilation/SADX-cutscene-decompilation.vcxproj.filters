@@ -120,6 +120,12 @@
     <ClCompile Include="ev0023_s_afterpast.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ev0024_s_eggviper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0026_s_outro.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
