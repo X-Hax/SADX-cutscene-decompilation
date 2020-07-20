@@ -6,6 +6,7 @@
 
 extern "C"
 {
+	__declspec(dllexport) ModInfo SADXModInfo = { ModLoaderVer };
 	__declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions)
 	{
 		CutsceneDataList_[0x0001]->Function = ev0001_s_intro;
@@ -29,6 +30,7 @@ extern "C"
 		CutsceneDataList_[0x001B]->Function = ev001B_s_aftergamma;
 		CutsceneDataList_[0x001C]->Function = ev001C_s_beforechaos6;
 		CutsceneDataList_[0x001D]->Function = ev001D_s_afterchaos6;
+		CutsceneDataList_[0x001E]->Function = ev001E_s_lostworld;
 		CutsceneDataList_[0x0020]->Function = ev0020_s_mural;
 		CutsceneDataList_[0x002B]->Function = ev002B_s_beforechaos0;
 		CutsceneDataList_[0x0165]->Function = ev0165_s_crystalring;

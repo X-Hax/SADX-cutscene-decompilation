@@ -175,6 +175,13 @@ DataPointer(NJS_TEXLIST, texlist_big_kaeru, 0x2FF2960);
 //EV001D
 DataPointer(PADREC_DATA_TAG, EV001D_S_JUMP, 0x873FD8);
 
+//EV001E
+DataPointer(NJS_ACTION, action_s_s0019_sonic, 0x3C853C0);
+DataPointer(NJS_ACTION, action_s_s0020_sonic, 0x3C853C8);
+DataPointer(NJS_ACTION, action_s_s0021_sonic, 0x3C853D0);
+DataPointer(NJS_ACTION, action_s_s0030_sonic, 0x3C853D8);
+DataPointer(EPATHTAG, epathtag_cube001E_1, 0x2BF46D8);
+
 //EV002B
 DataPointer(int, pause_flg, 0x3B28114);
 DataPointer(NJS_ACTION, action_mp_10001_POLICE, 0x337E734);
@@ -240,6 +247,7 @@ DataArray(char**, msgTbl_ev001A, 0x2BF4B20, 5);
 DataArray(char**, msgTbl_ev001B, 0x2BF49F0, 5);
 DataArray(char**, msgTbl_ev001C, 0x2BF48D8, 5);
 DataArray(char**, msgTbl_ev001D, 0x2BF4760, 5);
+DataArray(char**, msgTbl_ev001E, 0x2BF40D4, 5);
 DataArray(char**, msgTbl_ev0020, 0x2BF4044, 5);
 DataArray(char**, msgTbl_ev002B, 0x2BF1458, 5);
 DataArray(char**, msgTbl_ev0165, 0x2BD3B6C, 5);
