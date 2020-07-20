@@ -58,7 +58,7 @@ void ev001D_s_afterchaos6(int state)
 		EV_ClrAction(knuckles);
 		EV_SetAction(knuckles, KNUCKLES_ACTIONS[56], &KNUCKLES_TEXLIST, 2.5f, 1, 0);
 		EV_SerifPlay(577);
-		EV_Msg((msgTbl_ev001D[TextLanguage])[0]);
+		EV_Msg((msgTbl_ev001D[TextLanguage])[0]); //"\aNo way!   \nI can't believe this!"
 		EV_SetAction(eggmoble, &action_gm_gm0002_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(60);
 		EV_ClrAction(player);
@@ -72,7 +72,7 @@ void ev001D_s_afterchaos6(int state)
 		EV_CameraTargetObj(1, 0, knuckles, 0.0f, 6.0f, 0.0f, 0);
 		EV_CameraPos(0, 0, 116.31f, 752.71997f, -322.29999f);
 		EV_SerifPlay(578);
-		EV_MsgW(30, (msgTbl_ev001D[TextLanguage])[1]);
+		EV_MsgW(30, (msgTbl_ev001D[TextLanguage])[1]); //"\aSonic!"
 		EV_MsgClose();
 		EV_WaitMove(knuckles);
 		EV_ClrAction(knuckles);
@@ -96,13 +96,13 @@ void ev001D_s_afterchaos6(int state)
 		}
 		EV_Wait(10);
 		EV_SerifPlay(579);
-		EV_Msg((msgTbl_ev001D[TextLanguage])[2]);
+		EV_Msg((msgTbl_ev001D[TextLanguage])[2]); //"\aHey there, Knuckles."
 		EV_Wait(35);
 		if (!VoiceLanguage)  EV_ClrFace(player);
 		EV_Wait(5);
 		EV_CameraPos(1, 45, -27.59f, 750.82001f, -240.23f);
 		EV_CameraAng(1, 45, 65104, 20699, 0);
-		EV_Msg((msgTbl_ev001D[TextLanguage])[3]);
+		EV_Msg((msgTbl_ev001D[TextLanguage])[3]); //"\aGlad you finally made it! \nI thought"..
 		if (!VoiceLanguage) EV_SetFace(player, (char*)"CEFD");
 		EV_Wait(60);
 		EV_ClrFace(player);
@@ -126,7 +126,7 @@ void ev001D_s_afterchaos6(int state)
 		EV_LookFree(player);
 		EV_SerifPlay(581);
 		eggmoble_moveandturn(0.0f, 785.0f, -386.04001f, 0, -16384, 0, 50, 0);
-		EV_MsgW(45, (msgTbl_ev001D[TextLanguage])[4]);
+		EV_MsgW(45, (msgTbl_ev001D[TextLanguage])[4]); //"\aUntil we meet again, Sonic!  "
 		EV_MsgClose();
 		EV_CameraPos(0, 35, 73.580002f, 769.95001f, -340.54001f);
 		EV_CameraAng(0, 35, 3476, 11532, 64768);
@@ -142,7 +142,7 @@ void ev001D_s_afterchaos6(int state)
 		EV_SetAction(player, SONIC_ACTIONS[4], &SONIC_TEXLIST, 2.75f, 1, 0);
 		EV_MovePoint2(player, -217.33f, 748.34003f, -350.01001f, 1.75f, 0.059999999f);
 		EV_SerifPlay(580);
-		EV_MsgW(45, (msgTbl_ev001D[TextLanguage])[5]);
+		EV_MsgW(45, (msgTbl_ev001D[TextLanguage])[5]); //"\aStop!  Come back here!"
 		EV_MsgClose();
 		EV_CameraPos(0, 0, -233.17999f, 750.09998f, -345.82999f);
 		EV_CameraTargetObj(1, 0, player, 0.0f, 6.0f, 0.0f, 0);
