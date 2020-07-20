@@ -32,6 +32,7 @@ extern "C"
 		CutsceneDataList_[0x001D]->Function = ev001D_s_afterchaos6;
 		CutsceneDataList_[0x001E]->Function = ev001E_s_lostworld;
 		CutsceneDataList_[0x0020]->Function = ev0020_s_mural;
+		CutsceneDataList_[0x0021]->Function = ev0021_s_enterpast;
 		CutsceneDataList_[0x002B]->Function = ev002B_s_beforechaos0;
 		CutsceneDataList_[0x0165]->Function = ev0165_s_crystalring;
 		CutsceneDataList_[0x0166]->Function = ev0166_s_lightshoes;
