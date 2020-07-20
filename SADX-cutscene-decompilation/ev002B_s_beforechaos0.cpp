@@ -36,7 +36,7 @@ void ev002B_s_beforechaos0(int state)
 	ObjectMaster* TAMA_18 = 0;
 	ObjectMaster* TAMA_19 = 0;
 	ObjectMaster* TAMA_20 = 0;
-	
+
 	switch (state) {
 	case 1:
 		EV_CameraOn();

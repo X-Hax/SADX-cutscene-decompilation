@@ -46,7 +46,7 @@ FunctionPointer(void, EV_CameraTargetObj, (int mode, int time, ObjectMaster* tp,
 VoidFunc(EV_CameraChaseFree, 0x430F60);
 ObjectFunc(EV_CameraChase, 0x430F70);
 FunctionPointer(void, EV_CameraChaseRM, (int mode, int time, ObjectMaster* tp, float height, int x0, int y0, int z0, float d0, int x1, int y1, int z1, float d1)
-    , 0x430FC0);
+	, 0x430FC0);
 FunctionPointer(void, EV_CameraPerspective, (int mode, int time, int ang), 0x431060);
 FunctionPointer(void, EV_SetFace, (ObjectMaster* tp, char* str), 0x4310D0);
 ObjectFunc(EV_ClrFace, 0x4310F0);
@@ -153,7 +153,7 @@ VoidFunc(ToHumanChaos1, 0x6F5C20);
 FunctionPointer(void, ChangeMotionSpeedChaos1, (float mot_spd), 0x6F5C40);
 VoidFunc(SetWaterChaos1, 0x6F5C80);
 FunctionPointer(void, CreateChaos1, (float pos_x, float pos_y, float pos_z, int ang_x,
-    int ang_y, int ang_z, int cng_int), 0x6F6120);
+	int ang_y, int ang_z, int cng_int), 0x6F6120);
 FunctionPointer(ObjectMaster*, set_amy, (), 0x6F6B20);
 FunctionPointer(void, setamyparam, (float spd), 0x6F6B40);
 FunctionPointer(ObjectMaster*, mghand_init, (float x, float y, float z, int ax, int ay, int az), 0x6F6F30);

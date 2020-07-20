@@ -105,6 +105,9 @@
     <ClCompile Include="ev001C_s_beforechaos6.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EV001D_s_afterchaos6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

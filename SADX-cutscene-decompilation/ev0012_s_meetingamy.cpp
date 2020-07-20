@@ -28,7 +28,7 @@ void ev0012_s_meetingamy(int state)
 		EV_SetPos(amy, -623.20001f, 5.5999999f, 1079.0f);
 		EV_SetAng(amy, 0, 0, 0);
 		obj_wing1 = SetEventBirdie0();
-		EV_SetPos(obj_wing1, amy->Data1->Position.x + 4.8000002f, 
+		EV_SetPos(obj_wing1, amy->Data1->Position.x + 4.8000002f,
 			amy->Data1->Position.y + 2.5f,
 			amy->Data1->Position.z + 0.40000001f);
 		EV_SetAng(obj_wing1, amy->Data1->Rotation.x,
@@ -41,7 +41,7 @@ void ev0012_s_meetingamy(int state)
 			amy->Data1->Position.y + 2.5f,
 			amy->Data1->Position.z + 2.4000001f);
 		EV_SetAng(obj_wing1, (int)(amy->Data1->Position.x),
-			(int) (amy->Data1->Position.y + 36864.0f),
+			(int)(amy->Data1->Position.y + 36864.0f),
 			(int)(amy->Data1->Position.z - 512.0f));
 		EV_ClrAction(player);
 		EV_SetPos(player, -534.20001f, 0.0f, 1200.0f);
