@@ -54,6 +54,7 @@ VoidFunc(EV_SerifStop, 0x431110);
 FunctionPointer(void, EV_Wait, (int time), 0x4314D0);
 FunctionPointer(void, EV_MsgW, (int time, char* str), 0x431640);
 FunctionPointer(void, EV_CreateObject, (ObjectMaster** tp, float px, float py, float pz, int ax, int ay, int az), 0x431670);
+ObjectFunc(EV_InitObject, 0x431730);
 FunctionPointer(void, EV_InitPlayer, (int n), 0x431780);
 ObjectFunc(EV_WaitAction, 0x431810);
 ObjectFunc(EV_WaitPath, 0x431840);
@@ -89,6 +90,7 @@ FunctionPointer(ObjectMaster*, CTikalLight_Create, (float x, float y, float z), 
 FunctionPointer(void, effect_delete, (__int16 ef_num), 0x6ED490);
 FunctionPointer(void, effect_create2, (ObjectMaster* obj, int ef_num, float ef_x,
 	float ef_y, float ef_z, char* ef_name), 0x6ED770);
+FunctionPointer(void, effect_color, (__int16 ef_num, float col_a, float col_r, float col_g, float col_b), 0x6ED910);
 FunctionPointer(void, effect_size_change, (int ef_num, float speed_x, float speed_y), 0x6ED950);
 VoidFunc(crushLightOff, 0x6ED9A0);
 FunctionPointer(void, crushLightOn, (float pos_x, float pos_y, float pos_z, int crushLightNum, int life,

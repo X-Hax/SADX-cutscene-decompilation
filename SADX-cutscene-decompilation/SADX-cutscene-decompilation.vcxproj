@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ev0101_s_ecfools.cpp" />
     <ClCompile Include="ev0015_s_chasingzero.cpp" />
     <ClCompile Include="ev0016_s_zeroboardsec.cpp" />
     <ClCompile Include="ev0017_s_tailsreunion.cpp" />
@@ -154,6 +155,14 @@
     <ClCompile Include="ev0024_s_eggviper.cpp" />
     <ClCompile Include="ev0026_s_outro.cpp" />
     <ClCompile Include="ev0028_s_sonicvsknuckles.cpp" />
+    <ClCompile Include="ev0029_s_eclanding.cpp" />
+    <ClCompile Include="ev002A_s_casinowake.cpp" />
+    <ClCompile Include="ev0100_s_ecafterlanding.cpp" />
+    <ClCompile Include="ev0102_s_ecaftertransforming.cpp" />
+    <ClCompile Include="ev0103_s_skydeck.cpp" />
+    <ClCompile Include="ev0104_s_afterskydeck.cpp" />
+    <ClCompile Include="ev0106_s_originalshape.cpp" />
+    <ClCompile Include="ev0107_s_alertcancelled.cpp" />
     <ClCompile Include="ev0165_s_crystalring.cpp" />
     <ClCompile Include="ev0166_s_lightshoes.cpp" />
     <ClCompile Include="ev0167_s_ancientlight.cpp" />

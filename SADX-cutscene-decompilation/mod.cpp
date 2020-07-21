@@ -38,7 +38,16 @@ extern "C"
 		CutsceneDataList_[0x0024]->Function = ev0024_s_eggviper;
 		CutsceneDataList_[0x0026]->Function = ev0026_s_outro;
 		CutsceneDataList_[0x0028]->Function = ev0028_s_sonicvsknuckles;
+		CutsceneDataList_[0x0029]->Function = ev0029_s_eclanding;
+		CutsceneDataList_[0x002A]->Function = ev002A_s_casinowake;
 		CutsceneDataList_[0x002B]->Function = ev002B_s_beforechaos0;
+		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
+		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
+		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;
+		CutsceneDataList_[0x0103]->Function = ev0103_s_skydeck;
+		CutsceneDataList_[0x0104]->Function = ev0104_s_afterskydeck;
+		CutsceneDataList_[0x0106]->Function = ev0106_s_originalshape;
+		CutsceneDataList_[0x0107]->Function = ev0107_s_alertcancelled;
 		CutsceneDataList_[0x0165]->Function = ev0165_s_crystalring;
 		CutsceneDataList_[0x0166]->Function = ev0166_s_lightshoes;
 		CutsceneDataList_[0x0167]->Function = ev0167_s_ancientlight;
