@@ -6,9 +6,9 @@
 void ev001B_s_aftergamma(int state)
 {
 	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails;
-	ObjectMaster* amy;
-	ObjectMaster* e102;
+	ObjectMaster* tails = 0;
+	ObjectMaster* amy = 0;
+	ObjectMaster* e102 = 0;
 
 	switch (state) {
 	case 1:

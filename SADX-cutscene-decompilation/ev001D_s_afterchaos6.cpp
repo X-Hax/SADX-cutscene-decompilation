@@ -6,8 +6,8 @@
 void ev001D_s_afterchaos6(int state)
 {
 	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* knuckles;
-	ObjectMaster* eggmoble;
+	ObjectMaster* knuckles = 0;
+	ObjectMaster* eggmoble = 0;
 
 	ObjectMaster* SONIC_JUMP = 0;
 	ObjectMaster* B_OUT = 0;

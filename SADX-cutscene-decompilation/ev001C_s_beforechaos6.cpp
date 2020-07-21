@@ -6,8 +6,8 @@
 void ev001C_s_beforechaos6(int state)
 {
 	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* big;
-	ObjectMaster* eggmoble;
+	ObjectMaster* big = 0;
+	ObjectMaster* eggmoble = 0;
 
 	ObjectMaster* Frog = 0;
 

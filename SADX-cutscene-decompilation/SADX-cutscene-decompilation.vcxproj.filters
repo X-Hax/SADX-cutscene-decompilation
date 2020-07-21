@@ -13,148 +13,151 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Sonic">
+      <UniqueIdentifier>{6d315aa0-a0f2-49ff-9eb0-759aaed31f3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ev0020_s_mural.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="mod.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ev0001_s_intro.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev002B_s_beforechaos0.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0002_s_chaos0defeated.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0003_s_tailscrash.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0006_s_poolsidewithtails.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0007_s_egghornetintro.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0008_s_chaos1.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0009_s_aftercasinopolis.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ev0101_s_ecfools.cpp">
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev000B_s_beforechaos4.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev000C_s_afterchaos4.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev000D_s_tornado1.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
-    <ClCompile Include="ev0011_s_fallingtoSS.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0012_s_meetingamy.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0013_s_beforetwinklepark.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0014_s_aftertwinklepark.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0176_s_icestone.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev017A_s_angelislandwall.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0180_s_redmountainintro.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0179_s_idcard.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0165_s_crystalring.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0166_s_lightshoes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0167_s_ancientlight.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0015_s_chasingzero.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0016_s_zeroboardsec.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0017_s_tailsreunion.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ev0001_s_intro.cpp">
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev001A_s_eggmantakesbirdie.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev001B_s_aftergamma.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev001C_s_beforechaos6.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev001D_s_afterchaos6.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev001E_s_lostworld.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
-    <ClCompile Include="ev0021_s_enterpast.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0022_s_pastaltar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0023_s_afterpast.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0024_s_eggviper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0026_s_outro.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0028_s_sonicvsknuckles.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0029_s_eclanding.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="ev0002_s_chaos0defeated.cpp">
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev002A_s_casinowake.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev002B_s_beforechaos0.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0003_s_tailscrash.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0006_s_poolsidewithtails.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0007_s_egghornetintro.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0008_s_chaos1.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0009_s_aftercasinopolis.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0011_s_fallingtoSS.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0012_s_meetingamy.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0013_s_beforetwinklepark.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0014_s_aftertwinklepark.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0015_s_chasingzero.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0016_s_zeroboardsec.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0017_s_tailsreunion.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev017A_s_angelislandwall.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0020_s_mural.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0021_s_enterpast.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0022_s_pastaltar.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0023_s_afterpast.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0024_s_eggviper.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0026_s_outro.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0028_s_sonicvsknuckles.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0029_s_eclanding.cpp">
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev0100_s_ecafterlanding.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ev0101_s_ecfools.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev0102_s_ecaftertransforming.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev0103_s_skydeck.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev0104_s_afterskydeck.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev0106_s_originalshape.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
     <ClCompile Include="ev0107_s_alertcancelled.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0165_s_crystalring.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0166_s_lightshoes.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0167_s_ancientlight.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0176_s_icestone.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0179_s_idcard.cpp">
+      <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0180_s_redmountainintro.cpp">
+      <Filter>Source Files\Sonic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
