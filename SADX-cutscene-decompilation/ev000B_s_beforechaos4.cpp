@@ -18,6 +18,10 @@ void ev000B_s_beforechaos4(int state)
 	ObjectMaster* knuckles = 0;
 	ObjectMaster* eggmoble = 0;
 
+
+	//Enable this to see the unused dust effect
+	bool enableUnusedCode = false;
+
 	switch (state) {
 	case 1:
 		EV_CameraOn();
@@ -34,6 +38,12 @@ void ev000B_s_beforechaos4(int state)
 		CAP_01 = CreateCaptureBeam(77.0f, 72.050003f, 185.0f, 0, 0, 0);
 		SMOKE_01 = CObjSmoke_Create();
 		SMOKE_02 = CObjSmoke_Create();
+		if (enableUnusedCode) {
+			SMOKE_01->Data1->Rotation.y = 5;
+			SMOKE_01->Data1->Rotation.x = 5;
+			SMOKE_02->Data1->Rotation.y = 5;
+			SMOKE_02->Data1->Rotation.x = 5;
+		}
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[6], &SONIC_TEXLIST, 2.0f, 1, 0);

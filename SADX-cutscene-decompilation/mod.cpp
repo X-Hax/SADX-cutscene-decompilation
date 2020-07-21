@@ -37,6 +37,7 @@ extern "C"
 		CutsceneDataList_[0x0023]->Function = ev0023_s_afterpast;
 		CutsceneDataList_[0x0024]->Function = ev0024_s_eggviper;
 		CutsceneDataList_[0x0026]->Function = ev0026_s_outro;
+		CutsceneDataList_[0x0028]->Function = ev0028_s_sonicvsknuckles;
 		CutsceneDataList_[0x002B]->Function = ev002B_s_beforechaos0;
 		CutsceneDataList_[0x0165]->Function = ev0165_s_crystalring;
 		CutsceneDataList_[0x0166]->Function = ev0166_s_lightshoes;

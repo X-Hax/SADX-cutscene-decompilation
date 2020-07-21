@@ -28,6 +28,7 @@ void ev0022_s_pastaltar(int state);
 void ev0023_s_afterpast(int state);
 void ev0024_s_eggviper(int state);
 void ev0026_s_outro(int state);
+void ev0028_s_sonicvsknuckles(int state);
 void ev002B_s_beforechaos0(int state);
 void ev0165_s_crystalring(int state);
 void ev0166_s_lightshoes(int state);

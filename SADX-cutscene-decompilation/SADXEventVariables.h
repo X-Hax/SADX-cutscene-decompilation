@@ -208,6 +208,13 @@ DataPointer(EPATHTAG, epathtag_cube0026_s2, 0x2BF2A88);
 DataPointer(EPATHTAG, epathtag_cube0026_t1, 0x2BF3460);
 DataPointer(EPATHTAG, epathtag_cube0026_t2, 0x2BF3E18);
 
+//EV0028
+DataPointer(NJS_ACTION, action_s_s0035_sonic, 0x3C85190);
+DataPointer(NJS_ACTION, action_s_s0036_sonic, 0x3C851A0);
+DataPointer(NJS_ACTION, action_k_k0005_knuckles, 0x3C85198);
+DataPointer(NJS_ACTION, action_k_k0012_knuckles, 0x3C851A8);
+DataPointer(NJS_ACTION, action_k_k0013_knuckles, 0x3C851B0);
+DataPointer(PADREC_DATA_TAG, EV0028_KN_PUNCH, 0x87306C);
 
 //EV002B
 DataPointer(int, pause_flg, 0x3B28114);
@@ -280,6 +287,7 @@ DataArray(char**, msgTbl_ev0021, 0x2BF4000, 5);
 DataArray(char**, msgTbl_ev0022, 0x2BF3FA4, 5);
 DataArray(char**, msgTbl_ev0023, 0x2BF3F28, 5);
 DataArray(char**, msgTbl_ev0024, 0x2BF3E84, 5);
+DataArray(char**, msgTbl_ev0028, 0x2BF1FA4, 5);
 DataArray(char**, msgTbl_ev002B, 0x2BF1458, 5);
 DataArray(char**, msgTbl_ev0165, 0x2BD3B6C, 5);
 DataArray(char**, msgTbl_ev0166, 0x2BD3B28, 5);
