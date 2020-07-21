@@ -8,9 +8,9 @@ void ev0026_s_outro(int state)
 	ObjectMaster* player = EV_GetPlayer(0);
 	ObjectMaster* tails = 0;
 
-	ObjectMaster* smoke_ev0026 = 0;
-	ObjectMaster* WHITE_ev0026 = 0;
-	ObjectMaster* BLACK_ev0026 = 0;
+	ObjectMaster* smoke = 0;
+	ObjectMaster* WHITE = 0;
+	ObjectMaster* BLACK = 0;
 
 	switch (state) {
 	case 1:
@@ -18,18 +18,18 @@ void ev0026_s_outro(int state)
 		EV_PadOff();
 		EV_CanselOn();
 		EV_InitPlayer(0);
-		smoke_ev0026 = CObjSmoke_Create();
-		WriteData((float*)smoke_ev0026->Data1->LoopData, 2.0f);
-		WriteData((float*)(smoke_ev0026->Data1->LoopData) + 11, 0.899999976158142f);
-		WriteData((float*)(smoke_ev0026->Data1->LoopData) + 12, 0.5f);
-		WriteData((float*)(smoke_ev0026->Data1->LoopData) + 13, 0.5f);
-		WriteData((float*)(smoke_ev0026->Data1->LoopData) + 14, 0.5f);
+		smoke = CObjSmoke_Create();
+		WriteData((float*)smoke->Data1->LoopData, 2.0f);
+		WriteData((float*)(smoke->Data1->LoopData) + 11, 0.899999976158142f);
+		WriteData((float*)(smoke->Data1->LoopData) + 12, 0.5f);
+		WriteData((float*)(smoke->Data1->LoopData) + 13, 0.5f);
+		WriteData((float*)(smoke->Data1->LoopData) + 14, 0.5f);
 		EV_SetPos(player, 338.5f, 204.0f, 684.40002f);
 		EV_SetAng(player, 63488, 37632, 0);
 		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
 		EV_CreatePlayer(2, Tails_Main, -235.60001f, 1528.6f, 3543.3f, 0, 0x8000, 0);
 		create_eggmoble(187.45f, 350.0f, 420.0f, 0, 21760, 0);
-		EV_SetPos(smoke_ev0026, 187.45f, 370.0f, 420.0f);
+		EV_SetPos(smoke, 187.45f, 370.0f, 420.0f);
 		BGM_Play(MusicIDs_sonic);
 		EV_CameraAng(1, 0, 1424, 2784, 65280);
 		EV_CameraPos(1, 0, 430.20001f, 210.60001f, 700.5f);
@@ -38,13 +38,13 @@ void ev0026_s_outro(int state)
 		EV_CameraPos(0, 50, 340.10001f, 207.0f, 703.0f);
 		EV_Wait(50);
 		WriteData((char*)&(EntityData1Ptrs[2]->Object) + 3, (char)0x24);
-		smoke_ev0026->Data1->Rotation.y = 1;
-		smoke_ev0026->Data1->Rotation.x = 1;
+		smoke->Data1->Rotation.y = 1;
+		smoke->Data1->Rotation.x = 1;
 		seteggmobleparam(5.0f, 592);
 		EV_CameraPos(0, 70, 337.73999f, 207.0f, 703.5f);
 		EV_Wait(70);
 		eggmoble_moveandturn(421.26999f, 174.0f, 1108.0f, 0, 0, 0, 170, 0);
-		moveObject(smoke_ev0026, 187.45f, 360.0f, 420.0f, 421.26999f, 184.0f, 1108.0f, 170);
+		moveObject(smoke, 187.45f, 360.0f, 420.0f, 421.26999f, 184.0f, 1108.0f, 170);
 		EV_CameraAng(0, 80, 10640, 6368, 65280);
 		EV_CameraPos(0, 80, 339.79999f, 202.37f, 691.0f);
 		EV_Wait(37);
@@ -63,8 +63,8 @@ void ev0026_s_outro(int state)
 		EV_SetFace(player, (char*)L"P");
 		EV_Wait(20);
 		delete_eggmoble();
-		FreeTask(smoke_ev0026);
-		smoke_ev0026 = 0;
+		FreeTask(smoke);
+		smoke = 0;
 		tails = EV_GetPlayer(2);
 		EV_SetMode(tails, 0);
 		EV_SetPath(tails, &epathtag_cube0026_t1, 1.0f, 0);
@@ -194,7 +194,7 @@ void ev0026_s_outro(int state)
 		EV_Wait(26);
 		EV_CameraPos(0, 21, 257.0f, 27.549999f, 457.978f);
 		EV_CameraAng(0, 21, 63761, 35584, 479);
-		WHITE_ev0026 = COverlayCreate(0.1f, 0.1f, 1.0f, 1.0f, 1.0f);
+		WHITE = COverlayCreate(0.1f, 0.1f, 1.0f, 1.0f, 1.0f);
 		EV_Wait(25);
 		EV_CameraPos(0, 50, 269.77399f, 63.16f, 357.12799f);
 		EV_CameraAng(0, 50, 62976, 40960, 479);
@@ -226,7 +226,7 @@ void ev0026_s_outro(int state)
 		EV_CameraTargetFree();
 		EV_CameraPos(0, 0, 2095.6001f, 187.12601f, 1547.13f);
 		EV_CameraAng(0, 0, 4033, 37821, 0);
-		COverlaySetSpeed(WHITE_ev0026, -0.016666668f);
+		COverlaySetSpeed(WHITE, -0.016666668f);
 		EV_Wait(60);
 		EV_CameraPos(0, 80, 2111.7f, 187.545f, 1552.053f);
 		EV_CameraAng(0, 80, 3803, 20660, 1024);
@@ -249,7 +249,7 @@ void ev0026_s_outro(int state)
 		EV_CameraAng(0, 4, 1120, 9728, 0);
 		EV_CameraPerspective(1, 4, 10923);
 		EV_Wait(40);
-		BLACK_ev0026 = COverlayCreate(0.033333335f, 0.1f, 0.0f, 0.0f, 0.0f);
+		BLACK = COverlayCreate(0.033333335f, 0.1f, 0.0f, 0.0f, 0.0f);
 		EV_Wait(30);
 		break;
 	case 2:
@@ -262,14 +262,14 @@ void ev0026_s_outro(int state)
 		EV_SetPos(player, 1199.0f, 126.0f, 851.0f);
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);
-		FreeTask(WHITE_ev0026);
-		WHITE_ev0026 = 0;
-		FreeTask(BLACK_ev0026);
-		BLACK_ev0026 = 0;
+		FreeTask(WHITE);
+		WHITE = 0;
+		FreeTask(BLACK);
+		BLACK = 0;
 		CEcCloud_Stop();
 		delete_eggmoble();
-		FreeTask(smoke_ev0026);
-		smoke_ev0026 = 0;
+		FreeTask(smoke);
+		smoke = 0;
 		break;
 	}
 }

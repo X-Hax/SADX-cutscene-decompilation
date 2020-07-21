@@ -18,8 +18,8 @@ void ev0008_s_chaos1(int state)
 	ObjectMaster* suki2_obj = 0;
 
 	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails;
-	ObjectMaster* eggmoble;
+	ObjectMaster* tails = 0;
+	ObjectMaster* eggmoble = 0;
 
 	switch (state) {
 	case 1:

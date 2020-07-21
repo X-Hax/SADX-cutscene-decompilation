@@ -14,10 +14,10 @@ void ev001A_s_eggmantakesbirdie(int state)
 	ObjectMaster* WING = 0;
 
 	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails;
-	ObjectMaster* amy;
-	ObjectMaster* e102;
-	ObjectMaster* eggmoble;
+	ObjectMaster* tails = 0;
+	ObjectMaster* amy = 0;
+	ObjectMaster* e102 = 0;
+	ObjectMaster* eggmoble = 0;
 
 	//Tails and Gamma aren't created properly (Tried to get objects on the same frame as their creation)
 	//Set this to true to enable it.
@@ -32,8 +32,8 @@ void ev001A_s_eggmantakesbirdie(int state)
 		SetBankDir(80);
 		EventSe_Init(5);
 		BGM_Play(MusicIDs_egcarer1);
-		seqVars[144] = 1;
-		seqVars[44] = 2;
+		seqVars[144] = 1; //FLAG_EC_GATE_A_CTRL
+		seqVars[44] = 2; //FLAG_EC_EGGLIFT_CTRL
 		EV_CreateObject(&emerald, -547.33002f, -0.5f, 973.90002f, 0, 0, 0);
 		EV_SetMode(emerald, 0);
 		create_eggmoble(22.799999f, 1535.0f, 3231.6001f, 0, 2304, 0);
@@ -87,7 +87,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_CameraAng(1, 0, 2704, 4064, 65280);
 		EV_CameraPos(1, 0, 1.7386f, 1526.6f, 3458.6001f);
 		EV_CameraPos(0, 40, 1.7386f, 1546.6f, 3458.6001f);
-		seqVars[44] = 3;
+		seqVars[44] = 3; //FLAG_EC_EGGLIFT_CTRL
 		EV_Wait(48);
 		COverlaySetSpeed(black, -0.06666667f);
 		EV_Wait(20);
@@ -162,7 +162,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_CameraChaseFree();
 		EV_SetPos(player, -8.5f, 1526.0f, 3336.6001f);
 		EV_ClrAction(player);
-		seqVars[44] = 2;
+		seqVars[44] = 2; //FLAG_EC_EGGLIFT_CTRL
 		ChgEggMobleMod(0);
 		Mhand = mghand_init(-27.57f, 1558.1801f, 3221.0f, 0, 0, -16384);
 		mghandsetspd(Mhand, 2304, 1536);
@@ -315,7 +315,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		FreeTask(task_skywalk);
 		task_skywalk = 0;
 		EV_SetPos(e102, -254.8f, 1525.67f, 3754.6001f);
-		seqVars[44] = 3;
+		seqVars[44] = 3; //FLAG_EC_EGGLIFT_CTRL
 		if (enableUnusedCode) EV_ClrAction(e102); //Animation will end too late otherwise
 		EV_SetAction(e102, E102_ACTIONS[2], &E102_TEXLIST, 0.5f, 1, 0);
 		EV_CameraPos(1, 0, 7.1999998f, 1521.26f, 3451.7f);
@@ -457,7 +457,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		FreeTask(black);
 		black = 0;
 		EventSe_Close();
-		seqVars[44] = 2;
+		seqVars[44] = 2; //FLAG_EC_EGGLIFT_CTRL
 		seqVars[43] = 1;
 		break;
 	}

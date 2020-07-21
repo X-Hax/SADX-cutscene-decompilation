@@ -6,7 +6,7 @@
 void ev0002_s_chaos0defeated(int state)
 {
 	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* eggman;
+	ObjectMaster* eggman = 0;
 
 	ObjectMaster* BLACK = 0; //Fade overlay
 	ObjectMaster* task_skywalk = 0; //Temp ground collision for Eggman

@@ -6,7 +6,7 @@
 void ev002A_s_casinowake(int state)
 {
 	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails;
+	ObjectMaster* tails = 0;
 
 	ObjectMaster* WHITE = 0;
 

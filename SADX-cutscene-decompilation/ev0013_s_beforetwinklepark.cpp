@@ -20,7 +20,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
-		seqVars[2] = 2;
+		seqVars[2] = 2; //SSVAR_TWINKLE_ELEVATOR
 		EV_SetPos(player, 333.5f, 0.02f, 1550.8f);
 		EV_SetAng(player, 0, 63744, 0);
 		EV_CreatePlayer(2, Amy_Main, 343.5f, 0.0099999998f, 1544.8f, 0, 64000, 0);
@@ -260,7 +260,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_FreeObject(&KOTORI);
 		FreeTask(KURAYAMI);
 		KURAYAMI = 0;
-		seqVars[2] = 0;
+		seqVars[2] = 0; //SSVAR_TWINKLE_ELEVATOR
 		EV_CameraOff();
 		EV_PadOn();
 		break;

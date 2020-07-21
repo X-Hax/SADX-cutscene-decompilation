@@ -39,7 +39,7 @@ void ev0001_s_intro(int state)
 		EventSe_Init(6);
 		EV_SetPos(player, 362.5f, 0.0f, 1450.72f);
 		EV_SetAng(player, 0, 0, 0);
-		seqVars[1] = 1;
+		seqVars[1] = 1; //SSVAR_CAR_DISP
 		EV_CreateObject(&PAT_01, 508.59f, 0.0f, 727.0f, 0, 0x8000, 0);
 		EV_CreateObject(&PAT_02, 536.63f, 0.0f, 718.0f, 0, 0x8000, 0);
 		EV_CreateObject(&PAT_03, 569.0f, 0.0f, 718.0f, 0, 0x8000, 0);
@@ -182,7 +182,7 @@ void ev0001_s_intro(int state)
 		EventSe_Stop(0);
 		EventSe_Oneshot(17, 100, 0, 0);
 		EV_Wait((int)fps * 30);
-		seqVars[1] = 0;
+		seqVars[1] = 0; //SSVAR_CAR_DISP
 		EV_CameraPerspective(0, 1, 12743);
 		EV_CameraPos(0, 0, 12.69f, 770.32001f, 1382.84f);
 		EV_CameraAng(0, 0, 63488, 0x4000, 0);

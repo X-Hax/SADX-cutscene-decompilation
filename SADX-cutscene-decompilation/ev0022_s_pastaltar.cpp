@@ -6,7 +6,7 @@
 void ev0022_s_pastaltar(int state)
 {
 	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tikal;
+	ObjectMaster* tikal = 0;
 
 	ObjectMaster* CHA = 0;
 	ObjectMaster* CHA2 = 0;

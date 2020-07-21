@@ -87,7 +87,7 @@ void ev000D_s_tornado1(int state)
 		EV_CameraAng(1, 0, 1024, 20480, 0);
 		EV_Wait(40);
 		EV_ClrFace(player);
-		seqVars[33] = 1;
+		seqVars[33] = 1; //MRVAR_TORNADE_CATAPALT1
 		EventSe_Play(0, 1333, 1800);
 		EventSe_Play(1, 1334, 1800);
 		BGM_Play(MusicIDs_themiles);
@@ -100,7 +100,7 @@ void ev000D_s_tornado1(int state)
 		EV_SetPos(tails, 1395.04f, 221.55f, 700.56f);
 		EV_SetAng(tails, 0, 22172, 0);
 		EV_Wait(1);
-		seqVars[34] = 1;
+		seqVars[34] = 1; //MRVAR_TORNADE_CATAPALT2
 		EventSe_Play(2, 1335, 1800);
 		EventSe_Play(3, 1336, 1800);
 		EV_Wait(80);
@@ -178,8 +178,8 @@ void ev000D_s_tornado1(int state)
 		KURAYAMI = 0;
 		p_SonicObj_EV000D();
 		EV_ClrPath(PLANE);
-		seqVars[34] = 0;
-		seqVars[33] = 0;
+		seqVars[34] = 0; //MRVAR_TORNADE_CATAPALT2
+		seqVars[33] = 0; //MRVAR_TORNADE_CATAPALT1
 		EV_FreeObject(&PLANE);
 		EV_RemovePlayer(3);
 		EV_InitPlayer(0);
