@@ -15,8 +15,8 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_PadOff();
 		EV_CanselOn();
 		EV_Wait(8);
-		SetBankDir(49);
-		switch (VoiceLanguage) {
+		SetBankDir(49); //First two Knuckles punches
+		switch (VoiceLanguage) { //Last punch (voiced)
 		case 0:
 			SetBankDir(69);
 			break;

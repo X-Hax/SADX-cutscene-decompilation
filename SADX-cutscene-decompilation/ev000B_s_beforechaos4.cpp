@@ -18,7 +18,6 @@ void ev000B_s_beforechaos4(int state)
 	ObjectMaster* knuckles = 0;
 	ObjectMaster* eggmoble = 0;
 
-
 	//Enable this to see the unused dust effect
 	bool enableUnusedCode = false;
 
