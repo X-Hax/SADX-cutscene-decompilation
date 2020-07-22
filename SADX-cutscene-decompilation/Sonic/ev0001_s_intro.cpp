@@ -144,7 +144,7 @@ void ev0001_s_intro(int state)
 		EV_CameraPos(1, 0, 621.21997f, 1.15f, 1035.13f);
 		EV_CameraAng(1, 0, 4387, 18920, 0);
 		EV_CameraPos(1, (int)fps * 200, 614.96002f, 1.15f, 1009.89f);
-		EV_SetPath(HELI_01, (EPATHTAG*)0x2C12710, fps * 0.5f, 0);
+		EV_SetPath(HELI_01, (EPATHTAG*)0x2C12710, 0.5f / fps, 0);
 		EV_Wait((int)fps * 20);
 		EventSe_Play(0, 1334, (int)fps * 1800);
 		EventSe_Volume(0, -120, 1);
