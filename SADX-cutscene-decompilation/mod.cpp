@@ -55,5 +55,8 @@ extern "C"
 		CutsceneDataList_[0x0179]->Function = ev0179_s_idcard;
 		CutsceneDataList_[0x017A]->Function = ev017A_s_angelislandwall;
 		CutsceneDataList_[0x0180]->Function = ev0180_s_redmountainintro;
+
+		//60 FPS faces
+		//for (int i = 0; i < faceTable_Length; i++) faceTable[i].nbFrame = faceTable[i].nbFrame * 2;
 	}
 }

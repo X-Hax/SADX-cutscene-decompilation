@@ -257,12 +257,19 @@ void ev0001_s_intro(int state)
 		EventSe_Oneshot(1337, 100, 0, 0);
 		EV_Wait((int)fps * 30);
 		EV_ClrAction(player);
-		EV_PlayPad(0, &EV0001_S_JUMP_0);
+		if (fps == 1.0f) {
+			EV_PlayPad(0, &EV0001_S_JUMP_0);
+			FreeTask(SONIC_02SKY);
+			SONIC_02SKY = 0;
+		}
 		EV_Wait((int)fps * 10);
-		FreeTask(SONIC_02SKY);
-		SONIC_02SKY = 0;
 		EventSe_Oneshot(1337, 60, 0, 0);
 		EV_Wait((int)fps * 30);
+		if (fps == 2.0f) { //Move Sonic off the building later to account for faster fall speed.
+			EV_PlayPad(0, &EV0001_S_JUMP_0);
+			FreeTask(SONIC_02SKY);
+			SONIC_02SKY = 0;
+		}
 		EventSe_Oneshot(1337, 80, 0, 0);
 		EventSe_Volume(5, -80, 120);
 		EV_Wait((int)fps * 60);

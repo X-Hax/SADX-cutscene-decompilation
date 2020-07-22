@@ -25,3 +25,9 @@ struct CutsceneData_
 	void(__cdecl* Function)(int a1);
 	PVMEntry* Textures;
 };
+
+struct FACETBL
+{
+	BYTE nbFrame;
+	BYTE faceNo;
+};
