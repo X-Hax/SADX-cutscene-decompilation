@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Sonic">
       <UniqueIdentifier>{90c66a1a-12b8-4b27-a4aa-da42a47ba9fa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Tails">
+      <UniqueIdentifier>{8bd115df-aa14-4c61-b6fe-37bb4bf18613}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mod.cpp">
@@ -158,6 +161,9 @@
     </ClCompile>
     <ClCompile Include="Sonic\ev0180_s_redmountainintro.cpp">
       <Filter>Source Files\Sonic</Filter>
+    </ClCompile>
+    <ClCompile Include="Tails\ev0030_t_intro.cpp">
+      <Filter>Source Files\Tails</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

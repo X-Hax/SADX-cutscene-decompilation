@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Tails\ev0030_t_intro.cpp" />
     <ClCompile Include="mod.cpp" />
     <ClCompile Include="Sonic\ev0001_s_intro.cpp" />
     <ClCompile Include="Sonic\ev0002_s_chaos0defeated.cpp" />

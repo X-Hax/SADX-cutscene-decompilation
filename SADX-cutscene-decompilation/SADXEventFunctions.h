@@ -114,6 +114,7 @@ FunctionPointer(void, COverlaySetSpeed, (ObjectMaster* _this, float s), 0x6EF4C0
 FunctionPointer(ObjectMaster*, CIchimaie2_Create, (NJS_TEXLIST* texlistp, char mode), 0x6EF680);
 FunctionPointer(void, CIchimaie2_SetDstAlpha, (ObjectMaster* _this, float alpha, int frame), 0x6EF6F0);
 FunctionPointer(ObjectMaster*, CIchimaie2_SetPriority, (ObjectMaster* _this, float pri), 0x6EF710);
+FunctionPointer(ObjectMaster*, CIchimaie2_SetTextureId, (ObjectMaster* _this, int id), 0x6EF720);
 FunctionPointer(ObjectMaster*, CSkyWalk_create2, (ObjectMaster* obj, float height), 0x6EF9C0);
 FunctionPointer(ObjectMaster*, SetEventBirdie0, (), 0x6F0070);
 FunctionPointer(ObjectMaster*, SetEventBirdie1, (), 0x6F00A0);
@@ -176,6 +177,8 @@ FunctionPointer(void, CreateEggmoble1, (float x, float y, float z, int angx, int
 FunctionPointer(ObjectMaster*, object_tr1_s_t1_body_s_t1_body, (), 0x6F89A0);
 FunctionPointer(ObjectMaster*, CSukiari_Create, (int color, NJS_POINT2* a2, int pointn), 0x6F8AB0);
 FunctionPointer(void, CSukiari_Alpha, (ObjectMaster* a1, unsigned char alpha, int frame), 0x6F8B40);
+FunctionPointer(ObjectMaster*, miles_with_ptr, (), 0x6F9570);
+FunctionPointer(void, miles_motchg, (int num, float spd), 0x6F95A0);
 VoidFunc(StgChaos0CtrlOff, 0x6F95D0);
 FunctionPointer(void, StgChaos0SetPos, (float pos_x, float pos_y, float pos_z), 0x6F9650);
 FunctionPointer(void, StgChaos0SetAng, (int ang_x, int ang_y, int ang_z), 0x6F96A0);

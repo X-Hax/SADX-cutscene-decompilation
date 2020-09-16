@@ -32,6 +32,7 @@ void ev0028_s_sonicvsknuckles(int state);
 void ev0029_s_eclanding(int state);
 void ev002A_s_casinowake(int state);
 void ev002B_s_beforechaos0(int state);
+void ev0030_t_intro(int state);
 void ev0100_s_ecafterlanding(int state);
 void ev0101_s_ecfools(int state);
 void ev0102_s_ecaftertransforming(int state);

@@ -41,6 +41,7 @@ extern "C"
 		CutsceneDataList_[0x0029]->Function = ev0029_s_eclanding;
 		CutsceneDataList_[0x002A]->Function = ev002A_s_casinowake;
 		CutsceneDataList_[0x002B]->Function = ev002B_s_beforechaos0;
+		CutsceneDataList_[0x0030]->Function = ev0030_t_intro;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;
