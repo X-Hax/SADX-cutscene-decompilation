@@ -265,6 +265,13 @@ DataPointer(EPATHTAG, epathtag_cube0030_19, 0x2BF0090);
 DataPointer(EPATHTAG, epathtag_cube0030_14, 0x2BF0D18);
 DataPointer(EPATHTAG, epathtag_CUBE0030_4, 0x2BF13B0);
 
+//EV0031
+DataPointer(NJS_ACTION, action_m_m0118_miles, 0x3C5E418);
+DataPointer(NJS_ACTION, action_m_m0119_miles, 0x3C84DA4);
+DataPointer(NJS_ACTION, action_m_m0120_miles, 0x3C84DB4);
+DataPointer(NJS_ACTION, action_s_s0055_sonic, 0x3C84D94);
+DataPointer(NJS_ACTION, action_s_s0056_sonic, 0x3C84DAC);
+
 //EV0165
 DataPointer(NJS_ACTION, action_s_item_r0, 0x3C847E8);
 DataPointer(NJS_ACTION, action_s_item_r1, 0x3C847E0);

@@ -210,15 +210,6 @@ FunctionPointer(void, EV_FreeWaterRipple, (int a1), 0x6F1B80);
 FunctionPointer(void, EV_CreateWaterRipple, (float x, float y, float z, float a4, float a5, int a6, int a7, int a8), 0x6F1D30);
 VoidFunc(p_SonicObj_initializer_EV000D, 0x6DF420);
 VoidFunc(p_SonicObj_EV000D, 0x6DF440);
+ObjectFunc(ptr_crashed, 0x6F9390);
 FunctionPointer(ObjectMaster*, EggViperDebrisGenerator, (float x, float y, float z, float sx,
 	float sy, float sz, __int16 a7), 0x6F9B40);
-
-
-
-
-
-
-
-
-
-

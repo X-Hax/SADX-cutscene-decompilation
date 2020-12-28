@@ -165,6 +165,9 @@
     <ClCompile Include="Tails\ev0030_t_intro.cpp">
       <Filter>Source Files\Tails</Filter>
     </ClCompile>
+    <ClCompile Include="Tails\ev0031_t_emeraldcoast.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
