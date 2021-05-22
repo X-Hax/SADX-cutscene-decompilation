@@ -171,6 +171,12 @@
     <ClCompile Include="Tails\ev0032_t_meetingsonic.cpp">
       <Filter>Source Files\Tails</Filter>
     </ClCompile>
+    <ClCompile Include="Tails\ev0033_t_egghornet.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
+    <ClCompile Include="Tails\ev0034_t_chaos1.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

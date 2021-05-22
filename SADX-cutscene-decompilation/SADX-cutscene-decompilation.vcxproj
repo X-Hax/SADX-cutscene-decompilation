@@ -140,6 +140,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Tails\ev0034_t_chaos1.cpp" />
+    <ClCompile Include="Tails\ev0033_t_egghornet.cpp" />
     <ClCompile Include="Tails\ev0032_t_meetingsonic.cpp" />
     <ClCompile Include="Tails\ev0031_t_emeraldcoast.cpp" />
     <ClCompile Include="Tails\ev0030_t_intro.cpp" />

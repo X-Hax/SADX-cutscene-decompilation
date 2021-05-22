@@ -325,6 +325,8 @@ DataArray(char**, msgTbl_ev002A, 0x2BF1854, 5);
 DataArray(char**, msgTbl_ev002B, 0x2BF1458, 5);
 DataArray(char**, msgTbl_ev0030, 0x2BEFA3C, 5);
 DataArray(char**, msgTbl_ev0032, 0x2BEF93C, 5);
+DataArray(char**, msgTbl_ev0033, 0x2BEF784, 5);
+DataArray(char**, msgTbl_ev0034, 0x2BEF5D8, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);
