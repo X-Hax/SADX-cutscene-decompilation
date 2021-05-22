@@ -13,6 +13,11 @@ void ev0009_s_aftercasinopolis(int state)
 	ObjectMaster* cap1 = 0;
 	ObjectMaster* WHITE = 0;
 
+	//There's a skip in the camera sequence at the beginning due to a text box that was removed after the original JP version. (EV_Msg- functions force the event to wait 20 frames).
+	//Set to 1 to fix the camera sequence.
+	//Set to 2 to do the above as well as restore the text box (As "?" to be compatible with all languages).
+	int enableUnusedCode = 0;
+
 	switch (state) {
 	case 1:
 		EV_CameraOn();
@@ -70,6 +75,18 @@ void ev0009_s_aftercasinopolis(int state)
 		EV_ClrAction(tails);
 		EV_SetAction(tails, MILES_ACTIONS[67], &MILES_TEXLIST, 0.89999998f, 0, 0);
 		EV_SetAction(tails, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 8);
+		
+		switch (enableUnusedCode) {
+		case 1:
+			EV_Wait(20);
+			break;
+		case 2:
+			EV_Msg((char*)"?");
+			break;
+		default:
+			break;
+		}
+		
 		eggmoble_move_normal(-503.47f, 4.0f, 1000.72f, 30);
 		EventSe_Play(2, 1337, 1800);
 		EV_Wait(20);
@@ -77,13 +94,26 @@ void ev0009_s_aftercasinopolis(int state)
 		EV_Wait(15);
 		eggmoble_move_normal(-446.92001f, 10.0f, 1054.21f, 1);
 		EV_Wait(2);
+
+		//This will only show up for 1 frame unless the unused code is enabled.
 		EV_CameraAng(1, 0, 1883, 40625, 65280);
 		EV_CameraPos(1, 0, -517.59998f, 24.054001f, 980.90002f);
 		EV_Wait(1);
 		eggmoble_move_normal(-516.24451f, 18.0f, 992.21503f, 22);
 		EV_CameraPerspective(1, 22, 11833);
 		EV_CameraAng(1, 22, 782, 33528, 65280);
-		EV_MsgClose();
+
+		switch (enableUnusedCode) {
+		case 1:
+			EV_Wait(20);
+			break;
+		case 2:
+			EV_MsgClose();
+			break;
+		default:
+			break;
+		}
+
 		EV_CameraAng(1, 0, 62734, 10744, 65280);
 		EV_CameraPos(1, 0, -522.33002f, 9.21f, 978.04999f);
 		EV_CameraAng(0, 22, 62734, 9720, 65280);
