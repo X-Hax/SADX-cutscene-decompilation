@@ -6,8 +6,8 @@
 void ev0032_t_meetingsonic(int state)
 {
 	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic;
-	ObjectMaster* PURPLE;
+	ObjectMaster* sonic = 0;
+	ObjectMaster* PURPLE = 0;
 
 	switch (state) {
 	case 1:
@@ -16,9 +16,9 @@ void ev0032_t_meetingsonic(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		BGM_Play(MusicIDs_thesonic);
-		EV_SetPos(player, -470.98999, 0.0099999998, 2023.55);
+		EV_SetPos(player, -470.98999f, 0.0099999998f, 2023.55f);
 		EV_SetAng(player, 0, 25611, 0);
-		EV_SetAction(player, MILES_ACTIONS[80], &MILES_TEXLIST, 1.0, 1, 0);
+		EV_SetAction(player, MILES_ACTIONS[80], &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_CreateObject((ObjectMaster**)&PURPLE,
 			player->Data1->Position.x,
 			player->Data1->Position.y,
@@ -27,36 +27,36 @@ void ev0032_t_meetingsonic(int state)
 			0x4000 - player->Data1->Rotation.y,
 			player->Data1->Rotation.z);
 		EV_CreatePlayer(2, Sonic_Main,
-			player->Data1->Position.x + 20.0,
+			player->Data1->Position.x + 20.0f,
 			player->Data1->Position.y,
-			player->Data1->Position.z - 10.0,
+			player->Data1->Position.z - 10.0f,
 			player->Data1->Rotation.x,
 			0x4000 - player->Data1->Rotation.y,
 			player->Data1->Rotation.z);
 		EV_Wait(1);
 		sonic = EV_GetPlayer(2);
-		EV_SetAction(sonic, SONIC_ACTIONS[3], &SONIC_TEXLIST, 1.0, 1, 0);
+		EV_SetAction(sonic, SONIC_ACTIONS[3], &SONIC_TEXLIST, 1.0f, 1, 0);
 		EV_CameraAng(1, 0, 53760, 34048, 0);
-		EV_CameraPos(1, 0, -439.70001, 100.41, 1916.5699);
+		EV_CameraPos(1, 0, -439.70001f, 100.41f, 1916.5699f);
 		EV_Wait(1);
-		EV_LookObject(sonic, player, 0.0, 6.0, 0.0);
-		EV_LookObject(player, sonic, 0.0, 6.0, 0.0);
+		EV_LookObject(sonic, player, 0.0f, 6.0f, 0.0f);
+		EV_LookObject(player, sonic, 0.0f, 6.0f, 0.0f);
 		EV_Wait(1);
-		EV_MovePoint2(sonic, -450.67001, 0.0099999998, 1901.05, 0.57999998, 3.0);
-		EV_MovePoint2(player, -460.17001, 1.01, 1912.28, 0.56, 3.0);
+		EV_MovePoint2(sonic, -450.67001f, 0.0099999998f, 1901.05f, 0.57999998f, 3.0f);
+		EV_MovePoint2(player, -460.17001f, 1.01f, 1912.28f, 0.56f, 3.0f);
 		EV_CameraAng(0, 90, 53760, 34048, 0);
-		EV_CameraPos(0, 90, -447.70001, 66.970001, 1931.85);
+		EV_CameraPos(0, 90, -447.70001f, 66.970001f, 1931.85f);
 		EV_Wait(90);
 		EV_CameraAng(0, 0, 64768, 47104, 0);
-		EV_CameraPos(0, 0, -495.04001, 12.73, 1963.4399);
+		EV_CameraPos(0, 0, -495.04001f, 12.73f, 1963.4399f);
 		EV_CameraAng(0, 110, 64768, 54272, 0);
-		EV_CameraPos(0, 110, -467.96899, 5.2385998, 1920.849);
+		EV_CameraPos(0, 110, -467.96899f, 5.2385998f, 1920.849f);
 		EV_Wait(60);
 		EV_MoveFree(player);
 		EV_MoveFree(sonic);
 		EV_Wait(1);
-		EV_MovePoint2(sonic, -450.67001, 0.0099999998, 1901.05, 0.57999998, 3.0);
-		EV_MovePoint2(player, -457.17001, 1.01, 1917.28, 0.56, 3.0);
+		EV_MovePoint2(sonic, -450.67001f, 0.0099999998f, 1901.05f, 0.57999998f, 3.0f);
+		EV_MovePoint2(player, -457.17001f, 1.01f, 1917.28f, 0.56f, 3.0f);
 		EV_ClrAction(sonic);
 		EV_ClrAction(player);
 		EV_SetFace(sonic, (char*)"GG");
@@ -71,10 +71,10 @@ void ev0032_t_meetingsonic(int state)
 		EV_SetAng(sonic, 0, 59904, 0);
 		EV_LookFree(sonic);
 		EV_CameraAng(0, 0, 64768, 46080, 0);
-		EV_CameraPos(0, 0, -485.13, 7.6700001, 1917.63);
+		EV_CameraPos(0, 0, -485.13f, 7.6700001f, 1917.63f);
 		EV_CameraAng(0, 200, 64768, 50944, 0);
 		EV_Wait(60);
-		EV_CameraPos(0, 140, -475.29999, 6.9299998, 1915.92);
+		EV_CameraPos(0, 140, -475.29999f, 6.9299998f, 1915.92f);
 		EV_SetFace(sonic, (char*)"CEAEDE");
 		EV_SerifPlay(626);
 		EV_Msg((char*)msgTbl_ev0032[TextLanguage][1]); //"\aSo, what went wrong, anyway?"
@@ -85,11 +85,11 @@ void ev0032_t_meetingsonic(int state)
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(sonic);
-		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0, 1, 16);
+		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 16);
 		EV_MsgClose();
-		EV_MovePoint2(player, -457.17001, 1.01, 1913.28, 0.56, 0.059999999);
+		EV_MovePoint2(player, -457.17001f, 1.01f, 1913.28f, 0.56f, 0.059999999f);
 		EV_CameraAng(0, 90, 64768, 37120, 0);
-		EV_CameraPos(0, 90, -465.53799, 7.6700001, 1888.11);
+		EV_CameraPos(0, 90, -465.53799f, 7.6700001f, 1888.11f);
 		EV_WaitMove(player);
 		EV_SetAng(player, 0, 29184, 0);
 		EV_Wait(40);
@@ -119,8 +119,8 @@ void ev0032_t_meetingsonic(int state)
 		EV_ClrFace(sonic);
 		EV_MsgClose();
 		EV_Wait(1);
-		EV_CameraTargetObj(1, 120, player, 0.0, 6.0, 0.0, 0);
-		EV_CameraPos(0, 120, -458.13699, 8.4370003, 1883.174);
+		EV_CameraTargetObj(1, 120, player, 0.0f, 6.0f, 0.0f, 0);
+		EV_CameraPos(0, 120, -458.13699f, 8.4370003f, 1883.174f);
 		EV_SetPos(PURPLE,
 			player->Data1->Position.x,
 			player->Data1->Position.y,
@@ -156,14 +156,14 @@ void ev0032_t_meetingsonic(int state)
 		EV_Wait(1);
 		EventSe_Oneshot(743, 0, 0, 0);
 		EV_CameraAng(0, 0, 58112, 29952, 0);
-		EV_CameraPos(0, 0, -451.03, 21.110001, 1891.95);
-		EV_SetAction(player, &action_m_m0104_miles, &MILES_TEXLIST, 1.0, 1, 0);
-		EV_SetAction(PURPLE, &action_m_m0104cp_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.0, 1, 0);
+		EV_CameraPos(0, 0, -451.03f, 21.110001f, 1891.95f);
+		EV_SetAction(player, &action_m_m0104_miles, &MILES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(PURPLE, &action_m_m0104cp_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(1);
 		EV_CameraAng(0, 20, 58112, 29952, 0);
-		EV_CameraPos(0, 20, -455.47, 6.7399998, 1908.0);
+		EV_CameraPos(0, 20, -455.47f, 6.7399998f, 1908.0f);
 		EV_Wait(50);
-		EV_SetAction(sonic, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.30000001, 1, 8);
+		EV_SetAction(sonic, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.30000001f, 1, 8);
 		EV_ClrFace(sonic);
 		if (!VoiceLanguage)
 		{
@@ -176,19 +176,19 @@ void ev0032_t_meetingsonic(int state)
 		EV_SerifPlay(632);
 		EV_Msg((char*)msgTbl_ev0032[TextLanguage][9]); //"\aIt's a Chaos Emerald!   \nNo way!"
 		EV_CameraAng(0, 0, 60416, 58112, 0);
-		EV_CameraPos(0, 0, -453.28, 8.2700005, 1904.8199);
+		EV_CameraPos(0, 0, -453.28f, 8.2700005f, 1904.8199f);
 		EV_CameraAng(0, 25, 256, 59136, 0);
-		EV_CameraPos(0, 25, -457.60001, 5.1199999, 1911.6);
+		EV_CameraPos(0, 25, -457.60001f, 5.1199999f, 1911.6f);
 		EV_Wait(25);
 		EV_CameraAng(0, 50, 65024, 58112, 0);
-		EV_CameraPos(0, 50, -462.28, 6.27, 1914.8199);
+		EV_CameraPos(0, 50, -462.28f, 6.27f, 1914.8199f);
 		EV_SerifWait();
 		EV_ClrFace(sonic);
 		EV_MsgClose();
-		EV_CameraChaseRM(0, 240, player, 7.0, 0, 0x8000, 0, 10.0, 0, 0, 0, 10.0);
-		EV_CameraTargetObj(1, 0, player, 0.0, 6.0, 0.0, 0);
+		EV_CameraChaseRM(0, 240, player, 7.0f, 0, 0x8000, 0, 10.0f, 0, 0, 0, 10.0f);
+		EV_CameraTargetObj(1, 0, player, 0.0f, 6.0f, 0.0f, 0);
 		EV_ClrAction(sonic);
-		EV_SetPos(sonic, -445.67001, 0.0099999998, 1901.05);
+		EV_SetPos(sonic, -445.67001f, 0.0099999998f, 1901.05f);
 		EV_SetFace(player, (char*)"EACADED");
 		EV_SerifPlay(633);
 		EV_Msg((char*)msgTbl_ev0032[TextLanguage][10]); //"\aI was lucky to find \none of the 7 Ch"...
@@ -221,10 +221,10 @@ void ev0032_t_meetingsonic(int state)
 		EV_ClrFace(player);
 		EV_CameraTargetFree();
 		EV_LookFree(player);
-		EV_LookObject(player, sonic, 0.0, 6.0, 0.0);
-		EV_CameraChaseRM(0, 150, player, 7.0, 0, 0x4000, 0, 10.0, 0, -4096, 0, 40.0);
-		EV_CameraTargetObj(1, 0, player, 0.0, 6.0, 0.0, 0);
-		EV_MovePoint2(player, -450.29001, 0.0099999998, 1865.426, 0.46000001, 3.0);
+		EV_LookObject(player, sonic, 0.0f, 6.0f, 0.0f);
+		EV_CameraChaseRM(0, 150, player, 7.0f, 0, 0x4000, 0, 10.0f, 0, -4096, 0, 40.0f);
+		EV_CameraTargetObj(1, 0, player, 0.0f, 6.0f, 0.0f, 0);
+		EV_MovePoint2(player, -450.29001f, 0.0099999998f, 1865.426f, 0.46000001f, 3.0f);
 		EV_ClrAction(player);
 		EV_ClrAction(PURPLE);
 		EV_SetFace(player, (char*)"CDAD");
@@ -235,7 +235,7 @@ void ev0032_t_meetingsonic(int state)
 		EV_Wait(10);
 		EV_Wait(30);
 		EV_LookFree(player);
-		EV_MovePoint2(player, -416.5, 0.0099999998, 1848.1169, 0.46000001, 3.0);
+		EV_MovePoint2(player, -416.5f, 0.0099999998f, 1848.1169f, 0.46000001f, 3.0f);
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
@@ -246,7 +246,7 @@ void ev0032_t_meetingsonic(int state)
 		EV_Wait(1);
 		break;
 	case 2:
-		EV_SetPos(player, -416.5, 0.0099999998, 1848.1169);
+		EV_SetPos(player, -416.5f, 0.0099999998f, 1848.1169f);
 		EV_SetAng(player, 0, 25709, 0);
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);

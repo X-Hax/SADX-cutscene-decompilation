@@ -186,6 +186,12 @@
     <ClCompile Include="Tails\ev0039_t_beforechaos4.cpp">
       <Filter>Source Files\Tails</Filter>
     </ClCompile>
+    <ClCompile Include="Tails\ev003A_t_afterchaos4.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
+    <ClCompile Include="Tails\ev003B_t_tornado1.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

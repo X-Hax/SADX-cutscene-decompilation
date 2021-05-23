@@ -318,16 +318,16 @@ void ev0039_t_beforechaos4(int state)
 			eggmoble->Data1->Position.y - 9.1999998f,
 			eggmoble->Data1->Position.z);
 		EV_SetAng(G_EME,
-			eggmoble->Data1->Position.x,
-			eggmoble->Data1->Position.y,
-			eggmoble->Data1->Position.z);
+			(int)eggmoble->Data1->Position.x,
+			(int)eggmoble->Data1->Position.y,
+			(int)eggmoble->Data1->Position.z);
 		EV_SetPos(B_EME, eggmoble->Data1->Position.x,
 			eggmoble->Data1->Position.y - 9.1999998f,
 			eggmoble->Data1->Position.z);
 		EV_SetAng(B_EME,
-			eggmoble->Data1->Position.x,
-			eggmoble->Data1->Position.y,
-			eggmoble->Data1->Position.z);
+			(int)eggmoble->Data1->Position.x,
+			(int)eggmoble->Data1->Position.y,
+			(int)eggmoble->Data1->Position.z);
 		EV_SetPos(sonic, 37.299999f, 72.019997f, 213.32001f);
 		EV_LookFree(player);
 		EV_ClrAction(player);

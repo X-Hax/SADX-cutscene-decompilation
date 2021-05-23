@@ -28,7 +28,7 @@ void ev000D_s_tornado1(int state)
 		LoadEventObject(&PLANE, object_tr1_s_t1_body_s_t1_body, 1475.05f, 211.89999f, 779.59003f, 0, 26112, 0);
 		EV_SetMode(PLANE, 0);
 		EV_Wait(1);
-		EV_SetAction(PLANE, &action_tr1_s_t1_body, &EV_TR1_WITH_SONIC_TEXLIST, 0.69999999f, 1, 1);
+		EV_SetAction(PLANE, action_tr1_s_t1_body, &EV_TR1_WITH_SONIC_TEXLIST, 0.69999999f, 1, 1);
 		p_SonicObj_initializer_EV000D();
 		EV_CameraPos(1, 0, 1370.45f, 195.86f, 883.60999f);
 		EV_CameraAng(1, 0, 768, 54772, 512);
@@ -150,7 +150,7 @@ void ev000D_s_tornado1(int state)
 		EV_SerifPlay(715);
 		EV_MsgW(60, (msgTbl_ev000D[TextLanguage])[2]); //"\aLet's go!"
 		EV_CameraChase(PLANE);
-		EV_SetAction(PLANE, &action_tr1_s_t1_body, &EV_TR1_WITH_SONIC_TEXLIST, 1.0f, 1, 1);
+		EV_SetAction(PLANE, action_tr1_s_t1_body, &EV_TR1_WITH_SONIC_TEXLIST, 1.0f, 1, 1);
 		EV_Wait(1);
 		EV_MsgClose();
 		EventSe_Play(5, 1338, 1800);

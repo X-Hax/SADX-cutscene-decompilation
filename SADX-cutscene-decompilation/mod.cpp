@@ -49,6 +49,8 @@ extern "C"
 		CutsceneDataList_[0x0035]->Function = ev0035_t_aftercasinopolis;
 		CutsceneDataList_[0x0038]->Function = ev0038_t_vsknuckles;
 		CutsceneDataList_[0x0039]->Function = ev0039_t_beforechaos4;
+		CutsceneDataList_[0x003A]->Function = ev003A_t_afterchaos4;
+		CutsceneDataList_[0x003B]->Function = ev003B_t_tornado1;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;

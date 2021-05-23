@@ -43,7 +43,7 @@ void ev0017_s_tailsreunion(int state)
 		EV_SetMode(TR2, 0);
 		EV_SetPos(TR2, -738.90002f, 1120.0f, 3336.6001f);
 		EV_SetAng(TR2, 57344, 65280, 0);
-		EV_SetAction(TR2, &action_tr2a_s_t2b_body, &tr2_texlist, 1.0, 1, 0);
+		EV_SetAction(TR2, action_tr2a_s_t2b_body, &tr2_texlist, 1.0, 1, 0);
 		SonicModel_EV0017();
 		moveObject(getobjModel(0), -85.699997f, 1290.6f, 3437.3999f, 195.5f, 1255.5f, 3580.6799f, 1000);
 		EventSe_Play(1, 1344, 1800);

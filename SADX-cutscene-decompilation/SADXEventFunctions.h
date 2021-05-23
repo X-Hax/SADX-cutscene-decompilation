@@ -197,6 +197,10 @@ FunctionPointer(void, EV_EggViperArawaru, (float xpos, float ypos, float zpos, i
 so I'll probably add them to their files eventually.*/
 FunctionPointer(void, SetClip_ECScene, (int clipLevel), 0x52F400);
 FunctionPointer(void, SetClip_EV0016, (), 0x52FB20);
+VoidFunc(g_SonicObj_EV003B, 0x6BEE80);
+VoidFunc(g_SonicObj_initializer_EV003B, 0x6BEEA0);
+VoidFunc(g_SonicOrgObj_p_EV003B, 0x6BEEC0);
+VoidFunc(g_SonicOrgObj_p_initializer_EV003B, 0x6BEF10);
 VoidFunc(SonicModel_EV0017, 0x6DA2B0);
 VoidFunc(SonicModel_initializer_EV0017, 0x6DA2C0);
 VoidFunc(tornado_cons_EV0003, 0x6E8E10);
@@ -213,3 +217,6 @@ VoidFunc(p_SonicObj_EV000D, 0x6DF440);
 ObjectFunc(ptr_crashed, 0x6F9390);
 FunctionPointer(ObjectMaster*, EggViperDebrisGenerator, (float x, float y, float z, float sx,
 	float sy, float sz, __int16 a7), 0x6F9B40);
+
+
+

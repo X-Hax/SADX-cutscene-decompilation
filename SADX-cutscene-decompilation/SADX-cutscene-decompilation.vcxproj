@@ -195,6 +195,8 @@
     <ClCompile Include="Tails\ev0035_t_aftercasinopolis.cpp" />
     <ClCompile Include="Tails\ev0038_t_vsknuckles.cpp" />
     <ClCompile Include="Tails\ev0039_t_beforechaos4.cpp" />
+    <ClCompile Include="Tails\ev003A_t_afterchaos4.cpp" />
+    <ClCompile Include="Tails\ev003B_t_tornado1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h" />
