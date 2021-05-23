@@ -42,6 +42,7 @@ void ev0038_t_vsknuckles(int state);
 void ev0039_t_beforechaos4(int state);
 void ev003A_t_afterchaos4(int state);
 void ev003B_t_tornado1(int state);
+void ev003E_t_flashback(int state);
 void ev0100_s_ecafterlanding(int state);
 void ev0101_s_ecfools(int state);
 void ev0102_s_ecaftertransforming(int state);

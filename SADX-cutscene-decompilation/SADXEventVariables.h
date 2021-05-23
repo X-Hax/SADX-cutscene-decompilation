@@ -293,6 +293,12 @@ DataPointer(NJS_ACTION, action_m_m9012_miles, 0x3C854CC);
 DataPointer(PADREC_DATA_TAG, E003BSS, 0x86DD8C);
 DataPointer(PADREC_DATA_TAG, E003BT, 0x86DE98);
 
+//EV003E
+DataPointer(NJS_ACTION, action_m_m0121_miles, 0x3C85494);
+DataPointer(NJS_ACTION, action_m_m0122_miles, 0x3C8549C);
+DataPointer(NJS_ACTION, action_m_m0123_miles, 0x3C854B4);
+DataPointer(EPATHTAG, epathtag_EV003E_RUNNING, 0x2BEEF30);
+
 //EV0165
 DataPointer(NJS_ACTION, action_s_item_r0, 0x3C847E8);
 DataPointer(NJS_ACTION, action_s_item_r1, 0x3C847E0);

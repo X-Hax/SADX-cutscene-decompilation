@@ -111,6 +111,8 @@ FunctionPointer(void, CreateChaos0, (float pos_x, float pos_y, float pos_z,
 FunctionPointer(ObjectMaster*, EV_Alife, (), 0x6EF2C0);
 FunctionPointer(ObjectMaster*, COverlayCreate, (float s, float a, float r, float g, float b), 0x6EF480);
 FunctionPointer(void, COverlaySetSpeed, (ObjectMaster* _this, float s), 0x6EF4C0);
+FunctionPointer(void, COverlaySetColor, (ObjectMaster* _this, float r, float g, float b), 0x6EF4E0);
+FunctionPointer(void, COverlaySetPriority, (ObjectMaster* _this, float p), 0x6EF500);
 FunctionPointer(ObjectMaster*, CIchimaie2_Create, (NJS_TEXLIST* texlistp, char mode), 0x6EF680);
 FunctionPointer(void, CIchimaie2_SetDstAlpha, (ObjectMaster* _this, float alpha, int frame), 0x6EF6F0);
 FunctionPointer(ObjectMaster*, CIchimaie2_SetPriority, (ObjectMaster* _this, float pri), 0x6EF710);
