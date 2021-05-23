@@ -193,6 +193,8 @@
     <ClCompile Include="Sonic\ev017A_s_angelislandwall.cpp" />
     <ClCompile Include="Sonic\ev0180_s_redmountainintro.cpp" />
     <ClCompile Include="Tails\ev0035_t_aftercasinopolis.cpp" />
+    <ClCompile Include="Tails\ev0038_t_vsknuckles.cpp" />
+    <ClCompile Include="Tails\ev0039_t_beforechaos4.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h" />

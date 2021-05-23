@@ -180,6 +180,12 @@
     <ClCompile Include="Tails\ev0035_t_aftercasinopolis.cpp">
       <Filter>Source Files\Tails</Filter>
     </ClCompile>
+    <ClCompile Include="Tails\ev0038_t_vsknuckles.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
+    <ClCompile Include="Tails\ev0039_t_beforechaos4.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
