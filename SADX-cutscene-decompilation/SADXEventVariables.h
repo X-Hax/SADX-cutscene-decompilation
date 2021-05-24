@@ -11,6 +11,9 @@ DataArray(FACETBL, faceTable, 0x91CEC8, 160);
 //EntityData1 but it can do the bitwise stuff
 DataArray(StupidBitStuff*, playertwp, 0x3B42E10, 8);
 
+
+//TODO: Everything up to EV0042 needs to have all labels checked to be accurate to the way they're applied in the 360 data.
+
 //EV0001
 DataArray(char, seqVars, 0x3B18808, 512);
 DataPointer(NJS_ACTION, action_sspatcar_body, 0x2DC028C);
@@ -310,6 +313,18 @@ DataPointer(NJS_ACTION, action_m_m0127_miles, 0x3C84A60);
 DataPointer(NJS_ACTION, action_m_m0128_miles, 0x3C854A4);
 DataPointer(NJS_ACTION, action_m_m0129_miles, 0x3C854AC);
 
+//EV0042
+DataPointer(NJS_ACTION, action_m_em_red, 0x2CBDF44);
+DataPointer(NJS_TEXLIST, texlist_m_em_red, 0x2CBCF48);
+DataPointer(NJS_ACTION, _action_f_f0001_frog, 0x2CBB4DC);
+DataPointer(NJS_TEXLIST, texlist_frog, 0x2DC95D8);
+DataPointer(NJS_ACTION, _action_f_f0002_frog, 0x2CBCF34);
+
+//EV0045
+DataPointer(NJS_ACTION, action_j_j0003_tikal, 0x30F854C);
+DataPointer(NJS_ACTION, action_j_j0013_tikal, 0x3100084);
+DataPointer(NJS_ACTION, action_j_j0015_tikal, 0x3103DCC);
+
 //EV0165
 DataPointer(NJS_ACTION, action_s_item_r0, 0x3C847E8);
 DataPointer(NJS_ACTION, action_s_item_r1, 0x3C847E0);
@@ -371,6 +386,9 @@ DataArray(char**, msgTbl_ev0039, 0x2BEF254, 5);
 DataArray(char**, msgTbl_ev003A, 0x2BEF0A0, 5);
 DataArray(char**, msgTbl_ev003B, 0x2BEEF7C, 5);
 DataArray(char**, msgTbl_ev0040, 0x2BEE1C0, 5);
+DataArray(char**, msgTbl_ev0042, 0x2BEE0EC, 5);
+DataArray(char**, msgTbl_ev0044, 0x2BEE094, 5);
+DataArray(char**, msgTbl_ev0045, 0x2BEE040, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);

@@ -140,6 +140,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ev0042_t_froggyjungle.cpp" />
+    <ClCompile Include="ev0044_t_enterpast.cpp" />
+    <ClCompile Include="ev0045_t_tikal.cpp" />
     <ClCompile Include="Tails\ev0034_t_chaos1.cpp" />
     <ClCompile Include="Tails\ev0033_t_egghornet.cpp" />
     <ClCompile Include="Tails\ev0032_t_meetingsonic.cpp" />

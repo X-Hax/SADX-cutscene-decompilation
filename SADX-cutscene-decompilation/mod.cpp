@@ -53,6 +53,9 @@ extern "C"
 		CutsceneDataList_[0x003B]->Function = ev003B_t_tornado1;
 		CutsceneDataList_[0x003E]->Function = ev003E_t_flashback;
 		CutsceneDataList_[0x0040]->Function = ev0040_t_afterflashback;
+		CutsceneDataList_[0x0042]->Function = ev0042_t_froggyjungle;
+		CutsceneDataList_[0x0044]->Function = ev0044_t_enterpast;
+		CutsceneDataList_[0x0045]->Function = ev0045_t_tikal;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;

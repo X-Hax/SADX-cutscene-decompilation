@@ -198,6 +198,15 @@
     <ClCompile Include="Tails\ev0040_t_afterflashback.cpp">
       <Filter>Source Files\Tails</Filter>
     </ClCompile>
+    <ClCompile Include="ev0042_t_froggyjungle.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0044_t_enterpast.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0045_t_tikal.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
