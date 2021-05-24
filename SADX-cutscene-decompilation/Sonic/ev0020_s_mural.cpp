@@ -86,7 +86,7 @@ void ev0020_s_mural(int state)
 		EV_CameraAng(0, 200, 55264, 42773, 0);
 		EV_Wait(10);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)L"I");
+		EV_SetFace(player, "I");
 		EV_SerifPlay(587);
 		EV_Msg((msgTbl_ev0020[TextLanguage])[0]); // "\aWhoa!  What's this?"
 		EV_Wait(70);
@@ -97,7 +97,7 @@ void ev0020_s_mural(int state)
 		EV_Wait(30);
 		EV_SerifPlay(588);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"E");
+		EV_SetFace(player, "E");
 		EV_MsgW(0, (msgTbl_ev0020[TextLanguage])[1]); // "\aA mural."
 		EV_Wait(30);
 		EV_MsgClose();

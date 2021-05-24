@@ -106,9 +106,9 @@ void ev0008_s_chaos1(int state)
 		moveObjectOn(C_EME_P, 0.0f, 0.0f, 0.0f, -1, tails);
 		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"PCPDDP");
+		EV_SetFace(player, "PCPDDP");
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CCCCCDCCCDE");
+		EV_SetFace(player, "CCCCCDCCCDE");
 		EV_SerifPlay(442);
 		EV_Msg(msgTbl_ev0008[TextLanguage][0]); //aWellThatWasnTSoHard
 		EV_SetAction(player, &action_s_s0044_sonic, &SONIC_TEXLIST, 0.5f, 0, 4);
@@ -478,20 +478,20 @@ void ev0008_s_chaos1(int state)
 		EV_CameraPos(1, 0, 1023.4f, 129.5f, 859.09998f);
 		EV_CameraAng(1, 0, 2489, 20906, 768);
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"CDECCDCCCDE0");
+		EV_SetFace(tails, "CDECCDCCCDE0");
 		EV_SerifPlay(455);
 		EV_Msg(msgTbl_ev0008[TextLanguage][15]); //aSonic
 		EV_Wait(10);
 		EV_CameraPos(1, 80, 1024.2f, 129.35001f, 860.94f);
 		EV_CameraAng(1, 80, 2233, 20650, 768);
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"CDDDCDCCCDE");
+		EV_SetFace(tails, "CDDDCDCCCDE");
 		EV_SerifPlay(456);
 		EV_Msg(msgTbl_ev0008[TextLanguage][16]); //aWeCanTLetHimGetAwayWithT
 		EV_SerifWait();
 		EV_ClrFace(tails);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CCCCCDCCCDE0");
+		EV_SetFace(player, "CCCCCDCCCDE0");
 		EV_SerifPlay(457);
 		EV_Msg(msgTbl_ev0008[TextLanguage][17]); //aNoWayTails
 		EV_SerifWait();
@@ -502,12 +502,12 @@ void ev0008_s_chaos1(int state)
 		EV_CameraAng(1, 0, 5561, 4778, 65024);
 		EV_CameraAng(1, 140, 3001, 4778, 65024);
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"CDDDCBCCCDE0");
+		EV_SetFace(tails, "CDDDCBCCCDE0");
 		EV_SerifPlay(458);
 		EV_Msg(msgTbl_ev0008[TextLanguage][18]); //aWithoutMoreEmeraldsTheMo
 		EV_SerifWait();
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"DEDDCDCCCDE0");
+		EV_SetFace(tails, "DEDDCDCCCDE0");
 		EV_SerifPlay(459);
 		EV_Msg(msgTbl_ev0008[TextLanguage][19]); //
 		EV_SerifWait();

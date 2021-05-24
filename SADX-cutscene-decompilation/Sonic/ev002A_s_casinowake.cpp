@@ -23,13 +23,13 @@ void ev002A_s_casinowake(int state)
 		EV_InitPlayer(0);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_s_s0053_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
-		EV_SetFace(player, (char*)"VVVVVVVVVVVVVVVVVV");
+		EV_SetFace(player, "VVVVVVVVVVVVVVVVVV");
 		EV_CreatePlayer(2, Tails_Main, -526.0f, -2.4000001f, 941.0f, 0, 61952, 0);
 		EV_Wait(1);
 		tails = EV_GetPlayer(2);
 		EV_ClrAction(tails);
 		EV_SetAction(tails, &action_m_m0106_miles, &MILES_TEXLIST, 1.0f, 1, 0);
-		EV_SetFace(tails, (char*)"VVVVVVVVVVVVVVVVVV");
+		EV_SetFace(tails, "VVVVVVVVVVVVVVVVVV");
 		EV_CameraPos(1, 0, -544.96448f, 23.58f, 969.0f);
 		EV_CameraAng(1, 0, 58641, 60672, 65280);
 		EV_Wait(20);
@@ -37,9 +37,9 @@ void ev002A_s_casinowake(int state)
 		EV_CameraPos(0, 120, -540.5f, 15.4f, 960.29999f);
 		EV_CameraPerspective(0, 120, 9102);
 		EV_Wait(50);
-		EV_SetFace(player, (char*)"XW");
+		EV_SetFace(player, "XW");
 		EV_Wait(5);
-		EV_SetFace(tails, (char*)"BWX");
+		EV_SetFace(tails, "BWX");
 		EV_Wait(27);
 		EV_SetAction(player, &action_s_s0057_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 8);
@@ -61,10 +61,10 @@ void ev002A_s_casinowake(int state)
 		EV_ClrFace(tails);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(tails, (char*)"WCBD");
+			EV_SetFace(tails, "WCBD");
 			break;
 		case 1:
-			EV_SetFace(tails, (char*)"CCBD");
+			EV_SetFace(tails, "CCBD");
 			break;
 		}
 		EV_SerifPlay(467);
@@ -72,7 +72,7 @@ void ev002A_s_casinowake(int state)
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+		EV_SetFace(tails, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 		EV_SetAction(player, &action_s_s0054_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 8);
 		EV_MsgClose();
 		EV_WaitAction(player);
@@ -80,13 +80,13 @@ void ev002A_s_casinowake(int state)
 		EV_CameraPos(0, 240, -544.79999f, 0.23f, 962.79999f);
 		EV_CameraAng(0, 240, 2339, 59392, 65280);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"EAAADEDC");
+		EV_SetFace(player, "EAAADEDC");
 		EV_SerifPlay(468);
 		EV_MsgW(1, msgTbl_ev002A[TextLanguage][1]); //"\aAahh... I guess Eggman's got one \nof"...
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"EC");
+		EV_SetFace(player, "EC");
 		EV_SerifPlay(469);
 		EV_Msg(msgTbl_ev002A[TextLanguage][2]); //"\aThat guy must be desperate."
 		EV_Wait(1);
@@ -96,7 +96,7 @@ void ev002A_s_casinowake(int state)
 		EV_CameraAng(0, 90, 2339, 9216, 65280);
 		EV_LookFree(player);
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"ECDACF");
+		EV_SetFace(tails, "ECDACF");
 		EV_SerifPlay(470);
 		EV_Msg(msgTbl_ev002A[TextLanguage][3]); //"\aThat means his two to \nour one, and "...
 		EV_Wait(70);
@@ -105,7 +105,7 @@ void ev002A_s_casinowake(int state)
 		EV_SerifWait();
 		EV_ClrFace(tails);
 		EV_SerifPlay(471);
-		EV_SetFace(tails, (char*)"FD");
+		EV_SetFace(tails, "FD");
 		EV_Msg(msgTbl_ev002A[TextLanguage][4]); //"\aCome on Sonic, \nwe need to get busy!"
 		EV_SetAction(tails, &action_m_m0111_miles, &MILES_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(tails, &action_m_m0109_miles, &MILES_TEXLIST, 1.0f, 1, 0);
@@ -116,7 +116,7 @@ void ev002A_s_casinowake(int state)
 		EV_Wait(30);
 		EV_SerifWait();
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"AAAAAAAAAAAAAAAAA");
+		EV_SetFace(tails, "AAAAAAAAAAAAAAAAA");
 		EV_MsgClose();
 		break;
 	case 2:

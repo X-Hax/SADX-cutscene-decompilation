@@ -32,7 +32,7 @@ void ev0104_s_afterskydeck(int state)
 		FreeTask(TALES_STEP);
 		TALES_STEP = 0;
 		EV_SerifPlay(1528);
-		EV_SetFace(player, (char*)"CED");
+		EV_SetFace(player, "CED");
 		EV_Msg(msgTbl_ev0104[TextLanguage][0]); //"\aIs that it?"
 		EV_SetAction(player, &action_s_s0065_sonic, &SONIC_TEXLIST, 0.75f, 0, 30);
 		EV_LookFree(player);
@@ -45,12 +45,12 @@ void ev0104_s_afterskydeck(int state)
 		EV_CameraPos(0, 40, -126.66f, 89.489998f, -180.33f);
 		EV_CameraAng(0, 40, 63161, 20165, 0);
 		EV_SerifPlay(1529);
-		EV_SetFace(tails, (char*)"CCC");
+		EV_SetFace(tails, "CCC");
 		EV_Msg(msgTbl_ev0104[TextLanguage][1]); //"\aIt might be.  \nBut let's check out t"...
 		EV_Wait(30);
 		EV_LookObject(player, tails, 0.0f, 4.0f, 0.0f);
 		EV_Wait(30);
-		EV_SetFace(player, (char*)"L");
+		EV_SetFace(player, "L");
 		EV_LookFree(player);
 		EV_CameraPos(0, 40, -142.2f, 95.239998f, -154.23f);
 		EV_CameraAng(0, 40, 60089, 60101, 0);

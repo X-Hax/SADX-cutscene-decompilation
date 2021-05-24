@@ -30,7 +30,7 @@ void ev0015_s_chasingzero(int state)
 		EV_CameraPos(0, 90, -424.5f, 0.30000001f, 996.09998f);
 		EV_CameraAng(0, 90, 1792, 31232, 0);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"DDDEDDAAEDDECAA0");
+		EV_SetFace(player, "DDDEDDAAEDDECAA0");
 		EV_SerifPlay(516);
 		EV_Msg((msgTbl_ev0015[TextLanguage])[0]); //"\aAmy!  \nOh man, where can she be?"
 		EV_Wait(60);
@@ -69,7 +69,7 @@ void ev0015_s_chasingzero(int state)
 		EV_CameraAng(1, 55, 4175, 37616, 3328);
 		EV_Wait(55);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"GGGGIIJJJ");
+		EV_SetFace(player, "GGGGIIJJJ");
 		EV_SerifPlay(518);
 		EV_Msg((msgTbl_ev0015[TextLanguage])[2]); //"\aI'll cut 'em off at \nthe Mystic Ruin"...
 		EV_Wait(30);

@@ -133,7 +133,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_LookObject(amy, player, 0.0f, 4.0f, 0.0f);
 		EV_ClrFace(amy);
 		EV_SerifPlay(536);
-		EV_SetFace(amy, (char*)"EM");
+		EV_SetFace(amy, "EM");
 		EV_Msg((msgTbl_ev001A[TextLanguage])[0]); //"\aSonic!"
 		EV_Wait(20);
 		EV_CameraAng(0, 45, 2560, 55888, 0);
@@ -187,7 +187,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_SetAction(amy, &action_a_a0124_amy, &AMY_TEXLIST, 1.0f, 0, 2);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 8);
 		EV_SerifPlay(538);
-		EV_SetFace(amy, (char*)"E");
+		EV_SetFace(amy, "E");
 		EV_Msg((msgTbl_ev001A[TextLanguage])[2]); //"\aNot the birdie!"
 		stopObject(WING);
 		EV_SetPos(WING, 42.549999f, 1536.0f, 3227.0f);
@@ -260,7 +260,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_CameraPos(0, 10, 67.0f, 1561.0f, 3220.1001f);
 		EventSe_Oneshot(1340, 0, 0, 0);
 		EV_SerifPlay(539);
-		EV_SetFace(tails, (char*)"D");
+		EV_SetFace(tails, "D");
 		EV_Msg((msgTbl_ev001A[TextLanguage])[3]); //"\a...A Chaos Emerald!"
 		EV_CameraPos(0, 80, 65.0f, 1559.5f, 3221.1699f);
 		EV_Wait(1);

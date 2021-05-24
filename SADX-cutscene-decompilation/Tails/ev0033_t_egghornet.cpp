@@ -74,7 +74,7 @@ void  ev0033_t_egghornet(int state)
 		EV_CameraAng(1, 100, 1024, 43264, 65024);
 		EV_Wait(30);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"EECECCDCC0");
+		EV_SetFace(player, "EECECCDCC0");
 		EV_SerifPlay(639);
 		EV_MsgW(60, msgTbl_ev0033[TextLanguage][1]); //"\aIt's Eggman!"
 		EV_ClrFace(player);
@@ -105,7 +105,7 @@ void  ev0033_t_egghornet(int state)
 		EV_CameraPos(0, 190, 927.29999f, 126.3f, 720.20001f);
 		EV_CameraAng(0, 190, 615, 42496, 256);
 		EV_ClrFace(sonic);
-		EV_SetFace(sonic, (char*)"CDDDDDC0");
+		EV_SetFace(sonic, "CDDDDDC0");
 		EV_SerifPlay(642);
 		EV_MsgW(30, msgTbl_ev0033[TextLanguage][5]); //"\aYeah right, Dr. Eggman!"
 		EV_Wait(30);
@@ -120,7 +120,7 @@ void  ev0033_t_egghornet(int state)
 		EV_CameraAng(0, 100, 65383, 64688, 256);
 		EV_Wait(10);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CDDAECDCC0");
+		EV_SetFace(player, "CDDAECDCC0");
 		EV_SerifPlay(644);
 		EV_Msg(msgTbl_ev0033[TextLanguage][8]); //"\aThat usually means trouble,\ncoming f"...
 		EV_Wait(75);
@@ -150,7 +150,7 @@ void  ev0033_t_egghornet(int state)
 		EV_CameraPerspective(1, 60, 10923);
 		EV_Wait(1);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CDECDCC0");
+		EV_SetFace(player, "CDECDCC0");
 		EV_SerifPlay(647);
 		EV_Msg(msgTbl_ev0033[TextLanguage][11]); //"\aOr else, what?   Huh?"
 		EV_SerifWait();

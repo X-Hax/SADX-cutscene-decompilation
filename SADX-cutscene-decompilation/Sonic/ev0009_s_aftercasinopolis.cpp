@@ -81,7 +81,7 @@ void ev0009_s_aftercasinopolis(int state)
 			EV_Wait(20);
 			break;
 		case 2:
-			EV_Msg((char*)"?");
+			EV_Msg("?");
 			break;
 		default:
 			break;
@@ -166,7 +166,7 @@ void ev0009_s_aftercasinopolis(int state)
 		EV_CameraAng(0, 40, 64256, 52826, 65280);
 		EV_CameraPos(0, 40, -556.34998f, 1.55f, 981.73779f);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CE");
+		EV_SetFace(player, "CE");
 		EV_SerifPlay(462);
 		EV_Msg(msgTbl_ev0009[TextLanguage][1]); //"\aOh no!\nThe Chaos Emerald!"
 		EV_Wait(20);
@@ -207,7 +207,7 @@ void ev0009_s_aftercasinopolis(int state)
 		EV_CameraPos(1, 0, -549.26001f, 7.1799998f, 984.71997f);
 		EV_CameraPos(0, 20, -538.12701f, -1.944f, 992.57001f);
 		EV_SerifPlay(464);
-		EV_SetFace(player, (char*)"FD");
+		EV_SetFace(player, "FD");
 		EV_Msg(msgTbl_ev0009[TextLanguage][3]); //"\aAw Geesh!"
 		ChgEggMobleMod(5);
 		EV_CameraAng(0, 170, 4208, 8560, 65024);

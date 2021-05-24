@@ -101,7 +101,7 @@ void ev0011_s_fallingtoSS(int state)
 		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.2f, 1, 8);
 		EV_Wait(10);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"G");
+		EV_SetFace(player, "G");
 		EV_SerifPlay(495);
 		EV_Msg((msgTbl_ev0011[TextLanguage])[2]); //"\aYou're not \nwho I'm looking for."
 		EV_Wait(70);
@@ -122,7 +122,7 @@ void ev0011_s_fallingtoSS(int state)
 		EV_SerifPlay(496);
 		EV_Msg((msgTbl_ev0011[TextLanguage])[3]); //"\aOh, I wonder if he's okay?"
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"D");
+		EV_SetFace(player, "D");
 		EV_SetAng(GIRL, 0, 21965, 0);
 		EV_Wait(1);
 		EV_SetPos(player, -556.66998f, -9.9799995f, 2105.26f);

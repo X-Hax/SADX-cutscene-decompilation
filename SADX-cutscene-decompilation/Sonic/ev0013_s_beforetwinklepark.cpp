@@ -71,7 +71,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_CameraPos(1, 0, 336.31f, 10.02f, 1330.0f);
 		EV_CameraAng(1, 0, 0, 0, 0);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, (char*)"MAM");
+		EV_SetFace(amy, "MAM");
 		EV_SerifPlay(870);
 		EV_Msg(msgTbl_ev0013[TextLanguage][0]); //"\aAah, look!  \nEggman's Robot's on the"...
 		EV_Wait(30);
@@ -113,9 +113,9 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_SetAction(player, &action_s_s0017_sonic, &SONIC_TEXLIST, 1.0f, 0, 8);
 		EV_SetAction(player, &action_s_s0006_sonic, &SONIC_TEXLIST, 0.5f, 1, 0);
 		EV_ClrFace(player);
-		if (!VoiceLanguage) EV_SetFace(player, (char*)"DAEC");
+		if (!VoiceLanguage) EV_SetFace(player, "DAEC");
 		EV_SerifPlay(505);
-		if (VoiceLanguage == 1) EV_SetFace(player, (char*)"DAEC");
+		if (VoiceLanguage == 1) EV_SetFace(player, "DAEC");
 		EV_Msg((msgTbl_ev0013[TextLanguage])[1]); //"\aNo problem! He's just a chunk\nof che"...
 		EV_Wait(90);
 		EV_ClrFace(player);
@@ -135,10 +135,10 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_ClrFace(player);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"E");
+			EV_SetFace(player, "E");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"F");
+			EV_SetFace(player, "F");
 			break;
 		}
 		EV_SerifPlay(507);
@@ -158,7 +158,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_SetAng(player, 0, 12288, 0);
 		EV_LookPoint(player, 366.57999f, 15.0f, 1587.15f);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"E");
+		EV_SetFace(player, "E");
 		EventSe_Oneshot(1341, 0, 0, 0);
 		EV_SerifPlay(508);
 		EV_Msg((msgTbl_ev0013[TextLanguage])[4]); //"\aHuh?"
@@ -170,7 +170,7 @@ void ev0013_s_beforetwinklepark(int state)
 		moveObjectOn(KOTORI, 2.5f, 5.0f, 2.0f, 900, amy);
 		EV_Wait(1);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, (char*)"MGAG");
+		EV_SetFace(amy, "MGAG");
 		EV_SerifPlay(509);
 		EV_Msg((msgTbl_ev0013[TextLanguage])[5]); //"\aLook here!   It says, \n'Cute couples"...
 		EV_Wait(100);
@@ -183,7 +183,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_SetPos(zero, 334.92999f, 0.0f, 1204.71f);
 		EV_Wait(1);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, (char*)"GAE");
+		EV_SetFace(amy, "GAE");
 		EV_SerifPlay(510);
 		EV_Msg((msgTbl_ev0013[TextLanguage])[6]); //"\aLet's go!"
 		EV_Wait(90);
@@ -192,7 +192,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_Wait(30);
 		EV_LookFree(player);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"FEFD");
+		EV_SetFace(player, "FEFD");
 		EV_MovePoint(player, 339.87f, 0.0099999998f, 1573.15f);
 		EV_WaitMove(player);
 		EV_SetAction(player, &action_s_s0004_sonic, &SONIC_TEXLIST, 0.25f, 0, 16);
@@ -212,10 +212,10 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_FreeObject(&KOTORI);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"CDC");
+			EV_SetFace(player, "CDC");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"CBBCE");
+			EV_SetFace(player, "CBBCE");
 			break;
 		}
 		EV_SerifPlay(512);

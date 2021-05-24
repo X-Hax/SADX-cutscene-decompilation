@@ -53,7 +53,7 @@ void ev0002_s_chaos0defeated(int state)
 		EV_CameraPos(0, 100, 225.10001f, 28.4f, 417.17999f);
 		EV_SetAction(player, &action_s_s0029_sonic, &SONIC_TEXLIST, 0.89999998f, 0, 4);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CE");
+		EV_SetFace(player, "CE");
 		EV_SerifPlay(411);
 		EV_Msg(*msgTbl_ev0002[TextLanguage]); //"\aCome on ya big drip! Where ya goin'?"
 		EV_WaitAction(player);

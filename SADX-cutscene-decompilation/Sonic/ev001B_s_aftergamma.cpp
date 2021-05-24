@@ -129,7 +129,7 @@ void ev001B_s_aftergamma(int state)
 		EV_CameraPos(0, 0, -27.0, 1535.4301f, 3339.28f);
 		EV_CameraPos(0, 20, -18.15f, 1529.8101f, 3373.1001f);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, (char*)"FF");
+		EV_SetFace(amy, "FF");
 		EV_SerifPlay(548);
 		EV_Msg((msgTbl_ev001B[TextLanguage])[0]); //"\aStop it, Sonic!"
 		EV_Wait(20);
@@ -180,16 +180,16 @@ void ev001B_s_aftergamma(int state)
 		EV_CameraAng(0, 0, 63232, 4608, 0);
 		EV_LookFree(player);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"F");
+		EV_SetFace(player, "F");
 		EV_SerifPlay(549);
 		EV_Msg((msgTbl_ev001B[TextLanguage])[1]); //"\aStep aside, Amy! \nOut of my way!"
 		EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 1.0f, 0, 2);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"CD");
+			EV_SetFace(player, "CD");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"DE");
+			EV_SetFace(player, "DE");
 			break;
 		}
 		SONIC_OBJECTS[6]->sibling = &object_sonic_s_r_a5_01_s_r_a5_01; //Sonic's finger
@@ -208,14 +208,14 @@ void ev001B_s_aftergamma(int state)
 		EV_ClrAction(amy);
 		EV_SetAction(amy, &action_a_a0002_amy, &AMY_TEXLIST, 1.0f, 1, 16);
 		EV_Wait(10);
-		EV_SetFace(amy, (char*)"F");
+		EV_SetFace(amy, "F");
 		EV_SerifPlay(550);
 		EV_Wait(20);
 		EV_ClrFace(amy);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 8);
 		EV_Wait(10);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, (char*)"DCE");
+		EV_SetFace(amy, "DCE");
 		EV_SerifPlay(551);
 		EV_MsgW(90, (msgTbl_ev001B[TextLanguage])[2]); //"\aNo! This robot is my friend.\nHe help"...
 		EV_MsgClose();
@@ -223,7 +223,7 @@ void ev001B_s_aftergamma(int state)
 		EV_Wait(20);
 		EV_CameraPos(0, 0, -5.5f, 1532.23f, 3369.52f);
 		EV_Wait(4);
-		EV_SetFace(amy, (char*)"FFF");
+		EV_SetFace(amy, "FFF");
 		EV_SerifPlay(552);
 		EV_Msg((msgTbl_ev001B[TextLanguage])[3]); //"\aDon't hurt him."
 		EV_Wait(16);
@@ -248,10 +248,10 @@ void ev001B_s_aftergamma(int state)
 		EV_ClrFace(player);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"EE");
+			EV_SetFace(player, "EE");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"EEDEEE");
+			EV_SetFace(player, "EEDEEE");
 			break;
 		}
 		EV_SerifPlay(553);
@@ -264,10 +264,10 @@ void ev001B_s_aftergamma(int state)
 		switch (VoiceLanguage) {
 		case 0:
 			EV_ClrFace(player);
-			EV_SetFace(player, (char*)"EDD");
+			EV_SetFace(player, "EDD");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"EE");
+			EV_SetFace(player, "EE");
 			break;
 		}
 
@@ -401,7 +401,7 @@ void ev001B_s_aftergamma(int state)
 		EV_Wait(3);
 		EV_SerifPlay(555);
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"EFCD");
+		EV_SetFace(tails, "EFCD");
 		EV_CameraAng(0, 4, 63360, 5376, 0);
 		EV_Wait(3);
 		EV_CameraAng(0, 4, 63104, 5376, 0);
@@ -433,10 +433,10 @@ void ev001B_s_aftergamma(int state)
 		EV_ClrFace(player);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"FCE");
+			EV_SetFace(player, "FCE");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"EDF");
+			EV_SetFace(player, "EDF");
 			break;
 		}
 		EV_SerifPlay(556);
@@ -450,7 +450,7 @@ void ev001B_s_aftergamma(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_e_e0002_e102, &E102_TEXLIST, 1.0f, 1, 0);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, (char*)"D");
+		EV_SetFace(amy, "D");
 		EV_SerifPlay(557);
 		EV_MsgW(25, (msgTbl_ev001B[TextLanguage])[8]); //"\aBut what about you?"
 		EV_MsgClose();
@@ -467,10 +467,10 @@ void ev001B_s_aftergamma(int state)
 		EV_ClrFace(player);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"FCEDEC");
+			EV_SetFace(player, "FCEDEC");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"FCE");
+			EV_SetFace(player, "FCE");
 			break;
 		}
 		EV_SerifPlay(558);

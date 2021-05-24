@@ -562,7 +562,7 @@ void ev002B_s_beforechaos0(int state)
 		EV_Msg((msgTbl_ev002B[TextLanguage])[5]); // "\aAh, yeah!  This could be fun!"
 		EV_CameraPos(0, 60, 283.89001f, 21.639999f, 473.89999f);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"EEGE");
+		EV_SetFace(player, "EEGE");
 		EV_Wait(30);
 		EV_CameraTargetFree();
 		EV_CameraPos(0, 0, 265.07001f, 3.8199999f, 389.01999f);

@@ -85,7 +85,7 @@ void ev0012_s_meetingamy(int state)
 		EV_SetAction(amy, AMY_ACTIONS[56], &AMY_TEXLIST, 0.69999999f, 0, 1);
 		EV_Wait(1);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, (char*)"EEC0");
+		EV_SetFace(amy, "EEC0");
 		EV_SerifPlay(498);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[1]); //"\aLong time no see!"
 		EV_ClrFace(amy);
@@ -93,7 +93,7 @@ void ev0012_s_meetingamy(int state)
 		EV_SetAction(player, &action_s_s0037_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
 		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 1.0f, 1, 4);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"DBBAA0");
+		EV_SetFace(player, "DBBAA0");
 		EV_SerifPlay(499);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[2]); //"\aHuh... A... Amy?"
 		moveObjectOn(obj_wing1, 4.5f, 8.0f, 0.2f, 100, amy);
@@ -154,10 +154,10 @@ void ev0012_s_meetingamy(int state)
 		EV_ClrFace(amy);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(amy, (char*)"FFFFGF0");
+			EV_SetFace(amy, "FFFFGF0");
 			break;
 		case 1:
-			EV_SetFace(amy, (char*)"FF");
+			EV_SetFace(amy, "FF");
 			break;
 		}
 		EV_MovePoint2(amy, -531.0f, 0.0f, 1207.0f, 0.5f, 0.059999999f);
@@ -187,7 +187,7 @@ void ev0012_s_meetingamy(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 12);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, (char*)"AGCCGAAAAACEGCCGGDE0");
+		EV_SetFace(amy, "AGCCGAAAAACEGCCGGDE0");
 		EV_SerifPlay(501);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[4]); //"\aListen, this birdie seems to be \nin "...
 		EV_CameraPos(1, 75, -533.70001f, 7.02f, 1200.45f);
@@ -200,7 +200,7 @@ void ev0012_s_meetingamy(int state)
 		EV_CameraPos(0, 0, -529.27002f, 5.3000002f, 1203.2f);
 		EV_CameraAng(0, 0, 1792, 9712, 0);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"AED0");
+		EV_SetFace(player, "AED0");
 		EV_CameraPos(0, 8, -526.40002f, 2.7f, 1206.5f);
 		EV_CameraAng(0, 8, 4864, 7920, 0);
 		EV_ClrAction(player);
@@ -208,7 +208,7 @@ void ev0012_s_meetingamy(int state)
 		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 4);
 		EV_CameraPos(0, 30, -525.79999f, 2.2f, 1207.2f);
 		EV_CameraAng(0, 30, 4864, 7920, 0);
-		EV_SetFace(player, (char*)"F");
+		EV_SetFace(player, "F");
 		dsPlay_oneshot_v(1333, 0, 0, 127, -529.20001f, 2.01f, 1206.0f);
 		EV_SerifPlay(502);
 		EV_ClrFace(amy);
@@ -223,7 +223,7 @@ void ev0012_s_meetingamy(int state)
 		EV_CameraPos(1, 90, -520.54999f, 7.4200001f, 1189.9f);
 		EV_CameraAng(1, 90, 64085, 24064, 65024);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, (char*)"EEDDEEDDEEED0");
+		EV_SetFace(amy, "EEDDEEDDEEED0");
 		EV_SerifPlay(503);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[7]); //"\aIf you don't, we're just\ngonna tag a"...
 		EV_Wait(20);

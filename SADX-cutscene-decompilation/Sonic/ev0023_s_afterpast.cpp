@@ -26,12 +26,12 @@ void ev0023_s_afterpast(int state)
 		EV_CameraPos(1, 0, -519.29999f, 3.96f, -863.0f);
 		EV_CameraAng(1, 0, 2304, 65280, 0);
 		create_eggmoble(-574.45502f, 114.0f, -620.79999f, 0, 51200, 0);
-		EV_SetFace(player, (char*)"VVVVVVVVVVVVVVVVVVVV");
+		EV_SetFace(player, "VVVVVVVVVVVVVVVVVVVV");
 		EV_Wait(30);
 		COverlaySetSpeed(white, -0.016666668f);
 		EV_Wait(35);
 		ChgEggMobleSMod(1);
-		EV_SetFace(player, (char*)"WXBABAB");
+		EV_SetFace(player, "WXBABAB");
 		EV_CameraPos(0, 110, -522.13501f, 3.2969999f, -855.83002f);
 		EV_CameraAng(0, 110, 2304, 64256, 65024);
 		EV_Wait(110);
@@ -39,10 +39,10 @@ void ev0023_s_afterpast(int state)
 		EV_SerifPlay(595);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"EAD");
+			EV_SetFace(player, "EAD");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"DD");
+			EV_SetFace(player, "DD");
 			break;
 		}
 		EV_Msg(msgTbl_ev0023[TextLanguage][0]); //"\aWhat was that all about?"
@@ -56,7 +56,7 @@ void ev0023_s_afterpast(int state)
 		EV_SetAction(player, &action_s_s0018_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 24);
 		EV_Wait(5);
 		EV_SerifPlay(596);
-		EV_SetFace(player, (char*)"DAE");
+		EV_SetFace(player, "DAE");
 		EV_Msg(msgTbl_ev0023[TextLanguage][1]); //"\aI don't think \nI'm dreaming here."
 		EV_Wait(1);
 		EV_SerifWait();
@@ -103,7 +103,7 @@ void ev0023_s_afterpast(int state)
 		EV_MovePoint2(player, -721.26801f, 15.843f, -878.164f, 1.3f, 2.0f);
 		EV_Wait(20);
 		EV_SerifPlay(598);
-		EV_SetFace(player, (char*)"F");
+		EV_SetFace(player, "F");
 		EV_Msg(msgTbl_ev0023[TextLanguage][3]); //"\aEggman!"
 		EV_Wait(1);
 		EV_SerifWait();
@@ -129,7 +129,7 @@ void ev0023_s_afterpast(int state)
 		EV_CameraAng(0, 100, 2304, 43264, 0);
 		EV_Wait(10);
 		EV_SerifPlay(599);
-		EV_SetFace(player, (char*)"CDE");
+		EV_SetFace(player, "CDE");
 		EV_Msg(msgTbl_ev0023[TextLanguage][4]); //"\aWhat's he doing here?"
 		EV_Wait(1);
 		EV_SerifWait();
@@ -139,10 +139,10 @@ void ev0023_s_afterpast(int state)
 		EV_SerifPlay(600);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"F");
+			EV_SetFace(player, "F");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"FFF");
+			EV_SetFace(player, "FFF");
 			break;
 		}
 		EV_Msg(msgTbl_ev0023[TextLanguage][5]); //"\aOh, never mind.  \nThis time I'll get"...

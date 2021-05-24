@@ -31,30 +31,30 @@ void ev0014_s_aftertwinklepark(int state)
 		EV_CameraPos(0, 270, 741.32001f, 55.09f, 1760.51f);
 		EV_CameraAng(0, 270, 64965, 43066, 0);
 		EV_ClrFace(player);
-		if (VoiceLanguage == 1) EV_SetFace(player, (char*)0x876498);
+		if (VoiceLanguage == 1) EV_SetFace(player, "DBD");
 		EV_SerifPlay(513);
-		if (!VoiceLanguage) EV_SetFace(player, (char*)"DD");
+		if (!VoiceLanguage) EV_SetFace(player, "DD");
 		EV_Msg((msgTbl_ev0014[TextLanguage])[0]);
 		EV_Wait(80);
 		EV_ClrFace(player);
 		EV_SerifPlay(514);
-		EV_SetFace(player, (char*)"EC");
+		EV_SetFace(player, "EC");
 		EV_Msg((msgTbl_ev0014[TextLanguage])[1]);
 		EV_Wait(25);
 		EV_SetAction(player, &action_s_s0006_sonic, &SONIC_TEXLIST, 0.2f, 0, 4);
 		EV_Wait(40);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"L");
+		EV_SetFace(player, "L");
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 0.5f, 0, 16);
 		EV_Wait(30);
 		EV_SerifPlay(515);
 		EV_ClrFace(player);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"D");
+			EV_SetFace(player, "D");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"DE");
+			EV_SetFace(player, "DE");
 			break;
 		}
 		EV_Msg((msgTbl_ev0014[TextLanguage])[2]);

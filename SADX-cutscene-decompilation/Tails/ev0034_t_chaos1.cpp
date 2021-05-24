@@ -109,7 +109,7 @@ void ev0034_t_chaos1(int state)
 		EV_Wait(1);
 		moveObjectOn(C_EME_P, 0.0f, 0.0f, 0.0f, 160, player);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"PCPDDP");
+		EV_SetFace(player, "PCPDDP");
 		EV_SerifPlay(649);
 		EV_MsgW(60, msgTbl_ev0034[TextLanguage][0]); //"\aThat was just too easy!"
 		EV_Wait(1);
@@ -353,17 +353,17 @@ void ev0034_t_chaos1(int state)
 		EV_Wait(40);
 		EV_MsgClose();
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"ABAAAAAAAABAAAAABAAAAAAB");
+		EV_SetFace(player, "ABAAAAAAAABAAAAABAAAAAAB");
 		EV_SerifPlay(655);
-		EV_SetFace(player, (char*)"AB");
+		EV_SetFace(player, "AB");
 		EV_Msg(msgTbl_ev0034[TextLanguage][6]); //"\aUh, Monster?"
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(player, (char*)"BBABB");
+			EV_SetFace(player, "BBABB");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(player, (char*)"CCCCC");
+			EV_SetFace(player, "CCCCC");
 		}
 		EV_Wait(40);
 		EV_ClrFace(player);
@@ -529,7 +529,7 @@ void ev0034_t_chaos1(int state)
 		EV_CameraAng(1, 80, 2233, 20650, 768);
 		EV_SerifWait();
 		EV_ClrFace(sonic);
-		EV_SetFace(sonic, (char*)"CDDDCDCCCDE");
+		EV_SetFace(sonic, "CDDDCDCCCDE");
 		EV_SerifPlay(664);
 		EV_Msg(msgTbl_ev0034[TextLanguage][17]); //"\aWe can't let that monster get\nany bi"...
 		EV_SerifWait();
@@ -540,12 +540,12 @@ void ev0034_t_chaos1(int state)
 		EV_CameraAng(1, 0, 441, 2730, 65024);
 		EV_CameraPos(1, 140, 1013.4f, 132.39999f, 890.5f);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CCDDCDCCCDE");
+		EV_SetFace(player, "CCDDCDCCCDE");
 		EV_SerifPlay(665);
 		EV_Msg(msgTbl_ev0034[TextLanguage][18]); //"\aYou're right, \nChaos must be stopped"...
 		EV_SerifWait();
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CDEDCDCCCDE");
+		EV_SetFace(player, "CDEDCDCCCDE");
 		EV_SerifPlay(666);
 		EV_Msg(msgTbl_ev0034[TextLanguage][19]); //"\aAnd he can be if we keep him\naway fr"...
 		EV_SerifWait();
@@ -555,11 +555,11 @@ void ev0034_t_chaos1(int state)
 		EV_CameraPos(1, 120, 1017.7f, 129.0f, 871.90002f);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(player, (char*)"DEEDCDCCCDE");
+			EV_SetFace(player, "DEEDCDCCCDE");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(player, (char*)"DEDDE");
+			EV_SetFace(player, "DEDDE");
 		}
 		EV_SerifPlay(667); 
 		EV_MsgW(50, msgTbl_ev0034[TextLanguage][20]); //"\aSo what do you say, Sonic?"

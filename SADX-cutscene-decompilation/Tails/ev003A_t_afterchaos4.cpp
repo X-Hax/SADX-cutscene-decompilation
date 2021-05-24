@@ -131,7 +131,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_LookObject(knuckles, sonic, 0.0f, 6.0f, 0.0f);
 		EV_LookObject(player, sonic, 0.0f, 6.0f, 0.0f);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CDCD");
+		EV_SetFace(player, "CDCD");
 		EV_Wait(5);
 		EV_SerifPlay(705);
 		EV_Msg(msgTbl_ev003A[TextLanguage][4]); //"\aHey, we can't let him\nget away!"
@@ -141,7 +141,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_Wait(10);
 		deleteModel(0);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CDCD");
+		EV_SetFace(player, "CDCD");
 		EV_Wait(5);
 		EV_SerifPlay(706);
 		EV_Msg(msgTbl_ev003A[TextLanguage][5]); //"\aLet's get to my workshop \nand we'll "...
@@ -150,7 +150,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_LookFree(sonic);
 		EV_SetAction(sonic, &action_s_s9001_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
 		EV_ClrFace(sonic);
-		EV_SetFace(sonic, (char*)"CDCD");
+		EV_SetFace(sonic, "CDCD");
 		EV_Wait(5);
 		EV_Msg(msgTbl_ev003A[TextLanguage][6]); //"\aYeah!"
 		EV_Wait(5);
@@ -178,21 +178,21 @@ void ev003A_t_afterchaos4(int state)
 		EV_CameraPos(0, 160, 94.559998f, 76.080002f, 252.32001f);
 		EV_CameraAng(0, 160, 3328, 47872, 0);
 		EV_ClrFace(knuckles);
-		EV_SetFace(knuckles, (char*)"CDCD");
+		EV_SetFace(knuckles, "CDCD");
 		EV_Wait(10);
 		EV_SerifPlay(709);
 		EV_Msg(msgTbl_ev003A[TextLanguage][8]); //"\aI have some unfinished business\nto t"...
 		EV_Wait(20);
 		EV_ClrFace(knuckles);
 		EV_Wait(10);
-		EV_SetFace(knuckles, (char*)"CDCD");
+		EV_SetFace(knuckles, "CDCD");
 		EV_SerifWait();
 		EV_ClrFace(knuckles);
 		EV_Wait(20);
 		EV_CameraPos(0, 0, 76.480003f, 75.239998f, 239.92999f);
 		EV_CameraAng(0, 0, 4352, 5632, 0);
 		EV_ClrFace(sonic);
-		EV_SetFace(sonic, (char*)"CDCD");
+		EV_SetFace(sonic, "CDCD");
 		EV_SerifPlay(710);
 		EV_Wait(5);
 		EV_Msg(msgTbl_ev003A[TextLanguage][9]); //"\aNo problem, Knuckles."
@@ -201,11 +201,11 @@ void ev003A_t_afterchaos4(int state)
 		EV_ClrFace(sonic);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(sonic, (char*)"CDFEFE");
+			EV_SetFace(sonic, "CDFEFE");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(sonic, (char*)"FDC");
+			EV_SetFace(sonic, "FDC");
 		}
 		EV_SerifPlay(711);
 		EV_Wait(5);

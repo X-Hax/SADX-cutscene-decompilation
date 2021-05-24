@@ -47,7 +47,7 @@ void ev001E_s_lostworld(int state)
 		EV_SetAction(player, &action_s_s0029_sonic, &SONIC_TEXLIST, 0.5f, 0, 14);
 		EV_SetAction(player, &action_s_s0021_sonic, &SONIC_TEXLIST, 0.5f, 1, 10);
 		EV_Wait(2);
-		EV_SetFace(player, (char*)"EAF");
+		EV_SetFace(player, "EAF");
 		EV_Msg((msgTbl_ev001E[TextLanguage])[0]); //"\aAarrgh!  \nI hate Eggman!"
 		EV_Wait(1);
 		EV_SerifWait();
@@ -60,7 +60,7 @@ void ev001E_s_lostworld(int state)
 		EV_SetAction(player, &action_s_s0027_sonic, &SONIC_TEXLIST, 0.5f, 1, 10);
 		EV_Wait(10);
 		EV_SerifPlay(583);
-		EV_SetFace(player, (char*)"E");
+		EV_SetFace(player, "E");
 		EV_Msg((msgTbl_ev001E[TextLanguage])[1]); //"\aWhere's this?"
 		EV_Wait(30);
 		EventSe_Play(2, 1114, 1800);
@@ -122,7 +122,7 @@ void ev001E_s_lostworld(int state)
 		EV_CameraAng(1, 0, 5888, 27136, 0);
 		EV_CameraPos(0, 90, -564.20001f, 1.6f, -599.95001f);
 		EV_SerifPlay(585);
-		EV_SetFace(player, (char*)"AE");
+		EV_SetFace(player, "AE");
 		EV_Msg((msgTbl_ev001E[TextLanguage])[3]); //"\aThat light!"
 		EV_Wait(1);
 		EV_SerifWait();
@@ -132,7 +132,7 @@ void ev001E_s_lostworld(int state)
 		EV_CameraPos(0, 240, -548.15997f, 47.0f, -776.34998f);
 		EV_CameraAng(0, 240, 2304, 64000, 0);
 		EV_SerifPlay(586);
-		EV_SetFace(player, (char*)"DE");
+		EV_SetFace(player, "DE");
 		EV_Msg((msgTbl_ev001E[TextLanguage])[4]); //"\aI think it's trying to \nshow me some"...
 		EV_SerifWait();
 		EV_Wait(180);

@@ -25,14 +25,14 @@ void ev0100_s_ecafterlanding(int state)
 		EV_CameraAng(1, 120, 255, 58230, 0);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"ICCCDDEEEEEEDDDDCCCDDD");
+			EV_SetFace(player, "ICCCDDEEEEEEDDDDCCCDDD");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"ECI");
+			EV_SetFace(player, "ECI");
 			break;
 		}
 		tails = EV_GetPlayer(2);
-		EV_SetFace(tails, (char*)"JBBLLL");
+		EV_SetFace(tails, "JBBLLL");
 		EV_SerifPlay(1513);
 		EV_Msg(msgTbl_ev0100[TextLanguage][0]); //"\aWow!  This thing is really huge!"
 		EV_Wait(120);
@@ -54,24 +54,24 @@ void ev0100_s_ecafterlanding(int state)
 		EV_CameraPos(1, 210, 29.860001f, 700.06f, -1065.27f);
 		EV_CameraAng(1, 210, 2827, 3982, 0);
 		EV_LookPoint(tails, 23.389999f, 699.25f, -1050.27f);
-		EV_SetFace(tails, (char*)L"T");
+		EV_SetFace(tails, "T");
 		EV_LookPoint(player, 12.8f, 699.25f, -1093.5f);
 		EV_Wait(30);
-		EV_SetFace(player, (char*)L"R");
+		EV_SetFace(player, "R");
 		EV_LookFree(player);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"CCFFFGGG");
+			EV_SetFace(player, "CCFFFGGG");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"CH");
+			EV_SetFace(player, "CH");
 			break;
 		}
 		EV_SerifPlay(1515);
 		EV_Msg(msgTbl_ev0100[TextLanguage][2]); //"\aYou're right, my friend!  \nSo, here "...
 		EV_Wait(30);
 		EV_LookFree(tails);
-		EV_SetFace(tails, (char*)"BB");
+		EV_SetFace(tails, "BB");
 		EV_Wait(20);
 		EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 0.69999999f, 0, 20);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 5);

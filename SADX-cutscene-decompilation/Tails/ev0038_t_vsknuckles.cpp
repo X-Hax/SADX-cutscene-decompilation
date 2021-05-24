@@ -130,11 +130,11 @@ void ev0038_t_vsknuckles(int state)
 			EV_CameraAng(1, 45, 1560, 26026, 65203);
 			if (!VoiceLanguage)
 			{
-				EV_SetFace(player, (char*)"FFF");
+				EV_SetFace(player, "FFF");
 			}
 			if (VoiceLanguage == 1)
 			{
-				EV_SetFace(player, (char*)"DE");
+				EV_SetFace(player, "DE");
 			}
 			EV_SerifPlay(680);
 			EV_MsgW(45, msgTbl_ev0038[TextLanguage][1]);
@@ -147,13 +147,13 @@ void ev0038_t_vsknuckles(int state)
 			EV_SetPos(knuckles, 54.470001f, 73.5f, 296.95001f);
 			EV_SetAction(knuckles, &action_k_k0012_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 2);
 			EV_SetAction(knuckles, &action_k_k0005_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
-			EV_SetFace(knuckles, (char*)"FCDE");
+			EV_SetFace(knuckles, "FCDE");
 			EV_SerifPlay(681);
 			EV_MsgW(60, msgTbl_ev0038[TextLanguage][2]);
 			EV_ClrFace(knuckles);
 			throughplayer_off(player);
 			throughplayer_off(knuckles);
-			EV_SetFace(knuckles, (char*)"EFCD");
+			EV_SetFace(knuckles, "EFCD");
 			EV_SerifPlay(682);
 			EV_MsgW(90, msgTbl_ev0038[TextLanguage][3]);
 			EV_ClrFace(knuckles);
@@ -163,7 +163,7 @@ void ev0038_t_vsknuckles(int state)
 			EV_CameraAng(0, 0, 280, 31282, 65203);
 			EV_CameraPos(0, 180, 48.919998f, 79.550003f, 259.81f);
 			EV_SerifPlay(683);
-			EV_SetFace(player, (char*)"FFF");
+			EV_SetFace(player, "FFF");
 			EV_MsgW(50, msgTbl_ev0038[TextLanguage][4]);
 			EV_ClrFace(player);
 			EV_MsgClose();

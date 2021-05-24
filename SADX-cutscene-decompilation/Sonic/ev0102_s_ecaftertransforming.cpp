@@ -27,10 +27,10 @@ void ev0102_s_ecaftertransforming(int state)
 		tails = EV_GetPlayer(2);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(tails, (char*)"ICDEE");
+			EV_SetFace(tails, "ICDEE");
 			break;
 		case 1:
-			EV_SetFace(tails, (char*)"ICDE");
+			EV_SetFace(tails, "ICDE");
 			break;
 		}
 		EV_SerifPlay(1519);
@@ -41,15 +41,15 @@ void ev0102_s_ecaftertransforming(int state)
 		EV_CameraAng(1, 90, 3799, 662, 47);
 		EV_LookObject(player, tails, 0.0f, 3.0f, 0.0f);
 		EV_Wait(60);
-		EV_SetFace(player, (char*)L"T");
+		EV_SetFace(player, "T");
 		EV_Wait(60);
 		EV_LookPoint(player, 6.5599999f, 700.16998f, 50.52f);
-		EV_SetFace(player, (char*)"FDDE");
+		EV_SetFace(player, "FDDE");
 		EV_SerifPlay(1520);
 		EV_MsgW(60, msgTbl_ev0102[TextLanguage][1]); //"\aDarn!   This makes it harder for us "...
 		EV_SerifWait();
 		EV_ClrFace(player);
-		EV_SetFace(tails, (char*)"OCCC");
+		EV_SetFace(tails, "OCCC");
 		EV_SerifPlay(1521);
 		EV_MsgW(60, msgTbl_ev0102[TextLanguage][2]); //"\aI hate it when he doesn't listen..."
 		EV_ClrFace(tails);
@@ -75,7 +75,7 @@ void ev0102_s_ecaftertransforming(int state)
 		EV_SetAction(tails, (NJS_ACTION*)0x3C84A48, &MILES_TEXLIST, 1.0f, 1, 0); //TODO: label
 		EV_Wait(30);
 		EV_SetAction(tails, MILES_ACTIONS[79], &MILES_TEXLIST, 1.0f, 1, 15);
-		EV_SetFace(player, (char*)"FFPP");
+		EV_SetFace(player, "FFPP");
 		EV_SerifPlay(1526);
 		EV_Msg(msgTbl_ev0102[TextLanguage][7]); //"\aOh yeah!  Well, I'll show YOU! \nBrin"...
 		EV_LookFree(player);
@@ -84,10 +84,10 @@ void ev0102_s_ecaftertransforming(int state)
 		EV_SetAction(player, SONIC_ACTIONS[123], &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_Wait(30);
 		EV_LookObject(tails, player, 0.0f, 3.0f, 0.0f);
-		EV_SetFace(tails, (char*)L"J");
+		EV_SetFace(tails, "J");
 		EV_Wait(60);
 		EV_LookFree(tails);
-		EV_SetFace(tails, (char*)L"N");
+		EV_SetFace(tails, "N");
 		EV_SerifWait();
 		EV_CameraPos(0, 80, 14.0f, 661.0f, 27.83f);
 		EV_CameraAng(0, 80, 3543, 30102, 0);

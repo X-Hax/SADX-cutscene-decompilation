@@ -138,7 +138,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_CameraPos(1, 75, -580.70001f, 7.8699999f, 964.29999f);
 		EV_Wait(60);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CE");
+		EV_SetFace(player, "CE");
 		EV_SerifPlay(670);
 		EV_Msg(msgTbl_ev0035[TextLanguage][1]);
 		eggmoble_turn(0, -29696, 0, 1, 0);
@@ -216,7 +216,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EventSe_Volume(0, -120, 70);
 		EV_ClrFace(player);
 		EV_SerifPlay(673);
-		EV_SetFace(player, (char*)"AADEVVVVVVVVVVVVVVVVVVVV");
+		EV_SetFace(player, "AADEVVVVVVVVVVVVVVVVVVVV");
 		EV_Msg(msgTbl_ev0035[TextLanguage][5]);
 		EV_Wait(15);
 		WHITE = COverlayCreate(0.016666668f, 0.1f, 1.0f, 1.0f, 1.0f);

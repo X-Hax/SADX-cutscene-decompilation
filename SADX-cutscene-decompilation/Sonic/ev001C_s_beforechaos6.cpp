@@ -56,11 +56,11 @@ void ev001C_s_beforechaos6(int state)
 		EV_SerifPlay(561);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(player, (char*)"FE");
+			EV_SetFace(player, "FE");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(player, (char*)"FBBBD");
+			EV_SetFace(player, "FBBBD");
 		}
 		EV_Msg((msgTbl_ev001C[TextLanguage])[0]); //"\aOh no!  Not again!"
 		EV_SerifWait();
@@ -71,7 +71,7 @@ void ev001C_s_beforechaos6(int state)
 		EV_CameraPos(0, 110, 79.110001f, 750.47998f, -496.0f);
 		EV_Wait(30);
 		EV_SerifPlay(565);
-		EV_SetFace(player, (char*)"EAADC");
+		EV_SetFace(player, "EAADC");
 		EV_Msg((msgTbl_ev001C[TextLanguage])[1]); //"\aChaos!   \nCould this be the same bea"...
 		EV_Wait(50);
 		EV_CameraPerspective(0, 1, 9102);
@@ -125,7 +125,7 @@ void ev001C_s_beforechaos6(int state)
 		EV_SetAction(player, &action_s_s0067_sonic, &SONIC_TEXLIST, 0.69999999f, 0, 8);
 		EV_SetAction(player, SONIC_ACTIONS[123], &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_SerifPlay(568);
-		EV_SetFace(player, (char*)"FEF");
+		EV_SetFace(player, "FEF");
 		EV_Msg((msgTbl_ev001C[TextLanguage])[7]); //"\aJust leave it to me!"
 		EV_Wait(1);
 		EV_SerifWait();
@@ -171,7 +171,7 @@ void ev001C_s_beforechaos6(int state)
 		EV_CameraAng(1, 30, 4905, 55881, 512);
 		EV_CameraPerspective(0, 40, 6372);
 		EV_SerifPlay(573);
-		EV_SetFace(player, (char*)"FEF");
+		EV_SetFace(player, "FEF");
 		EV_Msg((msgTbl_ev001C[TextLanguage])[12]); //"\aYou won't get away \nwith this, you m"...
 		EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 0.80000001f, 0, 4);
 		EV_SetAction(player, &action_s_s0005_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 4);

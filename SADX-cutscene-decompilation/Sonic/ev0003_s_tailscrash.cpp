@@ -36,7 +36,7 @@ void ev0003_s_tailscrash(int state)
 		EV_CameraAng(0, 75, 4608, 26880, 65280);
 		EV_CameraPos(0, 75, -218.39999f, 4.4661999f, 1809.5863f);
 		EV_Wait(24);
-		EV_SetFace(player, (char*)"VVVVVVVVVVVVVVVV");
+		EV_SetFace(player, "VVVVVVVVVVVVVVVV");
 		EV_Wait(50);
 		EV_CameraAng(0, 60, 4608, 26880, 65280);
 		EV_CameraPos(0, 60, -219.245f, 4.4439998f, 1809.0614f);
@@ -48,7 +48,7 @@ void ev0003_s_tailscrash(int state)
 		tornado_cons_EV0003();
 		EventSe_Play(0, 1333, 1800);
 		EventSe_Volume(0, -60, 1);
-		EV_SetFace(player, (char*)"W");
+		EV_SetFace(player, "W");
 		EV_Wait(1);
 		EventSe_Volume(0, -10, 100);
 		EV_Wait(29);
@@ -56,7 +56,7 @@ void ev0003_s_tailscrash(int state)
 		EV_Wait(10);
 		EV_WaitAction(player);
 		EV_SetAction(player, &action_s_s0032_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 0);
-		EV_SetFace(player, (char*)"BAX");
+		EV_SetFace(player, "BAX");
 		EV_SerifPlay(402);
 		EV_SetAction(player, &action_s_s0032_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 0);
 		BGM_Stop();
@@ -84,7 +84,7 @@ void ev0003_s_tailscrash(int state)
 		EventSe_Volume(0, 0, 1);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 0);
-		EV_SetFace(player, (char*)"CD");
+		EV_SetFace(player, "CD");
 		EV_CameraChase(task_tornado);
 		EV_SerifPlay(414);
 		EV_Msg((msgTbl_ev0003[TextLanguage])[1]); // "\aWhat? Tails?"
@@ -106,12 +106,12 @@ void ev0003_s_tailscrash(int state)
 		EV_SerifPlay(415);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(player, (char*)"DJZZZZZZZZZZZZZZZZZZZ");
+			EV_SetFace(player, "DJZZZZZZZZZZZZZZZZZZZ");
 		}
 		EV_Msg((msgTbl_ev0003[TextLanguage])[2]); // "\aWatch out!   \nYou're gonna crash!  A"...
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(player, (char*)"DJ");
+			EV_SetFace(player, "DJ");
 		}
 		EV_SerifWait();
 		EV_MsgClose();
@@ -132,7 +132,7 @@ void ev0003_s_tailscrash(int state)
 		EventSe_Play(1, 1335, 1800);
 		EventSe_Volume(1, -20, 1);
 		EV_Wait(2);
-		EV_SetFace(player, (char*)"H");
+		EV_SetFace(player, "H");
 		EV_CameraAng(0, 3, 1280, 23552, 0);
 		EV_Wait(2);
 		EV_CameraAng(0, 3, 4864, 23552, 0);
@@ -158,11 +158,11 @@ void ev0003_s_tailscrash(int state)
 		EV_Wait(25);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(player, (char*)"EAACD");
+			EV_SetFace(player, "EAACD");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(player, (char*)"EC");
+			EV_SetFace(player, "EC");
 		}
 		EV_Wait(20);
 		EV_ClrAction(player);

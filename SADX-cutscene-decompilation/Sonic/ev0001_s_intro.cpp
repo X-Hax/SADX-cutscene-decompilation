@@ -213,14 +213,14 @@ void ev0001_s_intro(int state)
 		EV_SerifPlay(400);
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(player, (char*)"CDE");
+			EV_SetFace(player, "CDE");
 		}
 		EV_Wait((int)fps * 20);
 		EV_Msg(msgTbl_ev0001[TextLanguage][0]); // "\aAh, Yeah!  This is happenin'!"
 		EV_Wait((int)fps * 5);
 		if (!VoiceLanguage) //JP voice has a whistle so dialogue starts later
 		{
-			EV_SetFace(player, (char*)"CDE");
+			EV_SetFace(player, "CDE");
 		}
 		EV_Wait((int)fps * 10);
 		EV_SerifPlay(401);
@@ -242,7 +242,7 @@ void ev0001_s_intro(int state)
 		EV_SerifPlay(402);
 		EV_LookPoint(player, -85.339996f, 8.0f, 1590.0f);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"C");
+		EV_SetFace(player, "C");
 		EV_Wait((int)fps * 5);
 		EV_ClrFace(player);
 		EV_SetPath(PAT_01, &epathtag_EV0001_01PT, 1.0f / fps, 0);
@@ -297,7 +297,7 @@ void ev0001_s_intro(int state)
 		EV_Wait((int)fps * 10);
 		EV_SerifPlay(403);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"E");
+		EV_SetFace(player, "E");
 		EV_Msg(msgTbl_ev0001[TextLanguage][1]); // "\aWhat's up?"
 		EV_Wait((int)fps * 60);
 		EV_ClrFace(player);

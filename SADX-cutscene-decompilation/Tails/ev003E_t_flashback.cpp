@@ -96,7 +96,7 @@ void ev003E_t_flashback(int state)
 		EV_MovePoint2(sonic, -825.40002f, 24.33f, 109.9f, 8.0f, 4.0f);
 		EV_Wait(20);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)L"J");
+		EV_SetFace(player, "J");
 		EV_Wait(40);
 		EV_MoveFree(sonic);
 		EV_SetPos(sonic, -839.70001f, 29.77f, 167.39999f);
@@ -161,7 +161,7 @@ void ev003E_t_flashback(int state)
 		COverlaySetSpeed(SEPIA_EV003E, -0.0016f);
 		EV_Wait(100);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"bbPPPbb");
+		EV_SetFace(player, "bbPPPbb");
 		EV_CameraPos(1, 0,
 			player->Data1->Position.x + 1.0f,
 			player->Data1->Position.y + 5.5f,

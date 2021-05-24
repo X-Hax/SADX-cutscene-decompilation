@@ -72,7 +72,7 @@ void ev0007_s_egghornetintro(int state)
 		EV_CameraAng(1, 100, 1024, 43264, 65024);
 		EV_Wait(30);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"EECECCDCC0");
+		EV_SetFace(player, "EECECCDCC0");
 		EV_SerifPlay(432);
 		EV_MsgW(60, msgTbl_ev0007[TextLanguage][1]); //"\aLook!   \nIt's a giant talking egg!"
 		EV_ClrFace(player);
@@ -104,7 +104,7 @@ void ev0007_s_egghornetintro(int state)
 		EV_CameraAng(1, 90, 512, 18688, 0);
 		EV_SerifWait();
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CCCCCCCC0");
+		EV_SetFace(player, "CCCCCCCC0");
 		EV_SerifPlay(435);
 		EV_MsgW(70, msgTbl_ev0007[TextLanguage][5]); //"\aWhatever you say, Eggman!"
 		EV_ClrFace(player);
@@ -119,12 +119,12 @@ void ev0007_s_egghornetintro(int state)
 		EV_ClrFace(tails);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(tails, (char*)"EDEDDC0");
+			EV_SetFace(tails, "EDEDDC0");
 		}
 		EV_SerifPlay(437);
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(tails, (char*)"DEDDC0");
+			EV_SetFace(tails, "DEDDC0");
 		}
 		EV_Msg(msgTbl_ev0007[TextLanguage][7]); //"\aYou're always up to no good.\nNow wha"...
 		EV_Wait(80);
@@ -148,11 +148,11 @@ void ev0007_s_egghornetintro(int state)
 		EV_ClrFace(player);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(player, (char*)"CDECDCC0");
+			EV_SetFace(player, "CDECDCC0");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(player, (char*)"CD");
+			EV_SetFace(player, "CD");
 		}
 		EV_SerifPlay(440);
 		EV_Msg(msgTbl_ev0007[TextLanguage][10]); //"\aOr else \nwhat, ya big loser?"

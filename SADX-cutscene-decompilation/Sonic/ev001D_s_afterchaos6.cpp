@@ -88,10 +88,10 @@ void ev001D_s_afterchaos6(int state)
 		EV_ClrFace(player);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"DEC");
+			EV_SetFace(player, "DEC");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"CBBBDF");
+			EV_SetFace(player, "CBBBDF");
 			break;
 		}
 		EV_Wait(10);
@@ -103,14 +103,14 @@ void ev001D_s_afterchaos6(int state)
 		EV_CameraPos(1, 45, -27.59f, 750.82001f, -240.23f);
 		EV_CameraAng(1, 45, 65104, 20699, 0);
 		EV_Msg((msgTbl_ev001D[TextLanguage])[3]); //"\aGlad you finally made it! \nI thought"..
-		if (!VoiceLanguage) EV_SetFace(player, (char*)"CEFD");
+		if (!VoiceLanguage) EV_SetFace(player, "CEFD");
 		EV_Wait(60);
 		EV_ClrFace(player);
 		EV_Wait(5);
-		EV_SetFace(player, (char*)"CEFD");
+		EV_SetFace(player, "CEFD");
 		EV_Wait(10);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"D");
+		EV_SetFace(player, "D");
 		EV_Wait(15);
 		EV_ClrFace(player);
 		EV_Wait(30);

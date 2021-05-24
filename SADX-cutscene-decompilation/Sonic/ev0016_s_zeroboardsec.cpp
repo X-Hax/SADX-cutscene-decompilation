@@ -117,10 +117,10 @@ void ev0016_s_zeroboardsec(int state)
 		EV_SetAction(player, &action_s_s0027_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_Wait(20);
 		EV_ClrFace(player);
-		if (!VoiceLanguage) EV_SetFace(player, (char*)"F");
+		if (!VoiceLanguage) EV_SetFace(player, "F");
 		EV_Wait(15);
 		EV_SerifPlay(521);
-		if (VoiceLanguage == 1) EV_SetFace(player, (char*)"FE");
+		if (VoiceLanguage == 1) EV_SetFace(player, "FE");
 		EV_Msg((msgTbl_ev0016[TextLanguage])[3]); //"\aHey, what's happening here?"
 		EV_Wait(5);
 		if (!VoiceLanguage) EV_ClrFace(player);
@@ -185,10 +185,10 @@ void ev0016_s_zeroboardsec(int state)
 		EV_CameraAng(1, 0, 3740, 17898, 0);
 		EV_CameraPos(1, 200, -173.27f, 67.940002f, 959.26001f);
 		EV_ClrFace(player);
-		if (!VoiceLanguage) EV_SetFace(player, (char*)"CDE");
+		if (!VoiceLanguage) EV_SetFace(player, "CDE");
 		EV_Wait(15);
 		EV_SerifPlay(522);
-		if (VoiceLanguage == 1) EV_SetFace(player, (char*)"CBE");
+		if (VoiceLanguage == 1) EV_SetFace(player, "CBE");
 		EV_Msg((msgTbl_ev0016[TextLanguage])[6]); //"\aShoot, I've lost her again!"
 		EV_Wait(5);
 		EV_MsgClose();

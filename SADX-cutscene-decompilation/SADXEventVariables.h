@@ -8,6 +8,9 @@ DataArray(CutsceneData_*, CutsceneDataList_, 0x914790, 384);
 //Character Faces Table
 DataArray(FACETBL, faceTable, 0x91CEC8, 160);
 
+//EntityData1 but it can do the bitwise stuff
+DataArray(StupidBitStuff*, playertwp, 0x3B42E10, 8);
+
 //EV0001
 DataArray(char, seqVars, 0x3B18808, 512);
 DataPointer(NJS_ACTION, action_sspatcar_body, 0x2DC028C);
@@ -299,6 +302,14 @@ DataPointer(NJS_ACTION, action_m_m0122_miles, 0x3C8549C);
 DataPointer(NJS_ACTION, action_m_m0123_miles, 0x3C854B4);
 DataPointer(EPATHTAG, epathtag_EV003E_RUNNING, 0x2BEEF30);
 
+//EV0040
+DataPointer(NJS_ACTION, action_m_m0124_miles, 0x3C84A48);
+DataPointer(NJS_ACTION, action_m_m0125_miles, 0x3C84A50);
+DataPointer(NJS_ACTION, action_m_m0126_miles, 0x3C84A58);
+DataPointer(NJS_ACTION, action_m_m0127_miles, 0x3C84A60);
+DataPointer(NJS_ACTION, action_m_m0128_miles, 0x3C854A4);
+DataPointer(NJS_ACTION, action_m_m0129_miles, 0x3C854AC);
+
 //EV0165
 DataPointer(NJS_ACTION, action_s_item_r0, 0x3C847E8);
 DataPointer(NJS_ACTION, action_s_item_r1, 0x3C847E0);
@@ -359,6 +370,7 @@ DataArray(char**, msgTbl_ev0038, 0x2BEF32C, 5);
 DataArray(char**, msgTbl_ev0039, 0x2BEF254, 5);
 DataArray(char**, msgTbl_ev003A, 0x2BEF0A0, 5);
 DataArray(char**, msgTbl_ev003B, 0x2BEEF7C, 5);
+DataArray(char**, msgTbl_ev0040, 0x2BEE1C0, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);

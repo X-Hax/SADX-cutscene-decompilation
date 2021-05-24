@@ -39,7 +39,7 @@ void ev000D_s_tornado1(int state)
 		EV_CameraAng(1, 120, 62720, 58100, 0);
 		EV_WaitMove(tails);
 		EV_LookObject(tails, player, 0.0f, 4.0f, 0.0f);
-		EV_SetFace(tails, (char*)"ED");
+		EV_SetFace(tails, "ED");
 		EV_SerifPlay(713);
 		EV_Msg((msgTbl_ev000D[TextLanguage])[0]); //"\aSonic, wait here for a second..."
 		EV_SerifWait();
@@ -81,7 +81,7 @@ void ev000D_s_tornado1(int state)
 		EV_CameraChaseFree();
 		EV_ClrAction(player);
 		EV_Wait(30);
-		EV_SetFace(player, (char*)"bbbbbbbbbbbb");
+		EV_SetFace(player, "bbbbbbbbbbbb");
 		EV_SetAction(player, &action_s_s0033_sonic, &SONIC_TEXLIST, 0.2f, 0, 16);
 		EV_CameraPos(1, 0, 1461.0509f, 196.81358f, 868.36908f);
 		EV_CameraAng(1, 0, 1024, 20480, 0);

@@ -48,7 +48,7 @@ ObjectFunc(EV_CameraChase, 0x430F70);
 FunctionPointer(void, EV_CameraChaseRM, (int mode, int time, ObjectMaster* tp, float height, int x0, int y0, int z0, float d0, int x1, int y1, int z1, float d1)
 	, 0x430FC0);
 FunctionPointer(void, EV_CameraPerspective, (int mode, int time, int ang), 0x431060);
-FunctionPointer(void, EV_SetFace, (ObjectMaster* tp, char* str), 0x4310D0);
+FunctionPointer(void, EV_SetFace, (ObjectMaster* tp, const char* str), 0x4310D0);
 ObjectFunc(EV_ClrFace, 0x4310F0);
 VoidFunc(EV_SerifStop, 0x431110);
 FunctionPointer(void, EV_Wait, (int time), 0x4314D0);

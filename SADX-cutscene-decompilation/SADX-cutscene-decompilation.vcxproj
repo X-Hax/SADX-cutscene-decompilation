@@ -198,6 +198,7 @@
     <ClCompile Include="Tails\ev003A_t_afterchaos4.cpp" />
     <ClCompile Include="Tails\ev003B_t_tornado1.cpp" />
     <ClCompile Include="Tails\ev003E_t_flashback.cpp" />
+    <ClCompile Include="Tails\ev0040_t_afterflashback.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h" />

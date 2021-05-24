@@ -24,10 +24,10 @@ void ev0106_s_originalshape(int state)
 		EV_SerifPlay(1531);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"DCF");
+			EV_SetFace(player, "DCF");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"FCDC");
+			EV_SetFace(player, "FCDC");
 			break;
 		}
 		EV_MsgW(100, msgTbl_ev0106[TextLanguage][0]); //"\aIf I'm to continue, I need to change "...
@@ -37,10 +37,10 @@ void ev0106_s_originalshape(int state)
 		EV_SerifPlay(1532);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"CBCL");
+			EV_SetFace(player, "CBCL");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"CBBBCL");
+			EV_SetFace(player, "CBBBCL");
 			break;
 		}
 		EV_Msg(msgTbl_ev0106[TextLanguage][1]); //"\aThere must be a switch somewhere on "...

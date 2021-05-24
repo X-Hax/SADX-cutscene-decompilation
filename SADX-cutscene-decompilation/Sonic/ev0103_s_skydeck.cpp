@@ -14,7 +14,7 @@ void ev0103_s_skydeck(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		EV_LookPoint(player, 0.0f, 747.0f, 420.0f);
-		EV_SetFace(player, (char*)"DDCE");
+		EV_SetFace(player, "DDCE");
 		EV_SerifPlay(1527);
 		EV_Msg(msgTbl_ev0103[TextLanguage][0]); //"\aThis must be the way to the Sky Deck!"
 		EV_SerifWait();

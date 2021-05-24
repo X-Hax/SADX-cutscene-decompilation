@@ -54,7 +54,7 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_ClrAction(tails);
 		EV_ClrAction(player);
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"EDCEDG");
+		EV_SetFace(tails, "EDCEDG");
 		EV_SerifPlay(417);
 		EV_Msg((msgTbl_ev0006[TextLanguage])[0]); // "\aHey Sonic.  \nLong time no see, huh?"
 		EV_Wait(1);
@@ -62,7 +62,7 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_ClrFace(tails);
 		EV_MsgClose();
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"EDCD");
+		EV_SetFace(player, "EDCD");
 		EV_SerifPlay(418);
 		EV_Msg((msgTbl_ev0006[TextLanguage])[1]); // "\aI'm just glad you're okay."
 		EV_Wait(1);
@@ -79,7 +79,7 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_CameraAng(0, 60, 64256, 2560, 0);
 		EV_Wait(40);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"DCECEAADCDE");
+		EV_SetFace(player, "DCECEAADCDE");
 		EV_SerifPlay(419);
 		EV_Msg((msgTbl_ev0006[TextLanguage])[2]); // "\aWhat happened, anyway?"
 		EV_Wait(1);
@@ -99,7 +99,7 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_CameraAng(0, 30, 64256, 1024, 0);
 		EV_Wait(30);
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"EDCDAAECDED");
+		EV_SetFace(tails, "EDCDAAECDED");
 		EV_SerifPlay(421);
 		EV_MsgW(75, (msgTbl_ev0006[TextLanguage])[4]); // "\aThat was a test run using \na new pro"...
 		EV_MsgW(35, (msgTbl_ev0006[TextLanguage])[5]); // "\aIt's got a few bugs to iron out."
@@ -108,7 +108,7 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_ClrFace(tails);
 		EV_MsgClose();
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"FDCCDFD");
+		EV_SetFace(player, "FDCCDFD");
 		EV_SerifPlay(422);
 		EV_Msg((msgTbl_ev0006[TextLanguage])[6]); //"\aWhy not just use my plane, \nthe Torn"...
 		EV_Wait(1);
@@ -128,11 +128,11 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_ClrFace(tails);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(tails, (char*)"GCAAGDG");
+			EV_SetFace(tails, "GCAAGDG");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(tails, (char*)"GGDG");
+			EV_SetFace(tails, "GGDG");
 		}
 		EV_SerifPlay(423);
 		EV_Msg((msgTbl_ev0006[TextLanguage])[7]); //"\aThanks, but you gotta check out\nmy n"...
@@ -157,7 +157,7 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_CameraAng(0, 0, 64256, 57600, 0);
 		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.30000001f, 1, 8);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"IAADE");
+		EV_SetFace(player, "IAADE");
 		EV_SerifPlay(425);
 		EV_Msg((msgTbl_ev0006[TextLanguage])[9]); //"\aWHOA!   \nA Chaos Emerald!"
 		EV_Wait(1);
@@ -174,11 +174,11 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_ClrFace(tails);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(tails, (char*)"GEDCDCGDE");
+			EV_SetFace(tails, "GEDCDCGDE");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(tails, (char*)"GEDE");
+			EV_SetFace(tails, "GEDE");
 		}
 		EV_SerifPlay(426);
 		EV_MsgW(70, (msgTbl_ev0006[TextLanguage])[10]); //"\aYep! I just happened to find \none of"...
@@ -194,7 +194,7 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_Msg((msgTbl_ev0006[TextLanguage])[12]); //"\aThis thing's got unlimited power,\nya"...
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(tails, (char*)"GEDE");
+			EV_SetFace(tails, "GEDE");
 		}
 		EV_Wait(1);
 		EV_SerifWait();
@@ -206,7 +206,7 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_Msg((msgTbl_ev0006[TextLanguage])[13]); //"\aSo I figured, why not use it \nto pow"...
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(tails, (char*)"GEDE");
+			EV_SetFace(tails, "GEDE");
 		}
 		EV_Wait(1);
 		EV_SerifWait();
@@ -216,11 +216,11 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_ClrFace(tails);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(tails, (char*)"CG");
+			EV_SetFace(tails, "CG");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(tails, (char*)"GGC");
+			EV_SetFace(tails, "GGC");
 		}
 		EV_SerifPlay(429);
 		EV_MsgW(60, (msgTbl_ev0006[TextLanguage])[14]); //"\aYou gotta come over to \nmy workshop,"...
@@ -290,7 +290,7 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_Wait(1);
 		EV_SetAng(player, 0, 38912, 0);
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"GEGCG");
+		EV_SetFace(tails, "GEGCG");
 		EV_SerifPlay(430);
 		EV_MsgW(70, (msgTbl_ev0006[TextLanguage])[16]); //"\aIt's in the Mystic Ruins.   \nThe fas"...
 		EV_MsgW(40, (msgTbl_ev0006[TextLanguage])[17]); //"\aLet's go!"

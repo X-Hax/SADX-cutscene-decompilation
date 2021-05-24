@@ -163,7 +163,7 @@ void ev000B_s_beforechaos4(int state)
 		stopObject(B_EME);
 		EV_Wait(15);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"EEI");
+		EV_SetFace(player, "EEI");
 		stopObject(G_EME);
 		EV_Wait(5);
 		EV_MsgClose();
@@ -275,7 +275,7 @@ void ev000B_s_beforechaos4(int state)
 		EV_CameraPos(0, 0, 100.98f, 72.870003f, 209.2f);
 		EV_CameraAng(0, 0, 5632, 30976, 0);
 		EV_CameraPos(0, 0, 103.93f, 72.870003f, 209.71001f);
-		EV_SetFace(knuckles, (char*)"F");
+		EV_SetFace(knuckles, "F");
 		EV_Wait(5);
 		EV_SerifPlay(478);
 		EV_Msg((msgTbl_ev000B[TextLanguage])[3]); //"\aThat's a Chaos Emerald!"
@@ -306,7 +306,7 @@ void ev000B_s_beforechaos4(int state)
 		EV_CameraPos(0, 0, 68.160004f, 74.540001f, 223.09f);
 		EV_CameraAng(0, 0, 4608, 40704, 65280);
 		EV_CameraPos(0, 60, 65.040001f, 72.400002f, 219.82001f);
-		EV_SetFace(player, (char*)"FF");
+		EV_SetFace(player, "FF");
 		EV_Wait(5);
 		EV_SerifPlay(481);
 		EV_Msg((msgTbl_ev000B[TextLanguage])[6]); //"\aHold it right there, creep!  \nYou ca"...
@@ -315,7 +315,7 @@ void ev000B_s_beforechaos4(int state)
 		EV_Wait(30);
 		EV_LookObject(player, knuckles, 0.0f, 6.0f, 0.0f);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"EEFEE");
+		EV_SetFace(player, "EEFEE");
 		EV_Wait(30);
 		EV_CameraPerspective(0, 45, 7282);
 		EV_CameraPos(0, 45, 42.23f, 74.5f, 210.67999f);
@@ -332,10 +332,10 @@ void ev000B_s_beforechaos4(int state)
 		EV_ClrFace(player);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"FCE");
+			EV_SetFace(player, "FCE");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"FBBE");
+			EV_SetFace(player, "FBBE");
 			break;
 		}
 		EV_Wait(60);
@@ -345,25 +345,25 @@ void ev000B_s_beforechaos4(int state)
 		EV_SetAction(knuckles, &action_k_k0034_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		EV_SerifPlay(483);
 		EV_ClrFace(knuckles);
-		if (VoiceLanguage == 1) EV_SetFace(knuckles, (char*)"C");
+		if (VoiceLanguage == 1) EV_SetFace(knuckles, "C");
 		EV_Msg((msgTbl_ev000B[TextLanguage])[8]); //"\aMe?   What about you?"
 		EV_Wait(5);
-		if (!VoiceLanguage) EV_SetFace(knuckles, (char*)"F");
+		if (!VoiceLanguage) EV_SetFace(knuckles, "F");
 		EV_Wait(5);
 		EV_ClrFace(knuckles);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(knuckles, (char*)"F");
+			EV_SetFace(knuckles, "F");
 			break;
 		case 1:
-			EV_SetFace(knuckles, (char*)"F");
+			EV_SetFace(knuckles, "F");
 			break;
 		}
 		EV_Wait(20);
 		if (!VoiceLanguage)
 		{
 			EV_ClrFace(knuckles);
-			EV_SetFace(knuckles, (char*)L"I");
+			EV_SetFace(knuckles, "I");
 		}
 		EV_SerifPlay(484);
 		EV_Msg((msgTbl_ev000B[TextLanguage])[9]);  //"\aWay to go, Knucklehead!"
@@ -378,10 +378,10 @@ void ev000B_s_beforechaos4(int state)
 		EV_ClrFace(player);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"CECE");
+			EV_SetFace(player, "CECE");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"D");
+			EV_SetFace(player, "D");
 			break;
 		}
 		EV_Wait(30);

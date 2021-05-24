@@ -120,7 +120,7 @@ void ev000C_s_afterchaos4(int state)
 		EV_LookObject(knuckles, player, 0.0f, 6.0f, 0.0f);
 		EV_LookObject(tails, player, 0.0f, 6.0f, 0.0f);
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"CDCD");
+		EV_SetFace(tails, "CDCD");
 		EV_Wait(5);
 		EV_SerifPlay(705);
 		EV_Msg((msgTbl_ev000C[TextLanguage])[4]); //"\aHey, we can't let him \nget away!"
@@ -130,7 +130,7 @@ void ev000C_s_afterchaos4(int state)
 		EV_Wait(10);
 		deleteModel(0);
 		EV_ClrFace(tails);
-		EV_SetFace(tails, (char*)"CDCD");
+		EV_SetFace(tails, "CDCD");
 		EV_Wait(5);
 		EV_SerifPlay(706);
 		EV_Msg((msgTbl_ev000C[TextLanguage])[5]); //"\aLet's get to my workshop \nand we'll "...
@@ -146,10 +146,10 @@ void ev000C_s_afterchaos4(int state)
 		EV_Wait(6);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, (char*)"C");
+			EV_SetFace(player, "C");
 			break;
 		case 1:
-			EV_SetFace(player, (char*)"D");
+			EV_SetFace(player, "D");
 			break;
 		}
 		EV_Wait(23);
@@ -173,7 +173,7 @@ void ev000C_s_afterchaos4(int state)
 		EV_CameraPos(0, 160, 94.559998f, 76.080002f, 252.32001f);
 		EV_CameraAng(0, 160, 3328, 47872, 0);
 		EV_ClrFace(knuckles);
-		EV_SetFace(knuckles, (char*)"CDCD");
+		EV_SetFace(knuckles, "CDCD");
 		EV_Wait(10);
 		EV_SerifPlay(709);
 		EV_Msg((msgTbl_ev000C[TextLanguage])[8]); //"\aI have some unfinished business\nto t"...
@@ -184,14 +184,14 @@ void ev000C_s_afterchaos4(int state)
 		EV_CameraPos(0, 0, 76.480003f, 75.239998f, 239.92999f);
 		EV_CameraAng(0, 0, 4352, 5632, 0);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CDCD");
+		EV_SetFace(player, "CDCD");
 		EV_SerifPlay(710);
 		EV_Wait(5);
 		EV_Msg((msgTbl_ev000C[TextLanguage])[9]); //"\aNo problem, Knuckles."
 		EV_ClrFace(player);
 		EV_Wait(10);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"CDFE");
+		EV_SetFace(player, "CDFE");
 		EV_SerifPlay(711);
 		EV_Wait(5);
 		EV_Msg((msgTbl_ev000C[TextLanguage])[10]); //"\aWe'll take care of everything\nhere!"

@@ -124,7 +124,7 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_SetAction(knuckles, &action_k_k0013_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(15);
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"F");
+		EV_SetFace(player, "F");
 		EV_SerifPlay(605);
 		EV_Wait(15);
 		EV_Msg(msgTbl_ev0028[TextLanguage][1]); //"\aSomethin' buggin' you?"
@@ -136,7 +136,7 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_SetAction(player, &action_s_s0017_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, &action_s_s0006_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
 		EV_ClrFace(knuckles);
-		EV_SetFace(knuckles, (char*)"F");
+		EV_SetFace(knuckles, "F");
 		EV_SerifPlay(606);
 		EV_Msg(msgTbl_ev0028[TextLanguage][2]); //"\aNo times for games, \nSonic!"
 		EV_Wait(25);
@@ -148,7 +148,7 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_SetAction(knuckles, &action_k_k0012_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 2);
 		EV_SetAction(knuckles, &action_k_k0005_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 16);
-		EV_SetFace(knuckles, (char*)"CDE");
+		EV_SetFace(knuckles, "CDE");
 		EV_SerifPlay(607);
 		EV_Msg(msgTbl_ev0028[TextLanguage][3]); //"\aGive me the Emeralds you have!\nRight"...
 		EV_Wait(70);
@@ -160,16 +160,16 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_CameraAng(0, 160, 64937, 7439, 0);
 		EV_Msg(msgTbl_ev0028[TextLanguage][4]); //"\aWhat!? Let's just see you\ntake 'em, "...
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"F");
+		EV_SetFace(player, "F");
 		EV_Wait(10);
 		EV_SerifPlay(608);
 		EV_Wait(30);
-		EV_SetFace(player, (char*)"F");
+		EV_SetFace(player, "F");
 		EV_Wait(20);
 		if (VoiceLanguage == 1)
 		{
 			EV_ClrFace(player);
-			EV_SetFace(player, (char*)"F");
+			EV_SetFace(player, "F");
 		}
 		EV_Wait(12);
 		EV_MsgClose();

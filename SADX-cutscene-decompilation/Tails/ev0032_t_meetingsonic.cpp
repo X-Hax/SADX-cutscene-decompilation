@@ -59,9 +59,9 @@ void ev0032_t_meetingsonic(int state)
 		EV_MovePoint2(player, -457.17001f, 1.01f, 1917.28f, 0.56f, 3.0f);
 		EV_ClrAction(sonic);
 		EV_ClrAction(player);
-		EV_SetFace(sonic, (char*)"GG");
+		EV_SetFace(sonic, "GG");
 		EV_SerifPlay(625);
-		EV_Msg((char*)*msgTbl_ev0032[TextLanguage]); //"\aBoy, you're lucky \nI saw you come do"...
+		EV_Msg(msgTbl_ev0032[TextLanguage][0]); //"\aBoy, you're lucky \nI saw you come do"...
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(sonic);
@@ -75,13 +75,13 @@ void ev0032_t_meetingsonic(int state)
 		EV_CameraAng(0, 200, 64768, 50944, 0);
 		EV_Wait(60);
 		EV_CameraPos(0, 140, -475.29999f, 6.9299998f, 1915.92f);
-		EV_SetFace(sonic, (char*)"CEAEDE");
+		EV_SetFace(sonic, "CEAEDE");
 		EV_SerifPlay(626);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][1]); //"\aSo, what went wrong, anyway?"
+		EV_Msg(msgTbl_ev0032[TextLanguage][1]); //"\aSo, what went wrong, anyway?"
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_SerifPlay(627);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][2]); //"\aIt's not like you \nto crash like tha"...
+		EV_Msg(msgTbl_ev0032[TextLanguage][2]); //"\aIt's not like you \nto crash like tha"...
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(sonic);
@@ -93,11 +93,11 @@ void ev0032_t_meetingsonic(int state)
 		EV_WaitMove(player);
 		EV_SetAng(player, 0, 29184, 0);
 		EV_Wait(40);
-		EV_SetFace(player, (char*)"EDACG");
+		EV_SetFace(player, "EDACG");
 		EV_SerifPlay(628);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][3]); //"\aYeah, it's just that I'm testing\na n"...
+		EV_Msg(msgTbl_ev0032[TextLanguage][3]); //"\aYeah, it's just that I'm testing\na n"...
 		EV_Wait(75);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][4]); //"\aand it's not fully compatible\nyet!"
+		EV_Msg(msgTbl_ev0032[TextLanguage][4]); //"\aand it's not fully compatible\nyet!"
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
@@ -106,14 +106,14 @@ void ev0032_t_meetingsonic(int state)
 		EV_ClrFace(sonic);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(sonic, (char*)"FAF");
+			EV_SetFace(sonic, "FAF");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(sonic, (char*)"FAFE");
+			EV_SetFace(sonic, "FAFE");
 		}
 		EV_SerifPlay(629);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][5]); //"\aYou can always borrow my plane,\nthe "...
+		EV_Msg(msgTbl_ev0032[TextLanguage][5]); //"\aYou can always borrow my plane,\nthe "...
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(sonic);
@@ -131,23 +131,23 @@ void ev0032_t_meetingsonic(int state)
 			player->Data1->Rotation.z);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(player, (char*)"GAEAD");
+			EV_SetFace(player, "GAEAD");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(player, (char*)"GAEADGGA");
+			EV_SetFace(player, "GAEADGGA");
 		}
 		EV_SerifPlay(630);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][6]); //"\aThanks, Sonic."
+		EV_Msg(msgTbl_ev0032[TextLanguage][6]); //"\aThanks, Sonic."
 		EV_Wait(20);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][7]); //"\aBut if I can make this work,\nit'll r"...
+		EV_Msg(msgTbl_ev0032[TextLanguage][7]); //"\aBut if I can make this work,\nit'll r"...
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_Wait(1);
-		EV_SetFace(player, (char*)"EAG");
+		EV_SetFace(player, "EAG");
 		EV_SerifPlay(631);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][8]); //"\aCheck out this power supply!"
+		EV_Msg(msgTbl_ev0032[TextLanguage][8]); //"\aCheck out this power supply!"
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
@@ -167,14 +167,14 @@ void ev0032_t_meetingsonic(int state)
 		EV_ClrFace(sonic);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(sonic, (char*)"IAADE");
+			EV_SetFace(sonic, "IAADE");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(sonic, (char*)"EFI");
+			EV_SetFace(sonic, "EFI");
 		}
 		EV_SerifPlay(632);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][9]); //"\aIt's a Chaos Emerald!   \nNo way!"
+		EV_Msg(msgTbl_ev0032[TextLanguage][9]); //"\aIt's a Chaos Emerald!   \nNo way!"
 		EV_CameraAng(0, 0, 60416, 58112, 0);
 		EV_CameraPos(0, 0, -453.28f, 8.2700005f, 1904.8199f);
 		EV_CameraAng(0, 25, 256, 59136, 0);
@@ -189,33 +189,33 @@ void ev0032_t_meetingsonic(int state)
 		EV_CameraTargetObj(1, 0, player, 0.0f, 6.0f, 0.0f, 0);
 		EV_ClrAction(sonic);
 		EV_SetPos(sonic, -445.67001f, 0.0099999998f, 1901.05f);
-		EV_SetFace(player, (char*)"EACADED");
+		EV_SetFace(player, "EACADED");
 		EV_SerifPlay(633);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][10]); //"\aI was lucky to find \none of the 7 Ch"...
+		EV_Msg(msgTbl_ev0032[TextLanguage][10]); //"\aI was lucky to find \none of the 7 Ch"...
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_Wait(20);
-		EV_SetFace(player, (char*)"DAC");
+		EV_SetFace(player, "DAC");
 		EV_SerifPlay(634);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][11]); //"\aThey have unlimited mystic\npowers."
+		EV_Msg(msgTbl_ev0032[TextLanguage][11]); //"\aThey have unlimited mystic\npowers."
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_Wait(1);
-		EV_SetFace(player, (char*)"DPCDE");
+		EV_SetFace(player, "DPCDE");
 		EV_SerifPlay(635);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][12]); //"\aNow I want to harness \nthat power to"...
+		EV_Msg(msgTbl_ev0032[TextLanguage][12]); //"\aNow I want to harness \nthat power to"...
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_MsgCls();
 		EV_Wait(60);
-		EV_SetFace(player, (char*)"GGAG");
+		EV_SetFace(player, "GGAG");
 		EV_SerifPlay(636);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][13]); //"\aLet's go to my workshop \nin the Myst"...
+		EV_Msg(msgTbl_ev0032[TextLanguage][13]); //"\aLet's go to my workshop \nin the Myst"...
 		EV_Wait(40);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][14]); //"\aand I'll show you \nwhat I've been wo"...
+		EV_Msg(msgTbl_ev0032[TextLanguage][14]); //"\aand I'll show you \nwhat I've been wo"...
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
@@ -227,11 +227,11 @@ void ev0032_t_meetingsonic(int state)
 		EV_MovePoint2(player, -450.29001f, 0.0099999998f, 1865.426f, 0.46000001f, 3.0f);
 		EV_ClrAction(player);
 		EV_ClrAction(PURPLE);
-		EV_SetFace(player, (char*)"CDAD");
+		EV_SetFace(player, "CDAD");
 		EV_SerifPlay(637);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][15]); //"\aWe'll go to the station,"
+		EV_Msg(msgTbl_ev0032[TextLanguage][15]); //"\aWe'll go to the station,"
 		EV_Wait(25);
-		EV_Msg((char*)msgTbl_ev0032[TextLanguage][16]); //"\ahop on a train\nand get there in no t"...
+		EV_Msg(msgTbl_ev0032[TextLanguage][16]); //"\ahop on a train\nand get there in no t"...
 		EV_Wait(10);
 		EV_Wait(30);
 		EV_LookFree(player);

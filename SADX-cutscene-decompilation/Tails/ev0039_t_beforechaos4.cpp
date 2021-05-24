@@ -362,7 +362,7 @@ void ev0039_t_beforechaos4(int state)
 		EV_CameraPos(0, 0, 100.98f, 72.870003f, 209.2f);
 		EV_CameraAng(0, 0, 5632, 30976, 0);
 		EV_CameraPos(0, 0, 103.93f, 72.870003f, 209.71001f);
-		EV_SetFace(knuckles, (char*)"F");
+		EV_SetFace(knuckles, "F");
 		EV_Wait(5);
 		EV_SerifPlay(690);
 		EV_Msg(msgTbl_ev0039[TextLanguage][5]); //"\aHey... Those are...\n the Chaos Emera"...
@@ -394,7 +394,7 @@ void ev0039_t_beforechaos4(int state)
 		EV_CameraAng(0, 0, 512, 41984, 0);
 		EV_SerifPlay(693);
 		EV_Msg(msgTbl_ev0039[TextLanguage][8]); //"\aWhat the heck is \nhe talking about, "...
-		EV_SetFace(player, (char*)"FF");
+		EV_SetFace(player, "FF");
 		EV_Wait(40);
 		EV_ClrFace(player);
 		EV_LookObject(player, knuckles, 0.0f, 0.0f, 0.0f);
@@ -408,11 +408,11 @@ void ev0039_t_beforechaos4(int state)
 		EV_ClrFace(sonic);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(sonic, (char*)"FCE");
+			EV_SetFace(sonic, "FCE");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(sonic, (char*)"CE");
+			EV_SetFace(sonic, "CE");
 		}
 		EV_Wait(60);
 		EV_LookObject(knuckles, player, 0.0f, 6.0f, 0.0f);
@@ -424,28 +424,28 @@ void ev0039_t_beforechaos4(int state)
 		EV_ClrFace(knuckles);
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(knuckles, (char*)L"I");
+			EV_SetFace(knuckles, "I");
 		}
 		EV_Wait(5);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(knuckles, (char*)"F");
+			EV_SetFace(knuckles, "F");
 		}
 		EV_Wait(5);
 		if (!VoiceLanguage)
 		{
 			EV_ClrFace(knuckles);
-			EV_SetFace(knuckles, (char*)"F");
+			EV_SetFace(knuckles, "F");
 		}
 		EV_Wait(20);
 		EV_ClrFace(knuckles);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(knuckles, (char*)L"I");
+			EV_SetFace(knuckles, "I");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(knuckles, (char*)"F");
+			EV_SetFace(knuckles, "F");
 		}
 		EV_SerifPlay(696);
 		EV_Msg(msgTbl_ev0039[TextLanguage][11]); //"\aWay to go, Knucklehead!"
@@ -456,11 +456,11 @@ void ev0039_t_beforechaos4(int state)
 		EV_ClrFace(sonic);
 		if (!VoiceLanguage)
 		{
-			EV_SetFace(sonic, (char*)"CECE");
+			EV_SetFace(sonic, "CECE");
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(sonic, (char*)"CE");
+			EV_SetFace(sonic, "CE");
 		}
 		EV_Wait(30);
 		EV_MsgClose();

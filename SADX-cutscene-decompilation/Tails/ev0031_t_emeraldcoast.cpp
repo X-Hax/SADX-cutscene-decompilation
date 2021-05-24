@@ -23,7 +23,7 @@ void ev0031_t_emeraldcoast(int state)
 		EV_SetPos(player, 6888.9502f, 1.03f, -2203.1499f);
 		EV_SetAng(player, 0, 49152, 0);
 		EV_SetAction(player, &action_m_m0118_miles, &MILES_TEXLIST, 1.0f, 1, 0);
-		EV_SetFace(player, (char*)"VVVVVVVVVVVVVVVVV");
+		EV_SetFace(player, "VVVVVVVVVVVVVVVVV");
 		sonic = EV_GetPlayer(2);
 		EV_LookObject(sonic, player, 0.0f, -3.0f, 0.0f);
 		EV_CameraPos(1, 0, 6852.0801f, 9.0f, -2203.845f);
@@ -49,7 +49,7 @@ void ev0031_t_emeraldcoast(int state)
 		smoke->Data1->Rotation.x = 0;
 		smoke->Data1->Rotation.y = 0;
 		EV_ClrFace(player);
-		EV_SetFace(player, (char*)"XB");
+		EV_SetFace(player, "XB");
 		EV_SetAction(player, &action_m_m0119_miles, &MILES_TEXLIST, 0.2f, 0, 8);
 		EV_SetAction(player, &action_m_m0120_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		BGM_Play(MusicIDs_thesonic);
@@ -70,7 +70,7 @@ void ev0031_t_emeraldcoast(int state)
 		EV_CameraAng(1, 0, 2335, 16956, 0);
 		EV_CameraAng(0, 60, 7711, 16956, 0);
 		EV_Wait(80);
-		EV_SetFace(sonic, (char*)L"P");
+		EV_SetFace(sonic, "P");
 		EV_Wait(30);
 		FreeTask(smoke);
 		smoke = 0;
