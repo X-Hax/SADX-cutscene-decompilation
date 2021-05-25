@@ -41,17 +41,17 @@ void ev002A_s_casinowake(int state)
 		EV_Wait(5);
 		EV_SetFace(tails, "BWX");
 		EV_Wait(27);
-		EV_SetAction(player, &action_s_s0057_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
+		EV_SetAction(player, &action_s_s0054_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_Wait(15);
-		EV_SetAction(tails, &action_m_m0110_miles, &MILES_TEXLIST, 1.0f, 0, 0);
+		EV_SetAction(tails, &action_m_m0108_miles, &MILES_TEXLIST, 1.0f, 0, 0);
 		EV_WaitAction(tails);
 		EV_SetPos(tails, -527.29999f, -2.0f, 944.70001f);
-		EV_SetAction(tails, &action_m_m0130_miles, &MILES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(tails, &action_m_m0109_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(10);
-		EV_SetAction(tails, &action_m_m0108_miles, &MILES_TEXLIST, 1.0f, 0, 8);
+		EV_SetAction(tails, &action_m_m0110_miles, &MILES_TEXLIST, 1.0f, 0, 8);
 		EV_LookObject(tails, player, 0.0f, 3.0f, 0.0f);
-		EV_SetAction(tails, &action_m_m0131_miles, &MILES_TEXLIST, 1.3f, 1, 0);
+		EV_SetAction(tails, &action_m_m0111_miles, &MILES_TEXLIST, 1.3f, 1, 0);
 		EV_CameraPos(1, 0, -524.78003f, 1.8466001f, 956.56f);
 		EV_CameraAng(1, 0, 2339, 5632, 65280);
 		EV_CameraPos(0, 180, -539.94f, 2.23f, 955.5f);
@@ -73,10 +73,10 @@ void ev002A_s_casinowake(int state)
 		EV_SerifWait();
 		EV_ClrFace(tails);
 		EV_SetFace(tails, "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-		EV_SetAction(player, &action_s_s0054_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 8);
+		EV_SetAction(player, &action_s_s0057_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 8);
 		EV_MsgClose();
 		EV_WaitAction(player);
-		EV_SetAction(player, &action_s_s0001_sonic, &SONIC_TEXLIST, 0.15000001f, 1, 16);
+		EV_SetAction(player, &action_s_s0004_sonic, &SONIC_TEXLIST, 0.15000001f, 1, 16);
 		EV_CameraPos(0, 240, -544.79999f, 0.23f, 962.79999f);
 		EV_CameraAng(0, 240, 2339, 59392, 65280);
 		EV_ClrFace(player);
@@ -107,9 +107,9 @@ void ev002A_s_casinowake(int state)
 		EV_SerifPlay(471);
 		EV_SetFace(tails, "FD");
 		EV_Msg(msgTbl_ev002A[TextLanguage][4]); //"\aCome on Sonic, \nwe need to get busy!"
-		EV_SetAction(tails, &action_m_m0111_miles, &MILES_TEXLIST, 1.0f, 0, 0);
-		EV_SetAction(tails, &action_m_m0109_miles, &MILES_TEXLIST, 1.0f, 1, 0);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.60000002f, 1, 12); //English dialogue is too short for this to play.
+		EV_SetAction(tails, &action_m_m0130_miles, &MILES_TEXLIST, 1.0f, 0, 0);
+		EV_SetAction(tails, &action_m_m0131_miles, &MILES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.60000002f, 1, 12); //English dialogue is too short for this to play.
 		EV_Wait(10);
 		EV_CameraPos(1, 50, -527.04999f, 1.226f, 953.13f);
 		EV_CameraAng(1, 50, 3107, 9216, 65280);

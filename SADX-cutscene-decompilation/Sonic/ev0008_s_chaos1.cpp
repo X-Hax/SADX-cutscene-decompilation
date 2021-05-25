@@ -104,15 +104,15 @@ void ev0008_s_chaos1(int state)
 		EV_MovePoint2(tails, 983.79999f, 126.5f, 848.70001f, 0.40000001f, 0.059999999f);
 		EV_Wait(1);
 		moveObjectOn(C_EME_P, 0.0f, 0.0f, 0.0f, -1, tails);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_ClrFace(player);
 		EV_SetFace(player, "PCPDDP");
 		EV_ClrFace(player);
 		EV_SetFace(player, "CCCCCDCCCDE");
 		EV_SerifPlay(442);
 		EV_Msg(msgTbl_ev0008[TextLanguage][0]); //aWellThatWasnTSoHard
-		EV_SetAction(player, &action_s_s0044_sonic, &SONIC_TEXLIST, 0.5f, 0, 4);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
+		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 0, 4);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_Wait(20);
 		EV_ClrFace(player);
 		EV_ClrAction(eggmoble);
@@ -160,7 +160,7 @@ void ev0008_s_chaos1(int state)
 		HAND_2 = mghand_init(1066.73f, 114.058f, 885.20001f, 0, 0, 0x2000);
 		mghandsetspd(HAND_1, 4608, 4608);
 		mghandsetspd(HAND_2, 4608, 4608);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
 		EV_CameraPos(1, 0, 1031.1f, 132.89999f, 900.09998f);
 		EV_CameraAng(1, 0, 6163, 59280, 64193);
 		EV_CameraPos(0, 20, 1031.51f, 129.89999f, 897.38f);
@@ -200,10 +200,10 @@ void ev0008_s_chaos1(int state)
 		EV_Wait(3);
 		EventSe_Oneshot(1335, 118, 0, 0);
 		RumbleA(0, 2);
-		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 1);
+		EV_SetAction(player, &action_s_s0038_sonic, &SONIC_TEXLIST, 0.5f, 1, 1);
 		EV_SetAction(tails, &action_m_m0104_miles, &MILES_TEXLIST, 1.2f, 0, 1);
-		EV_SetAction(tails, &action_m_m0138_miles, &MILES_TEXLIST, 1.2f, 0, 1);
-		EV_SetAction(tails, &action_m_m0137_miles, &MILES_TEXLIST, 1.2f, 1, 1);
+		EV_SetAction(tails, &action_m_m0137_miles, &MILES_TEXLIST, 1.2f, 0, 1);
+		EV_SetAction(tails, &action_m_m0138_miles, &MILES_TEXLIST, 1.2f, 1, 1);
 		EV_CameraPos(0, 15, 974.29999f, 128.10001f, 838.46997f);
 		EV_CameraAng(0, 15, 2067, 40592, 60353);
 		EventSe_Volume(1, 95, 1);
@@ -211,8 +211,8 @@ void ev0008_s_chaos1(int state)
 		EventSe_Pitch(1, 1214, 1);
 		EV_Wait(1);
 		EventSe_Pitch(1, -1214, 110);
-		EV_SetAction(player, &action_s_s0038_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
+		EV_SetAction(player, &action_s_s0044_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
 		chgMghandMod(HAND_1, 1);
 		EV_Wait(2);
 		chgMghandMod(HAND_1, 2);
@@ -230,7 +230,7 @@ void ev0008_s_chaos1(int state)
 		EV_CameraPos(0, 20, 962.67999f, 127.7f, 850.54999f);
 		EV_CameraAng(0, 20, 2579, 46224, 1985);
 		EV_SerifPlay(444);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
 		stopObject(C_EME_P);
 		EV_ClrAction(C_EME_P);
 		EV_SetAction(C_EME_P, &action_m_m0136d_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.0f, 1, 1);
@@ -275,7 +275,7 @@ void ev0008_s_chaos1(int state)
 		EV_Wait(100);
 		FreeTask(HAND_3);
 		HAND_3 = 0;
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
 		EventSe_Stop(1);
 		EV_CameraPos(0, 0, 1046.23f, 143.45f, 881.0f);
 		EV_CameraAng(0, 0, 3581, 28671, 193);
@@ -440,7 +440,7 @@ void ev0008_s_chaos1(int state)
 		EV_CameraPos(1, 30, 972.59998f, 132.7f, 873.09998f);
 		crushLightOn(1030.2f, 130.86f, 873.79999f, 4, 6, 0.80000001f, 2.5f, 0xFFFFFF96, 0xFFFFD2);
 		EV_SetAction(player, &action_s_s0045_sonic, &SONIC_TEXLIST, 0.69999999f, 0, 0);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.89999998f, 1, 0);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.89999998f, 1, 0);
 		FLASH = COverlayCreate(0.1f, 0.050000001f, 1.0f, 1.0f, 0.89999998f);
 		EV_Wait(5);
 		EventSe_Oneshot(1339, 120, 0, 0);
@@ -469,7 +469,7 @@ void ev0008_s_chaos1(int state)
 		EV_MovePoint2(tails, 997.0f, 126.6f, 857.94f, 1.0f, 0.1f);
 		EV_WaitMove(player);
 		EV_WaitMove(tails);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
 		EV_SetAction(tails, MILES_ACTIONS[79], &MILES_TEXLIST, 1.0f, 1, 1);
 		EV_Wait(20);
 		EV_SetAng(player, 0, 10496, 0);

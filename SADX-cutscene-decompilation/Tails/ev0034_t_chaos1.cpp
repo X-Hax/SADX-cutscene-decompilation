@@ -165,7 +165,7 @@ void ev0034_t_chaos1(int state)
 		mghandsetspd(HAND_2, 4608, 4608);
 		EV_SetPos(C_EME_P, 984.0f, 126.4f, 868.79999f);
 		EV_SetAng(C_EME_P, 24, 34904, 62);
-		EV_SetAction(sonic, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
+		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
 		EV_SetPos(player, 983.79999f, 126.5f, 848.70001f);
 		EV_SetAng(player, 24, 1872, 62);
 		EV_SetPos(C_EME_P, 983.79999f, 126.5f, 848.70001f);
@@ -213,10 +213,10 @@ void ev0034_t_chaos1(int state)
 		EV_Wait(3);
 		EventSe_Oneshot(1335, 118, 0, 0);
 		RumbleA(0, 2);
-		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 1);
+		EV_SetAction(sonic, &action_s_s0038_sonic, &SONIC_TEXLIST, 0.5f, 1, 1);
 		EV_SetAction(player, &action_m_m0104_miles, &MILES_TEXLIST, 1.2f, 0, 1);
-		EV_SetAction(player, &action_m_m0138_miles, &MILES_TEXLIST, 1.2f, 0, 1);
-		EV_SetAction(player, &action_m_m0137_miles, &MILES_TEXLIST, 1.2f, 1, 1);
+		EV_SetAction(player, &action_m_m0137_miles, &MILES_TEXLIST, 1.2f, 0, 1);
+		EV_SetAction(player, &action_m_m0138_miles, &MILES_TEXLIST, 1.2f, 1, 1);
 		EventSe_Volume(1, 95, 1);
 		EventSe_Pan(1, -20, 1);
 		EventSe_Pitch(1, 1214, 1);
@@ -233,12 +233,12 @@ void ev0034_t_chaos1(int state)
 		chgMghandMod(HAND_1, 2);
 		EV_CameraPos(0, 20, 962.67999f, 127.7f, 850.54999f);
 		EV_CameraAng(0, 20, 2579, 46224, 1985);
-		EV_SetAction(sonic, &action_s_s0038_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
-		EV_SetAction(sonic, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
+		EV_SetAction(sonic, &action_s_s0044_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
+		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
 		EV_SerifPlay(651);
 		EV_Msg(msgTbl_ev0034[TextLanguage][2]); //"\aHey!   He snagged it!"
-		EV_SetAction(sonic, &action_s_s0038_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
-		EV_SetAction(sonic, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
+		EV_SetAction(sonic, &action_s_s0044_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
+		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
 		moveObject(HAND_3, 987.5f, 131.8f, 857.90002f, 998.58002f, 170.42f, 887.77002f, 40);
 		EV_ClrAction(C_EME_P);
 		EV_SetAction(C_EME_P, &action_m_m0136d_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.0f, 1, 1);
@@ -297,7 +297,7 @@ void ev0034_t_chaos1(int state)
 		EV_Wait(100);
 		FreeTask(HAND_3);
 		HAND_3 = 0;
-		EV_SetAction(sonic, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
+		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
 		EventSe_Stop(1);
 		EV_CameraPos(0, 0, 1046.23f, 143.45f, 881.0f);
 		EV_CameraAng(0, 0, 3581, 28671, 193);
@@ -346,7 +346,7 @@ void ev0034_t_chaos1(int state)
 		EV_CameraPos(1, 80, 987.0f, 130.8f, 876.59998f);
 		EV_CameraAng(1, 80, 1209, 5802, 65217);
 		EV_LookPoint(player, 1052.5f, 148.60001f, 863.87f);
-		EV_SetAction(sonic, &action_s_s0017_sonic, &SONIC_TEXLIST, 1.0f, 0, 1);
+		EV_SetAction(sonic, &action_s_s0001_sonic, &SONIC_TEXLIST, 1.0f, 0, 1);
 		EV_SetAction(sonic, &action_s_s0006_sonic, &SONIC_TEXLIST, 0.5f, 1, 1);
 		EV_SerifPlay(654);
 		EV_Msg(msgTbl_ev0034[TextLanguage][5]); //"\aThat's the monster \nI saw the other "...
@@ -485,7 +485,7 @@ void ev0034_t_chaos1(int state)
 		EV_CameraAng(1, 0, 64441, 49066, 0);
 		EV_CameraPos(1, 30, 972.59998f, 132.7f, 873.09998f);
 		crushLightOn(1030.2f, 130.86f, 873.79999f, 4, 6, 0.80000001f, 2.5f, -106, 16777170);
-		EV_SetAction(sonic, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.89999998f, 1, 0);
+		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.89999998f, 1, 0);
 		FLUSH = COverlayCreate(0.1f, 0.050000001f, 1.0f, 1.0f, 0.89999998f);
 		EV_Wait(5);
 		EventSe_Oneshot(1339, 120, 0, 0);
@@ -514,7 +514,7 @@ void ev0034_t_chaos1(int state)
 		EV_MovePoint2(player, 997.0f, 126.6f, 857.94f, 1.0f, 0.1f);
 		EV_WaitMove(sonic);
 		EV_WaitMove(player);
-		EV_SetAction(sonic, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 0, 4);
+		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 0, 4);
 		EV_SetAction(player, MILES_ACTIONS[79], &MILES_TEXLIST, 1.0f, 1, 1);
 		EV_Wait(20);
 		EV_SetAng(sonic, 0, 23552, 0);

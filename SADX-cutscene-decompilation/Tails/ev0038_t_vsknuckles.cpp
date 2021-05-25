@@ -124,7 +124,7 @@ void ev0038_t_vsknuckles(int state)
 			EV_SetAction(player, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 			EV_Wait(15);
 			EV_SetAng(knuckles, 0, 54528, 0);
-			EV_SetAction(knuckles, &action_k_k0013_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 16);
+			EV_SetAction(knuckles, &action_k_k0005_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 16);
 			EV_CameraTargetFree();
 			EV_CameraPos(1, 45, 60.82f, 75.910004f, 286.23999f);
 			EV_CameraAng(1, 45, 1560, 26026, 65203);
@@ -146,7 +146,7 @@ void ev0038_t_vsknuckles(int state)
 			EV_CameraAng(0, 200, 65304, 60213, 65203);
 			EV_SetPos(knuckles, 54.470001f, 73.5f, 296.95001f);
 			EV_SetAction(knuckles, &action_k_k0012_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 2);
-			EV_SetAction(knuckles, &action_k_k0005_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
+			EV_SetAction(knuckles, &action_k_k0013_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 			EV_SetFace(knuckles, "FCDE");
 			EV_SerifPlay(681);
 			EV_MsgW(60, msgTbl_ev0038[TextLanguage][2]);

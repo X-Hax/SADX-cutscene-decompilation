@@ -34,7 +34,7 @@ void ev001C_s_beforechaos6(int state)
 		EV_SetAng(Frog, 63488, -42544, 0);
 		EV_SetAction(Frog, &action_f_f0010_frog, &texlist_big_kaeru, 0.2f, 1, 0);
 		big = EV_GetPlayer(2);
-		EV_SetAction(big, &action_b_b0014_big, &BIG_TEXLIST, 0.69999999f, 1, 16);
+		EV_SetAction(big, &action_b_b0012_big, &BIG_TEXLIST, 0.69999999f, 1, 16);
 		chg_frogshape(2);
 		EV_CameraPos(1, 0, 111.932f, 748.60797f, -522.70001f);
 		EV_CameraAng(0, 0, 3881, 17065, 65504);
@@ -83,7 +83,7 @@ void ev001C_s_beforechaos6(int state)
 		EV_MsgClose();
 		EV_SerifPlay(562);
 		EV_Msg((msgTbl_ev001C[TextLanguage])[2]); //\aHa ha ha ha ha! "
-		EV_SetAction(player, &action_s_s0001_sonic, &SONIC_TEXLIST, 1.0f, 1, 8);
+		EV_SetAction(player, &action_s_s0004_sonic, &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_MsgClose();
 		EV_SetAng(player, 63529, 49833, 0);
 		EV_CameraPerspective(1, 80, 12743);
@@ -113,11 +113,11 @@ void ev001C_s_beforechaos6(int state)
 		EV_CameraPos(0, 0, 87.540001f, 745.79999f, -539.62f);
 		EV_CameraAng(0, 0, 1833, 38832, 0);
 		EV_Wait(1);
-		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.60000002f, 1, 8);
+		EV_SetAction(player, &action_s_s0038_sonic, &SONIC_TEXLIST, 0.60000002f, 1, 8);
 		EV_SerifPlay(567);
 		EV_MsgW(60, (msgTbl_ev001C[TextLanguage])[6]); // "\aIf he's your friend, \nI'll help you."
 		EV_SetAction(big, &action_b_b0013_big, &BIG_TEXLIST, 0.80000001f, 0, 8);
-		EV_SetAction(big, &action_b_b0012_big, &BIG_TEXLIST, 0.80000001f, 1, 0);
+		EV_SetAction(big, &action_b_b0014_big, &BIG_TEXLIST, 0.80000001f, 1, 0);
 		EV_MsgClose();
 		EV_CameraPos(1, 80, 91.769997f, 745.59998f, -543.84003f);
 		EV_CameraAng(1, 80, 1833, 38464, 0);
@@ -140,7 +140,7 @@ void ev001C_s_beforechaos6(int state)
 		EV_CameraAng(1, 0, 3120, 17328, 512);
 		eggmoble = GetEggMobleTask();
 		EV_ClrAction(eggmoble);
-		EV_SetAction(eggmoble, &action_gm_gm0003_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(eggmoble, &action_gm_gm0004_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 1, 0);
 		EV_SerifPlay(569);
 		EV_Msg((msgTbl_ev001C[TextLanguage])[8]); //"\aHa ha ha ha ha!"
 		EV_RemovePlayer(2);
@@ -173,8 +173,8 @@ void ev001C_s_beforechaos6(int state)
 		EV_SerifPlay(573);
 		EV_SetFace(player, "FEF");
 		EV_Msg((msgTbl_ev001C[TextLanguage])[12]); //"\aYou won't get away \nwith this, you m"...
-		EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 0.80000001f, 0, 4);
-		EV_SetAction(player, &action_s_s0005_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 4);
+		EV_SetAction(player, &action_s_s0005_sonic, &SONIC_TEXLIST, 0.80000001f, 0, 4);
+		EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 4);
 		EV_Wait(20);
 		EV_CameraPos(0, 50, 93.25f, 744.0f, -513.88849f);
 		EV_CameraAng(0, 50, 4905, 57001, 512);
@@ -187,7 +187,7 @@ void ev001C_s_beforechaos6(int state)
 		EV_ClrAction(eggmoble);
 		EV_SetAction(eggmoble, &action_gm_gm0025_eggmoble, &EV_EGGMOBLE0_TEXLIST, 0.40000001f, 0, 8);
 		EV_SetAction(eggmoble, &action_gm_gm0022_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 0, 8);
-		EV_SetAction(eggmoble, &action_gm_gm0004_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.3f, 1, 6);
+		EV_SetAction(eggmoble, &action_gm_gm0003_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.3f, 1, 6);
 		EV_SerifPlay(574);
 		EV_Msg((msgTbl_ev001C[TextLanguage])[13]); //"\aI will!"
 		EV_SerifWait();
@@ -197,7 +197,7 @@ void ev001C_s_beforechaos6(int state)
 		EV_SetAction(eggmoble, &action_gm_gm0024_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 0, 6);
 		EV_SetAction(eggmoble, &action_gm_gm0020_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 1, 8);
 		EV_MsgClose();
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
 		EV_SerifPlay(576);
 		EV_Msg((msgTbl_ev001C[TextLanguage])[15]); // "\aOkay Chaos! Destroy them all...\nImme"...
 		EV_Wait(45);

@@ -83,7 +83,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_ClrAction(WING);
 		EV_ClrAction(amy);
 		EV_SetAction(WING, &action_w_w0124_wing, &VER2_WING_TEXLIST, 1.0f, 1, 16);
-		EV_SetAction(amy, &action_a_a0001_amy, &AMY_TEXLIST, 1.0f, 1, 16);
+		EV_SetAction(amy, &action_a_a0124_amy, &AMY_TEXLIST, 1.0f, 1, 16);
 		EV_CameraAng(1, 0, 2704, 4064, 65280);
 		EV_CameraPos(1, 0, 1.7386f, 1526.6f, 3458.6001f);
 		EV_CameraPos(0, 40, 1.7386f, 1546.6f, 3458.6001f);
@@ -184,7 +184,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_Wait(10);
 		EV_CameraPos(0, 90, 45.700001f, 1526.83f, 3255.6001f);
 		chgMghandMod(Mhand, 2);
-		EV_SetAction(amy, &action_a_a0124_amy, &AMY_TEXLIST, 1.0f, 0, 2);
+		EV_SetAction(amy, &action_a_a0001_amy, &AMY_TEXLIST, 1.0f, 0, 2);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 8);
 		EV_SerifPlay(538);
 		EV_SetFace(amy, "E");
@@ -294,7 +294,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_CameraPos(1, 20, 55.560001f, 1547.075f, 3231.04f);
 		EV_SerifPlay(542);
 		EV_Msg((msgTbl_ev001A[TextLanguage])[6]); //"\aGamma!"
-		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 1.0f, 1, 8);
+		EV_SetAction(player, &action_s_s0038_sonic, &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_SerifWait();
 		EV_FreeObject(&emerald);
 		black2 = COverlayCreate(1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
@@ -395,7 +395,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_LookPoint(tails, 90.0f, 1567.7f, 3270.0f);
 		EV_LookPoint(amy, 90.0f, 1567.7f, 3270.0f);
 		eggmoble_moveandturn(94.459999f, 1561.5475f, 3267.0f, 0, 33280, 0, 70, 1);
-		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 1.0f, 1, 8);
+		EV_SetAction(player, &action_s_s0038_sonic, &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_Wait(72);
 		EV_MsgClose();
 		EventSe_Play(2, 1341, 1800);
@@ -407,7 +407,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_LookFree(player);
 		EV_LookFree(tails);
 		EV_LookFree(amy);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 1.0f, 1, 16);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 1.0f, 1, 16);
 		EV_CameraPos(0, 60, -9.3699999f, 1532.78f, 3298.74f);
 		EV_CameraAng(0, 60, 914, 61142, 64512);
 		EV_Wait(70);

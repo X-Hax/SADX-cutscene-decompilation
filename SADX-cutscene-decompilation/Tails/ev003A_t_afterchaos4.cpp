@@ -148,7 +148,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_Wait(55);
 		EV_SerifWait();
 		EV_LookFree(sonic);
-		EV_SetAction(sonic, &action_s_s9001_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
+		EV_SetAction(sonic, &action_s_s0002_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
 		EV_ClrFace(sonic);
 		EV_SetFace(sonic, "CDCD");
 		EV_Wait(5);

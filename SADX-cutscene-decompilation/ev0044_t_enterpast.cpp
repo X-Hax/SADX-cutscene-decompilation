@@ -41,7 +41,7 @@ void ev0044_t_enterpast(int state)
 		EV_CameraAng(1, 100, 1792, 65500, 0);
 		EV_Wait(30);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_m_m0124_miles, &MILES_TEXLIST, 0.2f, 1, 0);
+		EV_SetAction(player, &action_m_m0127_miles, &MILES_TEXLIST, 0.2f, 1, 0);
 		EV_SerifPlay(730);
 		EV_MsgW(0, msgTbl_ev0044[TextLanguage][1]); //"\aI wonder where I am?"
 		EV_Wait(90);

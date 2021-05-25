@@ -34,7 +34,7 @@ void ev001B_s_aftergamma(int state)
 			e102->Data1->Position.z,
 			4);
 		EV_ClrAction(e102);
-		EV_SetAction(e102, &action_e_e0005_e102, &E102_TEXLIST, 1.0f, 1, 16);
+		EV_SetAction(e102, &action_e_e0002_e102, &E102_TEXLIST, 1.0f, 1, 16);
 		EV_CreatePlayer(2, Amy_Main, -123.18f, 1528.0f, 3310.0f, 0, -49152, 0);
 		EV_Wait(1);
 		amy = EV_GetPlayer(2);
@@ -63,7 +63,7 @@ void ev001B_s_aftergamma(int state)
 		EV_Wait(5);
 		EV_ClrAction(e102);
 		EV_SetAction(e102, &action_e_e0003_e102, &E102_TEXLIST, 1.0f, 0, 16);
-		EV_SetAction(e102, &action_e_e0002_e102, &E102_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(e102, &action_e_e0004_e102, &E102_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(40);
 		dsPlay_oneshot_v(1335, 0, 0, 120, -3.0f, 1525.0f, 3390.0f);
 		EV_Wait(30);
@@ -183,7 +183,7 @@ void ev001B_s_aftergamma(int state)
 		EV_SetFace(player, "F");
 		EV_SerifPlay(549);
 		EV_Msg((msgTbl_ev001B[TextLanguage])[1]); //"\aStep aside, Amy! \nOut of my way!"
-		EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 1.0f, 0, 2);
+		EV_SetAction(player, &action_s_s0005_sonic, &SONIC_TEXLIST, 1.0f, 0, 2);
 		switch (VoiceLanguage) {
 		case 0:
 			EV_SetFace(player, "CD");
@@ -195,7 +195,7 @@ void ev001B_s_aftergamma(int state)
 		SONIC_OBJECTS[6]->sibling = &object_sonic_s_r_a5_01_s_r_a5_01; //Sonic's finger
 		EV_Wait(25);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_s_s0005_sonic, &SONIC_TEXLIST, 1.0f, 1, 4);
+		EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 1.0f, 1, 4);
 		EV_Wait(20);
 		EV_MsgClose();
 		EV_ClrFace(player);
@@ -291,7 +291,7 @@ void ev001B_s_aftergamma(int state)
 		EV_CameraAng(0, 5, 4736, 23808, 1280);
 		EV_Wait(3);
 		EV_SetAction(player, &action_s_s0012_sonic, &SONIC_TEXLIST, 1.0f, 1, 4);
-		EV_SetAction(player, &action_e_e0004_e102, &E102_TEXLIST, 1.0f, 1, 4);
+		EV_SetAction(player, &action_e_e0005_e102, &E102_TEXLIST, 1.0f, 1, 4);
 		EV_SetAction(amy, &action_a_a0003_amy, &AMY_TEXLIST, 1.0f, 1, 8);
 		dsPlay_oneshot_v(1333, 0, 0, 120, -3.0f, 1525.0f, 3390.0f);
 		RumbleA(0, 3);
@@ -324,7 +324,7 @@ void ev001B_s_aftergamma(int state)
 		EV_CameraAng(0, 5, 4736, 23808, 1280);
 		EV_Wait(3);
 		EV_SetAction(player, &action_s_s0012_sonic, &SONIC_TEXLIST, 0.5f, 1, 0);
-		EV_SetAction(player, &action_e_e0004_e102, &E102_TEXLIST, 0.5f, 1, 0);
+		EV_SetAction(player, &action_e_e0005_e102, &E102_TEXLIST, 0.5f, 1, 0);
 		EV_SetAction(amy, &action_a_a0003_amy, &AMY_TEXLIST, 0.5f, 1, 0);
 		EV_CameraAng(0, 4, 1152, 23808, 1280);
 		EV_Wait(3);
@@ -448,7 +448,7 @@ void ev001B_s_aftergamma(int state)
 		EV_ClrAction(amy);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 8);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_e_e0002_e102, &E102_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_e_e0004_e102, &E102_TEXLIST, 1.0f, 1, 0);
 		EV_ClrFace(amy);
 		EV_SetFace(amy, "D");
 		EV_SerifPlay(557);

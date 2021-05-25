@@ -125,7 +125,7 @@ void ev0022_s_pastaltar(int state)
 		EV_MsgClose();
 		EV_ClrAction(player);
 		EV_Wait(1);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
 		EV_ClrAction(tikal);
 		EV_SetAction(tikal, &action_j_j0007_tikal, &TIKAL_TEXLIST, 0.80000001f, 0, 0);
 		EV_Wait(20);

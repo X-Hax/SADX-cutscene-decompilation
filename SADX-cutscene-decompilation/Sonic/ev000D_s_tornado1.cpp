@@ -82,7 +82,7 @@ void ev000D_s_tornado1(int state)
 		EV_ClrAction(player);
 		EV_Wait(30);
 		EV_SetFace(player, "bbbbbbbbbbbb");
-		EV_SetAction(player, &action_s_s0033_sonic, &SONIC_TEXLIST, 0.2f, 0, 16);
+		EV_SetAction(player, &action_s_s0013_sonic, &SONIC_TEXLIST, 0.2f, 0, 16);
 		EV_CameraPos(1, 0, 1461.0509f, 196.81358f, 868.36908f);
 		EV_CameraAng(1, 0, 1024, 20480, 0);
 		EV_Wait(40);

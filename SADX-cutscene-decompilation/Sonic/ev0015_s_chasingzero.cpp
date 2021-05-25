@@ -41,18 +41,18 @@ void ev0015_s_chasingzero(int state)
 		EV_Wait(40);
 		EV_SerifPlay(517);
 		EV_Msg((msgTbl_ev0015[TextLanguage])[1]); //"\aAaaagh!   Sonic!   Help!"
-		EV_SetAction(player, &action_s_s0038_sonic, &SONIC_TEXLIST, 2.7f, 0, 8);
+		EV_SetAction(player, &action_s_s0044_sonic, &SONIC_TEXLIST, 2.7f, 0, 8);
 		EV_WaitAction(player);
 		BGM_Play(MusicIDs_eggrobo);
 		EV_CameraAng(0, 25, 6144, 33024, 0);
-		EV_SetAction(player, &action_s_s9001_sonic, &SONIC_TEXLIST, 0.89999998f, 0, 16);
+		EV_SetAction(player, &action_s_s0002_sonic, &SONIC_TEXLIST, 0.89999998f, 0, 16);
 		EV_CameraPerspective(0, 8, 12197);
 		EV_Wait(8);
 		EV_CameraPerspective(0, 10, 12561);
 		EV_Wait(30);
 		EV_SetAng(player, 0, 12800, 0);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_s_s0017_sonic, &SONIC_TEXLIST, 1.3f, 0, 16);
+		EV_SetAction(player, &action_s_s0001_sonic, &SONIC_TEXLIST, 1.3f, 0, 16);
 		EV_SetAction(player, &action_s_s0006_sonic, &SONIC_TEXLIST, 1.1f, 1, 8);
 		EV_CameraPerspective(1, 0, 10194);
 		EV_LookPoint(player, -469.0f, 184.0f, 1231.4f);

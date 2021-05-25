@@ -55,7 +55,7 @@ void ev003E_t_flashback(int state)
 		EV_CameraPos(1, 80, -963.79999f, 12.6f, -189.75f);
 		EV_CameraAng(1, 80, 2355, 41047, 768);
 		EV_Wait(100);
-		EV_SetAction(player, &action_m_m0123_miles, &MILES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_m_m0121_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_CameraPos(1, 0, -947.70001f, 13.2f, -183.89999f);
 		EV_CameraTargetObj(1, 0, player, 0.0f, 0.0f, 0.0f, 0);
 		EV_Wait(5);
@@ -90,7 +90,7 @@ void ev003E_t_flashback(int state)
 		COverlaySetSpeed(SEPIA_EV003E, -1.0e-11f);
 		EV_Wait(53);
 		EV_SetAction(player, &action_m_m0122_miles, &MILES_TEXLIST, 1.0f, 0, 4);
-		EV_SetAction(player, &action_m_m0121_miles, &MILES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_m_m0123_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(10);
 		EventSe_Oneshot(738, 128, 0, 0);
 		EV_MovePoint2(sonic, -825.40002f, 24.33f, 109.9f, 8.0f, 4.0f);

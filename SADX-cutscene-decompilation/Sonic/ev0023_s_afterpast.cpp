@@ -70,7 +70,7 @@ void ev0023_s_afterpast(int state)
 		EV_CameraAng(0, 0, 57088, 512, 63488);
 		EV_Wait(20);
 		BGM_Play(MusicIDs_evtbgm01);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.60000002f, 1, 0);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.60000002f, 1, 0);
 		EV_Wait(15);
 		EV_SetAng(player, 256, 41984, 0);
 		EV_SerifPlay(597);
@@ -121,7 +121,7 @@ void ev0023_s_afterpast(int state)
 		EV_MovePoint2(player, -724.0f, 14.443f, -885.37799f, 1.3f, 2.5f);
 		EV_WaitMove(player);
 		EV_LookFree(player);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_Wait(70);
 		EV_CameraPos(0, 0, -735.20001f, 10.0f, -887.70001f); //Note: These cameras are under the floor when using the DC jungle geometry.
 		EV_CameraAng(0, 0, 2304, 47360, 0);
@@ -134,8 +134,8 @@ void ev0023_s_afterpast(int state)
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
-		EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 1.0f, 0, 4);
-		EV_SetAction(player, &action_s_s0005_sonic, &SONIC_TEXLIST, 1.0f, 1, 4);
+		EV_SetAction(player, &action_s_s0005_sonic, &SONIC_TEXLIST, 1.0f, 0, 4);
+		EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 1.0f, 1, 4);
 		EV_SerifPlay(600);
 		switch (VoiceLanguage) {
 		case 0:

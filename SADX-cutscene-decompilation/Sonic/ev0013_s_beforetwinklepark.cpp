@@ -81,7 +81,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_CameraPos(1, 0, 335.63f, 9.0699997f, 1591.34f);
 		EV_CameraAng(1, 0, 63488, 768, 0);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_s_s0001_sonic, &SONIC_TEXLIST, 0.2f, 0, 0);
+		EV_SetAction(player, &action_s_s0004_sonic, &SONIC_TEXLIST, 0.2f, 0, 0);
 		EV_ClrFace(amy);
 		EV_MsgClose();
 		EV_ClrAction(player);
@@ -110,7 +110,7 @@ void ev0013_s_beforetwinklepark(int state)
 		moveObjectOn(KOTORI, 2.5f, 5.0f, 2.0f, 900, amy);
 		EV_Wait(1);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_s_s0017_sonic, &SONIC_TEXLIST, 1.0f, 0, 8);
+		EV_SetAction(player, &action_s_s0001_sonic, &SONIC_TEXLIST, 1.0f, 0, 8);
 		EV_SetAction(player, &action_s_s0006_sonic, &SONIC_TEXLIST, 0.5f, 1, 0);
 		EV_ClrFace(player);
 		if (!VoiceLanguage) EV_SetFace(player, "DAEC");
@@ -130,7 +130,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_SerifPlay(506);
 		EV_Msg((msgTbl_ev0013[TextLanguage])[2]); //"\aWhoaaa!"
 		EV_Wait(30);
-		EV_SetAction(player, &action_s_s9001_sonic, &SONIC_TEXLIST, 0.25f, 0, 16);
+		EV_SetAction(player, &action_s_s0002_sonic, &SONIC_TEXLIST, 0.25f, 0, 16);
 		EV_Wait(20);
 		EV_ClrFace(player);
 		switch (VoiceLanguage) {
@@ -152,7 +152,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_ClrAction(player);
 		EV_CameraPos(0, 160, 302.37f, 5.9000001f, 1569.3f);
 		EV_CameraAng(1, 160, 2856, 45512, 0);
-		EV_SetAction(player, &action_s_s0004_sonic, &SONIC_TEXLIST, 1.0f, 0, 8);
+		EV_SetAction(player, &action_s_s0017_sonic, &SONIC_TEXLIST, 1.0f, 0, 8);
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAng(player, 0, 12288, 0);
@@ -195,7 +195,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_SetFace(player, "FEFD");
 		EV_MovePoint(player, 339.87f, 0.0099999998f, 1573.15f);
 		EV_WaitMove(player);
-		EV_SetAction(player, &action_s_s0004_sonic, &SONIC_TEXLIST, 0.25f, 0, 16);
+		EV_SetAction(player, &action_s_s0017_sonic, &SONIC_TEXLIST, 0.25f, 0, 16);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 0, 16);
 		EV_SerifPlay(511);
 		EV_Msg((msgTbl_ev0013[TextLanguage])[7]); //"\aAmy!   Wai-wai-wai-wait!"
@@ -221,7 +221,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_SerifPlay(512);
 		EV_Msg((msgTbl_ev0013[TextLanguage])[8]); //"\aOh man... \nThat girl is such a pain!"
 		EV_Wait(10);
-		EV_SetAction(player, &action_s_s0033_sonic, &SONIC_TEXLIST, 0.25f, 0, 16);
+		EV_SetAction(player, &action_s_s0013_sonic, &SONIC_TEXLIST, 0.25f, 0, 16);
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_WaitAction(player);

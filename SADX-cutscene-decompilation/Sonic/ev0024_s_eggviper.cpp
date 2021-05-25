@@ -51,7 +51,7 @@ void ev0024_s_eggviper(int state)
 		EV_CameraTargetFree();
 		EV_CameraPos(1, 0, -303.81f, -49999.723f, 1.456f);
 		EV_CameraAng(1, 0, 3584, 17408, 0);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 1.0f, 0, 8); //Shows up too early (during ball animation) and doesn't loop.
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 1.0f, 0, 8); //Shows up too early (during ball animation) and doesn't loop.
 		EV_Wait(80);
 		EV_CameraPos(1, 0, -327.017f, -49992.781f, 3.267f);
 		EV_CameraAng(1, 0, 4864, 48640, 0);
@@ -425,7 +425,7 @@ void ev0024_s_eggviper(int state)
 		EV_Wait(10);
 		COverlaySetSpeed(KURAYAMI, -0.016666668f);
 		EV_Wait(30);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 1.0f, 1, 8);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_CameraChaseFree();
 		EV_CameraOn();
 		EV_CameraPos(1, 0, 271.72501f, 15.634f, -10.011f);

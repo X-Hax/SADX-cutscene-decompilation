@@ -95,14 +95,14 @@ void ev000B_s_beforechaos4(int state)
 		EV_CameraAng(0, 0, 65417, 64621, 64256);
 		EV_CameraPos(0, 15, 69.860001f, 77.300003f, 295.98999f);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_s_s0002_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
+		EV_SetAction(player, &action_s_s0046_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, &action_s_s9000_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
-		EV_SetAction(player, &action_s_s0046_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_s_s9001_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
 		moveObject(player, player->Data1->Position.x, player->Data1->Position.y, player->Data1->Position.z, player->Data1->Position.x, 72.349998f, player->Data1->Position.z + 48.0f, 15);
 		EV_ClrAction(knuckles);
-		EV_SetAction(knuckles, &action_k_k0039_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(knuckles, &action_k_k0033_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 0);
-		EV_SetAction(knuckles, &action_k_k0035_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(knuckles, &action_k_k0038_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 0);
+		EV_SetAction(knuckles, &action_k_k0039_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		moveObject(knuckles, knuckles->Data1->Position.x, knuckles->Data1->Position.y, knuckles->Data1->Position.z, knuckles->Data1->Position.x, 72.349998f, knuckles->Data1->Position.z - 48.0f, 15);
 		EV_Wait(10);
 		dsPlay_oneshot_v(1338, 0, 0, 120, player->Data1->Position.x, 72.349998f, player->Data1->Position.z + 48.0f);
@@ -325,7 +325,7 @@ void ev000B_s_beforechaos4(int state)
 		EV_Wait(15);
 		EV_CameraPos(0, 240, 38.52f, 74.110001f, 209.25f);
 		EV_LookFree(player);
-		EV_SetAction(player, &action_s_s9001_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
+		EV_SetAction(player, &action_s_s0002_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_SerifPlay(482);
 		EV_Msg((msgTbl_ev000B[TextLanguage])[7]); //"\aKnuckles, don't tell me \nEggman tric"...
@@ -341,8 +341,8 @@ void ev000B_s_beforechaos4(int state)
 		EV_Wait(60);
 		EV_LookObject(knuckles, player, 0.0f, 6.0f, 0.0f);
 		EV_Wait(15);
-		EV_SetAction(knuckles, &action_k_k0038_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 4);
-		EV_SetAction(knuckles, &action_k_k0034_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(knuckles, &action_k_k0034_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 4);
+		EV_SetAction(knuckles, &action_k_k0035_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		EV_SerifPlay(483);
 		EV_ClrFace(knuckles);
 		if (VoiceLanguage == 1) EV_SetFace(knuckles, "C");
@@ -367,7 +367,7 @@ void ev000B_s_beforechaos4(int state)
 		}
 		EV_SerifPlay(484);
 		EV_Msg((msgTbl_ev000B[TextLanguage])[9]);  //"\aWay to go, Knucklehead!"
-		EV_SetAction(player, &action_s_s0033_sonic, &SONIC_TEXLIST, 0.25f, 0, 16);
+		EV_SetAction(player, &action_s_s0013_sonic, &SONIC_TEXLIST, 0.25f, 0, 16);
 		EV_LookObject(player, knuckles, 0.0f, 6.0f, 0.0f);
 		EV_Wait(4);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 8);

@@ -58,7 +58,7 @@ void ev0017_s_tailsreunion(int state)
 		EV_Wait(140);
 		EV_CameraPos(1, 0, -420.60001f, 1040.6f, 3130.0f);
 		EV_CameraAng(1, 0, 2080, 39571, 2048);
-		EV_SetAction(player, &action_s_s0017_sonic, &SONIC_TEXLIST, 1.0f, 0, 20);
+		EV_SetAction(player, &action_s_s0001_sonic, &SONIC_TEXLIST, 1.0f, 0, 20);
 		EV_SetAction(player, &action_s_s0006_sonic, &SONIC_TEXLIST, 0.5f, 1, 0);
 		EV_CameraPos(1, 130, -412.79999f, 1040.6f, 3124.8501f);
 		EV_CameraAng(1, 130, 3104, 39827, 2048);

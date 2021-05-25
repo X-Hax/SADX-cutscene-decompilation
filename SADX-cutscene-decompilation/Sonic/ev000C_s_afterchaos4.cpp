@@ -137,7 +137,7 @@ void ev000C_s_afterchaos4(int state)
 		EV_Wait(55);
 		EV_SerifWait();
 		EV_LookFree(player);
-		EV_SetAction(player, &action_s_s9001_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
+		EV_SetAction(player, &action_s_s0002_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
 		EV_ClrFace(player);
 		EV_Wait(5);
 		EV_ClrFace(tails);

@@ -33,7 +33,7 @@ void ev001E_s_lostworld(int state)
 		EV_Wait(18);
 		EV_SetPos(player, -569.19f, 1.0f, -592.03198f);
 		EV_SetAng(player, 10, 19968, 0);
-		EV_SetAction(player, &action_s_s0020_sonic, &SONIC_TEXLIST, 0.80000001f, 0, 0);
+		EV_SetAction(player, &action_s_s0019_sonic, &SONIC_TEXLIST, 0.80000001f, 0, 0);
 		EV_CameraPos(1, 0, -553.88202f, 2.0f, -611.27502f);
 		EV_CameraAng(1, 0, 8704, 25856, 0);
 		EV_Wait(5);
@@ -41,11 +41,11 @@ void ev001E_s_lostworld(int state)
 		EV_Wait(25);
 		EventSe_Oneshot(1334, 0, 0, 0);
 		EV_WaitAction(player);
-		EV_SetAction(player, &action_s_s0030_sonic, &SONIC_TEXLIST, 1.5f, 0, 0);
+		EV_SetAction(player, &action_s_s0020_sonic, &SONIC_TEXLIST, 1.5f, 0, 0);
 		EV_WaitAction(player);
 		EV_SerifPlay(582);
 		EV_SetAction(player, &action_s_s0029_sonic, &SONIC_TEXLIST, 0.5f, 0, 14);
-		EV_SetAction(player, &action_s_s0021_sonic, &SONIC_TEXLIST, 0.5f, 1, 10);
+		EV_SetAction(player, &action_s_s0030_sonic, &SONIC_TEXLIST, 0.5f, 1, 10);
 		EV_Wait(2);
 		EV_SetFace(player, "EAF");
 		EV_Msg((msgTbl_ev001E[TextLanguage])[0]); //"\aAarrgh!  \nI hate Eggman!"
@@ -64,7 +64,7 @@ void ev001E_s_lostworld(int state)
 		EV_Msg((msgTbl_ev001E[TextLanguage])[1]); //"\aWhere's this?"
 		EV_Wait(30);
 		EventSe_Play(2, 1114, 1800);
-		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
+		EV_SetAction(player, &action_s_s0038_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_MsgClose();
 		EV_Wait(30);
 		EV_CameraPerspective(1, 1, 7282);
@@ -95,7 +95,7 @@ void ev001E_s_lostworld(int state)
 		EV_CameraAng(0, 0, 4352, 28416, 0);
 		EV_CameraPos(0, 40, -566.90002f, 2.7479999f, -598.03003f);
 		EV_CameraAng(0, 40, 4352, 28416, 0);
-		EV_SetAction(player, &action_s_s0019_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 0);
+		EV_SetAction(player, &action_s_s0021_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 0);
 		tikal = CTikalLight_Create(-514.7547f, 14.636f, -650.21503f);
 		EV_Wait(20);
 		EV_SetMode(tikal, 0);

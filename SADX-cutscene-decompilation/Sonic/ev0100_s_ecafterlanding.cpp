@@ -73,7 +73,7 @@ void ev0100_s_ecafterlanding(int state)
 		EV_LookFree(tails);
 		EV_SetFace(tails, "BB");
 		EV_Wait(20);
-		EV_SetAction(player, &action_s_s0007_sonic, &SONIC_TEXLIST, 0.69999999f, 0, 20);
+		EV_SetAction(player, &action_s_s0005_sonic, &SONIC_TEXLIST, 0.69999999f, 0, 20);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 5);
 		EV_Wait(40);
 		EV_ClrFace(player);

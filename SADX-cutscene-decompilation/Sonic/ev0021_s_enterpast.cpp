@@ -42,7 +42,7 @@ void ev0021_s_enterpast(int state)
 		EV_SetFace(player, "FAAAED");
 		EV_SerifPlay(593);
 		EV_Msg(msgTbl_ev0021[TextLanguage][0]); //"\aWhat's this place?"
-		EV_SetAction(player, &action_s_s0033_sonic, &SONIC_TEXLIST, 0.25f, 0, 8);
+		EV_SetAction(player, &action_s_s0013_sonic, &SONIC_TEXLIST, 0.25f, 0, 8);
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_CameraAng(0, 0, 0, 51200, 0);

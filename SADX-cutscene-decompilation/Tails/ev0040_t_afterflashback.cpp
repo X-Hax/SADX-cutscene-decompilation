@@ -19,7 +19,7 @@ void ev0040_t_afterflashback(int state)
 		EV_Wait(1);
 		EV_SetAng(player, 0, 0, 0);
 		EV_SetFace(player, "VVVVVVVVVVVVVVVVVVVVVVVVVVVVV");
-		EV_SetAction(player, &action_m_m0127_miles, &MILES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_m_m0124_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_CameraAng(1, 0, 7936, 1024, 0);
 		EV_CameraPos(1, 0, 125.05f, 93.459999f, 295.10001f);
 		EV_CameraAng(1, 240, 5120, 1024, 0);
@@ -67,7 +67,7 @@ void ev0040_t_afterflashback(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m0126_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(1);
-		EV_SetAction(player, &action_m_m0124_miles, &MILES_TEXLIST, 1.0f, 0, 0);
+		EV_SetAction(player, &action_m_m0127_miles, &MILES_TEXLIST, 1.0f, 0, 0);
 		EV_WaitAction(player);
 		EV_CameraPos(1, 160, 118.72f, 73.93f, 293.72f);
 		EV_SetAction(player, &action_m_m0128_miles, &MILES_TEXLIST, 1.0f, 0, 8);
@@ -104,8 +104,8 @@ void ev0040_t_afterflashback(int state)
 		EV_ClrFace(player);
 		EV_Wait(20);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_m_m0111_miles, &MILES_TEXLIST, 1.0f, 0, 10);
-		EV_SetAction(player, &action_m_m0109_miles, &MILES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_m_m0130_miles, &MILES_TEXLIST, 1.0f, 0, 10);
+		EV_SetAction(player, &action_m_m0131_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(40);
 		EV_SetFace(player, "FFF");
 		EV_SerifPlay(725);

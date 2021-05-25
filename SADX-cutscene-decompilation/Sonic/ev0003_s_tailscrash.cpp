@@ -52,13 +52,13 @@ void ev0003_s_tailscrash(int state)
 		EV_Wait(1);
 		EventSe_Volume(0, -10, 100);
 		EV_Wait(29);
-		EV_SetAction(player, &action_s_s0013_sonic, &SONIC_TEXLIST, 0.75f, 0, 0);
+		EV_SetAction(player, &action_s_s0032_sonic, &SONIC_TEXLIST, 0.75f, 0, 0);
 		EV_Wait(10);
 		EV_WaitAction(player);
-		EV_SetAction(player, &action_s_s0032_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 0);
+		EV_SetAction(player, &action_s_s0033_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 0);
 		EV_SetFace(player, "BAX");
 		EV_SerifPlay(402);
-		EV_SetAction(player, &action_s_s0032_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 0);
+		EV_SetAction(player, &action_s_s0033_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 0);
 		BGM_Stop();
 		EV_Msg((msgTbl_ev0003[TextLanguage])[0]); // "\aHuh?"
 		EV_Wait(15);
@@ -173,7 +173,7 @@ void ev0003_s_tailscrash(int state)
 		EV_CameraAng(0, 100, 6144, 54016, 65280);
 		EV_CameraPos(0, 100, -345.26001f, 3.1600001f, 1869.9301f);
 		EV_Wait(5);
-		EV_SetAction(player, &action_s_s0033_sonic, &SONIC_TEXLIST, 0.2f, 0, 16);
+		EV_SetAction(player, &action_s_s0013_sonic, &SONIC_TEXLIST, 0.2f, 0, 16);
 		EV_WaitAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 16);
 		EV_SerifWait();

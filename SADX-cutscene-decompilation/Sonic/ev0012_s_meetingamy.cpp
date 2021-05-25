@@ -58,7 +58,7 @@ void ev0012_s_meetingamy(int state)
 		EV_SetAction(amy, AMY_ACTIONS[44], &AMY_TEXLIST, 1.3f, 1, 1);
 		EV_MovePoint2(amy, -528.20001f, 0.0f, 1208.0f, 0.64999998f, 0.059999999f);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_s_s9001_sonic, &SONIC_TEXLIST, 0.25f, 0, 8);
+		EV_SetAction(player, &action_s_s0002_sonic, &SONIC_TEXLIST, 0.25f, 0, 8);
 		moveObject(obj_wing1, -520.70001f, 8.0f, 1269.4f, -525.40002f, 8.0f, 1210.4f, 117);
 		EV_Wait(10);
 		BGM_Play(MusicIDs_amy);

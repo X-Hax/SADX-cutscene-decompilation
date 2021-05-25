@@ -163,9 +163,9 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_SerifPlay(669);
 		EV_Wait(16);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_m_m9002_miles, &MILES_TEXLIST, 1.0f, 0, 8);
+		EV_SetAction(player, &action_m_m9001_miles, &MILES_TEXLIST, 1.0f, 0, 8);
 		EV_Msg(msgTbl_ev0035[TextLanguage][2]);
-		EV_SetAction(player, &action_m_m9001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_m_m9002_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SerifPlay(671);
 		EV_LookFree(player);
 		EV_Msg(msgTbl_ev0035[TextLanguage][3]);

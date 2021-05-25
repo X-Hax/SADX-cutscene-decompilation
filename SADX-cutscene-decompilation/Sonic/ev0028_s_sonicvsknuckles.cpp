@@ -101,8 +101,8 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_ClrAction(knuckles);
 		EV_PlayPad(2, &EV0028_KN_PUNCH);
 		EV_Wait(20);
-		EV_SetAction(player, &action_s_s0036_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
-		EV_SetAction(player, &action_s_s0035_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_s_s0035_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
+		EV_SetAction(player, &action_s_s0036_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
 		moveObject(player,
 			player->Data1->Position.x,
 			player->Data1->Position.y,
@@ -121,7 +121,7 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_SetPos(knuckles, 42.959999f, 72.709999f, 301.29001f);
 		EV_SetAng(knuckles, 65390, 35266, 65442);
 		EV_SetAng(tails, 65390, 35266, 65442);
-		EV_SetAction(knuckles, &action_k_k0013_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(knuckles, &action_k_k0005_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(15);
 		EV_ClrFace(player);
 		EV_SetFace(player, "F");
@@ -130,10 +130,10 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_Msg(msgTbl_ev0028[TextLanguage][1]); //"\aSomethin' buggin' you?"
 		EV_CameraPos(0, 60, 46.810001f, 81.330002f, 241.47f);
 		EV_CameraAng(0, 60, 64681, 29455, 0);
-		EV_SetAction(player, &action_s_s9001_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
+		EV_SetAction(player, &action_s_s0002_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
 		EV_WaitAction(player);
 		EV_SetAng(player, 65390, 3314, 65442);
-		EV_SetAction(player, &action_s_s0017_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
+		EV_SetAction(player, &action_s_s0001_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, &action_s_s0006_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
 		EV_ClrFace(knuckles);
 		EV_SetFace(knuckles, "F");
@@ -146,8 +146,8 @@ void ev0028_s_sonicvsknuckles(int state)
 		throughplayer_off(player);
 		throughplayer_off(knuckles);
 		EV_SetAction(knuckles, &action_k_k0012_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 2);
-		EV_SetAction(knuckles, &action_k_k0005_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 16);
+		EV_SetAction(knuckles, &action_k_k0013_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 16);
 		EV_SetFace(knuckles, "CDE");
 		EV_SerifPlay(607);
 		EV_Msg(msgTbl_ev0028[TextLanguage][3]); //"\aGive me the Emeralds you have!\nRight"...

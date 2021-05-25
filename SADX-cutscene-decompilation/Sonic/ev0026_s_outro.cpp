@@ -26,7 +26,7 @@ void ev0026_s_outro(int state)
 		WriteData((float*)(smoke->Data1->LoopData) + 14, 0.5f);
 		EV_SetPos(player, 338.5f, 204.0f, 684.40002f);
 		EV_SetAng(player, 63488, 37632, 0);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
 		EV_CreatePlayer(2, Tails_Main, -235.60001f, 1528.6f, 3543.3f, 0, 0x8000, 0);
 		create_eggmoble(187.45f, 350.0f, 420.0f, 0, 21760, 0);
 		EV_SetPos(smoke, 187.45f, 370.0f, 420.0f);
@@ -49,16 +49,16 @@ void ev0026_s_outro(int state)
 		EV_CameraAng(0, 80, 10640, 6368, 65280);
 		EV_CameraPos(0, 80, 339.79999f, 202.37f, 691.0f);
 		EV_Wait(37);
-		EV_SetAction(player, &action_s_s0071_sonic, &SONIC_TEXLIST, 0.5f, 0, 8);
+		EV_SetAction(player, &action_s_s0068_sonic, &SONIC_TEXLIST, 0.5f, 0, 8);
 		EV_Wait(45);
 		EV_CameraAng(1, 0, 3472, 30688, 65280);
 		EV_CameraPos(1, 0, 343.20001f, 204.646f, 672.29999f);
 		EV_CameraPos(0, 80, 342.84f, 205.3f, 674.14001f);
 		EV_ClrAction(player);
-		EV_SetAction(player, &action_s_s0042_sonic, &SONIC_TEXLIST, 0.5f, 1, 0);
+		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 0);
 		EV_SetAng(player, 0, 4352, 0);
 		EV_Wait(110);
-		EV_SetAction(player, &action_s_s0071_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
+		EV_SetAction(player, &action_s_s0068_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_LookPoint(player, 857.11603f, 138.82401f, 1096.548f);
 		EV_Wait(25);
 		EV_SetFace(player, "P");
@@ -246,7 +246,7 @@ void ev0026_s_outro(int state)
 		EV_ClrAction(player);
 		SONIC_OBJECTS[6]->sibling = &object_sonic_s_r_a5_01_s_r_a5_01;
 		EV_SetAction(player, &action_s_s0070_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
-		EV_SetAction(player, &action_s_s0068_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
+		EV_SetAction(player, &action_s_s0071_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(43);
 		EV_CameraPos(0, 4, 2137.3401f, 173.545f, 1589.1801f);
 		EV_CameraAng(0, 4, 1120, 9728, 0);
