@@ -37,11 +37,11 @@ void ev0165_s_crystalring(int state)
 		EV_SerifWait();
 		EV_SerifPlay(1867);
 		EV_MsgW(0, (msgTbl_ev0165[TextLanguage])[0]); //"\aThis is the Crystal Ring."
-		EV_SetAction(player, &action_s_item_r2, &SONIC_TEXLIST, 0.30000001f, 1, 16);
+		EV_SetAction(player, &action_s_item_r1, &SONIC_TEXLIST, 0.30000001f, 1, 16);
 		EV_Wait(20);
 		EV_MsgW(0, (msgTbl_ev0165[TextLanguage])[1]); //"\aThis reduces the time needed to store"...
 		EV_Wait(50);
-		EV_SetAction(player, &action_s_item_r1, &SONIC_TEXLIST, 0.30000001f, 0, 16);
+		EV_SetAction(player, &action_s_item_r2, &SONIC_TEXLIST, 0.30000001f, 0, 16);
 		EV_Wait(30);
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();

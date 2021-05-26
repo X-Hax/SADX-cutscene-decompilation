@@ -3,7 +3,7 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
-void __cdecl ev0042_t_froggyjungle(int state)
+void ev0042_t_froggyjungle(int state)
 {
 	ObjectMaster* Frog = 0;
 	ObjectMaster* R_EME = 0;

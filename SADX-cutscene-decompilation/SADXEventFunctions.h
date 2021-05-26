@@ -195,10 +195,22 @@ VoidFunc(EV_EggViperJoushou, 0x7B55B0);
 FunctionPointer(void, EV_EggViperArawaru, (float xpos, float ypos, float zpos, int yang), 0x7B5CF0);
 
 
-/*Unofficial names, a few of these seem to be local to specific events
-so I'll probably add them to their files eventually.*/
+//Unofficial names
 FunctionPointer(void, SetClip_ECScene, (int clipLevel), 0x52F400);
 FunctionPointer(void, SetClip_EV0016, (), 0x52FB20);
+VoidFunc(EV_FreeFadeToWhite, 0x6EFB30);
+FunctionPointer(void, EV_FadeToWhite, (int a1, int a2, int a3), 0x6EFD00);
+FunctionPointer(void, EV_FreeWaterRipple, (int a1), 0x6F1B80);
+FunctionPointer(void, EV_CreateWaterRipple, (float x, float y, float z, float a4, float a5, int a6, int a7, int a8), 0x6F1D30);
+ObjectFunc(ptr_crashed, 0x6F9390);
+FunctionPointer(ObjectMaster*, EggViperDebrisGenerator, (float x, float y, float z, float sx,
+	float sy, float sz, __int16 a7), 0x6F9B40);
+
+//Stuff that doesn't have an official name because it was part of the main event function in the 360 version:
+VoidFunc(ChangeTornado2Model_EV0047, 0x6BA0A0);
+VoidFunc(ChangeTornado2Model2_EV0047, 0x6BA0B0);
+VoidFunc(ChangeTornado2Model_EV0048, 0x6B9280);
+VoidFunc(ChangeTornado2Model2_EV0048, 0x6B9290);
 VoidFunc(g_SonicObj_EV003B, 0x6BEE80);
 VoidFunc(g_SonicObj_initializer_EV003B, 0x6BEEA0);
 VoidFunc(g_SonicOrgObj_p_EV003B, 0x6BEEC0);
@@ -210,15 +222,5 @@ VoidFunc(tornado_dest_EV0003, 0x6E8E30);
 FunctionPointer(void, MoveChaosPuddle_EV0002, (float pos_x, float pos_y, float pos_z, signed int frame), 0x6E9A60);
 FunctionPointer(void, Chaos0_EnterDrain_EV0002, (signed int spd), 0x6E9AC0);
 FunctionPointer(void, initElemChaos0Task_EV0002, (float xPos, float yPos, float zPos, int yAng), 0x6E9D90);
-VoidFunc(EV_FreeFadeToWhite, 0x6EFB30);
-FunctionPointer(void, EV_FadeToWhite, (int a1, int a2, int a3), 0x6EFD00);
-FunctionPointer(void, EV_FreeWaterRipple, (int a1), 0x6F1B80);
-FunctionPointer(void, EV_CreateWaterRipple, (float x, float y, float z, float a4, float a5, int a6, int a7, int a8), 0x6F1D30);
 VoidFunc(p_SonicObj_initializer_EV000D, 0x6DF420);
 VoidFunc(p_SonicObj_EV000D, 0x6DF440);
-ObjectFunc(ptr_crashed, 0x6F9390);
-FunctionPointer(ObjectMaster*, EggViperDebrisGenerator, (float x, float y, float z, float sx,
-	float sy, float sz, __int16 a7), 0x6F9B40);
-
-
-

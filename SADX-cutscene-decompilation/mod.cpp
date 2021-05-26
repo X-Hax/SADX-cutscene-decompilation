@@ -56,6 +56,10 @@ extern "C"
 		CutsceneDataList_[0x0042]->Function = ev0042_t_froggyjungle;
 		CutsceneDataList_[0x0044]->Function = ev0044_t_enterpast;
 		CutsceneDataList_[0x0045]->Function = ev0045_t_tikal;
+		CutsceneDataList_[0x0046]->Function = ev0046_t_big;
+		CutsceneDataList_[0x0047]->Function = ev0047_t_tornado2;
+		CutsceneDataList_[0x0048]->Function = ev0048_t_sonicreunion;
+		CutsceneDataList_[0x004B]->Function = ev004B_t_eggmantakesbirdie;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;

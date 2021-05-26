@@ -59,7 +59,7 @@ void ev0167_s_ancientlight(int state)
 		EV_SetMode(tikal, 0);
 		EV_ClrPath(tikal);
 		EV_SetPath(tikal, &epathtbl_ev0167_tk, 2.0f, 2);
-		EV_SetAction(player, &action_s_item_l2, &SONIC_TEXLIST, 0.5f, 1, 8);
+		EV_SetAction(player, &action_s_item_l1, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_Wait(30);
 		EV_MsgW(0, (msgTbl_ev0167[TextLanguage])[1]); //"\aTry the Light Speed Dash toward \nthe"...
 		EV_Wait(60);
@@ -86,7 +86,7 @@ void ev0167_s_ancientlight(int state)
 		EV_Wait(15);
 		EV_CameraPos(1, 90, -1650.146f, -358.66f, 2197.9099f);
 		EV_CameraAng(1, 90, 64382, 18205, 0);
-		EV_SetAction(player, &action_s_item_l1, &SONIC_TEXLIST, 0.5f, 0, 8);
+		EV_SetAction(player, &action_s_item_l2, &SONIC_TEXLIST, 0.5f, 0, 8);
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EventSe_Volume(0, -120, 120);
