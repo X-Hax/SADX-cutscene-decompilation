@@ -183,7 +183,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_SetPos(zero, 334.92999f, 0.0f, 1204.71f);
 		EV_Wait(1);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, "GAE");
+		EV_SetFace(amy, "EAG");
 		EV_SerifPlay(510);
 		EV_Msg((msgTbl_ev0013[TextLanguage])[6]); //"\aLet's go!"
 		EV_Wait(90);

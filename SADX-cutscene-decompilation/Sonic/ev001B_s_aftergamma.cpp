@@ -215,7 +215,7 @@ void ev001B_s_aftergamma(int state)
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 8);
 		EV_Wait(10);
 		EV_ClrFace(amy);
-		EV_SetFace(amy, "DCE");
+		EV_SetFace(amy, "ECD");
 		EV_SerifPlay(551);
 		EV_MsgW(90, (msgTbl_ev001B[TextLanguage])[2]); //"\aNo! This robot is my friend.\nHe help"...
 		EV_MsgClose();
@@ -264,7 +264,7 @@ void ev001B_s_aftergamma(int state)
 		switch (VoiceLanguage) {
 		case 0:
 			EV_ClrFace(player);
-			EV_SetFace(player, "EDD");
+			EV_SetFace(player, "DDE");
 			break;
 		case 1:
 			EV_SetFace(player, "EE");
@@ -436,7 +436,7 @@ void ev001B_s_aftergamma(int state)
 			EV_SetFace(player, "FCE");
 			break;
 		case 1:
-			EV_SetFace(player, "EDF");
+			EV_SetFace(player, "FDE");
 			break;
 		}
 		EV_SerifPlay(556);

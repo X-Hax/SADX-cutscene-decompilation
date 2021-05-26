@@ -60,6 +60,7 @@ extern "C"
 		CutsceneDataList_[0x0047]->Function = ev0047_t_tornado2;
 		CutsceneDataList_[0x0048]->Function = ev0048_t_sonicreunion;
 		CutsceneDataList_[0x004B]->Function = ev004B_t_eggmantakesbirdie;
+		CutsceneDataList_[0x004C]->Function = ev004C_t_escapecarrier;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;

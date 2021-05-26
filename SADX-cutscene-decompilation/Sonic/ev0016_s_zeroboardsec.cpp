@@ -188,7 +188,7 @@ void ev0016_s_zeroboardsec(int state)
 		if (!VoiceLanguage) EV_SetFace(player, "CDE");
 		EV_Wait(15);
 		EV_SerifPlay(522);
-		if (VoiceLanguage == 1) EV_SetFace(player, "CBE");
+		if (VoiceLanguage == 1) EV_SetFace(player, "EBC");
 		EV_Msg((msgTbl_ev0016[TextLanguage])[6]); //"\aShoot, I've lost her again!"
 		EV_Wait(5);
 		EV_MsgClose();

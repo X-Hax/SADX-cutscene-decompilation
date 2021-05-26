@@ -89,7 +89,7 @@ void ev0022_s_pastaltar(int state)
 		EV_SetAction(tikal, &action_j_j0020_tikal, &TIKAL_TEXLIST, 0.80000001f, 0, 4);
 		EV_Wait(10);
 		EV_SerifPlay(590);
-		EV_SetFace(tikal, "DAC");
+		EV_SetFace(tikal, "CAD");
 		EV_Msg(msgTbl_ev0022[TextLanguage][1]); //"\aWhy did this have to happen?"
 		EV_Wait(1);
 		EV_SerifWait();
@@ -115,7 +115,7 @@ void ev0022_s_pastaltar(int state)
 		EventSe_Oneshot(1335, 0, 0, 0);
 		EV_Wait(30);
 		EV_SetAction(tikal, &action_j_j0023_tikal, &TIKAL_TEXLIST, 0.60000002f, 0, 8);
-		EV_SetFace(tikal, "DAF");
+		EV_SetFace(tikal, "FAD");
 		EV_SerifPlay(592);
 		EV_Msg(msgTbl_ev0022[TextLanguage][3]); //"\aI must stop this now!"
 		EV_CameraAng(0, 30, 1280, 63744, 0);

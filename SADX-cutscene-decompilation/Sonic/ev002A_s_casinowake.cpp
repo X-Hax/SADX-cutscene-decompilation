@@ -39,7 +39,7 @@ void ev002A_s_casinowake(int state)
 		EV_Wait(50);
 		EV_SetFace(player, "XW");
 		EV_Wait(5);
-		EV_SetFace(tails, "BWX");
+		EV_SetFace(tails, "XWB");
 		EV_Wait(27);
 		EV_SetAction(player, &action_s_s0054_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 8);

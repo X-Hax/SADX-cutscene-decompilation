@@ -224,3 +224,10 @@ FunctionPointer(void, Chaos0_EnterDrain_EV0002, (signed int spd), 0x6E9AC0);
 FunctionPointer(void, initElemChaos0Task_EV0002, (float xPos, float yPos, float zPos, int yAng), 0x6E9D90);
 VoidFunc(p_SonicObj_initializer_EV000D, 0x6DF420);
 VoidFunc(p_SonicObj_EV000D, 0x6DF440);
+
+FunctionPointer(void, SetE102Effect, (double x, double y, double z), 0x6F3650);
+FunctionPointer(void, ChgEffectMod, (char mode), 0x6F3690);
+
+VoidFunc(CreateTaskGattaiEV004C, 0x6B5E40);
+VoidFunc(FreeTaskGattaiEV004C, 0x6B5EA0);
+VoidFunc(DelE102Effect, 0x6F36B0);

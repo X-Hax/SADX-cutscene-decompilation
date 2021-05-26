@@ -24,7 +24,7 @@ void ev0106_s_originalshape(int state)
 		EV_SerifPlay(1531);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, "DCF");
+			EV_SetFace(player, "FCD");
 			break;
 		case 1:
 			EV_SetFace(player, "FCDC");

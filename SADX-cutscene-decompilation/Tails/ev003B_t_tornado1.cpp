@@ -37,7 +37,7 @@ void ev003B_t_tornado1(int state)
 		EV_WaitMove(player);
 		sonic = EV_GetPlayer(3);
 		EV_LookObject(player, sonic, 0.0f, 4.0f, 0.0f);
-		EV_SetFace(player, "CDE");
+		EV_SetFace(player, "EDC");
 		EV_SerifPlay(713);
 		EV_Msg(msgTbl_ev003B[TextLanguage][0]);
 		EV_Wait(1);

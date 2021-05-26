@@ -205,7 +205,7 @@ void ev003A_t_afterchaos4(int state)
 		}
 		if (VoiceLanguage == 1)
 		{
-			EV_SetFace(sonic, "FDC");
+			EV_SetFace(sonic, "CDF");
 		}
 		EV_SerifPlay(711);
 		EV_Wait(5);

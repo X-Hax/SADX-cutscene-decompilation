@@ -47,7 +47,7 @@ void ev001E_s_lostworld(int state)
 		EV_SetAction(player, &action_s_s0029_sonic, &SONIC_TEXLIST, 0.5f, 0, 14);
 		EV_SetAction(player, &action_s_s0030_sonic, &SONIC_TEXLIST, 0.5f, 1, 10);
 		EV_Wait(2);
-		EV_SetFace(player, "EAF");
+		EV_SetFace(player, "FAE");
 		EV_Msg((msgTbl_ev001E[TextLanguage])[0]); //"\aAarrgh!  \nI hate Eggman!"
 		EV_Wait(1);
 		EV_SerifWait();

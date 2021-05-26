@@ -28,7 +28,7 @@ void ev0100_s_ecafterlanding(int state)
 			EV_SetFace(player, "ICCCDDEEEEEEDDDDCCCDDD");
 			break;
 		case 1:
-			EV_SetFace(player, "ECI");
+			EV_SetFace(player, "ICE");
 			break;
 		}
 		tails = EV_GetPlayer(2);

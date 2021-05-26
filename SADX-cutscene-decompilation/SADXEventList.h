@@ -51,6 +51,7 @@ void ev0046_t_big(int state);
 void ev0047_t_tornado2(int state);
 void ev0048_t_sonicreunion(int state);
 void ev004B_t_eggmantakesbirdie(int state);
+void ev004C_t_escapecarrier(int state);
 void ev0100_s_ecafterlanding(int state);
 void ev0101_s_ecfools(int state);
 void ev0102_s_ecaftertransforming(int state);

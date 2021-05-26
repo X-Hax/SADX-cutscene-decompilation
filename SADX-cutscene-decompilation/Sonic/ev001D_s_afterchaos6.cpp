@@ -88,7 +88,7 @@ void ev001D_s_afterchaos6(int state)
 		EV_ClrFace(player);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, "DEC");
+			EV_SetFace(player, "CED");
 			break;
 		case 1:
 			EV_SetFace(player, "CBBBDF");

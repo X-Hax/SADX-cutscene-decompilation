@@ -50,7 +50,7 @@ void ev0047_t_tornado2(int state)
 		EV_CameraAng(0, 70, 3840, 56576, 0);
 		EV_Wait(10);
 		EV_ClrFace(player);
-		EV_SetFace(player, "DEF");
+		EV_SetFace(player, "FED");
 		EV_SerifPlay(753);
 		EV_Msg(msgTbl_ev0047[TextLanguage][0]); //"\aThe time has come at last."
 		EV_Wait(1);
@@ -61,7 +61,7 @@ void ev0047_t_tornado2(int state)
 		EV_CameraPos(0, 100, 1402.7273f, 202.86f, 816.85999f);
 		EV_CameraAng(0, 100, 4118, 49384, 0xFFFF);
 		EV_Wait(20);
-		EV_SetFace(player, "CED");
+		EV_SetFace(player, "DEC");
 		EV_SerifPlay(754);
 		EV_Msg(msgTbl_ev0047[TextLanguage][1]); //"\aThis new plane should work \na lot be"...
 		EV_Wait(60);

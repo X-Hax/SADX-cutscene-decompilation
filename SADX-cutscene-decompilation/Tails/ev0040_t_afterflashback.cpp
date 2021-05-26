@@ -34,7 +34,7 @@ void ev0040_t_afterflashback(int state)
 		EV_CameraPos(1, 100, 120.95f, 78.480003f, 277.92001f);
 		EV_Wait(72);
 		EV_ClrFace(player);
-		EV_SetFace(player, "BBX");
+		EV_SetFace(player, "XBB");
 		EV_Wait(158);
 		EV_SetFace(player, "GE");
 		EV_SerifPlay(718);

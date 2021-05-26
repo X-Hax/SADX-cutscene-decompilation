@@ -32,7 +32,7 @@ void ev0104_s_afterskydeck(int state)
 		FreeTask(TALES_STEP);
 		TALES_STEP = 0;
 		EV_SerifPlay(1528);
-		EV_SetFace(player, "CED");
+		EV_SetFace(player, "DEC");
 		EV_Msg(msgTbl_ev0104[TextLanguage][0]); //"\aIs that it?"
 		EV_SetAction(player, &action_s_s0065_sonic, &SONIC_TEXLIST, 0.75f, 0, 30);
 		EV_LookFree(player);

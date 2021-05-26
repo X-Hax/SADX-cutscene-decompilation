@@ -219,6 +219,9 @@
     <ClCompile Include="ev004B_t_eggmantakesbirdie.cpp">
       <Filter>Source Files\Tails</Filter>
     </ClCompile>
+    <ClCompile Include="ev004C_t_escapecarrier.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

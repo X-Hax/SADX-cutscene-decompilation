@@ -39,7 +39,7 @@ void ev0023_s_afterpast(int state)
 		EV_SerifPlay(595);
 		switch (VoiceLanguage) {
 		case 0:
-			EV_SetFace(player, "EAD");
+			EV_SetFace(player, "DAE");
 			break;
 		case 1:
 			EV_SetFace(player, "DD");
