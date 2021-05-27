@@ -148,6 +148,8 @@
     <ClCompile Include="ev0048_t_sonicreunion.cpp" />
     <ClCompile Include="ev004B_t_eggmantakesbirdie.cpp" />
     <ClCompile Include="ev004C_t_escapecarrier.cpp" />
+    <ClCompile Include="ev004D_t_missile.cpp" />
+    <ClCompile Include="ev004E_t_speedhighway.cpp" />
     <ClCompile Include="Tails\ev0034_t_chaos1.cpp" />
     <ClCompile Include="Tails\ev0033_t_egghornet.cpp" />
     <ClCompile Include="Tails\ev0032_t_meetingsonic.cpp" />

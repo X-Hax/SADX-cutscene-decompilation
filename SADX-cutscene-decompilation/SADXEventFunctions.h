@@ -141,6 +141,9 @@ FunctionPointer(void, CreateChaos4, (float pos_, float pos_y, float pos_z, int a
 FunctionPointer(void, Create_e102lightning, (float x, float y, float z, int childtask_num), 0x6F2F60);
 VoidFunc(Delete_e102lightning, 0x6F2FB0);
 FunctionPointer(ObjectMaster*, CObjSmoke_Create, (), 0x6F3450);
+FunctionPointer(void, SetE102Effect, (double x, double y, double z), 0x6F3650);
+FunctionPointer(void, ChgEffectMod, (char mode), 0x6F3690);
+VoidFunc(DelE102Effect, 0x6F36B0);
 FunctionPointer(ObjectMaster*, CreateCaptureBeam, (float x, float y, float z, int ax, int ay, int az), 0x6F39C0);
 ObjectFunc(delete_capturebeam, 0x6F3A20);
 FunctionPointer(void, ChgCaptureMod, (ObjectMaster* tp, char mode), 0x6F3A40);
@@ -176,6 +179,8 @@ VoidFunc(JetLargeEggmoble1, 0x6F70F0);
 VoidFunc(JetMaxEggmoble1, 0x6F7100);
 FunctionPointer(void, ChangeSpeedEggmoble1, (float speed), 0x6F7110);
 FunctionPointer(void, CreateEggmoble1, (float x, float y, float z, int angx, int angy, int angz), 0x6F78A0);
+FunctionPointer(void, SetEggMissileParam, (ObjectMaster*, float), 0x6F8300);
+FunctionPointer(void, SetMissileEffect, (ObjectMaster*, char), 0x6F8320);
 FunctionPointer(ObjectMaster*, object_tr1_s_t1_body_s_t1_body, (), 0x6F89A0);
 FunctionPointer(ObjectMaster*, CSukiari_Create, (int color, NJS_POINT2* a2, int pointn), 0x6F8AB0);
 FunctionPointer(void, CSukiari_Alpha, (ObjectMaster* a1, unsigned char alpha, int frame), 0x6F8B40);
@@ -205,6 +210,7 @@ FunctionPointer(void, EV_CreateWaterRipple, (float x, float y, float z, float a4
 ObjectFunc(ptr_crashed, 0x6F9390);
 FunctionPointer(ObjectMaster*, EggViperDebrisGenerator, (float x, float y, float z, float sx,
 	float sy, float sz, __int16 a7), 0x6F9B40);
+FunctionPointer(ObjectMaster*, missilefunc, (), 0x6F8610);
 
 //Stuff that doesn't have an official name because it was part of the main event function in the 360 version:
 VoidFunc(ChangeTornado2Model_EV0047, 0x6BA0A0);
@@ -224,10 +230,7 @@ FunctionPointer(void, Chaos0_EnterDrain_EV0002, (signed int spd), 0x6E9AC0);
 FunctionPointer(void, initElemChaos0Task_EV0002, (float xPos, float yPos, float zPos, int yAng), 0x6E9D90);
 VoidFunc(p_SonicObj_initializer_EV000D, 0x6DF420);
 VoidFunc(p_SonicObj_EV000D, 0x6DF440);
-
-FunctionPointer(void, SetE102Effect, (double x, double y, double z), 0x6F3650);
-FunctionPointer(void, ChgEffectMod, (char mode), 0x6F3690);
-
 VoidFunc(CreateTaskGattaiEV004C, 0x6B5E40);
 VoidFunc(FreeTaskGattaiEV004C, 0x6B5EA0);
-VoidFunc(DelE102Effect, 0x6F36B0);
+VoidFunc(create_task_gattai_EV004D, 0x6B3250);
+VoidFunc(kill_task_gattai_EV004D, 0x6B32B0);

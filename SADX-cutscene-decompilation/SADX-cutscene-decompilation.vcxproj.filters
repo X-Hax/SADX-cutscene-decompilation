@@ -222,6 +222,12 @@
     <ClCompile Include="ev004C_t_escapecarrier.cpp">
       <Filter>Source Files\Tails</Filter>
     </ClCompile>
+    <ClCompile Include="ev004D_t_missile.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
+    <ClCompile Include="ev004E_t_speedhighway.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

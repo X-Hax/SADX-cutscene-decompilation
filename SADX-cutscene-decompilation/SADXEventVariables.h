@@ -363,6 +363,22 @@ DataPointer(EPATHTAG, epathtag_cube004c_14, 0x2BEAA58);
 DataPointer(EPATHTAG, epathtag_cube004c_22, 0x2BEC368);
 DataPointer(EPATHTAG, epathtag_cube004c_19, 0x2BEB6E0);
 
+//EV004D
+DataPointer(int, ssActNumber, 0x3B22DEC);
+DataPointer(NJS_POINT3, gSkyScale, 0x3ABDC94);
+DataPointer(NJS_ACTION, action_m_m0002_miles, 0x3C60034);
+DataPointer(EPATHTAG, epathtag_cube_006d_14, 0x2BE9A18);
+DataPointer(NJS_ACTION, action_a_a0011_amy, 0x3C84868);
+DataPointer(NJS_ACTION, action_m_m0139_miles, 0x3C85310);
+DataPointer(NJS_ACTION, action_m_m0140_miles, 0x3C85308);
+DataPointer(NJS_ACTION, action_gm_gm0029_eggmoble, 0x2CD46F4);
+DataPointer(NJS_ACTION, action_gm_gm0034_eggmoble, 0x321A55C);
+
+
+//EV004E
+DataPointer(PADREC_DATA_TAG, E004eT, 0x869F60);
+DataPointer(NJS_ACTION, action_m_m0141_miles, 0x3C85320);
+DataPointer(NJS_ACTION, action_m_m0142_miles, 0x3C85318);
 
 //EV0165
 DataPointer(NJS_ACTION, action_s_item_r0, 0x3C847E8);
@@ -433,6 +449,8 @@ DataArray(char**, msgTbl_ev0047, 0x2BECD00, 5);
 DataArray(char**, msgTbl_ev0048, 0x2BECC28, 5);
 DataArray(char**, msgTbl_ev004B, 0x2BEC49C, 5);
 DataArray(char**, msgTbl_ev004C, 0x2BE9B40, 5);
+DataArray(char**, msgTbl_ev004D, 0x2BE93A4, 5);
+DataArray(char**, msgTbl_ev004E, 0x2BE929C, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);
