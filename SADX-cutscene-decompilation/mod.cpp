@@ -67,6 +67,9 @@ extern "C"
 		CutsceneDataList_[0x0051]->Function = ev0051_t_walkerdefeated;
 		CutsceneDataList_[0x0052]->Function = ev0052_t_outro;
 		CutsceneDataList_[0x0053]->Function = ev0053_t_fmvplaceholder;
+		CutsceneDataList_[0x0054]->Function = ev0054_t_eclanding;
+		CutsceneDataList_[0x0055]->Function = ev0055_t_sandhill;
+		CutsceneDataList_[0x0056]->Function = ev0056_t_casinowake;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;
@@ -74,12 +77,21 @@ extern "C"
 		CutsceneDataList_[0x0104]->Function = ev0104_s_afterskydeck;
 		CutsceneDataList_[0x0106]->Function = ev0106_s_originalshape;
 		CutsceneDataList_[0x0107]->Function = ev0107_s_alertcancelled;
+		CutsceneDataList_[0x0110]->Function = ev0110_t_ecafterlanding;
+		CutsceneDataList_[0x0111]->Function = ev0111_t_ecfools;
+		CutsceneDataList_[0x0112]->Function = ev0112_t_ecaftertransforming;
+		CutsceneDataList_[0x0113]->Function = ev0113_t_skydeck;
+		CutsceneDataList_[0x0114]->Function = ev0114_t_afterskydeck;
 		CutsceneDataList_[0x0165]->Function = ev0165_s_crystalring;
 		CutsceneDataList_[0x0166]->Function = ev0166_s_lightshoes;
 		CutsceneDataList_[0x0167]->Function = ev0167_s_ancientlight;
+		CutsceneDataList_[0x0168]->Function = ev0168_t_jetanklet;
+		CutsceneDataList_[0x0169]->Function = ev0169_t_rhythmbadge;
 		CutsceneDataList_[0x0176]->Function = ev0176_s_icestone;
+		CutsceneDataList_[0x0177]->Function = ev0177_t_icestone;
 		CutsceneDataList_[0x0179]->Function = ev0179_s_idcard;
 		CutsceneDataList_[0x017A]->Function = ev017A_s_angelislandwall;
+		CutsceneDataList_[0x017B]->Function = ev017B_t_angelislandwall;
 		CutsceneDataList_[0x0180]->Function = ev0180_s_redmountainintro;
 
 		//60 FPS faces
