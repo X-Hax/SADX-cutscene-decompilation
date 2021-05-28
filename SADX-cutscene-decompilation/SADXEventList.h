@@ -57,6 +57,7 @@ void ev004E_t_speedhighway(int state);
 void ev0050_t_eggwalker(int state);
 void ev0051_t_walkerdefeated(int state);
 void ev0052_t_outro(int state);
+void ev0053_t_fmvplaceholder(int state);
 void ev0100_s_ecafterlanding(int state);
 void ev0101_s_ecfools(int state);
 void ev0102_s_ecaftertransforming(int state);

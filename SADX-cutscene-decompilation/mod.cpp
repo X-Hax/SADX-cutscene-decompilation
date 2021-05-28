@@ -66,6 +66,7 @@ extern "C"
 		CutsceneDataList_[0x0050]->Function = ev0050_t_eggwalker;
 		CutsceneDataList_[0x0051]->Function = ev0051_t_walkerdefeated;
 		CutsceneDataList_[0x0052]->Function = ev0052_t_outro;
+		CutsceneDataList_[0x0053]->Function = ev0053_t_fmvplaceholder;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;
