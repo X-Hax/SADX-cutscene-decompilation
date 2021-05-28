@@ -105,7 +105,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_MovePoint2(sonic, -541.84998f, 3.53f, 945.20001f, 1.7f, 1.0f);
 		EV_CameraAng(1, 25, 10196, 43008, 0);
 		EV_SerifPlay(668);
-		EV_Msg(msgTbl_ev0035[TextLanguage][0]);
+		EV_Msg(msgTbl_ev0035[TextLanguage][0]); //"\aWhat's that?"
 		EV_SetPos(emerald, -575.34998f, 15.0f, 951.70001f);
 		EV_Wait(1);
 		EV_SetAction(emerald, &action_ce_0001_m_em_white, &M_EM_WHITE_TEXLIST, 1.0f, 0, 0);
@@ -140,7 +140,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_ClrFace(player);
 		EV_SetFace(player, "CE");
 		EV_SerifPlay(670);
-		EV_Msg(msgTbl_ev0035[TextLanguage][1]);
+		EV_Msg(msgTbl_ev0035[TextLanguage][1]); //"\aThe Chaos Emerald!"
 		eggmoble_turn(0, -29696, 0, 1, 0);
 		EV_Wait(10);
 		EV_ClrAction(player);
@@ -164,11 +164,11 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_Wait(16);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m9001_miles, &MILES_TEXLIST, 1.0f, 0, 8);
-		EV_Msg(msgTbl_ev0035[TextLanguage][2]);
+		EV_Msg(msgTbl_ev0035[TextLanguage][2]); //"\aGet away from there!"
 		EV_SetAction(player, &action_m_m9002_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SerifPlay(671);
 		EV_LookFree(player);
-		EV_Msg(msgTbl_ev0035[TextLanguage][3]);
+		EV_Msg(msgTbl_ev0035[TextLanguage][3]); //"\aAaaaahh!"
 		EV_Wait(5);
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, &action_s_s0052_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
@@ -200,7 +200,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EventSe_Play(0, 1333, 1800);
 		EventSe_Volume(0, -40, 1);
 		EV_SerifPlay(672);
-		EV_Msg(msgTbl_ev0035[TextLanguage][4]);
+		EV_Msg(msgTbl_ev0035[TextLanguage][4]); //"\aBonne nuit... Hi hi hi hi!"
 		EventSe_Volume(0, 0, 25);
 		EV_Wait(25);
 		ChgEggMobleSMod(1);
@@ -217,7 +217,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_ClrFace(player);
 		EV_SerifPlay(673);
 		EV_SetFace(player, "AADEVVVVVVVVVVVVVVVVVVVV");
-		EV_Msg(msgTbl_ev0035[TextLanguage][5]);
+		EV_Msg(msgTbl_ev0035[TextLanguage][5]); //"\aRobotnik..."
 		EV_Wait(15);
 		WHITE = COverlayCreate(0.016666668f, 0.1f, 1.0f, 1.0f, 1.0f);
 		EV_MsgClose();

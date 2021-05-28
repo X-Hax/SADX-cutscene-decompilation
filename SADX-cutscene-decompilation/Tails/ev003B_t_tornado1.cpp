@@ -39,7 +39,7 @@ void ev003B_t_tornado1(int state)
 		EV_LookObject(player, sonic, 0.0f, 4.0f, 0.0f);
 		EV_SetFace(player, "EDC");
 		EV_SerifPlay(713);
-		EV_Msg(msgTbl_ev003B[TextLanguage][0]);
+		EV_Msg(msgTbl_ev003B[TextLanguage][0]); //"\aSonic, wait here for a second..."
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_MsgClose();
@@ -97,7 +97,7 @@ void ev003B_t_tornado1(int state)
 		EV_Wait(1);
 		EV_SerifPlay(714);
 		EventSe_Volume(2, -100, 100);
-		EV_MsgW(60, msgTbl_ev003B[TextLanguage][1]);
+		EV_MsgW(60, msgTbl_ev003B[TextLanguage][1]); //"\aSonic!  Hop in!"
 		EV_Wait(60);
 		EV_MsgCls();
 		EV_ClrAction(sonic);
@@ -107,7 +107,7 @@ void ev003B_t_tornado1(int state)
 		EV_SetPos(sonic, 1395.04f, 221.55f, 700.56f);
 		EV_Wait(30);
 		EV_SerifPlay(715);
-		EV_MsgW(60, msgTbl_ev003B[TextLanguage][2]);
+		EV_MsgW(60, msgTbl_ev003B[TextLanguage][2]); //"\aLet's go!"
 		EV_SetPos(sonic, 1395.04f, 221.55f, 700.56f);
 		EV_SetAng(sonic, 0, 0, 0);
 		EV_CameraPos(1, 0, 1556.4399f, 224.11f, 841.84003f);

@@ -34,7 +34,7 @@ void ev0045_t_tikal(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, MILES_ACTIONS[47], &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SerifPlay(732);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][0]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][0]); //"\tThe servers are \nthe 7 Chaos Emerald"...
 		EV_Wait(100);
 		EV_ClrAction(player);
 		EV_Wait(10);
@@ -66,7 +66,7 @@ void ev0045_t_tikal(int state)
 			EV_SetFace(tikal, "BAAGAG");
 		}
 		EV_SerifPlay(733);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][1]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][1]); //"\aHello there, friend. \nHow are you?"
 		EV_Wait(30);
 		EV_WaitAction(tikal);
 		EV_CameraPos(1, 0, -28.030001f, 3.1500001f, 524.96997f);
@@ -80,22 +80,22 @@ void ev0045_t_tikal(int state)
 		}
 		EV_SetFace(player, "EBBD");
 		EV_SerifPlay(734);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][2]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][2]); //"\aUmm... What were you saying\nbefore?"
 		EV_Wait(20);
 		EV_SerifPlay(735);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][3]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][3]); //"\aHuh?"
 		EV_Wait(20);
 		EV_CameraPos(1, 0, -25.15f, 5.1599998f, 560.33002f);
 		EV_CameraAng(1, 0, 64256, 63761, 0);
 		EV_CameraPos(1, 330, -45.09f, 4.1900001f, 543.34003f);
 		EV_CameraAng(1, 330, 64256, 54033, 0);
 		EV_SerifPlay(736);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][4]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][4]); //"\aIt's something \nmy grandmother taugh"...
 		EV_Wait(100);
 		EV_MsgClose();
 		EV_Wait(20);
 		EV_SerifPlay(737);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][5]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][5]); //"\aI'm never to forget it.   \nIt goes l"...
 		EV_Wait(60);
 		EV_ClrFace(tikal);
 		if (!VoiceLanguage)
@@ -110,7 +110,7 @@ void ev0045_t_tikal(int state)
 		EV_SetAction(tikal, &action_j_j0013_tikal, &TIKAL_TEXLIST, 0.1f, 0, 8);
 		EV_Wait(50);
 		EV_SerifPlay(738);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][6]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][6]); //"\t'The servers are the 7 Chaos.'"
 		if (VoiceLanguage == 1)
 		{
 			EV_SetFace(tikal, "EDELDC");
@@ -122,7 +122,7 @@ void ev0045_t_tikal(int state)
 		}
 		EV_Wait(20);
 		EV_SerifPlay(739);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][7]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][7]); //"\t'Chaos is power... \n\tPower enriched"...
 		EV_CameraPos(1, 0, -28.360001f, 6.0f, 529.10999f);
 		EV_CameraAng(1, 0, 256, 32785, 0);
 		EV_CameraPos(1, 150, -28.360001f, 5.9400001f, 527.10999f);
@@ -144,14 +144,14 @@ void ev0045_t_tikal(int state)
 		EV_ClrAction(tikal);
 		EV_SetAction(tikal, &action_j_j0015_tikal, &TIKAL_TEXLIST, 0.1f, 0, 8);
 		EV_SerifPlay(740);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][8]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][8]); //"\t'The controller is the one \n\tthat u"...
 		EV_Wait(140);
 		EV_CameraPos(1, 0, -118.87f, 72.919998f, 494.91f);
 		EV_CameraAng(1, 0, 59904, 48145, 0);
 		EV_CameraPos(1, 200, -120.51f, 72.919998f, 511.82999f);
 		EV_CameraAng(1, 200, 59904, 48145, 0);
 		EV_SerifPlay(741);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][9]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][9]); //"\aBut I'm still not sure \nwhat it all "...
 		EV_ClrFace(tikal);
 		if (!VoiceLanguage)
 		{
@@ -167,7 +167,7 @@ void ev0045_t_tikal(int state)
 		EV_CameraPos(1, 100, 20.280001f, 4.1900001f, 469.35999f);
 		EV_CameraAng(1, 100, 512, 28689, 0);
 		EV_SerifPlay(742);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][10]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][10]); //"\aBut the number 7..."
 		EV_ClrFace(tikal);
 		EV_SetFace(tikal, "DC");
 		EV_Wait(100);
@@ -183,7 +183,7 @@ void ev0045_t_tikal(int state)
 			EV_SetFace(tikal, "CC");
 		}
 		EV_SerifPlay(743);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][11]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][11]); //"\aIs the same as the number of\nEmerald"...
 		EV_Wait(80);
 		EV_CameraPos(1, 0, -28.290001f, 5.9000001f, 528.70001f);
 		EV_CameraAng(1, 0, 768, 33809, 0);
@@ -192,17 +192,17 @@ void ev0045_t_tikal(int state)
 		EV_ClrFace(player);
 		EV_SetFace(player, "D");
 		EV_SerifPlay(744);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][12]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][12]); //"\aEmeralds?"
 		EV_Wait(40);
 		EV_CameraPos(1, 0, -27.459999f, 5.98f, 553.15002f);
 		EV_CameraAng(1, 0, 512, 62993, 0);
 		EV_CameraPos(1, 150, -21.559999f, 5.98f, 554.15997f);
 		EV_CameraAng(1, 150, 512, 65041, 0);
 		EV_SerifPlay(745);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][13]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][13]); //"\aForgive me, but I don't think\nwe've "...
 		EV_Wait(40);
 		EV_SerifPlay(746);
-		EV_MsgW(0, msgTbl_ev0045[TextLanguage][14]);
+		EV_MsgW(0, msgTbl_ev0045[TextLanguage][14]); //"\aI'm Tikal...   And you are?"
 		EV_Wait(30);
 		EV_CameraPos(1, 0, 13.88f, 5.5799999f, 487.60001f);
 		EV_CameraAng(1, 0, 1024, 60945, 0);

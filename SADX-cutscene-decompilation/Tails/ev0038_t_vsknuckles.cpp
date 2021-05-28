@@ -57,7 +57,7 @@ void ev0038_t_vsknuckles(int state)
 			EV_CameraAng(0, 0, 630, 63792, 0);
 			EV_CameraPos(0, 45, 83.529999f, 78.730003f, 264.29001f);
 			EV_SerifPlay(679);
-			EV_MsgW(45, msgTbl_ev0038[TextLanguage][0]);
+			EV_MsgW(45, msgTbl_ev0038[TextLanguage][0]); //"\aHey, Knuckles.   What's up?"
 			EV_MsgClose();
 			EV_CameraPos(0, 120, 83.519997f, 79.730003f, 264.35001f);
 			EV_Wait(20);
@@ -137,7 +137,7 @@ void ev0038_t_vsknuckles(int state)
 				EV_SetFace(player, "DE");
 			}
 			EV_SerifPlay(680);
-			EV_MsgW(45, msgTbl_ev0038[TextLanguage][1]);
+			EV_MsgW(45, msgTbl_ev0038[TextLanguage][1]); //"\aWhat are you doin', \nKnuckles?"
 			EV_MsgClose();
 			EV_ClrFace(player);
 			EV_CameraPos(0, 0, 24.1f, 80.57f, 345.95001f);
@@ -149,13 +149,13 @@ void ev0038_t_vsknuckles(int state)
 			EV_SetAction(knuckles, &action_k_k0013_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 			EV_SetFace(knuckles, "FCDE");
 			EV_SerifPlay(681);
-			EV_MsgW(60, msgTbl_ev0038[TextLanguage][2]);
+			EV_MsgW(60, msgTbl_ev0038[TextLanguage][2]); //"\aDon't mess with me, now."
 			EV_ClrFace(knuckles);
 			throughplayer_off(player);
 			throughplayer_off(knuckles);
 			EV_SetFace(knuckles, "EFCD");
 			EV_SerifPlay(682);
-			EV_MsgW(90, msgTbl_ev0038[TextLanguage][3]);
+			EV_MsgW(90, msgTbl_ev0038[TextLanguage][3]); //"\aJust hand over the Emeralds\nyou have"...
 			EV_ClrFace(knuckles);
 			EV_MsgClose();
 			EV_Wait(30);
@@ -164,7 +164,7 @@ void ev0038_t_vsknuckles(int state)
 			EV_CameraPos(0, 180, 48.919998f, 79.550003f, 259.81f);
 			EV_SerifPlay(683);
 			EV_SetFace(player, "FFF");
-			EV_MsgW(50, msgTbl_ev0038[TextLanguage][4]);
+			EV_MsgW(50, msgTbl_ev0038[TextLanguage][4]); //"\aNo way, Knuckles!"
 			EV_ClrFace(player);
 			EV_MsgClose();
 			EV_Wait(40);
