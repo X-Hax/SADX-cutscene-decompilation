@@ -92,9 +92,9 @@ void ev004D_t_missile(int state)
 		EV_Wait(10);
 		EV_SetPos(obj_ver2_wing, -90.0f, 55.0f, 1520.5f);
 		EV_SetAng(obj_ver2_wing,
-			amy->Data1->Position.x - 768.0f,
-			amy->Data1->Position.y - 28672.0f,
-			amy->Data1->Position.z);
+			(int)(amy->Data1->Position.x - 768.0f),
+			(int)(amy->Data1->Position.y - 28672.0f),
+			(int)(amy->Data1->Position.z));
 		EV_SetMode(obj_ver2_wing, 0);
 		EV_SetAction(obj_ver2_wing, &action_w_w9001_wing, &VER2_WING_TEXLIST, 1.0f, 1, 0);
 		moveObject(obj_ver2_wing, -90.0f, 54.0f, 1512.5f,
@@ -116,9 +116,9 @@ void ev004D_t_missile(int state)
 			amy->Data1->Position.y + 4.5f,
 			amy->Data1->Position.z + 5.4000001f);
 		EV_SetAng(obj_ver2_wing,
-			amy->Data1->Position.x,
-			amy->Data1->Position.y + 10496.0f,
-			amy->Data1->Position.z);
+			(int)(amy->Data1->Position.x),
+			(int)(amy->Data1->Position.y + 10496.0f),
+			(int)(amy->Data1->Position.z));
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m0109_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 0);
@@ -170,9 +170,9 @@ void ev004D_t_missile(int state)
 			amy->Data1->Position.y + 5.0f,
 			amy->Data1->Position.z + 4.5f);
 		EV_SetAng(obj_ver2_wing,
-			amy->Data1->Position.x,
-			amy->Data1->Position.y + 10240.0f,
-			amy->Data1->Position.z);
+			(int)(amy->Data1->Position.x),
+			(int)(amy->Data1->Position.y + 10240.0f),
+			(int)(amy->Data1->Position.z));
 		EV_Wait(1);
 		EV_CameraPos(1, 0, -73.669998f, 5.9499998f, 1498.6f);
 		EV_CameraAng(1, 0, 327, 10247, 0);
@@ -188,9 +188,9 @@ void ev004D_t_missile(int state)
 			amy->Data1->Position.y + 4.5f,
 			amy->Data1->Position.z + 6.5f);	
 		EV_SetAng(obj_ver2_wing,
-			amy->Data1->Position.x,
-			amy->Data1->Position.y + 12288.0f,
-			amy->Data1->Position.z);
+			(int)(amy->Data1->Position.x),
+			(int)(amy->Data1->Position.y + 12288.0f),
+			(int)(amy->Data1->Position.z));
 		EV_CameraPos(1, 0, -102.8f, 14.7f, 1508.2f);
 		EV_CameraAng(1, 0, 64327, 56279, 0);
 		EV_CameraPos(0, 50, -100.17f, 8.6999998f, 1512.2f);

@@ -150,6 +150,9 @@
     <ClCompile Include="ev004C_t_escapecarrier.cpp" />
     <ClCompile Include="ev004D_t_missile.cpp" />
     <ClCompile Include="ev004E_t_speedhighway.cpp" />
+    <ClCompile Include="ev0050_t_eggwalker.cpp" />
+    <ClCompile Include="ev0051_t_walkerdefeated.cpp" />
+    <ClCompile Include="ev0052_t_outro.cpp" />
     <ClCompile Include="Tails\ev0034_t_chaos1.cpp" />
     <ClCompile Include="Tails\ev0033_t_egghornet.cpp" />
     <ClCompile Include="Tails\ev0032_t_meetingsonic.cpp" />

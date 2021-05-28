@@ -344,7 +344,7 @@ void ev004C_t_escapecarrier(int state)
 		EV_SetPath(player, &epathtag_cube004c_14, 0.60000002f, 2);
 		EV_SetPath(player, &epathtag_cube004c_22, 2.0f, 2);
 		EV_Wait(40);
-		EV_SetAction(player, &ev_motion_m_m0002_miles, &MILES_TEXLIST, 1.0f, 1, 0); //This was originally an EV_SetMotion but there doesn't seem to be a difference as a SetAction.
+		EV_SetMotion(player, MILES_OBJECTS[1], ev_motion_m_m0002_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(amy, &action_a_a0014_amy, &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(6);
 		playertwp[0]->Object.SByte[3] |= 4u; //Change Tails' tails.

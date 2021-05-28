@@ -70,7 +70,7 @@ void ev0026_s_outro(int state)
 		EV_SetMode(tails, 0);
 		EV_SetPath(tails, &epathtag_cube0026_t1, 1.0f, 0);
 		EV_ClrAction(tails);
-		EV_SetMotion(tails, MILES_OBJECTS[1], action_m_m9014_miles, &MILES_TEXLIST, 1.0f, 1, 0);
+		EV_SetMotion(tails, MILES_OBJECTS[1], motion_m_m9014_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAng(player, 0, 2048, 0);
 		EV_CameraAng(1, 0, 2192, 47840, 65280);
 		EV_CameraPos(1, 0, 324.70001f, 206.3f, 683.57001f);
@@ -94,7 +94,7 @@ void ev0026_s_outro(int state)
 		EV_CameraPos(0, 30, 290.17001f, 195.27f, 704.46997f);
 		EV_Wait(30);
 		EV_ClrAction(tails);
-		EV_SetMotion(tails, MILES_OBJECTS[1], action_m_m0150_miles, &MILES_TEXLIST, 1.0f, 1, 0);
+		EV_SetMotion(tails, MILES_OBJECTS[1], motion_m_m0150_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAng(tails, 0, 38400, 0);
 		moveObject(tails, 358.70001f, 219.0f, 704.40002f, 154.0f, 219.0f, 548.59998f, 200);
 		EV_CameraPos(0, 0, 217.57001f, 11.2f, 667.90002f);
@@ -108,7 +108,7 @@ void ev0026_s_outro(int state)
 		EV_ClrAction(player);
 		EV_ClrAction(tails);
 		EV_SetAction(player, SONIC_ACTIONS[6], &SONIC_TEXLIST, 2.0f, 1, 8);
-		EV_SetMotion(tails, MILES_OBJECTS[1], action_m_m0150_miles, &MILES_TEXLIST, 1.0f, 1, 8);
+		EV_SetMotion(tails, MILES_OBJECTS[1], motion_m_m0150_miles, &MILES_TEXLIST, 1.0f, 1, 8);
 		EV_LookObject(player, tails, 0.0f, 0.0f, 0.0f);
 		EV_SetMode(tails, 0);
 		EV_SetMode(player, 3);
@@ -162,7 +162,7 @@ void ev0026_s_outro(int state)
 		EV_CameraPos(0, 22, 563.073f, -2.0699999f, 532.08752f);
 		EV_CameraAng(0, 22, 1890, 46011, 1024);
 		EV_Wait(22);
-		EV_SetMotion(tails, MILES_OBJECTS[1], action_m_m0150_miles, &MILES_TEXLIST, 1.5f, 1, 8);
+		EV_SetMotion(tails, MILES_OBJECTS[1], motion_m_m0150_miles, &MILES_TEXLIST, 1.5f, 1, 8);
 		EV_LookFree(player);
 		EV_CameraPos(0, 13, 545.32397f, 8.1599998f, 521.83551f);
 		EV_CameraAng(0, 13, 65378, 44475, 256);

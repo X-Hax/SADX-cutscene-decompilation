@@ -228,6 +228,15 @@
     <ClCompile Include="ev004E_t_speedhighway.cpp">
       <Filter>Source Files\Tails</Filter>
     </ClCompile>
+    <ClCompile Include="ev0050_t_eggwalker.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0051_t_walkerdefeated.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
+    <ClCompile Include="ev0052_t_outro.cpp">
+      <Filter>Source Files\Tails</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
