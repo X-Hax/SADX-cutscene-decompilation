@@ -162,6 +162,10 @@
     <ClCompile Include="ev0112_t_ecaftertransforming.cpp" />
     <ClCompile Include="ev0113_t_skydeck.cpp" />
     <ClCompile Include="ev0114_t_afterskydeck.cpp" />
+    <ClCompile Include="ev0168_t_jetanklet.cpp" />
+    <ClCompile Include="ev0169_t_rhythmbadge.cpp" />
+    <ClCompile Include="ev0177_t_icestone.cpp" />
+    <ClCompile Include="ev017B_t_angelislandwall.cpp" />
     <ClCompile Include="Tails\ev0034_t_chaos1.cpp" />
     <ClCompile Include="Tails\ev0033_t_egghornet.cpp" />
     <ClCompile Include="Tails\ev0032_t_meetingsonic.cpp" />
