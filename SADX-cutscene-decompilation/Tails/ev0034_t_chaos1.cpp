@@ -5,23 +5,9 @@
 
 void ev0034_t_chaos1(int state)
 {
-	ObjectMaster* C_EME_P = 0;
-	ObjectMaster* FLUSH = 0;
-	ObjectMaster* BROKEN_EGG = 0;
-	ObjectMaster* BROKEN_EGG2 = 0;
-	ObjectMaster* BROKEN_EGG4 = 0;
-	ObjectMaster* HAND_1 = 0;
-	ObjectMaster* HAND_2 = 0;
-	ObjectMaster* HAND_3 = 0;
-	ObjectMaster* suki1_point = 0;
-	ObjectMaster* suki2_point = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-	ObjectMaster* eggmoble = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -118,10 +104,14 @@ void ev0034_t_chaos1(int state)
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_MsgClose();
-		FreeTask(BROKEN_EGG);
-		BROKEN_EGG = 0;
-		FreeTask(BROKEN_EGG4);
-		BROKEN_EGG4 = 0;
+		if(BROKEN_EGG){
+			FreeTask(BROKEN_EGG);
+			BROKEN_EGG = 0;
+		}
+		if(BROKEN_EGG4){
+			FreeTask(BROKEN_EGG4);
+			BROKEN_EGG4 = 0;
+		}
 		EV_SetPos(player, 983.79999f, 126.5f, 848.70001f);
 		EV_SetAng(player, 24, 34640, 62);
 		EV_SetPos(sonic, 981.0f, 126.4f, 868.79999f);
@@ -150,10 +140,14 @@ void ev0034_t_chaos1(int state)
 		CSukiari_Alpha(suki1_point, 0, 16);
 		CSukiari_Alpha(suki2_point, 0, 16);
 		EV_Wait(14);
-		FreeTask(suki1_point);
-		suki1_point = 0;
-		FreeTask(suki2_point);
-		suki2_point = 0;
+		if(suki1_point){
+			FreeTask(suki1_point);
+			suki1_point = 0;
+		}
+		if(suki2_point){
+			FreeTask(suki2_point);
+			suki2_point = 0;
+		}
 		BGM_Play(MusicIDs_eggman);
 		EV_Wait(20);
 		EventSe_Play(1, 1334, 1800);
@@ -256,10 +250,14 @@ void ev0034_t_chaos1(int state)
 		EV_MsgClose();
 		stopObject(C_EME_P);
 		EV_SetAction(C_EME_P, &action_gm_gm0023cp_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.08f, 1, 0);
-		FreeTask(HAND_1);
-		HAND_1 = 0;
-		FreeTask(HAND_2);
-		HAND_2 = 0;
+		if(HAND_1){
+			FreeTask(HAND_1);
+			HAND_1 = 0;
+		}
+		if(HAND_2){
+			FreeTask(HAND_2);
+			HAND_2 = 0;
+		}
 		EV_SetPos(HAND_3, 1055.24f, 144.058f, 886.63f);
 		EV_SetAng(HAND_3, 0, 20480, 0x8000);
 		moveObjectAngle2(
@@ -295,8 +293,10 @@ void ev0034_t_chaos1(int state)
 		EV_Wait(30);
 		EventSe_Oneshot(1336, 128, 0, 0);
 		EV_Wait(100);
-		FreeTask(HAND_3);
-		HAND_3 = 0;
+		if(HAND_3){
+			FreeTask(HAND_3);
+			HAND_3 = 0;
+		}
 		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
 		EventSe_Stop(1);
 		EV_CameraPos(0, 0, 1046.23f, 143.45f, 881.0f);
@@ -383,7 +383,7 @@ void ev0034_t_chaos1(int state)
 		EventSe_Stop(2);
 		ToWaterChaos0();
 		EventSe_Oneshot(1338, 125, 0, 0);
-		FLUSH = COverlayCreate(0.039999999f, 0.039999999f, 1.0f, 0.85000002f, 1.0f);
+		FLASH = COverlayCreate(0.039999999f, 0.039999999f, 1.0f, 0.85000002f, 1.0f);
 		EV_Wait(16);
 		DeleteChaos0();
 		CreateChaos1(1050.0f, 126.3f, 857.79999f, 0, 2048, 0, 80);
@@ -401,10 +401,12 @@ void ev0034_t_chaos1(int state)
 		EventSe_Volume(2, -20, 1);
 		EV_Wait(30);
 		crushLightOff();
-		COverlaySetSpeed(FLUSH, -0.02f);
+		COverlaySetSpeed(FLASH, -0.02f);
 		EV_Wait(110);
-		FreeTask(FLUSH);
-		FLUSH = 0;
+		if(FLASH){
+			FreeTask(FLASH);
+			FLASH = 0;
+		}
 		EV_SetAction(eggmoble, &action_gm_gm0025_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 0, 8);
 		EV_SetAction(eggmoble, &action_gm_gm0021_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.2f, 1, 8);
 		EV_CameraPos(1, 0, 1042.9f, 144.60001f, 880.84003f);
@@ -486,7 +488,7 @@ void ev0034_t_chaos1(int state)
 		EV_CameraPos(1, 30, 972.59998f, 132.7f, 873.09998f);
 		crushLightOn(1030.2f, 130.86f, 873.79999f, 4, 6, 0.80000001f, 2.5f, -106, 16777170);
 		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.89999998f, 1, 0);
-		FLUSH = COverlayCreate(0.1f, 0.050000001f, 1.0f, 1.0f, 0.89999998f);
+		FLASH = COverlayCreate(0.1f, 0.050000001f, 1.0f, 1.0f, 0.89999998f);
 		EV_Wait(5);
 		EventSe_Oneshot(1339, 120, 0, 0);
 		EV_Wait(30);
@@ -496,10 +498,12 @@ void ev0034_t_chaos1(int state)
 		EV_Wait(50);
 		delete_eggmoble();
 		DeleteChaos1();
-		COverlaySetSpeed(FLUSH, -0.039999999f);
+		COverlaySetSpeed(FLASH, -0.039999999f);
 		EV_Wait(50);
-		FreeTask(FLUSH);
-		FLUSH = 0;
+		if(FLASH){
+			FreeTask(FLASH);
+			FLASH = 0;
+		}
 		EV_Wait(10);
 		EventSe_Stop(2);
 		EV_CameraPos(1, 0, 970.59998f, 155.39999f, 855.59998f);
@@ -581,25 +585,43 @@ void ev0034_t_chaos1(int state)
 		DeleteChaos0();
 		DeleteChaos1();
 		crushLightOff();
-		FreeTask(FLUSH);
-		FLUSH = 0;
-		FreeTask(BROKEN_EGG);
-		BROKEN_EGG = 0;
-		FreeTask(BROKEN_EGG2);
-		BROKEN_EGG2 = 0;
-		FreeTask(BROKEN_EGG4);
-		BROKEN_EGG4 = 0;
-		FreeTask(HAND_1);
-		HAND_1 = 0;
-		FreeTask(HAND_2);
-		HAND_2 = 0;
-		FreeTask(HAND_3);
-		HAND_3 = 0;
+		if(FLASH){
+			FreeTask(FLASH);
+			FLASH = 0;
+		}
+		if(BROKEN_EGG){
+			FreeTask(BROKEN_EGG);
+			BROKEN_EGG = 0;
+		}
+		if(BROKEN_EGG2){
+			FreeTask(BROKEN_EGG2);
+			BROKEN_EGG2 = 0;
+		}
+		if(BROKEN_EGG4){
+			FreeTask(BROKEN_EGG4);
+			BROKEN_EGG4 = 0;
+		}
+		if(HAND_1){
+			FreeTask(HAND_1);
+			HAND_1 = 0;
+		}
+		if(HAND_2){
+			FreeTask(HAND_2);
+			HAND_2 = 0;
+		}
+		if(HAND_3){
+			FreeTask(HAND_3);
+			HAND_3 = 0;
+		}
 		EV_SerifStop();
-		FreeTask(suki1_point);
-		suki1_point = 0;
-		FreeTask(suki2_point);
-		suki2_point = 0;
+		if(suki1_point){
+			FreeTask(suki1_point);
+			suki1_point = 0;
+		}
+		if(suki2_point){
+			FreeTask(suki2_point);
+			suki2_point = 0;
+		}
 		break;
 	}
 }

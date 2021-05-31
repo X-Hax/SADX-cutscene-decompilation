@@ -5,31 +5,11 @@
 
 void ev0001_s_intro(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* PAT_01 = 0;
-	ObjectMaster* PAT_02 = 0;
-	ObjectMaster* PAT_03 = 0;
-	ObjectMaster* PAT_04 = 0;
-	ObjectMaster* HELI_01 = 0;
-	ObjectMaster* SONIC_SKY_2 = 0;
-	ObjectMaster* SONIC_02SKY = 0;
-	ObjectMaster* NY_SKY = 0;
-	ObjectMaster* BALL_0 = 0;
-	ObjectMaster* B_OUT_13 = 0;
-	ObjectMaster* OYAJI_A = 0;
-	ObjectMaster* OYAJI_B = 0;
-	ObjectMaster* OYAJI_C = 0;
-	ObjectMaster* FAT_A = 0;
-	ObjectMaster* FAT_B_0 = 0;
-	ObjectMaster* LADY_A = 0;
-	ObjectMaster* LADY_B = 0;
-	ObjectMaster* LADY_C = 0;
-	ObjectMaster* BOYS_A = 0;
-
 	float fps = 1.0f; //testing for 60 FPS scenes
 
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -47,11 +27,11 @@ void ev0001_s_intro(int state)
 		EV_CreateObject(&HELI_01, 508.59f, 50.0f, 727.0f, 0, 0x8000, 0);
 		NY_SKY = CIchimaie2_Create(&ICM0001_3_TEXLIST, 0);
 		CIchimaie2_SetPriority(NY_SKY, -69.0f);
-		BALL_0 = CTikalLight_Create(536.63f, 30.0f, 718.0f);
+		BALL = CTikalLight_Create(536.63f, 30.0f, 718.0f);
 		EV_CreateObject(&OYAJI_A, 131.44f, 9.8000002f, 1503.5699f, 0, 14447, 0);
 		EV_CreateObject(&FAT_A, 32.360001f, 8.3000002f, 1504.04f, 0, 80100, 0);
 		EV_CreateObject(&BOYS_A, 19.67f, 5.6599998f, 1502.95f, 0, 18419, 0);
-		EV_CreateObject(&FAT_B_0, 580.54999f, 8.3000002f, 1063.28f, 0, 92921, 0);
+		EV_CreateObject(&FAT_B, 580.54999f, 8.3000002f, 1063.28f, 0, 92921, 0);
 		EV_CreateObject(&LADY_A, 330.06f, 10.85f, 1058.5699f, 0, 3608, 0);
 		EV_CreateObject(&OYAJI_B, 377.54001f, 9.8000002f, 1158.5699f, 0, 38243, 0);
 		EV_CreateObject(&LADY_B, 197.89f, 10.85f, 1152.89f, 0, 17867, 0);
@@ -65,7 +45,7 @@ void ev0001_s_intro(int state)
 		EV_SetMode(PAT_03, 0);
 		EV_SetMode(PAT_04, 0);
 		EV_SetMode(HELI_01, 0);
-		EV_SetMode(BALL_0, 0);
+		EV_SetMode(BALL, 0);
 		EV_SetPos(PAT_01, 508.59f, 0.0f, 727.0f);
 		EV_SetAng(PAT_01, 0, 0x8000, 0);
 		EV_SetPos(PAT_02, 536.63f, 0.0f, 718.0f);
@@ -90,9 +70,9 @@ void ev0001_s_intro(int state)
 		EV_SetMode(BOYS_A, 0);
 		EV_ClrAction(BOYS_A);
 		EV_SetMotion(BOYS_A, MODEL_SS_PEOPLE_OBJECTS[17], MODEL_SS_PEOPLE_MOTION[25], ADV00_TEXLISTS[6], 0.5f / fps, 1, 0);
-		EV_SetMode(FAT_B_0, 0);
-		EV_ClrAction(FAT_B_0);
-		EV_SetMotion(FAT_B_0, MODEL_SS_PEOPLE_OBJECTS[13], MODEL_SS_PEOPLE_MOTION[20], ADV00_TEXLISTS[6], 0.5f / fps, 1, 0);
+		EV_SetMode(FAT_B, 0);
+		EV_ClrAction(FAT_B);
+		EV_SetMotion(FAT_B, MODEL_SS_PEOPLE_OBJECTS[13], MODEL_SS_PEOPLE_MOTION[20], ADV00_TEXLISTS[6], 0.5f / fps, 1, 0);
 		EV_SetMode(LADY_A, 0);
 		EV_ClrAction(LADY_A);
 		EV_SetMotion(LADY_A, MODEL_SS_PEOPLE_OBJECTS[7], MODEL_SS_PEOPLE_MOTION[5], ADV00_TEXLISTS[6], 0.5f / fps, 1, 0);
@@ -112,7 +92,7 @@ void ev0001_s_intro(int state)
 		EV_SetShadow(OYAJI_B, 1.0f);
 		EV_SetShadow(OYAJI_C, 1.0f);
 		EV_SetShadow(FAT_A, 1.0f);
-		EV_SetShadow(FAT_B_0, 1.0f);
+		EV_SetShadow(FAT_B, 1.0f);
 		EV_SetShadow(BOYS_A, 1.0f);
 		EV_SetShadow(LADY_A, 1.0f);
 		EV_SetShadow(LADY_B, 1.0f);
@@ -126,7 +106,7 @@ void ev0001_s_intro(int state)
 		EV_CameraPos(0, (int)fps * 150, 161.53999f, 14.44f, 1630.65f);
 		EV_Wait((int)fps * 110);
 		moveObject(LADY_A, 307.23001f, 10.85f, 1054.78f, 365.69f, 10.85f, 1051.6801f, 2 * 200);
-		moveObject(FAT_B_0, 610.07001f, 8.3000002f, 1053.4f, 508.42999f, 8.3000002f, 1099.62f, 2 * 550);
+		moveObject(FAT_B, 610.07001f, 8.3000002f, 1053.4f, 508.42999f, 8.3000002f, 1099.62f, 2 * 550);
 		EV_Wait((int)fps * 20);
 		EV_CameraPos(0, 0, 232.67999f, 22.09f, 1144.67f);
 		EV_CameraAng(0, 0, 35, 53739, 0);
@@ -151,7 +131,7 @@ void ev0001_s_intro(int state)
 		EV_Wait((int)fps * 1);
 		EventSe_Volume(0, 120, 90);
 		EV_Wait((int)fps * 70);
-		EV_SetPath(BALL_0, (EPATHTAG*)0x2C12BA8, 0.69999999f / fps, 0);
+		EV_SetPath(BALL, (EPATHTAG*)0x2C12BA8, 0.69999999f / fps, 0);
 		EV_Wait((int)fps * 30);
 		EventSe_Volume(0, -120, 60);
 		EV_Wait((int)fps * 10);
@@ -169,7 +149,7 @@ void ev0001_s_intro(int state)
 		EV_FreeObject(&OYAJI_A);
 		EV_FreeObject(&FAT_A);
 		EV_FreeObject(&BOYS_A);
-		EV_FreeObject(&FAT_B_0);
+		EV_FreeObject(&FAT_B);
 		EV_FreeObject(&LADY_A);
 		EV_FreeObject(&OYAJI_B);
 		EV_FreeObject(&LADY_B);
@@ -192,12 +172,14 @@ void ev0001_s_intro(int state)
 		EV_ClrAction(player);
 		SONIC_SKY_2 = CSkyWalk_create2(player, 740.0f);
 		EV_Wait((int)fps * 90);
-
-		FreeTask(NY_SKY);
-		NY_SKY = 0;
-		FreeTask(SONIC_SKY_2);
-		SONIC_SKY_2 = 0;
-
+		if(NY_SKY){
+			FreeTask(NY_SKY);
+			NY_SKY = 0;
+		}
+		if(SONIC_SKY_2){
+			FreeTask(SONIC_SKY_2);
+			SONIC_SKY_2 = 0;
+		}
 		EV_CameraPos(0, 0, 306.10999f, 419.31f, 1376.84f);
 		EV_CameraAng(0, 0, 7680, 54528, 0);
 		EV_CameraPos(1, (int)fps * 30, 362.84f, 478.39999f, 1344.7f);
@@ -259,16 +241,20 @@ void ev0001_s_intro(int state)
 		EV_ClrAction(player);
 		if (fps == 1.0f) {
 			EV_PlayPad(0, &EV0001_S_JUMP_0);
-			FreeTask(SONIC_02SKY);
-			SONIC_02SKY = 0;
+			if(SONIC_02SKY){
+				FreeTask(SONIC_02SKY);
+				SONIC_02SKY = 0;
+			}
 		}
 		EV_Wait((int)fps * 10);
 		EventSe_Oneshot(1337, 60, 0, 0);
 		EV_Wait((int)fps * 30);
 		if (fps == 2.0f) { //Move Sonic off the building later to account for faster fall speed.
 			EV_PlayPad(0, &EV0001_S_JUMP_0);
-			FreeTask(SONIC_02SKY);
-			SONIC_02SKY = 0;
+			if(SONIC_02SKY){
+				FreeTask(SONIC_02SKY);
+				SONIC_02SKY = 0;
+			}
 		}
 		EventSe_Oneshot(1337, 80, 0, 0);
 		EventSe_Volume(5, -80, 120);
@@ -310,7 +296,7 @@ void ev0001_s_intro(int state)
 		EV_CameraTargetObj(0, (int)fps * 60, player, 0.0f, 6.0f, 0.0f, 0);
 		EV_ClrAction(player);
 		EV_PlayPad(0, &EV0001_S_RUN);
-		B_OUT_13 = COverlayCreate(0.016666668f, 0.2f, 0.0f, 0.0f, 0.0f);
+		B_OUT = COverlayCreate(0.016666668f, 0.2f, 0.0f, 0.0f, 0.0f);
 		EV_Wait((int)fps * 90);
 		break;
 	case 2:
@@ -320,15 +306,23 @@ void ev0001_s_intro(int state)
 		EV_InitPlayer(0);
 		EventSe_Close();
 		stopObjectAll();
-		FreeTask(NY_SKY);
-		NY_SKY = 0;
-		FreeTask(B_OUT_13);
-		B_OUT_13 = 0;
-		FreeTask(SONIC_SKY_2);
-		SONIC_SKY_2 = 0;
-		FreeTask(SONIC_02SKY);
-		FreeTask(BALL_0);
-		BALL_0 = 0;
+		if(NY_SKY){
+			FreeTask(NY_SKY);
+			NY_SKY = 0;
+		}
+		if(B_OUT){
+			FreeTask(B_OUT);
+			B_OUT = 0;
+		}
+		if(SONIC_SKY_2){
+			FreeTask(SONIC_SKY_2);
+			SONIC_SKY_2 = 0;
+		}
+		if(SONIC_02SKY){
+			FreeTask(SONIC_02SKY);
+			FreeTask(BALL);
+		}
+		BALL = 0;
 		EV_FreeObject(&PAT_01);
 		EV_FreeObject(&PAT_02);
 		EV_FreeObject(&PAT_03);
@@ -337,7 +331,7 @@ void ev0001_s_intro(int state)
 		EV_FreeObject(&OYAJI_A);
 		EV_FreeObject(&FAT_A);
 		EV_FreeObject(&BOYS_A);
-		EV_FreeObject(&FAT_B_0);
+		EV_FreeObject(&FAT_B);
 		EV_FreeObject(&LADY_A);
 		EV_FreeObject(&OYAJI_B);
 		EV_FreeObject(&LADY_B);

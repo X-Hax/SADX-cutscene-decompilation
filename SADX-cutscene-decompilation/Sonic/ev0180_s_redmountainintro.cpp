@@ -5,23 +5,16 @@
 
 void ev0180_s_redmountainintro(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* BLACKOUT = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetClip_0500(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
 		EventSe_Init(4);
 		SetBankDir(78);
-		createModelEC(-3857.7f, 2400.6001f, -2000.0f,
-			0, 4096, 0,
-			0.1f, 0.1f, 0.1f,
-			&object_ecff_bf_s_fbody_bf_s_fbody,
-			&texlist_ec_light,
-			0);
+		createModelEC(-3857.7f, 2400.6001f, -2000.0f,0, 4096, 0, 0.1f, 0.1f, 0.1f, &object_ecff_bf_s_fbody_bf_s_fbody, &texlist_ec_light, 0);
 		addmotModel(0, &action_ecff_bf_s_fbody, 0);
 		playModel(0, 0, 1.0f, -1);
 		moveObject(getobjModel(0), -1283.7f, 1020.6f, 240.39999f, -1478.5f, 1200.5f, -1035.6801f, 500);

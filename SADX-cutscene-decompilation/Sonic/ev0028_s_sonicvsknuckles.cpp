@@ -5,12 +5,9 @@
 
 void ev0028_s_sonicvsknuckles(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails = 0;
-	ObjectMaster* knuckles = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();

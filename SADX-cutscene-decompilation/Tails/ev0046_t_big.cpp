@@ -5,15 +5,9 @@
 
 void ev0046_t_big(int state)
 {
-	ObjectMaster* White = 0;
-	ObjectMaster* RED = 0;
-	ObjectMaster* Frog = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* big = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		SetBankDir(88);
 		EventSe_Init(8);
@@ -21,7 +15,7 @@ void ev0046_t_big(int state)
 		EV_PadOff();
 		EV_CanselOn();
 		EventSe_Play(3, 760, 90);
-		White = COverlayCreate(1.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+		WHITE = COverlayCreate(1.0f, 0.0f, 1.0f, 1.0f, 1.0f);
 		EV_CreateObject(&RED, 64.110001f, -16.658001f, 36.233002f, 0, 0, 0);
 		EV_SetMode(RED, 0);
 		EV_CreatePlayer(4, Big_Main, -11.62f, 71.559998f, 395.14001f, 1363, 30559, 63890);
@@ -38,7 +32,7 @@ void ev0046_t_big(int state)
 		EV_CameraPos(1, 0, 33.799999f, 80.647003f, 197.53f);
 		EV_CameraAng(1, 0, 63232, 2304, 0);
 		EV_Wait(26);
-		COverlaySetSpeed(White, -0.016666668f);
+		COverlaySetSpeed(WHITE, -0.016666668f);
 		EV_Wait(60);
 		EventSe_Stop(2);
 		BGM_Play(MusicIDs_thebig);
@@ -187,8 +181,10 @@ void ev0046_t_big(int state)
 		EV_Msg(msgTbl_ev0046[TextLanguage][2]); //"\aWait for me!"
 		EV_Wait(100);
 		EV_MsgClose();
-		FreeTask(White);
-		White = 0;
+		if(WHITE){
+			FreeTask(WHITE);
+			WHITE = 0;
+		}
 		stopObject(Frog);
 		EV_FreeObject(&Frog);
 		EV_CameraPos(1, 0, 28.84f, 76.099998f, 173.8f);
@@ -266,8 +262,10 @@ void ev0046_t_big(int state)
 		EV_FreeObject(&Frog);
 		EV_FreeObject(&RED);
 		RumbleA(0, 0);
-		FreeTask(White);
-		White = 0;
+		if(WHITE){
+			FreeTask(WHITE);
+			WHITE = 0;
+		}
 		EV_CameraOff();
 		EV_PadOn();
 		break;

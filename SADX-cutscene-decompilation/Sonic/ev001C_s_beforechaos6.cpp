@@ -5,12 +5,6 @@
 
 void ev001C_s_beforechaos6(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* big = 0;
-	ObjectMaster* eggmoble = 0;
-
-	ObjectMaster* Frog = 0;
-
 	switch (state) {
 	case 1:
 		EV_CameraOn();

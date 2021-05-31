@@ -5,14 +5,9 @@
 
 void ev0031_t_emeraldcoast(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic;
-	ObjectMaster* smoke = 0;
-	ObjectMaster* zan = 0;
-	ObjectMaster* KURAYAMI = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
@@ -32,22 +27,22 @@ void ev0031_t_emeraldcoast(int state)
 		EV_CameraPos(0, 160, 6865.0298f, 8.0799999f, -2203.595f);
 
 		//Smoke effect
-		smoke = CObjSmoke_Create();
-		smoke->Data1->Rotation.y = 10;
-		smoke->Data1->Rotation.x = 10;
-		WriteData((float*)smoke->Data1->LoopData, 1.2f);
-		WriteData((float*)(smoke->Data1->LoopData) + 11, 1.0f);
-		WriteData((float*)(smoke->Data1->LoopData) + 12, 0.2f);
-		WriteData((float*)(smoke->Data1->LoopData) + 13, 0.2f);
-		WriteData((float*)(smoke->Data1->LoopData) + 14, 0.2f);
+		SMOKE = CObjSmoke_Create();
+		SMOKE->Data1->Rotation.y = 10;
+		SMOKE->Data1->Rotation.x = 10;
+		WriteData((float*)SMOKE->Data1->LoopData, 1.2f);
+		WriteData((float*)(SMOKE->Data1->LoopData) + 11, 1.0f);
+		WriteData((float*)(SMOKE->Data1->LoopData) + 12, 0.2f);
+		WriteData((float*)(SMOKE->Data1->LoopData) + 13, 0.2f);
+		WriteData((float*)(SMOKE->Data1->LoopData) + 14, 0.2f);
 
 		EV_Wait(1);
-		EV_SetPos(smoke, 6888.9502f, 1.03f, -2203.1499f);
+		EV_SetPos(SMOKE, 6888.9502f, 1.03f, -2203.1499f);
 		EV_Wait(100);
 		EV_CameraPos(1, 0, 6882.188f, 5.5500002f, -2199.1345f);
 		EV_CameraAng(1, 0, 63263, 57404, 0);
-		smoke->Data1->Rotation.x = 0;
-		smoke->Data1->Rotation.y = 0;
+		SMOKE->Data1->Rotation.x = 0;
+		SMOKE->Data1->Rotation.y = 0;
 		EV_ClrFace(player);
 		EV_SetFace(player, "XB");
 		EV_SetAction(player, &action_m_m0119_miles, &MILES_TEXLIST, 0.2f, 0, 8);
@@ -72,8 +67,10 @@ void ev0031_t_emeraldcoast(int state)
 		EV_Wait(80);
 		EV_SetFace(sonic, "P");
 		EV_Wait(30);
-		FreeTask(smoke);
-		smoke = 0;
+		if(SMOKE){
+			FreeTask(SMOKE);
+			SMOKE = 0;
+		}
 		EV_CameraPos(1, 0, 6894.1201f, 17.92f, -2065.6699f);
 		EV_CameraTargetObj(1, 0, player, 0.0f, 3.0f, 0.0f, 0);
 		KURAYAMI = (ObjectMaster*)COverlayCreate(0.016666668f, 0.0f, 0.0f, 0.0f, 0.0f);
@@ -87,13 +84,11 @@ void ev0031_t_emeraldcoast(int state)
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);
 		EV_FreeObject(&zan);
-		if (smoke)
-		{
-			FreeTask(smoke);
-			smoke = 0;
+		if(SMOKE){
+			FreeTask(SMOKE);
+			SMOKE = 0;
 		}
-		if (KURAYAMI)
-		{
+		if(KURAYAMI){
 			FreeTask(KURAYAMI);
 			KURAYAMI = 0;
 		}

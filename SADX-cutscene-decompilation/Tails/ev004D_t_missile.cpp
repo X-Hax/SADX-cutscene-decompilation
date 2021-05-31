@@ -5,17 +5,11 @@
 
 void ev004D_t_missile(int state)
 {
-	ObjectMaster* obj_ver2_wing = 0;
-	ObjectMaster* TEPODON = 0;
-	//ObjectMaster* task_gattai_EV004D = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* amy = 0;
-	ObjectMaster* eggmoble = 0;
-
+	//ObjectMaster* task_gattai = 0;
 
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		gSkyScale.x = 1.069f;
 		gSkyScale.y = 1.309999f;
 		gSkyScale.z = 1.309f;

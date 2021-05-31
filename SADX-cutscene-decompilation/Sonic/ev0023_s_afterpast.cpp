@@ -5,11 +5,9 @@
 
 void ev0023_s_afterpast(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* white = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -17,7 +15,7 @@ void ev0023_s_afterpast(int state)
 		EV_CameraPerspective(1, 1, 12743);
 		SetBankDir(75);
 		EventSe_Init(3);
-		white = COverlayCreate(1.0f, 1.0f, 1.0f, 1.0f, 1.0f);
+		WHITE = COverlayCreate(1.0f, 1.0f, 1.0f, 1.0f, 1.0f);
 		EventSe_Play(2, 760, 1800);
 		EventSe_Volume(2, -120, 120);
 		EV_SetPos(player, -518.40002f, 0.0f, -867.63f);
@@ -28,7 +26,7 @@ void ev0023_s_afterpast(int state)
 		create_eggmoble(-574.45502f, 114.0f, -620.79999f, 0, 51200, 0);
 		EV_SetFace(player, "VVVVVVVVVVVVVVVVVVVV");
 		EV_Wait(30);
-		COverlaySetSpeed(white, -0.016666668f);
+		COverlaySetSpeed(WHITE, -0.016666668f);
 		EV_Wait(35);
 		ChgEggMobleSMod(1);
 		EV_SetFace(player, "WXBABAB");
@@ -157,8 +155,10 @@ void ev0023_s_afterpast(int state)
 		EV_SetPos(player, -724.0f, 14.44f, -885.53998f);
 		EV_SetAng(player, 64338, 36035, 64709);
 		EV_InitPlayer(0);
-		FreeTask(white);
-		white = 0;
+		if(WHITE){
+			FreeTask(WHITE);
+			WHITE = 0;
+		}
 		delete_eggmoble();
 		EventSe_Close();
 		break;

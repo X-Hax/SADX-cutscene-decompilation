@@ -5,16 +5,11 @@
 
 void ev0016_s_zeroboardsec(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* eggcarrier = 0;
-
-	ObjectMaster* egg_amy = 0;
-	ObjectMaster* CAP_01 = 0;
-	ObjectMaster* EC_KAGE = 0;
 	int defClipLevel = 0;
 
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetClip_ECScene(0);
 		EV_CameraOn();
 		EV_PadOff();
@@ -238,8 +233,10 @@ void ev0016_s_zeroboardsec(int state)
 		stopObjectAll();
 		EV_FreeObject(&egg_amy);
 		deleteModel(0);
-		FreeTask(EC_KAGE);
-		EC_KAGE = 0;
+		if(EC_KAGE){
+			FreeTask(EC_KAGE);
+			EC_KAGE = 0;
+		}
 		delete_capturebeam(CAP_01);
 		CAP_01 = 0;
 		EV_CameraOff();

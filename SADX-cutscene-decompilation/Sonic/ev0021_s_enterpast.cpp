@@ -5,18 +5,16 @@
 
 void ev0021_s_enterpast(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* white = 0;
-	
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		EventSe_Init(1);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
 		EventSe_Play(0, 760, 90);
-		white = COverlayCreate(1.0f, 0.0f, 1.0f, 1.0f, 1.0f);
+		WHITE = COverlayCreate(1.0f, 0.0f, 1.0f, 1.0f, 1.0f);
 		EV_CameraPos(1, 0, 0.0f, -20.0f, 1058.215f);
 		EV_CameraAng(1, 0, 0, 0, 0);
 		EV_CameraPerspective(1, 1, 7282);
@@ -25,7 +23,7 @@ void ev0021_s_enterpast(int state)
 		EV_SetPos(player, -0.88499999f, -71.0f, 1279.62f);
 		EV_SetAng(player, 0, 31840, 0);
 		EV_SetAction(player, &action_s_s0011_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
-		COverlaySetSpeed(white, -0.016666668f);
+		COverlaySetSpeed(WHITE, -0.016666668f);
 		EV_Wait(90);
 		EV_CameraPos(1, 0, -0.12f, -65.32f, 1208.52f);
 		EV_CameraAng(1, 0, 0, 0x8000, 0);
@@ -65,8 +63,10 @@ void ev0021_s_enterpast(int state)
 		EV_SetPos(player, -0.88499999f, -71.0f, 1279.62f);
 		EV_SetAng(player, 0, 31840, 0);
 		EV_InitPlayer(0);
-		FreeTask(white);
-		white = 0;
+		if(WHITE){
+			FreeTask(WHITE);
+			WHITE = 0;
+		}
 		EV_CameraOff();
 		EV_PadOn();
 		break;

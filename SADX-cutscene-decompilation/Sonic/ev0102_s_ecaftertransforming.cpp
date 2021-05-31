@@ -5,11 +5,9 @@
 
 void ev0102_s_ecaftertransforming(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CanselOn();
 		EV_Wait(4);
 		EV_InitPlayer(0);

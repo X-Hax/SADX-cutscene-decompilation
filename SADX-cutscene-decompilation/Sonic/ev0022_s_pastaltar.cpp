@@ -5,23 +5,9 @@
 
 void ev0022_s_pastaltar(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tikal = 0;
-
-	ObjectMaster* CHA = 0;
-	ObjectMaster* CHA2 = 0;
-	ObjectMaster* CHA3 = 0;
-	ObjectMaster* CHA4 = 0;
-	ObjectMaster* CHA5 = 0;
-	ObjectMaster* CHA6 = 0;
-	ObjectMaster* CHA7 = 0;
-	ObjectMaster* CHA8 = 0;
-	ObjectMaster* CHA9 = 0;
-	ObjectMaster* CHA10 = 0;
-	ObjectMaster* white = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		SetBankDir(83);
 		EventSe_Init(5);
@@ -159,7 +145,7 @@ void ev0022_s_pastaltar(int state)
 		EventSe_Stop(0);
 		EventSe_Stop(1);
 		EventSe_Play(0, 760, 88);
-		white = COverlayCreate(0.016666668f, 0.0f, 1.0f, 1.0f, 1.0f);
+		WHITE = COverlayCreate(0.016666668f, 0.0f, 1.0f, 1.0f, 1.0f);
 		EV_RemovePlayer(2);
 		EV_Wait(90);
 		break;
@@ -180,8 +166,10 @@ void ev0022_s_pastaltar(int state)
 		EV_FreeObject(&CHA10);
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);
-		FreeTask(white);
-		white = 0;
+		if(WHITE){
+			FreeTask(WHITE);
+			WHITE = 0;
+		}
 		break;
 	}
 }

@@ -5,11 +5,9 @@
 
 void ev001E_s_lostworld(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tikal = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -155,8 +153,10 @@ void ev001E_s_lostworld(int state)
 		EV_SetPos(player, -569.19f, -0.36399999f, -592.03552f);
 		EV_SetAng(player, 10, 32512, 2);
 		EV_InitPlayer(0);
-		FreeTask(tikal);
-		tikal = 0;
+		if(tikal){
+			FreeTask(tikal);
+			tikal = 0;
+		}
 		EventSe_Close();
 		EV_CameraPos(1, 0, -566.09998f, 5.4499998f, -577.90002f);
 		EV_CameraAng(1, 0, 2048, 65280, 0);

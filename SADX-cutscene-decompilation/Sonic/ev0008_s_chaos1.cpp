@@ -5,24 +5,9 @@
 
 void ev0008_s_chaos1(int state)
 {
-	ObjectMaster* C_EME_P = 0;
-	ObjectMaster* FLASH = 0;
-	ObjectMaster* BROKEN_EGG = 0;
-	ObjectMaster* BROKEN_EGG2 = 0;
-	ObjectMaster* BROKEN_EGG3_0 = 0;
-	ObjectMaster* BROKEN_EGG4 = 0;
-	ObjectMaster* HAND_1 = 0;
-	ObjectMaster* HAND_2 = 0;
-	ObjectMaster* HAND_3 = 0;
-	ObjectMaster* suki1_obj = 0;
-	ObjectMaster* suki2_obj = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails = 0;
-	ObjectMaster* eggmoble = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -118,10 +103,14 @@ void ev0008_s_chaos1(int state)
 		EV_ClrAction(eggmoble);
 		EV_MsgClose();
 
-		FreeTask(BROKEN_EGG2);
-		BROKEN_EGG2 = 0;
-		FreeTask(BROKEN_EGG4);
-		BROKEN_EGG4 = 0;
+		if(BROKEN_EGG2){
+			FreeTask(BROKEN_EGG2);
+			BROKEN_EGG2 = 0;
+		}
+		if(BROKEN_EGG4){
+			FreeTask(BROKEN_EGG4);
+			BROKEN_EGG4 = 0;
+		}
 
 		EV_CameraPos(1, 0, 1035.7f, 144.10001f, 889.5f);
 		EV_CameraAng(1, 0, 59411, 2704, 61889);
@@ -148,10 +137,14 @@ void ev0008_s_chaos1(int state)
 		CSukiari_Alpha(suki1_obj, 0, 16);
 		CSukiari_Alpha(suki2_obj, 0, 16);
 		EV_Wait(14);
-		FreeTask(suki1_obj);
-		suki1_obj = 0;
-		FreeTask(suki2_obj);
-		suki2_obj = 0;
+		if(suki1_obj){
+			FreeTask(suki1_obj);
+			suki1_obj = 0;
+		}
+		if(suki2_obj){
+			FreeTask(suki2_obj);
+			suki2_obj = 0;
+		}
 		BGM_Play(MusicIDs_eggman);
 		EventSe_Play(1, 1334, 1800);
 		EventSe_Volume(1, 110, 1);
@@ -247,10 +240,14 @@ void ev0008_s_chaos1(int state)
 		EV_Wait(50);
 		stopObject(C_EME_P);
 		EV_MsgClose();
-		FreeTask(HAND_1);
-		HAND_1 = 0;
-		FreeTask(HAND_2);
-		HAND_2 = 0;
+		if(HAND_1){
+			FreeTask(HAND_1);
+			HAND_1 = 0;
+		}
+		if(HAND_2){
+			FreeTask(HAND_2);
+			HAND_2 = 0;
+		}
 		EV_SetPos(HAND_3, 1055.24f, 144.058f, 886.63f);
 		EV_SetAng(HAND_3, 0, 20480, 0x8000);
 		moveObjectAngle2(HAND_3, 1055.24f, 144.058f, 886.63f, 1055.24f, 115.058f, 886.63f, 0, 20480, 0x8000, 0, 53248, 0x8000, 120);
@@ -273,8 +270,10 @@ void ev0008_s_chaos1(int state)
 		EV_Wait(30);
 		EventSe_Oneshot(1336, 128, 0, 0);
 		EV_Wait(100);
-		FreeTask(HAND_3);
-		HAND_3 = 0;
+		if(HAND_3){
+			FreeTask(HAND_3);
+			HAND_3 = 0;
+		}
 		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
 		EventSe_Stop(1);
 		EV_CameraPos(0, 0, 1046.23f, 143.45f, 881.0f);
@@ -355,8 +354,10 @@ void ev0008_s_chaos1(int state)
 		crushLightOff();
 		COverlaySetSpeed(FLASH, -0.02f);
 		EV_Wait(110);
-		FreeTask(FLASH);
-		FLASH = 0;
+		if(FLASH){
+			FreeTask(FLASH);
+			FLASH = 0;
+		}
 		EV_SetAction(eggmoble, &action_gm_gm0025_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 0, 8);
 		EV_SetAction(eggmoble, &action_gm_gm0021_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.2f, 1, 8);
 		EV_CameraPos(1, 0, 1042.9f, 144.60001f, 880.84003f);
@@ -453,8 +454,10 @@ void ev0008_s_chaos1(int state)
 		DeleteChaos1();
 		COverlaySetSpeed(FLASH, -0.039999999f);
 		EV_Wait(50);
-		FreeTask(FLASH);
-		FLASH = 0;
+		if(FLASH){
+			FreeTask(FLASH);
+			FLASH = 0;
+		}
 		EV_Wait(10);
 		EventSe_Stop(2);
 		EV_CameraPos(1, 0, 970.59998f, 155.39999f, 855.59998f);
@@ -528,25 +531,41 @@ void ev0008_s_chaos1(int state)
 		DeleteChaos0();
 		DeleteChaos1();
 		crushLightOff();
-		FreeTask(FLASH);
-		FLASH = 0;
+		if(FLASH){
+			FreeTask(FLASH);
+			FLASH = 0;
+		}
 		EV_SerifStop();
 		EV_SetPos(player, 913.0f, 126.2f, 951.20001f);
 		EV_SetAng(player, 0, 19456, 0);
-		FreeTask(HAND_1);
-		HAND_1 = 0;
-		FreeTask(HAND_2);
-		HAND_2 = 0;
-		FreeTask(HAND_3);
-		HAND_3 = 0;
-		FreeTask(BROKEN_EGG2);
-		BROKEN_EGG2 = 0;
-		FreeTask(BROKEN_EGG4);
-		BROKEN_EGG4 = 0;
-		FreeTask(suki1_obj);
-		suki1_obj = 0;
-		FreeTask(suki2_obj);
-		suki2_obj = 0;
+		if(HAND_1){
+			FreeTask(HAND_1);
+			HAND_1 = 0;
+		}
+		if(HAND_2){
+			FreeTask(HAND_2);
+			HAND_2 = 0;
+		}
+		if(HAND_3){
+			FreeTask(HAND_3);
+			HAND_3 = 0;
+		}
+		if(BROKEN_EGG2){
+			FreeTask(BROKEN_EGG2);
+			BROKEN_EGG2 = 0;
+		}
+		if(BROKEN_EGG4){
+			FreeTask(BROKEN_EGG4);
+			BROKEN_EGG4 = 0;
+		}
+		if(suki1_obj){
+			FreeTask(suki1_obj);
+			suki1_obj = 0;
+		}
+		if(suki2_obj){
+			FreeTask(suki2_obj);
+			suki2_obj = 0;
+		}
 		break;
 	}
 }

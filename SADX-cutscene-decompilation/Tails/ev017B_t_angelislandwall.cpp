@@ -7,6 +7,7 @@ void ev017B_t_angelislandwall(int state)
 {
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();

@@ -5,21 +5,9 @@
 
 void ev004B_t_eggmantakesbirdie(int state)
 {
-	ObjectMaster* KOTORI = 0;
-	ObjectMaster* Mhand = 0;
-	ObjectMaster* emerald = 0;
-	ObjectMaster* task_skywalk = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-	ObjectMaster* amy = 0;
-	ObjectMaster* e102 = 0;
-	ObjectMaster* eggmoble = 0;
-
-	bool enableUnusedCode = false;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		SetBankDir(90);
 		EventSe_Init(5);
@@ -306,8 +294,7 @@ void ev004B_t_eggmantakesbirdie(int state)
 		EV_CameraPos(0, 30, 12.4f, 1525.46f, 3409.97f);
 		EV_ClrAction(e102);
 		EV_SetAction(e102, E102_ACTIONS[15], &E102_TEXLIST, 1.0f, 0, 0);
-		if (task_skywalk)
-		{
+		if(task_skywalk){
 			FreeTask(task_skywalk);
 			task_skywalk = 0;
 		}
@@ -398,8 +385,10 @@ void ev004B_t_eggmantakesbirdie(int state)
 		seqVars[44] = 2;
 		EventSe_Close();
 		stopObjectAll();
-		FreeTask(task_skywalk);
-		task_skywalk = 0;
+		if(task_skywalk){
+			FreeTask(task_skywalk);
+			task_skywalk = 0;
+		}
 		EV_RemovePlayer(3);
 		EV_RemovePlayer(4);
 		EV_RemovePlayer(5);
@@ -408,8 +397,10 @@ void ev004B_t_eggmantakesbirdie(int state)
 		EV_InitPlayer(0);
 		EV_FreeObject(&emerald);
 		EV_FreeObject(&KOTORI);
-		FreeTask(Mhand);
-		Mhand = 0;
+		if(Mhand){
+			FreeTask(Mhand);
+			Mhand = 0;
+		}
 		delete_eggmoble();
 		seqVars[43] = 1;
 		EV_CameraOff();

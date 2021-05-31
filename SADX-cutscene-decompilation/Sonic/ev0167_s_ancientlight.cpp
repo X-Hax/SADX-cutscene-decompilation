@@ -5,11 +5,9 @@
 
 void ev0167_s_ancientlight(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tikal = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EventSe_Init(1);
 		EV_CameraOn();
 		EV_PadOff();
@@ -104,8 +102,10 @@ void ev0167_s_ancientlight(int state)
 		effect_delete(9);
 		effect_delete(10);
 		EV_ClrPath(tikal);
-		FreeTask(tikal);
-		tikal = 0;
+		if(tikal){
+			FreeTask(tikal);
+			tikal = 0;
+		}
 		EV_Wait(1);
 		break;
 	case 2:
@@ -127,8 +127,10 @@ void ev0167_s_ancientlight(int state)
 		EV_CameraTargetFree();
 		EV_SerifStop();
 		EV_MsgClose();
-		FreeTask(tikal);
-		tikal = 0;
+		if(tikal){
+			FreeTask(tikal);
+			tikal = 0;
+		}
 		EV_CameraOff();
 		EV_PadOn();
 		break;

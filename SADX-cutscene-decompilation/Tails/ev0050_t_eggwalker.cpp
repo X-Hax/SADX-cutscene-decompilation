@@ -5,24 +5,9 @@
 
 void ev0050_t_eggwalker(int state)
 {
-	ObjectMaster* BOY = 0;
-	ObjectMaster* FAT = 0;
-	ObjectMaster* LADY = 0;
-	ObjectMaster* GIRL = 0;
-	ObjectMaster* OYAJI = 0;
-	ObjectMaster* BOY2 = 0;
-	ObjectMaster* LADY2 = 0;
-	ObjectMaster* GIRL2 = 0;
-	ObjectMaster* OYAJI2 = 0;
-	ObjectMaster* CAR = 0;
-	ObjectMaster* CAR2 = 0;
-	ObjectMaster* CAR3 = 0;
-	ObjectMaster* CAR4 = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetBankDir(92);
 		EventSe_Init(2);
 		EV_CameraOn();

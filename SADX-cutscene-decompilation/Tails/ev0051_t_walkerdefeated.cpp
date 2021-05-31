@@ -5,22 +5,9 @@
 
 void ev0051_t_walkerdefeated(int state)
 {
-	ObjectMaster* FAT_B = 0;
-	ObjectMaster* BOY = 0;
-	ObjectMaster* LADY = 0;
-	ObjectMaster* GIRL = 0;
-	ObjectMaster* OYAJI = 0;
-	ObjectMaster* FAT2 = 0;
-	ObjectMaster* BOY2 = 0;
-	ObjectMaster* LADY2 = 0;
-	ObjectMaster* GIRL2 = 0;
-	ObjectMaster* OYAJI2 = 0;
-	ObjectMaster* B_OUT = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetBankDir(92);
 		EventSe_Init(1);
 		EV_CameraOn();
@@ -179,8 +166,10 @@ void ev0051_t_walkerdefeated(int state)
 		EV_FreeObject(&GIRL2);
 		EV_FreeObject(&OYAJI2);
 		EV_FreeObject(&FAT2);
-		FreeTask(B_OUT);
-		B_OUT = 0;
+		if(B_OUT){
+			FreeTask(B_OUT);
+			B_OUT = 0;
+		}
 		EV_CameraOff();
 		EV_PadOn();
 		break;

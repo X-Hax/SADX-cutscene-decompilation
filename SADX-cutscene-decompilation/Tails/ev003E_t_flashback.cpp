@@ -5,20 +5,11 @@
 
 void ev003E_t_flashback(int state)
 {
-	ObjectMaster* SEPIA_EV003E = 0;
-	ObjectMaster* BLACK_EV003E = 0;
-	short equipment_EV003E = 0;
-	int eq_saved_EV003E = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-
-	bool enableUnusedCode = false; //Remove the Jet Anklet instead of the Rhythm Badge and enable the COverlaySetPriority calls.
-
 	switch (state) {
 	case 1:
-		equipment_EV003E = GetCharObj2(0)->Upgrades; //Store the player's upgrades
-		eq_saved_EV003E = 1;
+		player = EV_GetPlayer(0);
+		equipment = GetCharObj2(0)->Upgrades; //Store the player's upgrades
+		eq_saved = 1;
 		if (enableUnusedCode) {
 			GetCharObj2(0)->Upgrades &= ~0x08u; //Remove the Jet Anklet.
 		}
@@ -32,14 +23,14 @@ void ev003E_t_flashback(int state)
 		EV_Wait(1);
 		EV_InitPlayer(0);
 		BGM_Play(MusicIDs_evtbgm00);
-		BLACK_EV003E = COverlayCreate(-0.001f, 0.80000001f, 0.0f, 0.0f, 0.0f);
-		SEPIA_EV003E = COverlayCreate(-1.0e-10f, 0.36000001f, 0.60000002f, 0.44f, 0.16f);
+		BLACK = COverlayCreate(-0.001f, 0.80000001f, 0.0f, 0.0f, 0.0f);
+		SEPIA = COverlayCreate(-1.0e-10f, 0.36000001f, 0.60000002f, 0.44f, 0.16f);
 
 		/*idk if this visibly does anything but it's never run normally because this code is normally above COverlayCreate.
 		It checks for BLACK and SEPIA before they've been created (and needs them to not crash, hence the move).*/
 		if (enableUnusedCode) {
-			COverlaySetPriority(BLACK_EV003E, -1.0f);
-			COverlaySetPriority(SEPIA_EV003E, -1.1f);
+			COverlaySetPriority(BLACK, -1.0f);
+			COverlaySetPriority(SEPIA, -1.1f);
 		}
 
 		EV_SetPos(player, -955.59998f, 9.8199997f, -181.60001f);
@@ -49,7 +40,7 @@ void ev003E_t_flashback(int state)
 		sonic = EV_GetPlayer(2);
 		EV_SetPos(sonic, -779.40002f, 1.21f, -106.77f);
 		EV_SetAng(sonic, 0, 4169, 0);
-		COverlaySetSpeed(BLACK_EV003E, -0.0049999999f);
+		COverlaySetSpeed(BLACK, -0.0049999999f);
 		EV_CameraPos(1, 0, -962.09998f, 13.22f, -187.0f);
 		EV_CameraAng(1, 0, 1792, 41984, 768);
 		EV_CameraPos(1, 80, -963.79999f, 12.6f, -189.75f);
@@ -66,11 +57,11 @@ void ev003E_t_flashback(int state)
 		EV_CameraAng(1, 0, 63663, 28823, 0);
 		EV_CameraPos(1, 140, -867.09998f, 30.57f, -161.0f);
 		EV_CameraAng(1, 140, 63663, 29591, 0);
-		COverlaySetSpeed(SEPIA_EV003E, 0.0020000001f);
+		COverlaySetSpeed(SEPIA, 0.0020000001f);
 		EV_Wait(50);
-		COverlaySetSpeed(SEPIA_EV003E, -0.0015f);
+		COverlaySetSpeed(SEPIA, -0.0015f);
 		EV_Wait(65);
-		COverlaySetSpeed(SEPIA_EV003E, -1.0e-11f);
+		COverlaySetSpeed(SEPIA, -1.0e-11f);
 		EV_Wait(20);
 		EV_MoveFree(player);
 		EV_CameraTargetFree();
@@ -83,11 +74,11 @@ void ev003E_t_flashback(int state)
 		EV_CameraPos(1, 160, -796.59998f, 16.700001f, 113.7f);
 		EV_CameraAng(1, 160, 1199, 2199, 0);
 		EV_MovePoint2(player, -799.70001f, 12.66f, 104.31f, 0.30000001f, 0.30000001f);
-		COverlaySetSpeed(SEPIA_EV003E, 0.0027000001f);
+		COverlaySetSpeed(SEPIA, 0.0027000001f);
 		EV_Wait(50);
-		COverlaySetSpeed(SEPIA_EV003E, -0.0015f);
+		COverlaySetSpeed(SEPIA, -0.0015f);
 		EV_Wait(60);
-		COverlaySetSpeed(SEPIA_EV003E, -1.0e-11f);
+		COverlaySetSpeed(SEPIA, -1.0e-11f);
 		EV_Wait(53);
 		EV_SetAction(player, &action_m_m0122_miles, &MILES_TEXLIST, 1.0f, 0, 4);
 		EV_SetAction(player, &action_m_m0123_miles, &MILES_TEXLIST, 1.0f, 1, 0);
@@ -114,11 +105,11 @@ void ev003E_t_flashback(int state)
 		EV_CameraPos(1, 100, -788.20001f, 12.6f, 92.599998f);
 		EV_CameraAng(1, 100, 2974, 23554, 1024);
 		EV_MovePoint2(sonic, -1086.1801f, 131.7f, 373.89999f, 8.0f, 2.0f);
-		COverlaySetSpeed(SEPIA_EV003E, 0.003f);
+		COverlaySetSpeed(SEPIA, 0.003f);
 		EV_Wait(50);
-		COverlaySetSpeed(SEPIA_EV003E, -0.003f);
+		COverlaySetSpeed(SEPIA, -0.003f);
 		EV_Wait(50);
-		COverlaySetSpeed(SEPIA_EV003E, -1.0e-11f);
+		COverlaySetSpeed(SEPIA, -1.0e-11f);
 		EV_SetPos(sonic, -778.70001f, 13.77f, 105.55f);
 		EV_SetAng(sonic, 2816, 59904, 0);
 		EV_CameraPos(1, 0, -798.70001f, 18.0f, 109.78f);
@@ -158,7 +149,7 @@ void ev003E_t_flashback(int state)
 			sonic->Data1->Position.y + 8.0f,
 			sonic->Data1->Position.z - 10.0f);
 		EV_CameraChase(sonic);
-		COverlaySetSpeed(SEPIA_EV003E, -0.0016f);
+		COverlaySetSpeed(SEPIA, -0.0016f);
 		EV_Wait(100);
 		EV_ClrFace(player);
 		EV_SetFace(player, "bbPPPbb");
@@ -180,8 +171,8 @@ void ev003E_t_flashback(int state)
 		EV_CameraChaseFree();
 		EV_ClrPath(sonic);
 		EV_SetPos(sonic, -1055.3f, 1.0f, -1433.6f);
-		COverlaySetColor(SEPIA_EV003E, 1.0f, 1.0f, 1.0f);
-		COverlaySetSpeed(SEPIA_EV003E, 0.0020000001f);
+		COverlaySetColor(SEPIA, 1.0f, 1.0f, 1.0f);
+		COverlaySetSpeed(SEPIA, 0.0020000001f);
 		EV_CameraPos(1, 0, -1067.2f, 1.48f, -1423.27f);
 		EV_CameraAng(1, 0, 3529, 54955, 0);
 		EV_CameraPos(1, 160, -1078.6f, 0.80000001f, -1438.27f);
@@ -189,25 +180,29 @@ void ev003E_t_flashback(int state)
 		EV_MovePoint2(player, -956.0f, 0.0f, -1595.8f, 0.89999998f, 0.2f);
 		EV_MovePoint2(sonic, -963.45001f, 0.0f, -1598.66f, 0.69999999f, 0.02f);
 		EV_Wait(190);
-		COverlaySetSpeed(BLACK_EV003E, 0.028000001f);
+		COverlaySetSpeed(BLACK, 0.028000001f);
 		EV_Wait(60);
 		EV_CameraPerspective(1, 1, 12743);
 		EV_Wait(1);
 		break;
 	case 2:
-		if (eq_saved_EV003E)
+		if (eq_saved)
 		{
-			GetCharObj2(0)->Upgrades = equipment_EV003E;
-			eq_saved_EV003E = 0;
+			GetCharObj2(0)->Upgrades = equipment;
+			eq_saved = 0;
 		}
 		EV_CameraOff();
 		EV_PadOn();
 		BGM_Stop();
 		EV_InitPlayer(0);
-		FreeTask(SEPIA_EV003E);
-		SEPIA_EV003E = 0;
-		FreeTask(BLACK_EV003E);
-		BLACK_EV003E = 0;
+		if(SEPIA){
+			FreeTask(SEPIA);
+			SEPIA = 0;
+		}
+		if(BLACK){
+			FreeTask(BLACK);
+			BLACK = 0;
+		}
 		EV_RemovePlayer(2);
 		EV_ClrPath(player);
 		EV_ClrPath(sonic);

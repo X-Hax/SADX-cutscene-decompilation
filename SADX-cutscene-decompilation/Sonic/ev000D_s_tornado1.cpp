@@ -5,14 +5,9 @@
 
 void ev000D_s_tornado1(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails = 0;
-
-	ObjectMaster* KURAYAMI = 0;
-	ObjectMaster* PLANE = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		SetBankDir(78);
 		EventSe_Init(9);
@@ -174,8 +169,10 @@ void ev000D_s_tornado1(int state)
 		EV_CameraOff();
 		EV_PadOn();
 		EventSe_Close();
-		FreeTask(KURAYAMI);
-		KURAYAMI = 0;
+		if(KURAYAMI){
+			FreeTask(KURAYAMI);
+			KURAYAMI = 0;
+		}
 		p_SonicObj_EV000D();
 		EV_ClrPath(PLANE);
 		seqVars[34] = 0; //MRVAR_TORNADE_CATAPALT2

@@ -6,39 +6,9 @@
 
 void ev002B_s_beforechaos0(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* ev_chaos0;
-
-	ObjectMaster* PL_NOR_01 = 0;
-	ObjectMaster* PL_NOR_02 = 0;
-	ObjectMaster* PL_NOR_03 = 0;
-	ObjectMaster* PL_NOR_04 = 0;
-	ObjectMaster* PL_NOR_05 = 0;
-	ObjectMaster* PL_NOR_07 = 0;
-	ObjectMaster* PL_NOR_08 = 0;
-	ObjectMaster* TAMA_01 = 0;
-	ObjectMaster* TAMA_02 = 0;
-	ObjectMaster* TAMA_03 = 0;
-	ObjectMaster* TAMA_04 = 0;
-	ObjectMaster* TAMA_05 = 0;
-	ObjectMaster* TAMA_06 = 0;
-	ObjectMaster* TAMA_07 = 0;
-	ObjectMaster* TAMA_08 = 0;
-	ObjectMaster* TAMA_09 = 0;
-	ObjectMaster* TAMA_10 = 0;
-	ObjectMaster* TAMA_11 = 0;
-	ObjectMaster* TAMA_12 = 0;
-	ObjectMaster* TAMA_13 = 0;
-	ObjectMaster* TAMA_14 = 0;
-	ObjectMaster* TAMA_15 = 0;
-	ObjectMaster* TAMA_16 = 0;
-	ObjectMaster* TAMA_17 = 0;
-	ObjectMaster* TAMA_18 = 0;
-	ObjectMaster* TAMA_19 = 0;
-	ObjectMaster* TAMA_20 = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();

@@ -5,16 +5,12 @@
 
 void ev0012_s_meetingamy(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* amy = 0;
-
-	ObjectMaster* obj_wing1 = 0;
-
 	switch (state) {
 	case 0:
 		SetBankDir(79);
 		break;
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();

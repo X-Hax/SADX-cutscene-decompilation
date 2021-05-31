@@ -6,11 +6,9 @@
 
 void ev0003_s_tailscrash(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* BLACK = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		task_tornado = 0;
 		EV_CameraOn();
 		EV_PadOff();
@@ -194,8 +192,10 @@ void ev0003_s_tailscrash(int state)
 		EV_PadOn();
 		tornado_dest_EV0003();
 		EventSe_Close();
-		FreeTask(BLACK);
-		BLACK = 0;
+		if(BLACK){
+			FreeTask(BLACK);
+			BLACK = 0;
+		}
 		break;
 	}
 }

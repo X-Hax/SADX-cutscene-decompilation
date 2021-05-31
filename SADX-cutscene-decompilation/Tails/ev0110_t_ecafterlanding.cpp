@@ -5,11 +5,9 @@
 
 void ev0110_t_ecafterlanding(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();

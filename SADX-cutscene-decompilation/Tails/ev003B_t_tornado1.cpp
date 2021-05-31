@@ -5,13 +5,9 @@
 
 void ev003B_t_tornado1(int state)
 {
-	ObjectMaster* KURAYAMI = 0;
-	ObjectMaster* PLANE = 0;
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		SetBankDir(78);
 		EventSe_Init(5);
@@ -140,8 +136,10 @@ void ev003B_t_tornado1(int state)
 		EV_PadOn();
 		EventSe_Close();
 		stopObjectAll();
-		FreeTask(KURAYAMI);
-		KURAYAMI = 0;
+		if(KURAYAMI){
+			FreeTask(KURAYAMI);
+			KURAYAMI = 0;
+		}
 		seqVars[34] = 0;
 		seqVars[33] = 0;
 		g_SonicOrgObj_p_initializer_EV003B();

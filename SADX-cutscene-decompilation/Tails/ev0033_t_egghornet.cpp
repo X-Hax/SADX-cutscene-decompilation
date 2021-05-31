@@ -3,15 +3,11 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
-void  ev0033_t_egghornet(int state)
+void ev0033_t_egghornet(int state)
 {
-	ObjectMaster* obj_decoy = 0; // Look point for characters/cameras
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-	ObjectMaster* eggmoble = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetBankDir(75);
 		EventSe_Init(3);
 		EV_CameraOn();

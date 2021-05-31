@@ -5,11 +5,9 @@
 
 void ev0015_s_chasingzero(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* Amy = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -18,9 +16,9 @@ void ev0015_s_chasingzero(int state)
 		EV_Wait(1);
 		EV_SetPos(player, -427.0f, -1.0f, 1113.3f);
 		EV_SetAng(player, 0, 0x8000, 0);
-		LoadEventObject(&Amy, set_amy, -304.0f, 175.0f, 1241.0f, 0, 0, 0);
+		LoadEventObject(&zero, set_amy, -304.0f, 175.0f, 1241.0f, 0, 0, 0);
 		EV_Wait(1);
-		EV_SetMode(Amy, 0);
+		EV_SetMode(zero, 0);
 		setamyparam(0.80000001f);
 		EV_CameraPos(1, 0, -424.70001f, -0.30000001f, 997.5f);
 		EV_CameraAng(1, 0, 63744, 31488, 0);
@@ -56,7 +54,7 @@ void ev0015_s_chasingzero(int state)
 		EV_SetAction(player, &action_s_s0006_sonic, &SONIC_TEXLIST, 1.1f, 1, 8);
 		EV_CameraPerspective(1, 0, 10194);
 		EV_LookPoint(player, -469.0f, 184.0f, 1231.4f);
-		moveObject(Amy, -304.0f, 180.0f, 1240.0f, -740.0f, 169.0f, 1248.0f, 290);
+		moveObject(zero, -304.0f, 180.0f, 1240.0f, -740.0f, 169.0f, 1248.0f, 290);
 		EV_CameraPos(1, 0, -416.20001f, 28.4f, 1040.8f);
 		EV_CameraAng(1, 0, 5280, 35760, 0);
 		EV_CameraPos(1, 50, -433.0f, -1.6f, 987.29999f);
@@ -81,7 +79,7 @@ void ev0015_s_chasingzero(int state)
 		EV_ClrFace(player);
 		EV_SetPos(player, -428.39999f, -2.5f, 1052.8f);
 		EV_SetAng(player, 0, 4096, 0);
-		EV_LookObject(player, Amy, 0.0f, 8.0f, 0.0f);
+		EV_LookObject(player, zero, 0.0f, 8.0f, 0.0f);
 		EV_CameraPos(0, 50, -413.39999f, -1.3f, 1035.5f);
 		EV_CameraAng(0, 50, 4871, 29248, 65024);
 		EV_Wait(50);
@@ -98,7 +96,7 @@ void ev0015_s_chasingzero(int state)
 		EV_SetPos(player, -428.39999f, -2.5f, 1052.8f);
 		EV_InitPlayer(0);
 		EV_LookFree(player);
-		EV_FreeObject(&Amy);
+		EV_FreeObject(&zero);
 		BGM_Stop();
 		EV_CameraOff();
 		EV_PadOn();

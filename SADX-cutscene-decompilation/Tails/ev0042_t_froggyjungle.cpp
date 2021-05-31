@@ -5,12 +5,9 @@
 
 void ev0042_t_froggyjungle(int state)
 {
-	ObjectMaster* Frog = 0;
-	ObjectMaster* R_EME = 0;
-	ObjectMaster* player = EV_GetPlayer(0);
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetBankDir(87);
 		EventSe_Init(1);
 		EV_CameraOn();

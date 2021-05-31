@@ -5,13 +5,9 @@
 
 void ev0114_t_afterskydeck(int state)
 {
-	ObjectMaster* TALES_STEP = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
@@ -29,8 +25,10 @@ void ev0114_t_afterskydeck(int state)
 		EV_LookPoint(sonic, -170.22f, 175.0f, -143.36f);
 		EV_Wait(20);
 		EV_LookPoint(sonic, -136.22f, 80.0f, -191.36f);
-		FreeTask(TALES_STEP);
-		TALES_STEP = 0;
+		if(TALES_STEP){
+			FreeTask(TALES_STEP);
+			TALES_STEP = 0;
+		}
 		EV_SerifPlay(1548);
 		EV_Msg(msgTbl_ev0114[TextLanguage][0]); //"\aAahh!  Is that it?"
 		EV_SetAction(sonic, &action_s_s0065_sonic, &SONIC_TEXLIST, 1.5f, 0, 30);
@@ -74,8 +72,10 @@ void ev0114_t_afterskydeck(int state)
 		EV_Wait(20);
 		break;
 	case 2:
-		FreeTask(TALES_STEP);
-		TALES_STEP = 0;
+		if(TALES_STEP){
+			FreeTask(TALES_STEP);
+			TALES_STEP = 0;
+		}
 		EV_SetPos(player, -151.22f, 80.0f, -173.36f);
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);

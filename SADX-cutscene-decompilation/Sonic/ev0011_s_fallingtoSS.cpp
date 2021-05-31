@@ -5,13 +5,9 @@
 
 void ev0011_s_fallingtoSS(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-
-	ObjectMaster* GIRL = 0;
-	ObjectMaster* B_OUT = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetBankDir(78);
 		EventSe_Init(1);
 		EV_CameraOn();
@@ -73,8 +69,10 @@ void ev0011_s_fallingtoSS(int state)
 		EV_Msg((msgTbl_ev0011[TextLanguage])[1]); //"\aTails?"
 		EV_SerifPlay(494);
 		EV_Wait(70);
-		FreeTask(B_OUT);
-		B_OUT = 0;
+		if(B_OUT){
+			FreeTask(B_OUT);
+			B_OUT = 0;
+		}
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EV_CameraTargetObj(1, 0, player, 0.0f, 0.0f, 0.0f, 0);
@@ -140,8 +138,10 @@ void ev0011_s_fallingtoSS(int state)
 	case 2:
 		EV_InitPlayer(0);
 		EventSe_Close();
-		FreeTask(B_OUT);
-		B_OUT = 0;
+		if(B_OUT){
+			FreeTask(B_OUT);
+			B_OUT = 0;
+		}
 		EV_SetPos(player, -438.19f, -0.0099999998f, 1990.77f);
 		EV_SetAng(player, 0, 26077, 0);
 		EV_Wait(1);

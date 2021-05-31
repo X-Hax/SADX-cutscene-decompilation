@@ -5,15 +5,9 @@
 
 void ev0024_s_eggviper(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-
-	ObjectMaster* KURAYAMI = 0;
-	ObjectMaster* IWA = 0;
-	ObjectMaster* IWA2 = 0;
-	ObjectMaster* IWA3 = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetBankDir(84);
 		EventSe_Init(5);
 		EV_InitPlayer(0);
@@ -439,17 +433,25 @@ void ev0024_s_eggviper(int state)
 		EventSe_Close();
 		EV_CameraOff();
 		EV_PadOn();
-		FreeTask(KURAYAMI);
-		KURAYAMI = 0;
+		if(KURAYAMI){
+			FreeTask(KURAYAMI);
+			KURAYAMI = 0;
+		}
 		EV_SetPos(player, 260.0f, 13.0f, 0.0f);
 		RumbleA(0, 0);
 		EV_EggViperKesu();
-		FreeTask(IWA);
-		IWA = 0;
-		FreeTask(IWA2);
-		IWA2 = 0;
-		FreeTask(IWA3);
-		IWA3 = 0;
+		if(IWA){
+			FreeTask(IWA);
+			IWA = 0;
+		}
+		if(IWA2){
+			FreeTask(IWA2);
+			IWA2 = 0;
+		}
+		if(IWA3){
+			FreeTask(IWA3);
+			IWA3 = 0;
+		}
 		EV_InitPlayer(0);
 		break;
 	}

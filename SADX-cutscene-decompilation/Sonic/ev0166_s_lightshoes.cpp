@@ -5,13 +5,9 @@
 
 void ev0166_s_lightshoes(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-
-	ObjectMaster* tikal = 0;
-	ObjectMaster* tikalb = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EventSe_Init(1);
 		EV_CameraOn();
 		EV_PadOff();
@@ -50,8 +46,10 @@ void ev0166_s_lightshoes(int state)
 		EV_Wait(20);
 		EventSe_Play(0, 760, 1800);
 		EV_ClrPath(tikal);
-		FreeTask(tikal);
-		tikal = 0;
+		if(tikal){
+			FreeTask(tikal);
+			tikal = 0;
+		}
 		EV_Wait(60);
 		EV_CameraTargetObj(1, 0, player, 0.0f, 4.5f, 0.0f, 0);
 		EV_CameraChaseRM(0, 170, player, 5.0f, 0, 10923, 0, 15.0f, 0, -38228, 0, 15.0f);
@@ -92,10 +90,14 @@ void ev0166_s_lightshoes(int state)
 		EV_CameraTargetFree();
 		EV_SerifStop();
 		EV_MsgClose();
-		FreeTask(tikal);
-		tikal = 0;
-		FreeTask(tikalb);
-		tikalb = 0;
+		if(tikal){
+			FreeTask(tikal);
+			tikal = 0;
+		}
+		if(tikalb){
+			FreeTask(tikalb);
+			tikalb = 0;
+		}
 		EV_CameraOff();
 		EV_PadOn();
 		EV_CameraChaseFree();

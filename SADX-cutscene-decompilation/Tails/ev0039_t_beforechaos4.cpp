@@ -5,24 +5,9 @@
 
 void ev0039_t_beforechaos4(int state)
 {
-	ObjectMaster* B_EME = 0;
-	ObjectMaster* G_EME = 0;
-	ObjectMaster* SMOKE_01 = 0;
-	ObjectMaster* SMOKE_02 = 0;
-	ObjectMaster* CAP_01 = 0;
-	ObjectMaster* CHAOS = 0;
-	ObjectMaster* B_OUT = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* knuckles = 0;
-	ObjectMaster* sonic = 0;
-	ObjectMaster* eggmoble = 0;
-
-	//Enable this to see the unused dust effect.
-	bool enableUnusedCode = false;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -212,10 +197,14 @@ void ev0039_t_beforechaos4(int state)
 		throughplayer_off(player);
 		throughplayer_off(knuckles);
 		EV_Wait(5);
-		FreeTask(SMOKE_01);
-		SMOKE_01 = 0;
-		FreeTask(SMOKE_02);
-		SMOKE_02 = 0;
+		if(SMOKE_01){
+			FreeTask(SMOKE_01);
+			SMOKE_01 = 0;
+		}
+		if(SMOKE_02){
+			FreeTask(SMOKE_02);
+			SMOKE_02 = 0;
+		}
 		EV_Wait(5);
 		stopObject(B_EME);
 		EV_Wait(15);
@@ -572,8 +561,10 @@ void ev0039_t_beforechaos4(int state)
 		crushLightOff();
 		COverlaySetSpeed(CHAOS, -0.016666668f);
 		EV_Wait(60);
-		FreeTask(CHAOS);
-		CHAOS = 0;
+		if(CHAOS){
+			FreeTask(CHAOS);
+			CHAOS = 0;
+		}
 		EV_Wait(10);
 		EV_SerifPlay(700);
 		EV_MsgW(50, msgTbl_ev0039[TextLanguage][15]); //"\aOh no...   \nIt's changing again!"
@@ -589,10 +580,14 @@ void ev0039_t_beforechaos4(int state)
 		dsStop_all();
 		EV_InitPlayer(0);
 		stopObjectAll();
-		FreeTask(CHAOS);
-		CHAOS = 0;
-		FreeTask(B_OUT);
-		B_OUT = 0;
+		if(CHAOS){
+			FreeTask(CHAOS);
+			CHAOS = 0;
+		}
+		if(B_OUT){
+			FreeTask(B_OUT);
+			B_OUT = 0;
+		}
 		crushLightOff();
 		throughplayer_off(player);
 		throughplayer_off(knuckles);
@@ -605,10 +600,14 @@ void ev0039_t_beforechaos4(int state)
 		delete_eggmoble();
 		delete_capturebeam(CAP_01);
 		CAP_01 = 0;
-		FreeTask(SMOKE_01);
-		SMOKE_01 = 0;
-		FreeTask(SMOKE_02);
-		SMOKE_02 = 0;
+		if(SMOKE_01){
+			FreeTask(SMOKE_01);
+			SMOKE_01 = 0;
+		}
+		if(SMOKE_02){
+			FreeTask(SMOKE_02);
+			SMOKE_02 = 0;
+		}
 		EV_CameraOff();
 		EV_PadOn();
 		break;

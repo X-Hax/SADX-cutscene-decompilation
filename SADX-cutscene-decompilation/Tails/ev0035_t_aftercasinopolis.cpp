@@ -5,14 +5,9 @@
 
 void ev0035_t_aftercasinopolis(int state)
 {
-	ObjectMaster* emerald = 0;
-	ObjectMaster* cap1 = 0;
-	ObjectMaster* WHITE = 0;
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -200,7 +195,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EventSe_Play(0, 1333, 1800);
 		EventSe_Volume(0, -40, 1);
 		EV_SerifPlay(672);
-		EV_Msg(msgTbl_ev0035[TextLanguage][4]); //"\aBonne nuit... Hi hi hi hi!"
+		EV_Msg(msgTbl_ev0035[TextLanguage][4]); //"\aNighty-night... Ha ha ha ha!"
 		EventSe_Volume(0, 0, 25);
 		EV_Wait(25);
 		ChgEggMobleSMod(1);
@@ -217,7 +212,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_ClrFace(player);
 		EV_SerifPlay(673);
 		EV_SetFace(player, "AADEVVVVVVVVVVVVVVVVVVVV");
-		EV_Msg(msgTbl_ev0035[TextLanguage][5]); //"\aRobotnik..."
+		EV_Msg(msgTbl_ev0035[TextLanguage][5]); //"\aEgg-man..."
 		EV_Wait(15);
 		WHITE = COverlayCreate(0.016666668f, 0.1f, 1.0f, 1.0f, 1.0f);
 		EV_MsgClose();
@@ -237,8 +232,10 @@ void ev0035_t_aftercasinopolis(int state)
 		delete_eggmoble();
 		delete_capturebeam(cap1);
 		cap1 = 0;
-		FreeTask(WHITE);
-		WHITE = 0;
+		if(WHITE){
+			FreeTask(WHITE);
+			WHITE = 0;
+		}
 		EventSe_Close();
 		break;
 	}

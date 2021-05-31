@@ -5,14 +5,9 @@
 
 void ev004E_t_speedhighway(int state)
 {
-	ObjectMaster* SMOKE = 0;
-	ObjectMaster* SMOKE2 = 0;
-	ObjectMaster* KURAYAMI = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		SetBankDir(92);
 		EventSe_Init(5);
@@ -178,13 +173,19 @@ void ev004E_t_speedhighway(int state)
 		EV_PadOn();
 		EventSe_Close();
 		EV_InitPlayer(0);
-		FreeTask(SMOKE);
-		SMOKE = 0;
-		FreeTask(SMOKE2);
-		SMOKE2 = 0;
+		if(SMOKE){
+			FreeTask(SMOKE);
+			SMOKE = 0;
+		}
+		if(SMOKE2){
+			FreeTask(SMOKE2);
+			SMOKE2 = 0;
+		}
 		delete_eggmoble();
-		FreeTask(KURAYAMI);
-		KURAYAMI = 0;
+		if(KURAYAMI){
+			FreeTask(KURAYAMI);
+			KURAYAMI = 0;
+		}
 		break;
 		}
 	}

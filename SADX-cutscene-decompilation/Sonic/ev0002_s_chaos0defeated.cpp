@@ -5,15 +5,9 @@
 
 void ev0002_s_chaos0defeated(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* eggman = 0;
-
-	ObjectMaster* BLACK = 0; //Fade overlay
-	ObjectMaster* task_skywalk = 0; //Temp ground collision for Eggman
-	ObjectMaster* p_Chaos0Task = 0; //Chaos puddle
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -114,15 +108,21 @@ void ev0002_s_chaos0defeated(int state)
 	case 2:
 		EV_CameraOff();
 		EV_PadOn();
-		FreeTask(task_skywalk);
-		task_skywalk = 0;
+		if(task_skywalk){
+			FreeTask(task_skywalk);
+			task_skywalk = 0;
+		}
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);
-		FreeTask(BLACK);
-		BLACK = 0;
+		if(BLACK){
+			FreeTask(BLACK);
+			BLACK = 0;
+		}
 		EventSe_Close();
-		FreeTask(p_Chaos0Task);
-		p_Chaos0Task = 0;
+		if(p_Chaos0Task){
+			FreeTask(p_Chaos0Task);
+			p_Chaos0Task = 0;
+		}
 		break;
 	}
 }

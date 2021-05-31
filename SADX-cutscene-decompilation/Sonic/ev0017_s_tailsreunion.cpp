@@ -6,13 +6,9 @@
 
 void ev0017_s_tailsreunion(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-
-	ObjectMaster* TR2 = 0;
-	ObjectMaster* BLACKOUT = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetClip_0500(0);
 		EV_CameraOn();
 		EV_PadOff();
@@ -203,8 +199,10 @@ void ev0017_s_tailsreunion(int state)
 		deleteModel(0);
 		EV_FreeObject(&TR2);
 		EV_SetPos(player, -451.60001f, 1043.6f, 2985.8999f);
-		FreeTask(BLACKOUT);
-		BLACKOUT = 0;
+		if(BLACKOUT){
+			FreeTask(BLACKOUT);
+			BLACKOUT = 0;
+		}
 		SetClip_0500(ClipLevel);
 		break;
 	case 3:

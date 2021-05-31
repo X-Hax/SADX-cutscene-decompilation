@@ -5,19 +5,13 @@
 
 void ev004C_t_escapecarrier(int state)
 {
-	ObjectMaster* BLACKOUT = 0;
-
 	/*This pointer is loaded but never used because PC 04
 	does everything associated with it in different functions.*/ 
 	//ObjectMaster* task_gattai = 0;
 
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-	ObjectMaster* amy = 0;
-	ObjectMaster* e102 = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -404,8 +398,10 @@ void ev004C_t_escapecarrier(int state)
 		EV_RemovePlayer(4);
 		DelE102Effect();
 		Delete_e102lightning();
-		FreeTask(BLACKOUT);
-		BLACKOUT = 0;
+		if(BLACKOUT){
+			FreeTask(BLACKOUT);
+			BLACKOUT = 0;
+		}
 		EventSe_Close();
 		break;
 	}

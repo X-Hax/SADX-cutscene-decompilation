@@ -5,26 +5,9 @@
 
 void ev001A_s_eggmantakesbirdie(int state)
 {
-	ObjectMaster* emerald = 0;
-	ObjectMaster* Mhand = 0;
-	ObjectMaster* black2 = 0;
-	ObjectMaster* black = 0;
-	ObjectMaster* task_skywalk2 = 0;
-	ObjectMaster* task_skywalk = 0;
-	ObjectMaster* WING = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails = 0;
-	ObjectMaster* amy = 0;
-	ObjectMaster* e102 = 0;
-	ObjectMaster* eggmoble = 0;
-
-	//Tails and Gamma aren't created properly (Tried to get objects on the same frame as their creation)
-	//Set this to true to enable it.
-	bool enableUnusedCode = false;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -68,7 +51,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		}
 
 		EV_CreatePlayer(5, Amy_Main, -15.0f, 1525.687f, 3245.5f, 0, 20448, 0);
-		black = COverlayCreate(1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+		BLACK = COverlayCreate(1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
 		WING = SetEventBirdie0();
 		EV_SetPos(WING, 0.0f, 5.5f, 0.0f);
 		EV_SetAng(WING, 0, 0x8000, 0);
@@ -89,7 +72,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_CameraPos(0, 40, 1.7386f, 1546.6f, 3458.6001f);
 		seqVars[44] = 3; //FLAG_EC_EGGLIFT_CTRL
 		EV_Wait(48);
-		COverlaySetSpeed(black, -0.06666667f);
+		COverlaySetSpeed(BLACK, -0.06666667f);
 		EV_Wait(20);
 		ChgEggMobleMod(0);
 		EV_CameraChaseFree();
@@ -297,30 +280,32 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_SetAction(player, &action_s_s0038_sonic, &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_SerifWait();
 		EV_FreeObject(&emerald);
-		black2 = COverlayCreate(1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
+		BLACK2 = COverlayCreate(1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
 		EV_CameraPos(1, 0, 0.0f, 1418.0f, 3590.0f);
 		EV_CameraAng(1, 0, 64256, 0x8000, 0);
 		EV_CameraPerspective(1, 1, 7282);
 		EV_MsgClose();
 		EV_Wait(50);
-		COverlaySetSpeed(black2, -0.1f);
+		COverlaySetSpeed(BLACK2, -0.1f);
 		EventSe_Oneshot(1339, 0, 0, 0);
 		EV_Wait(2);
-		COverlaySetSpeed(black2, 0.0f);
+		COverlaySetSpeed(BLACK2, 0.0f);
 		EV_Wait(38);
 		EV_SerifPlay(543);
 		EV_Msg((msgTbl_ev001A[TextLanguage])[7]); //"\aWhat is your wish, \nmaster Robotonik"...
 		EV_Wait(60);
 		EV_MsgClose();
-		FreeTask(task_skywalk);
-		task_skywalk = 0;
+		if(task_skywalk){
+			FreeTask(task_skywalk);
+			task_skywalk = 0;
+		}
 		EV_SetPos(e102, -254.8f, 1525.67f, 3754.6001f);
 		seqVars[44] = 3; //FLAG_EC_EGGLIFT_CTRL
 		if (enableUnusedCode) EV_ClrAction(e102); //Animation will end too late otherwise
 		EV_SetAction(e102, E102_ACTIONS[2], &E102_TEXLIST, 0.5f, 1, 0);
 		EV_CameraPos(1, 0, 7.1999998f, 1521.26f, 3451.7f);
 		EV_CameraAng(1, 0, 62720, 22272, 64512);
-		COverlaySetSpeed(black2, -1.0f);
+		COverlaySetSpeed(BLACK2, -1.0f);
 		EV_CameraPerspective(1, 1, 12561);
 		EV_Wait(37);
 		moveObject(e102, 0.0, 1525.0f, 3459.0f, 0.0f, 1540.0f, 3459.0f, 66);
@@ -351,8 +336,10 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_CameraPos(0, 30, 12.4f, 1525.46f, 3409.97f);
 		EV_ClrAction(e102);
 		EV_SetAction(e102, E102_ACTIONS[15], &E102_TEXLIST, 1.0f, 0, 0);
-		FreeTask(task_skywalk2);
-		task_skywalk2 = 0;
+		if(task_skywalk2){
+			FreeTask(task_skywalk2);
+			task_skywalk2 = 0;
+		}
 		moveObject(e102, 0.0f, 1546.0f, 3459.0f, 0.0f, 1560.0f, 3426.0f, 25);
 		EV_Wait(25);
 		EV_Wait(60);
@@ -431,13 +418,11 @@ void ev001A_s_eggmantakesbirdie(int state)
 		stopObjectAll();
 		EV_CameraOff();
 		EV_PadOn();
-		if (task_skywalk2)
-		{
+		if(task_skywalk2){
 			FreeTask(task_skywalk2);
 			task_skywalk2 = 0;
 		}
-		if (task_skywalk)
-		{
+		if(task_skywalk){
 			FreeTask(task_skywalk);
 			task_skywalk = 0;
 		}
@@ -449,13 +434,19 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_RemovePlayer(5);
 		EV_FreeObject(&WING);
 		EV_FreeObject(&emerald);
-		FreeTask(Mhand);
-		Mhand = 0;
+		if(Mhand){
+			FreeTask(Mhand);
+			Mhand = 0;
+		}
 		delete_eggmoble();
-		FreeTask(black2);
-		black2 = 0;
-		FreeTask(black);
-		black = 0;
+		if(BLACK2){
+			FreeTask(BLACK2);
+			BLACK2 = 0;
+		}
+		if(BLACK){
+			FreeTask(BLACK);
+			BLACK = 0;
+		}
 		EventSe_Close();
 		seqVars[44] = 2; //FLAG_EC_EGGLIFT_CTRL
 		seqVars[43] = 1;

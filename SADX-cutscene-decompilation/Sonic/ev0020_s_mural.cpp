@@ -4,11 +4,9 @@
 
 void ev0020_s_mural(int state)
 {
-	ObjectMaster* tikal = 0;
-	ObjectMaster* player = EV_GetPlayer(0);
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetBankDir(97);
 		EventSe_Init(1);
 		EV_CameraOn();
@@ -121,8 +119,10 @@ void ev0020_s_mural(int state)
 		EV_InitPlayer(0);
 		EV_CameraOff();
 		EV_PadOn();
-		FreeTask(tikal);
-		tikal = 0;
+		if(tikal){
+			FreeTask(tikal);
+			tikal = 0;
+		}
 		EV_FreeFadeToWhite();
 		break;
 	}

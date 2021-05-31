@@ -5,16 +5,9 @@
 
 void ev0052_t_outro(int state)
 {
-	ObjectMaster* WHITE = 0;
-	ObjectMaster* BLACK = 0;
-	ObjectMaster* BLACK2 = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-	ObjectMaster* eggmoble = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -258,12 +251,18 @@ void ev0052_t_outro(int state)
 		playertwp[0]->Object.SByte[3] &= ~0x20u;
 		EV_ClrFace(player);
 		EV_RemovePlayer(2);
-		FreeTask(WHITE);
-		WHITE = 0;
-		FreeTask(BLACK);
-		BLACK = 0;
-		FreeTask(BLACK2);
-		BLACK2 = 0;
+		if(WHITE){
+			FreeTask(WHITE);
+			WHITE = 0;
+		}
+		if(BLACK){
+			FreeTask(BLACK);
+			BLACK = 0;
+		}
+		if(BLACK2){
+			FreeTask(BLACK2);
+			BLACK2 = 0;
+		}
 		CEcCloud_Stop();
 		break;
 	}

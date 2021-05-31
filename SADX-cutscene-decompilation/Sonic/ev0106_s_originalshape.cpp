@@ -5,10 +5,9 @@
 
 void ev0106_s_originalshape(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();

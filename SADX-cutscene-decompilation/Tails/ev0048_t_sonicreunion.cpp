@@ -5,14 +5,9 @@
 
 void ev0048_t_sonicreunion(int state)
 {
-	ObjectMaster* TR2 = 0;
-	ObjectMaster* BLACKOUT = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* sonic = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetClip_0500(0);
 		EV_CameraOn();
 		EV_PadOff();
@@ -29,19 +24,8 @@ void ev0048_t_sonicreunion(int state)
 		EV_SetPos(sonic, -404.60001f, 1039.6f, 3138.3999f);
 		EV_SetAng(sonic, 0, 5888, 0);
 		EV_LookPoint(sonic, -378.79999f, 1091.7f, 3150.5f);
-		createModelEC(
-			-455.70001f,
-			1173.6f,
-			3263.3999f,
-			0,
-			42752,
-			0,
-			0.029999999f,
-			0.029999999f,
-			0.029999999f,
-			&object_ecff_bf_s_fbody_bf_s_fbody,
-			&texlist_ec_light,
-			0);
+		createModelEC(-455.70001f, 1173.6f, 3263.3999f, 0, 42752, 0, 0.029999999f, 0.029999999f, 0.029999999f,
+			&object_ecff_bf_s_fbody_bf_s_fbody, &texlist_ec_light, 0);
 		addmotModel(0, &action_ecff_bf_s_fbody, 0);
 		playModel(0, 0, 1.0f, -1);
 		EV_CreateObject(&TR2, -738.90002f, 1120.0f, 3336.6001f, 0, 61440, 0);

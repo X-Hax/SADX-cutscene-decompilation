@@ -5,11 +5,9 @@
 
 void ev0029_s_eclanding(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* TR2B = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();

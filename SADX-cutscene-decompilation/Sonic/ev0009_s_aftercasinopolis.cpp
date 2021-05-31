@@ -5,21 +5,9 @@
 
 void ev0009_s_aftercasinopolis(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails = 0;
-	ObjectMaster* eggmoble = 0;
-
-	ObjectMaster* emerald = 0;
-	ObjectMaster* cap1 = 0;
-	ObjectMaster* WHITE = 0;
-
-	//There's a skip in the camera sequence at the beginning due to a text box that was removed after the original JP version. (EV_Msg- functions force the event to wait 20 frames).
-	//Set to 1 to fix the camera sequence.
-	//Set to 2 to do the above as well as restore the text box (As "?" to be compatible with all languages).
-	int enableUnusedCode = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -257,8 +245,10 @@ void ev0009_s_aftercasinopolis(int state)
 		EV_RemovePlayer(2);
 		EV_FreeObject(&emerald);
 		delete_eggmoble();
-		FreeTask(WHITE);
-		WHITE = 0;
+		if(WHITE){
+			FreeTask(WHITE);
+			WHITE = 0;
+		}
 		delete_capturebeam(cap1);
 		cap1 = 0;
 		EventSe_Close();

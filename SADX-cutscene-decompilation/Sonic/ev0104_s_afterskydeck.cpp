@@ -5,12 +5,9 @@
 
 void ev0104_s_afterskydeck(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails = 0;
-	ObjectMaster* TALES_STEP = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
@@ -29,8 +26,10 @@ void ev0104_s_afterskydeck(int state)
 		EV_LookPoint(player, -170.22f, 175.0f, -143.36f);
 		EV_Wait(20);
 		EV_LookPoint(player, -136.22f, 80.0f, -191.36f);
-		FreeTask(TALES_STEP);
-		TALES_STEP = 0;
+		if(TALES_STEP){
+			FreeTask(TALES_STEP);
+			TALES_STEP = 0;
+		}
 		EV_SerifPlay(1528);
 		EV_SetFace(player, "DEC");
 		EV_Msg(msgTbl_ev0104[TextLanguage][0]); //"\aIs that it?"
@@ -60,8 +59,10 @@ void ev0104_s_afterskydeck(int state)
 		EV_Wait(20);
 		break;
 	case 2:
-		FreeTask(TALES_STEP);
-		TALES_STEP = 0;
+		if(TALES_STEP){
+			FreeTask(TALES_STEP);
+			TALES_STEP = 0;
+		}
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);
 		EV_CameraOff();

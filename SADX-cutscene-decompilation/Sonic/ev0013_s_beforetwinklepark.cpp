@@ -5,15 +5,9 @@
 
 void ev0013_s_beforetwinklepark(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* amy = 0;
-	ObjectMaster* zero = 0;
-
-	ObjectMaster* KOTORI = 0;
-	ObjectMaster* KURAYAMI = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_InitPlayer(0);
 		SetBankDir(78);
 		EventSe_Init(5);
@@ -258,8 +252,10 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_RemovePlayer(2);
 		EV_RemovePlayer(7);
 		EV_FreeObject(&KOTORI);
-		FreeTask(KURAYAMI);
-		KURAYAMI = 0;
+		if(KURAYAMI){
+			FreeTask(KURAYAMI);
+			KURAYAMI = 0;
+		}
 		seqVars[2] = 0; //SSVAR_TWINKLE_ELEVATOR
 		EV_CameraOff();
 		EV_PadOn();

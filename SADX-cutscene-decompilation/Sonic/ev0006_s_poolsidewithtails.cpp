@@ -5,13 +5,9 @@
 
 void ev0006_s_poolsidewithtails(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails = 0;
-	ObjectMaster* KURAYAMI = 0; //Fadeout
-	ObjectMaster* PURPLE = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -307,8 +303,10 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_FreeObject(&PURPLE);
 		EV_RemovePlayer(3);
 		EV_InitPlayer(0);
-		FreeTask(KURAYAMI);
-		KURAYAMI = 0;
+		if(KURAYAMI){
+			FreeTask(KURAYAMI);
+			KURAYAMI = 0;
+		}
 		EventSe_Close();
 		EV_CameraOff();
 		EV_PadOn();

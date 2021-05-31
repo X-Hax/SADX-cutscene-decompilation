@@ -5,12 +5,9 @@
 
 void ev0007_s_egghornetintro(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails = 0;
-	ObjectMaster* obj_decoy = 0; //Target point for cameras and heads.
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetBankDir(75);
 		EV_CameraOn();
 		EV_PadOff();

@@ -5,12 +5,9 @@
 
 void ev0168_t_jetanklet(int state)
 {
-	ObjectMaster* tikal = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EventSe_Init(1);
 		EV_CameraOn();
 		EV_PadOff();
@@ -56,8 +53,10 @@ void ev0168_t_jetanklet(int state)
 		EventSe_Volume(0, -80, 80);
 		EV_Wait(70);
 		EV_ClrPath(tikal);
-		FreeTask(tikal);
-		tikal = 0;
+		if(tikal){
+			FreeTask(tikal);
+			tikal = 0;
+		}
 		EV_Wait(10);
 		break;
 	case 2:
@@ -67,8 +66,10 @@ void ev0168_t_jetanklet(int state)
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		if (tikal)
-		FreeTask(tikal);
-		tikal = 0;
+		if(tikal){
+			FreeTask(tikal);
+			tikal = 0;
+		}
 		EV_CameraOff();
 		EV_PadOn();
 		break;

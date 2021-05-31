@@ -5,13 +5,9 @@
 
 void ev002A_s_casinowake(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* tails = 0;
-
-	ObjectMaster* WHITE = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -126,8 +122,10 @@ void ev002A_s_casinowake(int state)
 		EV_SetAng(player, 0, 64038, 0);
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);
-		FreeTask(WHITE);
-		WHITE = 0;
+		if(WHITE){
+			FreeTask(WHITE);
+			WHITE = 0;
+		}
 		break;
 	}
 }

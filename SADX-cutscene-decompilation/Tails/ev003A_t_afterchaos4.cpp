@@ -5,14 +5,9 @@
 
 void ev003A_t_afterchaos4(int state)
 {
-	ObjectMaster* CAP_01_EV003A = 0;
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* knuckles = 0;
-	ObjectMaster* sonic = 0;
-	ObjectMaster* eggmoble = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		SetClip_ECScene(0);
 		EV_CameraOn();
 		EV_PadOff();
@@ -25,21 +20,12 @@ void ev003A_t_afterchaos4(int state)
 		EV_CreatePlayer(2, Knuckles_Main, 102.5f, 72.169998f, 212.0f, 65430, 36864, 18);
 		EV_CreatePlayer(3, Sonic_Main, 73.0f, 72.019997f, 232.50999f, 0, 0, 0);
 		create_eggmoble(80.0f, 80.0f, 160.0f, 0, 15104, 0);
-		createModelEC(
-			300.0f,
-			1200.0f,
-			1000.0f,
-			0,
-			0x8000,
-			0,
-			0.25f,
-			0.25f,
-			0.25f,
+		createModelEC(300.0f, 1200.0f, 1000.0f, 0, 0x8000, 0, 0.25f, 0.25f, 0.25f,
 			&object_ecff_bf_s_fbody_bf_s_fbody,
 			&texlist_ec_light,
 			0);
 		addmotModel(0, &action_ecff_bf_s_fbody, 0);
-		CAP_01_EV003A = CreateCaptureBeam(80.0f, 80.0f, 160.0f, 5888, 0, 63376);
+		CAP_01 = CreateCaptureBeam(80.0f, 80.0f, 160.0f, 5888, 0, 63376);
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
@@ -55,11 +41,11 @@ void ev003A_t_afterchaos4(int state)
 		EV_Wait(1);
 		seteggmobleparam(0.5f, 256);
 		playModel(0, 0, 1.0f, -1);
-		SetCaptureParam(CAP_01_EV003A, 0.30000001f, 0.0f, 0.30000001f, 0.0f, 0.0f, 0);
-		SetCaptureParam(CAP_01_EV003A, 0.0f, 10.0f, 0.0f, 0.0f, 0.0f, 0);
-		SetCaptureParam(CAP_01_EV003A, 0.0f, 0.0f, 0.0f, 0.001f, 0.0f, 0);
-		SetCaptureParam(CAP_01_EV003A, 0.0f, 0.0f, 0.0f, 0.0f, 0.001f, 0);
-		SetCaptureParam(CAP_01_EV003A, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0);
+		SetCaptureParam(CAP_01, 0.30000001f, 0.0f, 0.30000001f, 0.0f, 0.0f, 0);
+		SetCaptureParam(CAP_01, 0.0f, 10.0f, 0.0f, 0.0f, 0.0f, 0);
+		SetCaptureParam(CAP_01, 0.0f, 0.0f, 0.0f, 0.001f, 0.0f, 0);
+		SetCaptureParam(CAP_01, 0.0f, 0.0f, 0.0f, 0.0f, 0.001f, 0);
+		SetCaptureParam(CAP_01, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0);
 		EV_Wait(1);
 		BGM_Play(MusicIDs_egcarer1);
 		EV_CameraPerspective(0, 1, 12561);
@@ -98,7 +84,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_CameraTargetObj(0, 150, eggmoble, 0.0f, 6.0f, 0.0f, 0);
 		EV_Wait(60);
 		EV_MsgClose();
-		ChgCaptureMod(CAP_01_EV003A, 1);
+		ChgCaptureMod(CAP_01, 1);
 		QueueSound_XYZ(1336, (EntityData1*)0xCB80001, 1, 120, 185, 80.0f, 80.0f, 160.0f);
 		EV_Wait(30);
 		moveObjectAngle2(eggmoble, 80.0f, 80.0f, 160.0f, 235.71001f, 807.02002f, 643.87f, 0, 15104, 0, 5376, 15104, 0, 180);
@@ -107,7 +93,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_CameraTargetFree();
 		EV_Wait(5);
 		delete_eggmoble();
-		ChgCaptureMod(CAP_01_EV003A, 2);
+		ChgCaptureMod(CAP_01, 2);
 		DoSoundQueueThing(1336);
 		EV_SetAng(sonic, 0, 0, 0);
 		EV_LookPoint(sonic, 95.0f, 140.0f, 300.0f);
@@ -243,8 +229,8 @@ void ev003A_t_afterchaos4(int state)
 		EV_RemovePlayer(3);
 		deleteModel(0);
 		delete_eggmoble();
-		delete_capturebeam(CAP_01_EV003A);
-		CAP_01_EV003A = 0;
+		delete_capturebeam(CAP_01);
+		CAP_01 = 0;
 		EV_CameraOff();
 		EV_PadOn();
 		SetClip_ECScene(ClipLevel);

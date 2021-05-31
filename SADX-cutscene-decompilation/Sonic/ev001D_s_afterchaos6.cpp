@@ -5,15 +5,9 @@
 
 void ev001D_s_afterchaos6(int state)
 {
-	ObjectMaster* player = EV_GetPlayer(0);
-	ObjectMaster* knuckles = 0;
-	ObjectMaster* eggmoble = 0;
-
-	ObjectMaster* SONIC_JUMP = 0;
-	ObjectMaster* B_OUT = 0;
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -173,17 +167,23 @@ void ev001D_s_afterchaos6(int state)
 		EV_ClrAction(player);
 		EV_PlayPad(0, &EV001D_S_JUMP);
 		EV_Wait(20);
-		FreeTask(SONIC_JUMP);
-		SONIC_JUMP = 0;
+		if(SONIC_JUMP){
+			FreeTask(SONIC_JUMP);
+			SONIC_JUMP = 0;
+		}
 		B_OUT = COverlayCreate(0.016666668f, 0.2f, 0.0f, 0.0f, 0.0f);
 		EV_Wait(90);
 		break;
 	case 2:
 		dsStop_all();
-		FreeTask(SONIC_JUMP);
-		SONIC_JUMP = 0;
-		FreeTask(B_OUT);
-		B_OUT = 0;
+		if(SONIC_JUMP){
+			FreeTask(SONIC_JUMP);
+			SONIC_JUMP = 0;
+		}
+		if(B_OUT){
+			FreeTask(B_OUT);
+			B_OUT = 0;
+		}
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);
 		delete_eggmoble();

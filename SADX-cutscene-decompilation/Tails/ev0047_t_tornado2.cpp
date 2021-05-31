@@ -5,15 +5,9 @@
 
 void ev0047_t_tornado2(int state)
 {
-	ObjectMaster* EMERALD = 0;
-	ObjectMaster* TR2 = 0;
-	ObjectMaster* BLACK = 0;
-	ObjectMaster* BLACK2 = 0;
-
-	ObjectMaster* player = EV_GetPlayer(0);
-
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -26,14 +20,14 @@ void ev0047_t_tornado2(int state)
 		EV_CreateObject(&TR2, -738.90002f, 1120.0f, 3336.6001f, 0, 61440, 0);
 		EV_SetPos(player, 1413.8357f, 201.8f, 813.48999f);
 		EV_SetAng(player, 0, 21293, 0);
-		EV_CreateObject(&EMERALD, 0.0f, 5.5f, 0.0f, 0, 0x8000, 0);
-		EV_SetMode(EMERALD, 0);
-		EV_SetPos(EMERALD, 1413.8357f, 201.8f, 813.48999f);
-		EV_SetAng(EMERALD, 0, 21293, 0);
+		EV_CreateObject(&emerald, 0.0f, 5.5f, 0.0f, 0, 0x8000, 0);
+		EV_SetMode(emerald, 0);
+		EV_SetPos(emerald, 1413.8357f, 201.8f, 813.48999f);
+		EV_SetAng(emerald, 0, 21293, 0);
 		EV_ClrAction(player);
-		EV_ClrAction(EMERALD);
+		EV_ClrAction(emerald);
 		EV_SetAction(player, &action_m_m0113_miles, &MILES_TEXLIST, 1.0f, 1, 8);
-		EV_SetAction(EMERALD, &action_m_m0113c_m_em_red, &texlist_m_em_red, 1.0f, 1, 8);
+		EV_SetAction(emerald, &action_m_m0113c_m_em_red, &texlist_m_em_red, 1.0f, 1, 8);
 		EV_CameraPos(1, 0, 1377.38f, 271.60001f, 843.43701f);
 		EV_CameraAng(1, 0, 4096, 56576, 65280);
 		EV_CameraPos(0, 50, 1382.855f, 253.136f, 838.07001f);
@@ -79,11 +73,11 @@ void ev0047_t_tornado2(int state)
 		EV_ClrFace(player);
 		EV_MsgClose();
 		EV_ClrAction(player);
-		EV_ClrAction(EMERALD);
+		EV_ClrAction(emerald);
 		EV_SetAction(player, &action_m_m0114_miles, &MILES_TEXLIST, 1.0f, 0, 8);
-		EV_SetAction(EMERALD, &action_m_m0114c_m_em_red, &texlist_m_em_red, 1.0f, 0, 8);
+		EV_SetAction(emerald, &action_m_m0114c_m_em_red, &texlist_m_em_red, 1.0f, 0, 8);
 		EV_SetAction(player, &action_m_m0115_miles, &MILES_TEXLIST, 1.0f, 1, 0);
-		EV_SetAction(EMERALD, &action_m_m0115c_m_em_red, &texlist_m_em_red, 1.0f, 1, 0);
+		EV_SetAction(emerald, &action_m_m0115c_m_em_red, &texlist_m_em_red, 1.0f, 1, 0);
 		EV_CameraPerspective(0, 110, 10741);
 		EV_CameraPos(0, 110, 1423.0f, 204.554f, 814.09998f);
 		EV_CameraAng(0, 110, 3584, 15872, 65024);
@@ -93,9 +87,9 @@ void ev0047_t_tornado2(int state)
 		EV_Wait(50);
 		BGM_Play(MusicIDs_themiles);
 		EV_SetAction(player, &action_m_m0116_miles, &MILES_TEXLIST, 1.0f, 0, 8);
-		EV_SetAction(EMERALD, &action_m_m0116c_m_em_red, &texlist_m_em_red, 1.0f, 0, 8);
+		EV_SetAction(emerald, &action_m_m0116c_m_em_red, &texlist_m_em_red, 1.0f, 0, 8);
 		EV_SetAction(player, &action_m_m0117_miles, &MILES_TEXLIST, 1.0f, 1, 0);
-		EV_SetAction(EMERALD, &action_m_m0117c_m_em_red, &texlist_m_em_red, 1.0f, 1, 0);
+		EV_SetAction(emerald, &action_m_m0117c_m_em_red, &texlist_m_em_red, 1.0f, 1, 0);
 		EV_Wait(40);
 		EV_SerifPlay(757);
 		if (!VoiceLanguage)
@@ -118,8 +112,8 @@ void ev0047_t_tornado2(int state)
 		EventSe_Play(0, 1335, 1800);
 		EV_SetPos(player, 1527.3f, 192.8f, 694.48999f);
 		EV_SetAng(player, 0, 21293, 0);
-		EV_SetPos(EMERALD, 1527.3f, 192.8f, 694.48999f);
-		EV_SetAng(EMERALD, 0, 21293, 0);
+		EV_SetPos(emerald, 1527.3f, 192.8f, 694.48999f);
+		EV_SetAng(emerald, 0, 21293, 0);
 		COverlaySetSpeed(BLACK, -0.1f);
 		EV_SetAction(TR2, action_tr2a_s_t2b_body, &tr2_texlist, 0.0f, 1, 0);
 		ChangeTornado2Model_EV0047();
@@ -222,13 +216,17 @@ void ev0047_t_tornado2(int state)
 		ChangeTornado2Model2_EV0047();
 		stopObjectAll();
 		EV_InitPlayer(0);
-		EV_FreeObject(&EMERALD);
+		EV_FreeObject(&emerald);
 		EV_FreeObject(&TR2);
 		EventSe_Close();
-		FreeTask(BLACK);
-		BLACK = 0;
-		FreeTask(BLACK2);
-		BLACK2 = 0;
+		if(BLACK){
+			FreeTask(BLACK);
+			BLACK = 0;
+		}
+		if(BLACK2){
+			FreeTask(BLACK2);
+			BLACK2 = 0;
+		}
 		effect_delete(0);
 		break;
 	}
