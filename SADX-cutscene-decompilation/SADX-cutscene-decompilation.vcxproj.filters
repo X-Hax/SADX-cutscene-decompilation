@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Tails">
       <UniqueIdentifier>{8bd115df-aa14-4c61-b6fe-37bb4bf18613}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Knuckles">
+      <UniqueIdentifier>{943b2c8f-b2df-4727-83af-effb5e1f2b44}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mod.cpp">
@@ -278,6 +281,9 @@
     </ClCompile>
     <ClCompile Include="objects.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0080_k_intro.cpp">
+      <Filter>Source Files\Knuckles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

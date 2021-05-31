@@ -154,5 +154,6 @@ ObjectMaster* zero;
 * EV0039: Tails' version of EV000B.
 * EV003E: Remove the Jet Anklet instead of the Rhythm Badge in Tails' flashback and enable two COverlaySetPriority calls.
 * EV004B: Tails' version of EV001A.
+* EV0080: Knuckles has an eyelid animation when he gets woken up. The line points to "0" instead of him though, so it doesn't do anything.
 */
 int enableUnusedCode = 0;

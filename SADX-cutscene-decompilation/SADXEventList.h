@@ -61,6 +61,7 @@ void ev0053_t_fmvplaceholder(int state);
 void ev0054_t_eclanding(int state);
 void ev0055_t_sandhill(int state);
 void ev0056_t_casinowake(int state);
+void ev0080_k_intro(int state);
 void ev0100_s_ecafterlanding(int state);
 void ev0101_s_ecfools(int state);
 void ev0102_s_ecaftertransforming(int state);

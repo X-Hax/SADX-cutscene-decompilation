@@ -106,6 +106,8 @@ FunctionPointer(ObjectMaster*, GetChaos0, (), 0x6EDCD0);
 VoidFunc(ToWaterChaos0, 0x6EDD00);
 VoidFunc(ToHumanChaos0, 0x6EDD20);
 VoidFunc(SetWaterChaos0, 0x6EDD80);
+FunctionPointer(void, ChangeMotspd, (float mod_spd), 0x6EDCE0);
+FunctionPointer(void, SetPositionChaos0, (float pos_x, float pos_y, float pos_z), 0x6EDD40);
 FunctionPointer(void, CreateChaos0, (float pos_x, float pos_y, float pos_z,
 	int ang_x, int ang_y, int ang_z, signed int cng_int), 0x6EE930);
 FunctionPointer(ObjectMaster*, EV_Alife, (), 0x6EF2C0);
