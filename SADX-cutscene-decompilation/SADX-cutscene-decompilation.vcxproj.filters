@@ -285,6 +285,15 @@
     <ClCompile Include="Knuckles\ev0080_k_intro.cpp">
       <Filter>Source Files\Knuckles</Filter>
     </ClCompile>
+    <ClCompile Include="Knuckles\ev0082_k_beginhunt.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0083_k_casinopast.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0084_k_pastfirst.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

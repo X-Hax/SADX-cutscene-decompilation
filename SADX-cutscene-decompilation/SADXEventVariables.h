@@ -66,6 +66,7 @@ extern ObjectMaster* IWA;
 extern ObjectMaster* IWA2;
 extern ObjectMaster* IWA3;
 extern ObjectMaster* KOTORI;
+extern ObjectMaster* KOUKYU;
 extern ObjectMaster* KURAYAMI;
 extern ObjectMaster* LADY_A;
 extern ObjectMaster* LADY_B;
@@ -561,6 +562,13 @@ DataPointer(NJS_ACTION, action_k_k0015_knuckles, 0x3C84F4C);
 DataPointer(NJS_ACTION, action_k_k0016_knuckles, 0x3C84F3C);
 DataPointer(PADREC_DATA_TAG, E0080K, 0x861220);
 
+//EV0082
+DataPointer(NJS_ACTION, action_k_k0003_knuckles, 0x3C851DC);
+DataPointer(NJS_ACTION, action_k_k0004_knuckles, 0x3C851D4);
+
+//EV0083
+DataPointer(EPATHTAG, epathtag_e0083TK, 0x2BE0D08);
+
 //EV0165
 DataPointer(NJS_ACTION, action_s_item_r0, 0x3C847E8);
 DataPointer(NJS_ACTION, action_s_item_r2, 0x3C847E0);
@@ -647,6 +655,8 @@ DataArray(char**, msgTbl_ev0051, 0x2BE9140, 5);
 DataArray(char**, msgTbl_ev0054, 0x2BE6C9C, 5);
 DataArray(char**, msgTbl_ev0056, 0x2BE4F10, 5);
 DataArray(char**, msgTbl_ev0080, 0x2BE0F4C, 5);
+DataArray(char**, msgTbl_ev0082, 0x2BE0D7C, 5);
+DataArray(char**, msgTbl_ev0084, 0x2BE01C8, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);

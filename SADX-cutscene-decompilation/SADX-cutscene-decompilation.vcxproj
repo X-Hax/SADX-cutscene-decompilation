@@ -141,6 +141,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Knuckles\ev0080_k_intro.cpp" />
+    <ClCompile Include="Knuckles\ev0082_k_beginhunt.cpp" />
+    <ClCompile Include="Knuckles\ev0083_k_casinopast.cpp" />
+    <ClCompile Include="Knuckles\ev0084_k_pastfirst.cpp" />
     <ClCompile Include="objects.cpp" />
     <ClCompile Include="Tails\ev0042_t_froggyjungle.cpp" />
     <ClCompile Include="Tails\ev0044_t_enterpast.cpp" />

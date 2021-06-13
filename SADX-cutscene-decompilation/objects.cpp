@@ -55,6 +55,7 @@ ObjectMaster* IWA;						//Egg Viper Debris
 ObjectMaster* IWA2;						//Egg Viper Debris
 ObjectMaster* IWA3;						//Egg Viper Debris
 ObjectMaster* KOTORI;					//Amy's bird
+ObjectMaster* KOUKYU;					//Tikal ball
 ObjectMaster* KURAYAMI;					//Fadeout
 ObjectMaster* LADY_A;					//NPC
 ObjectMaster* LADY_B;					//NPC
