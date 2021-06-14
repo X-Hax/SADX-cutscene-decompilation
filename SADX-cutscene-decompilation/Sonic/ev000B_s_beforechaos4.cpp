@@ -167,7 +167,7 @@ void ev000B_s_beforechaos4(int state)
 		EV_Wait(15);
 		EV_ClrFace(player);
 		eggmoble_move_rapid(85.0f, 80.0f, 80.0f, 50);
-		QueueSound_XYZ(1337, (EntityData1*)0xCB80001, 1, 120, 70, 85.0f, 80.0f, 80.0f);
+		dsPlay_timer_v(1337, 0xCB80001, 1, 120, 70, 85.0f, 80.0f, 80.0f);
 		EV_Wait(30);
 		EV_SerifPlay(474);
 		EV_Wait(30);
@@ -200,7 +200,7 @@ void ev000B_s_beforechaos4(int state)
 		EV_CameraPerspective(0, 1, 5461);
 		EV_CameraPos(0, 0, 83.629997f, 73.699997f, 120.18f);
 		EV_CameraAng(0, 0, 512, 31744, 0);
-		QueueSound_XYZ(1336, (EntityData1*)0xCB80002, 1, 120, 60, 80.0f, 80.0f, 160.0f);
+		dsPlay_timer_v(1336, 0xCB80002, 1, 120, 60, 80.0f, 80.0f, 160.0f);
 		EV_SetAng(eggmoble, 0, 0, 18);
 		EV_Wait(10);
 		ChgCaptureMod(CAP_01, 1);
@@ -216,7 +216,7 @@ void ev000B_s_beforechaos4(int state)
 		stopObject(B_EME);
 		stopObject(G_EME);
 		ChgCaptureMod(CAP_01, 2);
-		DoSoundQueueThing(1336);
+		dsStop_num(1336);
 		EV_Wait(5);
 		EV_ClrAction(eggmoble);
 		EV_ClrAction(G_EME);
@@ -415,7 +415,7 @@ void ev000B_s_beforechaos4(int state)
 		EV_CameraAng(0, 20, 1024, 43520, 0);
 		ToHumanChaos2();
 		EV_Wait(20);
-		QueueSound_XYZ(1339, (EntityData1*)0xCB80003, 1, 120, 265, 26.83f, 69.800003f, 159.98f);
+		dsPlay_timer_v(1339, 0xCB80003, 1, 120, 265, 26.83f, 69.800003f, 159.98f);
 		EV_CameraPos(0, 45, 8.3900003f, 91.059998f, 149.03f);
 		EV_CameraAng(0, 45, 63232, 43520, 0);
 		EV_Wait(45);

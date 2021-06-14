@@ -79,7 +79,7 @@ void ev000C_s_afterchaos4(int state)
 		EV_Msg((msgTbl_ev000C[TextLanguage])[3]); //"\aHa ha ha ha ha ha ha!"
 		EV_Wait(35);
 		ChgCaptureMod(CAP_01, 1);
-		QueueSound_XYZ(1336, (EntityData1*)0xCB80001, 1, 120, 185, 80.0f, 80.0f, 160.0f);
+		dsPlay_timer_v(1336, 0xCB80001, 1, 120, 185, 80.0f, 80.0f, 160.0f);
 		EV_CameraTargetObj(0, 150, eggmoble, 0.0f, 6.0f, 0.0f, 0);
 		EV_Wait(30);
 		EV_MsgClose();
@@ -91,7 +91,7 @@ void ev000C_s_afterchaos4(int state)
 		EV_Wait(5);
 		delete_eggmoble();
 		ChgCaptureMod(CAP_01, 2);
-		DoSoundQueueThing(1336);
+		dsStop_num(1336);
 		EV_SetAng(player, 0, 0, 0);
 		EV_LookPoint(player, 95.0f, 140.0f, 300.0f);
 		EV_SetPos(knuckles, 103.96f, 72.470001f, 254.33f);
@@ -210,8 +210,8 @@ void ev000C_s_afterchaos4(int state)
 		EV_InitPlayer(0);
 		EV_SetPos(player, 73.0f, 72.019997f, 232.50999f);
 		EV_SetAng(player, 0, 45056, 0);
-		DoSoundQueueThing(1336);
-		DoSoundQueueThing(1341);
+		dsStop_num(1336);
+		dsStop_num(1341);
 		stopObjectAll();
 		EV_RemovePlayer(2);
 		EV_RemovePlayer(3);

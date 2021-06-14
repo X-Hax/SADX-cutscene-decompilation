@@ -146,7 +146,7 @@ void ev0016_s_zeroboardsec(int state)
 		EV_CameraAng(0, 45, 955, 1417, 0);
 		EV_Wait(45);
 		ChgCaptureMod(CAP_01, 1);
-		QueueSound_XYZ(1336, (EntityData1*)0xCB80001, 1, 100, 300, 100.0f, 600.0f, 1150.0f);
+		dsPlay_timer_v(1336, 0xCB80001, 1, 100, 300, 100.0f, 600.0f, 1150.0f);
 		EV_CameraTargetObj(0, 60, egg_amy, 0.0f, 5.5f, 0.0f, 0);
 		EV_CameraPos(0, 200, -252.03999f, 95.900002f, 938.23999f);
 		EV_Wait(90);
@@ -165,7 +165,7 @@ void ev0016_s_zeroboardsec(int state)
 		EV_FreeObject(&egg_amy);
 		EV_CameraTargetFree();
 		EV_Wait(15);
-		DoSoundQueueThing(1336);
+		dsStop_num(1336);
 		EV_SetPos(player, -181.24001f, 64.099998f, 958.96997f);
 		EV_SetAng(player, 65374, 9179, 65486);
 		EV_Wait(1);

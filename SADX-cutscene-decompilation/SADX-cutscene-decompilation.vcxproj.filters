@@ -294,6 +294,18 @@
     <ClCompile Include="Knuckles\ev0084_k_pastfirst.cpp">
       <Filter>Source Files\Knuckles</Filter>
     </ClCompile>
+    <ClCompile Include="Knuckles\ev0085_k_tikalfather.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0086_k_leavepastfirst.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0087_k_chaos2.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0088_k_eggmantricksknuckles.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

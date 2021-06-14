@@ -85,7 +85,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_Wait(60);
 		EV_MsgClose();
 		ChgCaptureMod(CAP_01, 1);
-		QueueSound_XYZ(1336, (EntityData1*)0xCB80001, 1, 120, 185, 80.0f, 80.0f, 160.0f);
+		dsPlay_timer_v(1336, 0xCB80001, 1, 120, 185, 80.0f, 80.0f, 160.0f);
 		EV_Wait(30);
 		moveObjectAngle2(eggmoble, 80.0f, 80.0f, 160.0f, 235.71001f, 807.02002f, 643.87f, 0, 15104, 0, 5376, 15104, 0, 180);
 		EV_Wait(150);
@@ -94,7 +94,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_Wait(5);
 		delete_eggmoble();
 		ChgCaptureMod(CAP_01, 2);
-		DoSoundQueueThing(1336);
+		dsStop_num(1336);
 		EV_SetAng(sonic, 0, 0, 0);
 		EV_LookPoint(sonic, 95.0f, 140.0f, 300.0f);
 		EV_SetPos(knuckles, 103.96f, 72.470001f, 254.33f);

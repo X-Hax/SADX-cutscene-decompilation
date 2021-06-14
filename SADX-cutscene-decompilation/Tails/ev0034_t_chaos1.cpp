@@ -486,7 +486,7 @@ void ev0034_t_chaos1(int state)
 		EV_CameraPos(1, 0, 1004.0f, 129.39999f, 873.40002f);
 		EV_CameraAng(1, 0, 64441, 49066, 0);
 		EV_CameraPos(1, 30, 972.59998f, 132.7f, 873.09998f);
-		crushLightOn(1030.2f, 130.86f, 873.79999f, 4, 6, 0.80000001f, 2.5f, -106, 16777170);
+		crushLightOn(1030.2f, 130.86f, 873.79999f, 4, 6, 0.80000001f, 2.5f, 0xFFFFFF96, 0xFFFFD2);
 		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.89999998f, 1, 0);
 		FLASH = COverlayCreate(0.1f, 0.050000001f, 1.0f, 1.0f, 0.89999998f);
 		EV_Wait(5);

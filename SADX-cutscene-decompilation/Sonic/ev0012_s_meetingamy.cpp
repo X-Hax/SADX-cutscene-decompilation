@@ -229,7 +229,7 @@ void ev0012_s_meetingamy(int state)
 		EV_Wait(10);
 		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
 		EV_Wait(120);
-		DoSoundQueueThing(1325);
+		dsStop_num(1325);
 		stopObjectAll();
 		break;
 	case 2:

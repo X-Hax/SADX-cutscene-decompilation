@@ -28,7 +28,7 @@ void ev001D_s_afterchaos6(int state)
 		eggmoble = GetEggMobleTask();
 		EV_ClrAction(eggmoble);
 		EV_SetAction(eggmoble, &action_gm_gm0002_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 1, 0);
-		QueueSound_XYZ(1337, (EntityData1*)0xCB80001, 1, 100, 600, 0.0f, 780.0f, -386.04001f);
+		dsPlay_timer_v(1337, 0xCB80001, 1, 100, 600, 0.0f, 780.0f, -386.04001f);
 		EV_Wait(1);
 		seteggmobleparam(0.5, 256);
 		EV_CameraPos(0, 0, -24.51f, 754.06f, -310.82001f);

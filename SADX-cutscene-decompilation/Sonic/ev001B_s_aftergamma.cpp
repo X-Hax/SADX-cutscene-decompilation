@@ -367,7 +367,7 @@ void ev001B_s_aftergamma(int state)
 		EV_Wait(3);
 		EV_CameraAng(0, 4, 1152, 23808, 1280);
 		EV_Wait(3);
-		DoSoundQueueThing(1325);
+		dsStop_num(1325);
 		EV_CameraAng(0, 4, 1408, 23808, 1280);
 		EV_Wait(3);
 		EV_CameraAng(0, 4, 1152, 23808, 1280);
@@ -415,7 +415,7 @@ void ev001B_s_aftergamma(int state)
 		EV_CameraAng(0, 0, 63104, 5376, 0);
 		EV_Wait(3);
 		EV_Wait(57);
-		DoSoundQueueThing(1325);
+		dsStop_num(1325);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(1);
 		EV_SetAction(player, &action_s_s9001_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);

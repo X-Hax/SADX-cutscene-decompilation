@@ -162,7 +162,7 @@ void ev002B_s_beforechaos0(int state)
 		EV_ClrAction(PL_NOR_08);
 		EV_SetAction(PL_NOR_08, &action_mp_10001_POLICE, &texlist_mp_10000_POLICE, 1.0f, 1, 0);
 		moveObject(PL_NOR_08, 196.91f, 9.4595003f, 376.54001f, 221.05f, 10.5795f, 334.09f, 30);
-		QueueSound_XYZ(1339, (EntityData1*)0xCB80001, 1, 100, 30, 221.05f, 10.5795f, 334.09f);
+		dsPlay_timer_v(1339, 0xCB80001, 1, 100, 30, 221.05f, 10.5795f, 334.09f);
 		EV_Wait(10);
 		EV_Msg((msgTbl_ev002B[TextLanguage])[0]); //"\aYou are completely surrounded!"
 		EV_SerifPlay(404);
@@ -171,7 +171,7 @@ void ev002B_s_beforechaos0(int state)
 		EV_ClrAction(PL_NOR_03);
 		EV_SetAction(PL_NOR_03, &action_mp_10001_POLICE, &texlist_mp_10000_POLICE, 1.0f, 1, 0);
 		moveObject(PL_NOR_03, 275.89001f, 9.4595003f, 423.5f, 280.98999f, 9.4595003f, 381.94f, 50);
-		QueueSound_XYZ(1339, (EntityData1*)0xCB80002, 1, 120, 50, 280.98999f, 9.4595003f, 381.94f);
+		dsPlay_timer_v(1339, 0xCB80002, 1, 120, 50, 280.98999f, 9.4595003f, 381.94f);
 		EV_SetAction(PL_NOR_08, &action_mp_10003_POLICE, &texlist_mp_10000_POLICE, 1.0f, 0, 2);
 		EV_SetAction(PL_NOR_08, &action_mp_10004_POLICE, &texlist_mp_10000_POLICE, 1.0f, 1, 0);
 		dsPlay_oneshot_v(1343, 0, 0, 100, 280.98999f, 9.4595003f, 381.94f);
@@ -188,7 +188,7 @@ void ev002B_s_beforechaos0(int state)
 		EV_Msg((msgTbl_ev002B[TextLanguage])[1]); //"\aSurrender yourself!"
 		EV_SerifPlay(405);
 		moveObject(PL_NOR_07, 330.45001f, 9.4595003f, 372.67999f, 318.64999f, 10.679501f, 339.67001f, 45);
-		QueueSound_XYZ(1339, (EntityData1*)0xCB80003, 1, 100, 45, 318.64999f, 10.679501f, 339.67001f);
+		dsPlay_timer_v(1339, 0xCB80003, 1, 100, 45, 318.64999f, 10.679501f, 339.67001f);
 		dsPlay_oneshot_v(1343, 0, 0, 120, 280.98999f, 9.4595003f, 381.94f);
 		EV_Wait(15);
 		EV_SetAction(PL_NOR_04, &action_mp_10003_POLICE, &texlist_mp_10000_POLICE, 1.0f, 0, 2);
@@ -199,7 +199,7 @@ void ev002B_s_beforechaos0(int state)
 		EV_SetAction(PL_NOR_07, &action_mp_10003_POLICE, &texlist_mp_10000_POLICE, 1.0f, 0, 2);
 		EV_SetAction(PL_NOR_07, &action_mp_10004_POLICE, &texlist_mp_10000_POLICE, 1.0f, 1, 0);
 		moveObject(PL_NOR_01, 379.45999f, 9.4595003f, 353.04001f, 353.32999f, 9.4595003f, 348.79999f, 30);
-		QueueSound_XYZ(1339, (EntityData1*)0xCB80004, 1, 80, 30, 353.32999f, 9.4595003f, 348.79999f);
+		dsPlay_timer_v(1339, 0xCB80004, 1, 80, 30, 353.32999f, 9.4595003f, 348.79999f);
 		dsPlay_oneshot_v(1343, 0, 0, 100, 280.98999f, 9.4595003f, 381.94f);
 		EV_Wait(10);
 		stopObject(PL_NOR_07);
@@ -461,7 +461,7 @@ void ev002B_s_beforechaos0(int state)
 		EV_SetAction(PL_NOR_04, &action_mp_10004_POLICE, &texlist_mp_10000_POLICE, 1.0f, 1, 0);
 		EV_SetAction(PL_NOR_03, &action_mp_10016_POLICE, &texlist_mp_10000_POLICE, 1.0f, 0, 6);
 		EV_SetAction(PL_NOR_03, &action_mp_10015_POLICE, &texlist_mp_10000_POLICE, 1.0f, 1, 6);
-		QueueSound_XYZ(1340, (EntityData1*)0xCB80005, 1, 80, 60, 280.98999f, 9.4595003f, 381.94f);
+		dsPlay_timer_v(1340, 0xCB80005, 1, 80, 60, 280.98999f, 9.4595003f, 381.94f);
 		EV_Msg((msgTbl_ev002B[TextLanguage])[3]); //"\aOh no!   \nOur weapons are useless!"
 		EV_Wait(10);
 		EV_SerifPlay(408);

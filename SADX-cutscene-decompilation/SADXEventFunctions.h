@@ -5,11 +5,14 @@
 //Leaked Symbols
 ObjectFunc(FreeTask, 0x40B6C0);
 FunctionPointer(void, SetBankDir, (signed int soundlist), 0x4238E0);
-FunctionPointer(void, BGM_Play, (MusicIDs song), 0x425690);
+FunctionPointer(void, dsPlay_timer, (int tone, int id, int pri, int volofs, int timer), 0x423F50);
+FunctionPointer(void, dsPlay_timer_v, (int tone, int id, int pri, int volofs, int timer, float x, float y, float z), 0x424000);
+FunctionPointer(void, dsStop_num, (int tone), 0x424210);
 FunctionPointer(void, dsStop_id, (int id), 0x424240);
 FunctionPointer(void, dsStop_all, (), 0x424460);
 FunctionPointer(void, dsPlay_oneshot_v, (int tone, int id, int pri,
 	int volofs, float x, float y, float z), 0x424FC0);
+FunctionPointer(void, BGM_Play, (MusicIDs song), 0x425690);
 VoidFunc(BGM_Stop, 0x4256B0);
 VoidFunc(EV_PadOn, 0x42F610);
 VoidFunc(EV_PadOff, 0x42F620);
@@ -79,6 +82,7 @@ FunctionPointer(void, moveObjectAngle2, (ObjectMaster* obj, float st_x, float st
 	float en_x, float en_y, float en_z, int st_ang_x, int st_ang_y, int st_ang_z,
 	int en_ang_x, int en_ang_y, int en_ang_z, signed int frame), 0x6EC580);
 FunctionPointer(void, moveObjectOn, (ObjectMaster* tp, float x, float y, float z, int frame, ObjectMaster* dest_obj), 0x6EC6D0);
+FunctionPointer(void, moveObjectRightHand, (ObjectMaster* obj, char player_no, float far_x, float far_y, float far_z, int frame), 0x6ECA20);
 FunctionPointer(void, addmotModel, (int model, NJS_ACTION* action, int mot_id), 0x6ECAC0);
 FunctionPointer(void, playModel, (int model_id, int mot_id, float mot_spd, int loop_num), 0x6ECAE0);
 FunctionPointer(ObjectMaster*, getobjModel, (int model_id), 0x6ECB40);
@@ -94,7 +98,7 @@ FunctionPointer(void, effect_color, (__int16 ef_num, float col_a, float col_r, f
 FunctionPointer(void, effect_size_change, (int ef_num, float speed_x, float speed_y), 0x6ED950);
 VoidFunc(crushLightOff, 0x6ED9A0);
 FunctionPointer(void, crushLightOn, (float pos_x, float pos_y, float pos_z, int crushLightNum, int life,
-	float start_width, float end_width, int start_col, int end_col), 0x6EDA20);
+	float start_width, float end_width, unsigned int start_col, unsigned int end_col), 0x6EDA20);
 FunctionPointer(void, effect_scl, (int ef_num, float sx, float sy), 0x6ED8E0);
 VoidFunc(DeleteChaos0, 0x6EDAB0);
 FunctionPointer(void, Jump2Chaos0, (float pos_x, float pos_y, float pos_z,
@@ -160,11 +164,21 @@ FunctionPointer(void, CreateChaos2, (float pos_x, float pos_y, float pos_z, int 
 ObjectFunc(throughplayer_on, 0x6F5B50);
 ObjectFunc(throughplayer_off, 0x6F5B90);
 VoidFunc(DeleteChaos1, 0x6F5BE0);
+VoidFunc(ToWaterChaos1, 0x6F5C00);
 VoidFunc(ToHumanChaos1, 0x6F5C20);
 FunctionPointer(void, ChangeMotionSpeedChaos1, (float mot_spd), 0x6F5C40);
+FunctionPointer(void, SetPositionChaos1, (float pos_x, float pos_y, float pos_z), 0x6F5C60);
 VoidFunc(SetWaterChaos1, 0x6F5C80);
 FunctionPointer(void, CreateChaos1, (float pos_x, float pos_y, float pos_z, int ang_x,
 	int ang_y, int ang_z, int cng_int), 0x6F6120);
+VoidFunc(StgChaos2CtrlOff, 0x6F6210);
+VoidFunc(StgChaos2Human2Water, 0x6F6290);
+VoidFunc(StgChaos2Water2Human, 0x6F62A0);
+FunctionPointer(void, StgChaos2Action, (float ratio), 0x6F62B0);
+FunctionPointer(void, StgChaos2BubbleAdd, (float num), 0x6F62C0);
+FunctionPointer(void, StgChaos2SetPos, (float pos_x, float pos_y, float pos_z), 0x6F62D0);
+FunctionPointer(void, StgChaos2SetAng, (int ang_x, int ang_y, int ang_z), 0x6F6320);
+FunctionPointer(void, StgChaos2CtrlOn, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z, int rot_spd), 0x6F6380);
 VoidFunc(CEcCloud_Stop, 0x6F6690);
 FunctionPointer(void, CEcCloud_Start, (float scale, int num), 0x6F6810);
 FunctionPointer(ObjectMaster*, set_amy, (), 0x6F6B20);
@@ -218,6 +232,9 @@ ObjectFunc(ptr_crashed, 0x6F9390);
 FunctionPointer(ObjectMaster*, EggViperDebrisGenerator, (float x, float y, float z, float sx,
 	float sy, float sz, __int16 a7), 0x6F9B40);
 FunctionPointer(ObjectMaster*, missilefunc, (), 0x6F8610);
+FunctionPointer(void, createChaos0_EV0088, (float pos_x, float pos_y, float pos_z, int ang), 0x691400);
+VoidFunc(deleteChaos0_EV0088, 0x6910F0);
+
 
 //Stuff that doesn't have an official name because it was part of the main event function in the 360 version:
 VoidFunc(ChangeTornado2Model_EV0047, 0x6BA0A0);
@@ -241,3 +258,5 @@ VoidFunc(CreateTaskGattaiEV004C, 0x6B5E40);
 VoidFunc(FreeTaskGattaiEV004C, 0x6B5EA0);
 VoidFunc(create_task_gattai_EV004D, 0x6B3250);
 VoidFunc(kill_task_gattai_EV004D, 0x6B32B0);
+FunctionPointer(void, MoveChaosPuddle_EV0088, (float pos_x, float pos_y, float pos_z, int frame), 0x691140);
+

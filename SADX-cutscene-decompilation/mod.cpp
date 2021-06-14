@@ -74,6 +74,10 @@ extern "C"
 		CutsceneDataList_[0x0082]->Function = ev0082_k_beginhunt;
 		CutsceneDataList_[0x0083]->Function = ev0083_k_casinopolis;
 		CutsceneDataList_[0x0084]->Function = ev0084_k_pastfirst;
+		CutsceneDataList_[0x0085]->Function = ev0085_k_tikalfather;
+		CutsceneDataList_[0x0086]->Function = ev0086_k_leavepastfirst;
+		CutsceneDataList_[0x0087]->Function = ev0087_k_chaos2;
+		CutsceneDataList_[0x0088]->Function = ev0088_k_eggmantricksknuckles;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;

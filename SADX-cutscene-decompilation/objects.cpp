@@ -73,6 +73,7 @@ ObjectMaster* OYAJI_C;					//NPC
 ObjectMaster* OYAJI;					//NPC
 ObjectMaster* OYAJI2;					//NPC
 ObjectMaster* p_Chaos0Task;				//Event Chaos
+ObjectMaster* PAPA;						//Pachacamac
 ObjectMaster* PLANE;					//Tornado 1
 ObjectMaster* PAT_01;					//Police car
 ObjectMaster* PAT_02;					//Police car
@@ -103,6 +104,7 @@ ObjectMaster* suki1_point;				//Borders when Eggman spots Tails' purple emerald.
 ObjectMaster* suki2_point;				//Borders when Eggman spots Tails' purple emerald.
 ObjectMaster* task_skywalk;				//Sky floor
 ObjectMaster* task_skywalk2;			//Sky floor
+ObjectMaster* W_EME;					//Chaos Emerald: White
 ObjectMaster* WING;						//Amy's bird
 ObjectMaster* WHITE;					//White fadeout
 ObjectMaster* TALES_STEP;				//Sky floor
