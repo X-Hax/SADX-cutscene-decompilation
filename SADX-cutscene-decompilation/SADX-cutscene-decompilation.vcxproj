@@ -148,6 +148,10 @@
     <ClCompile Include="Knuckles\ev0084_k_pastfirst.cpp" />
     <ClCompile Include="Knuckles\ev0087_k_chaos2.cpp" />
     <ClCompile Include="Knuckles\ev0088_k_eggmantricksknuckles.cpp" />
+    <ClCompile Include="Knuckles\ev0089_k_chasesonic.cpp" />
+    <ClCompile Include="Knuckles\ev008A_k_vssonic.cpp" />
+    <ClCompile Include="Knuckles\ev008B_k_chaos4.cpp" />
+    <ClCompile Include="Knuckles\ev008C_k_afterchaos4.cpp" />
     <ClCompile Include="objects.cpp" />
     <ClCompile Include="Tails\ev0042_t_froggyjungle.cpp" />
     <ClCompile Include="Tails\ev0044_t_enterpast.cpp" />

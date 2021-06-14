@@ -306,6 +306,18 @@
     <ClCompile Include="Knuckles\ev0088_k_eggmantricksknuckles.cpp">
       <Filter>Source Files\Knuckles</Filter>
     </ClCompile>
+    <ClCompile Include="Knuckles\ev0089_k_chasesonic.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev008A_k_vssonic.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev008B_k_chaos4.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev008C_k_afterchaos4.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
