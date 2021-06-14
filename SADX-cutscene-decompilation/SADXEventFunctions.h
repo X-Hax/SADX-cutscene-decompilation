@@ -36,6 +36,7 @@ ObjectFunc(EV_ClrPath, 0x42FE80);
 ObjectFunc(EV_LookFree, 0x42FFB0);
 FunctionPointer(void, EV_LookObject, (ObjectMaster* tp, ObjectMaster* target, float x, float y, float z), 0x42FFD0);
 FunctionPointer(void, EV_LookPoint, (ObjectMaster* tp, float x, float y, float z), 0x430000);
+FunctionPointer(void, EV_LookAngle, (ObjectMaster* tp, int x, int y, int z), 0x430030);
 ObjectFunc(EV_MoveFree, 0x430060);
 FunctionPointer(void, EV_MovePoint, (ObjectMaster* tp, float x, float y, float z), 0x430080);
 FunctionPointer(void, EV_MovePoint2, (ObjectMaster* tp, float x, float y, float z, float s, float a), 0x4300D0);
@@ -114,9 +115,11 @@ FunctionPointer(void, ChangeMotspd, (float mod_spd), 0x6EDCE0);
 FunctionPointer(void, SetPositionChaos0, (float pos_x, float pos_y, float pos_z), 0x6EDD40);
 FunctionPointer(void, CreateChaos0, (float pos_x, float pos_y, float pos_z,
 	int ang_x, int ang_y, int ang_z, signed int cng_int), 0x6EE930);
+FunctionPointer(void, EV_Alife_FaceChange, (ObjectMaster* tp, int texid), 0x6EEFD0);
 FunctionPointer(ObjectMaster*, EV_Alife, (), 0x6EF2C0);
 FunctionPointer(ObjectMaster*, COverlayCreate, (float s, float a, float r, float g, float b), 0x6EF480);
 FunctionPointer(void, COverlaySetSpeed, (ObjectMaster* _this, float s), 0x6EF4C0);
+FunctionPointer(void, COverlaySetAlpha, (ObjectMaster* _this, float a), 0x6EF4D0);
 FunctionPointer(void, COverlaySetColor, (ObjectMaster* _this, float r, float g, float b), 0x6EF4E0);
 FunctionPointer(void, COverlaySetPriority, (ObjectMaster* _this, float p), 0x6EF500);
 FunctionPointer(ObjectMaster*, CIchimaie2_Create, (NJS_TEXLIST* texlistp, char mode), 0x6EF680);
@@ -154,6 +157,8 @@ FunctionPointer(ObjectMaster*, CreateCaptureBeam, (float x, float y, float z, in
 ObjectFunc(delete_capturebeam, 0x6F3A20);
 FunctionPointer(void, ChgCaptureMod, (ObjectMaster* tp, char mode), 0x6F3A40);
 FunctionPointer(void, SetCaptureParam, (ObjectMaster* tp, float sclx, float scly, float sclz, float scl_large_spd, float scl_small_spd, signed int rot_spd), 0x6F3A60);
+FunctionPointer(void, MemeCreate, (int num), 0x6F53B0);
+VoidFunc(MemeDelete, 0x6F53D0);
 VoidFunc(DeleteChaos2, 0x6F53F0);
 VoidFunc(ToHumanChaos2, 0x6F5410);
 FunctionPointer(void, ChangeMotionSpeedChaos2, (float mot_spd), 0x6F5430);

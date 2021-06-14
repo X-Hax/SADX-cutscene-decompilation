@@ -82,6 +82,10 @@ extern "C"
 		CutsceneDataList_[0x008A]->Function = ev008A_k_vssonic;
 		CutsceneDataList_[0x008B]->Function = ev008B_k_chaos4;
 		CutsceneDataList_[0x008C]->Function = ev008C_k_afterchaos4;
+		CutsceneDataList_[0x008D]->Function = ev008D_k_lostpast;
+		CutsceneDataList_[0x008E]->Function = ev008E_k_pastsecond;
+		CutsceneDataList_[0x008F]->Function = ev008F_k_tikalaltar;
+		CutsceneDataList_[0x0091]->Function = ev0091_k_leavepastsecond;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;

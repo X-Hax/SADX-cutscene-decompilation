@@ -152,6 +152,10 @@
     <ClCompile Include="Knuckles\ev008A_k_vssonic.cpp" />
     <ClCompile Include="Knuckles\ev008B_k_chaos4.cpp" />
     <ClCompile Include="Knuckles\ev008C_k_afterchaos4.cpp" />
+    <ClCompile Include="Knuckles\ev008D_k_lostpast.cpp" />
+    <ClCompile Include="Knuckles\ev008E_k_pastsecond.cpp" />
+    <ClCompile Include="Knuckles\ev008F_k_tikalaltar.cpp" />
+    <ClCompile Include="Knuckles\ev0091_k_leavepastsecond.cpp" />
     <ClCompile Include="objects.cpp" />
     <ClCompile Include="Tails\ev0042_t_froggyjungle.cpp" />
     <ClCompile Include="Tails\ev0044_t_enterpast.cpp" />

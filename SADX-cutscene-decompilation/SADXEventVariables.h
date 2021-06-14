@@ -142,6 +142,7 @@ extern ObjectMaster* TAMA_20;
 extern ObjectMaster* TEPODON;
 extern ObjectMaster* tikal;
 extern ObjectMaster* tikalb;
+extern ObjectMaster* Tik;
 extern ObjectMaster* TR2;
 extern ObjectMaster* TR2B;
 extern ObjectMaster* zan;
@@ -602,6 +603,22 @@ DataPointer(NJS_ACTION, action_s_s0034_sonic, 0x3C84938);
 DataPointer(NJS_ACTION, action_m_em_green, 0x2D2633C);
 DataPointer(PADREC_DATA_TAG, EV008A_KN_PUNCH, 0x85E5C4);
 
+//EV008D
+DataPointer(EPATHTAG, epathtag_e008DTK, 0x2BDF938);
+
+//EV008F
+DataPointer(NJS_ACTION, action_j_j0018_tikal, 0x2FB1F1C);
+DataPointer(NJS_ACTION, action_j_j0019_tikal, 0x2FBFAA4);
+DataPointer(NJS_ACTION, action_al_stand_al_model, 0x3C84EBC);
+DataPointer(NJS_ACTION, action_ti_walk, 0x8FC8DC);
+
+//EV0091
+DataPointer(NJS_ACTION, action_k_k0009_knuckles, 0x3C848E0);
+DataPointer(NJS_ACTION, action_k_k0010_knuckles, 0x3C851B8);
+DataPointer(NJS_ACTION, action_k_k0011_knuckles, 0x3C851C0);
+DataPointer(NJS_ACTION, action_k_k0018_knuckles, 0x3C851C8);
+
+
 //EV0165
 DataPointer(NJS_ACTION, action_s_item_r0, 0x3C847E8);
 DataPointer(NJS_ACTION, action_s_item_r2, 0x3C847E0);
@@ -698,6 +715,9 @@ DataArray(char**, msgTbl_ev0089, 0x2BDFD68, 5);
 DataArray(char**, msgTbl_ev008A, 0x2BDFD04, 5);
 DataArray(char**, msgTbl_ev008B, 0x2BDFBD8, 5);
 DataArray(char**, msgTbl_ev008C, 0x2BDFA4C, 5);
+DataArray(char**, msgTbl_ev008E, 0x2BDD928, 5);
+DataArray(char**, msgTbl_ev008F, 0x2BDD8C4, 5);
+DataArray(char**, msgTbl_ev0091, 0x2BDD7D0, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);

@@ -131,6 +131,7 @@ ObjectMaster* TAMA_20;					//Bullet
 ObjectMaster* TEPODON;					//Eggman's Missile
 ObjectMaster* tikal;					//Tikal ball
 ObjectMaster* tikalb;					//Tikal ball
+ObjectMaster* Tik;						//Tikal ball
 ObjectMaster* TR2;						//Tornado 2
 ObjectMaster* TR2B;						//Tornado 2 post-transformation
 ObjectMaster* zan;						//Probably Tails' crashed prototype plane.
@@ -158,5 +159,6 @@ ObjectMaster* zero;
 * EV003E: Remove the Jet Anklet instead of the Rhythm Badge in Tails' flashback and enable two COverlaySetPriority calls.
 * EV004B: Tails' version of EV001A.
 * EV0080: Knuckles has an eyelid animation when he gets woken up. The line points to "0" instead of him though, so it doesn't do anything.
+* EV0091: Knuckles does an animation when viewing the small Egg Carrier inside the emerald but it can't be seen normally because he slides off the pedestal and out of view before it can start.
 */
 int enableUnusedCode = 0;
