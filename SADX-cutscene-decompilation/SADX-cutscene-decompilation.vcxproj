@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -156,6 +156,9 @@
     <ClCompile Include="Knuckles\ev008E_k_pastsecond.cpp" />
     <ClCompile Include="Knuckles\ev008F_k_tikalaltar.cpp" />
     <ClCompile Include="Knuckles\ev0091_k_leavepastsecond.cpp" />
+    <ClCompile Include="Knuckles\ev0092_k_followgamma.cpp" />
+    <ClCompile Include="Knuckles\ev0094_k_boardec.cpp" />
+    <ClCompile Include="Knuckles\ev0095_k_gotlastpieces.cpp" />
     <ClCompile Include="objects.cpp" />
     <ClCompile Include="Tails\ev0042_t_froggyjungle.cpp" />
     <ClCompile Include="Tails\ev0044_t_enterpast.cpp" />

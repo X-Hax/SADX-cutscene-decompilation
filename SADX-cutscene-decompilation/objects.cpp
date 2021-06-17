@@ -91,6 +91,7 @@ ObjectMaster* PURPLE;					//Chaos Emerald: Purple
 ObjectMaster* R_EME;					//Chaos Emerald: Red
 ObjectMaster* RED;						//Chaos Emerald: Red
 ObjectMaster* SEPIA;					//Sepia overlay in Tails' flashback
+ObjectMaster* SIRO;						//Fade to white
 ObjectMaster* SMOKE_01;					//Smoke effect
 ObjectMaster* SMOKE_02;					//Smoke Effect
 ObjectMaster* SMOKE;					//Smoke Effect

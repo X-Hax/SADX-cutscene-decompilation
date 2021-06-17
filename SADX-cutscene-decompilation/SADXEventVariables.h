@@ -102,6 +102,7 @@ extern ObjectMaster* PURPLE;
 extern ObjectMaster* R_EME;
 extern ObjectMaster* RED;
 extern ObjectMaster* SEPIA;
+extern ObjectMaster* SIRO;
 extern ObjectMaster* SMOKE_01;
 extern ObjectMaster* SMOKE_02;
 extern ObjectMaster* SMOKE;
@@ -618,6 +619,9 @@ DataPointer(NJS_ACTION, action_k_k0010_knuckles, 0x3C851B8);
 DataPointer(NJS_ACTION, action_k_k0011_knuckles, 0x3C851C0);
 DataPointer(NJS_ACTION, action_k_k0018_knuckles, 0x3C851C8);
 
+//EV0095
+DataPointer(EPATHTAG, epathtag_E0095TK, 0x2BDD610);
+
 
 //EV0165
 DataPointer(NJS_ACTION, action_s_item_r0, 0x3C847E8);
@@ -718,6 +722,9 @@ DataArray(char**, msgTbl_ev008C, 0x2BDFA4C, 5);
 DataArray(char**, msgTbl_ev008E, 0x2BDD928, 5);
 DataArray(char**, msgTbl_ev008F, 0x2BDD8C4, 5);
 DataArray(char**, msgTbl_ev0091, 0x2BDD7D0, 5);
+DataArray(char**, msgTbl_ev0092, 0x2BDD68C, 5);
+DataArray(char**, msgTbl_ev0094, 0x2BDD648, 5);
+DataArray(char**, msgTbl_ev0095, 0x2BDCF0C, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);

@@ -86,6 +86,9 @@ extern "C"
 		CutsceneDataList_[0x008E]->Function = ev008E_k_pastsecond;
 		CutsceneDataList_[0x008F]->Function = ev008F_k_tikalaltar;
 		CutsceneDataList_[0x0091]->Function = ev0091_k_leavepastsecond;
+		CutsceneDataList_[0x0092]->Function = ev0092_k_followgamma;
+		CutsceneDataList_[0x0094]->Function = ev0094_k_boardec;
+		CutsceneDataList_[0x0095]->Function = ev0095_k_gotlastpieces;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;
