@@ -339,6 +339,51 @@
     <ClCompile Include="Knuckles\ev0095_k_gotlastpieces.cpp">
       <Filter>Source Files\Knuckles</Filter>
     </ClCompile>
+    <ClCompile Include="Knuckles\ev0097_k_tikalfire.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0096_k_pastthird.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0098_k_leavepastthird.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0099_k_beforechaos6.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev009A_k_glubglub.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev009B_k_afterchaos6.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev009C_k_fmvplaceholder.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev009D_k_restoreme.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev009F_k_outro.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev00A0_k_eggmanhotel.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0122_k_outsideskydeck.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev016A_k_fightgloves.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev016B_k_shovelclaw.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0120_k_ectransform1.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="Knuckles\ev0121_k_ectransform2.cpp">
+      <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

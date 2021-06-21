@@ -73,6 +73,7 @@ ObjectMaster* OYAJI_C;					//NPC
 ObjectMaster* OYAJI;					//NPC
 ObjectMaster* OYAJI2;					//NPC
 ObjectMaster* p_Chaos0Task;				//Event Chaos
+ObjectMaster* P_EME;					//Chaos Emerald: Purple
 ObjectMaster* PAPA;						//Pachacamac
 ObjectMaster* PLANE;					//Tornado 1
 ObjectMaster* PAT_01;					//Police car
@@ -90,6 +91,7 @@ ObjectMaster* pmiles;					//Tails in prototype plane
 ObjectMaster* PURPLE;					//Chaos Emerald: Purple
 ObjectMaster* R_EME;					//Chaos Emerald: Red
 ObjectMaster* RED;						//Chaos Emerald: Red
+ObjectMaster* S_EME;					//Chaos Emerald: White
 ObjectMaster* SEPIA;					//Sepia overlay in Tails' flashback
 ObjectMaster* SIRO;						//Fade to white
 ObjectMaster* SMOKE_01;					//Smoke effect
@@ -106,6 +108,7 @@ ObjectMaster* suki2_point;				//Borders when Eggman spots Tails' purple emerald.
 ObjectMaster* task_skywalk;				//Sky floor
 ObjectMaster* task_skywalk2;			//Sky floor
 ObjectMaster* W_EME;					//Chaos Emerald: White
+ObjectMaster* W_OUT;					//White fadein
 ObjectMaster* WING;						//Amy's bird
 ObjectMaster* WHITE;					//White fadeout
 ObjectMaster* TALES_STEP;				//Sky floor
@@ -135,6 +138,7 @@ ObjectMaster* tikalb;					//Tikal ball
 ObjectMaster* Tik;						//Tikal ball
 ObjectMaster* TR2;						//Tornado 2
 ObjectMaster* TR2B;						//Tornado 2 post-transformation
+ObjectMaster* Y_EME;					//Chaos Emerald: Yellow
 ObjectMaster* zan;						//Probably Tails' crashed prototype plane.
 
 //Character objects for the player and NPCs.
@@ -161,5 +165,6 @@ ObjectMaster* zero;
 * EV004B: Tails' version of EV001A.
 * EV0080: Knuckles has an eyelid animation when he gets woken up. The line points to "0" instead of him though, so it doesn't do anything.
 * EV0091: Knuckles does an animation when viewing the small Egg Carrier inside the emerald but it can't be seen normally because he slides off the pedestal and out of view before it can start.
+* EV009A: Knuckles has mouth movement during "I still can't figure out that creepy monster." that isn't seen because the running animation he's doing doesn't support mouth movement.
 */
 int enableUnusedCode = 0;

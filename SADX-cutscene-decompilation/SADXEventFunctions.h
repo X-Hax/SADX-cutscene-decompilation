@@ -45,6 +45,7 @@ VoidFunc(EV_CameraOn, 0x4303E0);
 VoidFunc(EV_CameraOff, 0x4304B0);
 FunctionPointer(void, EV_CameraAng, (int mode, int time, int x, int y, int z), 0x430C90);
 FunctionPointer(void, EV_CameraPos, (int mode, int time, float x, float y, float z), 0x430D00);
+FunctionPointer(void, EV_CameraPosORY, (char mode, int time, ObjectMaster* tp, float x, float y, float z), 0x430D70);
 VoidFunc(EV_CameraTargetFree, 0x430E50);
 FunctionPointer(void, EV_CameraTargetObj, (int mode, int time, ObjectMaster* tp, float x, float y, float z, int az), 0x430EE0);
 VoidFunc(EV_CameraChaseFree, 0x430F60);
@@ -93,8 +94,8 @@ FunctionPointer(void, createModelEC, (float pos_x, float pos_y, float pos_z, int
 	int model_id), 0x6ECF20);
 FunctionPointer(ObjectMaster*, CTikalLight_Create, (float x, float y, float z), 0x6ED090);
 FunctionPointer(void, effect_delete, (__int16 ef_num), 0x6ED490);
-FunctionPointer(void, effect_create2, (ObjectMaster* obj, int ef_num, float ef_x,
-	float ef_y, float ef_z, char* ef_name), 0x6ED770);
+FunctionPointer(void, effect_create, (ObjectMaster* obj, __int16 ef_num, float ef_x, float ef_y, float ef_z, NJS_TEXLIST* ef_name), 0x6ED580);
+FunctionPointer(void, effect_create2, (ObjectMaster* obj, int ef_num, float ef_x, float ef_y, float ef_z, NJS_TEXLIST* ef_name), 0x6ED770);
 FunctionPointer(void, effect_color, (__int16 ef_num, float col_a, float col_r, float col_g, float col_b), 0x6ED910);
 FunctionPointer(void, effect_size_change, (int ef_num, float speed_x, float speed_y), 0x6ED950);
 VoidFunc(crushLightOff, 0x6ED9A0);
@@ -127,6 +128,7 @@ FunctionPointer(void, CIchimaie2_SetDstAlpha, (ObjectMaster* _this, float alpha,
 FunctionPointer(ObjectMaster*, CIchimaie2_SetPriority, (ObjectMaster* _this, float pri), 0x6EF710);
 FunctionPointer(ObjectMaster*, CIchimaie2_SetTextureId, (ObjectMaster* _this, int id), 0x6EF720);
 FunctionPointer(ObjectMaster*, CSkyWalk_create2, (ObjectMaster* obj, float height), 0x6EF9C0);
+FunctionPointer(void, efWhiteOn, (int in_int, int out_int), 0x6EFCA0);
 FunctionPointer(ObjectMaster*, SetEventBirdie0, (), 0x6F0070);
 FunctionPointer(ObjectMaster*, SetEventBirdie1, (), 0x6F00A0);
 FunctionPointer(ObjectMaster*, SetEventBirdie2, (), 0x6F00D0);
@@ -143,10 +145,13 @@ FunctionPointer(ObjectMaster*, GetEggMobleTask, (), 0x6F0BF0);
 FunctionPointer(void, chg_frogshape, (char shapeNo), 0x6F1F60);
 FunctionPointer(ObjectMaster*, set_shapefrog, (), 0x6F2330);
 VoidFunc(StgChaos6CtrlOff, 0x6F2360);
+FunctionPointer(void, StgChaos6SetPos, (float pos_x, float pos_y, float pos_z), 0x6F2400);
+FunctionPointer(void, StgChaos6SetAng, (float ang_x, float ang_y, float ang_z), 0x6F2450);
 FunctionPointer(void, StgChaos6CtrlOn, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z, int rot_spd), 0x6F24B0);
 VoidFunc(DeleteChaos4, 0x6F25A0);
 FunctionPointer(void, ChangeMotionSpeedChaos4, (float mod_spd), 0x6F25C0);
 FunctionPointer(void, CreateChaos4, (float pos_, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z, signed int cng_int), 0x6F2AB0);
+FunctionPointer(void, EvCreateKiran2, (NJS_POINT3* pos, NJS_POINT3* velo, float scl, float scl_spd), 0x6F2C40);
 FunctionPointer(void, Create_e102lightning, (float x, float y, float z, int childtask_num), 0x6F2F60);
 VoidFunc(Delete_e102lightning, 0x6F2FB0);
 FunctionPointer(ObjectMaster*, CObjSmoke_Create, (), 0x6F3450);
@@ -242,6 +247,10 @@ VoidFunc(deleteChaos0_EV0088, 0x6910F0);
 
 
 //Stuff that doesn't have an official name because it was part of the main event function in the 360 version:
+VoidFunc(destroy_task_light_EV009A, 0x686990);
+FunctionPointer(void, create_p_ShadowTask_EV009A, (float pos_x, float pos_y, float pos_z, int slangx, int length, float path_ypos), 0x686B10);
+VoidFunc(create_task_light_EV009A, 0x686970);
+VoidFunc(destroy_p_ShadowTask_EV009A, 0x6869B0);
 VoidFunc(ChangeTornado2Model_EV0047, 0x6BA0A0);
 VoidFunc(ChangeTornado2Model2_EV0047, 0x6BA0B0);
 VoidFunc(ChangeTornado2Model_EV0048, 0x6B9280);

@@ -140,6 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Knuckles\ev0096_k_pastthird.cpp" />
     <ClCompile Include="Knuckles\ev0085_k_tikalfather.cpp" />
     <ClCompile Include="Knuckles\ev0086_k_leavepastfirst.cpp" />
     <ClCompile Include="Knuckles\ev0080_k_intro.cpp" />
@@ -159,6 +160,20 @@
     <ClCompile Include="Knuckles\ev0092_k_followgamma.cpp" />
     <ClCompile Include="Knuckles\ev0094_k_boardec.cpp" />
     <ClCompile Include="Knuckles\ev0095_k_gotlastpieces.cpp" />
+    <ClCompile Include="Knuckles\ev0097_k_tikalfire.cpp" />
+    <ClCompile Include="Knuckles\ev0098_k_leavepastthird.cpp" />
+    <ClCompile Include="Knuckles\ev0099_k_beforechaos6.cpp" />
+    <ClCompile Include="Knuckles\ev009A_k_glubglub.cpp" />
+    <ClCompile Include="Knuckles\ev009B_k_afterchaos6.cpp" />
+    <ClCompile Include="Knuckles\ev009C_k_fmvplaceholder.cpp" />
+    <ClCompile Include="Knuckles\ev009D_k_restoreme.cpp" />
+    <ClCompile Include="Knuckles\ev009F_k_outro.cpp" />
+    <ClCompile Include="Knuckles\ev00A0_k_eggmanhotel.cpp" />
+    <ClCompile Include="Knuckles\ev0120_k_ectransform1.cpp" />
+    <ClCompile Include="Knuckles\ev0121_k_ectransform2.cpp" />
+    <ClCompile Include="Knuckles\ev0122_k_outsideskydeck.cpp" />
+    <ClCompile Include="Knuckles\ev016A_k_fightgloves.cpp" />
+    <ClCompile Include="Knuckles\ev016B_k_shovelclaw.cpp" />
     <ClCompile Include="objects.cpp" />
     <ClCompile Include="Tails\ev0042_t_froggyjungle.cpp" />
     <ClCompile Include="Tails\ev0044_t_enterpast.cpp" />

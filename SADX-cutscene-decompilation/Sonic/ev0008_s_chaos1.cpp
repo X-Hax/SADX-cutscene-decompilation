@@ -84,7 +84,7 @@ void ev0008_s_chaos1(int state)
 		EV_SetPos(C_EME_P, 973.29999f, 126.5f, 823.5f);
 		EV_SetAng(C_EME_P, 65520, 6624, 84);
 		EV_Wait(1);
-		EV_SetAction(C_EME_P, &action_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.0f, 1, 1);
+		EV_SetAction(C_EME_P, &action_m_m0136d_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.0f, 1, 1);
 		EV_SetAction(tails, &action_m_m0136_miles, &MILES_TEXLIST, 1.0f, 1, 1);
 		EV_MovePoint2(tails, 983.79999f, 126.5f, 848.70001f, 0.40000001f, 0.059999999f);
 		EV_Wait(1);
@@ -226,7 +226,7 @@ void ev0008_s_chaos1(int state)
 		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.40000001f, 1, 4);
 		stopObject(C_EME_P);
 		EV_ClrAction(C_EME_P);
-		EV_SetAction(C_EME_P, &action_m_m0136d_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.0f, 1, 1);
+		EV_SetAction(C_EME_P, &action_m_em_purple, &M_EM_PURPLE_TEXLIST, 1.0f, 1, 1);
 		moveObject(HAND_3, 987.5f, 131.8f, 857.90002f, 998.58002f, 170.42f, 887.77002f, 40);
 		moveObjectOn(C_EME_P, -3.9400001f, 2.9100001f, -3.9200001f, 50, HAND_3);
 		EV_SerifWait();

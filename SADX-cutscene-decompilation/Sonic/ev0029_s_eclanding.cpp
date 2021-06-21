@@ -74,7 +74,7 @@ void ev0029_s_eclanding(int state)
 		EventSe_Volume(1, 120, 1);
 		EV_Wait(65);
 		EV_Wait(20);
-		effect_create2(TR2B, 0, 0.0f, -13.0f, 0.0f, (char*)0x2C496F0);
+		effect_create2(TR2B, 0, 0.0f, -13.0f, 0.0f, &ev_effect_list9);
 		effect_color(0, 0.5f, 0.30000001f, 0.5f, 0.60000002f);
 		RumbleA(0, 5);
 		EV_CameraTargetFree();
