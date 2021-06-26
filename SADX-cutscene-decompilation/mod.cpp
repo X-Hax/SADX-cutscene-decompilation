@@ -99,6 +99,7 @@ extern "C"
 		CutsceneDataList_[0x009D]->Function = ev009D_k_restoreme;
 		CutsceneDataList_[0x009F]->Function = ev009F_k_outro;
 		CutsceneDataList_[0x00A0]->Function = ev00A0_k_eggmanhotel;
+		CutsceneDataList_[0x00B0]->Function = ev00B0_e_intro;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;

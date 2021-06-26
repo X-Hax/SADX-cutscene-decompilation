@@ -22,6 +22,9 @@
     <Filter Include="Source Files\Knuckles">
       <UniqueIdentifier>{943b2c8f-b2df-4727-83af-effb5e1f2b44}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\E102">
+      <UniqueIdentifier>{2be32c2f-8655-4ca1-8b90-451e8b3cb47f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mod.cpp">
@@ -383,6 +386,9 @@
     </ClCompile>
     <ClCompile Include="Knuckles\ev0121_k_ectransform2.cpp">
       <Filter>Source Files\Knuckles</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00B0_e_intro.cpp">
+      <Filter>Source Files\E102</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

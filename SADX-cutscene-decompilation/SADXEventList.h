@@ -90,6 +90,7 @@ void ev009C_k_fmvplaceholder(int state);
 void ev009D_k_restoreme(int state);
 void ev009F_k_outro(int state);
 void ev00A0_k_eggmanhotel(int state);
+void ev00B0_e_intro(int state);
 void ev0100_s_ecafterlanding(int state);
 void ev0101_s_ecfools(int state);
 void ev0102_s_ecaftertransforming(int state);

@@ -127,6 +127,8 @@ FunctionPointer(ObjectMaster*, CIchimaie2_Create, (NJS_TEXLIST* texlistp, char m
 FunctionPointer(void, CIchimaie2_SetDstAlpha, (ObjectMaster* _this, float alpha, int frame), 0x6EF6F0);
 FunctionPointer(ObjectMaster*, CIchimaie2_SetPriority, (ObjectMaster* _this, float pri), 0x6EF710);
 FunctionPointer(ObjectMaster*, CIchimaie2_SetTextureId, (ObjectMaster* _this, int id), 0x6EF720);
+VoidFunc(deleteScanLine, 0x6EF750);
+FunctionPointer(void, createScanLine, (unsigned __int8 a, unsigned __int8 r, unsigned __int8 g, unsigned __int8 b, int res), 0x6EF940);
 FunctionPointer(ObjectMaster*, CSkyWalk_create2, (ObjectMaster* obj, float height), 0x6EF9C0);
 FunctionPointer(void, efWhiteOn, (int in_int, int out_int), 0x6EFCA0);
 FunctionPointer(ObjectMaster*, SetEventBirdie0, (), 0x6F0070);
@@ -154,6 +156,8 @@ FunctionPointer(void, CreateChaos4, (float pos_, float pos_y, float pos_z, int a
 FunctionPointer(void, EvCreateKiran2, (NJS_POINT3* pos, NJS_POINT3* velo, float scl, float scl_spd), 0x6F2C40);
 FunctionPointer(void, Create_e102lightning, (float x, float y, float z, int childtask_num), 0x6F2F60);
 VoidFunc(Delete_e102lightning, 0x6F2FB0);
+VoidFunc(deleteBoot, 0x6F3000);
+FunctionPointer(void, createBoot, (int wait_frame, int sstorm_frame, int poweron_frame, int adjust_frame), 0x6F32E0);
 FunctionPointer(ObjectMaster*, CObjSmoke_Create, (), 0x6F3450);
 FunctionPointer(void, SetE102Effect, (double x, double y, double z), 0x6F3650);
 FunctionPointer(void, ChgEffectMod, (char mode), 0x6F3690);
