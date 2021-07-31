@@ -158,7 +158,7 @@ void ev001B_s_aftergamma(int state)
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_SetAng(amy,
 			player->twp->ang.x,
-			player->twp->ang.y,
+			-0x4000 - player->twp->ang.y,
 			player->twp->ang.z);
 		EV_WaitMove(player);
 		PlaySound(18, 0, 0, 0);
@@ -287,7 +287,7 @@ void ev001B_s_aftergamma(int state)
 		EV_CameraAng(0, 5, 4736, 23808, 1280);
 		EV_Wait(3);
 		EV_SetAction(player, &action_s_s0012_sonic, &SONIC_TEXLIST, 1.0f, 1, 4);
-		EV_SetAction(player, &action_e_e0005_e102, &E102_TEXLIST, 1.0f, 1, 4);
+		EV_SetAction(e102, &action_e_e0005_e102, &E102_TEXLIST, 1.0f, 1, 4);
 		EV_SetAction(amy, &action_a_a0003_amy, &AMY_TEXLIST, 1.0f, 1, 8);
 		dsPlay_oneshot_v(1333, 0, 0, 120, -3.0f, 1525.0f, 3390.0f);
 		RumbleA(0, 3);
@@ -320,7 +320,7 @@ void ev001B_s_aftergamma(int state)
 		EV_CameraAng(0, 5, 4736, 23808, 1280);
 		EV_Wait(3);
 		EV_SetAction(player, &action_s_s0012_sonic, &SONIC_TEXLIST, 0.5f, 1, 0);
-		EV_SetAction(player, &action_e_e0005_e102, &E102_TEXLIST, 0.5f, 1, 0);
+		EV_SetAction(e102, &action_e_e0005_e102, &E102_TEXLIST, 0.5f, 1, 0);
 		EV_SetAction(amy, &action_a_a0003_amy, &AMY_TEXLIST, 0.5f, 1, 0);
 		EV_CameraAng(0, 4, 1152, 23808, 1280);
 		EV_Wait(3);
@@ -418,7 +418,7 @@ void ev001B_s_aftergamma(int state)
 		dsStop_num(1325);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(1);
-		EV_SetAction(player, &action_s_s9001_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
+		EV_SetAction(player, &action_s_s0002_sonic, &SONIC_TEXLIST, 0.40000001f, 0, 4);
 		EV_Wait(15);
 		dsPlay_oneshot_v(1333, 0, 0, 100, -102.0f, 1519.0f, 3000.0f);
 		EV_ClrFace(tails);
@@ -443,8 +443,8 @@ void ev001B_s_aftergamma(int state)
 		EV_CameraAng(0, 0, 2176, 38912, 0);
 		EV_ClrAction(amy);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 8);
-		EV_ClrAction(player);
-		EV_SetAction(player, &action_e_e0004_e102, &E102_TEXLIST, 1.0f, 1, 0);
+		EV_ClrAction(e102);
+		EV_SetAction(e102, &action_e_e0004_e102, &E102_TEXLIST, 1.0f, 1, 0);
 		EV_ClrFace(amy);
 		EV_SetFace(amy, "D");
 		EV_SerifPlay(557);
@@ -455,7 +455,7 @@ void ev001B_s_aftergamma(int state)
 		EV_LookFree(player);
 		EV_Wait(5);
 		EV_LookObject(player, amy, 0.0f, 8.0f, 0.0f);
-		EV_SetAction(player, &action_s_s0017_sonic, &SONIC_TEXLIST, 1.0f, 0, 8);
+		EV_SetAction(player, &action_s_s0001_sonic, &SONIC_TEXLIST, 1.0f, 0, 8);
 		EV_SetAction(player, &action_s_s0006_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
 		EV_CameraPos(0, 0, 7.1199999f, 1531.76f, 3383.0601f);
 		EV_CameraAng(0, 0, 128, 4352, 0);

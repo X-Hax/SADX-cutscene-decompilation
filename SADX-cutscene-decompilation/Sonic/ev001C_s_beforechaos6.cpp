@@ -7,6 +7,7 @@ void ev001C_s_beforechaos6(int state)
 {
 	switch (state) {
 	case 1:
+		player = EV_GetPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
