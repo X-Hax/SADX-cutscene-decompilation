@@ -17,7 +17,7 @@ void ev0013_s_beforetwinklepark(int state)
 		seqVars[2] = 2; //SSVAR_TWINKLE_ELEVATOR
 		EV_SetPos(player, 333.5f, 0.02f, 1550.8f);
 		EV_SetAng(player, 0, 63744, 0);
-		EV_CreatePlayer(2, Amy_Main, 343.5f, 0.0099999998f, 1544.8f, 0, 64000, 0);
+		EV_CreatePlayer(2, AmyRose, 343.5f, 0.0099999998f, 1544.8f, 0, 64000, 0);
 		EV_Wait(1);
 		amy = EV_GetPlayer(2);
 		EV_SetPos(amy, 343.5f, 0.0099999998f, 1544.8f);
@@ -28,12 +28,12 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_FreeObject(&KOTORI);
 		EV_Wait(1);
 		KOTORI = SetEventBirdie0();
-		EV_SetPos(KOTORI, amy->Data1->Position.x + 5.0f,
-			amy->Data1->Position.y + 12.5f,
-			amy->Data1->Position.z + 5.5f);
-		EV_SetAng(KOTORI, amy->Data1->Rotation.x,
-			0x4000 - amy->Data1->Rotation.y,
-			amy->Data1->Rotation.z);
+		EV_SetPos(KOTORI, amy->twp->pos.x + 5.0f,
+			amy->twp->pos.y + 12.5f,
+			amy->twp->pos.z + 5.5f);
+		EV_SetAng(KOTORI, amy->twp->ang.x,
+			0x4000 - amy->twp->ang.y,
+			amy->twp->ang.z);
 		EV_SetMode(KOTORI, 0);
 		EV_SetAction(KOTORI, &action_w_w9001_wing, &VER2_WING_TEXLIST, 1.0f, 1, 1);
 		moveObjectOn(KOTORI, 2.5f, 5.0f, 2.0f, 900, amy);
@@ -42,7 +42,7 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_CameraAng(1, 0, 60672, 49152, 0);
 		EV_MovePoint2(player, 333.5f, 0.02f, 1570.8f, 0.2f, 0.2f);
 		EV_MovePoint2(amy, 343.5f, 0.0099999998f, 1564.8f, 0.2f, 0.2f);
-		EV_CreatePlayer(7, ZERO_Load, 334.92999f, 12.0f, 1204.71f, 0, 62208, 0);
+		EV_CreatePlayer(7, EggrobForEvent0, 334.92999f, 12.0f, 1204.71f, 0, 62208, 0);
 		EV_Wait(1);
 		EV_CameraPos(1, 120, 182.03999f, 102.99f, 1606.22f);
 		BGM_Play(MusicIDs_eggrobo);
@@ -91,12 +91,12 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_FreeObject(&KOTORI);
 		EV_Wait(1);
 		KOTORI = SetEventBirdie0();
-		EV_SetPos(KOTORI, amy->Data1->Position.x,
-			amy->Data1->Position.y,
-			amy->Data1->Position.z);
-		EV_SetAng(KOTORI, amy->Data1->Rotation.x,
-			0x4000 - amy->Data1->Rotation.y,
-			amy->Data1->Rotation.z);
+		EV_SetPos(KOTORI, amy->twp->pos.x,
+			amy->twp->pos.y,
+			amy->twp->pos.z);
+		EV_SetAng(KOTORI, amy->twp->ang.x,
+			0x4000 - amy->twp->ang.y,
+			amy->twp->ang.z);
 		EV_SetMode(KOTORI, 0);
 		EV_SetAction(KOTORI, &action_w_w9001_wing, &VER2_WING_TEXLIST, 1.0f, 1, 1);
 		stopObjectAll();
@@ -107,9 +107,9 @@ void ev0013_s_beforetwinklepark(int state)
 		EV_SetAction(player, &action_s_s0001_sonic, &SONIC_TEXLIST, 1.0f, 0, 8);
 		EV_SetAction(player, &action_s_s0006_sonic, &SONIC_TEXLIST, 0.5f, 1, 0);
 		EV_ClrFace(player);
-		if (!VoiceLanguage) EV_SetFace(player, "DAEC");
+		if (VoiceLanguage == Languages_Japanese) EV_SetFace(player, "DAEC");
 		EV_SerifPlay(505);
-		if (VoiceLanguage == 1) EV_SetFace(player, "DAEC");
+		if (VoiceLanguage == Languages_English) EV_SetFace(player, "DAEC");
 		EV_Msg((msgTbl_ev0013[TextLanguage])[1]); //"\aNo problem! He's just a chunk\nof che"...
 		EV_Wait(90);
 		EV_ClrFace(player);

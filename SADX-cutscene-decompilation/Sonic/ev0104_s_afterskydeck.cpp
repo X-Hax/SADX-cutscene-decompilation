@@ -12,7 +12,7 @@ void ev0104_s_afterskydeck(int state)
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
-		EV_CreatePlayer(2, Tails_Main, -151.22f, 175.0f, -173.36f, 0, 0x4000, 0);
+		EV_CreatePlayer(2, MilesTalesPrower, -151.22f, 175.0f, -173.36f, 0, 0x4000, 0);
 		EV_Wait(1);
 		tails = EV_GetPlayer(2);
 		EV_SetPos(tails, -151.22f, 175.0f, -173.36f);

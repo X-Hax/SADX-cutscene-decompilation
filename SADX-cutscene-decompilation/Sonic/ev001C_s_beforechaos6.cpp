@@ -17,8 +17,8 @@ void ev001C_s_beforechaos6(int state)
 		EV_InitPlayer(0);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[123], &SONIC_TEXLIST, 0.69999999f, 1, 16);
-		EV_CreatePlayer(2, Big_Main, 115.0f, 744.0f, -480.0f, 0, 47273, 0);
-		LoadEventObject(&Frog, set_shapefrog, 18.254999f, 773.79999f, -524.37f, 0, 0x8000, 0);
+		EV_CreatePlayer(2, BigTheCat, 115.0f, 744.0f, -480.0f, 0, 47273, 0);
+		EV_CreateObjectFunc(&Frog, set_shapefrog, 18.254999f, 773.79999f, -524.37f, 0, 0x8000, 0);
 		StgChaos6CtrlOn(5.3000002f, 745.0f, -500.70001f, 0, -1280, 0, 910);
 		create_eggmoble(20.0f, 780.0f, -421.0f, 0, 40960, 0);
 		EV_Wait(1);
@@ -48,11 +48,11 @@ void ev001C_s_beforechaos6(int state)
 		EV_CameraAng(0, 0, 4144, 57520, 64512);
 		EV_CameraPos(0, 90, 99.300003f, 746.83002f, -517.40002f);
 		EV_SerifPlay(561);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "FE");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "FBBBD");
 		}

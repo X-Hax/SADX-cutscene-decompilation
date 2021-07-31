@@ -20,14 +20,14 @@ void ev0082_k_beginhunt(int state)
 		EV_CameraPos(0, 100, 53.27f, 1.98f, 1477.8f);
 		EV_Wait(60);
 		EV_CameraPos(0, 0,
-			player->Data1->Position.x + 10.0f,
-			player->Data1->Position.y + 8.0f,
-			player->Data1->Position.z + 23.0f);
+			player->twp->pos.x + 10.0f,
+			player->twp->pos.y + 8.0f,
+			player->twp->pos.z + 23.0f);
 		EV_CameraAng(0, 0, 64256, 4352, 0);
 		EV_CameraPos(0, 480,
-			player->Data1->Position.x + 5.46f,
-			player->Data1->Position.y + 6.5999999f,
-			player->Data1->Position.z + 12.8f);
+			player->twp->pos.x + 5.46f,
+			player->twp->pos.y + 6.5999999f,
+			player->twp->pos.z + 12.8f);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_k_k0003_knuckles, &KNUCKLES_TEXLIST, 0.5f, 0, 8);
 		EV_SetAction(player, &action_k_k0004_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
@@ -39,12 +39,12 @@ void ev0082_k_beginhunt(int state)
 		EV_Wait(40);
 		EV_Msg(msgTbl_ev0082[TextLanguage][1]); //"\aof the Master Emerald."
 		EV_Wait(20);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}
 		EV_Wait(15);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}
@@ -114,11 +114,11 @@ void ev0082_k_beginhunt(int state)
 		EV_LookPoint(player, 64.339996f, 4.3099999f, 1551.86f);
 		EV_Wait(1);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "EAAAAADEDAAAAAACD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "EDED");
 		}
@@ -131,11 +131,11 @@ void ev0082_k_beginhunt(int state)
 		EV_ClrFace(player);
 		EV_Wait(20);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "ED");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "EDDD");
 		}

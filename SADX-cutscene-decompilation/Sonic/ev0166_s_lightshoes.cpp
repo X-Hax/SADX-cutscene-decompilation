@@ -23,9 +23,9 @@ void ev0166_s_lightshoes(int state)
 		EV_CameraTargetObj(1, 0, player, 0.0f, 4.5f, 0.0f, 0);
 		EV_CameraChaseRM(0, 500, player, 8.0f, 0, 54613, 0, 25.0f, 0, -100123, 0, 25.0f);
 		tikal = CTikalLight_Create(
-			player->Data1->Position.x + 12.864f,
-			player->Data1->Position.y + 25.0f,
-			player->Data1->Position.z - 5.7670002f);
+			player->twp->pos.x + 12.864f,
+			player->twp->pos.y + 25.0f,
+			player->twp->pos.z - 5.7670002f);
 		EV_Wait(1);
 		EV_SetMode(tikal, 0);
 		EV_ClrPath(tikal);
@@ -56,9 +56,9 @@ void ev0166_s_lightshoes(int state)
 		EV_MsgW(90, (msgTbl_ev0166[TextLanguage])[4]); //"\aThe Light Speed Dash lets you \nrace "...
 		EV_Wait(1);
 		tikalb = CTikalLight_Create(
-			player->Data1->Position.x + 12.864f,
-			player->Data1->Position.y + 25.0f,
-			player->Data1->Position.z - 5.7670002f);
+			player->twp->pos.x + 12.864f,
+			player->twp->pos.y + 25.0f,
+			player->twp->pos.z - 5.7670002f);
 		EV_Wait(1);
 		EV_SetMode(tikalb, 0);
 		EV_ClrPath(tikalb);

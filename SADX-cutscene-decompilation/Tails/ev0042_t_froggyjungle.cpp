@@ -80,11 +80,11 @@ void ev0042_t_froggyjungle(int state)
 		EV_LookPoint(player, -1263.15f, 114.87f, -137.09f);
 		EV_Wait(15);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "I");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "II");
 		}

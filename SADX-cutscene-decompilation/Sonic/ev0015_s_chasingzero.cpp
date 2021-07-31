@@ -12,11 +12,11 @@ void ev0015_s_chasingzero(int state)
 		EV_PadOff();
 		EV_CanselOn();
 		EV_InitPlayer(0);
-		EV_CreatePlayer(0, Sonic_Main, -427.0f, -2.8f, 1113.3f, 0, 0x8000, 0);
+		EV_CreatePlayer(0, SonicTheHedgehog, -427.0f, -2.8f, 1113.3f, 0, 0x8000, 0);
 		EV_Wait(1);
 		EV_SetPos(player, -427.0f, -1.0f, 1113.3f);
 		EV_SetAng(player, 0, 0x8000, 0);
-		LoadEventObject(&zero, set_amy, -304.0f, 175.0f, 1241.0f, 0, 0, 0);
+		EV_CreateObjectFunc(&zero, set_amy, -304.0f, 175.0f, 1241.0f, 0, 0, 0);
 		EV_Wait(1);
 		EV_SetMode(zero, 0);
 		setamyparam(0.80000001f);

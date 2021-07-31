@@ -32,9 +32,9 @@ void ev009D_k_restoreme(int state)
 		EV_MovePoint2(player, -2.5f, -157.0f, 2239.3999f, 1.8f, 0.5f);
 		EV_Wait(40);
 		EV_CameraPos(1, 90,
-			player->Data1->Position.x - 0.69999999f,
-			player->Data1->Position.y + 8.0f,
-			player->Data1->Position.z + 18.6f);
+			player->twp->pos.x - 0.69999999f,
+			player->twp->pos.y + 8.0f,
+			player->twp->pos.z + 18.6f);
 		EV_CameraTargetObj(1, 40, player, 0.0f, 6.0f, 0.0f, 0);
 		EV_CameraChase(player);
 		EV_Wait(95);
@@ -139,11 +139,11 @@ void ev009D_k_restoreme(int state)
 		EV_CameraPos(0, 0, 3.7f, -153.89999f, 2181.7f);
 		EV_CameraAng(0, 0, 2895, 27514, 0);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "BCEKKCEECKKKK0");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "DDEEKK0");
 		}

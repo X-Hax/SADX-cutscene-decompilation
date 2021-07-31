@@ -15,7 +15,7 @@ void ev0002_s_chaos0defeated(int state)
 		SetBankDir(73);
 		EventSe_Init(5);
 		EV_CameraPerspective(0, 1, 11833);
-		EV_CreatePlayer(2, Eggman_Main, 380.0f, 0.0f, 353.0f, 0, 25056, 0);
+		EV_CreatePlayer(2, Eggman, 380.0f, 0.0f, 353.0f, 0, 25056, 0);
 		EV_SetPos(player, 266.25f, 3.0f, 263.0f);
 		EV_SetAng(player, 0, 63897, 0);
 		EV_InitPlayer(0);

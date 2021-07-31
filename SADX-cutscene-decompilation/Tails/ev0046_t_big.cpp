@@ -18,7 +18,7 @@ void ev0046_t_big(int state)
 		WHITE = COverlayCreate(1.0f, 0.0f, 1.0f, 1.0f, 1.0f);
 		EV_CreateObject(&RED, 64.110001f, -16.658001f, 36.233002f, 0, 0, 0);
 		EV_SetMode(RED, 0);
-		EV_CreatePlayer(4, Big_Main, -11.62f, 71.559998f, 395.14001f, 1363, 30559, 63890);
+		EV_CreatePlayer(4, BigTheCat, -11.62f, 71.559998f, 395.14001f, 1363, 30559, 63890);
 		EV_SetPos(player, 29.08f, 72.019997f, 177.28999f);
 		EV_SetAng(player, 0, 1024, 0);
 		EV_Wait(1);
@@ -193,11 +193,11 @@ void ev0046_t_big(int state)
 		EV_CameraAng(1, 90, 4915, 65080, 0);
 		EventSe_Stop(0);
 		EventSe_Stop(1);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "D");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "DD");
 		}

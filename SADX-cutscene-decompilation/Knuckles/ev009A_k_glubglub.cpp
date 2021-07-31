@@ -80,9 +80,9 @@ void ev009A_k_glubglub(int state)
 		crushLightOn(-125.0655f, 805.31f, 285.23099f, 4, 20, 3.0f, 1.0f, 0x88FFFFFF, 0x88FFFFFF);
 		EventSe_Play(0, 1338, 1800);
 		create_p_ShadowTask_EV009A(
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
 			80, 80, 8.0f);
 		EV_SetAction(player, &action_k_k0003_knuckles, &KNUCKLES_TEXLIST, 1.5f, 0, 1);
 		create_task_light_EV009A();

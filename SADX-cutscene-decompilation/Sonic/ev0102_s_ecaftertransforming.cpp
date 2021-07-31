@@ -13,7 +13,7 @@ void ev0102_s_ecaftertransforming(int state)
 		EV_InitPlayer(0);
 		EV_CameraOn();
 		EV_PadOff();
-		EV_CreatePlayer(2, Tails_Main, -3.1099999f, 659.20001f, 29.84f, 0, 0, 0);
+		EV_CreatePlayer(2, MilesTalesPrower, -3.1099999f, 659.20001f, 29.84f, 0, 0, 0);
 		BGM_Play(MusicIDs_egcarer1);
 		EV_SetPos(player, 6.5599999f, 659.16998f, 40.52f);
 		EV_SetAng(player, 0, 0, 0);

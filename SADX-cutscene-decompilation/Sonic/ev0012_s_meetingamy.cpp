@@ -16,7 +16,7 @@ void ev0012_s_meetingamy(int state)
 		EV_CanselOn();
 		EV_Wait(1);
 		EV_InitPlayer(0);
-		EV_CreatePlayer(2, Amy_Main, 605.70001f, 0.0f, 1110.8f, 0, 0, 0);
+		EV_CreatePlayer(2, AmyRose, 605.70001f, 0.0f, 1110.8f, 0, 0, 0);
 		EV_Wait(1);
 		EV_SetPos(player, -534.20001f, 0.0099999998f, 1210.0f);
 		EV_SetAng(player, 0, 0x8000, 0);
@@ -24,21 +24,21 @@ void ev0012_s_meetingamy(int state)
 		EV_SetPos(amy, -623.20001f, 5.5999999f, 1079.0f);
 		EV_SetAng(amy, 0, 0, 0);
 		obj_wing1 = SetEventBirdie0();
-		EV_SetPos(obj_wing1, amy->Data1->Position.x + 4.8000002f,
-			amy->Data1->Position.y + 2.5f,
-			amy->Data1->Position.z + 0.40000001f);
-		EV_SetAng(obj_wing1, amy->Data1->Rotation.x,
-			0x4000 - amy->Data1->Rotation.y,
-			amy->Data1->Rotation.z + 512);
+		EV_SetPos(obj_wing1, amy->twp->pos.x + 4.8000002f,
+			amy->twp->pos.y + 2.5f,
+			amy->twp->pos.z + 0.40000001f);
+		EV_SetAng(obj_wing1, amy->twp->ang.x,
+			0x4000 - amy->twp->ang.y,
+			amy->twp->ang.z + 512);
 		EV_Wait(1);
 		EV_SetMode(obj_wing1, 0);
 		EV_SetAction(obj_wing1, &action_w_w9001_wing, &VER2_WING_TEXLIST, 0.80000001f, 1, 0);
-		EV_SetPos(obj_wing1, amy->Data1->Position.x + 4.8f,
-			amy->Data1->Position.y + 2.5f,
-			amy->Data1->Position.z + 2.4000001f);
-		EV_SetAng(obj_wing1, (int)(amy->Data1->Position.x),
-			(int)(amy->Data1->Position.y + 36864.0f),
-			(int)(amy->Data1->Position.z - 512.0f));
+		EV_SetPos(obj_wing1, amy->twp->pos.x + 4.8f,
+			amy->twp->pos.y + 2.5f,
+			amy->twp->pos.z + 2.4000001f);
+		EV_SetAng(obj_wing1, (int)(amy->twp->pos.x),
+			(int)(amy->twp->pos.y + 36864.0f),
+			(int)(amy->twp->pos.z - 512.0f));
 		EV_ClrAction(player);
 		EV_SetPos(player, -534.20001f, 0.0f, 1200.0f);
 		EV_CameraPos(1, 0, -535.0f, 7.1999998f, 1191.3f);
@@ -162,18 +162,18 @@ void ev0012_s_meetingamy(int state)
 		EV_Wait(15);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 0.75f, 1, 8);
 		EV_Wait(40);
-		if (VoiceLanguage == 1) EV_ClrFace(amy);
+		if (VoiceLanguage == Languages_English) EV_ClrFace(amy);
 		EV_Wait(10);
-		if (!VoiceLanguage) EV_ClrFace(amy);
+		if (VoiceLanguage == Languages_Japanese) EV_ClrFace(amy);
 		EV_Wait(10);
 		EV_SerifStop();
 		EV_ClrAction(obj_wing1);
 		EV_SetAction(obj_wing1, &action_w_w0121_wing, &VER1_WING_TEXLIST, 0.69999999f, 1, 0);
-		EV_SetPos(obj_wing1, amy->Data1->Position.x,
-			amy->Data1->Position.y + 1.0f, amy->Data1->Position.z - 0.60000002f);
-		EV_SetAng(obj_wing1, (int)(amy->Data1->Position.x),
-			(int)(amy->Data1->Position.y + 36864.0f),
-			(int)(amy->Data1->Position.z - 512.0f));
+		EV_SetPos(obj_wing1, amy->twp->pos.x,
+			amy->twp->pos.y + 1.0f, amy->twp->pos.z - 0.60000002f);
+		EV_SetAng(obj_wing1, (int)(amy->twp->pos.x),
+			(int)(amy->twp->pos.y + 36864.0f),
+			(int)(amy->twp->pos.z - 512.0f));
 		EV_ClrAction(amy);
 		EV_SetAction(amy, &action_a_a0010_amy, &AMY_TEXLIST, 0.75f, 1, 0);
 		EV_Wait(1);
@@ -223,9 +223,9 @@ void ev0012_s_meetingamy(int state)
 		EV_SerifPlay(503);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[7]); //"\aIf you don't, we're just\ngonna tag a"...
 		EV_Wait(20);
-		if (!VoiceLanguage) EV_ClrFace(amy);
+		if (VoiceLanguage == Languages_Japanese) EV_ClrFace(amy);
 		EV_Wait(50);
-		if (VoiceLanguage == 1) EV_ClrFace(amy);
+		if (VoiceLanguage == Languages_English) EV_ClrFace(amy);
 		EV_Wait(10);
 		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
 		EV_Wait(120);

@@ -16,8 +16,8 @@ void ev008A_k_vssonic(int state)
 		EV_InitPlayer(0);
 		EV_SetPos(player, 193.56f, 70.980003f, 356.53f);
 		EV_SetAng(player, 4496, 32557, 64480);
-		EV_CreatePlayer(2, Sonic_Main, 55.93f, 73.160004f, 289.95999f, 160, 61161, 65508);
-		EV_CreatePlayer(3, Tails_Main, 50.759998f, 73.230003f, 305.75f, 65390, 24588, 65442);
+		EV_CreatePlayer(2, SonicTheHedgehog, 55.93f, 73.160004f, 289.95999f, 160, 61161, 65508);
+		EV_CreatePlayer(3, MilesTalesPrower, 50.759998f, 73.230003f, 305.75f, 65390, 24588, 65442);
 		EV_CreateObject(&G_EME, 0.0f, 0.0f, 0.0f, 0, 0, 0);
 		EV_Wait(1);
 		EV_ClrAction(player);
@@ -30,9 +30,9 @@ void ev008A_k_vssonic(int state)
 		EV_SetAction(tails, MILES_ACTIONS[79], &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetMode(G_EME, 0);
 		EV_SetPos(G_EME,
-			sonic->Data1->Position.x - 1.2f,
-			sonic->Data1->Position.y + 3.5999999f,
-			sonic->Data1->Position.z + 2.0f);
+			sonic->twp->pos.x - 1.2f,
+			sonic->twp->pos.y + 3.5999999f,
+			sonic->twp->pos.z + 2.0f);
 		EV_SetAng(G_EME, 0, 0, 0);
 		EV_Wait(1);
 		EV_SetAction(G_EME, &action_m_em_green, &M_EM_GREEN_TEXLIST, 1.0f, 1, 0);
@@ -88,11 +88,11 @@ void ev008A_k_vssonic(int state)
 		EV_CameraPos(1, 110, 196.67f, 78.190002f, 292.07001f);
 		EV_CameraAng(1, 110, 316, 20070, 0);
 		EV_SerifPlay(1065);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "FCEFD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "FD");
 		}
@@ -153,12 +153,12 @@ void ev008A_k_vssonic(int state)
 		EV_Wait(10);
 		EV_SetAction(sonic, &action_s_s0035_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
 		moveObject(sonic,
-			sonic->Data1->Position.x,
-			sonic->Data1->Position.y,
-			sonic->Data1->Position.z,
-			sonic->Data1->Position.x - 25.0f,
-			sonic->Data1->Position.y,
-			sonic->Data1->Position.z - 25.0f,
+			sonic->twp->pos.x,
+			sonic->twp->pos.y,
+			sonic->twp->pos.z,
+			sonic->twp->pos.x - 25.0f,
+			sonic->twp->pos.y,
+			sonic->twp->pos.z - 25.0f,
 			35);
 		EV_Wait(7);
 		EV_CameraPerspective(0, 1, 9102);
@@ -175,9 +175,9 @@ void ev008A_k_vssonic(int state)
 		EV_SetAng(sonic, 65390, 3314, 65442);
 		EV_SetPos(sonic, 30.93f, 70.0f, 264.95999f);
 		EV_SetPos(tails,
-			tails->Data1->Position.x - 20.0f,
-			tails->Data1->Position.y,
-			tails->Data1->Position.z + 20.0f);
+			tails->twp->pos.x - 20.0f,
+			tails->twp->pos.y,
+			tails->twp->pos.z + 20.0f);
 		EV_WaitAction(sonic);
 		EV_SetAction(sonic, &action_s_s0006_sonic, &SONIC_TEXLIST, 1.0f, 1, 4);
 		EV_SetAng(sonic, 65390, 3314, 65442);
@@ -202,11 +202,11 @@ void ev008A_k_vssonic(int state)
 		EV_CameraAng(0, 0, 62710, 42476, 0);
 		EV_CameraPos(0, 130, -14.98f, 95.669998f, 240.62f);
 		EV_SetAction(sonic, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 16);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "FCD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "FBBBBF");
 		}
@@ -214,23 +214,23 @@ void ev008A_k_vssonic(int state)
 		EV_SerifPlay(1068);
 		EV_Msg(msgTbl_ev008A[TextLanguage][6]); //"\aAll right!   Put 'em up!"
 		EV_Wait(30);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}
 		EV_SerifPlay(1069);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}
 		EV_SetAction(player, &action_k_k0012_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 2);
 		EV_SetAction(player, &action_k_k0013_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		EV_Msg(msgTbl_ev008A[TextLanguage][7]); //"\aHand over the Emerald now!"
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "FCDFE");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "FD");
 		}
@@ -243,13 +243,13 @@ void ev008A_k_vssonic(int state)
 		EV_Msg(msgTbl_ev008A[TextLanguage][8]); //"\aThat's not gonna happen,\nbuddy!"
 		EV_SetFace(sonic, "FDFE");
 		EV_Wait(36);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(sonic);
 		}
 		EV_Wait(4);
 		EV_MsgClose();
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(sonic);
 		}

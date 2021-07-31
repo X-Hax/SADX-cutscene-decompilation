@@ -18,7 +18,7 @@ void ev0048_t_sonicreunion(int state)
 		EV_SetPos(player, -545.59998f, 1039.7f, 3060.8999f);
 		EV_SetAng(player, 0, 12288, 0);
 		EV_Wait(1);
-		EV_CreatePlayer(2, Sonic_Main, -404.60001f, 1039.6f, 3138.3999f, 0, 12288, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, -404.60001f, 1039.6f, 3138.3999f, 0, 12288, 0);
 		EV_Wait(1);
 		sonic = EV_GetPlayer(2);
 		EV_SetPos(sonic, -404.60001f, 1039.6f, 3138.3999f);

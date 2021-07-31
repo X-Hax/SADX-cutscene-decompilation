@@ -12,7 +12,7 @@ void ev0110_t_ecafterlanding(int state)
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
-		EV_CreatePlayer(2, Sonic_Main, 12.8f, 699.25f, -1093.5f, 0, 63658, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, 12.8f, 699.25f, -1093.5f, 0, 63658, 0);
 		EV_Wait(1);
 		BGM_Play(MusicIDs_egcarer1);
 		EV_SetPos(player, 23.389999f, 699.25f, -1083.27f);
@@ -22,11 +22,11 @@ void ev0110_t_ecafterlanding(int state)
 		EV_CameraPos(1, 150, -10.33f, 705.81f, -1066.96f);
 		EV_CameraAng(1, 120, 255, 58230, 0);
 		sonic = EV_GetPlayer(2);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "ICCCDDEEEEEEDDDDCCCDDD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(sonic, "IC");
 		}
@@ -57,11 +57,11 @@ void ev0110_t_ecafterlanding(int state)
 		EV_Wait(30);
 		EV_SetFace(sonic, "R");
 		EV_LookFree(sonic);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "CCFFFGGG");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(sonic, "CF");
 		}

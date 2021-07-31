@@ -17,7 +17,7 @@ void ev0097_k_tikalfire(int state)
 		EventSe_Init(2);
 		EV_SetPos(player, -18.639999f, -11.09f, 496.32999f);
 		EV_SetAng(player, 1264, 33736, 0);
-		EV_CreatePlayer(2, Tikal_Main, -15.8f, -4.1999998f, 434.39001f, 1264, 19456, 0);
+		EV_CreatePlayer(2, Tikal, -15.8f, -4.1999998f, 434.39001f, 1264, 19456, 0);
 		EV_Wait(1);
 		tikal = EV_GetPlayer(2);
 		EV_SetFace(tikal, "VVVVVVVVVVVVVV");
@@ -101,11 +101,11 @@ void ev0097_k_tikalfire(int state)
 		EV_CameraPos(0, 0, -15.47f, -0.44999999f, 424.70001f);
 		EV_CameraAng(0, 0, 1520, 30668, 0);
 		EV_SerifPlay(1142);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "HE");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "ID");
 		}
@@ -118,11 +118,11 @@ void ev0097_k_tikalfire(int state)
 		EV_Wait(10);
 		EV_MovePoint2(tikal, -28.6f, -1.75f, 417.0f, 0.5f, 0.5f);
 		EV_SerifPlay(1143);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "EAD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "E");
 		}

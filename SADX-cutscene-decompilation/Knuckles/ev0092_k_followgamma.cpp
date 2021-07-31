@@ -14,7 +14,7 @@ void ev0092_k_followgamma(int state)
         EV_PadOff();
         EV_CanselOn();
         BGM_Play(MusicIDs_thee102);
-        EV_CreatePlayer(2, Gamma_Main, -108.464f, 0.0f, -1699.866f, 65519, 13249, 0);
+        EV_CreatePlayer(2, E102, -108.464f, 0.0f, -1699.866f, 65519, 13249, 0);
         EV_Wait(1);
         e102 = EV_GetPlayer(2);
         EV_SetAction(e102, E102_ACTIONS[0], &E102_TEXLIST, 1.0f, 1, 0);

@@ -187,22 +187,22 @@ void ev0080_k_intro(int state)
 		EV_CameraAng(0, 90, 1024, 36592, 0);
 		EV_SetAction(player, &action_k_k0012_knuckles, &KNUCKLES_TEXLIST, 1.2f, 0, 8);
 		EV_SerifPlay(1008);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "FE");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "F");
 		}
 		EV_Msg(msgTbl_ev0080[TextLanguage][11]); //"\aHuh?   Who are you?"
 		EV_SetAction(player, &action_k_k0013_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 8);
 		EV_SerifWait();
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "AF");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "FAAF");
 		}
@@ -262,14 +262,14 @@ void ev0080_k_intro(int state)
 		EV_Msg(msgTbl_ev0080[TextLanguage][14]); //"\aUgh agh! Hey, no fair!"
 		if (SMOKE)
 		{
-			SMOKE->Data1->Rotation.y = 3;
-			SMOKE->Data1->Rotation.x = 3;
+			SMOKE->twp->ang.y = 3;
+			SMOKE->twp->ang.x = 3;
 		}
 		EV_Wait(10);
 		if (SMOKE)
 		{
-			SMOKE->Data1->Rotation.y = 0;
-			SMOKE->Data1->Rotation.x = 0;
+			SMOKE->twp->ang.y = 0;
+			SMOKE->twp->ang.x = 0;
 		}
 		EV_Wait(10);
 		EV_MsgClose();
@@ -297,11 +297,11 @@ void ev0080_k_intro(int state)
 		EV_Wait(80);
 		EventSe_Stop(2);
 		MoveChaos0(-3.0f, -165.0f, 2193.0f, 65);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "F");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "E");
 		}
@@ -318,11 +318,11 @@ void ev0080_k_intro(int state)
 		EV_LookPoint(player, -3.2f, -154.157f, 2228.1001f);
 		EV_Wait(35);
 		EV_SerifPlay(1013);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "C");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "DAAE");
 		}

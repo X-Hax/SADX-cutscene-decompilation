@@ -23,29 +23,35 @@ void ev0008_s_chaos1(int state)
 		BROKEN_EGG2 = CObjSmoke_Create();
 		BROKEN_EGG4 = CObjSmoke_Create();
 
-		//I have no idea what all this data is but it makes the smoke work apparently 
-		WriteData((float*)BROKEN_EGG2->Data1->LoopData, 4.0f);
-		WriteData((float*)BROKEN_EGG4->Data1->LoopData, 2.5f);
+		if (BROKEN_EGG2)
+			*(float*)BROKEN_EGG2->twp->value.l = 4.0f;
+		if (BROKEN_EGG4)
+			*(float*)BROKEN_EGG4->twp->value.l = 2.5f;
 
-		WriteData((float*)(BROKEN_EGG2->Data1->LoopData) + 11, 1.0f);
-		WriteData((float*)(BROKEN_EGG2->Data1->LoopData) + 12, 0.9f);
-		WriteData((float*)(BROKEN_EGG2->Data1->LoopData) + 13, 0.9f);
-		WriteData((float*)(BROKEN_EGG2->Data1->LoopData) + 14, 0.9f);
-
-		WriteData((float*)(BROKEN_EGG4->Data1->LoopData) + 11, 1.0f);
-		WriteData((float*)(BROKEN_EGG4->Data1->LoopData) + 12, 0.9f);
-		WriteData((float*)(BROKEN_EGG4->Data1->LoopData) + 13, 0.65f);
-		WriteData((float*)(BROKEN_EGG4->Data1->LoopData) + 14, 0.65f);
+		if (BROKEN_EGG2)
+		{
+			*(float*)(BROKEN_EGG2->twp->value.l + 44) = 1.0f;
+			*(float*)(BROKEN_EGG2->twp->value.l + 48) = 0.89999998f;
+			*(float*)(BROKEN_EGG2->twp->value.l + 52) = 0.89999998f;
+			*(float*)(BROKEN_EGG2->twp->value.l + 56) = 0.89999998f;
+		}
+		if (BROKEN_EGG4)
+		{
+			*(float*)(BROKEN_EGG4->twp->value.l + 44) = 1.0f;
+			*(float*)(BROKEN_EGG4->twp->value.l + 48) = 0.64999998f;
+			*(float*)(BROKEN_EGG4->twp->value.l + 52) = 0.64999998f;
+			*(float*)(BROKEN_EGG4->twp->value.l + 56) = 0.64999998f;
+		}
 
 		EV_SetPos(BROKEN_EGG2, 1054.3f, 144.5f, 871.0f);
 		EV_SetPos(BROKEN_EGG4, 1046.3f, 147.5f, 898.5f);
-		BROKEN_EGG2->Data1->Rotation.y = 4;
-		BROKEN_EGG2->Data1->Rotation.x = 4;
-		BROKEN_EGG4->Data1->Rotation.y = 5;
-		BROKEN_EGG4->Data1->Rotation.x = 5;
+		BROKEN_EGG2->twp->ang.y = 4;
+		BROKEN_EGG2->twp->ang.x = 4;
+		BROKEN_EGG4->twp->ang.y = 5;
+		BROKEN_EGG4->twp->ang.x = 5;
 		EV_SetPos(player, 981.0f, 126.4f, 868.79999f);
 		EV_SetAng(player, 24, 6912, 62);
-		EV_CreatePlayer(2, Tails_Main, 959.5f, 126.5f, 794.92999f, 65520, 6624, 84);
+		EV_CreatePlayer(2, MilesTalesPrower, 959.5f, 126.5f, 794.92999f, 65520, 6624, 84);
 		EV_Wait(1);
 		tails = EV_GetPlayer(2);
 		EV_SetPos(tails, 973.29999f, 126.5f, 823.5f);

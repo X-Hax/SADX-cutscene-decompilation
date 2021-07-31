@@ -17,7 +17,7 @@ void ev001D_s_afterchaos6(int state)
 		BGM_Play(MusicIDs_egcarer1);
 		EV_SetPos(player, -44.900002f, 745.65002f, -231.87f);
 		EV_SetAng(player, 718, 29278, 281);
-		EV_CreatePlayer(2, Knuckles_Main, -113.79f, 743.71997f, -510.44f, 64723, 62954, 0xFFFF);
+		EV_CreatePlayer(2, KnucklesTheEchidna, -113.79f, 743.71997f, -510.44f, 64723, 62954, 0xFFFF);
 		create_eggmoble(0.0f, 780.0f, -386.04001f, 0, 0x4000, 0);
 		EV_Wait(1);
 		EV_ClrAction(player);
@@ -92,12 +92,12 @@ void ev001D_s_afterchaos6(int state)
 		EV_SerifPlay(579);
 		EV_Msg((msgTbl_ev001D[TextLanguage])[2]); //"\aHey there, Knuckles."
 		EV_Wait(35);
-		if (!VoiceLanguage)  EV_ClrFace(player);
+		if (VoiceLanguage == Languages_Japanese)  EV_ClrFace(player);
 		EV_Wait(5);
 		EV_CameraPos(1, 45, -27.59f, 750.82001f, -240.23f);
 		EV_CameraAng(1, 45, 65104, 20699, 0);
 		EV_Msg((msgTbl_ev001D[TextLanguage])[3]); //"\aGlad you finally made it! \nI thought"..
-		if (!VoiceLanguage) EV_SetFace(player, "CEFD");
+		if (VoiceLanguage == Languages_Japanese) EV_SetFace(player, "CEFD");
 		EV_Wait(60);
 		EV_ClrFace(player);
 		EV_Wait(5);

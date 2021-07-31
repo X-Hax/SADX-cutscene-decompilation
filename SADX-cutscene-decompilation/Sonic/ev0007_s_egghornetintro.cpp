@@ -22,7 +22,7 @@ void ev0007_s_egghornetintro(int state)
 		EV_SetPos(player, 952.70001f, 123.5f, 726.70001f);
 		EV_SetAng(player, 0, 12288, 0);
 		EV_LookObject(player, obj_decoy, 0.0f, 8.0f, 0.0f);
-		EV_CreatePlayer(2, Tails_Main, 947.29999f, 123.5f, 705.77002f, 0, 11520, 0);
+		EV_CreatePlayer(2, MilesTalesPrower, 947.29999f, 123.5f, 705.77002f, 0, 11520, 0);
 		EV_Wait(1);
 		tails = EV_GetPlayer(2);
 		EV_LookObject(tails, obj_decoy, 0.0f, 8.0f, 0.0f);
@@ -114,12 +114,12 @@ void ev0007_s_egghornetintro(int state)
 		EV_Wait(20);
 		EV_SerifWait();
 		EV_ClrFace(tails);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tails, "EDEDDC0");
 		}
 		EV_SerifPlay(437);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tails, "DEDDC0");
 		}
@@ -143,24 +143,24 @@ void ev0007_s_egghornetintro(int state)
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "CDECDCC0");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "CD");
 		}
 		EV_SerifPlay(440);
 		EV_Msg(msgTbl_ev0007[TextLanguage][10]); //"\aOr else \nwhat, ya big loser?"
 		EV_Wait(48);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}
 		EV_Wait(12);
 		EV_MsgClose();
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}

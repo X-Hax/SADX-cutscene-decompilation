@@ -22,16 +22,20 @@ void ev004E_t_speedhighway(int state)
 		EV_CameraPos(1, 0, 312.20999f, 13.23f, 1587.09f);
 		EV_CameraAng(1, 0, 63488, 58112, 0);
 		SMOKE = CObjSmoke_Create();
-		SMOKE->Data1->Rotation.y = 5;
-		SMOKE->Data1->Rotation.x = 5;
 		SMOKE2 = CObjSmoke_Create();
-		SMOKE2->Data1->Rotation.y = 10;
-		SMOKE2->Data1->Rotation.x = 10;
-		WriteData((float*)SMOKE->Data1->LoopData, 10.0f);
-		WriteData((float*)SMOKE2->Data1->LoopData, 20.0f);
-		WriteData((float*)SMOKE->Data1->LoopData + 8, -30.0f);
-		WriteData((float*)SMOKE->Data1->LoopData + 9, 0.0f);
-		WriteData((float*)SMOKE->Data1->LoopData + 10, 0.0f);
+		if (SMOKE) {
+			SMOKE->twp->ang.y = 5;
+			SMOKE->twp->ang.x = 5;
+			*(float*)SMOKE->twp->value.l = 10.0f;
+			*(float*)(SMOKE->twp->value.l + 32) = -30.0f;
+			*(float*)(SMOKE->twp->value.l + 36) = 0.0f;
+			*(float*)(SMOKE->twp->value.l + 40) = 0.0f;
+		}
+		if (SMOKE2) {
+			SMOKE2->twp->ang.y = 10;
+			SMOKE2->twp->ang.x = 10;
+			*(float*)SMOKE2->twp->value.l = 20.0f;
+		}
 		EV_ClrAction(player);
 		EV_PlayPad(0, &E004eT);
 		EV_Wait(80);
@@ -56,8 +60,8 @@ void ev004E_t_speedhighway(int state)
 		EV_Wait(20);
 		EV_SetPos(SMOKE2, 340.73999f, 11.38f, 1371.89f);
 		EV_Wait(5);
-		SMOKE2->Data1->Rotation.y = 60;
-		SMOKE2->Data1->Rotation.x = 60;
+		SMOKE2->twp->ang.y = 60;
+		SMOKE2->twp->ang.x = 60;
 		EV_Wait(5);
 		EV_CameraPos(1, 0, 308.97f, 11.38f, 1328.77f);
 		EV_CameraAng(1, 0, 64768, 39168, 0);
@@ -67,8 +71,8 @@ void ev004E_t_speedhighway(int state)
 		eggmoble_move_rapid(615.60602f, 17.837f, 1382.1899f, 60);
 		EV_CameraPos(1, 60, 330.20999f, 8.6499996f, 1358.9301f);
 		EV_Wait(60);
-		SMOKE2->Data1->Rotation.y = 0;
-		SMOKE2->Data1->Rotation.x = 0;
+		SMOKE2->twp->ang.y = 0;
+		SMOKE2->twp->ang.x = 0;
 		EV_WaitMove(player);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m0109_miles, &MILES_TEXLIST, 1.0f, 0, 8);
@@ -81,19 +85,19 @@ void ev004E_t_speedhighway(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m0109_miles, &MILES_TEXLIST, 1.0f, 1, 8);
 		EV_Wait(30);
-		SMOKE->Data1->Rotation.y = 0;
-		SMOKE->Data1->Rotation.x = 0;
+		SMOKE->twp->ang.y = 0;
+		SMOKE->twp->ang.x = 0;
 		EV_ClrFace(player);
 		EV_SetFace(player, "DADE");
 		EV_SerifPlay(805);
 		EV_MsgW(60, msgTbl_ev004E[TextLanguage][1]); //"\aThe fate of Station Square \ndepends "...
 		EV_ClrFace(player);
 		EV_CameraPos(1, 120, 353.60001f, 13.59f, 1360.97f);
-		EV_CameraAng(1, 120, 61184, 24320, 0);	
+		EV_CameraAng(1, 120, 61184, 24320, 0);
 		EV_LookPoint(player,
-			player->Data1->Position.x + 20.0f,
-			player->Data1->Position.y,
-			player->Data1->Position.z);
+			player->twp->pos.x + 20.0f,
+			player->twp->pos.y,
+			player->twp->pos.z);
 		EV_Wait(40);
 		EV_ClrFace(player);
 		EV_SetFace(player, "NAANON");
@@ -102,9 +106,9 @@ void ev004E_t_speedhighway(int state)
 		EV_ClrFace(player);
 		EV_Wait(60);
 		EV_LookPoint(player,
-			player->Data1->Position.x + 10.0f,
-			player->Data1->Position.y,
-			player->Data1->Position.z);
+			player->twp->pos.x + 10.0f,
+			player->twp->pos.y,
+			player->twp->pos.z);
 		EV_SerifPlay(807);
 		EV_Msg(msgTbl_ev004E[TextLanguage][3]); //"\aI've changed a lot since \nI started "...
 		EV_Wait(1);
@@ -133,11 +137,11 @@ void ev004E_t_speedhighway(int state)
 		EV_CameraAng(1, 0, 4352, 0x2000, 0);
 		EV_CameraPos(0, 200, 346.73999f, 3.1900001f, 1377.87f);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "CAED");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "CE");
 		}
@@ -173,19 +177,19 @@ void ev004E_t_speedhighway(int state)
 		EV_PadOn();
 		EventSe_Close();
 		EV_InitPlayer(0);
-		if(SMOKE){
+		if (SMOKE) {
 			FreeTask(SMOKE);
 			SMOKE = 0;
 		}
-		if(SMOKE2){
+		if (SMOKE2) {
 			FreeTask(SMOKE2);
 			SMOKE2 = 0;
 		}
 		delete_eggmoble();
-		if(KURAYAMI){
+		if (KURAYAMI) {
 			FreeTask(KURAYAMI);
 			KURAYAMI = 0;
 		}
 		break;
-		}
 	}
+}

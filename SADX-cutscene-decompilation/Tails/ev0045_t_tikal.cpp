@@ -15,7 +15,7 @@ void ev0045_t_tikal(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		BGM_Play(MusicIDs_tical);
-		EV_CreatePlayer(2, Tikal_Main, 17.690001f, 0.0099999998f, 480.85001f, 0, 34930, 0);
+		EV_CreatePlayer(2, Tikal, 17.690001f, 0.0099999998f, 480.85001f, 0, 34930, 0);
 		EV_Wait(1);
 		EV_InitPlayer(2);
 		tikal = EV_GetPlayer(2);
@@ -52,7 +52,7 @@ void ev0045_t_tikal(int state)
 		EV_CameraAng(1, 0, 64512, 60945, 0);
 		EV_CameraPos(1, 80, 13.0f, 6.1700001f, 491.81f);
 		EV_CameraAng(1, 80, 64512, 60945, 0);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tikal, "GE");
 		}
@@ -60,7 +60,7 @@ void ev0045_t_tikal(int state)
 		EV_Wait(1);
 		EV_ClrAction(tikal);
 		EV_SetAction(tikal, &action_j_j0003_tikal, &TIKAL_TEXLIST, 0.1f, 0, 8);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tikal, "BAAGAG");
 		}
@@ -73,7 +73,7 @@ void ev0045_t_tikal(int state)
 		EV_CameraPos(1, 80, -28.030001f, 3.1500001f, 524.96997f);
 		EV_CameraAng(1, 80, 768, 34065, 0);
 		EV_SerifWait();
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}
@@ -97,7 +97,7 @@ void ev0045_t_tikal(int state)
 		EV_MsgW(0, msgTbl_ev0045[TextLanguage][5]); //"\aI'm never to forget it.   \nIt goes l"...
 		EV_Wait(60);
 		EV_ClrFace(tikal);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tikal, "EAAADLDADAC");
 		}
@@ -110,12 +110,12 @@ void ev0045_t_tikal(int state)
 		EV_Wait(50);
 		EV_SerifPlay(738);
 		EV_MsgW(0, msgTbl_ev0045[TextLanguage][6]); //"\t'The servers are the 7 Chaos.'"
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tikal, "EDELDC");
 		}
 		EV_Wait(70);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(tikal);
 		}
@@ -131,12 +131,12 @@ void ev0045_t_tikal(int state)
 		EV_CameraAng(1, 0, 512, 53009, 0);
 		EV_CameraPos(1, 200, 7.5799999f, 5.9299998f, 486.01999f);
 		EV_CameraAng(1, 200, 512, 53009, 0);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(tikal);
 			EV_SetFace(tikal, "ECCCDL");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tikal, "ECCL");
 		}
@@ -152,11 +152,11 @@ void ev0045_t_tikal(int state)
 		EV_SerifPlay(741);
 		EV_MsgW(0, msgTbl_ev0045[TextLanguage][9]); //"\aBut I'm still not sure \nwhat it all "...
 		EV_ClrFace(tikal);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tikal, "DCD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tikal, "DCDCD");
 		}
@@ -173,11 +173,11 @@ void ev0045_t_tikal(int state)
 		EV_CameraPos(1, 0, 16.790001f, 6.77f, 488.60999f);
 		EV_CameraAng(1, 0, 65280, 330, 0);
 		EV_ClrFace(tikal);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tikal, "C");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tikal, "CC");
 		}
@@ -206,18 +206,18 @@ void ev0045_t_tikal(int state)
 		EV_CameraPos(1, 0, 13.88f, 5.5799999f, 487.60001f);
 		EV_CameraAng(1, 0, 1024, 60945, 0);
 		EV_ClrFace(tikal);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tikal, "Gbbb");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tikal, "E");
 		}
 		EV_ClrAction(tikal);
 		EV_SetAction(tikal, &action_j_j0003_tikal, &TIKAL_TEXLIST, 0.07f, 0, 32);
 		EV_Wait(35);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(tikal);
 		}

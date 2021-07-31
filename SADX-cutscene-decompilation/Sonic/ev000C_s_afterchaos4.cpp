@@ -17,8 +17,8 @@ void ev000C_s_afterchaos4(int state)
 		SetBankDir(77);
 		EV_SetPos(player, 73.0f, 72.019997f, 232.50999f);
 		EV_SetAng(player, 0, 0, 0);
-		EV_CreatePlayer(2, Knuckles_Main, 102.5f, 72.169998f, 212.0f, 65430, 36864, 18);
-		EV_CreatePlayer(3, Tails_Main, 37.299999f, 72.019997f, 213.32001f, 0, 28019, 0);
+		EV_CreatePlayer(2, KnucklesTheEchidna, 102.5f, 72.169998f, 212.0f, 65430, 36864, 18);
+		EV_CreatePlayer(3, MilesTalesPrower, 37.299999f, 72.019997f, 213.32001f, 0, 28019, 0);
 		create_eggmoble(80.0f, 80.0f, 160.0f, 0, 15104, 0);
 		createModelEC(300.0f, 1200.0f, 1000.0f, 0, 0x8000, 0, 0.25f, 0.25f, 0.25f, &object_ecff_bf_s_fbody_bf_s_fbody, &texlist_ec_light, 0);
 		addmotModel(0, &action_ecff_bf_s_fbody, 0);
@@ -190,12 +190,12 @@ void ev000C_s_afterchaos4(int state)
 		EV_Wait(5);
 		EV_Msg((msgTbl_ev000C[TextLanguage])[10]); //"\aWe'll take care of everything\nhere!"
 		EV_Wait(35);
-		if (VoiceLanguage == 1) EV_ClrFace(player);
+		if (VoiceLanguage == Languages_English) EV_ClrFace(player);
 		EV_Wait(50);
 		EV_ClrAction(knuckles);
 		EV_SetAction(knuckles, KNUCKLES_ACTIONS[56], &KNUCKLES_TEXLIST, 2.0f, 1, 0);
 		EV_MovePoint2(knuckles, 170.19f, 90.889999f, 311.34f, 1.5f, 0.059999999f);
-		if (!VoiceLanguage) EV_ClrFace(player);
+		if (VoiceLanguage == Languages_Japanese) EV_ClrFace(player);
 		EV_Wait(10);
 		EV_CameraPos(0, 0, -42.73f, 119.12f, 256.13f);
 		EV_CameraAng(0, 0, 62208, 50944, 0);
@@ -217,7 +217,7 @@ void ev000C_s_afterchaos4(int state)
 		EV_RemovePlayer(3);
 		deleteModel(0);
 		delete_eggmoble();
-		delete_capturebeam(CAP_01);
+		light_delete(CAP_01);
 		CAP_01 = 0;
 		EV_CameraOff();
 		EV_PadOn();

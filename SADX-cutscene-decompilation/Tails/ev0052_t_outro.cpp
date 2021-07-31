@@ -23,7 +23,7 @@ void ev0052_t_outro(int state)
 		COverlaySetSpeed(BLACK, -0.033333335f);
 		EV_SetMotion(player, MILES_OBJECTS[1], motion_m_m9014_miles, &MILES_TEXLIST, 0.89999998f, 1, 0);
 		EV_SetMode(player, 0);
-		EV_CreatePlayer(2, Sonic_Main, 860.35999f, 126.24f, 1082.87f, 0, 51712, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, 860.35999f, 126.24f, 1082.87f, 0, 51712, 0);
 		EV_SetPath(player, &epathtag_cube0052_t1, 0.5f, 0);
 		EV_CameraPos(1, 0, 937.0f, 315.04001f, 1570.069f);
 		EV_CameraAng(1, 0, 2933, 29094, 1415);

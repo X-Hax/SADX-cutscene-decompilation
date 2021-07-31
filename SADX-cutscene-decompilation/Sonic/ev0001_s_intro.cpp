@@ -193,14 +193,14 @@ void ev0001_s_intro(int state)
 		EV_SetAction(player, &action_s_s0065_sonic, &SONIC_TEXLIST, 2.0f / fps, 0, (int)fps * 15);
 		EV_SetAction(player, &action_s_s0066_sonic, &SONIC_TEXLIST, 2.0f / fps, 1, (int)fps * 15);
 		EV_SerifPlay(400);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "CDE");
 		}
 		EV_Wait((int)fps * 20);
 		EV_Msg(msgTbl_ev0001[TextLanguage][0]); // "\aAh, Yeah!  This is happenin'!"
 		EV_Wait((int)fps * 5);
-		if (!VoiceLanguage) //JP voice has a whistle so dialogue starts later
+		if (VoiceLanguage == Languages_Japanese) //JP voice has a whistle so dialogue starts later
 		{
 			EV_SetFace(player, "CDE");
 		}

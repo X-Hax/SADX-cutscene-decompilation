@@ -19,7 +19,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_InitPlayer(0);
 		EV_ClrAction(player);
 		EV_SetAction(player, MILES_ACTIONS[79], &MILES_TEXLIST, 1.0f, 1, 0);
-		EV_CreatePlayer(2, Sonic_Main, -615.5f, 0.0f, 897.25598f, 0, 8264, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, -615.5f, 0.0f, 897.25598f, 0, 8264, 0);
 		EV_Wait(1);
 		sonic = EV_GetPlayer(2);
 		EV_ClrAction(sonic);
@@ -230,7 +230,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_RemovePlayer(2);
 		EV_FreeObject(&emerald);
 		delete_eggmoble();
-		delete_capturebeam(cap1);
+		light_delete(cap1);
 		cap1 = 0;
 		if(WHITE){
 			FreeTask(WHITE);

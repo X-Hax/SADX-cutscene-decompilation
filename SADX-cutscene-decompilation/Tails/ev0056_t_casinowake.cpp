@@ -15,7 +15,7 @@ void ev0056_t_casinowake(int state)
 		EV_SetPos(player, -526.0f, -2.0f, 941.0f);
 		EV_SetAng(player, 0, 61952, 0);
 		EV_InitPlayer(0);
-		EV_CreatePlayer(2, Sonic_Main, -535.40002f, -2.0f, 944.5f, 0, 64038, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, -535.40002f, -2.0f, 944.5f, 0, 64038, 0);
 		WHITE = COverlayCreate(1.0f, 0.1f, 1.0f, 1.0f, 1.0f);
 		EV_CameraPerspective(1, 1, 10923);
 		EV_Wait(1);

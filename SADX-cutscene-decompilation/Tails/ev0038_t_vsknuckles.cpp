@@ -15,8 +15,8 @@ void ev0038_t_vsknuckles(int state)
 			EV_InitPlayer(0);
 			EV_SetPos(player, 34.939999f, 60.889999f, 427.09f);
 			EV_SetAng(player, 3801, 31182, 64503);
-			EV_CreatePlayer(2, Knuckles_Main, 87.870003f, 72.709999f, 252.82001f, 65430, 57079, 18);
-			EV_CreatePlayer(3, Sonic_Main, 39.389999f, 51.380001f, 450.67999f, 3801, 34081, 64503);
+			EV_CreatePlayer(2, KnucklesTheEchidna, 87.870003f, 72.709999f, 252.82001f, 65430, 57079, 18);
+			EV_CreatePlayer(3, SonicTheHedgehog, 39.389999f, 51.380001f, 450.67999f, 3801, 34081, 64503);
 			EV_Wait(1);
 			EV_SetPos(player, 34.939999f, 60.889999f, 427.09f);
 			EV_SetAng(player, 3801, 31182, 64503);
@@ -78,12 +78,12 @@ void ev0038_t_vsknuckles(int state)
 			EV_SetAction(player, &action_m_m0103_miles, &MILES_TEXLIST, 2.0f, 0, 4);
 			EV_Wait(5);
 			moveObject(player,
-				player->Data1->Position.x,
-				player->Data1->Position.y + 0.80000001f,
-				player->Data1->Position.z,
-				player->Data1->Position.x - 30.0f,
-				player->Data1->Position.y + 0.80000001f,
-				player->Data1->Position.z + 30.0f,
+				player->twp->pos.x,
+				player->twp->pos.y + 0.80000001f,
+				player->twp->pos.z,
+				player->twp->pos.x - 30.0f,
+				player->twp->pos.y + 0.80000001f,
+				player->twp->pos.z + 30.0f,
 				15);
 			EV_Wait(15);
 			EV_SetAng(player, 65390, 25302, 65442);
@@ -109,12 +109,12 @@ void ev0038_t_vsknuckles(int state)
 			EV_SetAction(player, &action_m_m0103_miles, &MILES_TEXLIST, 2.0f, 0, 4);
 			EV_Wait(5);
 			moveObject(player,
-				player->Data1->Position.x,
-				player->Data1->Position.y + 0.80000001f,
-				player->Data1->Position.z,
-				player->Data1->Position.x - 30.0f,
-				player->Data1->Position.y + 0.80000001f,
-				player->Data1->Position.z + 30.0f,
+				player->twp->pos.x,
+				player->twp->pos.y + 0.80000001f,
+				player->twp->pos.z,
+				player->twp->pos.x - 30.0f,
+				player->twp->pos.y + 0.80000001f,
+				player->twp->pos.z + 30.0f,
 				15);
 			EV_Wait(15);
 			EV_SetAng(player, 65390, 23040, 65442);
@@ -125,11 +125,11 @@ void ev0038_t_vsknuckles(int state)
 			EV_CameraTargetFree();
 			EV_CameraPos(1, 45, 60.82f, 75.910004f, 286.23999f);
 			EV_CameraAng(1, 45, 1560, 26026, 65203);
-			if (!VoiceLanguage)
+			if (VoiceLanguage == Languages_Japanese)
 			{
 				EV_SetFace(player, "FFF");
 			}
-			if (VoiceLanguage == 1)
+			if (VoiceLanguage == Languages_English)
 			{
 				EV_SetFace(player, "DE");
 			}

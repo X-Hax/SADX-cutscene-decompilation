@@ -53,12 +53,12 @@ void ev0020_s_mural(int state)
 		EV_Wait(65);
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
-		EV_CreateWaterRipple(-183.74001f, 5.8400002f, 56.889999f, 0.40000001f, 1.0f, 3, 10, 1);
+		createWaveCtrl(-183.74001f, 5.8400002f, 56.889999f, 0.40000001f, 1.0f, 3, 10, 1);
 		EV_CameraPos(0, 0, -197.12f, 28.84f, 29.299999f);
 		EV_CameraAng(0, 0, 59104, 39701, 0);
 		EventSe_Oneshot(1335, 100, 0, 0);
 		EV_Wait(30);
-		EV_CreateWaterRipple(-183.74001f, 5.8400002f, 56.889999f, 0.40000001f, 1.0f, 3, 10, 1);
+		createWaveCtrl(-183.74001f, 5.8400002f, 56.889999f, 0.40000001f, 1.0f, 3, 10, 1);
 		EV_Wait(40);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[4], &SONIC_TEXLIST, 2.0f, 1, 0);

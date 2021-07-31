@@ -27,7 +27,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_SetAction(player, SONIC_ACTIONS[123], &SONIC_TEXLIST, 1.0f, 1, 0);
 
 		if (enableUnusedCode) {
-			EV_CreatePlayer(3, Tails_Main, 14.0f, 1525.6f, 3427.0f, 0, 0x8000, 0);
+			EV_CreatePlayer(3, MilesTalesPrower, 14.0f, 1525.6f, 3427.0f, 0, 0x8000, 0);
 			EV_Wait(1);
 			EV_InitPlayer(3);
 			tails = EV_GetPlayer(3);
@@ -35,14 +35,14 @@ void ev001A_s_eggmantakesbirdie(int state)
 			EV_SetAction(tails, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		}
 		else {
-			EV_CreatePlayer(3, Tails_Main,
-				player->Data1->Position.x + 8.0f,
-				player->Data1->Position.y - 4.0f,
-				player->Data1->Position.z + 8.0f,
+			EV_CreatePlayer(3, MilesTalesPrower,
+				player->twp->pos.x + 8.0f,
+				player->twp->pos.y - 4.0f,
+				player->twp->pos.z + 8.0f,
 				0, 0x8000, 0);
 		}
 
-		EV_CreatePlayer(4, Gamma_Main, -254.8f, 1525.67f, 3754.6001f, 0, 0x8000, 0);
+		EV_CreatePlayer(4, E102, -254.8f, 1525.67f, 3754.6001f, 0, 0x8000, 0);
 		if (enableUnusedCode) {
 			EV_Wait(1);
 			e102 = EV_GetPlayer(4);
@@ -50,7 +50,7 @@ void ev001A_s_eggmantakesbirdie(int state)
 			EV_SetAction(e102, E102_ACTIONS[0], &E102_TEXLIST, 0.25f, 1, 0); //A slower standing animation for the darkened shot of him.
 		}
 
-		EV_CreatePlayer(5, Amy_Main, -15.0f, 1525.687f, 3245.5f, 0, 20448, 0);
+		EV_CreatePlayer(5, AmyRose, -15.0f, 1525.687f, 3245.5f, 0, 20448, 0);
 		BLACK = COverlayCreate(1.0f, 0.0f, 0.0f, 0.0f, 0.0f);
 		WING = SetEventBirdie0();
 		EV_SetPos(WING, 0.0f, 5.5f, 0.0f);
@@ -59,9 +59,9 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_SetMode(WING, 0);
 		amy = EV_GetPlayer(5);
 		EV_SetPos(WING,
-			amy->Data1->Position.x,
-			amy->Data1->Position.y,
-			amy->Data1->Position.z);
+			amy->twp->pos.x,
+			amy->twp->pos.y,
+			amy->twp->pos.z);
 		EV_SetAng(WING, 0, 11804, 0);
 		EV_ClrAction(WING);
 		EV_ClrAction(amy);
@@ -318,9 +318,9 @@ void ev001A_s_eggmantakesbirdie(int state)
 		EV_Wait(26);
 		stopObject(e102);
 		EV_SetPos(e102,
-			e102->Data1->Position.x,
+			e102->twp->pos.x,
 			1540.0f,
-			e102->Data1->Position.z);
+			e102->twp->pos.z);
 		task_skywalk2 = CSkyWalk_create2(e102, 1540.0f);
 		EV_SetPos(Mhand, -34.0f, 1420.0f, 3255.0f);
 		EV_SetPos(player, -1.0f, 1526.0f, 3275.864f);

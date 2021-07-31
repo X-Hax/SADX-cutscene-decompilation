@@ -141,6 +141,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="E102\ev00B0_e_intro.cpp" />
+    <ClCompile Include="E102\ev00B1_e_finalegg.cpp" />
+    <ClCompile Include="E102\ev00B2_e_afterfinalegg.cpp" />
+    <ClCompile Include="E102\ev00B3_e_uselessmachine.cpp" />
+    <ClCompile Include="E102\ev00B4_e_e101.cpp" />
+    <ClCompile Include="E102\ev00B5_e_betadefeated.cpp" />
+    <ClCompile Include="E102\ev00B7_e_fanfare.cpp" />
+    <ClCompile Include="E102\ev00B8_e_emeraldcoast.cpp" />
+    <ClCompile Include="E102\ev00B9_e_past.cpp" />
+    <ClCompile Include="E102\ev00BA_e_tikal.cpp" />
+    <ClCompile Include="E102\ev00BB_e_deliverfrog.cpp" />
+    <ClCompile Include="E102\ev00BC_e_enterwrongroom.cpp" />
+    <ClCompile Include="E102\ev00BD_e_e101factory.cpp" />
     <ClCompile Include="Knuckles\ev0096_k_pastthird.cpp" />
     <ClCompile Include="Knuckles\ev0085_k_tikalfather.cpp" />
     <ClCompile Include="Knuckles\ev0086_k_leavepastfirst.cpp" />

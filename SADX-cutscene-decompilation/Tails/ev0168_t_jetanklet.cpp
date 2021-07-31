@@ -29,9 +29,9 @@ void ev0168_t_jetanklet(int state)
 		EV_SerifPlay(1866);
 		EV_MsgW(0, msgTbl_ev0168[TextLanguage][0]); //"\aLook, it's your Jet Anklet!"
 		tikal = CTikalLight_Create(
-			player->Data1->Position.x - 11.764f,
-			player->Data1->Position.y + 23.0f,
-			player->Data1->Position.z + 6.2540002f);
+			player->twp->pos.x - 11.764f,
+			player->twp->pos.y + 23.0f,
+			player->twp->pos.z + 6.2540002f);
 		EV_Wait(1);
 		EV_SetMode(tikal, 0);
 		EV_ClrPath(tikal);

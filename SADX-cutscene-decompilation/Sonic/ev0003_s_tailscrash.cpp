@@ -102,12 +102,12 @@ void ev0003_s_tailscrash(int state)
 		EV_CameraPos(0, 50, -345.14999f, 4.54f, 1871.4399f);
 		EV_ClrFace(player);
 		EV_SerifPlay(415);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "DJZZZZZZZZZZZZZZZZZZZ");
 		}
 		EV_Msg((msgTbl_ev0003[TextLanguage])[2]); // "\aWatch out!   \nYou're gonna crash!  A"...
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "DJ");
 		}
@@ -154,11 +154,11 @@ void ev0003_s_tailscrash(int state)
 		EV_SerifPlay(416);
 		EV_Msg((msgTbl_ev0003[TextLanguage])[3]); // "\aTails..."
 		EV_Wait(25);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "EAACD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "EC");
 		}

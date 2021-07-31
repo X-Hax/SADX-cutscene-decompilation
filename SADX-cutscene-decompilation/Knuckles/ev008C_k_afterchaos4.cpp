@@ -18,8 +18,8 @@ void ev008C_k_afterchaos4(int state)
 		SetBankDir(77);
 		EV_SetPos(player, 102.5f, 72.169998f, 212.0f);
 		EV_SetAng(player, 65430, 36864, 18);
-		EV_CreatePlayer(2, Sonic_Main, 73.0f, 72.019997f, 232.50999f, 0, 0, 0);
-		EV_CreatePlayer(3, Tails_Main, 37.299999f, 72.019997f, 213.32001f, 0, 28019, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, 73.0f, 72.019997f, 232.50999f, 0, 0, 0);
+		EV_CreatePlayer(3, MilesTalesPrower, 37.299999f, 72.019997f, 213.32001f, 0, 28019, 0);
 		create_eggmoble(80.0f, 80.0f, 160.0f, 0, 15104, 0);
 		createModelEC(
 			300.0f, 1200.0f, 1000.0f, 0, 0x8000, 0, 0.25f, 0.25f, 0.25f,
@@ -182,31 +182,31 @@ void ev008C_k_afterchaos4(int state)
 		EV_CameraPos(0, 0, 76.480003f, 75.239998f, 239.92999f);
 		EV_CameraAng(0, 0, 4352, 5632, 0);
 		EV_ClrFace(sonic);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "CDCD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(sonic, "CDCD");
 		}
 		EV_SerifPlay(1096);
 		EV_Wait(5);
 		EV_Msg(msgTbl_ev008C[TextLanguage][10]); //"\aNo problem, Knuckles!"
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(sonic);
 		}
 		EV_Wait(10);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(sonic);
 		}
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "CDFE");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(sonic, "CFE");
 		}
@@ -239,7 +239,7 @@ void ev008C_k_afterchaos4(int state)
 		EV_RemovePlayer(3);
 		deleteModel(0);
 		delete_eggmoble();
-		delete_capturebeam(CAP_01);
+		light_delete(CAP_01);
 		CAP_01 = 0;
 		EV_CameraOff();
 		EV_PadOn();

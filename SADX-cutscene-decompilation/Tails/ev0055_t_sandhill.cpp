@@ -24,23 +24,23 @@ void ev0055_t_sandhill(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m9004_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_CreateObject(&Frog,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
-			player->Data1->Rotation.x,
-			0x4000 - player->Data1->Rotation.y,
-			player->Data1->Rotation.z);
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
+			player->twp->ang.x,
+			0x4000 - player->twp->ang.y,
+			player->twp->ang.z);
 		EV_Wait(1);
 		EV_SetMode(Frog, 0);
 		EV_Wait(1);
 		EV_SetPos(Frog,
-			player->Data1->Position.x,
-			player->Data1->Position.y - 0.5f,
-			player->Data1->Position.z);
+			player->twp->pos.x,
+			player->twp->pos.y - 0.5f,
+			player->twp->pos.z);
 		EV_SetAng(Frog,
-			player->Data1->Rotation.x,
-			0x4000 - player->Data1->Rotation.y,
-			player->Data1->Rotation.z);
+			player->twp->ang.x,
+			0x4000 - player->twp->ang.y,
+			player->twp->ang.z);
 		EV_SetAction(Frog, &action_f_f0019_frog, &texlist_frog, 1.0f, 1, 1);
 		EV_SetPath(tikal, &epathtag_ev0055_tk, 2.8f, 0);
 		EV_Wait(70);

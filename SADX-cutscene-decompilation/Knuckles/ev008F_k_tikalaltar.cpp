@@ -20,7 +20,7 @@ void ev008F_k_tikalaltar(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		BGM_Play(MusicIDs_tical);
-		EV_CreatePlayer(2, Tikal_Main, 0.40000001f, 90.0f, 48.029999f, 0, 29118, 0);
+		EV_CreatePlayer(2, Tikal, 0.40000001f, 90.0f, 48.029999f, 0, 29118, 0);
 		EV_Wait(1);
 		//EV_ClrAction(EV_GetPlayer(1)); //Game calls the wrong ID here. It wouldn't do anything though, because Tikal isn't running an event animation.
 		EV_InitPlayer(2);
@@ -80,12 +80,12 @@ void ev008F_k_tikalaltar(int state)
 		EV_CameraAng(0, 0, 62208, 53980, 0);
 		EV_Wait(10);
 		EventSe_Oneshot(1335, 20, 0, 0);
-		EV_CreateWaterRipple(-40.700001f, 80.0f, 52.68f, 0.22f, 1.0f, 6, 18, 1);
+		createWaveCtrl(-40.700001f, 80.0f, 52.68f, 0.22f, 1.0f, 6, 18, 1);
 		EV_Wait(30);
 		EventSe_Oneshot(1335, 20, 0, 0);
-		EV_CreateWaterRipple(-40.700001f, 80.0f, 52.68f, 0.22f, 1.0f, 6, 18, 1);
+		createWaveCtrl(-40.700001f, 80.0f, 52.68f, 0.22f, 1.0f, 6, 18, 1);
 		EventSe_Oneshot(1335, 20, 0, 0);
-		EV_CreateWaterRipple(-52.009998f, 80.0f, 56.419998f, 0.30000001f, 1.0f, 6, 19, 2);
+		createWaveCtrl(-52.009998f, 80.0f, 56.419998f, 0.30000001f, 1.0f, 6, 19, 2);
 		EV_Wait(130);
 		EV_FreeWaterRipple(1);
 		EV_FreeWaterRipple(2);
@@ -108,11 +108,11 @@ void ev008F_k_tikalaltar(int state)
 		EV_SerifPlay(1105);
 		EV_MsgW(1, msgTbl_ev008F[TextLanguage][6]); //"\aI understand... \nLet me talk to my f"...
 		EV_ClrFace(tikal);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tikal, "ELDBD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tikal, "EDD");
 		}
@@ -124,11 +124,11 @@ void ev008F_k_tikalaltar(int state)
 		EV_CameraAng(1, 300, 3072, 25308, 0);
 		EV_Wait(130);
 		EV_ClrFace(tikal);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tikal, "ED");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tikal, "EDE");
 		}
@@ -137,11 +137,11 @@ void ev008F_k_tikalaltar(int state)
 		EV_SetAction(tikal, &action_j_j0020_tikal, &TIKAL_TEXLIST, 1.0f, 0, 8);
 		EV_Wait(1);
 		EV_WaitAction(tikal);
-		LoadEventObject(&CHA, EV_Alife, 15.95f, 92.0f, 50.150002f, 0, 61241, 0);
-		LoadEventObject(&CHA2, EV_Alife, 16.040001f, 92.0f, 46.169998f, 0, 61241, 0);
-		LoadEventObject(&CHA3, EV_Alife, 7.8499999f, 92.0f, 52.52f, 0, 61241, 0);
-		LoadEventObject(&CHA4, EV_Alife, 3.98f, 92.0f, 50.32f, 0, 61241, 0);
-		LoadEventObject(&CHA5, EV_Alife, 11.28f, 92.0f, 59.23f, 0, 61241, 0);
+		EV_CreateObjectFunc(&CHA, EV_Alife, 15.95f, 92.0f, 50.150002f, 0, 61241, 0);
+		EV_CreateObjectFunc(&CHA2, EV_Alife, 16.040001f, 92.0f, 46.169998f, 0, 61241, 0);
+		EV_CreateObjectFunc(&CHA3, EV_Alife, 7.8499999f, 92.0f, 52.52f, 0, 61241, 0);
+		EV_CreateObjectFunc(&CHA4, EV_Alife, 3.98f, 92.0f, 50.32f, 0, 61241, 0);
+		EV_CreateObjectFunc(&CHA5, EV_Alife, 11.28f, 92.0f, 59.23f, 0, 61241, 0);
 		EV_Alife_FaceChange(CHA, 9);
 		EV_Alife_FaceChange(CHA2, 9);
 		EV_Alife_FaceChange(CHA3, 9);
@@ -201,11 +201,11 @@ void ev008F_k_tikalaltar(int state)
 		EV_SetAng(CHA5, 0, 299, 0);
 		EV_SerifPlay(1108);
 		EV_ClrFace(tikal);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tikal, "EBBLBD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tikal, "DEF");
 		}

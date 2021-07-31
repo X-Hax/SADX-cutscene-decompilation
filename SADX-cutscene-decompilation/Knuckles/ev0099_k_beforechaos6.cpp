@@ -17,7 +17,7 @@ void ev0099_k_beforechaos6(int state)
 		BGM_Play(MusicIDs_egcarer1);
 		EV_SetPos(player, -79.190002f, 743.21997f, -549.66998f);
 		EV_SetAng(player, 0, 43508, 64719);
-		EV_CreatePlayer(2, Sonic_Main, -44.900002f, 745.65002f, -231.87f, 718, 29278, 281);
+		EV_CreatePlayer(2, SonicTheHedgehog, -44.900002f, 745.65002f, -231.87f, 718, 29278, 281);
 		create_eggmoble(0.0f, 780.0f, -386.04001f, 0, 0x4000, 0);
 		StgChaos6CtrlOn(16.0f, 560.0f, -30.0f, 0, 0, 0, 910);
 		EV_Wait(1);
@@ -90,12 +90,12 @@ void ev0099_k_beforechaos6(int state)
 		EV_SerifPlay(1148);
 		EV_Msg(msgTbl_ev0099[TextLanguage][2]); //"\aThere you are, Knuckles. \nAbout time"...
 		EV_Wait(50);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(sonic);
 		}
 		EV_Wait(20);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(sonic);
 		}
@@ -143,26 +143,26 @@ void ev0099_k_beforechaos6(int state)
 		EV_SerifPlay(1151);
 		EV_SetFace(player, "CEDCD");
 		EV_Wait(50);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}
 		EV_Msg(msgTbl_ev0099[TextLanguage][6]); //"\aHe'll do okay."
 		EV_Wait(10);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "CEDCD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "D");
 		}
 		EV_Wait(50);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}
@@ -177,7 +177,7 @@ void ev0099_k_beforechaos6(int state)
 		EV_Wait(10);
 		EV_SetFace(player, "CEDCD");
 		EV_Wait(90);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}
@@ -186,7 +186,7 @@ void ev0099_k_beforechaos6(int state)
 		EV_LookFree(player);
 		EV_LookPoint(player, 0.0f, 803.0f, -387.04001f);
 		EV_Wait(9);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}

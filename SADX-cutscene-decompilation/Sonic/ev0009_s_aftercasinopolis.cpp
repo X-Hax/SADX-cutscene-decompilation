@@ -18,7 +18,7 @@ void ev0009_s_aftercasinopolis(int state)
 		EV_SetPos(player, -610.35303f, 0.0f, 925.89001f);
 		EV_SetAng(player, 0, 8092, 0);
 		EV_InitPlayer(0);
-		EV_CreatePlayer(2, Tails_Main, -607.56799f, 0.0f, 913.71997f, 0, 8264, 0);
+		EV_CreatePlayer(2, MilesTalesPrower, -607.56799f, 0.0f, 913.71997f, 0, 8264, 0);
 		create_eggmoble(-411.44f, 13.0f, 1091.1f, 64512, 57344, 0);
 		EV_CreateObject(&emerald, -547.33002f, -0.5f, 973.90002f, 0, 0, 0);
 		EV_SetMode(emerald, 0);
@@ -69,7 +69,7 @@ void ev0009_s_aftercasinopolis(int state)
 			EV_Wait(20);
 			break;
 		case 2:
-			EV_Msg("?");
+			EV_Msg((char*)"?");
 			break;
 		default:
 			break;
@@ -249,7 +249,7 @@ void ev0009_s_aftercasinopolis(int state)
 			FreeTask(WHITE);
 			WHITE = 0;
 		}
-		delete_capturebeam(cap1);
+		light_delete(cap1);
 		cap1 = 0;
 		EventSe_Close();
 		break;

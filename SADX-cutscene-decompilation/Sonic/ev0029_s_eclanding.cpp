@@ -20,9 +20,9 @@ void ev0029_s_eclanding(int state)
 		EV_CameraAng(1, 0, 59957, 41447, 65024);
 		EV_CameraPos(1, 0, -1145.26f, 1252.15f, -2293.4099f);
 		EV_CreateObject(&TR2B,
-			player->Data1->Position.x,
-			player->Data1->Position.y + 12.0f,
-			player->Data1->Position.z,
+			player->twp->pos.x,
+			player->twp->pos.y + 12.0f,
+			player->twp->pos.z,
 			0, 54016, 0);
 		EV_SetMode(TR2B, 0);
 		EV_Wait(1);

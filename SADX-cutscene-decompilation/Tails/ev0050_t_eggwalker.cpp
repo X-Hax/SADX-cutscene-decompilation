@@ -27,13 +27,13 @@ void ev0050_t_eggwalker(int state)
 		EV_CameraPos(0, 200, -433.32001f, 23.940001f, 1235.62f);
 		EV_CameraAng(0, 200, 58217, 33060, 0);
 		create_eggmoble(-431.51001f, 50.0f, 1163.6899f, 0, 17310, 0);
-		LoadEventObject(&CAR, SetEventObjectSSCar, -504.10001f, -7.52f, 1167.42f, 0, 15965, 0);
-		LoadEventObject(&CAR2, SetEventObjectSSCar, -384.47f, -7.52f, 1310.17f, 0, 49293, 0);
-		LoadEventObject(&CAR3, SetEventObjectSSCar, -497.72f, -7.52f, 1368.96f, 0, 48854, 0);
-		LoadEventObject(&CAR4, SetEventObjectSSCar, -499.81f, -7.52f, 1296.52f, 0, 16737, 0);
+		EV_CreateObjectFunc(&CAR, SetEventObjectSSCar, -504.10001f, -7.52f, 1167.42f, 0, 15965, 0);
+		EV_CreateObjectFunc(&CAR02, SetEventObjectSSCar, -384.47f, -7.52f, 1310.17f, 0, 49293, 0);
+		EV_CreateObjectFunc(&CAR3, SetEventObjectSSCar, -497.72f, -7.52f, 1368.96f, 0, 48854, 0);
+		EV_CreateObjectFunc(&CAR4, SetEventObjectSSCar, -499.81f, -7.52f, 1296.52f, 0, 16737, 0);
 		EV_Wait(1);
 		EV_SetMode(CAR, 1);
-		EV_SetMode(CAR2, 1);
+		EV_SetMode(CAR02, 1);
 		EV_SetMode(CAR3, 1);
 		EV_SetMode(CAR4, 1);
 		EventSe_Play(0, 1336, 1800);
@@ -232,7 +232,7 @@ void ev0050_t_eggwalker(int state)
 		EV_FreeObject(&GIRL2);
 		EV_FreeObject(&OYAJI2);
 		EV_FreeObject(&CAR);
-		EV_FreeObject(&CAR2);
+		EV_FreeObject(&CAR02);
 		EV_FreeObject(&CAR3);
 		EV_FreeObject(&CAR4);
 		EV_CameraOff();

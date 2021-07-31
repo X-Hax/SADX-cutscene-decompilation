@@ -16,24 +16,24 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_SetAng(player, 0, 25611, 0);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[3], &SONIC_TEXLIST, 1.0f, 1, 0);
-		EV_CreatePlayer(3, Tails_Main,
-			(player->Data1->Position.x - 20.0f),
-			(player->Data1->Position.y),
-			(player->Data1->Position.z + 10.0f),
-			(player->Data1->Rotation.x),
-			(0x4000 - player->Data1->Rotation.y),
-			(player->Data1->Rotation.z));
+		EV_CreatePlayer(3, MilesTalesPrower,
+			(player->twp->pos.x - 20.0f),
+			(player->twp->pos.y),
+			(player->twp->pos.z + 10.0f),
+			(player->twp->ang.x),
+			(0x4000 - player->twp->ang.y),
+			(player->twp->ang.z));
 		EV_Wait(1);
 		tails = EV_GetPlayer(3);
 		EV_ClrAction(tails);
 		EV_SetAction(tails, MILES_ACTIONS[80], &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_CreateObject(&PURPLE,
-			tails->Data1->Position.x,
-			tails->Data1->Position.y,
-			tails->Data1->Position.z,
-			tails->Data1->Rotation.x,
-			0x4000 - tails->Data1->Rotation.y,
-			tails->Data1->Rotation.z);
+			tails->twp->pos.x,
+			tails->twp->pos.y,
+			tails->twp->pos.z,
+			tails->twp->ang.x,
+			0x4000 - tails->twp->ang.y,
+			tails->twp->ang.z);
 		EV_CameraAng(1, 0, 56320, 25088, 0);
 		EV_CameraPos(1, 0, -386.45001f, 64.599998f, 1920.33f);
 		EV_Wait(1);
@@ -88,9 +88,9 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_MsgClose();
 		EV_Wait(5);
 		EV_MovePoint2(tails,
-			player->Data1->Position.x - 8.0f,
-			player->Data1->Position.y,
-			player->Data1->Position.z + 8.0f,
+			player->twp->pos.x - 8.0f,
+			player->twp->pos.y,
+			player->twp->pos.z + 8.0f,
 			0.56f, 0.059999999f);
 		EV_CameraAng(0, 30, 64256, 1024, 0);
 		EV_Wait(30);
@@ -114,19 +114,19 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_CameraAng(0, 0, 512, 21248, 0);
 		EV_CameraPos(0, 0, -442.64999f, 5.5999999f, 1902.02f);
 		EV_SetPos(PURPLE,
-			tails->Data1->Position.x,
-			tails->Data1->Position.y,
-			tails->Data1->Position.z);
+			tails->twp->pos.x,
+			tails->twp->pos.y,
+			tails->twp->pos.z);
 		EV_SetAng(PURPLE,
-			tails->Data1->Rotation.x,
-			0x4000 - tails->Data1->Rotation.y,
-			tails->Data1->Rotation.z);
+			tails->twp->ang.x,
+			0x4000 - tails->twp->ang.y,
+			tails->twp->ang.z);
 		EV_ClrFace(tails);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tails, "GCAAGDG");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tails, "GGDG");
 		}
@@ -168,11 +168,11 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_ClrFace(player);
 		EV_Wait(30);
 		EV_ClrFace(tails);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tails, "GEDCDCGDE");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tails, "GEDE");
 		}
@@ -181,26 +181,26 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_MsgW(30, (msgTbl_ev0006[TextLanguage])[11]); //"\aduring one of my test flights. "
 		EV_Wait(1);
 		EV_SerifWait();
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(tails);
 		}
 		EV_Wait(20);
 		EV_SerifPlay(427);
 		EV_Msg((msgTbl_ev0006[TextLanguage])[12]); //"\aThis thing's got unlimited power,\nya"...
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tails, "GEDE");
 		}
 		EV_Wait(1);
 		EV_SerifWait();
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(tails);
 		}
 		EV_SerifPlay(428);
 		EV_Msg((msgTbl_ev0006[TextLanguage])[13]); //"\aSo I figured, why not use it \nto pow"...
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tails, "GEDE");
 		}
@@ -210,11 +210,11 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_MsgCls();
 		EV_Wait(45);
 		EV_ClrFace(tails);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tails, "CG");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tails, "CGG");
 		}
@@ -227,9 +227,9 @@ void ev0006_s_poolsidewithtails(int state)
 		EV_LookObject(player, tails, 0.0f, 6.0f, 0.0f);
 		EV_LookFree(tails);
 		EV_LookPoint(tails,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z);
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z);
 		EV_CameraPos(0, 0, -444.83499f, 6.5500002f, 1912.076f);
 		EV_CameraAng(0, 0, 2816, 6144, 0);
 		EV_ClrAction(tails);

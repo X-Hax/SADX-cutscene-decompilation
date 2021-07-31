@@ -28,13 +28,13 @@ void ev004B_t_eggmantakesbirdie(int state)
 
 		//Sonic has the same attempt to put him in front of the elevator as Tails in Sonic's version.
 		if (enableUnusedCode) {
-			EV_CreatePlayer(3, Sonic_Main, 14.0f, 1525.6f, 3427.0f, 0, 0x8000, 0);
+			EV_CreatePlayer(3, SonicTheHedgehog, 14.0f, 1525.6f, 3427.0f, 0, 0x8000, 0);
 		}
 		else {
-			EV_CreatePlayer(3, Sonic_Main,
-				player->Data1->Position.x + 8.0f,
-				player->Data1->Position.y - 4.0f,
-				player->Data1->Position.z + 8.0f,
+			EV_CreatePlayer(3, SonicTheHedgehog,
+				player->twp->pos.x + 8.0f,
+				player->twp->pos.y - 4.0f,
+				player->twp->pos.z + 8.0f,
 				0, 0x8000, 0);
 		}
 
@@ -42,8 +42,8 @@ void ev004B_t_eggmantakesbirdie(int state)
 		sonic = EV_GetPlayer(3);
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, SONIC_ACTIONS[123], &SONIC_TEXLIST, 1.0f, 1, 0);
-		EV_CreatePlayer(5, Amy_Main, -15.0f, 1525.687f, 3245.5f, 0, 20448, 0);
-		EV_CreatePlayer(4, Gamma_Main, -254.8f, 1525.67f, 3754.6001f, 0, 0x8000, 0);
+		EV_CreatePlayer(5, AmyRose, -15.0f, 1525.687f, 3245.5f, 0, 20448, 0);
+		EV_CreatePlayer(4, E102, -254.8f, 1525.67f, 3754.6001f, 0, 0x8000, 0);
 		EV_Wait(1);
 		e102 = EV_GetPlayer(4);
 		EV_ClrAction(e102);
@@ -54,9 +54,9 @@ void ev004B_t_eggmantakesbirdie(int state)
 		EV_SetMode(KOTORI, 0);
 		amy = EV_GetPlayer(5);
 		EV_SetPos(KOTORI,
-			amy->Data1->Position.x,
-			amy->Data1->Position.y,
-			amy->Data1->Position.z);
+			amy->twp->pos.x,
+			amy->twp->pos.y,
+			amy->twp->pos.z);
 		EV_SetAng(KOTORI, 0, 11804, 0);
 		EV_ClrAction(KOTORI);
 		EV_ClrAction(amy);
@@ -105,11 +105,11 @@ void ev004B_t_eggmantakesbirdie(int state)
 		EV_MoveRotation(amy, 985, 15869, 0);
 		EV_LookObject(amy, sonic, 0.0f, 4.0f, 0.0f);
 		EV_ClrFace(amy);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(amy, "CD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(amy, "DF");
 		}

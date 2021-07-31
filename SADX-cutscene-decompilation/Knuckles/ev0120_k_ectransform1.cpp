@@ -25,11 +25,11 @@ void ev0120_k_ectransform1(int state)
 		EV_CameraTargetObj(0, 0, player, 0.0f, 4.0f, 0.0f, 0);
 		EV_Wait(4);
 		EV_SerifPlay(1128);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "IBFFF");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "EBFFF");
 		}

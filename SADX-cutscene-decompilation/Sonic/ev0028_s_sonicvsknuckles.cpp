@@ -24,15 +24,15 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_InitPlayer(0);
 		EV_SetPos(player, 34.939999f, 60.889999f, 427.09f);
 		EV_SetAng(player, 3801, 31182, 64503);
-		EV_CreatePlayer(2, Knuckles_Main, 87.870003f, 72.709999f, 252.82001f, 65390, 57079, 65442);
+		EV_CreatePlayer(2, KnucklesTheEchidna, 87.870003f, 72.709999f, 252.82001f, 65390, 57079, 65442);
 		EV_Wait(1);
-		EV_CreatePlayer(3, Tails_Main,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z + 30.0f,
-			player->Data1->Rotation.x,
-			0x4000 - player->Data1->Rotation.y,
-			player->Data1->Rotation.z);
+		EV_CreatePlayer(3, MilesTalesPrower,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z + 30.0f,
+			player->twp->ang.x,
+			0x4000 - player->twp->ang.y,
+			player->twp->ang.z);
 		EV_SetPos(player, 34.939999f, 60.889999f, 427.09f);
 		EV_SetAng(player, 3801, 31182, 64503);
 		knuckles = EV_GetPlayer(2);
@@ -101,12 +101,12 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_SetAction(player, &action_s_s0035_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, &action_s_s0036_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
 		moveObject(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
-			player->Data1->Position.x - 25.0f,
-			player->Data1->Position.y,
-			player->Data1->Position.z - 25.0f,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
+			player->twp->pos.x - 25.0f,
+			player->twp->pos.y,
+			player->twp->pos.z - 25.0f,
 			40);
 		EV_Wait(10);
 		EV_CameraTargetFree();
@@ -163,16 +163,16 @@ void ev0028_s_sonicvsknuckles(int state)
 		EV_Wait(30);
 		EV_SetFace(player, "F");
 		EV_Wait(20);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 			EV_SetFace(player, "F");
 		}
 		EV_Wait(12);
 		EV_MsgClose();
-		if (!VoiceLanguage) EV_ClrFace(player);
+		if (VoiceLanguage == Languages_Japanese) EV_ClrFace(player);
 		EV_Wait(17);
-		if (VoiceLanguage == 1) EV_ClrFace(player);
+		if (VoiceLanguage == Languages_English) EV_ClrFace(player);
 		dsStop_all();
 		EV_Wait(73);
 		break;

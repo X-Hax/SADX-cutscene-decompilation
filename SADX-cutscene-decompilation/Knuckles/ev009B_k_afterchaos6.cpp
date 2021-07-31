@@ -40,34 +40,34 @@ void ev009B_k_afterchaos6(int state)
 		EV_SetMode(S_EME, 0);
 		EV_SetMode(Y_EME, 0);
 		EV_SetPos(W_EME,
-			player->Data1->Position.x,
-			player->Data1->Position.y + 5.0f,
-			player->Data1->Position.z - 45.0f);
+			player->twp->pos.x,
+			player->twp->pos.y + 5.0f,
+			player->twp->pos.z - 45.0f);
 		EV_SetAng(W_EME, 0, 0, 0);
 		EV_SetPos(B_EME,
-			player->Data1->Position.x - 5.0f,
-			player->Data1->Position.y + 5.0f,
-			player->Data1->Position.z - 48.0f);
+			player->twp->pos.x - 5.0f,
+			player->twp->pos.y + 5.0f,
+			player->twp->pos.z - 48.0f);
 		EV_SetAng(B_EME, 0, 0, 0);
 		EV_SetPos(G_EME,
-			player->Data1->Position.x + 7.0f,
-			player->Data1->Position.y + 5.0f,
-			player->Data1->Position.z - 42.0f);
+			player->twp->pos.x + 7.0f,
+			player->twp->pos.y + 5.0f,
+			player->twp->pos.z - 42.0f);
 		EV_SetAng(G_EME, 0, 0, 0);
 		EV_SetPos(P_EME,
-			player->Data1->Position.x - 8.0f,
-			player->Data1->Position.y + 5.0f,
-			player->Data1->Position.z - 44.0f);
+			player->twp->pos.x - 8.0f,
+			player->twp->pos.y + 5.0f,
+			player->twp->pos.z - 44.0f);
 		EV_SetAng(P_EME, 0, 0, 0);
 		EV_SetPos(S_EME,
-			player->Data1->Position.x - 8.0f,
-			player->Data1->Position.y + 5.0f,
-			player->Data1->Position.z - 52.0f);
+			player->twp->pos.x - 8.0f,
+			player->twp->pos.y + 5.0f,
+			player->twp->pos.z - 52.0f);
 		EV_SetAng(S_EME, 0, 0, 0);
 		EV_SetPos(Y_EME,
-			player->Data1->Position.x + 6.0f,
-			player->Data1->Position.y + 5.0f,
-			player->Data1->Position.z - 50.0f);
+			player->twp->pos.x + 6.0f,
+			player->twp->pos.y + 5.0f,
+			player->twp->pos.z - 50.0f);
 		EV_SetAng(Y_EME, 0, 0, 0);
 		EV_Wait(1);
 		EV_SetAction(W_EME, &action_m_em_white, &M_EM_WHITE_TEXLIST, 1.0f, 1, 0);
@@ -87,22 +87,22 @@ void ev009B_k_afterchaos6(int state)
 		EV_CameraAng(0, 0, 5148, 38158, 0);
 		EV_CameraPos(0, 300, -6.27f, 745.84003f, -231.98f);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "CDECDE");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "CD0");
 		}
 		EV_SerifPlay(1159);
 		EV_MsgW(30, msgTbl_ev009B[TextLanguage][0]); //"\aYeah! You're finished!"
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}
 		EV_Wait(25);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}
@@ -115,12 +115,12 @@ void ev009B_k_afterchaos6(int state)
 		EV_Wait(60);
 		EV_Msg(msgTbl_ev009B[TextLanguage][2]); //"\asafely to my island."
 		EV_Wait(20);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}
 		EV_Wait(50);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}

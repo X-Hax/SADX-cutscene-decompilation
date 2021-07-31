@@ -25,7 +25,7 @@ void ev00B0_e_intro(int state)
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, E102_ACTIONS[0], &E102_TEXLIST, 1.0f, 1, 0);
-		EV_CreatePlayer(2, Eggman_Main, -143.89f, 108.75f, 12.23f, 0, 42748, 0);
+		EV_CreatePlayer(2, Eggman, -143.89f, 108.75f, 12.23f, 0, 42748, 0);
 		EV_Wait(1);
 		EV_InitPlayer(2);
 		eggman = EV_GetPlayer(2);

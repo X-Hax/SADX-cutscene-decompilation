@@ -5,7 +5,7 @@
 
 void ev004D_t_missile(int state)
 {
-	//ObjectMaster* task_gattai = 0;
+	//task* task_gattai = 0;
 
 	switch (state) {
 	case 1:
@@ -23,7 +23,7 @@ void ev004D_t_missile(int state)
 		EV_SetPos(player, 340.01001f, 0.0099999998f, 1650.25f);
 		EV_SetAng(player, 0, 17152, 0);
 		EV_SetMode(player, 0);
-		EV_CreatePlayer(2, Amy_Main, 340.01001f, 0.0099999998f, 1630.25f, 0, 30720, 0);
+		EV_CreatePlayer(2, AmyRose, 340.01001f, 0.0099999998f, 1630.25f, 0, 30720, 0);
 		EV_Wait(1);
 		amy = EV_GetPlayer(2);
 		EV_SetPos(amy, 340.01001f, 0.0099999998f, 1630.25f);
@@ -31,13 +31,13 @@ void ev004D_t_missile(int state)
 		obj_ver2_wing = SetEventBirdie0();
 		EV_SetPos(obj_ver2_wing, 340.01001f, 0.0099999998f, 1630.25f);
 		EV_SetAng(obj_ver2_wing,
-			amy->Data1->Rotation.x,
-			0x4000 - amy->Data1->Rotation.y,
-			amy->Data1->Rotation.z);
+			amy->twp->ang.x,
+			0x4000 - amy->twp->ang.y,
+			amy->twp->ang.z);
 		EV_Wait(1);
 		EV_SetMode(obj_ver2_wing, 0);
 		EV_SetAction(obj_ver2_wing, &action_w_w9001_wing, &VER2_WING_TEXLIST, 1.0f, 1, 0);
-		LoadEventObject(&TEPODON, missilefunc, 701.5f, -1300.25f, 3900.2f, 65520, 0, 0);
+		EV_CreateObjectFunc(&TEPODON, missilefunc, 701.5f, -1300.25f, 3900.2f, 65520, 0, 0);
 		EV_Wait(1);
 		SetEggMissileParam(TEPODON, 0.25f);
 		create_eggmoble(233.3f, 82.800003f, 1545.0f, 0, 53248, 0);
@@ -86,15 +86,15 @@ void ev004D_t_missile(int state)
 		EV_Wait(10);
 		EV_SetPos(obj_ver2_wing, -90.0f, 55.0f, 1520.5f);
 		EV_SetAng(obj_ver2_wing,
-			(int)(amy->Data1->Position.x - 768.0f),
-			(int)(amy->Data1->Position.y - 28672.0f),
-			(int)(amy->Data1->Position.z));
+			(int)(amy->twp->pos.x - 768.0f),
+			(int)(amy->twp->pos.y - 28672.0f),
+			(int)(amy->twp->pos.z));
 		EV_SetMode(obj_ver2_wing, 0);
 		EV_SetAction(obj_ver2_wing, &action_w_w9001_wing, &VER2_WING_TEXLIST, 1.0f, 1, 0);
 		moveObject(obj_ver2_wing, -90.0f, 54.0f, 1512.5f,
-			amy->Data1->Position.x - 0.5f,
-			amy->Data1->Position.y + 6.5f,
-			amy->Data1->Position.z + 6.0f,
+			amy->twp->pos.x - 0.5f,
+			amy->twp->pos.y + 6.5f,
+			amy->twp->pos.z + 6.0f,
 			200);
 		EV_Wait(85);
 		EV_SetAction(amy, &action_a_a0011_amy, &AMY_TEXLIST, 1.2f, 1, 16);
@@ -106,13 +106,13 @@ void ev004D_t_missile(int state)
 		EV_SetAng(amy, 0, 0, 0);
 		EV_SetAng(player, 0, 22784, 0);
 		EV_SetPos(obj_ver2_wing,
-			amy->Data1->Position.x - 0.5f,
-			amy->Data1->Position.y + 4.5f,
-			amy->Data1->Position.z + 5.4000001f);
+			amy->twp->pos.x - 0.5f,
+			amy->twp->pos.y + 4.5f,
+			amy->twp->pos.z + 5.4000001f);
 		EV_SetAng(obj_ver2_wing,
-			(int)(amy->Data1->Position.x),
-			(int)(amy->Data1->Position.y + 10496.0f),
-			(int)(amy->Data1->Position.z));
+			(int)(amy->twp->pos.x),
+			(int)(amy->twp->pos.y + 10496.0f),
+			(int)(amy->twp->pos.z));
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m0109_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 0);
@@ -160,13 +160,13 @@ void ev004D_t_missile(int state)
 		EV_LookFree(player);
 		EV_SetAng(amy, 0, 4096, 0);
 		EV_SetPos(obj_ver2_wing,
-			amy->Data1->Position.x - 2.0f,
-			amy->Data1->Position.y + 5.0f,
-			amy->Data1->Position.z + 4.5f);
+			amy->twp->pos.x - 2.0f,
+			amy->twp->pos.y + 5.0f,
+			amy->twp->pos.z + 4.5f);
 		EV_SetAng(obj_ver2_wing,
-			(int)(amy->Data1->Position.x),
-			(int)(amy->Data1->Position.y + 10240.0f),
-			(int)(amy->Data1->Position.z));
+			(int)(amy->twp->pos.x),
+			(int)(amy->twp->pos.y + 10240.0f),
+			(int)(amy->twp->pos.z));
 		EV_Wait(1);
 		EV_CameraPos(1, 0, -73.669998f, 5.9499998f, 1498.6f);
 		EV_CameraAng(1, 0, 327, 10247, 0);
@@ -178,13 +178,13 @@ void ev004D_t_missile(int state)
 		EV_Wait(60);
 		EV_ClrFace(player);
 		EV_SetPos(obj_ver2_wing,
-			amy->Data1->Position.x - 5.0f,
-			amy->Data1->Position.y + 4.5f,
-			amy->Data1->Position.z + 6.5f);	
+			amy->twp->pos.x - 5.0f,
+			amy->twp->pos.y + 4.5f,
+			amy->twp->pos.z + 6.5f);	
 		EV_SetAng(obj_ver2_wing,
-			(int)(amy->Data1->Position.x),
-			(int)(amy->Data1->Position.y + 12288.0f),
-			(int)(amy->Data1->Position.z));
+			(int)(amy->twp->pos.x),
+			(int)(amy->twp->pos.y + 12288.0f),
+			(int)(amy->twp->pos.z));
 		EV_CameraPos(1, 0, -102.8f, 14.7f, 1508.2f);
 		EV_CameraAng(1, 0, 64327, 56279, 0);
 		EV_CameraPos(0, 50, -100.17f, 8.6999998f, 1512.2f);
@@ -209,11 +209,11 @@ void ev004D_t_missile(int state)
 		EV_CameraChase(player);
 		EV_Wait(30);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "DABAADCCC");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "DBED");
 		}
@@ -309,14 +309,14 @@ void ev004D_t_missile(int state)
 		eggmoble_moveandturn(297.70001f, 9.0f, 1665.0f, 0, -32768, 0, 40, 0);
 		ChgEggMobleMod(5);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "NOO");
 		}
 		EV_Wait(20);
 		EV_SerifPlay(797);
 		EV_Msg(msgTbl_ev004D[TextLanguage][4]); //"\aIf that missile is launched..."
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "FO");
 		}

@@ -30,9 +30,9 @@ void ev016A_k_fightgloves(int state)
 		EV_SerifPlay(1929);
 		EV_MsgW(0, msgTbl_ev016A[TextLanguage][0]); //"\aNow, you've got Fighting Gloves."
 		tikal = CTikalLight_Create(
-			player->Data1->Position.x + 7.5349998f,
-			player->Data1->Position.y + 27.0f,
-			player->Data1->Position.z + 13.89f);
+			player->twp->pos.x + 7.5349998f,
+			player->twp->pos.y + 27.0f,
+			player->twp->pos.z + 13.89f);
 		EV_Wait(1);
 		EV_SetMode(tikal, 0);
 		EV_ClrPath(tikal);

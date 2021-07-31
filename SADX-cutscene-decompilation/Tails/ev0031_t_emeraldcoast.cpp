@@ -12,8 +12,8 @@ void ev0031_t_emeraldcoast(int state)
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
-		LoadEventObject(&zan, (ObjectMaster * (*)(void))ptr_crashed, 6893.9502f, 1.03f, -2203.1499f, 0, 49152, 0);
-		EV_CreatePlayer(2, Sonic_Main, 6420.0f, 1.33f, -2150.0f, 0, 0x4000, 0);
+		EV_CreateObjectFunc(&zan, (task * (*)(void))ptr_crashed, 6893.9502f, 1.03f, -2203.1499f, 0, 49152, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, 6420.0f, 1.33f, -2150.0f, 0, 0x4000, 0);
 		EV_Wait(1);
 		EV_SetPos(player, 6888.9502f, 1.03f, -2203.1499f);
 		EV_SetAng(player, 0, 49152, 0);
@@ -28,21 +28,20 @@ void ev0031_t_emeraldcoast(int state)
 
 		//Smoke effect
 		SMOKE = CObjSmoke_Create();
-		SMOKE->Data1->Rotation.y = 10;
-		SMOKE->Data1->Rotation.x = 10;
-		WriteData((float*)SMOKE->Data1->LoopData, 1.2f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 11, 1.0f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 12, 0.2f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 13, 0.2f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 14, 0.2f);
-
+		SMOKE->twp->ang.y = 10;
+		SMOKE->twp->ang.x = 10;
+		*(float*)SMOKE->twp->value.l = 1.2f;
+		*(float*)(SMOKE->twp->value.l + 44) = 1.0f;
+		*(float*)(SMOKE->twp->value.l + 48) = 0.2f;
+		*(float*)(SMOKE->twp->value.l + 52) = 0.2f;
+		*(float*)(SMOKE->twp->value.l + 56) = 0.2f;
 		EV_Wait(1);
 		EV_SetPos(SMOKE, 6888.9502f, 1.03f, -2203.1499f);
 		EV_Wait(100);
 		EV_CameraPos(1, 0, 6882.188f, 5.5500002f, -2199.1345f);
 		EV_CameraAng(1, 0, 63263, 57404, 0);
-		SMOKE->Data1->Rotation.x = 0;
-		SMOKE->Data1->Rotation.y = 0;
+		SMOKE->twp->ang.x = 0;
+		SMOKE->twp->ang.y = 0;
 		EV_ClrFace(player);
 		EV_SetFace(player, "XB");
 		EV_SetAction(player, &action_m_m0119_miles, &MILES_TEXLIST, 0.2f, 0, 8);
@@ -73,7 +72,7 @@ void ev0031_t_emeraldcoast(int state)
 		}
 		EV_CameraPos(1, 0, 6894.1201f, 17.92f, -2065.6699f);
 		EV_CameraTargetObj(1, 0, player, 0.0f, 3.0f, 0.0f, 0);
-		KURAYAMI = (ObjectMaster*)COverlayCreate(0.016666668f, 0.0f, 0.0f, 0.0f, 0.0f);
+		KURAYAMI = (task*)COverlayCreate(0.016666668f, 0.0f, 0.0f, 0.0f, 0.0f);
 		EV_Wait(80);
 		EV_CameraTargetFree();
 		EV_Wait(10);

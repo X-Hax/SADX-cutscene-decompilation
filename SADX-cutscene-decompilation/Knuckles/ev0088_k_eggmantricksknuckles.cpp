@@ -20,8 +20,8 @@ void ev0088_k_eggmantricksknuckles(int state)
 		EV_SetAng(player, 0, 33280, 0);
 		EV_SetAction(player, &action_k_k0005_knuckles, &KNUCKLES_TEXLIST, 0.5f, 1, 0);
 		EV_Wait(1);
-		createChaos0_EV0088(12.0f, player->Data1->Position.y, 65.0f, 0);
-		EV_CreatePlayer(6, Eggman_Main, 3.04f, 0.0f, 31.07f, 0, 1536, 0);
+		createChaos0_EV0088(12.0f, player->twp->pos.y, 65.0f, 0);
+		EV_CreatePlayer(6, Eggman, 3.04f, 0.0f, 31.07f, 0, 1536, 0);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, 22.5f, 8.5500002f, 86.089996f);
 		EV_CameraAng(1, 0, 6912, 2560, 65024);
@@ -157,9 +157,9 @@ void ev0088_k_eggmantricksknuckles(int state)
 		EventSe_Stop(1);
 		EV_RemovePlayer(6);
 		EV_LookPoint(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y + 20.0f,
-			player->Data1->Position.z);
+			player->twp->pos.x,
+			player->twp->pos.y + 20.0f,
+			player->twp->pos.z);
 		EV_CameraPos(1, 0, 62.68f, 13.02f, 31.190001f);
 		EV_CameraAng(1, 0, 0, 18432, 0);
 		EV_CameraPos(1, 400, -14.62f, 33.720001f, -8.7200003f);

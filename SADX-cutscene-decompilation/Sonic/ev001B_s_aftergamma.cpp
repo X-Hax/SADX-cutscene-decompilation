@@ -21,23 +21,23 @@ void ev001B_s_aftergamma(int state)
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[123], &SONIC_TEXLIST, 0.5f, 1, 0);
-		EV_CreatePlayer(4, Gamma_Main, -3.1800001f, 1528.0f, 3390.0f, 0, -32768, 0);
+		EV_CreatePlayer(4, E102, -3.1800001f, 1528.0f, 3390.0f, 0, -32768, 0);
 		EV_Wait(1);
 		e102 = EV_GetPlayer(4);
 		EV_SetPos(e102, -3.1800001f, 1528.0f, 3390.0f);
-		Create_e102lightning(e102->Data1->Position.x,
-			e102->Data1->Position.y,
-			e102->Data1->Position.z,
+		Create_e102lightning(e102->twp->pos.x,
+			e102->twp->pos.y,
+			e102->twp->pos.z,
 			4);
 		EV_ClrAction(e102);
 		EV_SetAction(e102, &action_e_e0002_e102, &E102_TEXLIST, 1.0f, 1, 16);
-		EV_CreatePlayer(2, Amy_Main, -123.18f, 1528.0f, 3310.0f, 0, -49152, 0);
+		EV_CreatePlayer(2, AmyRose, -123.18f, 1528.0f, 3310.0f, 0, -49152, 0);
 		EV_Wait(1);
 		amy = EV_GetPlayer(2);
 		EV_SetPos(amy, -123.18f, 1528.0f, 3310.0f);
 		EV_ClrAction(amy);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 0);
-		EV_CreatePlayer(3, Tails_Main, -18.18f, 1528.0f, 3283.0f, 0, 4096, 0);
+		EV_CreatePlayer(3, MilesTalesPrower, -18.18f, 1528.0f, 3283.0f, 0, 4096, 0);
 		EV_Wait(1);
 		tails = EV_GetPlayer(3);
 		EV_SetPos(tails, -18.18f, 1528.0f, 3283.0f);
@@ -83,18 +83,18 @@ void ev001B_s_aftergamma(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[5], &SONIC_TEXLIST, 3.5f, 1, 8);
 		EV_MovePoint(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z + 60.0f);
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z + 60.0f);
 		EV_Wait(30);
 		EV_SetPos(player, -3.1800001f, 1525.6801f, 3300.0f);
 		EV_SetAng(player, 0, 0, 0);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[5], &SONIC_TEXLIST, 3.5f, 1, 0);
 		EV_MovePoint(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z + 60.0f);
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z + 60.0f);
 		EV_CameraPerspective(1, 1, 12561);
 		EV_CameraAng(0, 0, 256, 49152, 0);
 		EV_CameraPos(0, 0, -11.74f, 1530.14f, 3305.26f);
@@ -106,9 +106,9 @@ void ev001B_s_aftergamma(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[5], &SONIC_TEXLIST, 3.5f, 1, 10);
 		EV_MovePoint(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z + 60.0f);
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z + 60.0f);
 		EV_CameraAng(0, 0, 61184, 34304, 1280);
 		EV_CameraPos(0, 0, -16.639999f, 1565.87f, 3262.8401f);
 		EV_CameraAng(0, 35, 512, 34304, 1536);
@@ -118,9 +118,9 @@ void ev001B_s_aftergamma(int state)
 		EV_CameraPos(0, 15, -9.5299997f, 1527.28f, 3353.3f);
 		EV_Wait(15);
 		EV_SetPos(amy,
-			e102->Data1->Position.x - 20.0f,
-			e102->Data1->Position.y,
-			e102->Data1->Position.z - 15.0f);
+			e102->twp->pos.x - 20.0f,
+			e102->twp->pos.y,
+			e102->twp->pos.z - 15.0f);
 		EV_CameraAng(0, 0, 3840, 19712, 1792);
 		EV_CameraPos(0, 0, -27.0, 1535.4301f, 3339.28f);
 		EV_CameraPos(0, 20, -18.15f, 1529.8101f, 3373.1001f);
@@ -131,9 +131,9 @@ void ev001B_s_aftergamma(int state)
 		EV_Wait(20);
 		EV_CameraPos(0, 50, -17.75f, 1529.5601f, 3374.6799f);
 		EV_Wait(3);
-		if (VoiceLanguage == 1) EV_ClrFace(amy);
+		if (VoiceLanguage == Languages_English) EV_ClrFace(amy);
 		EV_Wait(27);
-		if (!VoiceLanguage) EV_ClrFace(amy);
+		if (VoiceLanguage == Languages_Japanese) EV_ClrFace(amy);
 		EV_MsgClose();
 		EV_CameraPos(0, 0, 64.470001f, 1529.0601f, 3316.8f);
 		EV_CameraAng(0, 0, 2048, 20480, 1792);
@@ -142,31 +142,31 @@ void ev001B_s_aftergamma(int state)
 		EV_ClrAction(amy);
 		EV_SetAction(amy, AMY_ACTIONS[44], &AMY_TEXLIST, 2.5f, 1, 0);
 		EV_MovePoint(amy,
-			e102->Data1->Position.x,
-			e102->Data1->Position.y,
-			e102->Data1->Position.z - 15.0f);
+			e102->twp->pos.x,
+			e102->twp->pos.y,
+			e102->twp->pos.z - 15.0f);
 		EV_SetPos(player, -3.1800001f, 1525.6801f, 3270.0f);
 		EV_SetAng(player, 0, 0, 0);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[5], &SONIC_TEXLIST, 2.5f, 1, 0);
 		EV_MovePoint(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z + 80.0f);
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z + 80.0f);
 		EV_Wait(60);
 		EV_ClrAction(amy);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_SetAng(amy,
-			player->Data1->Rotation.x,
-			player->Data1->Rotation.y,
-			player->Data1->Rotation.z);
+			player->twp->ang.x,
+			player->twp->ang.y,
+			player->twp->ang.z);
 		EV_WaitMove(player);
 		PlaySound(18, 0, 0, 0);
 		EV_SetAction(player, SONIC_ACTIONS[7], &SONIC_TEXLIST, 0.80000001f, 0, 0);
 		EV_MovePoint(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z + 10.0f);
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z + 10.0f);
 		EV_WaitAction(player);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[123], &SONIC_TEXLIST, 0.5f, 1, 0);
@@ -228,13 +228,13 @@ void ev001B_s_aftergamma(int state)
 		EV_MsgClose();
 		EV_Wait(10);
 		EV_SetPos(tails,
-			player->Data1->Position.x - 40.0f,
-			player->Data1->Position.y,
-			player->Data1->Position.z - 10.0f);
+			player->twp->pos.x - 40.0f,
+			player->twp->pos.y,
+			player->twp->pos.z - 10.0f);
 		EV_SetAng(tails,
-			player->Data1->Rotation.x,
-			player->Data1->Rotation.y,
-			player->Data1->Rotation.z);
+			player->twp->ang.x,
+			player->twp->ang.y,
+			player->twp->ang.z);
 		EV_LookFree(tails);
 		EV_LookObject(tails, player, 0.0f, 6.0f, 0.0f);
 		EV_CameraPos(0, 0, -0.13f, 1528.75f, 3367.7f);
@@ -253,7 +253,7 @@ void ev001B_s_aftergamma(int state)
 		EV_SerifPlay(553);
 		EV_MsgW(70, (msgTbl_ev001B[TextLanguage])[4]); //"\aOkay.   \nWhatever you say."
 		EV_MsgClose();
-		if (VoiceLanguage == 1) EV_ClrFace(player);
+		if (VoiceLanguage == Languages_English) EV_ClrFace(player);
 		EV_Wait(20);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 32);
 		EV_Wait(30);
@@ -269,13 +269,13 @@ void ev001B_s_aftergamma(int state)
 
 		EV_SerifPlay(554);
 		EV_MsgW(60, (msgTbl_ev001B[TextLanguage])[5]); //"\aYou must have your reasons..."
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}
 		EV_Wait(15);
 		EV_MsgClose();
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}
@@ -484,9 +484,9 @@ void ev001B_s_aftergamma(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[5], &SONIC_TEXLIST, 2.5f, 1, 10);
 		EV_MovePoint(player,
-			player->Data1->Position.x - 80.0f,
-			player->Data1->Position.y,
-			player->Data1->Position.z - 240.0f);
+			player->twp->pos.x - 80.0f,
+			player->twp->pos.y,
+			player->twp->pos.z - 240.0f);
 		EV_LookObject(amy, player, 0.0f, 6.0f, 0.0f);
 		EV_Wait(40);
 		dsPlay_oneshot_v(1333, 0, 0, 50, -102.0f, 1519.0f, 3000.0f);

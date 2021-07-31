@@ -17,8 +17,8 @@ void ev003A_t_afterchaos4(int state)
 		SetBankDir(77);
 		EV_SetPos(player, 37.299999f, 72.019997f, 213.32001f);
 		EV_SetAng(player, 0, 28019, 0);
-		EV_CreatePlayer(2, Knuckles_Main, 102.5f, 72.169998f, 212.0f, 65430, 36864, 18);
-		EV_CreatePlayer(3, Sonic_Main, 73.0f, 72.019997f, 232.50999f, 0, 0, 0);
+		EV_CreatePlayer(2, KnucklesTheEchidna, 102.5f, 72.169998f, 212.0f, 65430, 36864, 18);
+		EV_CreatePlayer(3, SonicTheHedgehog, 73.0f, 72.019997f, 232.50999f, 0, 0, 0);
 		create_eggmoble(80.0f, 80.0f, 160.0f, 0, 15104, 0);
 		createModelEC(300.0f, 1200.0f, 1000.0f, 0, 0x8000, 0, 0.25f, 0.25f, 0.25f,
 			&object_ecff_bf_s_fbody_bf_s_fbody,
@@ -185,11 +185,11 @@ void ev003A_t_afterchaos4(int state)
 		EV_ClrFace(sonic);
 		EV_Wait(10);
 		EV_ClrFace(sonic);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "CDFEFE");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(sonic, "CDF");
 		}
@@ -197,7 +197,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_Wait(5);
 		EV_Msg(msgTbl_ev003A[TextLanguage][10]); //"\aWe'll take care of \neverything here!"
 		EV_Wait(30);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(sonic);
 		}
@@ -205,7 +205,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_ClrAction(knuckles);
 		EV_SetAction(knuckles, KNUCKLES_ACTIONS[56], &KNUCKLES_TEXLIST, 2.0f, 1, 0);
 		EV_MovePoint2(knuckles, 170.19f, 90.889999f, 311.34f, 1.5f, 0.059999999f);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(sonic);
 		}
@@ -229,7 +229,7 @@ void ev003A_t_afterchaos4(int state)
 		EV_RemovePlayer(3);
 		deleteModel(0);
 		delete_eggmoble();
-		delete_capturebeam(CAP_01);
+		light_delete(CAP_01);
 		CAP_01 = 0;
 		EV_CameraOff();
 		EV_PadOn();

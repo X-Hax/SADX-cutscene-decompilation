@@ -12,7 +12,7 @@ void ev0114_t_afterskydeck(int state)
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
-		EV_CreatePlayer(2, Sonic_Main, -137.78999f, 160.0f, -163.36f, 0, 0x4000, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, -137.78999f, 160.0f, -163.36f, 0, 0x4000, 0);
 		EV_Wait(1);
 		sonic = EV_GetPlayer(2);
 		EV_CameraTargetObj(0, 0, sonic, 0.0f, 3.0f, 0.0f, 0);
@@ -34,11 +34,11 @@ void ev0114_t_afterskydeck(int state)
 		EV_SetAction(sonic, &action_s_s0065_sonic, &SONIC_TEXLIST, 1.5f, 0, 30);
 		EV_LookFree(sonic);
 		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 30);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "DEC");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(sonic, "EBC");
 		}
@@ -50,11 +50,11 @@ void ev0114_t_afterskydeck(int state)
 		EV_CameraPos(0, 40, -126.66f, 89.489998f, -180.33f);
 		EV_CameraAng(0, 40, 63161, 20165, 0);
 		EV_SerifPlay(1549);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "CCC");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "CCEC");
 		}

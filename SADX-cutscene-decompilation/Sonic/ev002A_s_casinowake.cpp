@@ -20,7 +20,7 @@ void ev002A_s_casinowake(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_s_s0053_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
 		EV_SetFace(player, "VVVVVVVVVVVVVVVVVV");
-		EV_CreatePlayer(2, Tails_Main, -526.0f, -2.4000001f, 941.0f, 0, 61952, 0);
+		EV_CreatePlayer(2, MilesTalesPrower, -526.0f, -2.4000001f, 941.0f, 0, 61952, 0);
 		EV_Wait(1);
 		tails = EV_GetPlayer(2);
 		EV_ClrAction(tails);

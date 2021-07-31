@@ -16,17 +16,17 @@ void ev0039_t_beforechaos4(int state)
 		SetBankDir(77);
 		EV_SetPos(player, 73.0f, 72.0f, 170.0f);
 		EV_SetAng(player, 63780, 0, 0);
-		EV_CreatePlayer(2, Knuckles_Main, 73.0f, 73.050003f, 380.60001f, 65430, 0x8000, 18);
-		EV_CreatePlayer(3, Sonic_Main, -104.07f, 75.459999f, 349.37f, 0, 28019, 0);
+		EV_CreatePlayer(2, KnucklesTheEchidna, 73.0f, 73.050003f, 380.60001f, 65430, 0x8000, 18);
+		EV_CreatePlayer(3, SonicTheHedgehog, -104.07f, 75.459999f, 349.37f, 0, 28019, 0);
 		create_eggmoble(85.0f, 40.0f, 80.0f, 0, 15104, 0);
 		CAP_01 = CreateCaptureBeam(77.0f, 72.050003f, 185.0f, 0, 0, 0);
 		SMOKE_01 = CObjSmoke_Create();
 		SMOKE_02 = CObjSmoke_Create();
 		if (enableUnusedCode) {
-			SMOKE_01->Data1->Rotation.y = 5;
-			SMOKE_01->Data1->Rotation.x = 5;
-			SMOKE_02->Data1->Rotation.y = 5;
-			SMOKE_02->Data1->Rotation.x = 5;
+			SMOKE_01->twp->ang.y = 5;
+			SMOKE_01->twp->ang.x = 5;
+			SMOKE_02->twp->ang.y = 5;
+			SMOKE_02->twp->ang.x = 5;
 		}
 		EV_Wait(1);
 		EV_ClrAction(player);
@@ -51,14 +51,14 @@ void ev0039_t_beforechaos4(int state)
 		SetCaptureParam(CAP_01, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0);
 		EV_Wait(1);
 		EV_CreateObject(&B_EME,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
 			0, 0, 0);
 		EV_CreateObject(&G_EME,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
 			0, 0, 0);
 		EV_CameraPerspective(0, 1, 12561);
 		EV_CameraPos(0, 0, 78.540001f, 76.160004f, 154.45f);
@@ -93,27 +93,27 @@ void ev0039_t_beforechaos4(int state)
 		EV_SetAction(player, &action_m_m9011_miles, &MILES_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, &action_m_m9012_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		moveObject(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
-			player->Data1->Position.x,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
+			player->twp->pos.x,
 			72.349998f,
-			player->Data1->Position.z + 48.0f,
+			player->twp->pos.z + 48.0f,
 			15);
 		EV_ClrAction(knuckles);
 		EV_SetAction(knuckles, &action_k_k0033_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(knuckles, &action_k_k0038_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(knuckles, &action_k_k0039_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		moveObject(knuckles,
-			knuckles->Data1->Position.x,
-			knuckles->Data1->Position.y,
-			knuckles->Data1->Position.z,
-			knuckles->Data1->Position.x,
+			knuckles->twp->pos.x,
+			knuckles->twp->pos.y,
+			knuckles->twp->pos.z,
+			knuckles->twp->pos.x,
 			72.349998f,
-			knuckles->Data1->Position.z - 48.0f,
+			knuckles->twp->pos.z - 48.0f,
 			15);
 		EV_Wait(10);
-		dsPlay_oneshot_v(1338, 0, 0, 120, player->Data1->Position.x, 72.349998f, player->Data1->Position.z + 48.0f);
+		dsPlay_oneshot_v(1338, 0, 0, 120, player->twp->pos.x, 72.349998f, player->twp->pos.z + 48.0f);
 		EV_Wait(5);
 		EV_SetShadow(G_EME, 0.30000001f);
 		EV_SetShadow(B_EME, 0.30000001f);
@@ -125,28 +125,28 @@ void ev0039_t_beforechaos4(int state)
 		EV_CameraPerspective(0, 30, 12561);
 		EV_CameraPos(0, 0, 61.810001f, 77.940002f, 208.53999f);
 		EV_CameraAng(0, 0, 65161, 34413, 64768);
-		player->Data1->Position.z;
-		player->Data1->Position.y;
-		player->Data1->Position.x;
+		player->twp->pos.z;
+		player->twp->pos.y;
+		player->twp->pos.x;
 		moveObject(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
 			73.0f, 72.0f, 230.0f, 30);
 		moveObject(knuckles,
-			knuckles->Data1->Position.x,
-			knuckles->Data1->Position.y,
-			knuckles->Data1->Position.z,
+			knuckles->twp->pos.x,
+			knuckles->twp->pos.y,
+			knuckles->twp->pos.z,
 			73.0f, 72.0f, 320.60001f, 30);
 		moveObject(SMOKE_01,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
 			73.0f, 72.0f, 230.0f, 35);
 		moveObject(SMOKE_02,
-			knuckles->Data1->Position.x,
-			knuckles->Data1->Position.y,
-			knuckles->Data1->Position.z,
+			knuckles->twp->pos.x,
+			knuckles->twp->pos.y,
+			knuckles->twp->pos.z,
 			73.0f, 72.0f, 320.0f, 35);
 		EV_SerifPlay(684);
 		EV_Wait(10);
@@ -155,18 +155,18 @@ void ev0039_t_beforechaos4(int state)
 		EV_SetAction(B_EME, &action_ce_0004_m_em_blue, &M_EM_BLUE_TEXLIST, 1.0f, 1, 0);
 		moveObject(
 			B_EME,
-			B_EME->Data1->Position.x,
-			B_EME->Data1->Position.y,
-			B_EME->Data1->Position.z,
+			B_EME->twp->pos.x,
+			B_EME->twp->pos.y,
+			B_EME->twp->pos.z,
 			81.0f,
 			72.050003f,
 			180.0f,
 			30);
 		dsPlay_oneshot_v(1334, 0, 0, 120, 81.0f, 72.050003f, 180.0f);
-		SMOKE_01->Data1->Rotation.y = 5;
-		SMOKE_01->Data1->Rotation.x = 5;
-		SMOKE_02->Data1->Rotation.y = 5;
-		SMOKE_02->Data1->Rotation.x = 5;
+		SMOKE_01->twp->ang.y = 5;
+		SMOKE_01->twp->ang.x = 5;
+		SMOKE_02->twp->ang.y = 5;
+		SMOKE_02->twp->ang.x = 5;
 		EV_Wait(15);
 		dsPlay_oneshot_v(1334, 0, 0, 120, 81.0f, 72.050003f, 180.0f);
 		EV_LookObject(player, B_EME, 0.0f, 0.0f, 0.0f);
@@ -175,9 +175,9 @@ void ev0039_t_beforechaos4(int state)
 		EV_SetAction(G_EME, &action_ce_0006_m_em_green, &M_EM_GREEN_TEXLIST, 1.0f, 1, 0);
 		moveObject(
 			G_EME,
-			G_EME->Data1->Position.x,
-			G_EME->Data1->Position.y,
-			G_EME->Data1->Position.z,
+			G_EME->twp->pos.x,
+			G_EME->twp->pos.y,
+			G_EME->twp->pos.z,
 			73.0f,
 			72.050003f,
 			190.0f,
@@ -190,10 +190,10 @@ void ev0039_t_beforechaos4(int state)
 		stopObject(SMOKE_01);
 		EV_SerifPlay(685);
 		EV_Msg(msgTbl_ev0039[TextLanguage][0]); //"\aWhoa! Oh no, the Emeralds!"
-		SMOKE_01->Data1->Rotation.y = 0;
-		SMOKE_01->Data1->Rotation.x = 0;
-		SMOKE_02->Data1->Rotation.y = 0;
-		SMOKE_02->Data1->Rotation.x = 0;
+		SMOKE_01->twp->ang.y = 0;
+		SMOKE_01->twp->ang.x = 0;
+		SMOKE_02->twp->ang.y = 0;
+		SMOKE_02->twp->ang.x = 0;
 		throughplayer_off(player);
 		throughplayer_off(knuckles);
 		EV_Wait(5);
@@ -263,20 +263,20 @@ void ev0039_t_beforechaos4(int state)
 		ChgCaptureMod(CAP_01, 1);
 		EV_Wait(10);
 		moveObject(B_EME,
-			B_EME->Data1->Position.x,
-			B_EME->Data1->Position.y,
-			B_EME->Data1->Position.z,
-			B_EME->Data1->Position.x,
-			B_EME->Data1->Position.y + 10.0f,
-			B_EME->Data1->Position.z,
+			B_EME->twp->pos.x,
+			B_EME->twp->pos.y,
+			B_EME->twp->pos.z,
+			B_EME->twp->pos.x,
+			B_EME->twp->pos.y + 10.0f,
+			B_EME->twp->pos.z,
 			30);
 		moveObject(G_EME,
-			G_EME->Data1->Position.x,
-			G_EME->Data1->Position.y,
-			G_EME->Data1->Position.z,
-			G_EME->Data1->Position.x,
-			G_EME->Data1->Position.y + 10.0f,
-			G_EME->Data1->Position.z,
+			G_EME->twp->pos.x,
+			G_EME->twp->pos.y,
+			G_EME->twp->pos.z,
+			G_EME->twp->pos.x,
+			G_EME->twp->pos.y + 10.0f,
+			G_EME->twp->pos.z,
 			35);
 		EV_Wait(20);
 		EV_SerifPlay(688);
@@ -303,28 +303,28 @@ void ev0039_t_beforechaos4(int state)
 		EV_CameraAng(0, 0, 62720, 4864, 0);
 		EV_CameraPos(1, 60, 89.669998f, 99.589996f, 181.07001f);
 		EV_SetPos(G_EME,
-			eggmoble->Data1->Position.x + 1.0f,
-			eggmoble->Data1->Position.y - 9.1999998f,
-			eggmoble->Data1->Position.z);
+			eggmoble->twp->pos.x + 1.0f,
+			eggmoble->twp->pos.y - 9.1999998f,
+			eggmoble->twp->pos.z);
 		EV_SetAng(G_EME,
-			(int)eggmoble->Data1->Position.x,
-			(int)eggmoble->Data1->Position.y,
-			(int)eggmoble->Data1->Position.z);
-		EV_SetPos(B_EME, eggmoble->Data1->Position.x,
-			eggmoble->Data1->Position.y - 9.1999998f,
-			eggmoble->Data1->Position.z);
+			(int)eggmoble->twp->pos.x,
+			(int)eggmoble->twp->pos.y,
+			(int)eggmoble->twp->pos.z);
+		EV_SetPos(B_EME, eggmoble->twp->pos.x,
+			eggmoble->twp->pos.y - 9.1999998f,
+			eggmoble->twp->pos.z);
 		EV_SetAng(B_EME,
-			(int)eggmoble->Data1->Position.x,
-			(int)eggmoble->Data1->Position.y,
-			(int)eggmoble->Data1->Position.z);
+			(int)eggmoble->twp->pos.x,
+			(int)eggmoble->twp->pos.y,
+			(int)eggmoble->twp->pos.z);
 		EV_SetPos(sonic, 37.299999f, 72.019997f, 213.32001f);
 		EV_LookFree(player);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAng(player,
-			player->Data1->Rotation.x,
-			-16384 - player->Data1->Rotation.y,
-			player->Data1->Rotation.z);
+			player->twp->ang.x,
+			-16384 - player->twp->ang.y,
+			player->twp->ang.z);
 		EV_SetPos(knuckles, 105.82f, 72.129997f, 349.73001f);
 		EV_SetAng(knuckles, 65430, 36864, 18);
 		EV_ClrAction(knuckles);
@@ -395,11 +395,11 @@ void ev0039_t_beforechaos4(int state)
 		EV_SerifPlay(694);
 		EV_Msg(msgTbl_ev0039[TextLanguage][9]); //"\aDon't you realize \nwhen you've been "...
 		EV_ClrFace(sonic);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "FCE");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(sonic, "CE");
 		}
@@ -411,28 +411,28 @@ void ev0039_t_beforechaos4(int state)
 		EV_SerifPlay(695);
 		EV_Msg(msgTbl_ev0039[TextLanguage][10]); //"\aTricked?   \nNo one makes a fool out "...
 		EV_ClrFace(knuckles);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(knuckles, "I");
 		}
 		EV_Wait(5);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(knuckles, "F");
 		}
 		EV_Wait(5);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(knuckles);
 			EV_SetFace(knuckles, "F");
 		}
 		EV_Wait(20);
 		EV_ClrFace(knuckles);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(knuckles, "I");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(knuckles, "F");
 		}
@@ -443,11 +443,11 @@ void ev0039_t_beforechaos4(int state)
 		EV_Wait(4);
 		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_ClrFace(sonic);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "CECE");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(sonic, "CE");
 		}
@@ -598,7 +598,7 @@ void ev0039_t_beforechaos4(int state)
 		EV_FreeObject(&B_EME);
 		EV_FreeObject(&G_EME);
 		delete_eggmoble();
-		delete_capturebeam(CAP_01);
+		light_delete(CAP_01);
 		CAP_01 = 0;
 		if(SMOKE_01){
 			FreeTask(SMOKE_01);

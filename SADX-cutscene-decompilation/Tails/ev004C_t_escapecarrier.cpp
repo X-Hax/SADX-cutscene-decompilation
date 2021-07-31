@@ -7,7 +7,7 @@ void ev004C_t_escapecarrier(int state)
 {
 	/*This pointer is loaded but never used because PC 04
 	does everything associated with it in different functions.*/ 
-	//ObjectMaster* task_gattai = 0;
+	//task* task_gattai = 0;
 
 	switch (state) {
 	case 1:
@@ -25,36 +25,36 @@ void ev004C_t_escapecarrier(int state)
 		EV_SetMode(player, 1);
 		EV_Wait(1);
 		EV_SetAng(player, 0, 0, 0);
-		EV_CreatePlayer(4, Gamma_Main,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z + 122.0f,
-			player->Data1->Rotation.x,
-			0x4000 - player->Data1->Rotation.y,
-			player->Data1->Rotation.z);
-		EV_CreatePlayer(3, Sonic_Main, -91.199997f, 1533.6f, 3342.3999f, 0, 7390, 0);
+		EV_CreatePlayer(4, E102,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z + 122.0f,
+			player->twp->ang.x,
+			0x4000 - player->twp->ang.y,
+			player->twp->ang.z);
+		EV_CreatePlayer(3, SonicTheHedgehog, -91.199997f, 1533.6f, 3342.3999f, 0, 7390, 0);
 		EV_Wait(1);
 		EV_SetAng(player, 0, 0, 0);
 		EV_SetAng(player,
-			player->Data1->Rotation.x,
-			0x4000 - player->Data1->Rotation.y,
-			player->Data1->Rotation.z);
+			player->twp->ang.x,
+			0x4000 - player->twp->ang.y,
+			player->twp->ang.z);
 		EV_SetAction(player, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		e102 = EV_GetPlayer(4);
 		EV_SetAction(e102, E102_ACTIONS[0], &E102_TEXLIST, 1.0f, 1, 16);
 		sonic = EV_GetPlayer(3);
 		EV_SetAction(sonic, &action_s_s0006_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
-		EV_CreatePlayer(2, Amy_Main,
-			e102->Data1->Position.x - 120.0f,
-			e102->Data1->Position.y,
-			e102->Data1->Position.z + 10.0f,
-			e102->Data1->Rotation.x,
-			e102->Data1->Rotation.y,
-			e102->Data1->Rotation.z);
+		EV_CreatePlayer(2, AmyRose,
+			e102->twp->pos.x - 120.0f,
+			e102->twp->pos.y,
+			e102->twp->pos.z + 10.0f,
+			e102->twp->ang.x,
+			e102->twp->ang.y,
+			e102->twp->ang.z);
 		Create_e102lightning(
-			e102->Data1->Position.x,
-			e102->Data1->Position.y,
-			e102->Data1->Position.z,
+			e102->twp->pos.x,
+			e102->twp->pos.y,
+			e102->twp->pos.z,
 			4);
 		BGM_Play(MusicIDs_egcarer1);
 		EV_CameraTargetFree();
@@ -62,9 +62,9 @@ void ev004C_t_escapecarrier(int state)
 		EV_CameraPos(1, 0, -2.5f, 1555.8f, 3243.22f);
 		EV_Wait(1);
 		EV_SetAng(e102,
-			player->Data1->Rotation.x,
-			-16384 - player->Data1->Rotation.y,
-			player->Data1->Rotation.z);
+			player->twp->ang.x,
+			-16384 - player->twp->ang.y,
+			player->twp->ang.z);
 		amy = EV_GetPlayer(2);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(9);
@@ -116,11 +116,11 @@ void ev004C_t_escapecarrier(int state)
 		EV_ClrFace(player);
 		EV_SetAction(amy, &action_a_a0002_amy, &AMY_TEXLIST, 0.80000001f, 0, 16);
 		EV_SerifPlay(782);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(amy, "F");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(amy, "D");
 		}
@@ -267,11 +267,11 @@ void ev004C_t_escapecarrier(int state)
 		EV_SetAction(sonic, &action_s_s0038_sonic, &SONIC_TEXLIST, 1.2f, 1, 8);
 		EV_Wait(20);
 		EV_SerifPlay(789);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "FAEFD");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(sonic, "FEF");
 		}
@@ -283,11 +283,11 @@ void ev004C_t_escapecarrier(int state)
 		EV_CameraAng(1, 30, 65463, 24030, 512);
 		EV_WaitMove(sonic);
 		EV_SerifPlay(790);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(amy, "E");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(amy, "EE");
 		}
@@ -330,9 +330,9 @@ void ev004C_t_escapecarrier(int state)
 		EV_SetMode(player, 0);
 		EV_SetMode(e102, 0);
 		SetE102Effect(
-			e102->Data1->Position.x,
-			e102->Data1->Position.y,
-			e102->Data1->Position.z);
+			e102->twp->pos.x,
+			e102->twp->pos.y,
+			e102->twp->pos.z);
 		throughplayer_on(player);
 		throughplayer_on(amy);
 		EV_SetPath(player, &epathtag_cube004c_14, 0.60000002f, 2);

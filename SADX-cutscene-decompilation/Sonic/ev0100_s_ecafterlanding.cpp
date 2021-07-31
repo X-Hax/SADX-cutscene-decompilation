@@ -13,7 +13,7 @@ void ev0100_s_ecafterlanding(int state)
 		EV_PadOff();
 		EV_CanselOn();
 		BGM_Play(MusicIDs_egcarer1);
-		EV_CreatePlayer(2, Tails_Main, 12.8f, 699.25f, -1093.5f, 0, 63658, 0);
+		EV_CreatePlayer(2, MilesTalesPrower, 12.8f, 699.25f, -1093.5f, 0, 63658, 0);
 		EV_Wait(1);
 		EV_SetPos(player, 23.389999f, 699.25f, -1083.27f);
 		EV_SetAng(player, 0, 0, 0);
@@ -34,7 +34,7 @@ void ev0100_s_ecafterlanding(int state)
 		EV_SerifPlay(1513);
 		EV_Msg(msgTbl_ev0100[TextLanguage][0]); //"\aWow!  This thing is really huge!"
 		EV_Wait(120);
-		if (!VoiceLanguage) EV_ClrFace(player);
+		if (VoiceLanguage == Languages_Japanese) EV_ClrFace(player);
 		EV_SetAction(tails, (NJS_ACTION*)0x3C84A48, &MILES_TEXLIST, 1.0f, 1, 0); //TODO: Label this tails action when I find which event has its name
 		EV_Wait(40);
 		EV_ClrAction(tails);

@@ -15,12 +15,12 @@ void ev003B_t_tornado1(int state)
 		EV_PadOff();
 		EV_CanselOn();
 		EV_Wait(100);
-		LoadEventObject(&PLANE, object_tr1_s_t1_body_s_t1_body, 1475.05f, 209.89999f, 779.59003f, 0, 26112, 0);
+		EV_CreateObjectFunc(&PLANE, object_tr1_s_t1_body_s_t1_body, 1475.05f, 209.89999f, 779.59003f, 0, 26112, 0);
 		EV_SetMode(PLANE, 0);
 		EV_SetAction(PLANE, action_tr1_s_t1_body, &EV_TR1_WITH_SONIC_TEXLIST, 0.001f, 1, 1);
 		g_SonicObj_EV003B();
 		g_SonicOrgObj_p_EV003B();
-		EV_CreatePlayer(3, Sonic_Main, 1385.0f, 190.81f, 878.06f, 0, 28160, 0);
+		EV_CreatePlayer(3, SonicTheHedgehog, 1385.0f, 190.81f, 878.06f, 0, 28160, 0);
 		EV_SetPos(player, 1418.05f, 201.8f, 844.42999f);
 		EV_SetAng(player, 0, 31232, 0);
 		EV_Wait(1);

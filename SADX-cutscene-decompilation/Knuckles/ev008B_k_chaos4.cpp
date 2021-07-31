@@ -20,8 +20,8 @@ void ev008B_k_chaos4(int state)
 		SetBankDir(77);
 		EV_SetPos(player, 73.0f, 73.050003f, 380.60001f);
 		EV_SetAng(player, 65430, 0x8000, 18);
-		EV_CreatePlayer(2, Sonic_Main, 73.0f, 72.0f, 170.0f, 63780, 0, 0);
-		EV_CreatePlayer(3, Tails_Main, -104.07f, 75.459999f, 349.37f, 0, 28019, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, 73.0f, 72.0f, 170.0f, 63780, 0, 0);
+		EV_CreatePlayer(3, MilesTalesPrower, -104.07f, 75.459999f, 349.37f, 0, 28019, 0);
 		create_eggmoble(85.0f, 40.0f, 80.0f, 0, 15104, 0);
 		CAP_01 = CreateCaptureBeam(77.0f, 72.050003f, 185.0f, 0, 0, 0);
 		if (!SMOKE_01)
@@ -55,14 +55,14 @@ void ev008B_k_chaos4(int state)
 		SetCaptureParam(CAP_01, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0);
 		EV_Wait(1);
 		EV_CreateObject(&B_EME,
-			sonic->Data1->Position.x,
-			sonic->Data1->Position.y,
-			sonic->Data1->Position.z,
+			sonic->twp->pos.x,
+			sonic->twp->pos.y,
+			sonic->twp->pos.z,
 			0, 0, 0);
 		EV_CreateObject(&G_EME,
-			sonic->Data1->Position.x,
-			sonic->Data1->Position.z,
-			sonic->Data1->Position.y,
+			sonic->twp->pos.x,
+			sonic->twp->pos.z,
+			sonic->twp->pos.y,
 			0, 0, 0);
 		EV_CameraPerspective(0, 1, 12561);
 		EV_Wait(1);
@@ -97,30 +97,30 @@ void ev008B_k_chaos4(int state)
 		EV_SetAction(sonic, &action_s_s9000_sonic, &SONIC_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(sonic, &action_s_s9001_sonic, &SONIC_TEXLIST, 1.0f, 1, 0);
 		moveObject(sonic,
-			sonic->Data1->Position.x,
-			sonic->Data1->Position.y,
-			sonic->Data1->Position.z,
-			sonic->Data1->Position.x,
+			sonic->twp->pos.x,
+			sonic->twp->pos.y,
+			sonic->twp->pos.z,
+			sonic->twp->pos.x,
 			72.349998f,
-			sonic->Data1->Position.z + 48.0f,
+			sonic->twp->pos.z + 48.0f,
 			15);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_k_k0033_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, &action_k_k0038_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, &action_k_k0039_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		moveObject(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
-			player->Data1->Position.x,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
+			player->twp->pos.x,
 			72.349998f,
-			player->Data1->Position.z - 48.0f,
+			player->twp->pos.z - 48.0f,
 			15);
 		EV_Wait(10);
 		dsPlay_oneshot_v(1338, 0, 0, 120,
-			player->Data1->Position.x,
+			player->twp->pos.x,
 			72.349998f,
-			player->Data1->Position.z + 48.0f);
+			player->twp->pos.z + 48.0f);
 		EV_Wait(5);
 		EV_SetShadow(G_EME, 0.30000001f);
 		EV_SetShadow(B_EME, 0.30000001f);
@@ -133,23 +133,23 @@ void ev008B_k_chaos4(int state)
 		EV_CameraPos(0, 0, 61.810001f, 77.940002f, 208.53999f);
 		EV_CameraAng(0, 0, 65161, 34413, 64768);
 		moveObject(sonic,
-			sonic->Data1->Position.x,
-			sonic->Data1->Position.y,
-			sonic->Data1->Position.z,
+			sonic->twp->pos.x,
+			sonic->twp->pos.y,
+			sonic->twp->pos.z,
 			73.0f, 72.0f, 230.0f, 30);
 		moveObject(player,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
 			73.0f, 72.0f, 320.60001f, 30);
 		moveObject(SMOKE_01,
-			sonic->Data1->Position.x,
-			sonic->Data1->Position.y,
-			sonic->Data1->Position.z, 73.0f, 72.0f, 230.0f, 35);
+			sonic->twp->pos.x,
+			sonic->twp->pos.y,
+			sonic->twp->pos.z, 73.0f, 72.0f, 230.0f, 35);
 		moveObject(SMOKE_02,
-			player->Data1->Position.x,
-			player->Data1->Position.y,
-			player->Data1->Position.z,
+			player->twp->pos.x,
+			player->twp->pos.y,
+			player->twp->pos.z,
 			73.0f, 72.0f, 320.0f, 35);
 		EV_SerifPlay(464);
 		EV_Wait(10);
@@ -158,9 +158,9 @@ void ev008B_k_chaos4(int state)
 		EV_SetAction(B_EME, &action_ce_0004_m_em_blue, &M_EM_BLUE_TEXLIST, 1.0f, 1, 0);
 		moveObject(
 			B_EME,
-			B_EME->Data1->Position.x,
-			B_EME->Data1->Position.y,
-			B_EME->Data1->Position.z,
+			B_EME->twp->pos.x,
+			B_EME->twp->pos.y,
+			B_EME->twp->pos.z,
 			81.0f,
 			72.050003f,
 			180.0f,
@@ -168,13 +168,13 @@ void ev008B_k_chaos4(int state)
 		dsPlay_oneshot_v(1334, 0, 0, 120, 81.0f, 72.050003f, 180.0f);
 		if (SMOKE_01)
 		{
-			SMOKE_01->Data1->Rotation.y = 5;
-			SMOKE_01->Data1->Rotation.x = 5;
+			SMOKE_01->twp->ang.y = 5;
+			SMOKE_01->twp->ang.x = 5;
 		}
 		if (SMOKE_02)
 		{
-			SMOKE_02->Data1->Rotation.y = 5;
-			SMOKE_02->Data1->Rotation.x = 5;
+			SMOKE_02->twp->ang.y = 5;
+			SMOKE_02->twp->ang.x = 5;
 		}
 		EV_Wait(15);
 		dsPlay_oneshot_v(1334, 0, 0, 120, 81.0f, 72.050003f, 180.0f);
@@ -183,9 +183,9 @@ void ev008B_k_chaos4(int state)
 		EV_SetAction(G_EME, &action_ce_0006_m_em_green, &M_EM_GREEN_TEXLIST, 1.0f, 1, 0);
 		moveObject(
 			G_EME,
-			G_EME->Data1->Position.x,
-			G_EME->Data1->Position.y,
-			G_EME->Data1->Position.z,
+			G_EME->twp->pos.x,
+			G_EME->twp->pos.y,
+			G_EME->twp->pos.z,
 			73.0f,
 			72.050003f,
 			190.0f,
@@ -200,13 +200,13 @@ void ev008B_k_chaos4(int state)
 		EV_Msg(msgTbl_ev008B[TextLanguage][0]); //"\aOh no!   \nThe Chaos Emeralds...!"
 		if (SMOKE_01)
 		{
-			SMOKE_01->Data1->Rotation.y = 0;
-			SMOKE_01->Data1->Rotation.x = 0;
+			SMOKE_01->twp->ang.y = 0;
+			SMOKE_01->twp->ang.x = 0;
 		}
 		if (SMOKE_02)
 		{
-			SMOKE_02->Data1->Rotation.y = 0;
-			SMOKE_02->Data1->Rotation.x = 0;
+			SMOKE_02->twp->ang.y = 0;
+			SMOKE_02->twp->ang.x = 0;
 		}
 		EV_LookFree(sonic);
 		EV_LookPoint(sonic, 75.0f, 75.0f, 233.5f);
@@ -281,20 +281,20 @@ void ev008B_k_chaos4(int state)
 		ChgCaptureMod(CAP_01, 1);
 		EV_Wait(10);
 		moveObject(B_EME,
-			B_EME->Data1->Position.x,
-			B_EME->Data1->Position.y,
-			B_EME->Data1->Position.z,
-			B_EME->Data1->Position.x,
-			B_EME->Data1->Position.y + 10.0f,
-			B_EME->Data1->Position.z,
+			B_EME->twp->pos.x,
+			B_EME->twp->pos.y,
+			B_EME->twp->pos.z,
+			B_EME->twp->pos.x,
+			B_EME->twp->pos.y + 10.0f,
+			B_EME->twp->pos.z,
 			30);
 		moveObject(G_EME,
-			G_EME->Data1->Position.x,
-			G_EME->Data1->Position.y,
-			G_EME->Data1->Position.z,
-			G_EME->Data1->Position.x,
-			G_EME->Data1->Position.y + 10.0f,
-			G_EME->Data1->Position.z,
+			G_EME->twp->pos.x,
+			G_EME->twp->pos.y,
+			G_EME->twp->pos.z,
+			G_EME->twp->pos.x,
+			G_EME->twp->pos.y + 10.0f,
+			G_EME->twp->pos.z,
 			35);
 		EV_Wait(20);
 		EV_SerifPlay(1074);
@@ -319,29 +319,29 @@ void ev008B_k_chaos4(int state)
 		EV_CameraAng(0, 0, 62720, 4864, 0);
 		EV_CameraPos(0, 60, 89.669998f, 99.589996f, 181.07001f);
 		EV_SetPos(G_EME,
-			eggmoble->Data1->Position.x + 1.0f,
-			eggmoble->Data1->Position.y - 9.1999998f,
-			eggmoble->Data1->Position.z);
+			eggmoble->twp->pos.x + 1.0f,
+			eggmoble->twp->pos.y - 9.1999998f,
+			eggmoble->twp->pos.z);
 		EV_SetAng(G_EME,
-			(int)eggmoble->Data1->Position.x,
-			(int)eggmoble->Data1->Position.y,
-			(int)eggmoble->Data1->Position.z);
+			(int)eggmoble->twp->pos.x,
+			(int)eggmoble->twp->pos.y,
+			(int)eggmoble->twp->pos.z);
 		EV_SetPos(B_EME,
-			eggmoble->Data1->Position.x,
-			eggmoble->Data1->Position.y - 9.1999998f,
-			eggmoble->Data1->Position.z);
+			eggmoble->twp->pos.x,
+			eggmoble->twp->pos.y - 9.1999998f,
+			eggmoble->twp->pos.z);
 		EV_SetAng(B_EME,
-			(int)eggmoble->Data1->Position.x,
-			(int)eggmoble->Data1->Position.y,
-			(int)eggmoble->Data1->Position.z);
+			(int)eggmoble->twp->pos.x,
+			(int)eggmoble->twp->pos.y,
+			(int)eggmoble->twp->pos.z);
 		EV_SetPos(tails, 37.299999f, 72.019997f, 213.32001f);
 		EV_LookFree(sonic);
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, SONIC_ACTIONS[123], &SONIC_TEXLIST, 1.0f, 1, 0);
 		EV_SetAng(sonic,
-			sonic->Data1->Rotation.x,
-			-0x4000 - sonic->Data1->Rotation.y,
-			sonic->Data1->Rotation.z);
+			sonic->twp->ang.x,
+			-0x4000 - sonic->twp->ang.y,
+			sonic->twp->ang.z);
 		EV_SetPos(player, 105.82f, 72.129997f, 349.73001f);
 		EV_SetAng(player, 65430, 36864, 18);
 		EV_ClrAction(player);
@@ -368,14 +368,14 @@ void ev008B_k_chaos4(int state)
 		EV_CameraPos(0, 0, 100.98f, 72.870003f, 209.2f);
 		EV_CameraAng(0, 0, 5632, 30976, 0);
 		EV_CameraPos(0, 0, 103.93f, 72.870003f, 209.71001f);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "F");
 		}
 		EV_Wait(5);
 		EV_SerifPlay(1076);
 		EV_Msg(msgTbl_ev008B[TextLanguage][3]); //"\aThat's a Chaos Emerald!"
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "F");
 		}
@@ -405,11 +405,11 @@ void ev008B_k_chaos4(int state)
 		EV_CameraPos(0, 0, 68.160004f, 74.540001f, 223.09f);
 		EV_CameraAng(0, 0, 4608, 40704, 65280);
 		EV_CameraPos(0, 60, 65.040001f, 72.400002f, 219.82001f);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "F");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(sonic, "FE");
 		}
@@ -417,18 +417,18 @@ void ev008B_k_chaos4(int state)
 		EV_SerifPlay(1079);
 		EV_Msg(msgTbl_ev008B[TextLanguage][7]); //"\aYou can't get away with this!"
 		EV_Wait(20);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(sonic);
 		}
 		EV_Wait(30);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(sonic);
 		}
 		EV_LookObject(sonic, player, 0.0f, 6.0f, 0.0f);
 		EV_ClrFace(sonic);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(sonic, "EEFEE");
 		}
@@ -437,7 +437,7 @@ void ev008B_k_chaos4(int state)
 		EV_CameraPos(0, 45, 42.23f, 74.5f, 210.67999f);
 		EV_CameraAng(0, 45, 1024, 45312, 0);
 		EV_Wait(30);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(sonic);
 		}
@@ -457,31 +457,31 @@ void ev008B_k_chaos4(int state)
 		EV_SetAction(player, &action_k_k0035_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		EV_SerifPlay(1081);
 		EV_Msg(msgTbl_ev008B[TextLanguage][9]); //"\aLike, you weren't?"
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 			EV_SetFace(player, "F");
 		}
 		EV_Wait(5);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 			EV_SetFace(player, "F");
 		}
 		EV_Wait(5);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 			EV_SetFace(player, "F");
 		}
 		EV_Wait(10);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 			EV_SetFace(player, "I");
 		}
 		EV_Wait(10);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 			EV_SetFace(player, "I");
@@ -618,11 +618,11 @@ void ev008B_k_chaos4(int state)
 		EV_CameraAng(1, 0, 1142, 37376, 0);
 		EV_CameraPos(1, 200, 87.559998f, 74.300003f, 187.49001f);
 		EV_CameraAng(1, 200, 1142, 37376, 0);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "FFF");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "CFB");
 		}
@@ -657,7 +657,7 @@ void ev008B_k_chaos4(int state)
 		EV_FreeObject(&B_EME);
 		EV_FreeObject(&G_EME);
 		delete_eggmoble();
-		delete_capturebeam(CAP_01);
+		light_delete(CAP_01);
 		CAP_01 = 0;
 		if (SMOKE_01)
 		{

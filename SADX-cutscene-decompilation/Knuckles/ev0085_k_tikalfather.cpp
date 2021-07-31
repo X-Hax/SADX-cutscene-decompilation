@@ -18,13 +18,13 @@ void ev0085_k_tikalfather(int state)
 		BGM_Play(MusicIDs_tical);
 		EV_SetPos(player, 0.0f, 0.0f, 973.08002f);
 		EV_SetAng(player, 0, 0, 0);
-		EV_CreatePlayer(2, Tikal_Main, 5.138f, 0.0f, 1212.25f, 0, 59392, 0);
+		EV_CreatePlayer(2, Tikal, 5.138f, 0.0f, 1212.25f, 0, 59392, 0);
 		EV_Wait(1);
 		tikal = EV_GetPlayer(2);
 		EV_CreateObject(&PAPA,
-			tikal->Data1->Position.x - 10.0f,
-			tikal->Data1->Position.y + 7.0f,
-			tikal->Data1->Position.z + 10.0f,
+			tikal->twp->pos.x - 10.0f,
+			tikal->twp->pos.y + 7.0f,
+			tikal->twp->pos.z + 10.0f,
 			0, 14336, 0);
 		EV_SetAction(PAPA, &action_p_p0003_patya, ADV03_TEXLISTS[1], 1.0f, 1, 4);
 		EV_SetMode(PAPA, 0);
@@ -84,11 +84,11 @@ void ev0085_k_tikalfather(int state)
 		EV_ClrFace(tikal);
 		EV_Wait(30);
 		EV_SerifPlay(1029);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(tikal, "FDF");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(tikal, "FD");
 		}

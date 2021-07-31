@@ -18,14 +18,14 @@ void ev0030_t_intro(int state)
 		CIchimaie2_SetPriority(hogel, -790.0f);
 		SMOKE = CObjSmoke_Create();
 		SMOKE2 = CObjSmoke_Create(); //This doesn't get used lol
-		WriteData((float*)SMOKE->Data1->LoopData, 1.2f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 2, 0.09f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 11, 0.9f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 12, 0.3f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 13, 0.3f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 14, 0.3f);
+		*(float*)SMOKE->twp->value.l = 1.2f;
+		*(float*)(SMOKE->twp->value.l + 8) = 0.090000004f;
+		*(float*)(SMOKE->twp->value.l + 44) = 0.89999998f;
+		*(float*)(SMOKE->twp->value.l + 48) = 0.30000001f;
+		*(float*)(SMOKE->twp->value.l + 52) = 0.30000001f;
+		*(float*)(SMOKE->twp->value.l + 56) = 0.30000001f;
 		EV_SetPos(SMOKE, 313.0f, 933.34998f, 752.26001f);
-		LoadEventObject(&pmiles, miles_with_ptr, 400.0f, 470.0f, 400.0f, 0, 0, 0);
+		EV_CreateObjectFunc(&pmiles, miles_with_ptr, 400.0f, 470.0f, 400.0f, 0, 0, 0);
 		EV_CameraPos(1, 0, 103.7f, 247.7f, 1002.0f);
 		EV_CameraAng(1, 0, 3584, 64256, 0);
 		EventSe_Play(0, 1333, 1800);
@@ -120,8 +120,8 @@ void ev0030_t_intro(int state)
 		EV_CameraAng(0, 4, 60416, 16640, 0);
 		EventSe_Stop(1);
 		EV_Wait(37);
-		SMOKE->Data1->Rotation.y = 6;
-		SMOKE->Data1->Rotation.x = 6;
+		SMOKE->twp->ang.y = 6;
+		SMOKE->twp->ang.x = 6;
 		CEcCloud_Stop();
 		EventSe_Play(1, 1326, 1800);
 		EventSe_Volume(1, 0, 1);
@@ -155,8 +155,8 @@ void ev0030_t_intro(int state)
 		EV_Wait(2);
 		EV_SerifPlay(619);
 		EV_Msg(msgTbl_ev0030[TextLanguage][3]); //"\aNooooooooooo!"
-		SMOKE->Data1->Rotation.y = 3;
-		SMOKE->Data1->Rotation.x = 3;
+		SMOKE->twp->ang.y = 3;
+		SMOKE->twp->ang.x = 3;
 		EV_CameraAng(0, 3, 63488, 16640, 0);
 		EV_Wait(2);
 		EV_CameraAng(0, 3, 58112, 16640, 0);
@@ -225,8 +225,8 @@ void ev0030_t_intro(int state)
 		EV_Wait(2);
 		EV_CameraAng(0, 3, 57344, 16640, 0);
 		EV_Wait(2);
-		SMOKE->Data1->Rotation.y = 2;
-		SMOKE->Data1->Rotation.x = 2;
+		SMOKE->twp->ang.y = 2;
+		SMOKE->twp->ang.x = 2;
 		CEcCloud_Start(1.0f, 5);
 		EV_Wait(15);
 		moveObjectOn(SMOKE, 0.0f, 0.0f, 0.0f, 9999, pmiles);
@@ -261,8 +261,8 @@ void ev0030_t_intro(int state)
 			FreeTask(hogel);
 			hogel = 0;
 		}
-		SMOKE->Data1->Rotation.y = 1;
-		SMOKE->Data1->Rotation.x = 1;
+		SMOKE->twp->ang.y = 1;
+		SMOKE->twp->ang.x = 1;
 		moveObjectOn(SMOKE, 0.0f, 0.0f, 0.0f, 9999, pmiles);
 		EV_SetPath(pmiles, &epathtag_cube0030_14, 1.0f, 0);
 		EV_CameraPerspective(1, 201, 12561);
@@ -319,8 +319,8 @@ void ev0030_t_intro(int state)
 		EventSe_Stop(0);
 		EventSe_Stop(1);
 		EventSe_Stop(2);
-		SMOKE->Data1->Rotation.y = 0;
-		SMOKE->Data1->Rotation.x = 0;
+		SMOKE->twp->ang.y = 0;
+		SMOKE->twp->ang.x = 0;
 		break;
 	case 2:
 		EV_CameraOff();

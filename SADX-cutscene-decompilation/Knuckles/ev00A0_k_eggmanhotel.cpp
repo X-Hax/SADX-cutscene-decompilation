@@ -16,7 +16,7 @@ void ev00A0_k_eggmanhotel(int state)
 		EV_InitPlayer(0);
 		BGM_Play(MusicIDs_eggman);
 		EV_CameraPerspective(1, 1, 20025);
-		EV_CreatePlayer(2, Eggman_Main, -143.89f, 108.75f, 12.23f, 0, 42748, 0);
+		EV_CreatePlayer(2, Eggman, -143.89f, 108.75f, 12.23f, 0, 42748, 0);
 		EV_Wait(1);
 		eggman = EV_GetPlayer(2);
 		EV_SetPos(eggman, -368.29999f, 0.0f, 1666.12f);
@@ -40,11 +40,11 @@ void ev00A0_k_eggmanhotel(int state)
 		EV_SetAction(player, &action_k_k0002_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(1);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "D");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "DE");
 		}
@@ -65,11 +65,11 @@ void ev00A0_k_eggmanhotel(int state)
 		EV_MsgW(1, msgTbl_ev00A0[TextLanguage][1]); //"\aWhat's he got there?"
 		EV_Wait(70);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "D");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "DD");
 		}

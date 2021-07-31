@@ -1,12 +1,6 @@
 #pragma once
 #include "SADXModLoader.h"
 
-struct EPATHTAG
-{
-	int points;
-	LoopHead** tblHead;
-};
-
 struct PADREC_DATA
 {
 	BYTE on;
@@ -26,13 +20,6 @@ struct CutsceneData_
 	PVMEntry* Textures;
 };
 
-struct FACETBL
-{
-	BYTE nbFrame;
-	BYTE faceNo;
-};
-
-
 union SegaGarbage
 {
 	void* Pointer;
@@ -45,7 +32,7 @@ union SegaGarbage
 	Uint16 UShort[2];
 	Sint8 SByte[4];
 	Uint8 UByte[4];
-	ObjectMaster* Master;
+	task* Master;
 };
 
 struct StupidBitStuff

@@ -92,11 +92,11 @@ void ev0047_t_tornado2(int state)
 		EV_SetAction(emerald, &action_m_m0117c_m_em_red, &texlist_m_em_red, 1.0f, 1, 0);
 		EV_Wait(40);
 		EV_SerifPlay(757);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "EAEP");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "EAEPP");
 		}

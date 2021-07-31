@@ -30,9 +30,9 @@ void ev0169_t_rhythmbadge(int state)
 		EV_MsgW(0, msgTbl_ev0169[TextLanguage][0]); //"\aYou've found the Rhythm Badge."
 		EV_SetAction(player, &action_m_item_b1, &MILES_TEXLIST, 0.2f, 1, 8);
 		tikal = CTikalLight_Create(
-			player->Data1->Position.x - 11.764f,
-			player->Data1->Position.y + 23.0f,
-			player->Data1->Position.z + 6.2540002f);
+			player->twp->pos.x - 11.764f,
+			player->twp->pos.y + 23.0f,
+			player->twp->pos.z + 6.2540002f);
 		EV_Wait(1);
 		EV_SetMode(tikal, 0);
 		EV_ClrPath(tikal);

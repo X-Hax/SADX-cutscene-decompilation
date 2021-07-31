@@ -30,9 +30,9 @@ void ev0014_s_aftertwinklepark(int state)
 		EV_CameraPos(0, 270, 741.32001f, 55.09f, 1760.51f);
 		EV_CameraAng(0, 270, 64965, 43066, 0);
 		EV_ClrFace(player);
-		if (VoiceLanguage == 1) EV_SetFace(player, "DBD");
+		if (VoiceLanguage == Languages_English) EV_SetFace(player, "DBD");
 		EV_SerifPlay(513);
-		if (!VoiceLanguage) EV_SetFace(player, "DD");
+		if (VoiceLanguage == Languages_Japanese) EV_SetFace(player, "DD");
 		EV_Msg((msgTbl_ev0014[TextLanguage])[0]);
 		EV_Wait(80);
 		EV_ClrFace(player);

@@ -23,7 +23,7 @@ void ev0087_k_chaos2(int state)
 		EV_SetAction(player, &action_k_k0005_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		EV_CameraPos(1, 0, 0.5f, 2.5f, -4.9000001f);
 		EV_CameraAng(1, 0, 3313, 57306, 0);
-		EV_CreatePlayer(2, Eggman_Main, 6.1599998f, 0.0f, -49.700001f, 0, 33024, 0);
+		EV_CreatePlayer(2, Eggman, 6.1599998f, 0.0f, -49.700001f, 0, 33024, 0);
 		EV_Wait(1);
 		eggman = EV_GetPlayer(2);
 		EV_SetPos(eggman, 6.1599998f, 0.0f, -49.700001f);
@@ -36,9 +36,9 @@ void ev0087_k_chaos2(int state)
 		EV_SetMode(W_EME, 0);
 		EV_Wait(1);
 		EV_SetPos(W_EME,
-			eggman->Data1->Position.x + 2.5f,
-			eggman->Data1->Position.y - 15.5f,
-			eggman->Data1->Position.z + 2.5f);
+			eggman->twp->pos.x + 2.5f,
+			eggman->twp->pos.y - 15.5f,
+			eggman->twp->pos.z + 2.5f);
 		EV_SetAng(W_EME, 0, 64256, 0);
 		EV_SetAction(W_EME, &action_m_em_white, &M_EM_WHITE_TEXLIST, 1.0f, 1, 0);
 		moveObjectRightHand(W_EME, 2, -15.0f, -6.6999998f, 0.0f, 700);
@@ -109,11 +109,11 @@ void ev0087_k_chaos2(int state)
 		EV_SetPos(W_EME, 8.6000004f, -14.3f, -70.0f);
 		EV_SetAng(W_EME, 0, 64256, 0);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "CCCDCDC0");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "C");
 		}
@@ -201,11 +201,11 @@ void ev0087_k_chaos2(int state)
 		EV_Wait(40);
 		EV_ClrFace(player);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "ECEDDDEECCDECADDEECCAC0");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "ECE0");
 		}
@@ -216,11 +216,11 @@ void ev0087_k_chaos2(int state)
 		dsStop_id(2);
 		PlaySound(1333, 0, 0, 0);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "ECEDDECCDECADDEECCAC0");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "DDED");
 		}
@@ -279,9 +279,9 @@ void ev0087_k_chaos2(int state)
 		ToWaterChaos1();
 		EV_Wait(10);
 		crushLightOn(
-			W_EME->Data1->Position.x,
-			W_EME->Data1->Position.y,
-			W_EME->Data1->Position.z,
+			W_EME->twp->pos.x,
+			W_EME->twp->pos.y,
+			W_EME->twp->pos.z,
 			3, 10, 0.40000001f, 2.0f, 0xFFFFFFFF, 0x96969696);
 		FLASH = COverlayCreate(0.039999999f, 0.1f, 1.0f, 1.0f, 1.0f);
 		BGM_Stop();

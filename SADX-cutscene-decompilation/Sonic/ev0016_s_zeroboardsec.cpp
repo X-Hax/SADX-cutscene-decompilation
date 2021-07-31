@@ -20,7 +20,7 @@ void ev0016_s_zeroboardsec(int state)
 		SetBankDir(77);
 		EV_SetPos(player, -52.189999f, 204.99001f, 1020.98f);
 		EV_SetAng(player, 0, 42499, 0);
-		LoadEventObject(&egg_amy, set_amy, -157.48f, 78.0f, 1060.33f, 0, 51712, 0);
+		EV_CreateObjectFunc(&egg_amy, set_amy, -157.48f, 78.0f, 1060.33f, 0, 51712, 0);
 		createModelEC(
 			50.0f,
 			-1600.0f,
@@ -112,16 +112,16 @@ void ev0016_s_zeroboardsec(int state)
 		EV_SetAction(player, &action_s_s0027_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_Wait(20);
 		EV_ClrFace(player);
-		if (!VoiceLanguage) EV_SetFace(player, "F");
+		if (VoiceLanguage == Languages_Japanese) EV_SetFace(player, "F");
 		EV_Wait(15);
 		EV_SerifPlay(521);
-		if (VoiceLanguage == 1) EV_SetFace(player, "FE");
+		if (VoiceLanguage == Languages_English) EV_SetFace(player, "FE");
 		EV_Msg((msgTbl_ev0016[TextLanguage])[3]); //"\aHey, what's happening here?"
 		EV_Wait(5);
-		if (!VoiceLanguage) EV_ClrFace(player);
+		if (VoiceLanguage == Languages_Japanese) EV_ClrFace(player);
 		EV_MsgClose();
 		EV_Wait(10);
-		if (VoiceLanguage == 1) EV_ClrFace(player);
+		if (VoiceLanguage == Languages_English) EV_ClrFace(player);
 		eggcarrier = getobjModel(0);
 		EV_SetPos(eggcarrier, 50.0f, 600.0f, 1050.0f);
 		EV_CameraPos(0, 0, -248.82001f, 109.03f, 960.87f);
@@ -180,16 +180,16 @@ void ev0016_s_zeroboardsec(int state)
 		EV_CameraAng(1, 0, 3740, 17898, 0);
 		EV_CameraPos(1, 200, -173.27f, 67.940002f, 959.26001f);
 		EV_ClrFace(player);
-		if (!VoiceLanguage) EV_SetFace(player, "CDE");
+		if (VoiceLanguage == Languages_Japanese) EV_SetFace(player, "CDE");
 		EV_Wait(15);
 		EV_SerifPlay(522);
-		if (VoiceLanguage == 1) EV_SetFace(player, "EBC");
+		if (VoiceLanguage == Languages_English) EV_SetFace(player, "EBC");
 		EV_Msg((msgTbl_ev0016[TextLanguage])[6]); //"\aShoot, I've lost her again!"
 		EV_Wait(5);
 		EV_MsgClose();
-		if (!VoiceLanguage) EV_ClrFace(player);
+		if (VoiceLanguage == Languages_Japanese) EV_ClrFace(player);
 		EV_Wait(10);
-		if (VoiceLanguage == 1) EV_ClrFace(player);
+		if (VoiceLanguage == Languages_English) EV_ClrFace(player);
 		EV_Wait(10);
 		EV_CameraPos(0, 0, -254.81f, 88.5f, 809.78003f);
 		EV_CameraTargetObj(0, 0, eggcarrier, 0.0f, 0.0f, 0.0f, 0);
@@ -237,7 +237,7 @@ void ev0016_s_zeroboardsec(int state)
 			FreeTask(EC_KAGE);
 			EC_KAGE = 0;
 		}
-		delete_capturebeam(CAP_01);
+		light_delete(CAP_01);
 		CAP_01 = 0;
 		EV_CameraOff();
 		EV_PadOn();

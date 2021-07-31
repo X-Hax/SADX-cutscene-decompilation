@@ -68,12 +68,12 @@ void ev0051_t_walkerdefeated(int state)
 		EV_SetFace(player, "K");
 		EV_Wait(40);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "M");
 		}
 		EV_MsgW(0, msgTbl_ev0051[TextLanguage][0]); //"\aHey!   I did it!"
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "FE");
 		}
@@ -122,11 +122,11 @@ void ev0051_t_walkerdefeated(int state)
 		EV_SerifPlay(820);
 		EV_Wait(5);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "G");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "GE");
 		}

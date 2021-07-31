@@ -18,7 +18,7 @@ void ev0091_k_leavepastsecond(int state)
 		seqVars[37] = 1;
 		EV_SetPos(player, -3.4000001f, -247.0f, 2469.6001f);
 		EV_SetAng(player, 0, 35072, 0);
-		EV_CreatePlayer(2, Gamma_Main, -37.299999f, -238.0f, 1973.0f, 0, 0, 0);
+		EV_CreatePlayer(2, E102, -37.299999f, -238.0f, 1973.0f, 0, 0, 0);
 		EV_Wait(1);
 		createModelEC(
 			-2.7f, -160.60001f, 2153.3999f, 0, 44288, 0, 0.0020000001f, 0.0020000001f, 0.0020000001f,
@@ -345,23 +345,23 @@ void ev0091_k_leavepastsecond(int state)
 		EV_CameraAng(0, 0, 65507, 38680, 64768);
 		EV_CameraPos(0, 160, -1532.0f, -395.89999f, 2117.3999f);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "GBGCCGCGCGG0");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "GBGCC0");
 		}
 		EV_SerifPlay(1122);
 		EV_Msg(msgTbl_ev0091[TextLanguage][12]); //"\aI know... I'll follow it\nback to Egg"...
 		EV_SerifWait();
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}
 		EV_MsgClose();
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}
@@ -369,23 +369,23 @@ void ev0091_k_leavepastsecond(int state)
 		EV_CameraPos(0, 25, -1533.0f, -396.87f, 2119.5f);
 		EV_CameraAng(0, 25, 2531, 42264, 64768);
 		EV_ClrFace(player);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_SetFace(player, "GCGBCGGCGGG");
 		}
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_SetFace(player, "G0");
 		}
 		EV_SerifPlay(1123);
 		EV_Msg(msgTbl_ev0091[TextLanguage][13]); //"\aHere I come, Eggman!"
 		EV_SerifWait();
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}
 		EV_Wait(20);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}

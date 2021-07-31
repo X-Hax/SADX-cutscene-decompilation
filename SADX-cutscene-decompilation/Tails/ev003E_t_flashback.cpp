@@ -35,7 +35,7 @@ void ev003E_t_flashback(int state)
 
 		EV_SetPos(player, -955.59998f, 9.8199997f, -181.60001f);
 		EV_SetAng(player, 65472, 10240, 64759);
-		EV_CreatePlayer(2, Sonic_Main, -701.70001f, 4.0f, 100.1f, 0, 64000, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, -701.70001f, 4.0f, 100.1f, 0, 64000, 0);
 		EV_Wait(1);
 		sonic = EV_GetPlayer(2);
 		EV_SetPos(sonic, -779.40002f, 1.21f, -106.77f);
@@ -138,32 +138,32 @@ void ev003E_t_flashback(int state)
 		EV_SetPath(player, &epathtag_EV003E_RUNNING, 0.60000002f, 0);
 		EV_LookFree(sonic);
 		EV_CameraPos(1, 0,
-			sonic->Data1->Position.x - 5.0f,
-			sonic->Data1->Position.y + 7.0f,
-			sonic->Data1->Position.z + 28.0f);
+			sonic->twp->pos.x - 5.0f,
+			sonic->twp->pos.y + 7.0f,
+			sonic->twp->pos.z + 28.0f);
 		EV_CameraChase(sonic);
 		EV_CameraTargetObj(1, 0, sonic, 0.0f, 5.0f, 0.0f, 0);
 		EV_Wait(100);
 		EV_CameraPos(1, 0,
-			sonic->Data1->Position.x + 6.0f,
-			sonic->Data1->Position.y + 8.0f,
-			sonic->Data1->Position.z - 10.0f);
+			sonic->twp->pos.x + 6.0f,
+			sonic->twp->pos.y + 8.0f,
+			sonic->twp->pos.z - 10.0f);
 		EV_CameraChase(sonic);
 		COverlaySetSpeed(SEPIA, -0.0016f);
 		EV_Wait(100);
 		EV_ClrFace(player);
 		EV_SetFace(player, "bbPPPbb");
 		EV_CameraPos(1, 0,
-			player->Data1->Position.x + 1.0f,
-			player->Data1->Position.y + 5.5f,
-			player->Data1->Position.z - 10.0f);
+			player->twp->pos.x + 1.0f,
+			player->twp->pos.y + 5.5f,
+			player->twp->pos.z - 10.0f);
 		EV_CameraChase(player);
 		EV_CameraTargetObj(1, 0, player, -2.0f, 5.0f, -2.5f, 0);
 		EV_Wait(40);
 		EV_CameraPos(1, 0,
-			sonic->Data1->Position.x - 4.0f,
-			sonic->Data1->Position.y + 5.0f,
-			sonic->Data1->Position.z - 8.0f);
+			sonic->twp->pos.x - 4.0f,
+			sonic->twp->pos.y + 5.0f,
+			sonic->twp->pos.z - 8.0f);
 		EV_CameraChase(sonic);
 		EV_CameraTargetObj(1, 0, sonic, 0.0f, 5.0f, 0.0f, 0);
 		EV_Wait(50);

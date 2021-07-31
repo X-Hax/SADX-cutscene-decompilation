@@ -22,7 +22,7 @@ void ev0033_t_egghornet(int state)
 		EV_SetPos(player, 952.70001f, 123.5f, 726.70001f);
 		EV_SetAng(player, 0, 15872, 0);
 		EV_LookObject(player, obj_decoy, 7.0f, 8.0f, 8.0f);
-		EV_CreatePlayer(2, Sonic_Main, 947.29999f, 123.5f, 705.77002f, 0, 11520, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, 947.29999f, 123.5f, 705.77002f, 0, 11520, 0);
 		EV_Wait(1);
 		sonic = EV_GetPlayer(2);
 		EV_LookObject(sonic, obj_decoy, 0.0f, 8.0f, 0.0f);
@@ -120,12 +120,12 @@ void ev0033_t_egghornet(int state)
 		EV_SerifPlay(644);
 		EV_Msg(msgTbl_ev0033[TextLanguage][8]); //"\aThat usually means trouble,\ncoming f"...
 		EV_Wait(75);
-		if (VoiceLanguage == 1)
+		if (VoiceLanguage == Languages_English)
 		{
 			EV_ClrFace(player);
 		}
 		EV_Wait(15);
-		if (!VoiceLanguage)
+		if (VoiceLanguage == Languages_Japanese)
 		{
 			EV_ClrFace(player);
 		}

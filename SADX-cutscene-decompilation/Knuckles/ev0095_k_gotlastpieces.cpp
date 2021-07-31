@@ -19,15 +19,15 @@ void ev0095_k_gotlastpieces(int state)
         EV_SetPos(player, 636.0f, 200.0f, 0.0f);
         EV_SetAng(player, 0, 0x4000, 0);
         KOUKYU = CTikalLight_Create(
-            player->Data1->Position.x + 9.1700001f,
-            player->Data1->Position.y + 32.0f,
-            player->Data1->Position.z + 15.19f);
+            player->twp->pos.x + 9.1700001f,
+            player->twp->pos.y + 32.0f,
+            player->twp->pos.z + 15.19f);
         EV_SetMode(KOUKYU, 0);
         EV_Wait(2);
         EV_CameraPos(1, 0,
-            player->Data1->Position.x + 16.450001f,
-            player->Data1->Position.y + 7.25f,
-            player->Data1->Position.z - 0.75f);
+            player->twp->pos.x + 16.450001f,
+            player->twp->pos.y + 7.25f,
+            player->twp->pos.z - 0.75f);
         EV_CameraTargetObj(1, 0, player, 0.0f, 5.0f, 0.0f, 0);
         EV_SetAction(player, &action_k_k0001_knuckles, &KNUCKLES_TEXLIST, 0.5f, 0, 16);
         EV_SetAction(player, &action_k_k0002_knuckles, &KNUCKLES_TEXLIST, 0.5f, 1, 8);
@@ -60,13 +60,13 @@ void ev0095_k_gotlastpieces(int state)
         EV_Wait(10);
         EV_CameraTargetFree();
         EV_CameraPos(1, 100,
-            player->Data1->Position.x + 12.2f,
-            player->Data1->Position.y + 8.8199997f,
-            player->Data1->Position.z - 4.0f);
+            player->twp->pos.x + 12.2f,
+            player->twp->pos.y + 8.8199997f,
+            player->twp->pos.z - 4.0f);
         EV_CameraAng(1, 100,
-            player->Data1->Rotation.x - 640,
-            0x4178 - player->Data1->Rotation.y,
-            player->Data1->Rotation.z);
+            player->twp->ang.x - 640,
+            0x4178 - player->twp->ang.y,
+            player->twp->ang.z);
         EV_Wait(50);
         EventSe_Play(0, 760, 88);
         SIRO = COverlayCreate(0.016666668f, 0.0f, 1.0f, 1.0f, 1.0f);

@@ -13,15 +13,17 @@ void ev0026_s_outro(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		SMOKE = CObjSmoke_Create();
-		WriteData((float*)SMOKE->Data1->LoopData, 2.0f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 11, 0.899999976158142f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 12, 0.5f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 13, 0.5f);
-		WriteData((float*)(SMOKE->Data1->LoopData) + 14, 0.5f);
+		if (SMOKE) {
+			*(float*)SMOKE->twp->value.l = 2.0f;
+			*(float*)(SMOKE->twp->value.l + 44) = 0.89999998f;
+			*(float*)(SMOKE->twp->value.l + 48) = 0.5f;
+			*(float*)(SMOKE->twp->value.l + 52) = 0.5f;
+			*(float*)(SMOKE->twp->value.l + 56) = 0.5f;
+		}
 		EV_SetPos(player, 338.5f, 204.0f, 684.40002f);
 		EV_SetAng(player, 63488, 37632, 0);
 		EV_SetAction(player, &action_s_s0009_sonic, &SONIC_TEXLIST, 0.5f, 1, 4);
-		EV_CreatePlayer(2, Tails_Main, -235.60001f, 1528.6f, 3543.3f, 0, 0x8000, 0);
+		EV_CreatePlayer(2, MilesTalesPrower, -235.60001f, 1528.6f, 3543.3f, 0, 0x8000, 0);
 		create_eggmoble(187.45f, 350.0f, 420.0f, 0, 21760, 0);
 		EV_SetPos(SMOKE, 187.45f, 370.0f, 420.0f);
 		BGM_Play(MusicIDs_sonic);
@@ -33,8 +35,8 @@ void ev0026_s_outro(int state)
 		EV_Wait(50);
 		playertwp[2]->Object.SByte[3] |= 4u;
 		playertwp[2]->Object.SByte[3] |= 0x20u;
-		SMOKE->Data1->Rotation.y = 1;
-		SMOKE->Data1->Rotation.x = 1;
+		SMOKE->twp->ang.y = 1;
+		SMOKE->twp->ang.x = 1;
 		seteggmobleparam(5.0f, 592);
 		EV_CameraPos(0, 70, 337.73999f, 207.0f, 703.5f);
 		EV_Wait(70);

@@ -390,6 +390,42 @@
     <ClCompile Include="E102\ev00B0_e_intro.cpp">
       <Filter>Source Files\E102</Filter>
     </ClCompile>
+    <ClCompile Include="E102\ev00B1_e_finalegg.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00B3_e_uselessmachine.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00B4_e_e101.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00B2_e_afterfinalegg.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00B5_e_betadefeated.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00B7_e_fanfare.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00B8_e_emeraldcoast.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00B9_e_past.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00BA_e_tikal.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00BB_e_deliverfrog.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00BC_e_enterwrongroom.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00BD_e_e101factory.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

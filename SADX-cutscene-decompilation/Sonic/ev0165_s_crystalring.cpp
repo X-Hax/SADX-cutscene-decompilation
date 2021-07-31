@@ -25,9 +25,9 @@ void ev0165_s_crystalring(int state)
 		EV_SetAction(player, &action_s_item_r0, &SONIC_TEXLIST, 0.18000001f, 0, 16);
 		EV_Wait(50);
 		tikal = CTikalLight_Create(
-			player->Data1->Position.x - 11.764f,
-			player->Data1->Position.y + 23.0f,
-			player->Data1->Position.z + 6.2540002f);
+			player->twp->pos.x - 11.764f,
+			player->twp->pos.y + 23.0f,
+			player->twp->pos.z + 6.2540002f);
 		EV_Wait(1);
 		EV_SetMode(tikal, 0);
 		EV_ClrPath(tikal);
