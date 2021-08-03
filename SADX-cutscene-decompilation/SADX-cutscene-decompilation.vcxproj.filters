@@ -426,6 +426,45 @@
     <ClCompile Include="E102\ev00BD_e_e101factory.cpp">
       <Filter>Source Files\E102</Filter>
     </ClCompile>
+    <ClCompile Include="E102\ev00C0_e_reportrear.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00BF_e_prison.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00BE_e_exitwrongroom.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00C1_e_sonic.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00C2_e_escapecarrier.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00C3_e_objectivechanged.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00C5_e_rememberbros.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev00C7_e_outro.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev0140_e_findjetbooster.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev0141_e_hotshelter.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev0142_e_betamk2.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev016E_e_laserblaster.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev016F_e_jetbooster.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

@@ -5,8 +5,15 @@ task* B_EME;					//Chaos Emerald: Blue
 task* B_OUT;					//Fadeout
 task* BALL;						//Tikal ball in EV0001
 task* BLACK;					//Black Tint+Fadeout
+task* BLACK1;					//Black Tint+Fadeout
 task* BLACK2;					//Black Tint+Fadeout
+task* BLACK3;					//Black Tint+Fadeout
+task* bird1;					//Flicky
+task* bird2;					//Flicky
+task* bird3;					//Flicky
 task* BLACKOUT;					//Fadein
+task* bomb1;					//Explosion effect
+task* bomb2;					//Explosion effect
 task* BOY;						//NPC
 task* BOY2;						//NPC
 task* BOYS_A;					//NPC
@@ -50,6 +57,7 @@ task* CHAO15;					//Tikal's Chao
 task* CHAO16;					//Tikal's Chao
 task* CHAOS;					//Flash for Chaos 2>4 Transformation
 task* e101;						//E-101 Beta
+task* E101KAI;					//E-101 Beta Mk.II
 task* e103;						//E-103 Delta
 task* e104;						//E-104 Epsilon
 task* e105;						//E-105 Zeta
@@ -77,6 +85,11 @@ task* HAND_2;					//Eggman's claw
 task* HAND_3;					//Eggman's claw
 task* HELI_01;					//Police Helicopter
 task* hogel;					//Fake skybox
+task* hoge1;					//Flashback image
+task* hoge2;					//Flashback image
+task* hoge3;					//Flashback image
+task* hoge4;					//Flashback image
+task* hoge5;					//Flashback image
 task* IWA;						//Egg Viper Debris
 task* IWA2;						//Egg Viper Debris
 task* IWA3;						//Egg Viper Debris
@@ -92,8 +105,11 @@ task* LIGHT_L;					//Light for Eggman's fanfare
 task* LIGHT_R;					//Light for Eggman's fanfare
 task* Mhand;					//Eggman's claw
 task* NY_SKY;					//Fake skybox
+//task* obj_amy;				//Amy after grabbing onto Tails.
 task* obj_decoy;				//Target point for cameras and heads.
+task* obj_ver1_wing;			//Amy's bird
 task* obj_ver2_wing;			//Amy's bird
+task* obj_wing;					//Amy's bird
 task* obj_wing1;				//Amy's bird
 task* OYAJI_A;					//NPC
 task* OYAJI_B;					//NPC
@@ -125,6 +141,7 @@ task* SIRO;						//Fade to white
 task* SMOKE_01;					//Smoke effect
 task* SMOKE_02;					//Smoke Effect
 task* SMOKE;					//Smoke Effect
+task* SMOKE1;					//Smoke Effect
 task* SMOKE2;					//Smoke Effect
 task* SONIC_JUMP;				//Sky floor
 task* SONIC_SKY_2;				//Sky floor
@@ -133,12 +150,15 @@ task* suki1_obj;				//Borders when Eggman spots Tails' purple emerald.
 task* suki2_obj;				//Borders when Eggman spots Tails' purple emerald.
 task* suki1_point;				//Borders when Eggman spots Tails' purple emerald.
 task* suki2_point;				//Borders when Eggman spots Tails' purple emerald.
+task* task_icm;					//Flashback image
+task* task_ichimaie;					//Flashback image
 task* task_skywalk;				//Sky floor
 task* task_skywalk2;			//Sky floor
 task* W_EME;					//Chaos Emerald: White
 task* W_OUT;					//White fadein
 task* WING;						//Amy's bird
 task* WHITE;					//White fadeout
+task* WHITE2;					//White fadeout
 task* TALES_STEP;				//Sky floor
 task* TAMA_01;					//Bullet
 task* TAMA_02;					//Bullet
@@ -194,5 +214,6 @@ task* zero;
 * EV0080: Knuckles has an eyelid animation when he gets woken up. The line points to "0" instead of him though, so it doesn't do anything.
 * EV0091: Knuckles does an animation when viewing the small Egg Carrier inside the emerald but it can't be seen normally because he slides off the pedestal and out of view before it can start.
 * EV009A: Knuckles has mouth movement during "I still can't figure out that creepy monster." that isn't seen because the running animation he's doing doesn't support mouth movement.
+* EV00C7: Gamma's ending spawns and has code related to Amy's flicky but it's invisible.
 */
 int enableUnusedCode = 0;

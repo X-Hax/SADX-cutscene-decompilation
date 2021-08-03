@@ -112,6 +112,14 @@ extern "C"
 		CutsceneDataList_[0x00BB]->Function = ev00BB_e_deliverfrog;
 		CutsceneDataList_[0x00BC]->Function = ev00BC_e_enterwrongroom;
 		CutsceneDataList_[0x00BD]->Function = ev00BD_e_e101factory;
+		CutsceneDataList_[0x00BE]->Function = ev00BE_e_exitwrongroom;
+		CutsceneDataList_[0x00BF]->Function = ev00BF_e_prison;
+		CutsceneDataList_[0x00C0]->Function = ev00C0_e_reportrear;
+		CutsceneDataList_[0x00C1]->Function = ev00C1_e_sonic;
+		CutsceneDataList_[0x00C2]->Function = ev00C2_e_escapecarrier;
+		CutsceneDataList_[0x00C3]->Function = ev00C3_e_objectivechanged;
+		CutsceneDataList_[0x00C5]->Function = ev00C5_e_rememberbros;
+		CutsceneDataList_[0x00C7]->Function = ev00C7_e_outro;
 		CutsceneDataList_[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList_[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList_[0x0102]->Function = ev0102_s_ecaftertransforming;
@@ -127,6 +135,9 @@ extern "C"
 		CutsceneDataList_[0x0120]->Function = ev0120_k_ectransform1;
 		CutsceneDataList_[0x0121]->Function = ev0121_k_ectransform2;
 		CutsceneDataList_[0x0122]->Function = ev0122_k_outsideskydeck;
+		CutsceneDataList_[0x0140]->Function = ev0140_e_findjetbooster;
+		CutsceneDataList_[0x0141]->Function = ev0141_e_hotshelter;
+		CutsceneDataList_[0x0142]->Function = ev0142_e_betamk2;
 		CutsceneDataList_[0x0165]->Function = ev0165_s_crystalring;
 		CutsceneDataList_[0x0166]->Function = ev0166_s_lightshoes;
 		CutsceneDataList_[0x0167]->Function = ev0167_s_ancientlight;
@@ -134,6 +145,8 @@ extern "C"
 		CutsceneDataList_[0x0169]->Function = ev0169_t_rhythmbadge;
 		CutsceneDataList_[0x016A]->Function = ev016A_k_fightgloves;
 		CutsceneDataList_[0x016B]->Function = ev016B_k_shovelclaw;
+		CutsceneDataList_[0x016E]->Function = ev016E_e_laserblaster;
+		CutsceneDataList_[0x016F]->Function = ev0016F_e_jetbooster;
 		CutsceneDataList_[0x0176]->Function = ev0176_s_icestone;
 		CutsceneDataList_[0x0177]->Function = ev0177_t_icestone;
 		CutsceneDataList_[0x0179]->Function = ev0179_s_idcard;
