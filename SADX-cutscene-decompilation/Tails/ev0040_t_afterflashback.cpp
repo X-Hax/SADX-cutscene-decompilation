@@ -12,7 +12,7 @@ void ev0040_t_afterflashback(int state)
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
-		playertwp[0]->Object.SByte[3] |= 0x10u; //Disable tail animations
+		player->twp->timer.b[3] |= 0x10u; //Disable tail animations
 		EV_SetPos(player, 125.92f, 72.639999f, 267.89999f);
 		EV_SetAng(player, 0, 0, 0);
 		EV_Wait(1);
@@ -59,8 +59,8 @@ void ev0040_t_afterflashback(int state)
 		EV_WaitAction(player);
 		EV_CameraPos(1, 0, 120.62f, 74.959999f, 288.12f);
 		EV_CameraAng(1, 0, 1792, 62140, 0);
-		playertwp[0]->Object.SByte[3] &= ~4u;	//Reset Tails' tails.
-		playertwp[0]->Object.SByte[3] &= ~0x10u;
+		player->twp->timer.b[3] &= ~4u;	//Reset Tails' tails.
+		player->twp->timer.b[3] &= ~0x10u;
 		EV_SetPos(player, 126.23f, 72.639999f, 272.26001f);
 		EV_Wait(1);
 		EV_ClrAction(player);
@@ -118,8 +118,8 @@ void ev0040_t_afterflashback(int state)
 		EV_SetPos(player, 126.23f, 72.639999f, 272.26001f);
 		EV_SetAng(player, 0, 0, 0);
 		EV_InitPlayer(0);
-		playertwp[0]->Object.SByte[3] &= ~4u;	//Reset Tails' tails.
-		playertwp[0]->Object.SByte[3] &= ~0x10u;
+		player->twp->timer.b[3] &= ~4u;	//Reset Tails' tails.
+		player->twp->timer.b[3] &= ~0x10u;
 		EV_CameraOff();
 		EV_PadOn();
 		break;

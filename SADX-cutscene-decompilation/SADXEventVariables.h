@@ -2,14 +2,8 @@
 #include "SADXModLoader.h"
 #include "SADXEventStructs.h"
 
-//Cutscene List
-DataArray(CutsceneData_*, CutsceneDataList_, 0x914790, 384);
-
 //Character Faces Table
 DataArray(FACETBL, faceTable, 0x91CEC8, 160);
-
-//EntityData1 but it can do the bitwise stuff
-DataArray(StupidBitStuff*, playertwp, 0x3B42E10, 8);
 
 //Object variables, see objects.cpp
 extern task* B_EME;
@@ -26,6 +20,7 @@ extern task* bird3;
 extern task* bomb1;
 extern task* bomb2;
 extern task* BOY;
+extern task* boy1;
 extern task* BOY2;
 extern task* BOYS_A;
 extern task* BROKEN_EGG;
@@ -82,6 +77,7 @@ extern task* FAT;
 extern task* FAT_A;
 extern task* FAT_B;
 extern task* FAT2;	
+extern task* fatman_b;
 extern task* FLASH;
 extern task* Frog;	
 extern task* Frog1;	
@@ -90,6 +86,7 @@ extern task* Frog3;
 extern task* Frog4;	
 extern task* G_EME;
 extern task* GIRL;	
+extern task* girl1;
 extern task* GIRL2;
 extern task* HAND_1;
 extern task* HAND_2;
@@ -115,6 +112,7 @@ extern task* LADY2;
 extern task* LIGHT_L;
 extern task* LIGHT_R;
 extern task* Mhand;
+extern task* m_sonic;
 extern task* NY_SKY;
 //extern task* obj_amy;
 extern task* obj_decoy;
@@ -122,12 +120,17 @@ extern task* obj_ver1_wing;
 extern task* obj_ver2_wing;
 extern task* obj_wing;
 extern task* obj_wing1;
+extern task* ol1;
+extern task* oy1;
+extern task* oy2;
 extern task* OYAJI_A;
 extern task* OYAJI_B;
 extern task* OYAJI_C;
 extern task* OYAJI;
 extern task* OYAJI2;
 extern task* p_Chaos0Task;
+extern task* p_fpack1;
+extern task* p_fpack2;
 extern task* P_EME;
 extern task* PAPA;
 extern task* PLANE;
@@ -148,6 +151,7 @@ extern task* R_EME;
 extern task* RED;
 extern task* S_EME;
 extern task* SEPIA;
+extern task* shadow;
 extern task* SIRO;
 extern task* SMOKE_01;
 extern task* SMOKE_02;
@@ -161,10 +165,14 @@ extern task* suki1_obj;
 extern task* suki2_obj;
 extern task* suki1_point;
 extern task* suki2_point;
+extern task* task_frame;
 extern task* task_icm;
 extern task* task_ichimaie;
+extern task* task_recollect0;
+extern task* task_recollect1;
 extern task* task_skywalk;
 extern task* task_skywalk2;
+extern task* task_skywalk_3;
 extern task* W_EME;
 extern task* WING;
 extern task* WHITE;
@@ -219,7 +227,6 @@ extern int enableUnusedCode;
 DataArray(char, seqVars, 0x3B18808, 512);
 DataPointer(NJS_ACTION, action_sspatcar_body, 0x2DC028C);
 DataPointer(NJS_ACTION, action_c0_heli_body, 0x2DBD864);
-DataPointer(NJS_MOTION**, MODEL_SS_PEOPLE_MOTION, 0x038F6EA4);
 DataPointer(NJS_ACTION, action_s_s0089_sonic, 0x03C84A08);
 DataPointer(NJS_ACTION, action_s_s0064_sonic, 0x03C84A10);
 DataPointer(NJS_ACTION, action_s_s0065_sonic, 0x03C84A18);
@@ -609,6 +616,39 @@ DataPointer(NJS_TEXLIST, ev_effect_list9, 0x2C496F0);
 //EV0055
 DataPointer(EPATHTAG, epathtag_ev0055_tk, 0x2BE6BF0);
 
+//EV0060
+DataPointer(NJS_ACTION, action_a_a0100_amy, 0x3C85408);
+DataPointer(NJS_ACTION, action_fp_0100_fpack, 0x328D44C);
+DataPointer(NJS_TEXLIST, texlist_fpack, 0x3289B50);
+DataPointer(NJS_TEXLIST, texlist_icm0060, 0x32CC570);
+DataPointer(NJS_ACTION, action_a_a0101_amy, 0x3C85420);
+DataPointer(NJS_ACTION, action_fp_0101_fpack, 0x328D894);
+DataPointer(NJS_ACTION, action_a_a0102_amy, 0x3C85418);
+DataPointer(NJS_ACTION, action_fp_0102_fpack, 0x328DC2C);
+DataPointer(NJS_ACTION, action_a_a0103_amy, 0x3C85428);
+DataPointer(NJS_ACTION, action_fp_0103_fpack, 0x328F614);
+DataPointer(NJS_ACTION, action_a_a0104_amy, 0x3C853E8);
+DataPointer(NJS_ACTION, action_fp_0104_fpack, 0x328FC7C);
+DataPointer(NJS_ACTION, action_a_a0099_amy, 0x3C85400);
+DataPointer(NJS_ACTION, action_s_s0076_sonic, 0x3C853F0);
+DataPointer(EPATHTAG, epathtag_cube0060_1, 0x2BE4828);
+DataPointer(EPATHTAG, epathtag_cube0060ms1, 0x2BE4D68);
+DataPointer(EPATHTAG, epathtag_cube0060_2, 0x2BE4A30);
+DataPointer(NJS_ACTION, action_ev_s_msbody, 0x32D6344);
+DataPointer(NJS_TEXLIST, texlist_ev_s_msbody, 0x32D3F2C);
+DataPointer(NJS_TEXLIST, ev_effect_list2, 0x2C496B8);
+DataPointer(NJS_ACTION, action_a_a0109_amy, 0x3C853F8);
+DataPointer(NJS_ACTION, action_fp_0109_fpack, 0x3292F94);
+DataPointer(NJS_ACTION, action_a_a0105_amy, 0x3C85438);
+DataPointer(NJS_ACTION, action_fp_0105_fpack, 0x3290504);
+DataPointer(NJS_ACTION, action_a_a0106_amy, 0x3C853E0);
+DataPointer(NJS_ACTION, action_fp_0106_fpack, 0x3290B6C);
+DataPointer(NJS_ACTION, action_a_a0107_amy, 0x3C85410);
+DataPointer(NJS_ACTION, action_fp_0107_fpack, 0x3291C44);
+DataPointer(NJS_ACTION, action_a_a0108_amy, 0x3C85430);
+DataPointer(NJS_ACTION, action_fp_0108_fpack, 0x329262C);
+
+
 //EV0080
 DataPointer(NJS_ACTION, action_k_k0014_knuckles, 0x3C84F2C);
 DataPointer(NJS_ACTION, action_k_k0023_knuckles, 0x3C84F44);
@@ -928,6 +968,7 @@ DataArray(char**, msgTbl_ev0050, 0x2BE91D4, 5);
 DataArray(char**, msgTbl_ev0051, 0x2BE9140, 5);
 DataArray(char**, msgTbl_ev0054, 0x2BE6C9C, 5);
 DataArray(char**, msgTbl_ev0056, 0x2BE4F10, 5);
+DataArray(char**, msgTbl_ev0060, 0x2BE4E60, 5);
 DataArray(char**, msgTbl_ev0080, 0x2BE0F4C, 5);
 DataArray(char**, msgTbl_ev0082, 0x2BE0D7C, 5);
 DataArray(char**, msgTbl_ev0084, 0x2BE01C8, 5);

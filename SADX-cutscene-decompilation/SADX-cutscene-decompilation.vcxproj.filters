@@ -25,6 +25,9 @@
     <Filter Include="Source Files\E102">
       <UniqueIdentifier>{2be32c2f-8655-4ca1-8b90-451e8b3cb47f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Amy">
+      <UniqueIdentifier>{4074db8c-08a7-4646-8271-a2cd0a178fcf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mod.cpp">
@@ -464,6 +467,12 @@
     </ClCompile>
     <ClCompile Include="E102\ev016F_e_jetbooster.cpp">
       <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev0058_a_preintro.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="E102\ev0060_a_intro1.cpp">
+      <Filter>Source Files\Amy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

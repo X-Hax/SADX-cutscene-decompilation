@@ -135,6 +135,7 @@ FunctionPointer(task*, CIchimaie2_Create, (NJS_TEXLIST* texlistp, char mode), 0x
 FunctionPointer(void, CIchimaie2_SetDstAlpha, (task* _this, float alpha, int frame), 0x6EF6F0);
 FunctionPointer(task*, CIchimaie2_SetPriority, (task* _this, float pri), 0x6EF710);
 FunctionPointer(task*, CIchimaie2_SetTextureId, (task* _this, int id), 0x6EF720);
+FunctionPointer(void, CIchimaie2_SetBlendingMode, (task* _this, int index, char mode), 0x6EF730);
 VoidFunc(deleteScanLine, 0x6EF750);
 FunctionPointer(void, createScanLine, (unsigned __int8 a, unsigned __int8 r, unsigned __int8 g, unsigned __int8 b, int res), 0x6EF940);
 FunctionPointer(task*, CSkyWalk_create2, (task* obj, float height), 0x6EF9C0);
@@ -225,6 +226,7 @@ FunctionPointer(void, setamyparam, (float spd), 0x6F6B40);
 FunctionPointer(task*, mghand_init, (float x, float y, float z, int ax, int ay, int az), 0x6F6F30);
 FunctionPointer(void, chgMghandMod, (task* obj, char a2), 0x6F6FC0);
 FunctionPointer(void, mghandsetspd, (task* obj, int angspd_x, int angspd_y), 0x6F6FE0);
+VoidFunc(fadein_delete, 0x6F7000);
 VoidFunc(DeleteEggmoble1, 0x6F7020);
 FunctionPointer(void, MoveEggmoble1, (float tar_x, float tar_y, float tar_z), 0x6F7040);
 FunctionPointer(void, SetEggmoble1, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z), 0x6F7090);

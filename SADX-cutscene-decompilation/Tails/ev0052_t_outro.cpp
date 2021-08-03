@@ -17,8 +17,8 @@ void ev0052_t_outro(int state)
 		EV_SetPos(player, 885.29999f, 126.24f, 1097.55f);
 		EV_SetAng(player, 0, 5420, 0);
 		EV_InitPlayer(0);
-		playertwp[0]->Object.SByte[3] |= 4u; //Change Tails' tails.
-		playertwp[0]->Object.SByte[3] |= 0x20u;
+		player->twp->timer.b[3] |= 4u; //Change Tails' tails.
+		player->twp->timer.b[3] |= 0x20u;
 		EV_Wait(1);
 		COverlaySetSpeed(BLACK, -0.033333335f);
 		EV_SetMotion(player, MILES_OBJECTS[1], motion_m_m9014_miles, &MILES_TEXLIST, 0.89999998f, 1, 0);
@@ -189,9 +189,9 @@ void ev0052_t_outro(int state)
 		EV_Wait(58);
 		WHITE = COverlayCreate(0.02f, 0.1f, 1.0f, 1.0f, 1.0f);
 		EV_Wait(50);
-		playertwp[0]->Object.SByte[3] &= ~4u; //Reset Tails' tails.
-		playertwp[0]->Object.SByte[3] &= ~0x10u;
-		playertwp[0]->Object.SByte[3] &= ~0x20u;
+		player->twp->timer.b[3] &= ~4u; //Reset Tails' tails.
+		player->twp->timer.b[3] &= ~0x10u;
+		player->twp->timer.b[3] &= ~0x20u;
 		EV_ClrFace(player);
 		EV_ClrPath(player);
 		EV_ClrPath(sonic);
@@ -246,9 +246,9 @@ void ev0052_t_outro(int state)
 		EV_ClrPath(sonic);
 		EV_SetPos(player, 1199.0f, 126.0f, 851.0f);
 		EV_InitPlayer(0);
-		playertwp[0]->Object.SByte[3] &= ~4u; //Reset Tails' tails.
-		playertwp[0]->Object.SByte[3] &= ~0x10u;
-		playertwp[0]->Object.SByte[3] &= ~0x20u;
+		player->twp->timer.b[3] &= ~4u; //Reset Tails' tails.
+		player->twp->timer.b[3] &= ~0x10u;
+		player->twp->timer.b[3] &= ~0x20u;
 		EV_ClrFace(player);
 		EV_RemovePlayer(2);
 		if(WHITE){

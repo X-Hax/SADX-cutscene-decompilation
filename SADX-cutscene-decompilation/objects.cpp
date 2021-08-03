@@ -15,6 +15,7 @@ task* BLACKOUT;					//Fadein
 task* bomb1;					//Explosion effect
 task* bomb2;					//Explosion effect
 task* BOY;						//NPC
+task* boy1;						//NPC
 task* BOY2;						//NPC
 task* BOYS_A;					//NPC
 task* BROKEN_EGG;				//Eggman dust effect
@@ -71,6 +72,7 @@ task* FAT;						//NPC
 task* FAT_A;					//NPC
 task* FAT_B;					//NPC
 task* FAT2;						//NPC
+task* fatman_b;					//NPC
 task* FLASH;					//Flashing light effect
 task* Frog;						//Froggy
 task* Frog1;					//Froggy
@@ -79,6 +81,7 @@ task* Frog3;					//E-104's frog
 task* Frog4;					//E-105's frog
 task* G_EME;					//Chaos Emerald: Green
 task* GIRL;						//NPC
+task* girl1;					//NPC
 task* GIRL2;					//NPC
 task* HAND_1;					//Eggman's claw
 task* HAND_2;					//Eggman's claw
@@ -104,6 +107,7 @@ task* LADY2;					//NPC
 task* LIGHT_L;					//Light for Eggman's fanfare
 task* LIGHT_R;					//Light for Eggman's fanfare
 task* Mhand;					//Eggman's claw
+task* m_sonic;					//Metal Sonic
 task* NY_SKY;					//Fake skybox
 //task* obj_amy;				//Amy after grabbing onto Tails.
 task* obj_decoy;				//Target point for cameras and heads.
@@ -111,12 +115,17 @@ task* obj_ver1_wing;			//Amy's bird
 task* obj_ver2_wing;			//Amy's bird
 task* obj_wing;					//Amy's bird
 task* obj_wing1;				//Amy's bird
+task* ol1;						//NPC
+task* oy1;						//NPC
+task* oy2;						//NPC
 task* OYAJI_A;					//NPC
 task* OYAJI_B;					//NPC
 task* OYAJI_C;					//NPC
 task* OYAJI;					//NPC
 task* OYAJI2;					//NPC
 task* p_Chaos0Task;				//Event Chaos
+task* p_fpack1;					//Amy's bag
+task* p_fpack2;					//Amy's bag
 task* P_EME;					//Chaos Emerald: Purple
 task* PAPA;						//Pachacamac
 task* PLANE;					//Tornado 1
@@ -137,6 +146,7 @@ task* R_EME;					//Chaos Emerald: Red
 task* RED;						//Chaos Emerald: Red
 task* S_EME;					//Chaos Emerald: White
 task* SEPIA;					//Sepia overlay in Tails' flashback
+task* shadow;					//Dark egg carrier shadow overlay
 task* SIRO;						//Fade to white
 task* SMOKE_01;					//Smoke effect
 task* SMOKE_02;					//Smoke Effect
@@ -150,10 +160,14 @@ task* suki1_obj;				//Borders when Eggman spots Tails' purple emerald.
 task* suki2_obj;				//Borders when Eggman spots Tails' purple emerald.
 task* suki1_point;				//Borders when Eggman spots Tails' purple emerald.
 task* suki2_point;				//Borders when Eggman spots Tails' purple emerald.
+task* task_frame;				//Flashback image
 task* task_icm;					//Flashback image
-task* task_ichimaie;					//Flashback image
+task* task_ichimaie;			//Flashback image
+task* task_recollect0;			//Amy flashback
+task* task_recollect1;			//Amy flashback
 task* task_skywalk;				//Sky floor
 task* task_skywalk2;			//Sky floor
+task* task_skywalk_3;			//Sky floor
 task* W_EME;					//Chaos Emerald: White
 task* W_OUT;					//White fadein
 task* WING;						//Amy's bird

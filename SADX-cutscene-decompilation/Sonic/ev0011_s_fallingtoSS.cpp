@@ -56,7 +56,7 @@ void ev0011_s_fallingtoSS(int state)
 		EV_Wait(1);
 		EV_SetMode(GIRL, 0);
 		EV_ClrAction(GIRL);
-		EV_SetMotion(GIRL, MODEL_SS_PEOPLE_OBJECTS[8], MODEL_SS_PEOPLE_MOTION[12],
+		EV_SetMotion(GIRL, MODEL_SS_PEOPLE_OBJECTS[8], MODEL_SS_PEOPLE_MOTIONS[12],
 			ADV00_TEXLISTS[6], 0.5f, 1, 0);
 		EV_SetPos(player, -673.09003f, 75.0f, 2134.0601f);
 		EV_SetAng(player, 0, 21089, 0);

@@ -3,7 +3,6 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
-
 void ev00BD_e_e101factory(int state)
 {
 	switch (state) {

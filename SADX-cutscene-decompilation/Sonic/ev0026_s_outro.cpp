@@ -33,8 +33,8 @@ void ev0026_s_outro(int state)
 		EV_CameraAng(0, 50, 1424, 2784, 65280);
 		EV_CameraPos(0, 50, 340.10001f, 207.0f, 703.0f);
 		EV_Wait(50);
-		playertwp[2]->Object.SByte[3] |= 4u;
-		playertwp[2]->Object.SByte[3] |= 0x20u;
+		tails->twp->timer.b[3] |= 4u;
+		tails->twp->timer.b[3] |= 0x20u;
 		SMOKE->twp->ang.y = 1;
 		SMOKE->twp->ang.x = 1;
 		seteggmobleparam(5.0f, 592);
@@ -202,9 +202,9 @@ void ev0026_s_outro(int state)
 		EV_ClrPath(player);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[6], &SONIC_TEXLIST, 0.69999999f, 1, 0);
-		playertwp[2]->Object.SByte[3] &= ~4u;
-		playertwp[2]->Object.SByte[3] &= ~0x10u;
-		playertwp[2]->Object.SByte[3] &= ~0x20u;
+		tails->twp->timer.b[3] &= ~4u;
+		tails->twp->timer.b[3] &= ~0x10u;
+		tails->twp->timer.b[3] &= ~0x20u;
 		CEcCloud_Start(2.5f, 6);
 		EV_ClrFace(player);
 		EV_ClrFace(tails);
@@ -254,9 +254,9 @@ void ev0026_s_outro(int state)
 		EV_Wait(30);
 		break;
 	case 2:
-		playertwp[2]->Object.SByte[3] &= ~4u;
-		playertwp[2]->Object.SByte[3] &= ~0x10u;
-		playertwp[2]->Object.SByte[3] &= ~0x20u;
+		tails->twp->timer.b[3] &= ~4u;
+		tails->twp->timer.b[3] &= ~0x10u;
+		tails->twp->timer.b[3] &= ~0x20u;
 		EV_CameraOff();
 		stopObjectAll();
 		EV_ClrPath(player);

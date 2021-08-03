@@ -341,7 +341,7 @@ void ev004C_t_escapecarrier(int state)
 		EV_SetMotion(player, MILES_OBJECTS[1], ev_motion_m_m0002_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(amy, &action_a_a0014_amy, &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(6);
-		playertwp[0]->Object.SByte[3] |= 4u; //Change Tails' tails.
+		player->twp->timer.b[3] |= 4u; //Change Tails' tails.
 		CreateTaskGattaiEV004C();
 		EV_CameraTargetFree();
 		EV_Wait(13);
@@ -382,8 +382,8 @@ void ev004C_t_escapecarrier(int state)
 	case 2:
 		EV_CameraOff();
 		EV_PadOn();
-		playertwp[0]->Object.SByte[3] &= ~4u; //Reset Tails' tails
-		playertwp[0]->Object.SByte[3] &= ~0x10u;
+		player->twp->timer.b[3] &= ~4u; //Reset Tails' tails
+		player->twp->timer.b[3] &= ~0x10u;
 		FreeTaskGattaiEV004C();
 		throughplayer_off(player);
 		throughplayer_off(amy);
