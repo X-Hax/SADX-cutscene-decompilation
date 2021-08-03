@@ -468,10 +468,13 @@
     <ClCompile Include="E102\ev016F_e_jetbooster.cpp">
       <Filter>Source Files\E102</Filter>
     </ClCompile>
-    <ClCompile Include="E102\ev0058_a_preintro.cpp">
+    <ClCompile Include="Amy\ev0058_a_preintro.cpp">
       <Filter>Source Files\Amy</Filter>
     </ClCompile>
-    <ClCompile Include="E102\ev0060_a_intro1.cpp">
+    <ClCompile Include="Amy\ev0060_a_intro1.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0061_a_intro2.cpp">
       <Filter>Source Files\Amy</Filter>
     </ClCompile>
   </ItemGroup>

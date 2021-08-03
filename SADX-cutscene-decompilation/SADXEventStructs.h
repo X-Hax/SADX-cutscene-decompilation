@@ -19,3 +19,20 @@ struct CutsceneData_
 	void(__cdecl* Function)(int a1);
 	PVMEntry* Textures;
 };
+
+struct cpathtbl
+{
+	__int16 roty;
+	__int16 rotx;
+	__int16 rotz;
+	float camx;
+	float camy;
+	float camz;
+};
+
+struct cpathtag
+{
+	unsigned __int8 type;
+	float points;
+	cpathtbl* tblhead;
+};

@@ -161,7 +161,7 @@ void ev001B_s_aftergamma(int state)
 			-0x4000 - player->twp->ang.y,
 			player->twp->ang.z);
 		EV_WaitMove(player);
-		PlaySound(18, 0, 0, 0);
+		dsPlay_oneshot(18, 0, 0, 0);
 		EV_SetAction(player, SONIC_ACTIONS[7], &SONIC_TEXLIST, 0.80000001f, 0, 0);
 		EV_MovePoint(player,
 			player->twp->pos.x,

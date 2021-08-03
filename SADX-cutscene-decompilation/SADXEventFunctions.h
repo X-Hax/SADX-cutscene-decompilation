@@ -4,6 +4,7 @@
 
 //Leaked Symbols
 FunctionPointer(void, SetBankDir, (signed int soundlist), 0x4238E0);
+FunctionPointer(void, dsPlay_oneshot, (int tone, int id, int pri, int volofs), 0x423D70);
 FunctionPointer(void, dsPlay_timer, (int tone, int id, int pri, int volofs, int timer), 0x423F50);
 FunctionPointer(void, dsPlay_timer_v, (int tone, int id, int pri, int volofs, int timer, float x, float y, float z), 0x424000);
 FunctionPointer(void, dsStop_num, (int tone), 0x424210);
@@ -54,6 +55,7 @@ FunctionPointer(void, EV_CameraChase, (task* tp), 0x430F70);
 FunctionPointer(void, EV_CameraChaseRM, (int mode, int time, task* tp, float height, int x0, int y0, int z0, float d0, int x1, int y1, int z1, float d1)
 	, 0x430FC0);
 FunctionPointer(void, EV_CameraPerspective, (int mode, int time, int ang), 0x431060);
+FunctionPointer(void, EV_CameraPath, (cpathtag* path, float speed), 0x4310A0);
 FunctionPointer(void, EV_SetFace, (task* tp, const char* str), 0x4310D0);
 FunctionPointer(void, EV_ClrFace, (task* tp), 0x4310F0);
 VoidFunc(EV_SerifStop, 0x431110);

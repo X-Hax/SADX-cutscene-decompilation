@@ -214,7 +214,7 @@ void ev0087_k_chaos2(int state)
 		EV_Wait(140);
 		EV_ClrFace(player);
 		dsStop_id(2);
-		PlaySound(1333, 0, 0, 0);
+		dsPlay_oneshot(1333, 0, 0, 0);
 		EV_ClrFace(player);
 		if (VoiceLanguage == Languages_Japanese)
 		{

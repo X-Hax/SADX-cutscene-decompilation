@@ -140,8 +140,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="E102\ev0058_a_preintro.cpp" />
-    <ClCompile Include="E102\ev0060_a_intro1.cpp" />
+    <ClCompile Include="Amy\ev0058_a_preintro.cpp" />
+    <ClCompile Include="Amy\ev0060_a_intro1.cpp" />
+    <ClCompile Include="Amy\ev0061_a_intro2.cpp" />
     <ClCompile Include="E102\ev00B0_e_intro.cpp" />
     <ClCompile Include="E102\ev00B1_e_finalegg.cpp" />
     <ClCompile Include="E102\ev00B2_e_afterfinalegg.cpp" />

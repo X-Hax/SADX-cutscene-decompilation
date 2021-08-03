@@ -72,6 +72,7 @@ extern "C"
 		CutsceneDataList[0x0056]->Function = ev0056_t_casinowake;
 		CutsceneDataList[0x0058]->Function = ev0058_a_preintro;
 		CutsceneDataList[0x0060]->Function = ev0060_a_intro1;
+		CutsceneDataList[0x0061]->Function = ev0061_a_intro2;
 		CutsceneDataList[0x0080]->Function = ev0080_k_intro;
 		CutsceneDataList[0x0082]->Function = ev0082_k_beginhunt;
 		CutsceneDataList[0x0083]->Function = ev0083_k_casinopolis;
