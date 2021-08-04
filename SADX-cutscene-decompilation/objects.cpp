@@ -66,8 +66,8 @@ task* EC_KAGE;					//Egg Carrier's shadow in kidnap cutscene
 task* egg_amy;					//ZERO holding Amy
 task* emerald;					//Chaos Emerald: White
 task* ev_chaos0;				//Event Chaos
-int eq_saved;							//Check upgrades are saved in Tails' flashback
-short equipment;						//Stored upgrade for Tails' flashback
+int eq_saved;					//Check upgrades are saved in Tails' flashback
+short equipment;				//Stored upgrade for Tails' flashback
 task* FAT;						//NPC
 task* FAT_A;					//NPC
 task* FAT_B;					//NPC
@@ -97,6 +97,7 @@ task* IWA;						//Egg Viper Debris
 task* IWA2;						//Egg Viper Debris
 task* IWA3;						//Egg Viper Debris
 task* KOTORI;					//Amy's bird
+task* KOTORI2;					//Amy's bird
 task* KOUKYU;					//Tikal ball
 task* KURAYAMI;					//Fadeout
 task* LADY_A;					//NPC
@@ -115,6 +116,7 @@ task* obj_ver1_wing;			//Amy's bird
 task* obj_ver2_wing;			//Amy's bird
 task* obj_wing;					//Amy's bird
 task* obj_wing1;				//Amy's bird
+task* obj_wing2;				//Amy's bird
 task* ol1;						//NPC
 task* oy1;						//NPC
 task* oy2;						//NPC
@@ -146,6 +148,8 @@ task* R_EME;					//Chaos Emerald: Red
 task* RED;						//Chaos Emerald: Red
 task* S_EME;					//Chaos Emerald: White
 task* SEPIA;					//Sepia overlay in Tails' flashback
+char seqstore;					//
+char seqsaved;					//
 task* shadow;					//Dark egg carrier shadow overlay
 task* SIRO;						//Fade to white
 task* SMOKE_01;					//Smoke effect

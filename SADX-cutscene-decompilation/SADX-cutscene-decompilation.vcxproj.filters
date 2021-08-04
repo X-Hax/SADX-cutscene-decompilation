@@ -477,6 +477,15 @@
     <ClCompile Include="Amy\ev0061_a_intro2.cpp">
       <Filter>Source Files\Amy</Filter>
     </ClCompile>
+    <ClCompile Include="Amy\ev0062_a_meetsonic.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0063_a_twinklepark.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0064_a_kidnapped.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

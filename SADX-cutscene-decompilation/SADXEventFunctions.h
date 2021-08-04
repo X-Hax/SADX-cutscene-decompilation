@@ -81,6 +81,7 @@ FunctionPointer(void, EventSe_Volume, (int id, int volume, int frame), 0x64FD80)
 FunctionPointer(void, EventSe_Pan, (int id, int pan, int frame), 0x64FDB0);
 FunctionPointer(void, EventSe_Pitch, (int id, int pitch, int frame), 0x64FDE0);
 FunctionPointer(void, EventSe_Oneshot, (int se, int volume, int pan, int pitch), 0x64FE10);
+FunctionPointer(void, shadowOn, (char num, float pos_x, float pos_y, float pos_z, signed int bigInt, signed int smallInt, float scaleMax), 0x6A6680);
 FunctionPointer(void, stopObject, (task* tp), 0x6EBAB0);
 VoidFunc(stopObjectAll, 0x6EBB00);
 FunctionPointer(void, moveObject, (task* obj, float st_x, float st_y, float st_z, float end_x, float end_y, float end_z, int frame), 0x6EC2B0);
@@ -94,6 +95,7 @@ FunctionPointer(void, moveObjectAngle2, (task* obj, float st_x, float st_y, floa
 	float en_x, float en_y, float en_z, int st_ang_x, int st_ang_y, int st_ang_z,
 	int en_ang_x, int en_ang_y, int en_ang_z, signed int frame), 0x6EC580);
 FunctionPointer(void, moveObjectOn, (task* tp, float x, float y, float z, int frame, task* dest_obj), 0x6EC6D0);
+FunctionPointer(void, moveObjectOnAngle, (task* obj, float far_x, float far_y, float far_z, int ang_x, int ang_y, int ang_z, int frame, task* dest_obj), 0x6EC790);
 FunctionPointer(void, moveObjectRightHand, (task* obj, char player_no, float far_x, float far_y, float far_z, int frame), 0x6ECA20);
 FunctionPointer(void, addmotModel, (int model, NJS_ACTION* action, int mot_id), 0x6ECAC0);
 FunctionPointer(void, playModel, (int model_id, int mot_id, float mot_spd, int loop_num), 0x6ECAE0);
@@ -307,6 +309,7 @@ VoidFunc(FreeTaskGattaiEV004C, 0x6B5EA0);
 VoidFunc(create_task_gattai_EV004D, 0x6B3250);
 VoidFunc(kill_task_gattai_EV004D, 0x6B32B0);
 FunctionPointer(void, MoveChaosPuddle_EV0088, (float pos_x, float pos_y, float pos_z, int frame), 0x691140);
+FunctionPointer(void, destroy_p_shadowTask_EV0064, (char id), 0x6A6520);
 
 //Character Functions
 FunctionPointer(void, MilesTalesPrower, (task*), 0x461700);

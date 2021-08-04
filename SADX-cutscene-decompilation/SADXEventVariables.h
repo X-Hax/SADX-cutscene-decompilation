@@ -102,6 +102,7 @@ extern task* IWA;
 extern task* IWA2;
 extern task* IWA3;
 extern task* KOTORI;
+extern task* KOTORI2;
 extern task* KOUKYU;
 extern task* KURAYAMI;
 extern task* LADY_A;
@@ -120,6 +121,7 @@ extern task* obj_ver1_wing;
 extern task* obj_ver2_wing;
 extern task* obj_wing;
 extern task* obj_wing1;
+extern task* obj_wing2;
 extern task* ol1;
 extern task* oy1;
 extern task* oy2;
@@ -151,6 +153,8 @@ extern task* R_EME;
 extern task* RED;
 extern task* S_EME;
 extern task* SEPIA;
+extern char seqstore;
+extern char seqsaved;
 extern task* shadow;
 extern task* SIRO;
 extern task* SMOKE_01;
@@ -670,6 +674,21 @@ DataPointer(NJS_ACTION, action_w_w0131_wing, 0x322F27C);
 DataPointer(NJS_ACTION, action_w_w0121ver3_wing, 0x322781C);
 DataPointer(NJS_TEXLIST, texlist_ver3_wing, 0x321FB60);
 
+//EV0062
+DataPointer(NJS_ACTION, action_w_w0815_wing, 0x2E6A52C);
+DataPointer(NJS_ACTION, action_a_a0815_amy, 0x3C84BE4);
+DataPointer(PADREC_DATA_TAG, EV0062AT, 0x867300);
+
+//EV0063
+DataPointer(PADREC_DATA_TAG, RUN_ELV, 0x866930);
+
+//EV0064
+DataPointer(NJS_ACTION, action_a_a0133_amy, 0x3C853A8);
+DataPointer(NJS_ACTION, action_a_a0134_amy, 0x3C853A0);
+DataPointer(NJS_ACTION, action_a_a0135_amy, 0x3C85390);
+DataPointer(NJS_ACTION, action_a_a0136_amy, 0x3C853B0);
+DataPointer(NJS_ACTION, action_a_a0137_amy, 0x3C85398);
+
 //EV0080
 DataPointer(NJS_ACTION, action_k_k0014_knuckles, 0x3C84F2C);
 DataPointer(NJS_ACTION, action_k_k0023_knuckles, 0x3C84F44);
@@ -990,6 +1009,9 @@ DataArray(char**, msgTbl_ev0054, 0x2BE6C9C, 5);
 DataArray(char**, msgTbl_ev0056, 0x2BE4F10, 5);
 DataArray(char**, msgTbl_ev0060, 0x2BE4E60, 5);
 DataArray(char**, msgTbl_ev0061, 0x2BE4528, 5);
+DataArray(char**, msgTbl_ev0062, 0x2BE3B94, 5);
+DataArray(char**, msgTbl_ev0063, 0x2BE3A70, 5);
+DataArray(char**, msgTbl_ev0064, 0x2BE3960, 5);
 DataArray(char**, msgTbl_ev0080, 0x2BE0F4C, 5);
 DataArray(char**, msgTbl_ev0082, 0x2BE0D7C, 5);
 DataArray(char**, msgTbl_ev0084, 0x2BE01C8, 5);
