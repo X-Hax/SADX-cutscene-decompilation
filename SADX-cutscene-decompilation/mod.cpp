@@ -76,6 +76,10 @@ extern "C"
 		CutsceneDataList[0x0062]->Function = ev0062_a_meetsonic;
 		CutsceneDataList[0x0063]->Function = ev0063_a_twinklepark;
 		CutsceneDataList[0x0064]->Function = ev0064_a_kidnapped;
+		CutsceneDataList[0x0065]->Function = ev0065_a_prison;
+		CutsceneDataList[0x0066]->Function = ev0066_a_hotshelter;
+		CutsceneDataList[0x0067]->Function = ev0067_a_past;
+		CutsceneDataList[0x0068]->Function = ev0068_a_tikal;
 		CutsceneDataList[0x0080]->Function = ev0080_k_intro;
 		CutsceneDataList[0x0082]->Function = ev0082_k_beginhunt;
 		CutsceneDataList[0x0083]->Function = ev0083_k_casinopolis;

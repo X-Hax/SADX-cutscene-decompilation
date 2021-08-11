@@ -101,6 +101,7 @@ FunctionPointer(void, addmotModel, (int model, NJS_ACTION* action, int mot_id), 
 FunctionPointer(void, playModel, (int model_id, int mot_id, float mot_spd, int loop_num), 0x6ECAE0);
 FunctionPointer(task*, getobjModel, (int model_id), 0x6ECB40);
 FunctionPointer(void, deleteModel, (int model_id), 0x6ECB50);
+FunctionPointer(void, createModel, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z, float scl_x, float scl_y, float scl_z, obj* model, NJS_TEXLIST* texlist, int model_id), 0x6ECE70);
 FunctionPointer(void, createModelEC, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y,
 	int ang_z, float scl_x, float scl_y, float scl_z, NJS_OBJECT* model, NJS_TEXLIST* texlist,
 	int model_id), 0x6ECF20);
@@ -123,6 +124,7 @@ FunctionPointer(void, MoveChaos0, (float pos_x, float pos_y, float pos_z, signed
 FunctionPointer(task*, GetChaos0, (), 0x6EDCD0);
 VoidFunc(ToWaterChaos0, 0x6EDD00);
 VoidFunc(ToHumanChaos0, 0x6EDD20);
+FunctionPointer(void, SetAngleChaos0, (int ang_x, int ang_y, int ang_z), 0x6EDD60);
 VoidFunc(SetWaterChaos0, 0x6EDD80);
 FunctionPointer(void, ChangeMotspd, (float mod_spd), 0x6EDCE0);
 FunctionPointer(void, SetPositionChaos0, (float pos_x, float pos_y, float pos_z), 0x6EDD40);

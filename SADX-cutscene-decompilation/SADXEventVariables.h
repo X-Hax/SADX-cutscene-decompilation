@@ -689,6 +689,22 @@ DataPointer(NJS_ACTION, action_a_a0135_amy, 0x3C85390);
 DataPointer(NJS_ACTION, action_a_a0136_amy, 0x3C853B0);
 DataPointer(NJS_ACTION, action_a_a0137_amy, 0x3C85398);
 
+//EV0065
+DataPointer(NJS_ACTION, action_a_a0114_amy, 0x3C850A4);
+
+//EV0066
+DataPointer(NJS_OBJECT, object_baloon_esc_baloon_esc_baloon, 0x8BE194);
+DataPointer(EPATHTAG, epathtag_ev0066_amy, 0x2BE3678);
+
+//EV0068
+DataPointer(NJS_ACTION, action_al_e0001_al_model, 0x3C84C68);
+DataPointer(NJS_ACTION, action_j_j0002_tikal, 0x2ECD67C);
+DataPointer(NJS_ACTION, action_al_walk_al_model, 0x3C84C58);
+DataPointer(NJS_ACTION, action_j_j0004_tikal, 0x2ED7EA4);
+DataPointer(NJS_ACTION, action_j_j0005_tikal, 0x2EDBE6C);
+DataPointer(NJS_ACTION, action_al_e0008_al_model, 0x3C84C50);
+DataPointer(NJS_ACTION, action_j_j0006_tikal, 0x2EE08F4);
+
 //EV0080
 DataPointer(NJS_ACTION, action_k_k0014_knuckles, 0x3C84F2C);
 DataPointer(NJS_ACTION, action_k_k0023_knuckles, 0x3C84F44);
@@ -1012,6 +1028,9 @@ DataArray(char**, msgTbl_ev0061, 0x2BE4528, 5);
 DataArray(char**, msgTbl_ev0062, 0x2BE3B94, 5);
 DataArray(char**, msgTbl_ev0063, 0x2BE3A70, 5);
 DataArray(char**, msgTbl_ev0064, 0x2BE3960, 5);
+DataArray(char**, msgTbl_ev0065, 0x2BE38DC, 5);
+DataArray(char**, msgTbl_ev0067, 0x2BE363C, 5);
+DataArray(char**, msgTbl_ev0068, 0x2BE35C0, 5);
 DataArray(char**, msgTbl_ev0080, 0x2BE0F4C, 5);
 DataArray(char**, msgTbl_ev0082, 0x2BE0D7C, 5);
 DataArray(char**, msgTbl_ev0084, 0x2BE01C8, 5);

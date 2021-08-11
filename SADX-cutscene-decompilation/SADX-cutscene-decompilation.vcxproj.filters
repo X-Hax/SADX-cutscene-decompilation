@@ -486,6 +486,18 @@
     <ClCompile Include="Amy\ev0064_a_kidnapped.cpp">
       <Filter>Source Files\Amy</Filter>
     </ClCompile>
+    <ClCompile Include="Amy\ev0065_a_prison.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0066_a_hotshelter.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0067_a_past.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0068_a_tikal.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
