@@ -150,6 +150,13 @@
     <ClCompile Include="Amy\ev0066_a_hotshelter.cpp" />
     <ClCompile Include="Amy\ev0067_a_past.cpp" />
     <ClCompile Include="Amy\ev0068_a_tikal.cpp" />
+    <ClCompile Include="Amy\ev0069_a_eggmantakesbirdie.cpp" />
+    <ClCompile Include="Amy\ev006A_a_escapecarrier.cpp" />
+    <ClCompile Include="Amy\ev006B_a_fmvplaceholder.cpp" />
+    <ClCompile Include="Amy\ev006C_a_exitpast.cpp" />
+    <ClCompile Include="Amy\ev006D_a_savebirdsbros.cpp" />
+    <ClCompile Include="Amy\ev006E_a_junglebase.cpp" />
+    <ClCompile Include="Amy\ev006F_a_finalegg.cpp" />
     <ClCompile Include="E102\ev00B0_e_intro.cpp" />
     <ClCompile Include="E102\ev00B1_e_finalegg.cpp" />
     <ClCompile Include="E102\ev00B2_e_afterfinalegg.cpp" />

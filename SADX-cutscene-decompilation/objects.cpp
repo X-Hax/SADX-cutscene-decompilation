@@ -8,6 +8,7 @@ task* BLACK;					//Black Tint+Fadeout
 task* BLACK1;					//Black Tint+Fadeout
 task* BLACK2;					//Black Tint+Fadeout
 task* BLACK3;					//Black Tint+Fadeout
+task* bird;						//Flicky
 task* bird1;					//Flicky
 task* bird2;					//Flicky
 task* bird3;					//Flicky
@@ -108,6 +109,7 @@ task* LADY2;					//NPC
 task* LIGHT_L;					//Light for Eggman's fanfare
 task* LIGHT_R;					//Light for Eggman's fanfare
 task* Mhand;					//Eggman's claw
+task* Mhand2;					//Eggman's claw
 task* m_sonic;					//Metal Sonic
 task* NY_SKY;					//Fake skybox
 //task* obj_amy;				//Amy after grabbing onto Tails.

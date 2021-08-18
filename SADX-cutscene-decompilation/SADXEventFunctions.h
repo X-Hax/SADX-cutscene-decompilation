@@ -99,6 +99,7 @@ FunctionPointer(void, moveObjectOnAngle, (task* obj, float far_x, float far_y, f
 FunctionPointer(void, moveObjectRightHand, (task* obj, char player_no, float far_x, float far_y, float far_z, int frame), 0x6ECA20);
 FunctionPointer(void, addmotModel, (int model, NJS_ACTION* action, int mot_id), 0x6ECAC0);
 FunctionPointer(void, playModel, (int model_id, int mot_id, float mot_spd, int loop_num), 0x6ECAE0);
+FunctionPointer(void, stopModel, (int model_id), 0x6ECB20);
 FunctionPointer(task*, getobjModel, (int model_id), 0x6ECB40);
 FunctionPointer(void, deleteModel, (int model_id), 0x6ECB50);
 FunctionPointer(void, createModel, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z, float scl_x, float scl_y, float scl_z, obj* model, NJS_TEXLIST* texlist, int model_id), 0x6ECE70);
@@ -284,6 +285,10 @@ VoidFunc(deleteChaos0_EV0088, 0x6910F0);
 //Stuff that doesn't have an official name because it was part of the main event function in the 360 version:
 VoidFunc(create_task_gattai_EV00C2, 0x674420);
 VoidFunc(delete_task_gattai_EV00C2, 0x674480);
+VoidFunc(create_task_gattai_EV006A, 0x69D3B0);
+VoidFunc(delete_task_gattai_EV006A, 0x69D410);
+VoidFunc(create_task_gattai_EV006D, 0x69BBD0);
+VoidFunc(delete_task_gattai_EV006D, 0x69BC20);
 FunctionPointer(void, DelObjTask_EV00BB, (int id), 0x67B5B0);
 VoidFunc(destroy_task_light_EV009A, 0x686990);
 FunctionPointer(void, create_p_ShadowTask_EV009A, (float pos_x, float pos_y, float pos_z, int slangx, int length, float path_ypos), 0x686B10);

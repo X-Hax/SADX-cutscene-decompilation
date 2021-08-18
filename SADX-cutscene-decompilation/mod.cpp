@@ -80,6 +80,13 @@ extern "C"
 		CutsceneDataList[0x0066]->Function = ev0066_a_hotshelter;
 		CutsceneDataList[0x0067]->Function = ev0067_a_past;
 		CutsceneDataList[0x0068]->Function = ev0068_a_tikal;
+		CutsceneDataList[0x0069]->Function = ev0069_a_eggmantakesbirdie;
+		CutsceneDataList[0x006A]->Function = ev006A_a_escapecarrier;
+		CutsceneDataList[0x006B]->Function = ev006B_a_fmvplaceholder;
+		CutsceneDataList[0x006C]->Function = ev006C_a_exitpast;
+		CutsceneDataList[0x006D]->Function = ev006D_a_savebirdsbros;
+		CutsceneDataList[0x006E]->Function = ev006E_a_junglebase;
+		CutsceneDataList[0x006F]->Function = ev006F_a_finalegg;
 		CutsceneDataList[0x0080]->Function = ev0080_k_intro;
 		CutsceneDataList[0x0082]->Function = ev0082_k_beginhunt;
 		CutsceneDataList[0x0083]->Function = ev0083_k_casinopolis;

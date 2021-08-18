@@ -498,6 +498,27 @@
     <ClCompile Include="Amy\ev0068_a_tikal.cpp">
       <Filter>Source Files\Amy</Filter>
     </ClCompile>
+    <ClCompile Include="Amy\ev0069_a_eggmantakesbirdie.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev006A_a_escapecarrier.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev006B_a_fmvplaceholder.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev006C_a_exitpast.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev006D_a_savebirdsbros.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev006E_a_junglebase.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev006F_a_finalegg.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">
