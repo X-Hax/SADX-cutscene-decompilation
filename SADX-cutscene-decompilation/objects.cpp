@@ -119,6 +119,8 @@ task* obj_ver2_wing;			//Amy's bird
 task* obj_wing;					//Amy's bird
 task* obj_wing1;				//Amy's bird
 task* obj_wing2;				//Amy's bird
+task* obj_wing_p;				//bird
+task* obj_wing_t;				//bird
 task* ol1;						//NPC
 task* oy1;						//NPC
 task* oy2;						//NPC

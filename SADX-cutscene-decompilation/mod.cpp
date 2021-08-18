@@ -87,6 +87,10 @@ extern "C"
 		CutsceneDataList[0x006D]->Function = ev006D_a_savebirdsbros;
 		CutsceneDataList[0x006E]->Function = ev006E_a_junglebase;
 		CutsceneDataList[0x006F]->Function = ev006F_a_finalegg;
+		CutsceneDataList[0x0070]->Function = ev0070_a_returncarrier;
+		CutsceneDataList[0x0071]->Function = ev0071_a_amygetangry;
+		CutsceneDataList[0x0072]->Function = ev0072_a_outro;
+		CutsceneDataList[0x0075]->Function = ev0075_a_kidnapped2;
 		CutsceneDataList[0x0080]->Function = ev0080_k_intro;
 		CutsceneDataList[0x0082]->Function = ev0082_k_beginhunt;
 		CutsceneDataList[0x0083]->Function = ev0083_k_casinopolis;
@@ -152,6 +156,8 @@ extern "C"
 		CutsceneDataList[0x0120]->Function = ev0120_k_ectransform1;
 		CutsceneDataList[0x0121]->Function = ev0121_k_ectransform2;
 		CutsceneDataList[0x0122]->Function = ev0122_k_outsideskydeck;
+		CutsceneDataList[0x0130]->Function = ev0130_a_hedgehoghammer;
+		CutsceneDataList[0x0131]->Function = ev0131_a_hedgehoghammerwin;
 		CutsceneDataList[0x0140]->Function = ev0140_e_findjetbooster;
 		CutsceneDataList[0x0141]->Function = ev0141_e_hotshelter;
 		CutsceneDataList[0x0142]->Function = ev0142_e_betamk2;
@@ -162,8 +168,10 @@ extern "C"
 		CutsceneDataList[0x0169]->Function = ev0169_t_rhythmbadge;
 		CutsceneDataList[0x016A]->Function = ev016A_k_fightgloves;
 		CutsceneDataList[0x016B]->Function = ev016B_k_shovelclaw;
+		CutsceneDataList[0x016C]->Function = ev016C_a_longhammer;
+		CutsceneDataList[0x016D]->Function = ev016D_a_warriorfeather;
 		CutsceneDataList[0x016E]->Function = ev016E_e_laserblaster;
-		CutsceneDataList[0x016F]->Function = ev0016F_e_jetbooster;
+		CutsceneDataList[0x016F]->Function = ev016F_e_jetbooster;
 		CutsceneDataList[0x0176]->Function = ev0176_s_icestone;
 		CutsceneDataList[0x0177]->Function = ev0177_t_icestone;
 		CutsceneDataList[0x0179]->Function = ev0179_s_idcard;

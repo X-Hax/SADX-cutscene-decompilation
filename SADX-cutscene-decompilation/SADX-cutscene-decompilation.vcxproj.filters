@@ -519,6 +519,30 @@
     <ClCompile Include="Amy\ev006F_a_finalegg.cpp">
       <Filter>Source Files\Amy</Filter>
     </ClCompile>
+    <ClCompile Include="Amy\ev0070_a_returncarrier.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0071_a_amygetangry.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0072_a_outro.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0075_a_kidnapped2.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0130_a_hedgehoghammer.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev0131_a_hedgehoghammerwin.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev016C_a_longhammer.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
+    <ClCompile Include="Amy\ev016D_a_warriorfeather.cpp">
+      <Filter>Source Files\Amy</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

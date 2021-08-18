@@ -3,7 +3,7 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
-void ev0016F_e_jetbooster(int state)
+void ev016F_e_jetbooster(int state)
 {
     switch(state){
     case 1:
