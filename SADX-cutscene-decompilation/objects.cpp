@@ -76,6 +76,7 @@ task* FAT2;						//NPC
 task* fatman_b;					//NPC
 task* FLASH;					//Flashing light effect
 task* Frog;						//Froggy
+task* FROG;						//Froggy
 task* Frog1;					//Froggy
 task* Frog2;					//E-103's frog
 task* Frog3;					//E-104's frog

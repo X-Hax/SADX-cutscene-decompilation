@@ -165,6 +165,7 @@
     <ClCompile Include="Amy\ev0131_a_hedgehoghammerwin.cpp" />
     <ClCompile Include="Amy\ev016C_a_longhammer.cpp" />
     <ClCompile Include="Amy\ev016D_a_warriorfeather.cpp" />
+    <ClCompile Include="Big\ev00D0_b_intro.cpp" />
     <ClCompile Include="E102\ev00B0_e_intro.cpp" />
     <ClCompile Include="E102\ev00B1_e_finalegg.cpp" />
     <ClCompile Include="E102\ev00B2_e_afterfinalegg.cpp" />

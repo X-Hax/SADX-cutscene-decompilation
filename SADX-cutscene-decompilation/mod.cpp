@@ -141,6 +141,7 @@ extern "C"
 		CutsceneDataList[0x00C3]->Function = ev00C3_e_objectivechanged;
 		CutsceneDataList[0x00C5]->Function = ev00C5_e_rememberbros;
 		CutsceneDataList[0x00C7]->Function = ev00C7_e_outro;
+		CutsceneDataList[0x00D0]->Function = ev00D0_b_intro;
 		CutsceneDataList[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList[0x0102]->Function = ev0102_s_ecaftertransforming;

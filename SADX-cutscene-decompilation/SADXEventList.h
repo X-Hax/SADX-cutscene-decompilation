@@ -132,6 +132,7 @@ void ev00C2_e_escapecarrier(int state);
 void ev00C3_e_objectivechanged(int state);
 void ev00C5_e_rememberbros(int state);
 void ev00C7_e_outro(int state);
+void ev00D0_b_intro(int state);
 void ev0100_s_ecafterlanding(int state);
 void ev0101_s_ecfools(int state);
 void ev0102_s_ecaftertransforming(int state);

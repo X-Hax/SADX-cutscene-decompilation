@@ -27,7 +27,7 @@ void ev001C_s_beforechaos6(int state)
 		EV_SetMode(Frog, 0);
 		EV_SetPos(Frog, 24.459999f, 763.88501f, -516.44f);
 		EV_SetAng(Frog, 63488, -42544, 0);
-		EV_SetAction(Frog, &action_f_f0010_frog, &texlist_big_kaeru, 0.2f, 1, 0);
+		EV_SetAction(Frog, &action_f_f0010_frog, &texlist_shape_frog, 0.2f, 1, 0);
 		big = EV_GetPlayer(2);
 		EV_SetAction(big, &action_b_b0012_big, &BIG_TEXLIST, 0.69999999f, 1, 16);
 		chg_frogshape(2);
