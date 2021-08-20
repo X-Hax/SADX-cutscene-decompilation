@@ -142,6 +142,13 @@ extern "C"
 		CutsceneDataList[0x00C5]->Function = ev00C5_e_rememberbros;
 		CutsceneDataList[0x00C7]->Function = ev00C7_e_outro;
 		CutsceneDataList[0x00D0]->Function = ev00D0_b_intro;
+		CutsceneDataList[0x00D1]->Function = ev00D1_b_stationsquare;
+		CutsceneDataList[0x00D2]->Function = ev00D2_b_car;
+		CutsceneDataList[0x00D3]->Function = ev00D3_b_tails;
+		CutsceneDataList[0x00D4]->Function = ev00D4_b_emeraldcoast;
+		CutsceneDataList[0x00D8]->Function = ev00D8_b_eggcarrier;
+		CutsceneDataList[0x00D9]->Function = ev00D9_b_hotsheltertank;
+		CutsceneDataList[0x00DA]->Function = ev00DA_b_enterpast;
 		CutsceneDataList[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList[0x0102]->Function = ev0102_s_ecaftertransforming;

@@ -396,7 +396,7 @@ DataPointer(NJS_ACTION, action_b_b0013_big, 0x3C84A30);
 DataPointer(NJS_ACTION, action_b_b0012_big, 0x3C84A40);
 DataPointer(NJS_ACTION, action_gm_gm0004_eggmoble, 0x2CD393C);
 DataPointer(NJS_ACTION, action_gm_gm0003_eggmoble, 0x2DCDB14);
-DataPointer(NJS_ACTION, action_f_f0010_frog, 0x301684C);
+DataPointer(NJS_ACTION, _action_f_f0010_frog, 0x301684C);
 DataPointer(NJS_ACTION, action_s_s0067_sonic, 0x3C84A38);
 DataPointer(NJS_TEXLIST, texlist_shape_frog, 0x2FF2960);
 
@@ -1014,6 +1014,27 @@ DataPointer(NJS_ACTION, action_f_f0009_frog, 0x2EA5244);
 DataPointer(NJS_ACTION, action_b_b0029_big, 0x3C84C04);
 DataPointer(NJS_ACTION, action_b_b0027_big, 0x3C84C2C);
 
+//EV00D1
+DataPointer(PADREC_DATA_TAG, E00D1B, 0x852C68);
+
+//EV00D4
+DataPointer(NJS_ACTION, action_b_b0007_big, 0x3C84FD4);
+DataPointer(PADREC_DATA_TAG, EV00D4_KAERU, 0x851D9C);
+DataPointer(NJS_ACTION, action_b_b0006_big, 0x3C84FDC);
+DataPointer(PADREC_DATA_TAG, EV00D4_GAMMA, 0x851F58);
+DataPointer(PADREC_DATA_TAG, EV00D4_BIG, 0x8521D4);
+DataPointer(NJS_ACTION, action_b_b0020_big, 0x3C84FCC);
+
+//EV00D9
+DataPointer(NJS_ACTION, action_f_f0010_frog, 0x2DCCEFC);
+
+//EV00DA
+DataPointer(NJS_ACTION, action_f_f0018_frog, 0x3014EA4);
+DataPointer(NJS_ACTION, action_b_b0036_big, 0x3C85004);
+DataPointer(NJS_ACTION, action_b_b0037_big, 0x3C84FFC);
+DataPointer(NJS_ACTION, action_b_b0042_big, 0x3C8500C);
+DataPointer(NJS_ACTION, action_f_f0016_frog, 0x301374C);
+
 
 //EV0142
 DataPointer(NJS_ACTION, action_e_e0036_e102, 0x3C849B0);
@@ -1184,6 +1205,13 @@ DataArray(char**, msgTbl_ev00C2, 0x2BDB9C0, 5);
 DataArray(char**, msgTbl_ev00C3, 0x2BDB804, 5);
 DataArray(char**, msgTbl_ev00C5, 0x2BDAB64, 5);
 DataArray(char**, msgTbl_ev00D0, 0x2BD9F24, 5);
+DataArray(char**, msgTbl_ev00D1, 0x2BD9E68, 5);
+DataArray(char**, msgTbl_ev00D2, 0x2BD9E00, 5);
+DataArray(char**, msgTbl_ev00D3, 0x2BD9D90, 5);
+DataArray(char**, msgTbl_ev00D4, 0x2BD9CEC, 5);
+DataArray(char**, msgTbl_ev00D8, 0x2BD9C80, 5);
+DataArray(char**, msgTbl_ev00D9, 0x2BD9C04, 5);
+DataArray(char**, msgTbl_ev00DA, 0x2BD9BB0, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);

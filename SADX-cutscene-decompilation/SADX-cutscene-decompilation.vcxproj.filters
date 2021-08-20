@@ -549,6 +549,18 @@
     <ClCompile Include="Big\ev00D0_b_intro.cpp">
       <Filter>Source Files\Big</Filter>
     </ClCompile>
+    <ClCompile Include="Big\ev00D1_b_stationsquare.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00D2_b_car.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00D3_b_tails.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00D4_b_emeraldcoast.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

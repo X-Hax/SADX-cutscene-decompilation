@@ -276,6 +276,7 @@ FunctionPointer(void, SetClip_EV0016, (), 0x52FB20);
 VoidFunc(EV_FreeFadeToWhite, 0x6EFB30);
 FunctionPointer(void, EV_FadeToWhite, (int a1, int a2, int a3), 0x6EFD00);
 FunctionPointer(void, EV_FreeWaterRipple, (int a1), 0x6F1B80);
+FunctionPointer(task*, SetEventFrog, (), 0x6F1DE0);
 FunctionPointer(void, ptr_crashed, (task* tp), 0x6F9390);
 FunctionPointer(task*, EggViperDebrisGenerator, (float x, float y, float z, float sx,
 	float sy, float sz, __int16 a7), 0x6F9B40);

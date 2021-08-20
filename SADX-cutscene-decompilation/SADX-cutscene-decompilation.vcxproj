@@ -166,6 +166,10 @@
     <ClCompile Include="Amy\ev016C_a_longhammer.cpp" />
     <ClCompile Include="Amy\ev016D_a_warriorfeather.cpp" />
     <ClCompile Include="Big\ev00D0_b_intro.cpp" />
+    <ClCompile Include="Big\ev00D1_b_stationsquare.cpp" />
+    <ClCompile Include="Big\ev00D2_b_car.cpp" />
+    <ClCompile Include="Big\ev00D3_b_tails.cpp" />
+    <ClCompile Include="Big\ev00D4_b_emeraldcoast.cpp" />
     <ClCompile Include="E102\ev00B0_e_intro.cpp" />
     <ClCompile Include="E102\ev00B1_e_finalegg.cpp" />
     <ClCompile Include="E102\ev00B2_e_afterfinalegg.cpp" />
