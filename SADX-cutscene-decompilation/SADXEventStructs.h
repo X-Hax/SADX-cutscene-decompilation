@@ -14,12 +14,6 @@ struct PADREC_DATA_TAG
 	int size;
 };
 
-struct CutsceneData_
-{
-	void(__cdecl* Function)(int a1);
-	PVMEntry* Textures;
-};
-
 struct cpathtbl
 {
 	__int16 roty;

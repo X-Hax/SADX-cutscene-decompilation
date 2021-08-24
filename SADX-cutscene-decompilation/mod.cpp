@@ -149,6 +149,10 @@ extern "C"
 		CutsceneDataList[0x00D8]->Function = ev00D8_b_eggcarrier;
 		CutsceneDataList[0x00D9]->Function = ev00D9_b_hotsheltertank;
 		CutsceneDataList[0x00DA]->Function = ev00DA_b_enterpast;
+		CutsceneDataList[0x00DB]->Function = ev00DB_b_past;
+		CutsceneDataList[0x00DC]->Function = ev00DC_b_tikal;
+		CutsceneDataList[0x00DD]->Function = ev00DD_b_leavepast;
+		CutsceneDataList[0x00DE]->Function = ev00DE_b_chaos6;
 		CutsceneDataList[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList[0x0102]->Function = ev0102_s_ecaftertransforming;

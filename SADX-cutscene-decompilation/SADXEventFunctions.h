@@ -74,6 +74,8 @@ FunctionPointer(void, EV_SerifPlay, (int id), 0x431930);
 FunctionPointer(void, AmyForEventHammerScaleIm, (char playernmb, float scale), 0x486EC0);
 FunctionPointer(void, tikal_dispSwitch, (int sw), 0x4A3520);
 FunctionPointer(void, EggrobForEvent0_RP_Set, (NJS_POINT3* tgt), 0x4D1740);
+FunctionPointer(void, SetTableBg_mr, (int clipLevel), 0x52F400);
+FunctionPointer(void, EvSetTableBgMR, (), 0x52FB20);
 FunctionPointer(void, SetClip_0500, (int ClipLevel), 0x6007E0);
 FunctionPointer(void, EventSe_Init, (int maxid), 0x64FC80);
 VoidFunc(EventSe_Close, 0x64FCB0);
@@ -148,7 +150,9 @@ FunctionPointer(void, CIchimaie2_SetBlendingMode, (task* _this, int index, char 
 VoidFunc(deleteScanLine, 0x6EF750);
 FunctionPointer(void, createScanLine, (unsigned __int8 a, unsigned __int8 r, unsigned __int8 g, unsigned __int8 b, int res), 0x6EF940);
 FunctionPointer(task*, CSkyWalk_create2, (task* obj, float height), 0x6EF9C0);
+VoidFunc(efWhiteOff, 0x6EFB30);
 FunctionPointer(void, efWhiteOn, (int in_int, int out_int), 0x6EFCA0);
+FunctionPointer(void, efWhiteOn2, (int in_int, int white_int, int out_int), 0x6EFD00);
 FunctionPointer(task*, SetEventBirdie0, (), 0x6F0070);
 FunctionPointer(task*, SetEventBirdie1, (), 0x6F00A0);
 FunctionPointer(task*, SetEventBirdie2, (), 0x6F00D0);
@@ -164,10 +168,14 @@ FunctionPointer(void, seteggmobleparam, (float updown_rat, int updown_acc), 0x6F
 FunctionPointer(task*, GetEggMobleTask, (), 0x6F0BF0);
 FunctionPointer(task*, Create_SphereBomb, (float x, float y, float z, __int16 frame, float sphere_radius, float scl_spd), 0x6F0D10);
 FunctionPointer(void, ChgSphereBombMode, (task* tp, char mode), 0x6F0D90);
+FunctionPointer(void, stopWaveCtrl, (int id), 0x6F1B80);
 FunctionPointer(void, createWaveCtrl, (float x, float y, float z, float a4, float a5, int a6, int a7, int a8), 0x6F1D30);
+FunctionPointer(task*, SetEventFrog, (), 0x6F1DE0);
 FunctionPointer(void, chg_frogshape, (char shapeNo), 0x6F1F60);
 FunctionPointer(task*, set_shapefrog, (), 0x6F2330);
 VoidFunc(StgChaos6CtrlOff, 0x6F2360);
+VoidFunc(StgChaos6Human2Water, 0x6F23E0);
+VoidFunc(StgChaos6Water2Human, 0x6F23F0);
 FunctionPointer(void, StgChaos6SetPos, (float pos_x, float pos_y, float pos_z), 0x6F2400);
 FunctionPointer(void, StgChaos6SetAng, (float ang_x, float ang_y, float ang_z), 0x6F2450);
 FunctionPointer(void, StgChaos6CtrlOn, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z, int rot_spd), 0x6F24B0);
@@ -252,9 +260,11 @@ FunctionPointer(void, ShadowEggmoble2, (float size, float height), 0x6F7E20);
 FunctionPointer(task*, SetEventObjectSSCar, (), 0x6F7FE0);
 FunctionPointer(void, SetEggMissileParam, (task*, float), 0x6F8300);
 FunctionPointer(void, SetMissileEffect, (task*, char), 0x6F8320);
+FunctionPointer(task*, Create_EV_Eggmissile, (), 0x6F8610);
 FunctionPointer(task*, object_tr1_s_t1_body_s_t1_body, (), 0x6F89A0);
 FunctionPointer(task*, CSukiari_Create, (int color, NJS_POINT2* a2, int pointn), 0x6F8AB0);
 FunctionPointer(void, CSukiari_Alpha, (task* a1, unsigned char alpha, int frame), 0x6F8B40);
+FunctionPointer(task*, ev_trzangai, (), 0x6F9390);
 FunctionPointer(task*, miles_with_ptr, (), 0x6F9570);
 FunctionPointer(void, miles_motchg, (int num, float spd), 0x6F95A0);
 VoidFunc(StgChaos0CtrlOff, 0x6F95D0);
@@ -262,6 +272,8 @@ FunctionPointer(void, StgChaos0SetPos, (float pos_x, float pos_y, float pos_z), 
 FunctionPointer(void, StgChaos0SetAng, (int ang_x, int ang_y, int ang_z), 0x6F96A0);
 FunctionPointer(void, StgChaos0CtrlOn, (float pos_x, float pos_y, float pos_z,
 	int ang_x, int ang_y, int ang_z, int rot_spd), 0x6F9840);
+FunctionPointer(task*, EV_zangai_ctrl, (float x, float y, float z, float sx,
+	float sy, float sz, __int16 a7), 0x6F9B40);
 VoidFunc(EV_EggViperKesu, 0x7B5500);
 VoidFunc(EV_EggViperEggmanToujou, 0x7B5570);
 VoidFunc(EV_EggViperEggmanShaberu, 0x7B5580);
@@ -271,19 +283,8 @@ VoidFunc(EV_EggViperJoushou, 0x7B55B0);
 FunctionPointer(void, EV_EggViperArawaru, (float xpos, float ypos, float zpos, int yang), 0x7B5CF0);
 
 //Unofficial names
-FunctionPointer(void, SetClip_ECScene, (int clipLevel), 0x52F400);
-FunctionPointer(void, SetClip_EV0016, (), 0x52FB20);
-VoidFunc(EV_FreeFadeToWhite, 0x6EFB30);
-FunctionPointer(void, EV_FadeToWhite, (int a1, int a2, int a3), 0x6EFD00);
-FunctionPointer(void, EV_FreeWaterRipple, (int a1), 0x6F1B80);
-FunctionPointer(task*, SetEventFrog, (), 0x6F1DE0);
-FunctionPointer(void, ptr_crashed, (task* tp), 0x6F9390);
-FunctionPointer(task*, EggViperDebrisGenerator, (float x, float y, float z, float sx,
-	float sy, float sz, __int16 a7), 0x6F9B40);
-FunctionPointer(task*, missilefunc, (), 0x6F8610);
-FunctionPointer(void, createChaos0_EV0088, (float pos_x, float pos_y, float pos_z, int ang), 0x691400);
+FunctionPointer(void, createChaos0_EV0088, (float pos_x, float pos_y, float pos_z, int ang), 0x691400); // There are 3 of these
 VoidFunc(deleteChaos0_EV0088, 0x6910F0);
-
 
 //Stuff that doesn't have an official name because it was part of the main event function in the 360 version:
 VoidFunc(create_task_gattai_EV00C2, 0x674420);

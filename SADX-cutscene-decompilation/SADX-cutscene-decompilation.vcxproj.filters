@@ -561,6 +561,27 @@
     <ClCompile Include="Big\ev00D4_b_emeraldcoast.cpp">
       <Filter>Source Files\Big</Filter>
     </ClCompile>
+    <ClCompile Include="Big\ev00D8_b_eggcarrier.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00D9_b_hotsheltertank.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00DA_b_enterpast.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00DB_b_past.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00DC_b_tikal.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00DD_b_leavepast.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00DE_b_chaos6.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

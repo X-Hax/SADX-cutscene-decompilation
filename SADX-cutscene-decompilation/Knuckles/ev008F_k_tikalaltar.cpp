@@ -87,8 +87,8 @@ void ev008F_k_tikalaltar(int state)
 		EventSe_Oneshot(1335, 20, 0, 0);
 		createWaveCtrl(-52.009998f, 80.0f, 56.419998f, 0.30000001f, 1.0f, 6, 19, 2);
 		EV_Wait(130);
-		EV_FreeWaterRipple(1);
-		EV_FreeWaterRipple(2);
+		stopWaveCtrl(1);
+		stopWaveCtrl(2);
 		EV_CameraPos(1, 0, -1.24f, 100.15f, 44.73f);
 		EV_CameraAng(1, 0, 0, 10972, 0);
 		EV_MsgClose();
@@ -216,7 +216,7 @@ void ev008F_k_tikalaltar(int state)
 		EV_CameraAng(1, 20, 512, 39900, 0);
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -120, 120);
-		EV_FadeToWhite(60, 30, 0);
+		efWhiteOn2(60, 30, 0);
 		EV_Wait(80);
 		EV_MoveFree(tikal);
 		EV_Wait(10);
@@ -230,7 +230,7 @@ void ev008F_k_tikalaltar(int state)
 		EV_FreeObject(&CHA5);
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);
-		EV_FreeFadeToWhite();
+		efWhiteOff();
 		EV_CameraOff();
 		EV_PadOn();
 		break;

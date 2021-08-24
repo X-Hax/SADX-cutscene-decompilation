@@ -96,7 +96,7 @@ void ev00DA_b_enterpast(int state)
 		EV_MsgW(0, msgTbl_ev00DA[TextLanguage][3]); //"\aThat's strange!"
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -120, 120);
-		EV_FadeToWhite(60, 30, 0);
+		efWhiteOn2(60, 30, 0);
 		EV_Wait(30);
 		EV_MsgClose();
 		EV_ClrPath(tikal);
@@ -125,7 +125,7 @@ void ev00DA_b_enterpast(int state)
 			FreeTask(tikal);
 			tikal = 0;
 		}
-		EV_FreeFadeToWhite();
+		efWhiteOff();
 		EV_CameraOff();
 		EV_PadOn();
 		break;

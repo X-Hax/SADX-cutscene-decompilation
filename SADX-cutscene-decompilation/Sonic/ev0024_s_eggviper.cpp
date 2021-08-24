@@ -83,9 +83,9 @@ void ev0024_s_eggviper(int state)
 		EV_CameraAng(1, 120, 6912, 49152, 0);
 		EV_Wait(200);
 		EventSe_Oneshot(1335, 0, 0, 0);
-		IWA = EggViperDebrisGenerator(10.071f, -49500.234f, 7.2740002f, 3.0f, 0.40000001f, 80.0f, 15);
-		IWA2 = EggViperDebrisGenerator(91.514999f, -49500.16f, -16.011f, 3.0f, 0.40000001f, 50.0f, 30);
-		IWA3 = EggViperDebrisGenerator(-122.556f, -49500.234f, 174.875f, 3.0f, 0.40000001f, 50.0f, 10);
+		IWA = EV_zangai_ctrl(10.071f, -49500.234f, 7.2740002f, 3.0f, 0.40000001f, 80.0f, 15);
+		IWA2 = EV_zangai_ctrl(91.514999f, -49500.16f, -16.011f, 3.0f, 0.40000001f, 50.0f, 30);
+		IWA3 = EV_zangai_ctrl(-122.556f, -49500.234f, 174.875f, 3.0f, 0.40000001f, 50.0f, 10);
 		EV_SerifPlay(603);
 		EV_Msg(msgTbl_ev0024[TextLanguage][2]); //"\aHold it right there, \nEggman!"
 		RumbleA(0, 10);

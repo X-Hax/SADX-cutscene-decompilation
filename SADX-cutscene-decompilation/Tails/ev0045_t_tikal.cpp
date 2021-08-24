@@ -223,7 +223,7 @@ void ev0045_t_tikal(int state)
 		}
 		EV_Wait(25);
 		EV_MsgClose();
-		EV_FadeToWhite(60, 30, 0);
+		efWhiteOn2(60, 30, 0);
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -120, 120);
 		EV_Wait(90);
@@ -233,7 +233,7 @@ void ev0045_t_tikal(int state)
 		EV_InitPlayer(0);
 		EventSe_Close();
 		EV_RemovePlayer(2);
-		EV_FreeFadeToWhite();
+		efWhiteOff();
 		EV_CameraOff();
 		EV_PadOn();
 		break;

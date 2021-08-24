@@ -28,6 +28,8 @@ extern task* BROKEN_EGG;
 extern task* BROKEN_EGG2;
 extern task* BROKEN_EGG4;
 extern task* C_EME_P;
+extern task* C_EME_S;
+extern task* C_EME_Y;
 extern task* CAP_01;
 extern task* cap1;
 extern task* cap2;
@@ -1035,6 +1037,18 @@ DataPointer(NJS_ACTION, action_b_b0037_big, 0x3C84FFC);
 DataPointer(NJS_ACTION, action_b_b0042_big, 0x3C8500C);
 DataPointer(NJS_ACTION, action_f_f0016_frog, 0x301374C);
 
+//EV00DC
+DataPointer(NJS_ACTION, action_j_j0040_tikal, 0x2EBF89C);
+DataPointer(NJS_ACTION, action_ti_wait, 0x8F83F4);
+DataPointer(NJS_ACTION, action_j_j0041_tikal, 0x2EC2524);
+
+//EV00DD
+DataPointer(NJS_ACTION, action_b_b0022_big, 0x3C84FE4);
+DataPointer(NJS_ACTION, action_f_f0007_frog, 0x30016B4);
+
+//EV00DE
+DataPointer(EPATHTAG, epathtag_CEMY00DE, 0x2BD6DB8);
+DataPointer(EPATHTAG, epathtag_CEMS00DE, 0x2BD6E90);
 
 //EV0142
 DataPointer(NJS_ACTION, action_e_e0036_e102, 0x3C849B0);
@@ -1212,6 +1226,10 @@ DataArray(char**, msgTbl_ev00D4, 0x2BD9CEC, 5);
 DataArray(char**, msgTbl_ev00D8, 0x2BD9C80, 5);
 DataArray(char**, msgTbl_ev00D9, 0x2BD9C04, 5);
 DataArray(char**, msgTbl_ev00DA, 0x2BD9BB0, 5);
+DataArray(char**, msgTbl_ev00DB, 0x2BD71D8, 5);
+DataArray(char**, msgTbl_ev00DC, 0x2BD717C, 5);
+DataArray(char**, msgTbl_ev00DD, 0x2BD7074, 5);
+DataArray(char**, msgTbl_ev00DE, 0x2BD6FD8, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);

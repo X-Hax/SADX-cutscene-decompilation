@@ -23,6 +23,8 @@ task* BROKEN_EGG;				//Eggman dust effect
 task* BROKEN_EGG2;				//Eggman dust effect
 task* BROKEN_EGG4;				//Eggman dust effect
 task* C_EME_P;					//Chaos Emerald: Purple
+task* C_EME_S;					//Chaos Emerald: Cyan
+task* C_EME_Y;					//Chaos Emerald: Yellow
 task* CAP_01;					//Capture beams used by Eggman
 task* cap1;						//Capture beam
 task* cap2;						//Capture beam

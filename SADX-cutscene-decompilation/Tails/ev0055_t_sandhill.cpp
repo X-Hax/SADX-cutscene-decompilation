@@ -61,7 +61,7 @@ void ev0055_t_sandhill(int state)
 		EV_ClrFace(player);
 		EV_SetFace(player, "ZZZZZZZZZZZZ");
 		EV_SerifPlay(731);
-		EV_FadeToWhite(60, 30, 0);
+		efWhiteOn2(60, 30, 0);
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -120, 120);
 		EV_Wait(90);
@@ -81,7 +81,7 @@ void ev0055_t_sandhill(int state)
 			tikal = 0;
 		}
 		EV_FreeObject(&Frog);
-		EV_FreeFadeToWhite();
+		efWhiteOff();
 		EventSe_Close();
 		EV_CameraOff();
 		EV_PadOn();

@@ -22,7 +22,7 @@ void ev0044_t_enterpast(int state)
 		EV_CameraAng(1, 0, 1792, 37340, 0);
 		EV_CameraPos(1, 250, -15.19f, 14.09f, 1346.36f);
 		EV_CameraAng(1, 250, 1792, 37340, 0);
-		EV_FadeToWhite(0, 30, 60);
+		efWhiteOn2(0, 30, 60);
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -120, 120);
 		EV_Wait(50);
@@ -50,7 +50,7 @@ void ev0044_t_enterpast(int state)
 	case 2:
 		EventSe_Close();
 		EV_InitPlayer(0);
-		EV_FreeFadeToWhite();
+		efWhiteOff();
 		EV_CameraOff();
 		EV_PadOn();
 		break;

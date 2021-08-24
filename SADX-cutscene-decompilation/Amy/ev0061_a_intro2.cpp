@@ -72,7 +72,7 @@ void ev0061_a_intro2(int state)
 		EV_CameraPos(0, 3, 134.0f, 8.8470001f, 670.64001f);
 		EV_CameraAng(0, 3, 61915, 0x8000, 0);
 		EV_Wait(11);
-		EV_FadeToWhite(2, 65, 45);
+		efWhiteOn2(2, 65, 45);
 		EventSe_Stop(1);
 		EventSe_Oneshot(1339, 0, 0, 0);
 		EV_SerifPlay(847);
@@ -377,7 +377,7 @@ void ev0061_a_intro2(int state)
 		EV_RemovePlayer(6);
 		EV_FreeObject(&obj_ver2_wing);
 		throughplayer_off(player);
-		EV_FreeFadeToWhite();
+		efWhiteOff();
 		seqVars[1] = 1;
 		EventSe_Close();
 		break;

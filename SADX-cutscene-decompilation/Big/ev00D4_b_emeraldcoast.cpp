@@ -74,9 +74,9 @@ void ev00D4_b_emeraldcoast(int state)
 			e102->twp->pos.y + 2.8f,
 			e102->twp->pos.z - 3.9000001f);
 		EV_SetAng(Frog,
-			e102->twp->pos.x,
+			(int)e102->twp->pos.x,
 			(int)e102->twp->pos.y + 13056,
-			e102->twp->pos.z);
+			(int)e102->twp->pos.z);
 		EV_CameraPos(0, 100, 1012.7f, 79.099998f, 841.0f);
 		EV_CameraAng(0, 100, 3263, 3012, 0);
 		EV_SetAction(player, &action_b_b0012_big, &BIG_TEXLIST, 2.3f, 1, 2);

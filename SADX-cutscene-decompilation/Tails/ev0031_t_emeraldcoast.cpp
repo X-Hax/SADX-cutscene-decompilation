@@ -12,7 +12,7 @@ void ev0031_t_emeraldcoast(int state)
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
-		EV_CreateObjectFunc(&zan, (task * (*)(void))ptr_crashed, 6893.9502f, 1.03f, -2203.1499f, 0, 49152, 0);
+		EV_CreateObjectFunc(&zan, ev_trzangai, 6893.9502f, 1.03f, -2203.1499f, 0, 49152, 0);
 		EV_CreatePlayer(2, SonicTheHedgehog, 6420.0f, 1.33f, -2150.0f, 0, 0x4000, 0);
 		EV_Wait(1);
 		EV_SetPos(player, 6888.9502f, 1.03f, -2203.1499f);

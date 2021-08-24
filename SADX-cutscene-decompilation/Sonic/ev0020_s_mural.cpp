@@ -62,7 +62,7 @@ void ev0020_s_mural(int state)
 		EV_Wait(40);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[4], &SONIC_TEXLIST, 2.0f, 1, 0);
-		EV_FreeWaterRipple(1);
+		stopWaveCtrl(1);
 		EV_FreeObject(&tikal);
 		stopObjectAll();
 		EV_Wait(10);
@@ -107,7 +107,7 @@ void ev0020_s_mural(int state)
 		EV_CameraAng(1, 500, 8666, 16486, 0);
 		EV_Wait(250);
 		EventSe_Play(1, 110, 1800);
-		EV_FadeToWhite(60, 30, 0);
+		efWhiteOn2(60, 30, 0);
 		EV_Wait(90);
 		break;
 	case 2:
@@ -123,7 +123,7 @@ void ev0020_s_mural(int state)
 			FreeTask(tikal);
 			tikal = 0;
 		}
-		EV_FreeFadeToWhite();
+		efWhiteOff();
 		break;
 	}
 }

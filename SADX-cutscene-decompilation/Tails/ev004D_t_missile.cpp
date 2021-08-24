@@ -37,7 +37,7 @@ void ev004D_t_missile(int state)
 		EV_Wait(1);
 		EV_SetMode(obj_ver2_wing, 0);
 		EV_SetAction(obj_ver2_wing, &action_w_w9001_wing, &VER2_WING_TEXLIST, 1.0f, 1, 0);
-		EV_CreateObjectFunc(&TEPODON, missilefunc, 701.5f, -1300.25f, 3900.2f, 65520, 0, 0);
+		EV_CreateObjectFunc(&TEPODON, Create_EV_Eggmissile, 701.5f, -1300.25f, 3900.2f, 65520, 0, 0);
 		EV_Wait(1);
 		SetEggMissileParam(TEPODON, 0.25f);
 		create_eggmoble(233.3f, 82.800003f, 1545.0f, 0, 53248, 0);

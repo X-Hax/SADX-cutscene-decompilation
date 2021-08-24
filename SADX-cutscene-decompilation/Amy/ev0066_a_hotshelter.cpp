@@ -64,7 +64,7 @@ void ev0066_a_hotshelter(int state)
         EV_SetFace(player, "I");
         EV_CameraTargetObj(1, 0, player, 0.0f, 6.0f, 0.0f, 0);
         EV_CameraChaseRM(0, 200, player, 0.0f, 0, -9101, 0, 10.0f, 0, -18203, 0, 10.0f);
-        EV_FadeToWhite(60, 30, 0);
+        efWhiteOn2(60, 30, 0);
         EV_Wait(90);
         stopObjectAll();
         EV_ClrPath(player);

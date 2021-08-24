@@ -112,7 +112,7 @@ void ev009A_k_glubglub(int state)
 		EV_InitPlayer(0);
 		destroy_p_ShadowTask_EV009A();
 		crushLightOff();
-		EV_FreeFadeToWhite();
+		efWhiteOff();
 		destroy_task_light_EV009A();
 		EventSe_Stop(0);
 		EventSe_Close();

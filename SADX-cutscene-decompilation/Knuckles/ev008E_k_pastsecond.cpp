@@ -16,7 +16,7 @@ void ev008E_k_pastsecond(int state)
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -120, 120);
 		EV_Wait(1);
-		EV_FadeToWhite(0, 30, 60);
+		efWhiteOn2(0, 30, 60);
 		EV_SetPos(player, 0.18000001f, -47.049999f, 1393.05f);
 		EV_SetAng(player, 0, 0x8917, 0);
 		EV_Wait(1);
@@ -45,7 +45,7 @@ void ev008E_k_pastsecond(int state)
 	case 2:
 		EventSe_Close();
 		EV_InitPlayer(0);
-		EV_FreeFadeToWhite();
+		efWhiteOff();
 		EV_CameraOff();
 		EV_PadOn();
 		break;

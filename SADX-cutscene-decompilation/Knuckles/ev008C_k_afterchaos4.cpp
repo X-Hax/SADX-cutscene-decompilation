@@ -9,7 +9,7 @@ void ev008C_k_afterchaos4(int state)
 	case 1:
 		player = EV_GetPlayer(0);
 		CAP_01 = 0;
-		SetClip_ECScene(0);
+		SetTableBg_mr(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -243,7 +243,7 @@ void ev008C_k_afterchaos4(int state)
 		CAP_01 = 0;
 		EV_CameraOff();
 		EV_PadOn();
-		SetClip_ECScene(ClipLevel);
+		SetTableBg_mr(ClipLevel);
 		break;
 	}
 }

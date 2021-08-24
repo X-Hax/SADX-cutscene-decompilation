@@ -10,7 +10,7 @@ void ev0016_s_zeroboardsec(int state)
 	switch (state) {
 	case 1:
 		player = EV_GetPlayer(0);
-		SetClip_ECScene(0);
+		SetTableBg_mr(0);
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
@@ -195,7 +195,7 @@ void ev0016_s_zeroboardsec(int state)
 		EV_CameraTargetObj(0, 0, eggcarrier, 0.0f, 0.0f, 0.0f, 0);
 		EventSe_Oneshot(1341, 120, 0, 0);
 		ClipLevel = 0;
-		SetClip_EV0016();
+		EvSetTableBgMR();
 		moveObjectAngle2(eggcarrier, 100.0f, 600.0f, 1150.0f, 600.0f, 1500.0f, 1250.0f, 0, 0x8000, 0, 0, 17664, -8192, 250);
 		EV_Wait(150);
 		EV_CameraTargetFree();
@@ -220,13 +220,13 @@ void ev0016_s_zeroboardsec(int state)
 		EV_ClrAction(player);
 		stopObject(eggcarrier);
 		ClipLevel = defClipLevel;
-		SetClip_EV0016();
+		EvSetTableBgMR();
 		EV_Wait(60);
 		break;
 	case 2:
 		dsStop_all();
 		ClipLevel = defClipLevel;
-		SetClip_EV0016();
+		EvSetTableBgMR();
 		EV_InitPlayer(0);
 		EV_SetPos(player, -239.58f, 65.199997f, 921.73999f);
 		EV_SetAng(player, 65308, 45926, 65148);
@@ -241,7 +241,7 @@ void ev0016_s_zeroboardsec(int state)
 		CAP_01 = 0;
 		EV_CameraOff();
 		EV_PadOn();
-		SetClip_ECScene(ClipLevel);
+		SetTableBg_mr(ClipLevel);
 		break;
 	}
 }
