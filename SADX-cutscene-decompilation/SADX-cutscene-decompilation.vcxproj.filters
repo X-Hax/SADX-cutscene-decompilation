@@ -582,6 +582,33 @@
     <ClCompile Include="Big\ev00DE_b_chaos6.cpp">
       <Filter>Source Files\Big</Filter>
     </ClCompile>
+    <ClCompile Include="Big\ev00DF_b_chaos6defeated.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00E0_b_tornado2.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00E1_b_fmvplaceholder.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00E2_b_outro.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev00E3_b_froggyhotel.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev0170_b_powerrod.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev0171_b_lifebelt.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="Big\ev0178_b_icestone.cpp">
+      <Filter>Source Files\Big</Filter>
+    </ClCompile>
+    <ClCompile Include="e102\ev017C_e_angelislandwall.cpp">
+      <Filter>Source Files\E102</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SADXEventFunctions.h">

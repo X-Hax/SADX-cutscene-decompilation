@@ -137,6 +137,8 @@ task* p_fpack1;					//Amy's bag
 task* p_fpack2;					//Amy's bag
 task* P_EME;					//Chaos Emerald: Purple
 task* PAPA;						//Pachacamac
+task* PHOTO1;					//Screen tint
+task* PHOTO2;					//Screen tint
 task* PLANE;					//Tornado 1
 task* PAT_01;					//Police car
 task* PAT_02;					//Police car

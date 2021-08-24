@@ -17,6 +17,7 @@ void ev017A_s_angelislandwall(int state)
 		EV_Wait(130);
 		BGM_Play(MusicIDs_item1);
 		EV_Wait(85);
+		break;
 	case 2:
 		EV_CameraAng(1, 0, 61383, 51194, 0);
 		EV_CameraPos(1, 0, -65.0f, 244.0f, 1211.1f);

@@ -153,6 +153,11 @@ extern "C"
 		CutsceneDataList[0x00DC]->Function = ev00DC_b_tikal;
 		CutsceneDataList[0x00DD]->Function = ev00DD_b_leavepast;
 		CutsceneDataList[0x00DE]->Function = ev00DE_b_chaos6;
+		CutsceneDataList[0x00DF]->Function = ev00DF_b_chaos6defeated;
+		CutsceneDataList[0x00E0]->Function = ev00E0_b_tornado2;
+		CutsceneDataList[0x00E1]->Function = ev00E1_b_fmvplaceholder;
+		CutsceneDataList[0x00E2]->Function = ev00E2_b_outro;
+		CutsceneDataList[0x00E3]->Function = ev00E3_b_froggyhotel;
 		CutsceneDataList[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList[0x0102]->Function = ev0102_s_ecaftertransforming;
@@ -184,11 +189,15 @@ extern "C"
 		CutsceneDataList[0x016D]->Function = ev016D_a_warriorfeather;
 		CutsceneDataList[0x016E]->Function = ev016E_e_laserblaster;
 		CutsceneDataList[0x016F]->Function = ev016F_e_jetbooster;
+		CutsceneDataList[0x0170]->Function = ev0170_b_powerrod;
+		CutsceneDataList[0x0171]->Function = ev0171_b_lifebelt;
 		CutsceneDataList[0x0176]->Function = ev0176_s_icestone;
 		CutsceneDataList[0x0177]->Function = ev0177_t_icestone;
+		CutsceneDataList[0x0178]->Function = ev0178_b_icestone;
 		CutsceneDataList[0x0179]->Function = ev0179_s_idcard;
 		CutsceneDataList[0x017A]->Function = ev017A_s_angelislandwall;
 		CutsceneDataList[0x017B]->Function = ev017B_t_angelislandwall;
+		CutsceneDataList[0x017C]->Function = ev017C_e_angelislandwall;
 		CutsceneDataList[0x0180]->Function = ev0180_s_redmountainintro;
 
 		//60 FPS faces

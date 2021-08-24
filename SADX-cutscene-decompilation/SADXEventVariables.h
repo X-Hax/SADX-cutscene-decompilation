@@ -5,6 +5,9 @@
 //Character Faces Table
 DataArray(FACETBL, faceTable, 0x91CEC8, 160);
 
+//TV Setting
+DataPointer(Bool, TV_System, 0x3B0EF30);
+
 //Object variables, see objects.cpp
 extern task* B_EME;
 extern task* B_OUT;
@@ -142,6 +145,8 @@ extern task* p_fpack1;
 extern task* p_fpack2;
 extern task* P_EME;
 extern task* PAPA;
+extern task* PHOTO1;
+extern task* PHOTO2;
 extern task* PLANE;
 extern task* PAT_01;
 extern task* PAT_02;
@@ -1050,6 +1055,27 @@ DataPointer(NJS_ACTION, action_f_f0007_frog, 0x30016B4);
 DataPointer(EPATHTAG, epathtag_CEMY00DE, 0x2BD6DB8);
 DataPointer(EPATHTAG, epathtag_CEMS00DE, 0x2BD6E90);
 
+//EV00DF
+DataPointer(NJS_ACTION, action_b_b0035_big, 0x3C84FEC);
+DataPointer(NJS_OBJECT, object_shape_frog_frog, 0x2FF48B4);
+DataPointer(NJS_MOTION*, motion_f_f0017_frog, 0x300A7C8);
+DataPointer(NJS_MOTION*, motion_f_f0018_frog, 0x3014EA8);
+DataPointer(NJS_MOTION*, motion_f_f0015_frog, 0x3007920);
+DataPointer(NJS_MOTION*, motion_f_f0016_frog, 0x3013750);
+DataPointer(NJS_ACTION, action_b_b0034_big, 0x3C84FF4);
+
+//EV00E2
+DataPointer(NJS_OBJECT, _object_tr2crash_tr2crash, 0x2F67B78);
+DataPointer(NJS_TEXLIST, texlist_tr2crash, 0x2F61C00);
+DataPointer(PADREC_DATA_TAG, EV00E2B, 0x84F578);
+DataPointer(NJS_ACTION, action_b_b0032_big, 0x3C84D84);
+DataPointer(NJS_ACTION, _action_f_f0012_frog, 0x2F5F294);
+DataPointer(NJS_ACTION, _action_f_f0013_frog, 0x2F606FC);
+DataPointer(NJS_ACTION, action_b_b0033_big, 0x3C84D6C);
+DataPointer(NJS_ACTION, _action_f_f0009_frog, 0x2F5DBFC);
+DataPointer(NJS_ACTION, action_b_b0040_big, 0x3C84D8C);
+DataPointer(NJS_ACTION, action_b_b0041_big, 0x3C84D64);
+
 //EV0142
 DataPointer(NJS_ACTION, action_e_e0036_e102, 0x3C849B0);
 DataPointer(NJS_ACTION, action_e_e0026_e102, 0x3C849A8);
@@ -1098,6 +1124,16 @@ DataPointer(NJS_ACTION, action_a_item_ha2, 0x3C84708);
 
 //EV016E
 DataPointer(EPATHTAG, epathtag_ev0170_tk, 0x2BD9B58);
+
+//EV0170
+DataPointer(NJS_ACTION, action_b_item_s0, 0x3C846E0);
+DataPointer(NJS_ACTION, action_b_item_s1, 0x3C846E8);
+DataPointer(NJS_ACTION, action_b_item_s2, 0x3C846F0);
+
+//EV0171
+DataPointer(NJS_ACTION, action_b_item_u0, 0x3C846D0);
+DataPointer(NJS_ACTION, action_b_item_u1, 0x3C846C8);
+DataPointer(NJS_ACTION, action_b_item_u2, 0x3C846D8);
 
 //Dialogue Tables
 DataArray(char**, msgTbl_ev0001, 0x2C12BD8, 5);
@@ -1230,6 +1266,8 @@ DataArray(char**, msgTbl_ev00DB, 0x2BD71D8, 5);
 DataArray(char**, msgTbl_ev00DC, 0x2BD717C, 5);
 DataArray(char**, msgTbl_ev00DD, 0x2BD7074, 5);
 DataArray(char**, msgTbl_ev00DE, 0x2BD6FD8, 5);
+DataArray(char**, msgTbl_ev00DF, 0x2BD6CFC, 5);
+DataArray(char**, msgTbl_ev00E0, 0x2BD6C6C, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);
@@ -1261,4 +1299,5 @@ DataArray(char**, msgTbl_ev016C, 0x2BCEB40, 5);
 DataArray(char**, msgTbl_ev016D, 0x2BCEAFC, 5);
 DataArray(char**, msgTbl_ev016E, 0x2BCCC68, 5);
 DataArray(char**, msgTbl_ev016F, 0x2BCCC24, 5);
-
+DataArray(char**, msgTbl_ev0170, 0x2BCCBE0, 5);
+DataArray(char**, msgTbl_ev0171, 0x2BCCB9C, 5);
