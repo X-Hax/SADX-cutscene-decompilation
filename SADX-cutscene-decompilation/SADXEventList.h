@@ -149,6 +149,7 @@ void ev00E0_b_tornado2(int state);
 void ev00E1_b_fmvplaceholder(int state);
 void ev00E2_b_outro(int state);
 void ev00E3_b_froggyhotel(int state);
+void ev00F0_l_intro(int state);
 void ev0100_s_ecafterlanding(int state);
 void ev0101_s_ecfools(int state);
 void ev0102_s_ecaftertransforming(int state);

@@ -158,6 +158,7 @@ extern "C"
 		CutsceneDataList[0x00E1]->Function = ev00E1_b_fmvplaceholder;
 		CutsceneDataList[0x00E2]->Function = ev00E2_b_outro;
 		CutsceneDataList[0x00E3]->Function = ev00E3_b_froggyhotel;
+		CutsceneDataList[0x00F0]->Function = ev00F0_l_intro;
 		CutsceneDataList[0x0100]->Function = ev0100_s_ecafterlanding;
 		CutsceneDataList[0x0101]->Function = ev0101_s_ecfools;
 		CutsceneDataList[0x0102]->Function = ev0102_s_ecaftertransforming;

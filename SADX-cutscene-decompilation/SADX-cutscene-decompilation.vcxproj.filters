@@ -31,6 +31,9 @@
     <Filter Include="Source Files\Big">
       <UniqueIdentifier>{d8b139ca-2694-4fe4-a383-bbb90d784470}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\SuperSonic">
+      <UniqueIdentifier>{7851035d-b300-4749-a7ab-ec6815f5db16}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mod.cpp">
@@ -608,6 +611,9 @@
     </ClCompile>
     <ClCompile Include="e102\ev017C_e_angelislandwall.cpp">
       <Filter>Source Files\E102</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperSonic\ev00F0_l_intro.cpp">
+      <Filter>Source Files\SuperSonic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
