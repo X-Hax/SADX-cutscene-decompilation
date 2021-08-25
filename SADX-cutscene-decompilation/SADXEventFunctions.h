@@ -283,11 +283,8 @@ VoidFunc(EV_EggViperEggmanHikkomu, 0x7B55A0);
 VoidFunc(EV_EggViperJoushou, 0x7B55B0);
 FunctionPointer(void, EV_EggViperArawaru, (float xpos, float ypos, float zpos, int yang), 0x7B5CF0);
 
-//Unofficial names
-FunctionPointer(void, createChaos0_EV0088, (float pos_x, float pos_y, float pos_z, int ang), 0x691400); // There are 3 of these
-VoidFunc(deleteChaos0_EV0088, 0x6910F0);
-
 //Stuff that doesn't have an official name because it was part of the main event function in the 360 version:
+VoidFunc(deleteChaos0_EV00F2, 0x6667B0);
 VoidFunc(create_task_gattai_EV00C2, 0x674420);
 VoidFunc(delete_task_gattai_EV00C2, 0x674480);
 VoidFunc(create_task_gattai_EV006A, 0x69D3B0);
@@ -299,6 +296,7 @@ VoidFunc(destroy_task_light_EV009A, 0x686990);
 FunctionPointer(void, create_p_ShadowTask_EV009A, (float pos_x, float pos_y, float pos_z, int slangx, int length, float path_ypos), 0x686B10);
 VoidFunc(create_task_light_EV009A, 0x686970);
 VoidFunc(destroy_p_ShadowTask_EV009A, 0x6869B0);
+VoidFunc(deleteChaos0_EV0088, 0x6910F0);
 VoidFunc(ChangeTornado2Model_EV0047, 0x6BA0A0);
 VoidFunc(ChangeTornado2Model2_EV0047, 0x6BA0B0);
 VoidFunc(ChangeTornado2Model_EV0048, 0x6B9280);
@@ -334,6 +332,7 @@ FunctionPointer(void, Tikal, (task*), 0x7B40C0);
 FunctionPointer(void, Eggman, (task*), 0x7B4EF0);
 FunctionPointer(void, EggrobForEvent0, (task*), 0x4D3E00);
 
+//Usercall garbage
 static const void* const deleteObjectPtr = (void*)0x67B6B0;
 static inline void deleteObject(task** obj, int id, float scl_x, float scl_y, float scl_z, signed int frame)
 {
@@ -346,5 +345,34 @@ static inline void deleteObject(task** obj, int id, float scl_x, float scl_y, fl
 		mov eax, [id]
 		mov edi, [obj]
 		call deleteObjectPtr
+		add esp, 16
+	}
+}
+
+static const void* const createChaos0_EV0088Ptr = (void*)0x691400;
+static inline void createChaos0_EV0088(int ang, float pos_x, float pos_y, float pos_z)
+{
+	__asm
+	{
+		push[pos_z]
+		push[pos_y]
+		push[pos_x]
+		mov edi, [ang]
+		call[createChaos0_EV0088Ptr]
+		add esp, 12
+	}
+}
+
+static const void* const createChaos0_EV00F2Ptr = (void*)0x666A60;
+static inline void createChaos0_EV00F2(int ang, float pos_x, float pos_y, float pos_z)
+{
+	__asm
+	{
+		push[pos_z]
+		push[pos_y]
+		push[pos_x]
+		mov edi, [ang]
+		call [createChaos0_EV00F2Ptr]
+		add esp, 12
 	}
 }

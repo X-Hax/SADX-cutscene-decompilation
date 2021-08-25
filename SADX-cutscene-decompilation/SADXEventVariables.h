@@ -1268,6 +1268,7 @@ DataArray(char**, msgTbl_ev00DD, 0x2BD7074, 5);
 DataArray(char**, msgTbl_ev00DE, 0x2BD6FD8, 5);
 DataArray(char**, msgTbl_ev00DF, 0x2BD6CFC, 5);
 DataArray(char**, msgTbl_ev00E0, 0x2BD6C6C, 5);
+DataArray(char**, msgTbl_ev00F2, 0x2BD6088, 5);
 DataArray(char**, msgTbl_ev0100, 0x2BD4AD8, 5);
 DataArray(char**, msgTbl_ev0101, 0x2BD4A80, 5);
 DataArray(char**, msgTbl_ev0102, 0x2BD4A28, 5);

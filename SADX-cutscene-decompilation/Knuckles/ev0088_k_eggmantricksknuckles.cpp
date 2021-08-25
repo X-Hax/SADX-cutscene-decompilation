@@ -20,7 +20,7 @@ void ev0088_k_eggmantricksknuckles(int state)
 		EV_SetAng(player, 0, 33280, 0);
 		EV_SetAction(player, &action_k_k0005_knuckles, &KNUCKLES_TEXLIST, 0.5f, 1, 0);
 		EV_Wait(1);
-		createChaos0_EV0088(12.0f, player->twp->pos.y, 65.0f, 0);
+		createChaos0_EV0088(0, 12.0f, player->twp->pos.y, 65.0f);
 		EV_CreatePlayer(6, Eggman, 3.04f, 0.0f, 31.07f, 0, 1536, 0);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, 22.5f, 8.5500002f, 86.089996f);

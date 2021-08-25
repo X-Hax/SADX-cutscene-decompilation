@@ -248,6 +248,7 @@
     <ClCompile Include="Knuckles\ev016B_k_shovelclaw.cpp" />
     <ClCompile Include="objects.cpp" />
     <ClCompile Include="SuperSonic\ev00F0_l_intro.cpp" />
+    <ClCompile Include="SuperSonic\ev00F2_l_eggman.cpp" />
     <ClCompile Include="Tails\ev0042_t_froggyjungle.cpp" />
     <ClCompile Include="Tails\ev0044_t_enterpast.cpp" />
     <ClCompile Include="Tails\ev0045_t_tikal.cpp" />
