@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 
 //Leaked Symbols
+FunctionPointer(void, voicevolchange, (int vol), 0x40CCF0);
+VoidFunc(voicevolresume, 0x40CD10);
 FunctionPointer(void, SetBankDir, (signed int soundlist), 0x4238E0);
 FunctionPointer(void, dsPlay_oneshot, (int tone, int id, int pri, int volofs), 0x423D70);
 FunctionPointer(void, dsPlay_timer, (int tone, int id, int pri, int volofs, int timer), 0x423F50);
@@ -71,11 +73,14 @@ FunctionPointer(void, EV_PlayPad, (int no, PADREC_DATA_TAG* tag), 0x431870);
 FunctionPointer(void, EV_WaitMove, (task* tp), 0x4318D0);
 VoidFunc(EV_SerifWait, 0x431900);
 FunctionPointer(void, EV_SerifPlay, (int id), 0x431930);
+FunctionPointer(void, SetInputP, (char pno, char mode), 0x441260);
+FunctionPointer(playerwk *, GetPlayerWorkPtr, (char pno), 0x441B00);
 FunctionPointer(void, AmyForEventHammerScaleIm, (char playernmb, float scale), 0x486EC0);
 FunctionPointer(void, tikal_dispSwitch, (int sw), 0x4A3520);
 FunctionPointer(void, EggrobForEvent0_RP_Set, (NJS_POINT3* tgt), 0x4D1740);
 FunctionPointer(void, SetTableBg_mr, (int clipLevel), 0x52F400);
 FunctionPointer(void, EvSetTableBgMR, (), 0x52FB20);
+FunctionPointer(void, SetTableBg_chaos7, (int c_level), 0x55D690);
 FunctionPointer(void, SetClip_0500, (int ClipLevel), 0x6007E0);
 FunctionPointer(void, EventSe_Init, (int maxid), 0x64FC80);
 VoidFunc(EventSe_Close, 0x64FCB0);
@@ -117,6 +122,7 @@ FunctionPointer(void, effect_create, (task* obj, __int16 ef_num, float ef_x, flo
 FunctionPointer(void, effect_create2, (task* obj, int ef_num, float ef_x, float ef_y, float ef_z, NJS_TEXLIST* ef_name), 0x6ED770);
 FunctionPointer(void, effect_color, (__int16 ef_num, float col_a, float col_r, float col_g, float col_b), 0x6ED910);
 FunctionPointer(void, effect_size_change, (int ef_num, float speed_x, float speed_y), 0x6ED950);
+FunctionPointer(void, effect_anim_speed, (__int16 ef_num, float anim_speed), 0x6ED980);
 VoidFunc(crushLightOff, 0x6ED9A0);
 FunctionPointer(void, crushLightOn, (float pos_x, float pos_y, float pos_z, int crushLightNum, int life,
 	float start_width, float end_width, unsigned int start_col, unsigned int end_col), 0x6EDA20);
@@ -134,8 +140,18 @@ FunctionPointer(void, SetAngleChaos0, (int ang_x, int ang_y, int ang_z), 0x6EDD6
 VoidFunc(SetWaterChaos0, 0x6EDD80);
 FunctionPointer(void, ChangeMotspd, (float mod_spd), 0x6EDCE0);
 FunctionPointer(void, SetPositionChaos0, (float pos_x, float pos_y, float pos_z), 0x6EDD40);
+FunctionPointer(void, SetSclChaos0, (float scl_x, float scl_y, float scl_z), 0x6EDDB0);
+VoidFunc(CngMotStand2Chaos0, 0x6EDDD0);
+VoidFunc(CngMotStand4Chaos0, 0x6EDDE0);
+VoidFunc(CngMotFlyChaos0, 0x6EDDF0);
 FunctionPointer(void, CreateChaos0, (float pos_x, float pos_y, float pos_z,
 	int ang_x, int ang_y, int ang_z, signed int cng_int), 0x6EE930);
+FunctionPointer(void, SetEffectRotaryEmerald, (int eme_num, NJS_TEXLIST* ef_name, float scale, float col_a, float col_r, float col_g, float col_b), 0x6EEA30);
+FunctionPointer(void, SplashRotaryEmerald, (float splash_spd), 0x6EEAC0);
+VoidFunc(deleteRotaryEmeraldTask, 0x6EEE00);
+FunctionPointer(void, CreateRotaryEmerald, (float pos_x, float pos_y, float pos_z,
+	float r, int rot_spd, task* eme1_task_p, task* eme2_task_p, task* eme3_task_p,
+	task* eme4_task_p, task* eme5_task_p, task* eme6_task_p, task* eme7_task_p), 0x6EEF40);
 FunctionPointer(void, EV_Alife_FaceChange, (task* tp, int texid), 0x6EEFD0);
 FunctionPointer(task*, EV_Alife, (), 0x6EF2C0);
 FunctionPointer(task*, COverlayCreate, (float s, float a, float r, float g, float b), 0x6EF480);
@@ -151,9 +167,17 @@ FunctionPointer(void, CIchimaie2_SetBlendingMode, (task* _this, int index, char 
 VoidFunc(deleteScanLine, 0x6EF750);
 FunctionPointer(void, createScanLine, (unsigned __int8 a, unsigned __int8 r, unsigned __int8 g, unsigned __int8 b, int res), 0x6EF940);
 FunctionPointer(task*, CSkyWalk_create2, (task* obj, float height), 0x6EF9C0);
+VoidFunc(Last1AHigh_Create, 0x6EFAF0);
+VoidFunc(Last1AHigh_Delete, 0x6EFB10);
 VoidFunc(efWhiteOff, 0x6EFB30);
 FunctionPointer(void, efWhiteOn, (int in_int, int out_int), 0x6EFCA0);
 FunctionPointer(void, efWhiteOn2, (int in_int, int white_int, int out_int), 0x6EFD00);
+FunctionPointer(void, StgChaos7CtrlOff, (int fexit), 0x6EFD70);
+VoidFunc(StgChaos7Howl1, 0x6EFDF0);
+FunctionPointer(void, StgChaos7Breath, (float length), 0x6EFE00);
+FunctionPointer(void, StgChaos7SetPos, (float pos_x, float pos_y, float pos_z), 0x6EFE10);
+FunctionPointer(void, StgChaos7SetAng, (int ang_x, int ang_y, int ang_z), 0x6EFE60);
+FunctionPointer(void, StgChaos7CtrlOn, (float pos_x, float pos_y, float pos_z, int ang_x, int ang_y, int ang_z, int rot_spd), 0x6EFEC0);
 FunctionPointer(task*, SetEventBirdie0, (), 0x6F0070);
 FunctionPointer(task*, SetEventBirdie1, (), 0x6F00A0);
 FunctionPointer(task*, SetEventBirdie2, (), 0x6F00D0);
@@ -169,6 +193,15 @@ FunctionPointer(void, seteggmobleparam, (float updown_rat, int updown_acc), 0x6F
 FunctionPointer(task*, GetEggMobleTask, (), 0x6F0BF0);
 FunctionPointer(task*, Create_SphereBomb, (float x, float y, float z, __int16 frame, float sphere_radius, float scl_spd), 0x6F0D10);
 FunctionPointer(void, ChgSphereBombMode, (task* tp, char mode), 0x6F0D90);
+FunctionPointer(void, SetSphereBombParameter, (task* tp, float scl_reduce_acc, float vscroll_spd, float sphere_radious), 0x6F0DB0);
+VoidFunc(WaterPillarOff, 0x6F1000);
+FunctionPointer(void, WaterPillarOn, (float pos_x, float pos_y, float pos_z, float play_spd, float scale), 0x6F15A0);
+FunctionPointer(void, effect2_delete, (__int16 ef_num), 0x6F17E0);
+FunctionPointer(void, effect2_create, (task* obj, __int16 ef_num, float ef_x, float ef_y, float ef_z, NJS_TEXLIST* ef_name, __int16 ef_frame), 0x6F18C0);
+FunctionPointer(void, effect2_scl, (__int16 ef_num, float sx, float sy), 0x6F1A40);
+FunctionPointer(void, effect2_color, (__int16 ef_num, float col_a, float col_r, float col_g, float col_b), 0x6F1A70);
+FunctionPointer(void, effect2_angle, (__int16 ef_num, int ang_start, int ang_speed), 0x6F1AB0);
+FunctionPointer(void, effect2_size_change, (__int16 ef_num, float speed_x, float speed_y), 0x6F1AE0);
 FunctionPointer(void, stopWaveCtrl, (int id), 0x6F1B80);
 FunctionPointer(void, createWaveCtrl, (float x, float y, float z, float a4, float a5, int a6, int a7, int a8), 0x6F1D30);
 FunctionPointer(task*, SetEventFrog, (), 0x6F1DE0);
@@ -284,6 +317,7 @@ VoidFunc(EV_EggViperJoushou, 0x7B55B0);
 FunctionPointer(void, EV_EggViperArawaru, (float xpos, float ypos, float zpos, int yang), 0x7B5CF0);
 
 //Stuff that doesn't have an official name because it was part of the main event function in the 360 version:
+VoidFunc(deleteChaos0_EV00F3, 0x6657C0);
 VoidFunc(deleteChaos0_EV00F2, 0x6667B0);
 VoidFunc(create_task_gattai_EV00C2, 0x674420);
 VoidFunc(delete_task_gattai_EV00C2, 0x674480);
@@ -320,6 +354,7 @@ VoidFunc(create_task_gattai_EV004D, 0x6B3250);
 VoidFunc(kill_task_gattai_EV004D, 0x6B32B0);
 FunctionPointer(void, MoveChaosPuddle_EV0088, (float pos_x, float pos_y, float pos_z, int frame), 0x691140);
 FunctionPointer(void, destroy_p_shadowTask_EV0064, (char id), 0x6A6520);
+VoidFunc(RemoveTornado2Emerald_EV00FA, 0x65F760);
 
 //Character Functions
 FunctionPointer(void, MilesTalesPrower, (task*), 0x461700);
@@ -373,6 +408,20 @@ static inline void createChaos0_EV00F2(int ang, float pos_x, float pos_y, float 
 		push[pos_x]
 		mov edi, [ang]
 		call [createChaos0_EV00F2Ptr]
+		add esp, 12
+	}
+}
+
+static const void* const createChaos0_EV00F3Ptr = (void*)0x665A90;
+static inline void createChaos0_EV00F3(int ang, float pos_x, float pos_y, float pos_z)
+{
+	__asm
+	{
+		push[pos_z]
+		push[pos_y]
+		push[pos_x]
+		mov edi, [ang]
+		call[createChaos0_EV00F3Ptr]
 		add esp, 12
 	}
 }

@@ -170,15 +170,15 @@ void ev0001_s_intro(int state)
 		EV_SetPos(player, -46.549999f, 780.0f, 1381.84f);
 		EV_SetAng(player, 0, 49152, 0);
 		EV_ClrAction(player);
-		SONIC_SKY_2 = CSkyWalk_create2(player, 740.0f);
+		SONIC_SKY = CSkyWalk_create2(player, 740.0f);
 		EV_Wait((int)fps * 90);
 		if(NY_SKY){
 			FreeTask(NY_SKY);
 			NY_SKY = 0;
 		}
-		if(SONIC_SKY_2){
-			FreeTask(SONIC_SKY_2);
-			SONIC_SKY_2 = 0;
+		if(SONIC_SKY){
+			FreeTask(SONIC_SKY);
+			SONIC_SKY = 0;
 		}
 		EV_CameraPos(0, 0, 306.10999f, 419.31f, 1376.84f);
 		EV_CameraAng(0, 0, 7680, 54528, 0);
@@ -314,9 +314,9 @@ void ev0001_s_intro(int state)
 			FreeTask(B_OUT);
 			B_OUT = 0;
 		}
-		if(SONIC_SKY_2){
-			FreeTask(SONIC_SKY_2);
-			SONIC_SKY_2 = 0;
+		if(SONIC_SKY){
+			FreeTask(SONIC_SKY);
+			SONIC_SKY = 0;
 		}
 		if(SONIC_02SKY){
 			FreeTask(SONIC_02SKY);

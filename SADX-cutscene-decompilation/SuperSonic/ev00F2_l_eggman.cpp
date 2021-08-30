@@ -2,7 +2,6 @@
 #include "SADXEventFunctions.h"
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
-#include "UsercallFunctionHandler.h"
 
 void ev00F2_l_eggman(int state)
 {

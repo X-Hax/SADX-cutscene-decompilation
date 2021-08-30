@@ -8,13 +8,13 @@ void ev003E_t_flashback(int state)
 	switch (state) {
 	case 1:
 		player = EV_GetPlayer(0);
-		equipment = GetCharObj2(0)->Upgrades; //Store the player's upgrades
+		equipment = GetPlayerWorkPtr(0)->equipment; //Store the player's upgrades
 		eq_saved = 1;
 		if (enableUnusedCode) {
-			GetCharObj2(0)->Upgrades &= ~0x08u; //Remove the Jet Anklet.
+			GetPlayerWorkPtr(0)->equipment &= Upgrades_JetAnklet; //Remove the Jet Anklet.
 		}
 		else {
-			GetCharObj2(0)->Upgrades &= ~0x10u; //Remove the Rhythm badge (Vanilla).
+			GetPlayerWorkPtr(0)->equipment &= Upgrades_RhythmBadge; //Remove the Rhythm badge (Vanilla).
 		}
 		EV_CameraOn();
 		EV_PadOff();
@@ -188,7 +188,7 @@ void ev003E_t_flashback(int state)
 	case 2:
 		if (eq_saved)
 		{
-			GetCharObj2(0)->Upgrades = equipment;
+			GetPlayerWorkPtr(0)->equipment = equipment;
 			eq_saved = 0;
 		}
 		EV_CameraOff();

@@ -214,7 +214,7 @@ void ev0091_k_leavepastsecond(int state)
 		EV_CameraAng(1, 8, 6223, 30586, 0);
 		EV_Wait(30);
 		if (enableUnusedCode) {
-			SONIC_SKY_2 = CSkyWalk_create2(player, -152.60001f); //Stop Knuckles sliding off the pedestal
+			SONIC_SKY = CSkyWalk_create2(player, -152.60001f); //Stop Knuckles sliding off the pedestal
 		}
 		EV_SetPos(player, 6.3000002f, -152.60001f, 2173.4399f);
 		EV_SetAng(player, 0, 36216, 0);
@@ -263,9 +263,9 @@ void ev0091_k_leavepastsecond(int state)
 		}
 		EV_ClrAction(player);
 		EV_SetAction(player, KNUCKLES_ACTIONS[83], &KNUCKLES_TEXLIST, 0.69999999f, 1, 16);
-		if (enableUnusedCode && SONIC_SKY_2) {
-			FreeTask(SONIC_SKY_2);
-			SONIC_SKY_2 = 0;
+		if (enableUnusedCode && SONIC_SKY) {
+			FreeTask(SONIC_SKY);
+			SONIC_SKY = 0;
 		}
 		EV_SetPos(player, -1475.3f, -408.10001f, 2126.7f);
 		EV_SetAng(player, 0, 48432, 0);
@@ -404,9 +404,9 @@ void ev0091_k_leavepastsecond(int state)
 		EV_MoveFree(e102);
 		EV_RemovePlayer(2);
 		EV_LookFree(player);
-		if (enableUnusedCode && SONIC_SKY_2) {
-			FreeTask(SONIC_SKY_2);
-			SONIC_SKY_2 = 0;
+		if (enableUnusedCode && SONIC_SKY) {
+			FreeTask(SONIC_SKY);
+			SONIC_SKY = 0;
 		}
 		EV_SerifStop();
 		if (FLASH)

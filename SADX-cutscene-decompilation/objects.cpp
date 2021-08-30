@@ -1,13 +1,23 @@
 #include "SADXModLoader.h"
 
 //List of object pointers and what the game puts in them.
+task* AMY_SKY;					//Sky Floor
+task* AL_01;					//Chao
+task* AL_02;					//Chao
+task* AL_03;					//Chao
+task* AL_04;					//Chao
+task* AL_05;					//Chao
+task* AL_06;					//Chao
+task* AL_07;					//Chao
 task* B_EME;					//Chaos Emerald: Blue
+task* B_IN;						//Fadein
 task* B_OUT;					//Fadeout
 task* BALL;						//Tikal ball in EV0001
 task* BLACK;					//Black Tint+Fadeout
 task* BLACK1;					//Black Tint+Fadeout
 task* BLACK2;					//Black Tint+Fadeout
 task* BLACK3;					//Black Tint+Fadeout
+task* BIG_SKY;					//Sky Floor
 task* bird;						//Flicky
 task* bird1;					//Flicky
 task* bird2;					//Flicky
@@ -15,6 +25,7 @@ task* bird3;					//Flicky
 task* BLACKOUT;					//Fadein
 task* bomb1;					//Explosion effect
 task* bomb2;					//Explosion effect
+task* BOM;						//Explosion
 task* BOY;						//NPC
 task* boy1;						//NPC
 task* BOY2;						//NPC
@@ -100,6 +111,20 @@ task* hoge5;					//Flashback image
 task* IWA;						//Egg Viper Debris
 task* IWA2;						//Egg Viper Debris
 task* IWA3;						//Egg Viper Debris
+task* K_NORMAL;					//Knuckles Clan
+task* K_FAT;					//Knuckles Clan
+task* K_TALL;					//Knuckles Clan
+task* K_TALL2;					//Knuckles Clan
+task* K01_EME;					//Black Chaos Emerald
+task* K02_EME;					//Black Chaos Emerald
+task* K03_EME;					//Black Chaos Emerald
+task* K04_EME;					//Black Chaos Emerald
+task* K05_EME;					//Black Chaos Emerald
+task* K06_EME;					//Black Chaos Emerald
+task* K07_EME;					//Black Chaos Emerald
+task* K08_EME;					//Black Chaos Emerald
+task* KNUCKLES_SKY;				//Sky Floor
+task* KNUCKLES_2SKY;				//Sky Floor
 task* KOTORI;					//Amy's bird
 task* KOTORI2;					//Amy's bird
 task* KOUKYU;					//Tikal ball
@@ -114,6 +139,8 @@ task* LIGHT_R;					//Light for Eggman's fanfare
 task* Mhand;					//Eggman's claw
 task* Mhand2;					//Eggman's claw
 task* m_sonic;					//Metal Sonic
+task* MILES_SKY;				//Sky Floor
+task* MILES_2SKY;				//Sky Floor
 task* NY_SKY;					//Fake skybox
 //task* obj_amy;				//Amy after grabbing onto Tails.
 task* obj_decoy;				//Target point for cameras and heads.
@@ -124,6 +151,13 @@ task* obj_wing1;				//Amy's bird
 task* obj_wing2;				//Amy's bird
 task* obj_wing_p;				//bird
 task* obj_wing_t;				//bird
+task* object_blue;				//Chaos Emerald
+task* object_green;				//Chaos Emerald
+task* object_purple;			//Chaos Emerald
+task* object_sky;				//Chaos Emerald
+task* object_white;				//Chaos Emerald
+task* object_yellow;			//Chaos Emerald
+task* object_red;				//Chaos Emerald
 task* ol1;						//NPC
 task* oy1;						//NPC
 task* oy2;						//NPC
@@ -167,12 +201,16 @@ task* SMOKE;					//Smoke Effect
 task* SMOKE1;					//Smoke Effect
 task* SMOKE2;					//Smoke Effect
 task* SONIC_JUMP;				//Sky floor
-task* SONIC_SKY_2;				//Sky floor
+task* SONIC_SKY;				//Sky floor
 task* SONIC_02SKY;				//Sky floor
+task* SONIC_2SKY;				//Sky floor
+task* SONIC_3SKY;				//Sky floor
+task* SONIC_4SKY;				//Sky floor
 task* suki1_obj;				//Borders when Eggman spots Tails' purple emerald.
 task* suki2_obj;				//Borders when Eggman spots Tails' purple emerald.
 task* suki1_point;				//Borders when Eggman spots Tails' purple emerald.
 task* suki2_point;				//Borders when Eggman spots Tails' purple emerald.
+task* SUPER_S;					//Flash uring Super Sonic transformation.
 task* task_frame;				//Flashback image
 task* task_icm;					//Flashback image
 task* task_ichimaie;			//Flashback image
@@ -209,6 +247,8 @@ task* TAMA_19;					//Bullet
 task* TAMA_20;					//Bullet
 task* TEPODON;					//Eggman's Missile
 task* tikal;					//Tikal ball
+task* TIKAL_BALL;				//Tikal ball
+task* TIKAL_SKY;				//Sky Floor
 task* tikalb;					//Tikal ball
 task* Tik;						//Tikal ball
 task* TR2;						//Tornado 2
