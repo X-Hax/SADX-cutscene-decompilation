@@ -35,7 +35,7 @@ void ev00FE_l_outro(int state)
 		EV_CanselOn();
 		B_IN = COverlayCreate(1.0f, 0.2f, 0.0f, 0.0f, 0.0f);
 		EV_Wait(1);
-		GetPlayerWorkPtr(0)->equipment &= Upgrades_SuperSonic; //Disable Super Sonic
+		GetPlayerWorkPtr(0)->equipment &= ~Upgrades_SuperSonic; //Disable Super Sonic
 		EV_InitPlayer(0);
 		Last1AHigh_Create();
 		SetBankDir(120);

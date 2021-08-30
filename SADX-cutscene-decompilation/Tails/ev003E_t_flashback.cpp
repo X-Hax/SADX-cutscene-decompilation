@@ -11,10 +11,10 @@ void ev003E_t_flashback(int state)
 		equipment = GetPlayerWorkPtr(0)->equipment; //Store the player's upgrades
 		eq_saved = 1;
 		if (enableUnusedCode) {
-			GetPlayerWorkPtr(0)->equipment &= Upgrades_JetAnklet; //Remove the Jet Anklet.
+			GetPlayerWorkPtr(0)->equipment &= ~Upgrades_JetAnklet; //Remove the Jet Anklet.
 		}
 		else {
-			GetPlayerWorkPtr(0)->equipment &= Upgrades_RhythmBadge; //Remove the Rhythm badge (Vanilla).
+			GetPlayerWorkPtr(0)->equipment &= ~Upgrades_RhythmBadge; //Remove the Rhythm badge (Vanilla).
 		}
 		EV_CameraOn();
 		EV_PadOff();

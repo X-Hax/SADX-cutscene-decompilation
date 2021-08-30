@@ -624,9 +624,6 @@
     <ClCompile Include="SuperSonic\ev00F4_l_sonicwakesup.cpp">
       <Filter>Source Files\SuperSonic</Filter>
     </ClCompile>
-    <ClCompile Include="SuperSonic\ev00f5_l_sonicfindsknuckles.cpp">
-      <Filter>Source Files\SuperSonic</Filter>
-    </ClCompile>
     <ClCompile Include="SuperSonic\ev00F6_l_past.cpp">
       <Filter>Source Files\SuperSonic</Filter>
     </ClCompile>
@@ -658,6 +655,9 @@
       <Filter>Source Files\Big</Filter>
     </ClCompile>
     <ClCompile Include="SuperSonic\ev00FE_l_outro.cpp">
+      <Filter>Source Files\SuperSonic</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperSonic\ev00F5_l_sonicfindsknuckles.cpp">
       <Filter>Source Files\SuperSonic</Filter>
     </ClCompile>
   </ItemGroup>
