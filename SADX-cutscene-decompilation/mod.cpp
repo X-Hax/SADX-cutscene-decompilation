@@ -10,6 +10,7 @@ extern "C"
 	__declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions)
 	{
 		CutsceneDataList[0x0001]->Function = ev0001_s_intro;
+		CutsceneDataList[0x0001]->Textures = (PVMEntry*)&texTbl_ev0001;
 		CutsceneDataList[0x0002]->Function = ev0002_s_chaos0defeated;
 		CutsceneDataList[0x0003]->Function = ev0003_s_tailscrash;
 		CutsceneDataList[0x0006]->Function = ev0006_s_poolsidewithtails;

@@ -3,10 +3,15 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+TEX_PVMTABLE texTbl_ev0001[] = {
+	(char*)("ICM0001_3"), &ICM0001_3_TEXLIST,
+	(char*)("SSPATCAR_BODY"), &SSPATCAR_BODY_TEXLIST,
+	(char*)("EV_HELI"), &EV_HELI_TEXLIST,
+};
+
 void ev0001_s_intro(int state)
 {
 	float fps = 1.0f; //testing for 60 FPS scenes
-
 	switch (state) {
 	case 1:
 		player = EV_GetPlayer(0);
@@ -28,15 +33,15 @@ void ev0001_s_intro(int state)
 		NY_SKY = CIchimaie2_Create(&ICM0001_3_TEXLIST, 0);
 		CIchimaie2_SetPriority(NY_SKY, -69.0f);
 		BALL = CTikalLight_Create(536.63f, 30.0f, 718.0f);
-		EV_CreateObject(&OYAJI_A, 131.44f, 9.8000002f, 1503.5699f, 0, 14447, 0);
-		EV_CreateObject(&FAT_A, 32.360001f, 8.3000002f, 1504.04f, 0, 80100, 0);
-		EV_CreateObject(&BOYS_A, 19.67f, 5.6599998f, 1502.95f, 0, 18419, 0);
-		EV_CreateObject(&FAT_B, 580.54999f, 8.3000002f, 1063.28f, 0, 92921, 0);
-		EV_CreateObject(&LADY_A, 330.06f, 10.85f, 1058.5699f, 0, 3608, 0);
-		EV_CreateObject(&OYAJI_B, 377.54001f, 9.8000002f, 1158.5699f, 0, 38243, 0);
-		EV_CreateObject(&LADY_B, 197.89f, 10.85f, 1152.89f, 0, 17867, 0);
-		EV_CreateObject(&LADY_C, 173.05f, 10.85f, 1270.47f, 0, 47674, 0);
-		EV_CreateObject(&OYAJI_C, 183.28999f, 9.8000002f, 1265.27f, 0, 47532, 0);
+		EV_CreateObject(&OYAJI_A, 131.44f, 9.8000002f, 1503.5699f, 0, 0x386F, 0);
+		EV_CreateObject(&FAT_A, 32.360001f, 8.3000002f, 1504.04f, 0, 0x138E4, 0);
+		EV_CreateObject(&BOYS_A, 19.67f, 5.6599998f, 1502.95f, 0, 0x47F3, 0);
+		EV_CreateObject(&FAT_B, 580.54999f, 8.3000002f, 1063.28f, 0, 0x16AF9, 0);
+		EV_CreateObject(&LADY_A, 330.06f, 10.85f, 1058.5699f, 0, 0xE18, 0);
+		EV_CreateObject(&OYAJI_B, 377.54001f, 9.8000002f, 1158.5699f, 0, 0x9563, 0);
+		EV_CreateObject(&LADY_B, 197.89f, 10.85f, 1152.89f, 0, 0x45CB, 0);
+		EV_CreateObject(&LADY_C, 173.05f, 10.85f, 1270.47f, 0, 0xBA3A, 0);
+		EV_CreateObject(&OYAJI_C, 183.28999f, 9.8000002f, 1265.27f, 0, 0xB9AC, 0);
 		EV_Wait((int)fps * 1);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f / fps, 1, 0);
@@ -100,29 +105,29 @@ void ev0001_s_intro(int state)
 		EV_Wait((int)fps * 1);
 		BGM_Play(MusicIDs_s_square);
 		tikal_dispSwitch(0);
-		EV_CameraPerspective(0, 1, 10923);
+		EV_CameraPerspective(0, 1, 0x2AAB);
 		EV_CameraPos(0, 0, 116.84f, 14.44f, 1653.05f);
-		EV_CameraAng(0, 0, 1575, 4843, 0);
+		EV_CameraAng(0, 0, 0x627, 0x12EB, 0);
 		EV_CameraPos(0, (int)fps * 150, 161.53999f, 14.44f, 1630.65f);
 		EV_Wait((int)fps * 110);
 		moveObject(LADY_A, 307.23001f, 10.85f, 1054.78f, 365.69f, 10.85f, 1051.6801f, 2 * 200);
 		moveObject(FAT_B, 610.07001f, 8.3000002f, 1053.4f, 508.42999f, 8.3000002f, 1099.62f, 2 * 550);
 		EV_Wait((int)fps * 20);
 		EV_CameraPos(0, 0, 232.67999f, 22.09f, 1144.67f);
-		EV_CameraAng(0, 0, 35, 53739, 0);
+		EV_CameraAng(0, 0, 0x23, 0xD1EB, 0);
 		EV_CameraPos(0, (int)fps * 150, 250.72f, 22.09f, 1183.03f);
 		EV_Wait((int)fps * 110);
 		moveObject(LADY_B, 197.89f, 10.85f, 1152.89f, 197.46001f, 10.85f, 1209.71f, (int)fps * 210);
 		EV_Wait((int)fps * 10);
 		EV_CameraPos(0, 0, 297.07001f, 17.950001f, 1184.13f);
-		EV_CameraAng(0, 0, 291, 0x4000, 0);
+		EV_CameraAng(0, 0, 0x123, 0x4000, 0);
 		EV_CameraPos(0, (int)fps * 150, 298.79999f, 17.940001f, 1271.98f);
 		moveObject(LADY_C, 172.95f, 10.85f, 1296.21f, 172.67999f, 10.85f, 1206.63f, (int)fps * 240);
 		moveObject(OYAJI_C, 182.66f, 9.8000002f, 1287.36f, 183.03999f, 10.85f, 1200.08f, (int)fps * 240);
 		EV_Wait((int)fps * 120);
-		EV_CameraPerspective(0, 1, 12743);
+		EV_CameraPerspective(0, 1, 0x31C7);
 		EV_CameraPos(1, 0, 621.21997f, 1.15f, 1035.13f);
-		EV_CameraAng(1, 0, 4387, 18920, 0);
+		EV_CameraAng(1, 0, 0x1123, 0x49E8, 0);
 		EV_CameraPos(1, (int)fps * 200, 614.96002f, 1.15f, 1009.89f);
 		EV_SetPath(HELI_01, (EPATHTAG*)0x2C12710, 0.5f / fps, 0);
 		EV_Wait((int)fps * 20);
@@ -139,11 +144,11 @@ void ev0001_s_intro(int state)
 		EV_Wait((int)fps * 80);
 		tikal_dispSwitch(1);
 		EV_CameraPos(0, 0, 364.62f, 216.24001f, 1124.0f);
-		EV_CameraAng(0, 0, 63232, 54507, 0);
+		EV_CameraAng(0, 0, 0xF700, 0xD4EB, 0);
 		EV_CameraPos(0, (int)fps * 150, 292.38f, 234.87f, 1164.73f);
-		EV_CameraAng(0, (int)fps * 150, 63232, 54507, 0);
+		EV_CameraAng(0, (int)fps * 150, 0xF700, 0xD4EB, 0);
 		EV_SetPos(player, 623.65997f, 0.0f, 757.79999f);
-		EV_SetAng(player, 0, 49152, 0);
+		EV_SetAng(player, 0, 0xC000, 0);
 		stopObjectAll();
 		EV_Wait((int)fps * 10);
 		EV_FreeObject(&OYAJI_A);
@@ -163,12 +168,12 @@ void ev0001_s_intro(int state)
 		EventSe_Oneshot(17, 100, 0, 0);
 		EV_Wait((int)fps * 30);
 		seqVars[1] = 0; //SSVAR_CAR_DISP
-		EV_CameraPerspective(0, 1, 12743);
+		EV_CameraPerspective(0, 1, 0x31C7);
 		EV_CameraPos(0, 0, 12.69f, 770.32001f, 1382.84f);
-		EV_CameraAng(0, 0, 63488, 0x4000, 0);
+		EV_CameraAng(0, 0, 0xF800, 0x4000, 0);
 		CIchimaie2_SetDstAlpha(NY_SKY, 1.0f, 1);
 		EV_SetPos(player, -46.549999f, 780.0f, 1381.84f);
-		EV_SetAng(player, 0, 49152, 0);
+		EV_SetAng(player, 0, 0xC000, 0);
 		EV_ClrAction(player);
 		SONIC_SKY = CSkyWalk_create2(player, 740.0f);
 		EV_Wait((int)fps * 90);
@@ -181,10 +186,10 @@ void ev0001_s_intro(int state)
 			SONIC_SKY = 0;
 		}
 		EV_CameraPos(0, 0, 306.10999f, 419.31f, 1376.84f);
-		EV_CameraAng(0, 0, 7680, 54528, 0);
+		EV_CameraAng(0, 0, 0x1E00, 0xD500, 0);
 		EV_CameraPos(1, (int)fps * 30, 362.84f, 478.39999f, 1344.7f);
 		EV_SetPos(player, 370.0f, 480.0f, 1342.17f);
-		EV_SetAng(player, 0, 49152, 0);
+		EV_SetAng(player, 0, 0xC000, 0);
 		SONIC_02SKY = CSkyWalk_create2(player, 480.0f);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f / fps, 1, 0);
@@ -213,7 +218,7 @@ void ev0001_s_intro(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f / fps, 1, 0);
 		EV_CameraPos(0, 0, 364.98999f, 482.34f, 1344.7f);
-		EV_CameraAng(0, 0, 7680, 54016, 0);
+		EV_CameraAng(0, 0, 0x1E00, 0xD300, 0);
 		EventSe_Play(5, 1335, (int)fps * 1800);
 		EventSe_Volume(5, 80, (int)fps * 120);
 		EventSe_Play(3, 1336, (int)fps * 1800);
@@ -232,7 +237,7 @@ void ev0001_s_intro(int state)
 		EV_SetPath(PAT_03, &epathtag_EV0001_03PT, 1.0f / fps, 0);
 		EV_Wait((int)fps * 25);
 		EV_CameraPos(0, 0, 300.23001f, 493.31f, 1425.24f);
-		EV_CameraAng(0, 0, 51456, 14848, 0);
+		EV_CameraAng(0, 0, 0xC900, 0x3A00, 0);
 		EV_CameraPos(0, (int)fps * 200, 316.22f, 493.31f, 1317.41f);
 		EV_SetPath(PAT_04, &epathtag_EV0001_04PT, 1.0f / fps, 0);
 		EV_Wait((int)fps * 30);
@@ -266,7 +271,7 @@ void ev0001_s_intro(int state)
 		EV_LookFree(player);
 		EV_ClrAction(player);
 		EV_SetPos(player, 118.25f, 30.0f, 1509.55f);
-		EV_SetAng(player, 0, 24576, 0);
+		EV_SetAng(player, 0, 0x6000, 0);
 		EV_ClrAction(player);
 		EV_CameraPos(0, 0, 103.03f, 9.46f, 1534.3199f);
 		EV_CameraTargetObj(0, 0, player, 0.0f, 6.0f, 0.0f, 0);
@@ -276,9 +281,9 @@ void ev0001_s_intro(int state)
 		EV_FreeObject(&PAT_02);
 		EV_FreeObject(&PAT_04);
 		EV_CameraTargetFree();
-		EV_CameraPerspective(0, (int)fps * 1, 10923);
+		EV_CameraPerspective(0, (int)fps * 1, 0x2AAB);
 		EV_CameraPos(0, 0, 123.08f, 2.2f, 1502.99f);
-		EV_CameraAng(0, 0, 4807, 27722, 0);
+		EV_CameraAng(0, 0, 0x12C7, 0x6C4A, 0);
 		EV_CameraPos(0, (int)fps * 90, 120.42f, 2.2f, 1501.59f);
 		EV_Wait((int)fps * 10);
 		EV_SerifPlay(403);
@@ -291,7 +296,7 @@ void ev0001_s_intro(int state)
 		EventSe_Stop(3);
 		EventSe_Stop(4);
 		EV_CameraPos(0, 0, 103.03f, 9.46f, 1534.3199f);
-		EV_CameraAng(0, 0, 64711, 59978, 0);
+		EV_CameraAng(0, 0, 0xFCC7, 0xEA4A, 0);
 		EV_CameraPos(0, (int)fps * 90, 116.24f, 8.3999996f, 1525.95f);
 		EV_CameraTargetObj(0, (int)fps * 60, player, 0.0f, 6.0f, 0.0f, 0);
 		EV_ClrAction(player);

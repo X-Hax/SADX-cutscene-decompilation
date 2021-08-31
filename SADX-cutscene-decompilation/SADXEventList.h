@@ -1,6 +1,7 @@
 #pragma once
 
 void ev0001_s_intro(int state);
+TEX_PVMTABLE texTbl_ev0001[];
 void ev0002_s_chaos0defeated(int state);
 void ev0003_s_tailscrash(int state);
 void ev0006_s_poolsidewithtails(int state);
