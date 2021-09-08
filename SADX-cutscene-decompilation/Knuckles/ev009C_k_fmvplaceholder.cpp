@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev009C[] = { 0 };
+
 void ev009C_k_fmvplaceholder(int state)
 {
 	switch (state) {

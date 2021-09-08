@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0114[] = { 0 };
+
 void ev0114_t_afterskydeck(int state)
 {
 	switch (state) {
@@ -46,9 +48,9 @@ void ev0114_t_afterskydeck(int state)
 		EV_ClrFace(sonic);
 		EV_CameraTargetFree();
 		EV_CameraPos(0, 0, -137.13f, 86.779999f, -176.17999f);
-		EV_CameraAng(0, 0, 63161, 19141, 0);
+		EV_CameraAng(0, 0, 0xF6B9, 0x4AC5, 0);
 		EV_CameraPos(0, 40, -126.66f, 89.489998f, -180.33f);
-		EV_CameraAng(0, 40, 63161, 20165, 0);
+		EV_CameraAng(0, 40, 0xF6B9, 0x4EC5, 0);
 		EV_SerifPlay(1549);
 		if (VoiceLanguage == Languages_Japanese)
 		{
@@ -65,7 +67,7 @@ void ev0114_t_afterskydeck(int state)
 		EV_SetFace(sonic, "L");
 		EV_LookFree(sonic);
 		EV_CameraPos(0, 40, -142.2f, 95.239998f, -154.23f);
-		EV_CameraAng(0, 40, 60089, 60101, 0);
+		EV_CameraAng(0, 40, 0xEAB9, 0xEAC5, 0);
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_MsgClose();

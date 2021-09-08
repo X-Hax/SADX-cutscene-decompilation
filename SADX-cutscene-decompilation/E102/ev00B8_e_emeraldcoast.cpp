@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00B8[] = {
+	(char*)("BIG_KAERU"), &big_kaeru_TEXLIST
+};
+
 void ev00B8_e_emeraldcoast(int state)
 {
 	switch (state) {
@@ -29,7 +33,7 @@ void ev00B8_e_emeraldcoast(int state)
 			player->twp->pos.z + 14.0f, 0, 0x8000, 0);
 		EV_SetMode(Frog, 0);
 		EV_Wait(1);
-		EV_SetAng(Frog, 0, -18688, 0);
+		EV_SetAng(Frog, 0, -0x4900, 0);
 		EV_ClrAction(player);
 		EV_ClrAction(Frog);
 		EV_SetAction(player, E102_ACTIONS[45], &E102_TEXLIST, 1.0f, 1, 0);
@@ -38,7 +42,7 @@ void ev00B8_e_emeraldcoast(int state)
 			player->twp->pos.x,
 			player->twp->pos.y + 16.497999f,
 			player->twp->pos.z + 28.820999f);
-		EV_CameraAng(1, 0, 63488, 0, 0);
+		EV_CameraAng(1, 0, 0xF800, 0, 0);
 		EV_SetPath(KOUKYU, &epathtag_E00B8TK, 0.60000002f, 2);
 		EV_Wait(120);
 		EV_CameraPos(1, 30,

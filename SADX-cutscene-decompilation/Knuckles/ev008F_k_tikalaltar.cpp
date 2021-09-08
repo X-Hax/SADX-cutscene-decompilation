@@ -3,6 +3,11 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev008F[] = {
+	(char*)("EV_ALIFE"), ADV03_TEXLISTS[0],
+	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST
+};
+
 void ev008F_k_tikalaltar(int state)
 {
 	switch (state) {
@@ -25,12 +30,12 @@ void ev008F_k_tikalaltar(int state)
 		//EV_ClrAction(EV_GetPlayer(1)); //Game calls the wrong ID here. It wouldn't do anything though, because Tikal isn't running an event animation.
 		EV_InitPlayer(2);
 		EV_SetPos(player, 10.49f, 90.0f, 91.110001f);
-		EV_SetAng(player, 0, 35459, 0);
+		EV_SetAng(player, 0, 0x8A83, 0);
 		EV_Wait(1);
 		EV_SetPos(player, 10.49f, 90.0f, 91.110001f);
-		EV_SetAng(player, 0, 35459, 0);
+		EV_SetAng(player, 0, 0x8A83, 0);
 		EV_CameraPos(1, 0, 11.34f, 96.0f, 79.639999f);
-		EV_CameraAng(1, 0, 0, 30172, 0);
+		EV_CameraAng(1, 0, 0, 0x75DC, 0);
 		EV_Wait(10);
 		EV_SerifPlay(1099);
 		EV_MsgW(1, msgTbl_ev008F[TextLanguage][0]); //"\aI beg of you.   Hear me now."
@@ -41,14 +46,14 @@ void ev008F_k_tikalaltar(int state)
 		EV_SetAction(tikal, &action_j_j0015_tikal, &TIKAL_TEXLIST, 0.07f, 0, 8);
 		EV_Wait(20);
 		EV_CameraPos(1, 20, 14.07f, 94.540001f, 32.380001f);
-		EV_CameraAng(1, 20, 64512, 28636, 0);
+		EV_CameraAng(1, 20, 0xFC00, 0x6FDC, 0);
 		EV_Wait(50);
 		EV_SerifPlay(1100);
 		EV_MsgW(1, msgTbl_ev008F[TextLanguage][1]); //"\aMy father is coming here soon."
 		EV_ClrFace(tikal);
 		EV_SetFace(tikal, "DEAD");
 		EV_CameraPos(1, 0, -0.47999999f, 96.849998f, 39.830002f);
-		EV_CameraAng(1, 0, 0, 34268, 0);
+		EV_CameraAng(1, 0, 0, 0x85DC, 0);
 		EV_Wait(60);
 		EV_SerifPlay(1101);
 		EV_MsgW(1, msgTbl_ev008F[TextLanguage][2]); //"\aAnd I fear what may happen."
@@ -56,18 +61,18 @@ void ev008F_k_tikalaltar(int state)
 		EV_SetFace(tikal, "D");
 		EV_Wait(60);
 		EV_CameraPos(1, 0, -200.11f, 131.67f, 41.610001f);
-		EV_CameraAng(1, 0, 64768, 51164, 0);
+		EV_CameraAng(1, 0, 0xFD00, 0xC7DC, 0);
 		EV_CameraPos(1, 100, -184.45f, 130.5f, 38.549999f);
-		EV_CameraAng(1, 100, 64768, 51164, 0);
+		EV_CameraAng(1, 100, 0xFD00, 0xC7DC, 0);
 		EV_SerifPlay(1102);
 		EV_MsgW(1, msgTbl_ev008F[TextLanguage][3]); //"\aYou must take everyone \naway from he"...
 		EV_ClrFace(tikal);
 		EV_SetFace(tikal, "ZAAEC");
 		EV_Wait(60);
 		EV_CameraPos(1, 0, 11.21f, 104.26f, 39.919998f);
-		EV_CameraAng(1, 0, 59136, 23004, 0);
+		EV_CameraAng(1, 0, 0xE700, 0x59DC, 0);
 		EV_CameraPos(1, 20, -3.21f, 96.849998f, 42.290001f);
-		EV_CameraAng(1, 20, 0, 38876, 0);
+		EV_CameraAng(1, 20, 0, 0x97DC, 0);
 		EV_Wait(10);
 		EV_ClrFace(tikal);
 		EV_SetFace(tikal, "LE");
@@ -77,7 +82,7 @@ void ev008F_k_tikalaltar(int state)
 		EV_MsgClose();
 		EV_Wait(1);
 		EV_CameraPos(0, 0, -75.260002f, 96.919998f, 63.110001f);
-		EV_CameraAng(0, 0, 62208, 53980, 0);
+		EV_CameraAng(0, 0, 0xF300, 0xD2DC, 0);
 		EV_Wait(10);
 		EventSe_Oneshot(1335, 20, 0, 0);
 		createWaveCtrl(-40.700001f, 80.0f, 52.68f, 0.22f, 1.0f, 6, 18, 1);
@@ -90,13 +95,13 @@ void ev008F_k_tikalaltar(int state)
 		stopWaveCtrl(1);
 		stopWaveCtrl(2);
 		EV_CameraPos(1, 0, -1.24f, 100.15f, 44.73f);
-		EV_CameraAng(1, 0, 0, 10972, 0);
+		EV_CameraAng(1, 0, 0, 0x2ADC, 0);
 		EV_MsgClose();
 		EV_CameraPos(1, 200, -1.24f, 100.15f, 44.73f);
-		EV_CameraAng(1, 200, 0, 52188, 0);
+		EV_CameraAng(1, 200, 0, 0xCBDC, 0);
 		EV_Wait(190);
 		EV_CameraPos(1, 0, -39.029999f, 95.389999f, 24.879999f);
-		EV_CameraAng(1, 0, 512, 46300, 0);
+		EV_CameraAng(1, 0, 0x200, 0xB4DC, 0);
 		EV_ClrAction(tikal);
 		EV_SetAction(tikal, &action_j_j0018_tikal, &TIKAL_TEXLIST, 0.19f, 0, 0);
 		EV_Wait(15);
@@ -119,9 +124,9 @@ void ev008F_k_tikalaltar(int state)
 		EV_SetAction(tikal, &action_j_j0019_tikal, &TIKAL_TEXLIST, 0.80000001f, 0, 0);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, 6.3000002f, 93.139999f, 41.189999f);
-		EV_CameraAng(1, 0, 3072, 25308, 0);
+		EV_CameraAng(1, 0, 0xC00, 0x62DC, 0);
 		EV_CameraPos(1, 300, 4.5100002f, 93.970001f, 43.25f);
-		EV_CameraAng(1, 300, 3072, 25308, 0);
+		EV_CameraAng(1, 300, 0xC00, 0x62DC, 0);
 		EV_Wait(130);
 		EV_ClrFace(tikal);
 		if (VoiceLanguage == Languages_Japanese)
@@ -157,15 +162,15 @@ void ev008F_k_tikalaltar(int state)
 		EV_SetShadow(CHA3, 0.40000001f);
 		EV_SetShadow(CHA4, 0.40000001f);
 		EV_SetShadow(CHA5, 0.40000001f);
-		EV_SetAction(CHA, &action_al_stand_al_model, *ADV03_TEXLISTS, 0.69999999f, 1, 4);
-		EV_SetAction(CHA2, &action_al_stand_al_model, *ADV03_TEXLISTS, 1.0f, 1, 4);
-		EV_SetAction(CHA3, &action_al_stand_al_model, *ADV03_TEXLISTS, 0.80000001f, 1, 4);
-		EV_SetAction(CHA4, &action_al_stand_al_model, *ADV03_TEXLISTS, 0.89999998f, 1, 4);
-		EV_SetAction(CHA5, &action_al_stand_al_model, *ADV03_TEXLISTS, 0.89999998f, 1, 4);
+		EV_SetAction(CHA, &action_al_stand_al_model, ADV03_TEXLISTS[0], 0.69999999f, 1, 4);
+		EV_SetAction(CHA2, &action_al_stand_al_model, ADV03_TEXLISTS[0], 1.0f, 1, 4);
+		EV_SetAction(CHA3, &action_al_stand_al_model, ADV03_TEXLISTS[0], 0.80000001f, 1, 4);
+		EV_SetAction(CHA4, &action_al_stand_al_model, ADV03_TEXLISTS[0], 0.89999998f, 1, 4);
+		EV_SetAction(CHA5, &action_al_stand_al_model, ADV03_TEXLISTS[0], 0.89999998f, 1, 4);
 		EV_CameraPos(1, 0, 11.13f, 99.739998f, 57.59f);
-		EV_CameraAng(1, 0, 61184, 7644, 0);
+		EV_CameraAng(1, 0, 0xEF00, 0x1DDC, 0);
 		EV_ClrAction(tikal);
-		EV_SetAng(tikal, 0, 2126, 0);
+		EV_SetAng(tikal, 0, 0x84E, 0);
 		EV_LookAngle(tikal, -0x1FFF, -0x1FFF, 0);
 		EV_Wait(50);
 		EventSe_Oneshot(1333, 0, 0, 0);
@@ -177,23 +182,23 @@ void ev008F_k_tikalaltar(int state)
 		EventSe_Oneshot(1334, 0, 0, 0);
 		EV_Wait(10);
 		EV_CameraPos(1, 0, 26.9f, 90.699997f, 53.75f);
-		EV_CameraAng(1, 0, 3328, 14556, 0);
+		EV_CameraAng(1, 0, 0xD00, 0x38DC, 0);
 		EV_SerifPlay(1107);
 		EV_MsgW(1, msgTbl_ev008F[TextLanguage][8]); //"\aDon't worry, my friends.\nI won't let"...
 		EV_ClrFace(tikal);
 		EV_SetFace(tikal, "EBC");
 		EV_Wait(150);
 		EV_CameraPos(1, 0, -13.39f, 93.190002f, 58.369999f);
-		EV_CameraAng(1, 0, 3328, 52956, 0);
+		EV_CameraAng(1, 0, 0xD00, 0xCEDC, 0);
 		EV_LookFree(tikal);
 		EV_ClrAction(tikal);
 		EV_SetAction(tikal, &action_ti_walk, &TIKAL_TEXLIST, 0.80000001f, 1, 0);
 		EV_MovePoint2(tikal, 1.97f, 90.0f, 88.989998f, 0.2f, 0.059999999f);
 		EV_Wait(30);
 		EV_CameraPos(1, 0, 2.1400001f, 95.699997f, 71.949997f);
-		EV_CameraAng(1, 0, 1792, 1500, 0);
+		EV_CameraAng(1, 0, 0x700, 0x5DC, 0);
 		EV_CameraPos(1, 200, 4.2800002f, 92.93f, 87.050003f);
-		EV_CameraAng(1, 200, 3328, 1500, 0);
+		EV_CameraAng(1, 200, 0xD00, 0x5DC, 0);
 		EV_SetAng(CHA, 0, 299, 0);
 		EV_SetAng(CHA2, 0, 299, 0);
 		EV_SetAng(CHA3, 0, 299, 0);
@@ -213,7 +218,7 @@ void ev008F_k_tikalaltar(int state)
 		EV_Wait(90);
 		EV_MsgClose();
 		EV_CameraPos(1, 20, 6.0500002f, 96.269997f, 84.309998f);
-		EV_CameraAng(1, 20, 512, 39900, 0);
+		EV_CameraAng(1, 20, 0x200, 39900, 0);
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -120, 120);
 		efWhiteOn2(60, 30, 0);

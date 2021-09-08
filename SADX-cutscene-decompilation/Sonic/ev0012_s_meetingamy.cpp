@@ -3,6 +3,12 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0012[] = {
+	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
+	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
+	(char*)("AMY"), &AMY_TEXLIST
+};
+
 void ev0012_s_meetingamy(int state)
 {
 	switch (state) {
@@ -29,7 +35,7 @@ void ev0012_s_meetingamy(int state)
 			amy->twp->pos.z + 0.40000001f);
 		EV_SetAng(obj_wing1, amy->twp->ang.x,
 			0x4000 - amy->twp->ang.y,
-			amy->twp->ang.z + 512);
+			amy->twp->ang.z + 0x200);
 		EV_Wait(1);
 		EV_SetMode(obj_wing1, 0);
 		EV_SetAction(obj_wing1, &action_w_w9001_wing, &VER2_WING_TEXLIST, 0.80000001f, 1, 0);
@@ -42,15 +48,15 @@ void ev0012_s_meetingamy(int state)
 		EV_ClrAction(player);
 		EV_SetPos(player, -534.20001f, 0.0f, 1200.0f);
 		EV_CameraPos(1, 0, -535.0f, 7.1999998f, 1191.3f);
-		EV_CameraAng(1, 0, 597, 33219, 0);
+		EV_CameraAng(1, 0, 0x255, 0x81C3, 0);
 		EV_CameraPos(1, 50, -535.0f, 5.1999998f, 1191.3f);
-		EV_CameraAng(1, 50, 1109, 33219, 0);
+		EV_CameraAng(1, 50, 0x455, 0x81C3, 0);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 8);
 		EV_Wait(20);
 		EV_SerifPlay(497);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[0]); //"\aSonic!   Wait up!"
 		EV_SetPos(amy, -525.5f, 0.02f, 1268.9f);
-		EV_SetAng(amy, 0, 451, 0);
+		EV_SetAng(amy, 0, 0x1C3, 0);
 		EV_SetAction(amy, AMY_ACTIONS[44], &AMY_TEXLIST, 1.3f, 1, 1);
 		EV_MovePoint2(amy, -528.20001f, 0.0f, 1208.0f, 0.64999998f, 0.059999999f);
 		EV_ClrAction(player);
@@ -59,22 +65,22 @@ void ev0012_s_meetingamy(int state)
 		EV_Wait(10);
 		BGM_Play(MusicIDs_amy);
 		EV_CameraPos(1, 40, -531.40002f, 5.3000002f, 1191.7f);
-		EV_CameraAng(1, 40, 65365, 31683, 0);
+		EV_CameraAng(1, 40, 0xFF55, 0x7BC3, 0);
 		EV_Wait(45);
 		EV_LookObject(amy, player, 0.0f, 5.0f, 0.0f);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.5f, 1, 16);
-		EV_SetAng(player, 0, 64768, 0);
+		EV_SetAng(player, 0, 0xFD00, 0);
 		EV_SetPos(player, -534.20001f, 0.0099999998f, 1203.0f);
-		EV_SetAng(player, 0, 65168, 0);
+		EV_SetAng(player, 0, 0xFE90, 0);
 		EV_SetPos(amy, -525.5f, 0.02f, 1230.9f);
 		EV_CameraChaseFree();
 		EV_CameraPos(1, 0, -518.29999f, 8.6999998f, 1194.5f);
-		EV_CameraAng(1, 0, 64454, 25453, 512);
+		EV_CameraAng(1, 0, 0xFBC6, 0x636D, 0x200);
 		EV_MovePoint2(amy, -530.20001f, 0.0f, 1210.0f, 0.89999998f, 0.1f);
 		EV_MsgClose();
 		EV_CameraPos(1, 120, -523.79999f, 1.2f, 1191.3f);
-		EV_CameraAng(1, 120, 2984, 25027, 768);
+		EV_CameraAng(1, 120, 0xBA8, 0x61C3, 0x300);
 		EV_WaitMove(amy);
 		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_ClrAction(amy);
@@ -136,7 +142,7 @@ void ev0012_s_meetingamy(int state)
 		EV_Wait(1);
 		EV_SetPos(player, -534.20001f, 0.0099999998f, 1199.0f);
 		EV_WaitAction(amy);
-		EV_SetAng(amy, 0, 35328, 0);
+		EV_SetAng(amy, 0, 0x8A00, 0);
 		EV_ClrAction(amy);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 1);
 		EV_ClrFace(player);
@@ -146,7 +152,7 @@ void ev0012_s_meetingamy(int state)
 		EV_SetAction(amy, AMY_ACTIONS[70], &AMY_TEXLIST, 0.75f, 1, 1);
 		EV_Wait(20);
 		EV_CameraPos(1, 90, -528.5f, 2.5f, 1189.9f);
-		EV_CameraAng(1, 90, 2133, 28611, 768);
+		EV_CameraAng(1, 90, 0x855, 0x6FC3, 0x300);
 		EV_ClrFace(amy);
 		switch (VoiceLanguage) {
 		case 0:
@@ -178,8 +184,8 @@ void ev0012_s_meetingamy(int state)
 		EV_SetAction(amy, &action_a_a0010_amy, &AMY_TEXLIST, 0.75f, 1, 0);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, -533.76001f, 6.9976001f, 1200.51f);
-		EV_CameraAng(1, 0, 0, 36352, 0);
-		EV_SetAng(player, 0, 3840, 0);
+		EV_CameraAng(1, 0, 0, 0x8E00, 0);
+		EV_SetAng(player, 0, 0xF00, 0);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 12);
 		EV_ClrFace(amy);
@@ -187,23 +193,23 @@ void ev0012_s_meetingamy(int state)
 		EV_SerifPlay(501);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[4]); //"\aListen, this birdie seems to be \nin "...
 		EV_CameraPos(1, 75, -533.70001f, 7.02f, 1200.45f);
-		EV_CameraAng(0, 40, 65024, 36352, 0);
+		EV_CameraAng(0, 40, 0xFE00, 0x8E00, 0);
 		EV_Wait(40);
-		EV_CameraAng(0, 85, 63291, 36352, 0);
+		EV_CameraAng(0, 85, 0xF73B, 0x8E00, 0);
 		EV_Msg((msgTbl_ev0012[TextLanguage])[5]); //"\aSo you need to be his bodyguard \nfor"...
 		EV_Wait(40);
 		EV_SerifWait();
 		EV_CameraPos(0, 0, -529.27002f, 5.3000002f, 1203.2f);
-		EV_CameraAng(0, 0, 1792, 9712, 0);
+		EV_CameraAng(0, 0, 0x700, 0x25F0, 0);
 		EV_ClrFace(player);
 		EV_SetFace(player, "AED0");
 		EV_CameraPos(0, 8, -526.40002f, 2.7f, 1206.5f);
-		EV_CameraAng(0, 8, 4864, 7920, 0);
+		EV_CameraAng(0, 8, 0x1300, 0x1EF0, 0);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[122], &SONIC_TEXLIST, 2.0f, 0, 5);
 		EV_SetAction(player, &action_s_s0022_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 4);
 		EV_CameraPos(0, 30, -525.79999f, 2.2f, 1207.2f);
-		EV_CameraAng(0, 30, 4864, 7920, 0);
+		EV_CameraAng(0, 30, 0x1300, 0x1EF0, 0);
 		EV_SetFace(player, "F");
 		dsPlay_oneshot_v(1333, 0, 0, 127, -529.20001f, 2.01f, 1206.0f);
 		EV_SerifPlay(502);
@@ -215,9 +221,9 @@ void ev0012_s_meetingamy(int state)
 		EV_ClrFace(player);
 		EV_Wait(30);
 		EV_CameraPos(1, 0, -516.59998f, 8.1099997f, 1186.9f);
-		EV_CameraAng(1, 0, 64085, 23040, 65024);
+		EV_CameraAng(1, 0, 0xFA55, 0x5A00, 0xFE00);
 		EV_CameraPos(1, 90, -520.54999f, 7.4200001f, 1189.9f);
-		EV_CameraAng(1, 90, 64085, 24064, 65024);
+		EV_CameraAng(1, 90, 0xFA55, 0x5E00, 0xFE00);
 		EV_ClrFace(amy);
 		EV_SetFace(amy, "EEDDEEDDEEED0");
 		EV_SerifPlay(503);

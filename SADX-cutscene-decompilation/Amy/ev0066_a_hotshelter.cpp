@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0066[] = { 0 };
+
 void ev0066_a_hotshelter(int state)
 {
     switch(state){
@@ -16,7 +18,7 @@ void ev0066_a_hotshelter(int state)
         EV_InitPlayer(0);
         createModel(0.0f, 0.0f, 0.0f, 0, 0, 0, 0.5f, 0.5f, 0.5f, &object_baloon_esc_baloon_esc_baloon, &OBJ_REGULAR_TEXLIST, 0);
         EV_SetPos(player, 7.0f, 545.0f, -3613.0f);
-        EV_SetAng(player, 0, 14502, 0);
+        EV_SetAng(player, 0, 0x38A6, 0);
         EV_Wait(1);
         EV_ClrAction(player);
         EV_SetMode(player, 0);
@@ -32,7 +34,7 @@ void ev0066_a_hotshelter(int state)
         EV_CameraChaseRM(0, 1, player, 12.0f, 0, 47332, 0, 7.0f, 0, 47332, 0, 7.0f);
         EV_Wait(80);
         EV_CameraTargetObj(1, 0, player, 0.0f, 3.0f, 0.0f, 0);
-        EV_CameraChaseRM(0, 350, player, 0.0f, -9101, 0, 0, 70.0f, 1820, -41869, 0, 30.0f);
+        EV_CameraChaseRM(0, 350, player, 0.0f, -9101, 0, 0, 70.0f, 0x71C, -41869, 0, 30.0f);
         tikal = CTikalLight_Create(
             player->twp->pos.x - 5.1599002f,
             player->twp->pos.y + 200.0f,

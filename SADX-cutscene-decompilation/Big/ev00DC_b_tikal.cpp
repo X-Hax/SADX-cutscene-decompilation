@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00DC[] = {
+	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST
+};
+
 void ev00DC_b_tikal(int state)
 {
 	switch (state) {
@@ -22,27 +26,27 @@ void ev00DC_b_tikal(int state)
 		EV_ClrAction(tikal);
 		EV_SetAction(tikal, &action_j_j0040_tikal, &TIKAL_TEXLIST, 0.1f, 0, 8);
 		EV_SetPos(player, 2.9000001f, 0.0099999998f, 329.10001f);
-		EV_SetAng(player, 0, 32856, 0);
+		EV_SetAng(player, 0, 0x8058, 0);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, 2.0799999f, 12.97f, 312.72f);
-		EV_CameraAng(1, 0, 611, 33244, 0);
+		EV_CameraAng(1, 0, 0x263, 0x81DC, 0);
 		EV_SerifPlay(1352);
 		EV_Wait(30);
 		EV_MsgW(1, msgTbl_ev00DC[TextLanguage][0]); //"\aWow!"
 		EV_ClrFace(tikal);
 		EV_SetFace(tikal, "I");
 		EV_CameraPos(1, 20, 0.33000001f, 14.86f, 242.48f);
-		EV_CameraAng(1, 20, 611, 32732, 0);
+		EV_CameraAng(1, 20, 0x263, 0x7FDC, 0);
 		EV_Wait(50);
 		EV_CameraPos(1, 0, 5.4099998f, 9.3199997f, 285.07999f);
-		EV_CameraAng(1, 0, 3427, 476, 0);
+		EV_CameraAng(1, 0, 0xD63, 0x1DC, 0);
 		EV_CameraPos(1, 200, 5.1100001f, 11.58f, 278.45999f);
-		EV_CameraAng(1, 200, 3427, 476, 0);
+		EV_CameraAng(1, 200, 0xD63, 0x1DC, 0);
 		EV_SerifPlay(1353);
 		EV_MsgW(1, msgTbl_ev00DC[TextLanguage][1]); //"\aIs it alright for me to be here?"
 		EV_Wait(60);
 		EV_CameraPos(0, 0, -69.160004f, 21.98f, 202.53999f);
-		EV_CameraAng(0, 0, 57856, 38876, 0);
+		EV_CameraAng(0, 0, 0xE200, 0x97DC, 0);
 		EventSe_Oneshot(1335, 128, -100, 0);
 		createWaveCtrl(-46.84f, -3.0f, 245.56f, 0.25f, 1.0f, 6, 18, 1);
 		EV_Wait(30);
@@ -58,25 +62,25 @@ void ev00DC_b_tikal(int state)
 		EV_ClrAction(tikal);
 		EV_SetAction(tikal, &action_j_j0017_tikal, &TIKAL_TEXLIST, 0.1f, 1, 32);
 		EV_CameraPos(1, 0, 6.5300002f, 9.1400003f, 244.72f);
-		EV_CameraAng(1, 0, 3840, 24540, 0);
+		EV_CameraAng(1, 0, 0xF00, 0x5FDC, 0);
 		EV_CameraPos(1, 200, 3.74f, 9.9700003f, 248.25999f);
-		EV_CameraAng(1, 200, 3840, 24540, 0);
+		EV_CameraAng(1, 200, 0xF00, 0x5FDC, 0);
 		EV_ClrFace(tikal);
 		EV_SetFace(tikal, "EAAAALD");
 		EV_SerifPlay(1354);
 		EV_MsgW(1, msgTbl_ev00DC[TextLanguage][2]); //"\aSo do you... Trust me?"
 		EV_Wait(100);
 		EV_CameraPos(1, 0, -2.24f, 8.1599998f, 289.48001f);
-		EV_CameraAng(1, 0, 3939, 7716, 0);
+		EV_CameraAng(1, 0, 0xF63, 0x1E24, 0);
 		EV_CameraPos(1, 200, -2.24f, 8.1599998f, 289.48001f);
-		EV_CameraAng(1, 200, 3939, 56356, 0);
+		EV_CameraAng(1, 200, 0xF63, 0xDC24, 0);
 		EV_SerifPlay(1355);
 		EV_MsgW(1, msgTbl_ev00DC[TextLanguage][3]); //"\aSo these are the 7 Emeralds…"
 		EV_Wait(200);
 		EV_MsgClose();
 		EV_Wait(10);
 		EV_CameraPos(1, 0, 7.9899998f, 14.16f, 230.02f);
-		EV_CameraAng(1, 0, 611, 31452, 0);
+		EV_CameraAng(1, 0, 0x263, 0x7ADC, 0);
 		EV_ClrAction(tikal);
 		EV_SetAction(tikal, &action_ti_walk, &TIKAL_TEXLIST, 1.3f, 1, 8);
 		EV_MovePoint2(tikal, 0.67000002f, 7.5f, 231.75f, 0.5f, 0.059999999f);
@@ -86,9 +90,9 @@ void ev00DC_b_tikal(int state)
 		EV_MovePoint2(player, -3.1700001f, -0.0099999998f, 295.20001f, 0.40000001f, 0.059999999f);
 		EV_Wait(90);
 		EV_CameraPos(1, 0, 66.440002f, 120.12f, 247.92f);
-		EV_CameraAng(1, 0, 64512, 2780, 0);
+		EV_CameraAng(1, 0, 0xFC00, 0xADC, 0);
 		EV_CameraPos(1, 100, 23.299999f, 103.95f, 89.510002f);
-		EV_CameraAng(1, 100, 64512, 2780, 0);
+		EV_CameraAng(1, 100, 0xFC00, 0xADC, 0);
 		EV_SetPos(tikal, 3.55f, 90.0f, 89.660004f);
 		EV_SetAng(tikal, 0, 32856, 0);
 		EV_Wait(1);
@@ -109,7 +113,7 @@ void ev00DC_b_tikal(int state)
 		EV_Wait(40);
 		EV_SetAction(player, BIG_ACTIONS[23], &BIG_TEXLIST, 1.0f, 1, 0);
 		EV_SetPos(player, 10.49f, 90.0f, 91.110001f);
-		EV_SetAng(player, 0, 35459, 0);
+		EV_SetAng(player, 0, 0x8A83, 0);
 		EV_Wait(30);
 		EV_SetAction(tikal, &action_j_j0040_tikal, &TIKAL_TEXLIST, 0.1f, 1, 8);
 		EV_Wait(20);
@@ -118,9 +122,9 @@ void ev00DC_b_tikal(int state)
 		EV_Wait(30);
 		EV_MoveFree(tikal);
 		EV_CameraPos(1, 0, 1.12f, 99.309998f, 32.529999f);
-		EV_CameraAng(1, 0, 62464, 27868, 0);
+		EV_CameraAng(1, 0, 0xF400, 0x6CDC, 0);
 		EV_CameraPos(1, 40, 2.9000001f, 99.309998f, 33.43f);
-		EV_CameraAng(1, 40, 62464, 27868, 0);
+		EV_CameraAng(1, 40, 0xF400, 0x6CDC, 0);
 		EV_Wait(10);
 		EV_ClrFace(tikal);
 		EV_SetFace(tikal, "DALC");
@@ -128,7 +132,7 @@ void ev00DC_b_tikal(int state)
 		EV_MsgW(1, msgTbl_ev00DC[TextLanguage][6]); //"\aThe servers are... \nthe 7 Chaos Emer"...
 		EV_Wait(30);
 		EV_CameraPos(1, 300, 4.6799998f, 99.309998f, 34.34f);
-		EV_CameraAng(1, 300, 62464, 27868, 0);
+		EV_CameraAng(1, 300, 0xF400, 0x6CDC, 0);
 		EV_Wait(50);
 		EV_ClrFace(tikal);
 		if (!VoiceLanguage)
@@ -143,37 +147,37 @@ void ev00DC_b_tikal(int state)
 		EV_MsgW(1, msgTbl_ev00DC[TextLanguage][7]); //"\aUnified by one that is\nthe controlle"...
 		EV_Wait(150);
 		EV_CameraPos(1, 0, -248.85001f, 474.97f, 176.23f);
-		EV_CameraAng(1, 0, 55296, 56540, 0);
+		EV_CameraAng(1, 0, 0xD800, 0xDCDC, 0);
 		EV_CameraPos(1, 150, -231.94f, 474.97f, 195.97f);
-		EV_CameraAng(1, 150, 55296, 56540, 0);
+		EV_CameraAng(1, 150, 0xD800, 0xDCDC, 0);
 		EV_SerifPlay(1360);
 		EV_SetFace(tikal, "C");
 		EV_MsgW(1, msgTbl_ev00DC[TextLanguage][8]); //"\aThe 7 Chaos…"
 		EV_SetAction(tikal, &action_j_j0040_tikal, &TIKAL_TEXLIST, 0.1f, 0, 8);
 		EV_Wait(80);
 		EV_CameraPos(1, 0, -105.83f, 148.95f, 27.75f);
-		EV_CameraAng(1, 0, 60673, 51420, 0);
+		EV_CameraAng(1, 0, 0xED01, 0xC8DC, 0);
 		EV_CameraPos(1, 100, -108.46f, 143.59f, 28.33f);
-		EV_CameraAng(1, 100, 60673, 51420, 0);
+		EV_CameraAng(1, 100, 0xED01, 0xC8DC, 0);
 		EV_Wait(1);
 		EV_SerifPlay(1361);
 		EV_MsgW(1, msgTbl_ev00DC[TextLanguage][9]); //"\aThe controller itself..."
 		EV_SetAction(tikal, &action_j_j0041_tikal, &TIKAL_TEXLIST, 0.1f, 0, 8);
 		EV_Wait(70);
 		EV_CameraPos(1, 0, 2.77f, 102.2f, 30.459999f);
-		EV_CameraAng(1, 0, 61440, 31196, 0);
+		EV_CameraAng(1, 0, 0xF000, 0x79DC, 0);
 		EV_CameraPos(1, 10, 2.0799999f, 100.28f, 35.029999f);
-		EV_CameraAng(1, 10, 61440, 31196, 0);
+		EV_CameraAng(1, 10, 0xF000, 0x79DC, 0);
 		EV_ClrFace(tikal);
 		EV_SetFace(tikal, "AI");
 		EV_Wait(10);
 		EV_CameraPos(1, 200, 1.9400001f, 99.900002f, 35.939999f);
-		EV_CameraAng(1, 200, 61440, 31196, 0);
+		EV_CameraAng(1, 200, 0xF000, 0x79DC, 0);
 		EV_Wait(10);
 		EV_CameraPos(1, 0, 10.09f, 94.949997f, 69.260002f);
-		EV_CameraAng(1, 0, 2313, 1216, 0);
+		EV_CameraAng(1, 0, 0x909, 0x4C0, 0);
 		EV_CameraPos(1, 200, 8.5f, 98.029999f, 55.700001f);
-		EV_CameraAng(1, 200, 2313, 1216, 0);
+		EV_CameraAng(1, 200, 0x909, 0x4C0, 0);
 		EV_SerifPlay(1362);
 		EV_MsgW(0, msgTbl_ev00DC[TextLanguage][10]); //"\aCould this be the Emerald \nthat cont"...
 		EV_Wait(120);
@@ -182,10 +186,10 @@ void ev00DC_b_tikal(int state)
 		EV_SetFace(tikal, "ZZZKVV");
 		EV_Wait(20);
 		EV_CameraPos(1, 0, 2.9300001f, 96.970001f, 30.040001f);
-		EV_CameraAng(1, 0, 256, 32732, 0);
+		EV_CameraAng(1, 0, 0x100, 0x7FDC, 0);
 		EV_Wait(30);
 		EV_CameraPos(1, 30, 5.8299999f, 104.03f, 77.300003f);
-		EV_CameraAng(1, 30, 65024, 35292, 0);
+		EV_CameraAng(1, 30, 0xFE00, 0x89DC, 0);
 		EventSe_Play(0, 760, 1800);
 		EV_Wait(40);
 		EventSe_Volume(0, -120, 120);

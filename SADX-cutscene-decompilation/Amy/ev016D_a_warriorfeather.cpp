@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev016D[] = { 0 };
+
 void ev016D_a_warriorfeather(int state)
 {
 	switch (state) {
@@ -15,7 +17,7 @@ void ev016D_a_warriorfeather(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		EV_SetPos(player, 0.55000001f, 12.79f, 0.15000001f);
-		EV_SetAng(player, 0, 62586, 0);
+		EV_SetAng(player, 0, 0xF47A, 0);
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_a_item_ha1, &AMY_TEXLIST, 0.2f, 0, 8);
@@ -24,7 +26,7 @@ void ev016D_a_warriorfeather(int state)
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EV_CameraTargetObj(1, 0, player, 0.0f, 4.5f, 0.0f, 0);
-		EV_CameraChaseRM(0, 310, player, 8.0f, 0, 81920, 0, 16.0f, 0, -1819, 0, 16.0f);
+		EV_CameraChaseRM(0, 310, player, 8.0f, 0, 0x14000, 0, 16.0f, 0, -0x71B, 0, 16.0f);
 		EV_SetAction(player, &action_a_item_ha0, &AMY_TEXLIST, 0.2f, 1, 16);
 		EV_Wait(10);
 		EV_SerifWait();
@@ -49,7 +51,7 @@ void ev016D_a_warriorfeather(int state)
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -120, 120);
 		EV_CameraPos(1, 100, -0.81999999f, 19.969999f, 7.7199998f);
-		EV_CameraAng(1, 100, 63390, 63641, 0);
+		EV_CameraAng(1, 100, 0xF79E, 0xF899, 0);
 		EV_Wait(80);
 		EV_MsgClose();
 		EV_Wait(10);

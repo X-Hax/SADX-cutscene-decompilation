@@ -3,6 +3,14 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00FE[] = {
+	(char*)("CHAOS0"),BOSSCHAOS0_TEXLISTS[0],
+	(char*)("EV_ALIFE"), ADV03_TEXLISTS[0],
+	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
+	(char*)("LAST1A_HIGHWAY_A"), &LAST1A_HIGHWAY_A_TEXLIST,
+	(char*)("WING_P"), &texlist_wing_p
+};
+
 void ev00FE_l_outro(int state)
 {
 	switch (state) {
@@ -136,7 +144,7 @@ void ev00FE_l_outro(int state)
 		EventSe_Oneshot(1334, 100, 0, 0);
 		EV_Wait(5);
 		EventSe_Oneshot(1334, 100, 0, 0);
-		EV_SetAng(CHAOS, 0, 30976, 0);
+		EV_SetAng(CHAOS, 0, 0x7900, 0);
 		CngMotStand4Chaos0();
 		EV_Wait(45);
 		EV_CameraPos(0, 0, 706.84003f, 107.95f, -845.32001f);
@@ -477,7 +485,7 @@ void ev00FE_l_outro(int state)
 		EV_Wait(10);
 		EV_ClrAction(GetEggMobleTask());
 		EV_Wait(10);
-		seteggmobleparam(0.5f, 256);
+		seteggmobleparam(0.5f, 0x100);
 		EV_CameraPos(0, 0, 690.26001f, 157.64f, -732.03003f);
 		EV_CameraAng(0, 0, 0x74C, 0xF516, 0);
 		EV_CameraPos(0, 100, 686.82001f, 229.47f, -719.48999f);
@@ -626,7 +634,7 @@ void ev00FE_l_outro(int state)
 		}
 		EV_CameraPos(0, 300, -34.669998f, 600.21997f, -673.35999f);
 		EV_Wait(45);
-		EventSe_Oneshot(768, 100, 0, 0);
+		EventSe_Oneshot(0x300, 100, 0, 0);
 		EV_SetPos(player, 764.98999f, 100.0f, -814.88f);
 		EV_SetAng(player, 0, 0, 0);
 		EV_Wait(255);

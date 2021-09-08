@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev009D[] = { 0 };
+
 void ev009D_k_restoreme(int state)
 {
 	switch (state) {
@@ -21,13 +23,13 @@ void ev009D_k_restoreme(int state)
 		EV_ClrAction(player);
 		BGM_Play(MusicIDs_mstcln);
 		EV_CameraPos(1, 0, -5.4499998f, -246.39999f, 2460.3f);
-		EV_CameraAng(1, 0, 1394, 35251, 65280);
-		EV_CameraAng(1, 80, 5234, 35251, 65280);
+		EV_CameraAng(1, 0, 0x572, 0x89B3, 0xFF00);
+		EV_CameraAng(1, 80, 0x1472, 0x89B3, 0xFF00);
 		EV_Wait(100);
 		EV_CameraPos(1, 0, -3.7f, -241.89999f, 2480.0f);
-		EV_CameraAng(1, 0, 61776, 64880, 0);
+		EV_CameraAng(1, 0, 0xF150, 0xFD70, 0);
 		EV_CameraPos(1, 120, -4.0700002f, -243.5f, 2499.8999f);
-		EV_CameraAng(0, 100, 3152, 65136, 0);
+		EV_CameraAng(0, 100, 0xC50, 0xFE70, 0);
 		EV_Wait(60);
 		EV_MovePoint2(player, -2.5f, -157.0f, 2239.3999f, 1.8f, 0.5f);
 		EV_Wait(40);
@@ -42,17 +44,17 @@ void ev009D_k_restoreme(int state)
 		EV_Wait(15);
 		EV_CameraTargetFree();
 		EV_CameraPos(1, 0, -39.200001f, -156.39999f, 2138.8999f);
-		EV_CameraAng(1, 0, 1440, 38021, 0);
+		EV_CameraAng(1, 0, 0x5A0, 0x9485, 0);
 		EV_CameraPos(1, 90, -39.599998f, -149.5f, 2138.0f);
 		EV_Wait(100);
 		EV_SetAction(player, KNUCKLES_ACTIONS[83], &KNUCKLES_TEXLIST, 0.5f, 1, 0);
 		EV_CameraPos(1, 0, -7.3699999f, -156.0f, 2234.3f);
-		EV_CameraAng(1, 0, 928, 43141, 0);
+		EV_CameraAng(1, 0, 0x3A0, 0xA885, 0);
 		EV_CameraTargetObj(1, 40, player, 0.0f, 6.0f, 0.0f, 0);
 		EV_MovePoint2(player, -2.8699999f, -158.0f, 2201.8999f, 0.34999999f, 0.059999999f);
 		EV_Wait(40);
 		EV_CameraPos(1, 70, -3.3699999f, -156.0f, 2234.6699f);
-		EV_CameraAng(1, 70, 1269, 65121, 0);
+		EV_CameraAng(1, 70, 0x4F5, 0xFE61, 0);
 		EV_WaitMove(player);
 		EV_SetAction(player, KNUCKLES_ACTIONS[82], &KNUCKLES_TEXLIST, 0.80000001f, 1, 16);
 		EV_CameraTargetFree();
@@ -63,12 +65,12 @@ void ev009D_k_restoreme(int state)
 		EV_SetPos(player, -2.8699999f, -158.0f, 2204.8999f);
 		EV_SetAng(player, 0, 0x8000, 0);
 		EV_CameraPos(1, 0, -7.4499998f, -153.60001f, 2195.7f);
-		EV_CameraAng(1, 0, 64079, 39802, 65280);
+		EV_CameraAng(1, 0, 0xFA4F, 0x9B7A, 0xFF00);
 		EV_CameraPos(0, 90, -5.5700002f, -150.67f, 2194.76f);
-		EV_CameraAng(0, 90, 64591, 36474, 0);
+		EV_CameraAng(0, 90, 0xFC4F, 0x8E7A, 0);
 		EV_Wait(90);
 		EV_CameraPos(0, 100, -6.5999999f, -150.39999f, 2192.0f);
-		EV_CameraAng(0, 100, 64591, 36474, 0);
+		EV_CameraAng(0, 100, 0xFC4F, 0x8E7A, 0);
 		EV_SetAction(player, &action_k_k0009_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 16);
 		EV_Wait(20);
 		MemeCreate(3);
@@ -87,22 +89,22 @@ void ev009D_k_restoreme(int state)
 		EV_Wait(1);
 		EventSe_Volume(2, 90, 220);
 		EV_CameraPos(0, 40, -34.599998f, -147.60001f, 2162.5f);
-		EV_CameraAng(0, 40, 2127, 43642, 0);
+		EV_CameraAng(0, 40, 0x84F, 0xAA7A, 0);
 		EV_Wait(40);
 		EV_CameraPos(0, 60, -55.57f, -155.60001f, 2156.5f);
-		EV_CameraAng(0, 60, 10319, 45434, 3584);
+		EV_CameraAng(0, 60, 0x284F, 0xB17A, 0xE00);
 		EV_SetAction(player, &action_k_k0010_knuckles, &KNUCKLES_TEXLIST, 1.0f, 0, 16);
 		EV_SetAction(player, &action_k_k0011_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(60);
-		EV_CameraAng(0, 40, 8683, 49594, 3584);
+		EV_CameraAng(0, 40, 0x21EB, 0xC1BA, 0xE00);
 		EV_Wait(40);
 		EV_CameraPos(1, 0, 44.57f, -20.4f, 2195.7f);
-		EV_CameraAng(1, 0, 54607, 7802, 0);
+		EV_CameraAng(1, 0, 0xD54F, 0x1E7A, 0);
 		EV_CameraPos(1, 120, -17.450001f, -150.89999f, 2223.0f);
-		EV_CameraAng(1, 120, 1103, 62842, 0);
-		EV_CameraPerspective(0, 30, 9102);
+		EV_CameraAng(1, 120, 0x44F, 0xF57A, 0);
+		EV_CameraPerspective(0, 30, 0x238E);
 		EV_Wait(40);
-		EV_CameraPerspective(0, 60, 12743);
+		EV_CameraPerspective(0, 60, 0x31C7);
 		EV_Wait(60);
 		EventSe_Stop(2);
 		EventSe_Oneshot(1335, 128, 0, 0);
@@ -124,9 +126,9 @@ void ev009D_k_restoreme(int state)
 		EV_SetPos(player, -2.45f, -158.0f, 2192.3999f);
 		EV_SetAng(player, 0, 0x8000, 0);
 		EV_CameraPos(1, 0, -15.1f, -149.7f, 2188.0f);
-		EV_CameraAng(1, 0, 2895, 62330, 0);
+		EV_CameraAng(1, 0, 0xB4F, 0xF37A, 0);
 		EV_CameraPos(1, 100, -17.4f, -154.89999f, 2207.7f);
-		EV_CameraAng(1, 100, 3663, 61941, 0);
+		EV_CameraAng(1, 100, 0xE4F, 0xF1F5, 0);
 		EV_SetAction(player, &action_k_k0005_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 16);
 		EV_ClrFace(player);
 		EV_SetFace(player, "BCEK0");
@@ -137,7 +139,7 @@ void ev009D_k_restoreme(int state)
 		EV_ClrFace(player);
 		EV_Wait(60);
 		EV_CameraPos(0, 0, 3.7f, -153.89999f, 2181.7f);
-		EV_CameraAng(0, 0, 2895, 27514, 0);
+		EV_CameraAng(0, 0, 0xB4F, 0x6B7A, 0);
 		EV_ClrFace(player);
 		if (VoiceLanguage == Languages_Japanese)
 		{
@@ -159,7 +161,7 @@ void ev009D_k_restoreme(int state)
 		EV_SetAction(player, KNUCKLES_ACTIONS[83], &KNUCKLES_TEXLIST, 0.55000001f, 1, 0);
 		EV_SetAng(player, 0, 0, 0);
 		EV_CameraPos(1, 0, -5.1799998f, -155.2f, 2206.5f);
-		EV_CameraAng(1, 0, 1615, 64491, 0);
+		EV_CameraAng(1, 0, 0x64F, 0xFBEB, 0);
 		EV_MovePoint2(player, -2.74f, 158.0f, 2246.5f, 0.15000001f, 0.079999998f);
 		EV_CameraChase(player);
 		EV_Wait(80);
@@ -167,7 +169,7 @@ void ev009D_k_restoreme(int state)
 		EV_Wait(20);
 		EV_CameraChaseFree();
 		EV_CameraPos(0, 200, -2.55f, -155.92f, 2280.0f);
-		EV_CameraAng(0, 200, 3919, 65402, 0);
+		EV_CameraAng(0, 200, 0xF4F, 0xFF7A, 0);
 		crushLightOff();
 		crushLightOn(-3.52f, -136.0f, 2151.0f, 1, 8, 1.0f, 6.0f, 0xFF28AA28, 0x145014u);
 		EV_Wait(30);

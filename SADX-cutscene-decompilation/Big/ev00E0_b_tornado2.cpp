@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00E0[] = {
+	(char*)("FROG"), &texlist_frog
+};
+
 void ev00E0_b_tornado2(int state)
 {
 	switch (state) {
@@ -67,7 +71,7 @@ void ev00E0_b_tornado2(int state)
 		EV_SerifWait();
 		EV_MsgClose();
 		EV_CameraPos(0, 0, 27.99f, 791.21002f, -1167.11f);
-		EV_CameraAng(0, 0, 56949, 28672, 0);
+		EV_CameraAng(0, 0, 56949, 0x7000, 0);
 		EV_CameraPos(0, 120, 50.619999f, 855.01001f, -1221.75f);
 		EV_Wait(60);
 		EV_ClrAction(player);

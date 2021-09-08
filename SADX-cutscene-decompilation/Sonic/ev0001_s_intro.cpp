@@ -3,10 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
-TEX_PVMTABLE texTbl_ev0001[] = {
+PVMEntry texTbl_ev0001[] = {
 	(char*)("ICM0001_3"), &ICM0001_3_TEXLIST,
 	(char*)("SSPATCAR_BODY"), &SSPATCAR_BODY_TEXLIST,
-	(char*)("EV_HELI"), &EV_HELI_TEXLIST,
+	(char*)("EV_HELI"), &EV_HELI_TEXLIST
 };
 
 void ev0001_s_intro(int state)

@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00DA[] = {
+	(char*)("FROG"), &texlist_frog
+};
+
 void ev00DA_b_enterpast(int state)
 {
 	switch (state) {
@@ -17,12 +21,12 @@ void ev00DA_b_enterpast(int state)
 		EV_InitPlayer(0);
 		BGM_Play(MusicIDs_tical);
 		EV_SetPos(player, 710.12f, 40.0f, -648.96002f);
-		EV_SetAng(player, 0, 39726, 0);
+		EV_SetAng(player, 0, 0x9B2E, 0);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, 590.02002f, -59.919998f, -669.08002f);
-		EV_CameraAng(1, 0, 64924, 48048, 0);
+		EV_CameraAng(1, 0, 0xFD9C, 0xBBB0, 0);
 		EV_CameraPos(1, 200, 579.40002f, -10.05f, -670.21002f);
-		EV_CameraAng(1, 200, 2204, 48048, 0);
+		EV_CameraAng(1, 200, 0x89C, 0xBBB0, 0);
 		EV_SerifPlay(1346);
 		EV_MsgW(0, msgTbl_ev00DA[TextLanguage][0]); //"\aYes!"
 		EV_CreateObject(&Frog,

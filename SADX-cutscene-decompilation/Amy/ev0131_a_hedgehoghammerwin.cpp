@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0131[] = { 0 };
+
 void ev0131_a_hedgehoghammerwin(int state)
 {
 	switch (state) {

@@ -3,6 +3,11 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0062[] = {
+	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
+	(char*)("VER2_WING"), &VER2_WING_TEXLIST
+};
+
 void ev0062_a_meetsonic(int state)
 {
 	switch (state) {
@@ -15,10 +20,10 @@ void ev0062_a_meetsonic(int state)
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
-		EV_CreatePlayer(2, SonicTheHedgehog, -623.20001f, 5.5999999f, 1079.0f, 0, 49152, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, -623.20001f, 5.5999999f, 1079.0f, 0, 0xC000, 0);
 		EV_Wait(1);
 		EV_SetPos(player, -525.5f, 0.02f, 1340.9f);
-		EV_SetAng(player, 0, 32872, 0);
+		EV_SetAng(player, 0, 0x8068, 0);
 		sonic = EV_GetPlayer(2);
 		EV_SetPos(sonic, -534.20001f, 0.0099999998f, 1270.0f);
 		EV_SetAng(sonic, 0, 0x8000, 0);
@@ -36,7 +41,7 @@ void ev0062_a_meetsonic(int state)
 		moveObjectOn(KOTORI2, 4.8000002f, 7.5f, 0.40000001f, 100, player);
 		EV_CameraChase(player);
 		EV_CameraPos(1, 0, -537.22998f, 7.8400002f, 1349.59f);
-		EV_CameraAng(1, 0, 63488, 55808, 0);
+		EV_CameraAng(1, 0, 0xF800, 0xDA00, 0);
 		EV_WaitMove(player);
 		EV_ClrAction(player);
 		EV_SetAction(player, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 16);
@@ -51,10 +56,10 @@ void ev0062_a_meetsonic(int state)
 			player->twp->pos.x + 4.8000002f,
 			player->twp->pos.y + 7.5f,
 			player->twp->pos.z + 0.4f);
-		EV_CameraAng(1, 0, 64768, 1024, 0);
+		EV_CameraAng(1, 0, 0xFD00, 0x400, 0);
 		EV_CameraPos(1, 0, -527.0f, 11.04f, 1322.4f);
 		EV_Wait(1);
-		EV_CameraPerspective(0, 30, 1820);
+		EV_CameraPerspective(0, 30, 0x71C);
 		EV_CameraTargetObj(1, 30, sonic, 0.0f, 6.0f, 0.0f, 0);
 		EV_Wait(50);
 		EV_CameraTargetFree();
@@ -66,9 +71,9 @@ void ev0062_a_meetsonic(int state)
 			player->twp->pos.y + 7.5f,
 			player->twp->pos.z + 0.4f);
 		EV_SetAction(player, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 16);
-		EV_CameraPerspective(1, 1, 12561);
+		EV_CameraPerspective(1, 1, 0x3111);
 		EV_CameraPos(1, 0, -507.92999f, 6.0799999f, 1277.97f);
-		EV_CameraAng(1, 0, 256, 25600, 0);
+		EV_CameraAng(1, 0, 0x100, 0x6400, 0);
 		EV_CameraPos(1, 60, -520.62f, 6.5700002f, 1293.42f);
 		EV_ClrFace(player);
 		EV_SetFace(player, "F");
@@ -95,7 +100,7 @@ void ev0062_a_meetsonic(int state)
 		EV_Msg(msgTbl_ev0062[TextLanguage][2]); //"\aSo-nic!"
 		EV_Wait(10);
 		EV_CameraPos(1, 0, -512.66998f, 6.1300001f, 1315.1801f);
-		EV_CameraAng(1, 0, 256, 7424, 0);
+		EV_CameraAng(1, 0, 0x100, 0x1D00, 0);
 		EV_CameraChase(player);
 		EV_Wait(70);
 		EV_ClrFace(player);
@@ -104,7 +109,7 @@ void ev0062_a_meetsonic(int state)
 		EV_Wait(60);
 		EV_CameraChaseFree();
 		EV_CameraPos(1, 0, -529.40997f, 4.9000001f, 1256.3199f);
-		EV_CameraAng(1, 0, 512, 34816, 0);
+		EV_CameraAng(1, 0, 0x200, 0x8800, 0);
 		EV_SetPos(player, -525.5f, 0.02f, 1280.9f);
 		EV_SetAng(player, 0, 0x8000, 0);
 		EV_SetPos(KOTORI2,
@@ -120,10 +125,10 @@ void ev0062_a_meetsonic(int state)
 		EV_Wait(50);
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 16);
-		EV_SetAng(sonic, 0, 65168, 0);
+		EV_SetAng(sonic, 0, 0xFE90, 0);
 		EV_CameraChaseFree();
 		EV_CameraPos(1, 60, -514.03998f, 7.6999998f, 1216.6f);
-		EV_CameraAng(1, 60, 63829, 14787, 0);
+		EV_CameraAng(1, 60, 0xF955, 0x39C3, 0);
 		EV_Wait(50);
 		EV_SetFace(player, "G");
 		EV_SerifPlay(860);
@@ -140,9 +145,9 @@ void ev0062_a_meetsonic(int state)
 		EV_SerifPlay(861);
 		EV_Msg(msgTbl_ev0062[TextLanguage][4]); //"\aUhh...  Amy!"
 		EV_CameraPos(1, 0, -533.09998f, 5.6999998f, 1208.5f);
-		EV_CameraAng(1, 0, 597, 65475, 0);
+		EV_CameraAng(1, 0, 0x255, 0xFFC3, 0);
 		EV_CameraPos(0, 18, -532.29999f, 2.7f, 1213.3f);
-		EV_CameraAng(0, 18, 3157, 1475, 0);
+		EV_CameraAng(0, 18, 0xC55, 0x5C3, 0);
 		EV_Wait(1);
 		EventSe_Oneshot(1333, 0, 0, 0);
 		EV_ClrAction(sonic);
@@ -154,14 +159,14 @@ void ev0062_a_meetsonic(int state)
 		EV_ClrFace(sonic);
 		EV_MsgClose();
 		EV_CameraPos(0, 40, -516.84998f, 4.4099998f, 1187.33f);
-		EV_CameraAng(0, 40, 597, 22979, 0);
+		EV_CameraAng(0, 40, 0x255, 0x59C3, 0);
 		EV_Wait(40);
 		EV_SetPos(KOTORI2,
 			player->twp->pos.x + 4.8000002f,
 			player->twp->pos.y + 7.5f,
 			player->twp->pos.z + 0.4f);
 		EV_CameraPos(1, 60, -518.28003f, 4.5799999f, 1190.76f);
-		EV_CameraAng(1, 60, 597, 21443, 0);
+		EV_CameraAng(1, 60, 0x255, 0x53C3, 0);
 		EV_Wait(10);
 		EV_MovePoint2(player, -534.20001f, 0.0f, 1215.0f, 0.5f, 3.0f);
 		moveObjectOn(KOTORI2, 4.8000002f, 7.5f, 0.40000001f, 100, player);
@@ -172,7 +177,7 @@ void ev0062_a_meetsonic(int state)
 		EV_ClrFace(player);
 		EV_Wait(60);
 		EV_CameraPos(1, 0, -532.52002f, 6.21f, 1206.87f);
-		EV_CameraAng(1, 0, 2562, 30448, 0);
+		EV_CameraAng(1, 0, 0xA02, 0x76F0, 0);
 		EV_SetPos(KOTORI2,
 			player->twp->pos.x - 0.30000001f,
 			player->twp->pos.y,
@@ -182,7 +187,7 @@ void ev0062_a_meetsonic(int state)
 		EV_SetAction(KOTORI2, &action_w_w0815_wing, &VER1_WING_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(player, &action_a_a0815_amy, &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(15);
-		EV_CameraAng(1, 70, 63746, 30448, 0);
+		EV_CameraAng(1, 70, 0xF902, 0x76F0, 0);
 		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 0);
 		EV_LookFree(player);
 		EV_SetFace(player, "DACDECE");
@@ -194,7 +199,7 @@ void ev0062_a_meetsonic(int state)
 		EV_ClrFace(player);
 		EV_LookObject(player, sonic, 0.0f, 7.0f, 0.0f);
 		EV_CameraPos(1, 0, -509.20001f, 11.52f, 1213.24f);
-		EV_CameraAng(1, 0, 63829, 13251, 0);
+		EV_CameraAng(1, 0, 0xF955, 0x33C3, 0);
 		moveObjectOn(KOTORI2, 4.8000002f, 7.5f, 0.40000001f, 999999, player);
 		EV_ClrAction(KOTORI2);
 		EV_SetAction(KOTORI2, &action_w_w9001_wing, &VER2_WING_TEXLIST, 1.0f, 1, 8);
@@ -227,7 +232,7 @@ void ev0062_a_meetsonic(int state)
 		EV_SetAction(player, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 16);
 		EV_Wait(60);
 		EV_CameraPos(1, 0, -524.28998f, 7.2600002f, 1217.85f);
-		EV_CameraAng(1, 0, 63829, 7107, 0);
+		EV_CameraAng(1, 0, 0xF955, 0x1BC3, 0);
 		EV_ClrAction(sonic);
 		EV_CameraPos(0, 600, -510.0f, 11.01f, 1235.47f);
 		EV_ClrFace(sonic);
@@ -260,9 +265,9 @@ void ev0062_a_meetsonic(int state)
 	case 2:
 		stopObjectAll();
 		EV_SetPos(player, -537.53998f, 0.0f, 1127.25f);
-		EV_SetAng(player, 0, 33214, 0);
+		EV_SetAng(player, 0, 0x81BE, 0);
 		EV_CameraPos(1, 0, -546.82501f, 19.75f, 1079.097f);
-		EV_CameraAng(1, 0, 64256, 34755, 0);
+		EV_CameraAng(1, 0, 0xFB00, 0x87C3, 0);
 		EV_RemovePlayer(2);
 		EV_FreeObject(&KOTORI2);
 		EV_InitPlayer(0);

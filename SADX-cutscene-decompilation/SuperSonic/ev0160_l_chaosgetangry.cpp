@@ -3,6 +3,25 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0160[] = {
+	(char*)("CHAOS0"), BOSSCHAOS0_TEXLISTS[0],
+	(char*)("EV_CHAOS0_MANJU"), &EV_CHAOS0_MANJU_TEXLIST,
+	(char*)("CHAOS_SURFACE"), &CHAOS_SURFACE_TEXLIST,
+	(char*)("EV_K_PATYA"), ADV03_TEXLISTS[1],
+	(char*)("KNUCKLES_NORMAL"), &KNUCKLES_NORMAL_TEXLIST,
+	(char*)("KNUCKLES_LONG"), &KNUCKLES_LONG_TEXLIST,
+	(char*)("KNUCKLES_DEBU"), &KNUCKLES_DEBU_TEXLIST,
+	(char*)("EV_ALIFE"), ADV03_TEXLISTS[0],
+	(char*)("M_EM_BLUE"), &M_EM_BLUE_TEXLIST,
+	(char*)("M_EM_GREEN"), &M_EM_GREEN_TEXLIST,
+	(char*)("M_EM_PURPLE"), &M_EM_PURPLE_TEXLIST,
+	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST,
+	(char*)("M_EM_WHITE"), &M_EM_WHITE_TEXLIST,
+	(char*)("M_EM_YELLOW"), &M_EM_YELLOW_TEXLIST,
+	(char*)("M_EM_RED"),& texlist_m_em_red,
+	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST
+};
+
 void ev0160_l_chaosgetangry(int state)
 {
 	switch (state) {

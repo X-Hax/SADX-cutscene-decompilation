@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0169[] = { 0 };
+
 void ev0169_t_rhythmbadge(int state)
 {
 	switch (state) {
@@ -16,14 +18,14 @@ void ev0169_t_rhythmbadge(int state)
 		EV_SerifPlay(1718);
 		EV_Wait(1);
 		EV_SetPos(player, -789.0f, 100.25f, 904.0f);
-		EV_SetAng(player, 0, 63642, 0);
+		EV_SetAng(player, 0, 0xF89A, 0);
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_item_b0, &MILES_TEXLIST, 0.1f, 0, 16);
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EV_CameraTargetObj(1, 0, player, 0.0f, 3.5f, 0.0f, 0);
-		EV_CameraChaseRM(0, 230, player, 6.0f, 0, 0x4000, 0, 20.6f, 0, -67355, 0, 20.6f);
+		EV_CameraChaseRM(0, 230, player, 6.0f, 0, 0x4000, 0, 20.6f, 0, -0x1071B, 0, 20.6f);
 		EV_Wait(10);
 		EV_SerifWait();
 		EV_SerifPlay(1624);
@@ -45,7 +47,7 @@ void ev0169_t_rhythmbadge(int state)
 		EV_CameraTargetFree();
 		EventSe_Play(0, 760, 1800);
 		EV_CameraPos(1, 80, -791.02002f, 105.97f, 915.48999f);
-		EV_CameraAng(1, 80, 64277, 63717, 0);
+		EV_CameraAng(1, 80, 0xFB15, 0xF8E5, 0);
 		EV_Wait(30);
 		EventSe_Volume(0, -80, 80);
 		EV_Wait(40);

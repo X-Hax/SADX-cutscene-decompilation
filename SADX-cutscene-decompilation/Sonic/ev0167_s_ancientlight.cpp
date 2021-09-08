@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0167[] = { 0 };
+
 void ev0167_s_ancientlight(int state)
 {
 	switch (state) {
@@ -14,14 +16,14 @@ void ev0167_s_ancientlight(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		EV_SetPos(player, -1662.0f, -366.0f, 2200.0f);
-		EV_SetAng(player, 0, 19419, 0);
+		EV_SetAng(player, 0, 0x4BDB, 0);
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_s_item_l0, &SONIC_TEXLIST, 0.2f, 0, 16);
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EV_CameraTargetObj(1, 0, player, 0.0f, 5.0f, 0.0f, 0);
-		EV_CameraChaseRM(0, 290, player, 8.0f, 0, 0x8000, 0, 18.0f, 0, -47331, 0, 18.0f);
+		EV_CameraChaseRM(0, 290, player, 8.0f, 0, 0x8000, 0, 18.0f, 0, -0xB8E3, 0, 18.0f);
 		effect_create2(player, 0, -4.0f, 8.0f, -2.0f, &ev_effect_list8);
 		effect_create2(player, 1, 4.0f, 8.0f, 4.0f, &ev_effect_list8);
 		effect_create2(player, 2, 3.0f, 4.0f, -2.0f, &ev_effect_list8);
@@ -83,7 +85,7 @@ void ev0167_s_ancientlight(int state)
 		effect_size_change(4, -0.050000001f, -0.050000001f);
 		EV_Wait(15);
 		EV_CameraPos(1, 90, -1650.146f, -358.66f, 2197.9099f);
-		EV_CameraAng(1, 90, 64382, 18205, 0);
+		EV_CameraAng(1, 90, 0xFB7E, 0x471D, 0);
 		EV_SetAction(player, &action_s_item_l2, &SONIC_TEXLIST, 0.5f, 0, 8);
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();

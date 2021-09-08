@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0168[] = { 0 };
+
 void ev0168_t_jetanklet(int state)
 {
 	switch (state) {
@@ -14,7 +16,7 @@ void ev0168_t_jetanklet(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		EV_SetPos(player, 697.91998f, 47.990002f, 1255.25f);
-		EV_SetAng(player, 0, 62460, 0);
+		EV_SetAng(player, 0, 0xF3FC, 0);
 		EV_Wait(1);
 		EV_SerifPlay(1718);
 		EV_Wait(1);
@@ -48,7 +50,7 @@ void ev0168_t_jetanklet(int state)
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EV_CameraPos(1, 70, 697.91998f, 53.07f, 1261.96f);
-		EV_CameraAng(1, 70, 1169, 0, 0);
+		EV_CameraAng(1, 70, 0x491, 0, 0);
 		EV_Wait(1);
 		EventSe_Volume(0, -80, 80);
 		EV_Wait(70);

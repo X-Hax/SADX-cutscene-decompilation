@@ -3,6 +3,18 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00F3[] = {
+	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
+	(char*)("M_EM_BLUE"), &M_EM_BLUE_TEXLIST,
+	(char*)("M_EM_GREEN"), &M_EM_GREEN_TEXLIST,
+	(char*)("M_EM_PURPLE"), &M_EM_PURPLE_TEXLIST,
+	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST,
+	(char*)("M_EM_WHITE"), &M_EM_WHITE_TEXLIST,
+	(char*)("M_EM_YELLOW"), &M_EM_YELLOW_TEXLIST,
+	(char*)("EV_CHAOS0_MANJU"), &EV_CHAOS0_MANJU_TEXLIST,
+	(char*)("CHAOS_SURFACE"), &CHAOS_SURFACE_TEXLIST
+};
+
 void ev00F3_l_knuckles(int state)
 {
 	switch (state) {

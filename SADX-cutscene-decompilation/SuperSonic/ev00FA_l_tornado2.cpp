@@ -3,6 +3,11 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00FA[] = {
+	(char*)("TR2CRASH"), &texlist_tr2crash,
+	(char*)("L_SIBUKI"), &L_SIBUKI_TEXLIST
+};
+
 void ev00FA_l_tornado2(int state)
 {
 	switch (state) {
@@ -51,7 +56,7 @@ void ev00FA_l_tornado2(int state)
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_MsgClose();
-		EV_CameraPerspective(1, 1, 12561);
+		EV_CameraPerspective(1, 1, 0x3111);
 		EV_Wait(1);
 		EV_CameraAng(1, 0, 0xF700, 0xAD00, 0);
 		EV_CameraPos(1, 0, 1206.0873f, 98.186699f, -908.20001f);

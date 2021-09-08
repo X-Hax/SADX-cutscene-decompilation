@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0100[] = { 0 };
+
 void ev0100_s_ecafterlanding(int state)
 {
 	switch (state) {
@@ -18,9 +20,9 @@ void ev0100_s_ecafterlanding(int state)
 		EV_SetPos(player, 23.389999f, 699.25f, -1083.27f);
 		EV_SetAng(player, 0, 0, 0);
 		EV_CameraPos(1, 0, 29.860001f, 700.06f, -1065.27f);
-		EV_CameraAng(1, 0, 2827, 3982, 0);
+		EV_CameraAng(1, 0, 0xB0B, 0xF8E, 0);
 		EV_CameraPos(1, 150, -10.33f, 705.81f, -1066.96f);
-		EV_CameraAng(1, 120, 255, 58230, 0);
+		EV_CameraAng(1, 120, 0xFF, 0xE376, 0);
 		switch (VoiceLanguage) {
 		case 0:
 			EV_SetFace(player, "ICCCDDEEEEEEDDDDCCCDDD");
@@ -39,18 +41,18 @@ void ev0100_s_ecafterlanding(int state)
 		EV_Wait(40);
 		EV_ClrAction(tails);
 		EV_CameraPos(1, 0, 26.280001f, 703.27002f, -1201.03f);
-		EV_CameraAng(1, 0, 1421, 28818, 0);
+		EV_CameraAng(1, 0, 0x58D, 0x7092, 0);
 		EV_CameraPos(1, 120, 50.599998f, 707.20001f, -1191.9f);
-		EV_CameraAng(1, 120, 1421, 29842, 0);
+		EV_CameraAng(1, 120, 0x58D, 0x7492, 0);
 		EV_SerifPlay(1514);
 		EV_Msg(msgTbl_ev0100[TextLanguage][1]); //"\aNo time to gawk now.  \nWe need to fi"...
 		EV_Wait(85);
 		EV_MsgClose();
 		EV_MsgCls();
 		EV_CameraPos(1, 0, 8.3299999f, 702.40002f, -1066.27f);
-		EV_CameraAng(1, 0, 1771, 61810, 0);
+		EV_CameraAng(1, 0, 0x6EB, 0xF172, 0);
 		EV_CameraPos(1, 210, 29.860001f, 700.06f, -1065.27f);
-		EV_CameraAng(1, 210, 2827, 3982, 0);
+		EV_CameraAng(1, 210, 0xB0B, 0xF8E, 0);
 		EV_LookPoint(tails, 23.389999f, 699.25f, -1050.27f);
 		EV_SetFace(tails, "T");
 		EV_LookPoint(player, 12.8f, 699.25f, -1093.5f);

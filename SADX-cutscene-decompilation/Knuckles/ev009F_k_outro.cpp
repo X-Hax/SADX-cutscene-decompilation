@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev009F[] = { 0 };
+
 void ev009F_k_outro(int state)
 {
     NJS_POINT3 Kiran2_1_EV009F = { 120.0f, 60.0f, 2140.0f };
@@ -21,9 +23,9 @@ void ev009F_k_outro(int state)
         seqVars[37] = 3;
         EV_Wait(1);
         EV_CameraPos(1, 0, 158.28f, -74.886002f, 2620.085f);
-        EV_CameraAng(1, 0, 61696, 2048, 0);
+        EV_CameraAng(1, 0, 0xF100, 0x800, 0);
         EV_CameraPos(0, 180, -25.4f, -78.260002f, 2629.1699f);
-        EV_CameraAng(0, 180, 61696, 65024, 0);
+        EV_CameraAng(0, 180, 0xF100, 0xFE00, 0);
         EV_Wait(30);
         EV_SerifPlay(1163);
         EV_Msg(msgTbl_ev009F[TextLanguage][0]); //"\aI'll probably be on \nthis floating i"...
@@ -31,9 +33,9 @@ void ev009F_k_outro(int state)
         EV_SerifWait();
         EV_Wait(25);
         EV_MsgClose();
-        EV_CameraPerspective(1, 1, 11833);
+        EV_CameraPerspective(1, 1, 0x2E39);
         EV_CameraPos(0, 0, -6.27f, -139.60001f, 2262.5f);
-        EV_CameraAng(0, 0, 768, 63991, 65280);
+        EV_CameraAng(0, 0, 0x300, 0xF9F7, 0xFF00);
         EV_CameraPos(0, 70, -6.3899999f, -148.39f, 2261.825f);
         EV_Wait(70);
         EV_CameraPos(0, 130, -6.4688001f, -154.37f, 2261.374f);
@@ -43,9 +45,9 @@ void ev009F_k_outro(int state)
         EV_Wait(120);
         EV_MsgClose();
         EV_CameraPos(0, 0, -49.119999f, -122.21f, 2084.614f);
-        EV_CameraAng(0, 0, 63232, 38144, 65280);
-        EV_CameraPerspective(0, 1, 12561);
-        EV_CameraAng(0, 140, 4608, 38144, 65280);
+        EV_CameraAng(0, 0, 0xF700, 0x9500, 0xFF00);
+        EV_CameraPerspective(0, 1, 0x3111);
+        EV_CameraAng(0, 140, 0x1200, 0x9500, 0xFF00);
         EV_Wait(50);
         EV_SerifPlay(1165);
         EV_Msg(msgTbl_ev009F[TextLanguage][2]); //"\aI may not know the whole story \nbehi"...
@@ -56,7 +58,7 @@ void ev009F_k_outro(int state)
         effect_delete(0);
         EV_Wait(10);
         EvCreateKiran2(&Kiran2_1_EV009F, &Kiran2_2_EV009F, 1.0f, 0.89999998f); //Moving sparkle in the sky.
-        EV_CameraAng(0, 150, 5888, 38144, 65280);
+        EV_CameraAng(0, 150, 0x1700, 0x9500, 0xFF00);
         EV_Wait(20);
         EV_SerifPlay(1166);
         EV_Msg(msgTbl_ev009F[TextLanguage][3]); //"\aBut perhaps \nit's better that way."

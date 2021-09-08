@@ -3,6 +3,22 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00F7[] = {
+	(char*)("EV_K_PATYA"), ADV03_TEXLISTS[1],
+	(char*)("KNUCKLES_NORMAL"), &KNUCKLES_NORMAL_TEXLIST,
+	(char*)("KNUCKLES_LONG"), &KNUCKLES_LONG_TEXLIST,
+	(char*)("KNUCKLES_DEBU"), &KNUCKLES_DEBU_TEXLIST,
+	(char*)("M_EM_BLUE"), &M_EM_BLUE_TEXLIST,
+	(char*)("M_EM_GREEN"), &M_EM_GREEN_TEXLIST,
+	(char*)("M_EM_PURPLE"), &M_EM_PURPLE_TEXLIST,
+	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST,
+	(char*)("M_EM_RED"), &texlist_m_em_red,
+	(char*)("M_EM_WHITE"), &M_EM_WHITE_TEXLIST,
+	(char*)("M_EM_YELLOW"), &M_EM_YELLOW_TEXLIST,
+	(char*)("EV_ALIFE"), ADV03_TEXLISTS[0],
+	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST
+};
+
 void ev00F7_l_tikalplead(int state)
 {
 	switch (state) {
@@ -346,7 +362,7 @@ void ev00F7_l_tikalplead(int state)
 		EV_SetMotion(K_FAT, ADV03_OBJECTS[3], motion_kz_0002_k_normal, ADV03_TEXLISTS[3], 0.1f, 1, 0);
 		EV_SetMotion(K_TALL, ADV03_OBJECTS[5], motion_kz_0002_k_normal, ADV03_TEXLISTS[3], 0.15000001f, 1, 0);
 		EV_SetMotion(K_TALL2, ADV03_OBJECTS[5], motion_kz_0002_k_normal, ADV03_TEXLISTS[3], 0.079999998f, 1, 0);
-		EV_CameraPerspective(1, 1, 6372);
+		EV_CameraPerspective(1, 1, 0x18E4);
 		EV_CameraPos(1, 0, -16.07f, 4.4499998f, 366.23001f);
 		EV_CameraAng(1, 0, 0x100, 0xA400, 0);
 		EV_CameraPos(0, 290, -15.2f, 3.2f, 362.35001f);

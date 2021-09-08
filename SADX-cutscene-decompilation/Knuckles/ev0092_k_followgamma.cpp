@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0092[] = { 0 };
+
 void ev0092_k_followgamma(int state)
 {
     switch(state){
@@ -19,14 +21,14 @@ void ev0092_k_followgamma(int state)
         e102 = EV_GetPlayer(2);
         EV_SetAction(e102, E102_ACTIONS[0], &E102_TEXLIST, 1.0f, 1, 0);
         EV_SetPos(player, -367.72f, 0.0f, -1676.064f);
-        EV_SetAng(player, 65506, 24276, 29);
+        EV_SetAng(player, 0xFFE2, 0x5ED4, 0x1D);
         EV_SetAction(player, KNUCKLES_ACTIONS[82], &KNUCKLES_TEXLIST, 0.5f, 1, 0);
         EV_CameraPos(1, 0, -380.13901f, 7.5879998f, -1679.489f);
-        EV_CameraAng(1, 0, 63488, 48812, 0);
+        EV_CameraAng(1, 0, 0xF800, 0xBEAC, 0);
         EV_CameraPos(0, 200, -378.17801f, 7.198f, -1679.425f);
         EV_Wait(60);
         EV_CameraPos(1, 0, -84.848f, 15.529f, -1713.205f);
-        EV_CameraAng(1, 0, 63488, 21164, 0);
+        EV_CameraAng(1, 0, 0xF800, 0x52AC, 0);
         EV_MovePoint2(e102, 64.163002f, -0.44f, -1688.433f, 0.2f, 0.2f);
         EV_SetAction(e102, E102_ACTIONS[3], &E102_TEXLIST, 1.0f, 1, 0);
         EV_Wait(120);
@@ -36,7 +38,7 @@ void ev0092_k_followgamma(int state)
         EV_SetAng(e102, 0, 0x8000, 0);
         EV_Wait(1);
         EV_CameraPos(1, 0, 66.852997f, 20.636f, -1565.666f);
-        EV_CameraAng(1, 0, 64512, 0, 0);
+        EV_CameraAng(1, 0, 0xFC00, 0, 0);
         EV_MovePoint2(e102, 71.587997f, -0.57200003f, -1761.806f, 0.2f, 0.2f);
         EV_Wait(60);
         EV_CameraPos(1, 0, -380.13901f, 7.5879998f, -1599.489f);
@@ -48,9 +50,9 @@ void ev0092_k_followgamma(int state)
         EV_Wait(60);
         EV_CameraTargetFree();
         EV_CameraPos(1, 0, 35.901001f, 6.4660001f, -1605.8669f);
-        EV_CameraAng(1, 0, 0, 64172, 0);
+        EV_CameraAng(1, 0, 0, 0xFC00, 0);
         EV_SetPos(player, 0.89700001f, -0.38f, -1587.124f);
-        EV_SetAng(player, 65518, 25995, 65533);
+        EV_SetAng(player, 0xFFEE, 0x658B, 0xFFFD);
         EV_Wait(1);
         EV_MovePoint2(player, 35.269001f, -0.45100001f, -1619.8979f, 0.69999999f, 0.69999999f);
         EV_Wait(1);

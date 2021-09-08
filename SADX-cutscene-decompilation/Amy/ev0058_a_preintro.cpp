@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0058[] = { 0 };
+
 void ev0058_a_preintro(int state)
 {
     switch(state){

@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00FB[] = { 0 };
+
 void ev00FB_l_tikalwakesup(int state)
 {
 	switch (state) {

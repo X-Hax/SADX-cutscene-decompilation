@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0031[] = { 0 };
+
 void ev0031_t_emeraldcoast(int state)
 {
 	switch (state) {
@@ -12,21 +14,19 @@ void ev0031_t_emeraldcoast(int state)
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
-		EV_CreateObjectFunc(&zan, ev_trzangai, 6893.9502f, 1.03f, -2203.1499f, 0, 49152, 0);
+		EV_CreateObjectFunc(&zan, ev_trzangai, 6893.9502f, 1.03f, -2203.1499f, 0, 0xC000, 0);
 		EV_CreatePlayer(2, SonicTheHedgehog, 6420.0f, 1.33f, -2150.0f, 0, 0x4000, 0);
 		EV_Wait(1);
 		EV_SetPos(player, 6888.9502f, 1.03f, -2203.1499f);
-		EV_SetAng(player, 0, 49152, 0);
+		EV_SetAng(player, 0, 0xC000, 0);
 		EV_SetAction(player, &action_m_m0118_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetFace(player, "VVVVVVVVVVVVVVVVV");
 		sonic = EV_GetPlayer(2);
 		EV_LookObject(sonic, player, 0.0f, -3.0f, 0.0f);
 		EV_CameraPos(1, 0, 6852.0801f, 9.0f, -2203.845f);
-		EV_CameraAng(1, 0, 6943, 48956, 0);
-		EV_CameraAng(0, 160, 64799, 48956, 0);
+		EV_CameraAng(1, 0, 0x1B1F, 0xBF3C, 0);
+		EV_CameraAng(0, 160, 0xFD1F, 0xBF3C, 0);
 		EV_CameraPos(0, 160, 6865.0298f, 8.0799999f, -2203.595f);
-
-		//Smoke effect
 		SMOKE = CObjSmoke_Create();
 		SMOKE->twp->ang.y = 10;
 		SMOKE->twp->ang.x = 10;
@@ -39,7 +39,7 @@ void ev0031_t_emeraldcoast(int state)
 		EV_SetPos(SMOKE, 6888.9502f, 1.03f, -2203.1499f);
 		EV_Wait(100);
 		EV_CameraPos(1, 0, 6882.188f, 5.5500002f, -2199.1345f);
-		EV_CameraAng(1, 0, 63263, 57404, 0);
+		EV_CameraAng(1, 0, 0xF71F, 0xE03C, 0);
 		SMOKE->twp->ang.x = 0;
 		SMOKE->twp->ang.y = 0;
 		EV_ClrFace(player);
@@ -53,16 +53,16 @@ void ev0031_t_emeraldcoast(int state)
 		EV_SetAction(sonic, &action_s_s0056_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_Wait(60);
 		EV_CameraPos(1, 0, 6886.7368f, 3.1099999f, -2203.4399f);
-		EV_CameraAng(1, 0, 61983, 16956, 0);
-		EV_CameraAng(0, 60, 2335, 16956, 0);
+		EV_CameraAng(1, 0, 0xF21F, 0x423C, 0);
+		EV_CameraAng(0, 60, 0x91F, 0x423C, 0);
 		EV_Wait(52);
 		EV_CameraPos(1, 0, 6887.5718f, 3.335f, -2197.3f);
-		EV_CameraAng(1, 0, 65311, 828, 0);
+		EV_CameraAng(1, 0, 0xFF1F, 0x33C, 0);
 		EV_CameraPos(1, 60, 6887.0718f, 3.335f, -2197.0f);
 		EV_Wait(40);
 		EV_CameraPos(1, 0, 6886.7368f, 3.1099999f, -2203.4399f);
-		EV_CameraAng(1, 0, 2335, 16956, 0);
-		EV_CameraAng(0, 60, 7711, 16956, 0);
+		EV_CameraAng(1, 0, 0x91F, 0x423C, 0);
+		EV_CameraAng(0, 60, 0x1E1F, 0x423C, 0);
 		EV_Wait(80);
 		EV_SetFace(sonic, "P");
 		EV_Wait(30);

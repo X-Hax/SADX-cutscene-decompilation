@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00F8[] = { 0 };
+
 void ev00F8_l_tikalsealschaos(int state)
 {
 	switch (state) {

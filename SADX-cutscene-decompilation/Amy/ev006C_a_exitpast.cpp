@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev006C[] = { 0 };
+
 void ev006C_a_exitpast(int state)
 {
 	switch (state) {
@@ -17,9 +19,9 @@ void ev006C_a_exitpast(int state)
 		EventSe_Init(1);
 		W_OUT = COverlayCreate(-0.0012000001f, 1.0f, 1.0f, 1.0f, 1.0f);
 		EV_CameraPos(0, 0, 290.17001f, 15.8f, 1.76f);
-		EV_CameraAng(0, 0, 512, 54928, 0);
+		EV_CameraAng(0, 0, 0x200, 0xD690, 0);
 		EV_SetPos(player, 295.23999f, 10.0f, 0.0f);
-		EV_SetAng(player, 0, 49152, 0);
+		EV_SetAng(player, 0, 0xC000, 0);
 		EV_Wait(1);
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -120, 120);
@@ -57,7 +59,7 @@ void ev006C_a_exitpast(int state)
 		EV_ClrFace(player);
 		EV_Wait(15);
 		EV_CameraPos(0, 0, 303.16f, 26.02f, 17.450001f);
-		EV_CameraAng(0, 0, 60928, 7312, 0);
+		EV_CameraAng(0, 0, 0xEE00, 0x1C90, 0);
 		EV_CameraPos(0, 150, 319.48001f, 37.990002f, 36.799999f);
 		EV_Wait(15);
 		EV_SerifPlay(963);

@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0094[] = { 0 };
+
 void ev0094_k_boardec(int state)
 {
     switch(state){
@@ -14,7 +16,7 @@ void ev0094_k_boardec(int state)
         EV_Wait(1);
         EV_InitPlayer(0);
         EV_SetPos(player, -246.60001f, 733.52002f, 1145.28f);
-        EV_SetAng(player, 0, 26388, 0);
+        EV_SetAng(player, 0, 0x6714, 0);
         EV_Wait(1);
         BGM_Play(MusicIDs_egcarer1);
         EV_CameraPos(0, 0, -212.31f, 738.56f, 1004.03f);
@@ -28,9 +30,9 @@ void ev0094_k_boardec(int state)
         EV_Wait(30);
         EV_CameraTargetFree();
         EV_CameraPos(0, 0, -150.91f, 738.19f, 1002.91f);
-        EV_CameraAng(0, 0, 2083, 38495, 0);
+        EV_CameraAng(0, 0, 0x823, 0x965F, 0);
         EV_CameraPos(0, 240, -141.78999f, 738.78998f, 1002.24f);
-        EV_CameraAng(0, 240, 803, 29535, 0);
+        EV_CameraAng(0, 240, 0x323, 0x735F, 0);
         EV_Wait(15);
         EV_ClrFace(player);
         EV_SetFace(player, "CDECDE");
@@ -50,7 +52,7 @@ void ev0094_k_boardec(int state)
     case 2:
         EV_InitPlayer(0);
         EV_SetPos(player, -146.97f, 733.52002f, 1012.34f);
-        EV_SetAng(player, 0, 26064, 0);
+        EV_SetAng(player, 0, 0x65D0, 0);
         EV_CameraOff();
         EV_PadOn();
         break;

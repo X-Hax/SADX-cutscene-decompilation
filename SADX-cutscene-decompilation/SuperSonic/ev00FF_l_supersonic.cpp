@@ -3,6 +3,12 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00FF[] = {
+	(char*)("LAST1A_HIGHWAY_A"), &LAST1A_HIGHWAY_A_TEXLIST,
+	(char*)("M_EM_BLACK"), &texlist_m_em_black,
+	(char*)("WING_P"), &texlist_wing_p
+};
+
 void ev00FF_l_supersonic(int state)
 {
 	switch (state) {
@@ -115,7 +121,7 @@ void ev00FF_l_supersonic(int state)
 		EV_SetPos(tails, 867.89001f, 150.0f, -404.22f);
 		EV_SetAng(tails, 0, 0x9000, 0);
 		EV_SetPos(K08_EME, 685.40997f, 150.0f, -521.79999f);
-		EV_SetAng(K08_EME, 0x2000, 0x2000, 4096);
+		EV_SetAng(K08_EME, 0x2000, 0x2000, 0x1000);
 		EV_SetPos(knuckles, 687.96997f, 160.0f, -537.42999f);
 		EV_SetAng(knuckles, 0, 0xE6A8, 0);
 		EV_Wait(45);
@@ -188,7 +194,7 @@ void ev00FF_l_supersonic(int state)
 		EV_SerifWait();
 		EV_ClrFace(amy);
 		EV_MsgClose();
-		EV_CameraPerspective(0, 1, 6372);
+		EV_CameraPerspective(0, 1, 0x18E4);
 		EV_CameraPos(0, 0, 812.96997f, 156.34f, -305.01001f);
 		EV_CameraAng(0, 0, 0x12, 0x755D, 0);
 		EV_CameraPos(1, 90, 801.09003f, 156.34f, -305.17001f);
@@ -249,7 +255,7 @@ void ev00FF_l_supersonic(int state)
 		EV_MsgClose();
 		EV_CameraPerspective(1, 1, 0x38E4);
 		EV_CameraPos(0, 0, 886.42999f, 157.39999f, -352.91f);
-		EV_CameraAng(0, 0, 6786, 22632, 0);
+		EV_CameraAng(0, 0, 0x1A82, 0x5868, 0);
 		EV_CameraPos(0, 300, 1038.09f, 157.39999f, -130.75f);
 		EV_SerifPlay(1495);
 		EV_Msg(msgTbl_ev00FF[TextLanguage][4]); //"\aChaos only used the negative power \n"...
@@ -264,7 +270,7 @@ void ev00FF_l_supersonic(int state)
 		EV_CameraAng(0, 0, 0x482, 0x7768, 0);
 		EV_CameraPos(0, 300, 839.64001f, 154.12f, -204.47f);
 		StgChaos7SetPos(270.0f, 0.0f, -8500.0f);
-		StgChaos7SetAng(0, 40960, 0);
+		StgChaos7SetAng(0, 0xA000, 0);
 		EV_SetFace(tails, "GGGGG");
 		EV_Wait(5);
 		EV_SerifPlay(1496);
@@ -424,7 +430,7 @@ void ev00FF_l_supersonic(int state)
 		EV_CameraPerspective(1, 1, 0x1C72);
 		EV_CameraPos(0, 0, 795.62f, 152.75999f, -246.75f);
 		EV_CameraAng(0, 0, 0xFE00, 0xCF00, 0);
-		EV_SetAng(player, 0, 53248, 0);
+		EV_SetAng(player, 0, 0xD000, 0);
 		EV_Wait(60);
 		crushLightOff();
 		if (SUPER_S)

@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0121[] = { 0 };
+
 void ev0121_k_ectransform2(int state)
 {
 	switch (state) {

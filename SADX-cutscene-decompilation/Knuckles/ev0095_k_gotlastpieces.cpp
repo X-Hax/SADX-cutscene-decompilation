@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0095[] = { 0 };
+
 void ev0095_k_gotlastpieces(int state)
 {
     switch(state){

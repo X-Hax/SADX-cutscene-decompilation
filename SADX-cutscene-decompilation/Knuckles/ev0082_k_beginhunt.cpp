@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0082[] = { 0 };
+
 void ev0082_k_beginhunt(int state)
 {
 	switch (state) {
@@ -15,7 +17,7 @@ void ev0082_k_beginhunt(int state)
 		BGM_Play(MusicIDs_s_square);
 		EV_SetPos(player, 63.290001f, 0.050000001f, 1495.52f);
 		EV_SetAng(player, 0, 0, 0);
-		EV_CameraAng(1, 0, 2304, 37632, 0);
+		EV_CameraAng(1, 0, 0x900, 0x9300, 0);
 		EV_CameraPos(1, 0, 58.540001f, 4.6100001f, 1488.2f);
 		EV_CameraPos(0, 100, 53.27f, 1.98f, 1477.8f);
 		EV_Wait(60);
@@ -23,7 +25,7 @@ void ev0082_k_beginhunt(int state)
 			player->twp->pos.x + 10.0f,
 			player->twp->pos.y + 8.0f,
 			player->twp->pos.z + 23.0f);
-		EV_CameraAng(0, 0, 64256, 4352, 0);
+		EV_CameraAng(0, 0, 0xFB00, 0x1100, 0);
 		EV_CameraPos(0, 480,
 			player->twp->pos.x + 5.46f,
 			player->twp->pos.y + 6.5999999f,

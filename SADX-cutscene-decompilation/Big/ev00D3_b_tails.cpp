@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00D3[] = {
+	(char*)("FROG"), &texlist_frog
+};
+
 void ev00D3_b_tails(int state)
 {
 	switch (state) {
@@ -17,10 +21,10 @@ void ev00D3_b_tails(int state)
 		EV_CanselOn();
 		BGM_Play(MusicIDs_thebig);
 		EV_SetPos(player, -65.580002f, 45.91f, 525.96002f);
-		EV_SetAng(player, 1363, 33119, 63890);
+		EV_SetAng(player, 0x553, 0x815F, 0xF992);
 		EV_Wait(1);
 		EV_SetAction(player, BIG_ACTIONS[24], &BIG_TEXLIST, 1.0f, 1, 0);
-		EV_CreatePlayer(3, MilesTalesPrower, 29.08f, 72.019997f, 177.28999f, 0, 1024, 0);
+		EV_CreatePlayer(3, MilesTalesPrower, 29.08f, 72.019997f, 177.28999f, 0, 0x400, 0);
 		EV_Wait(1);
 		tails = EV_GetPlayer(3);
 		EV_SetAction(tails, &action_m_m9004_miles, &MILES_TEXLIST, 1.0f, 1, 0);
@@ -29,7 +33,7 @@ void ev00D3_b_tails(int state)
 		EV_SetMode(Frog, 0);
 		EV_SetAction(Frog, &action_f_f0019_frog, &texlist_frog, 1.0f, 1, 0);
 		EV_CameraPos(1, 0, -85.07f, 55.959999f, 557.09003f);
-		EV_CameraAng(1, 0, 65024, 59392, 0);
+		EV_CameraAng(1, 0, 0xFE00, 0xE800, 0);
 		EV_CameraChase(player);
 		EventSe_Play(0, 1333, 1800);
 		EV_MovePoint2(player, -11.62f, 50.0f, 395.14001f, 0.80000001f, 0.0f);
@@ -39,75 +43,75 @@ void ev00D3_b_tails(int state)
 		EV_CameraChaseFree();
 		EV_Wait(60);
 		EV_CameraPos(1, 0, -15.31f, 100.75f, 375.76999f);
-		EV_CameraAng(1, 0, 64256, 63232, 0);
+		EV_CameraAng(1, 0, 0xFB00, 0xF700, 0);
 		EV_CameraPos(1, 60, 25.67f, 77.910004f, 193.25f);
 		EV_Wait(60);
 		EV_SerifPlay(1329);
 		EV_MsgW(90, msgTbl_ev00D3[TextLanguage][0]); //"\aOh no, he's got my little buddy!"
 		EV_MsgClose();
 		EV_CameraPos(1, 0, 30.120001f, 79.360001f, 159.34f);
-		EV_CameraAng(1, 0, 64256, 32000, 0);
-		EV_CameraPerspective(1, 1, 5461);
+		EV_CameraAng(1, 0, 0xFB00, 0x7D00, 0);
+		EV_CameraPerspective(1, 1, 0x1555);
 		EV_SetAction(player, BIG_ACTIONS[16], &BIG_TEXLIST, 1.0f, 1, 0);
 		EV_MovePoint2(player, 23.610001f, 72.860001f, 202.42f, 0.89999998f, 1.0f);
 		EV_Wait(35);
 		RumbleA(0, 10);
 		EV_CameraChase(player);
 		EV_CameraPos(1, 0, -5.3200002f, 84.269997f, 354.34f);
-		EV_CameraAng(1, 0, 65024, 62976, 512);
+		EV_CameraAng(1, 0, 0xFE00, 0xF600, 0x200);
 		EV_Wait(5);
-		EV_CameraAng(1, 6, 63744, 62976, 65280);
+		EV_CameraAng(1, 6, 0xF900, 0xF600, 0xFF00);
 		EV_Wait(5);
-		EV_CameraAng(1, 6, 64768, 62976, 65024);
+		EV_CameraAng(1, 6, 0xFD00, 0xF600, 0xFE00);
 		EV_Wait(5);
-		EV_CameraAng(1, 6, 64000, 62976, 65280);
+		EV_CameraAng(1, 6, 0xFA00, 0xF600, 0xFF00);
 		EV_Wait(5);
-		EV_CameraAng(1, 6, 64768, 62976, 0);
+		EV_CameraAng(1, 6, 0xFD00, 0xF600, 0);
 		EV_Wait(5);
-		EV_CameraAng(1, 6, 64000, 62976, 256);
+		EV_CameraAng(1, 6, 0xFA00, 0xF600, 0x100);
 		EV_Wait(5);
-		EV_CameraAng(1, 6, 65024, 62976, 512);
+		EV_CameraAng(1, 6, 0xFE00, 0xF600, 0x200);
 		EV_Wait(5);
-		EV_CameraAng(1, 6, 63744, 62976, 256);
+		EV_CameraAng(1, 6, 0xF900, 0xF600, 0x100);
 		EV_Wait(5);
-		EV_CameraAng(1, 6, 64768, 62976, 0);
+		EV_CameraAng(1, 6, 0xFD00, 0xF600, 0);
 		EV_Wait(5);
-		EV_CameraAng(1, 5, 64000, 62976, 256);
+		EV_CameraAng(1, 5, 0xFA00, 0xF600, 0x100);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 65024, 62976, 512);
+		EV_CameraAng(1, 5, 0xFE00, 0xF600, 0x200);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 63744, 62976, 256);
+		EV_CameraAng(1, 5, 0xF900, 0xF600, 0x100);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 64768, 62976, 0);
+		EV_CameraAng(1, 5, 0xFD00, 0xF600, 0);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 64000, 62976, 256);
-		EV_CameraAng(1, 5, 65024, 62976, 512);
+		EV_CameraAng(1, 5, 0xFA00, 0xF600, 0x100);
+		EV_CameraAng(1, 5, 0xFE00, 0xF600, 0x200);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 63744, 62976, 256);
+		EV_CameraAng(1, 5, 0xF900, 0xF600, 0x100);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 64768, 62976, 0);
+		EV_CameraAng(1, 5, 0xFD00, 0xF600, 0);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 64000, 62976, 256);
+		EV_CameraAng(1, 5, 0xFA00, 0xF600, 0x100);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 65024, 62976, 512);
+		EV_CameraAng(1, 5, 0xFE00, 0xF600, 0x200);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 63744, 62976, 256);
+		EV_CameraAng(1, 5, 0xF900, 0xF600, 0x100);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 64768, 62976, 0);
+		EV_CameraAng(1, 5, 0xFD00, 0xF600, 0);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 64000, 62976, 256);
+		EV_CameraAng(1, 5, 0xFA00, 0xF600, 0x100);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 65024, 62976, 512);
+		EV_CameraAng(1, 5, 0xFE00, 0xF600, 0x200);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 63744, 62976, 256);
+		EV_CameraAng(1, 5, 0xF900, 0xF600, 0x100);
 		EV_Wait(3);
-		EV_CameraAng(1, 5, 64256, 62976, 0);
+		EV_CameraAng(1, 5, 0xFB00, 0xF600, 0);
 		EV_CameraChaseFree();
 		EV_Wait(3);
-		EV_CameraPerspective(1, 1, 12743);
+		EV_CameraPerspective(1, 1, 0x31C7);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, 30.120001f, 79.360001f, 159.34f);
-		EV_CameraAng(1, 0, 64256, 32000, 0);
+		EV_CameraAng(1, 0, 0xFB00, 0x7D00, 0);
 		EV_SetFace(tails, "ZZZZZZZZZZZZZ");
 		EV_Wait(23);
 		EventSe_Stop(0);
@@ -118,17 +122,17 @@ void ev00D3_b_tails(int state)
 		EV_Wait(42);
 		EventSe_Oneshot(1334, 0, 0, 0);
 		EV_MsgClose();
-		EV_CameraAng(1, 4, 63744, 32000, 0);
+		EV_CameraAng(1, 4, 0xF900, 0x7D00, 0);
 		EV_Wait(3);
 		moveObjectOn(Frog, 0.0f, 0.0f, 0.0f, 200, tails);
 		moveObject(tails, 29.08f, 72.019997f, 177.28999f, 29.08f, 78.019997f, 177.28999f, 25);
-		EV_CameraAng(1, 4, 64256, 32000, 0);
+		EV_CameraAng(1, 4, 0xFB00, 0x7D00, 0);
 		EV_Msg(msgTbl_ev00D3[TextLanguage][2]); //"\aUgh! Ugh!"
 		EV_SerifPlay(1331);
 		EV_Wait(2);
 		EV_CameraPos(1, 0, -2.29f, 85.650002f, 210.39f);
-		EV_CameraAng(1, 0, 62720, 53248, 0);
-		EV_CameraAng(1, 40, 62720, 54016, 0);
+		EV_CameraAng(1, 0, 0xF500, 0xD000, 0);
+		EV_CameraAng(1, 40, 0xF500, 0xD300, 0);
 		EV_SetAction(tails, &action_m_m9007_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(Frog, &action_f_f0024_frog, &texlist_frog, 1.0f, 1, 0);
 		moveObject(tails, 29.08f, 72.019997f, 177.28999f, 29.08f, 72.019997f, 167.69f, 60);
@@ -138,21 +142,21 @@ void ev00D3_b_tails(int state)
 		EV_SetAction(tails, &action_m_m9004_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(Frog, &action_f_f0019_frog, &texlist_frog, 1.0f, 1, 0);
 		EV_CameraPos(1, 0, 26.549999f, 76.400002f, 183.41f);
-		EV_CameraAng(1, 0, 61440, 31232, 0);
-		EV_CameraAng(0, 100, 1792, 31232, 0);
+		EV_CameraAng(1, 0, 0xF000, 0x7A00, 0);
+		EV_CameraAng(0, 100, 0x700, 0x7A00, 0);
 		EV_Wait(60);
 		EV_SerifPlay(1332);
 		EV_Msg(msgTbl_ev00D3[TextLanguage][3]); //"\aGlad I found you!"
 		EV_Wait(58);
 		EV_MsgClose();
 		EV_CameraPos(1, 0, 29.93f, 78.830002f, 175.89999f);
-		EV_CameraAng(1, 0, 1792, 1024, 0);
-		EV_CameraAng(1, 60, 61440, 1024, 0);
+		EV_CameraAng(1, 0, 0x700, 0x400, 0);
+		EV_CameraAng(1, 60, 0xF000, 0x400, 0);
 		EV_SerifPlay(1333);
 		EV_Msg(msgTbl_ev00D3[TextLanguage][4]); //"\aOops!"
 		EV_Wait(70);
 		EV_CameraPos(1, 0, 7.0300002f, 79.849998f, 170.03f);
-		EV_CameraAng(1, 0, 0, 44544, 0);
+		EV_CameraAng(1, 0, 0, 0xAE00, 0);
 		EV_ClrAction(Frog);
 		EV_ClrAction(tails);
 		EV_SetAction(tails, &action_m_m9005_miles, &MILES_TEXLIST, 1.0f, 1, 8);
@@ -173,14 +177,14 @@ void ev00D3_b_tails(int state)
 		EV_SetMode(Frog, 0);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, 26.43f, 84.510002f, 181.45f);
-		EV_CameraAng(1, 0, 58942, 32000, 0);
+		EV_CameraAng(1, 0, 0xE63E, 0x7D00, 0);
 		EV_SerifPlay(1334);
 		EV_Msg(msgTbl_ev00D3[TextLanguage][5]); //"\aAwwwww, now what am I gonna do?"
 		EV_ClrAction(Frog);
 		EV_SetAction(Frog, &action_f_f0020_frog, &texlist_frog, 2.8f, 1, 0);
 		EV_Wait(2);
 		EV_CameraPos(1, 0, 27.4f, 94.529999f, 176.61f);
-		EV_CameraAng(1, 0, 59136, 31232, 0);
+		EV_CameraAng(1, 0, 0xE700, 0x7A00, 0);
 		EV_CameraPos(0, 800, 32.200001f, 117.56f, 144.25999f);
 		EV_SetPos(Frog, 12.45f, 74.480003f, 243.92f);
 		EV_SetAng(Frog, 0, 0, 0);
@@ -200,7 +204,7 @@ void ev00D3_b_tails(int state)
 		EV_PadOn();
 		EventSe_Close();
 		EV_SetPos(player, 23.47002f, 72.019478f, 203.18013f);
-		EV_SetAng(player, 0, 30889, 0);
+		EV_SetAng(player, 0, 0x78A9, 0);
 		stopObjectAll();
 		EV_InitPlayer(0);
 		EV_RemovePlayer(3);

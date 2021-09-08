@@ -3,6 +3,11 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00DF[] = {
+	(char*)("SHAPE_FROG"), &texlist_shape_frog,
+	(char*)("FROG"), &texlist_frog
+};
+
 void ev00DF_b_chaos6defeated(int state)
 {
 	switch (state) {

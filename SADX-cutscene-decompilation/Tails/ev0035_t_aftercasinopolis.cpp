@@ -3,6 +3,12 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0035[] = {
+	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
+	(char*)("CAPTUREBEAM"), &CAPTUREBEAM_TEXLIST,
+	(char*)("M_EM_WHITE"), &M_EM_WHITE_TEXLIST
+};
+
 void ev0035_t_aftercasinopolis(int state)
 {
 	switch (state) {
@@ -15,7 +21,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EventSe_Init(5);
 		BGM_Play(MusicIDs_eggman);
 		EV_SetPos(player, -626.33398f, 0.0f, 905.67999f);
-		EV_SetAng(player, 0, 8092, 0);
+		EV_SetAng(player, 0, 0x1F9C, 0);
 		EV_InitPlayer(0);
 		EV_ClrAction(player);
 		EV_SetAction(player, MILES_ACTIONS[79], &MILES_TEXLIST, 1.0f, 1, 0);
@@ -24,9 +30,9 @@ void ev0035_t_aftercasinopolis(int state)
 		sonic = EV_GetPlayer(2);
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 0);
-		EV_CameraAng(1, 0, 258, 46336, 0);
+		EV_CameraAng(1, 0, 0x102, 0xB500, 0);
 		EV_CameraPos(1, 0, -626.92999f, 5.4000001f, 918.19f);
-		create_eggmoble(-409.0f, 285.0f, 1091.1f, -5376, -1280, 13568);
+		create_eggmoble(-409.0f, 285.0f, 1091.1f, -0x1500, -0x500, 0x3500);
 		EV_Wait(2);
 		ChgEggMobleMod(0);
 		EV_Wait(1);
@@ -39,7 +45,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_SetAction(sonic, SONIC_ACTIONS[4], &SONIC_TEXLIST, 1.3f, 1, 0);
 		EV_MovePoint2(sonic, -560.10999f, -2.5f, 952.78399f, 0.8999999f, 0.8999999f);
 		EV_Wait(5);
-		EV_CameraAng(1, 95, 582, 40948, 0);
+		EV_CameraAng(1, 95, 0x246, 0x9FF4, 0);
 		EV_CameraPos(1, 95, -593.5f, 1.6f, 936.72998f);
 		EV_Wait(30);
 		cap1 = CreateCaptureBeam(-584.0f, -134.0f, 958.01001f, 0, 0, 0);
@@ -52,7 +58,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_Wait(1);
 		SetCaptureParam(cap1, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0);
 		EV_Wait(21);
-		EV_CameraPerspective(1, 100, 5461);
+		EV_CameraPerspective(1, 100, 0x1555);
 		EV_WaitMove(player);
 		EV_SetAction(player, MILES_ACTIONS[67], &MILES_TEXLIST, 1.5f, 0, 4);
 		EV_SetAction(sonic, SONIC_ACTIONS[20], &SONIC_TEXLIST, 1.0f, 0, 4);
@@ -68,37 +74,37 @@ void ev0035_t_aftercasinopolis(int state)
 		Commented out because it does nothing without a text box to close.*/
 		//EV_MsgClose();
 
-		EV_CameraPerspective(1, 1, 12561);
+		EV_CameraPerspective(1, 1, 0x3111);
 		EventSe_Play(0, 1333, 1800);
-		EV_CameraAng(1, 0, 52049, 14350, 0);
+		EV_CameraAng(1, 0, 0xCB51, 0x380E, 0);
 		EV_CameraPos(1, 0, -404.79999f, 321.04001f, 1083.5f);
 		EV_LookFree(player);
 		EV_LookFree(sonic);
 		eggmoble_move_normal(-406.04999f, 17.530001f, 1078.7f, 80);
-		EV_CameraAng(1, 80, 51573, 11275, 0);
+		EV_CameraAng(1, 80, 0xC975, 0x2C0B, 0);
 		EV_CameraPos(1, 80, -394.0f, 52.0f, 1072.0f);
 		EV_Wait(50);
 		EventSe_Volume(0, -40, 1);
-		EV_CameraAng(1, 0, 512, 41216, 0);
+		EV_CameraAng(1, 0, 0x200, 0xA100, 0);
 		EV_CameraPos(1, 0, -590.84399f, -0.0164f, 939.70001f);
-		EV_CameraAng(1, 70, 512, 43008, 0);
+		EV_CameraAng(1, 70, 0x200, 0xA800, 0);
 		EV_CameraPos(1, 70, -593.59998f, -0.0164f, 942.59998f);
 		EV_Wait(32);
 		EventSe_Stop(0);
 		EventSe_Play(1, 1337, 1800);
 		EventSe_Volume(1, -50, 1);
-		eggmoble_turn(5376, -5376, -12288, 5, 0);
+		eggmoble_turn(0x1500, -0x1500, -0x3000, 5, 0);
 		EV_Wait(1);
 		EventSe_Volume(1, 0, 30);
 		EV_Wait(6);
-		eggmoble_moveandturn(-619.5f, 15.5f, 936.41699f, 0, -1280, -1280, 33, 0);
+		eggmoble_moveandturn(-619.5f, 15.5f, 936.41699f, 0, -0x500, -0x500, 33, 0);
 		EV_Wait(5);
 		EV_ClrAction(player);
 		EV_PlayPad(0, &EV0035m);
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, SONIC_ACTIONS[4], &SONIC_TEXLIST, 2.0f, 1, 0);
 		EV_MovePoint2(sonic, -541.84998f, 3.53f, 945.20001f, 1.7f, 1.0f);
-		EV_CameraAng(1, 25, 10196, 43008, 0);
+		EV_CameraAng(1, 25, 0x27D4, 0xA800, 0);
 		EV_SerifPlay(668);
 		EV_Msg(msgTbl_ev0035[TextLanguage][0]); //"\aWhat's that?"
 		EV_SetPos(emerald, -575.34998f, 15.0f, 951.70001f);
@@ -111,9 +117,9 @@ void ev0035_t_aftercasinopolis(int state)
 		EventSe_Stop(0);
 		EV_MsgClose();
 		EV_ClrAction(emerald);
-		EV_CameraAng(1, 0, 52480, 34304, 0);
+		EV_CameraAng(1, 0, 0xCD00, 0x8600, 0);
 		EV_CameraPos(1, 0, -565.40002f, 13.13f, 962.28998f);
-		EV_SetAng(emerald, 0, -18688, 0);
+		EV_SetAng(emerald, 0, -0x4900, 0);
 		EV_SetAction(emerald, &action_ce_0001_m_em_white, &M_EM_WHITE_TEXLIST, 1.5f, 0, 0);
 		EV_SetAction(emerald, &action_ce_0002_m_em_white, &M_EM_WHITE_TEXLIST, 1.0f, 1, 0);
 		moveObject(emerald, -550.0f, 3.0f, 986.0f, -564.40002f, -2.5f, 966.65002f, 9);
@@ -122,21 +128,21 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_MsgClose();
 		EV_ClrAction(player);
 		EV_SetPos(player, -531.367f, -2.46f, 982.25769f);
-		EV_SetAng(player, 0, 44800, 0);
+		EV_SetAng(player, 0, 0xAF00, 0);
 		EV_SetAction(player, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetPos(sonic, -520.65997f, 0.5f, 947.21802f);
-		EV_SetAng(sonic, 0, 52992, 0);
+		EV_SetAng(sonic, 0, 0xCF00, 0);
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, SONIC_ACTIONS[123], &SONIC_TEXLIST, 1.5f, 1, 0);
 		EV_Wait(20);
-		EV_CameraAng(1, 75, 61985, 47333, 0);
+		EV_CameraAng(1, 75, 0xF221, 0xB8E5, 0);
 		EV_CameraPos(1, 75, -580.70001f, 7.8699999f, 964.29999f);
 		EV_Wait(60);
 		EV_ClrFace(player);
 		EV_SetFace(player, "CE");
 		EV_SerifPlay(670);
 		EV_Msg(msgTbl_ev0035[TextLanguage][1]); //"\aThe Chaos Emerald!"
-		eggmoble_turn(0, -29696, 0, 1, 0);
+		eggmoble_turn(0, -0x7400, 0, 1, 0);
 		EV_Wait(10);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m0105_miles, &MILES_TEXLIST, 1.0f, 1, 8);
@@ -149,9 +155,9 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_Wait(2);
 		EV_SetPos(emerald, -584.0f, -2.5f, 958.01001f);
 		EV_CameraPos(1, 0, -549.5f, -1.0599999f, 982.354f);
-		EV_CameraAng(1, 0, 3328, 0x2000, 65024);
+		EV_CameraAng(1, 0, 0xD00, 0x2000, 0xFE00);
 		EV_CameraPos(1, 80, -550.7887f, -0.96700001f, 983.90002f);
-		EV_CameraAng(1, 80, 3328, 7168, 65024);
+		EV_CameraAng(1, 80, 0xD00, 0x1C00, 0xFE00);
 		EV_ClrAction(sonic);
 		EventSe_Oneshot(1335, 0, 0, 0);
 		ChgEggMobleSMod(5);
@@ -174,7 +180,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_SetAction(player, &action_m_m0112_miles, &MILES_TEXLIST, 0.80000001f, 1, 8);
 		ChgEggMobleMod(0);
 		EV_CameraPos(1, 0, -575.58002f, 11.79f, 965.90002f);
-		EV_CameraAng(1, 0, 57088, 7831, 0);
+		EV_CameraAng(1, 0, 0xDF00, 0x1E97, 0);
 		EV_Wait(15);
 		moveObject(emerald, -584.0f, -2.5f, 958.01001f, -584.0f, 16.0f, 958.01001f, 40);
 		EV_Wait(30);
@@ -186,12 +192,12 @@ void ev0035_t_aftercasinopolis(int state)
 		eggmoble_move_rapid(-564.40002f, 11.5f, 966.65002f, 2);
 		EV_Wait(2);
 		EV_CameraPos(1, 0, -469.0f, 116.06f, 992.95502f);
-		EV_CameraAng(1, 0, 56064, 12032, 65024);
+		EV_CameraAng(1, 0, 0xDB00, 0x2F00, 0xFE00);
 		EV_CameraPos(1, 100, -495.25f, 83.0f, 981.29999f);
 		EV_Wait(3);
-		eggmoble_turn(0, 0, 512, 10, 0);
+		eggmoble_turn(0, 0, 0x200, 10, 0);
 		EV_Wait(12);
-		eggmoble_moveandturn(-255.7f, 279.0f, 1051.0f, 0, 4096, 0x4000, 200, 0);
+		eggmoble_moveandturn(-255.7f, 279.0f, 1051.0f, 0, 0x1000, 0x4000, 200, 0);
 		EventSe_Play(0, 1333, 1800);
 		EventSe_Volume(0, -40, 1);
 		EV_SerifPlay(672);
@@ -200,7 +206,7 @@ void ev0035_t_aftercasinopolis(int state)
 		EV_Wait(25);
 		ChgEggMobleSMod(1);
 		EV_CameraPos(1, 0, -562.45599f, 1.34f, 969.59998f);
-		EV_CameraAng(1, 0, 5888, 51501, 0);
+		EV_CameraAng(1, 0, 0x1700, 0xC92D, 0);
 		EV_CameraPos(0, 70, -561.78003f, 1.34f, 972.53998f);
 		EventSe_Volume(0, -40, 1);
 		EV_LookFree(player);

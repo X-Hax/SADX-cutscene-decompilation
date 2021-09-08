@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev008D[] = { 0 };
+
 void ev008D_k_lostpast(int state)
 {
 	switch (state) {

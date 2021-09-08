@@ -3,6 +3,11 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0142[] = {
+	(char*)("EV_E101KAI"), &texlist_ev_e101kai,
+	(char*)("ICM0142"), &texlist_icm0142
+};
+
 void ev0142_e_betamk2(int state)
 {
 	switch (state) {
@@ -19,12 +24,12 @@ void ev0142_e_betamk2(int state)
 		EV_InitPlayer(0);
 		EV_ClrAction(player);
 		EV_SetAction(player, E102_ACTIONS[0], &E102_TEXLIST, 0.40000001f, 1, 8);
-		EV_CreateObject(&E101KAI, -12.45f, 776.21997f, -368.57999f, 2560, 58144, 0);
+		EV_CreateObject(&E101KAI, -12.45f, 776.21997f, -368.57999f, 0xA00, 0xE320, 0);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, -9.1359997f, 734.90997f, 1027.548f);
-		EV_CameraAng(1, 0, 3141, 36133, 0);
+		EV_CameraAng(1, 0, 0xC45, 0x8D25, 0);
 		EV_CameraPos(1, 150, -9.1359997f, 743.0f, 1027.548f);
-		EV_CameraAng(1, 150, 3141, 36133, 0);
+		EV_CameraAng(1, 150, 0xC45, 0x8D25, 0);
 		EV_SerifPlay(1311);
 		EV_Msg(msgTbl_ev0142[TextLanguage][0]); //"\aE-105 Zeta rescue complete."
 		EV_Wait(30);
@@ -33,7 +38,7 @@ void ev0142_e_betamk2(int state)
 		EV_Wait(32);
 		EV_SerifWait();
 		EV_CameraPos(1, 140, -7.566f, 746.33771f, 1040.9f);
-		EV_CameraAng(1, 140, 5189, 39461, 0);
+		EV_CameraAng(1, 140, 0x1445, 0x9A25, 0);
 		EV_Wait(30);
 		EV_SerifPlay(1312);
 		EV_Msg(msgTbl_ev0142[TextLanguage][1]); //"\aUnits remaining;"
@@ -61,29 +66,29 @@ void ev0142_e_betamk2(int state)
 		deleteScanLine();
 		EV_Wait(16);
 		EV_CameraPos(1, 0, -9.7480001f, 734.38f, 1043.6f);
-		EV_CameraAng(1, 0, 2885, 36645, 256);
+		EV_CameraAng(1, 0, 0xB45, 0x8F25, 0x100);
 		EV_Wait(20);
 		EV_SetAction(player, &action_e_e0026_e102, &E102_TEXLIST, 0.60000002f, 1, 72);
 		EV_Wait(10);
 		EV_CameraPos(1, 95, -11.06f, 743.5f, 1030.6281f);
-		EV_CameraAng(1, 95, 2885, 39461, 512);
+		EV_CameraAng(1, 95, 0xB45, 0x9A25, 0x200);
 		EV_Wait(105);
 		EV_CameraPos(0, 120, -12.677f, 743.59998f, 1034.8f);
-		EV_CameraAng(0, 120, 2885, 40229, 512);
-		EV_CameraPerspective(1, 120, 12925);
+		EV_CameraAng(0, 120, 0xB45, 0x9D25, 0x200);
+		EV_CameraPerspective(1, 120, 0x327D);
 		EV_SerifPlay(1313);
 		EV_Msg(msgTbl_ev0142[TextLanguage][2]); //"\aGamma..."
 		EV_Wait(80);
 		EV_SetMode(E101KAI, 0);
 		EV_SetPos(E101KAI, -47.700001f, 758.59998f, 962.90002f);
-		EV_SetAng(E101KAI, 63982, 12624, 0);
+		EV_SetAng(E101KAI, 0xF9EE, 0x3150, 0);
 		EV_SetAction(E101KAI, &action_taiki_e101kai_null11, &texlist_ev_e101kai, 1.0f, 1, 8);
 		BGM_Play(MusicIDs_bosse101);
 		EV_SetAction(player, &action_e_e0027_e102, &E102_TEXLIST, 1.0f, 1, 8);
 		EV_MsgClose();
 		EV_Wait(30);
 		EV_CameraPos(0, 35, -11.78f, 750.43298f, 1045.66f);
-		EV_CameraAng(0, 35, 1861, 46885, 768);
+		EV_CameraAng(0, 35, 0x745, 0xB725, 0x300);
 		EventSe_Play(0, 1334, 1800);
 		EventSe_Volume(0, -40, 1);
 		EV_Wait(35);
@@ -104,14 +109,14 @@ void ev0142_e_betamk2(int state)
 		EV_Wait(70);
 		EV_CameraTargetFree();
 		EV_CameraPos(0, 0, -4.0640001f, 746.52002f, 1035.58f);
-		EV_CameraAng(0, 0, 3397, 33829, 0);
+		EV_CameraAng(0, 0, 0xD45, 0x8425, 0);
 		EV_SetAction(player, &action_e_e0036_e102, &E102_TEXLIST, 1.0f, 1, 32);
 		EV_Wait(20);
 		EV_SerifPlay(1314);
 		EV_Msg(msgTbl_ev0142[TextLanguage][3]); //"\aBeta..."
 		EV_Wait(40);
 		EV_CameraPos(0, 130, -8.04f, 738.46997f, 996.59998f);
-		EV_CameraAng(0, 130, 3230, 33829, 0);
+		EV_CameraAng(0, 130, 0xC9E, 0x8425, 0);
 		EV_Wait(20);
 		EV_MsgClose();
 		EV_Wait(80);

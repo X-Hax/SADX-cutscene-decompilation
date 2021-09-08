@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0110[] = { 0 };
+
 void ev0110_t_ecafterlanding(int state)
 {
 	switch (state) {
@@ -18,9 +20,9 @@ void ev0110_t_ecafterlanding(int state)
 		EV_SetPos(player, 23.389999f, 699.25f, -1083.27f);
 		EV_SetAng(player, 0, 0, 0);
 		EV_CameraPos(1, 0, 29.860001f, 700.06f, -1065.27f);
-		EV_CameraAng(1, 0, 2827, 3982, 0);
+		EV_CameraAng(1, 0, 0xB0B, 0xF8E, 0);
 		EV_CameraPos(1, 150, -10.33f, 705.81f, -1066.96f);
-		EV_CameraAng(1, 120, 255, 58230, 0);
+		EV_CameraAng(1, 120, 0xFF, 0xE376, 0);
 		sonic = EV_GetPlayer(2);
 		if (VoiceLanguage == Languages_Japanese)
 		{
@@ -39,18 +41,18 @@ void ev0110_t_ecafterlanding(int state)
 		EV_Wait(60);
 		EV_ClrAction(player);
 		EV_CameraPos(1, 0, 111.0f, 1129.0f, -1873.0f);
-		EV_CameraAng(1, 0, 60340, 32503, 0);
+		EV_CameraAng(1, 0, 0xEBB4, 0x7EF7, 0);
 		EV_CameraPos(1, 90, -170.0f, 1129.0f, -1880.0f);
-		EV_CameraAng(1, 90, 60340, 32759, 0);
+		EV_CameraAng(1, 90, 0xEBB4, 0x7FF7, 0);
 		EV_SerifPlay(1534);
 		EV_Msg(msgTbl_ev0110[TextLanguage][1]); //"\aNo time to gawk, Sonic.  \nWe gotta f"...
 		EV_Wait(80);
 		EV_MsgClose();
 		EV_MsgCls();
 		EV_CameraPos(1, 0, -10.33f, 705.81f, -1066.96f);
-		EV_CameraAng(1, 0, 255, 58230, 0);
+		EV_CameraAng(1, 0, 0xFF, 0xE376, 0);
 		EV_CameraPos(1, 180, 29.860001f, 700.06f, -1065.27f);
-		EV_CameraAng(1, 210, 2827, 3982, 0);
+		EV_CameraAng(1, 210, 0xB0B, 0xF8E, 0);
 		EV_LookObject(player, sonic, 0.0f, 3.0f, 0.0f);
 		EV_SetFace(player, "T");
 		EV_LookObject(sonic, player, 0.0f, 3.0f, 0.0f);

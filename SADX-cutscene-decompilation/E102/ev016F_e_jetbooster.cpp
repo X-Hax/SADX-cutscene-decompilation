@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev016F[] = { 0 };
+
 void ev016F_e_jetbooster(int state)
 {
     switch(state){
@@ -15,7 +17,7 @@ void ev016F_e_jetbooster(int state)
         EV_CanselOn();
         EV_InitPlayer(0);
         EV_SetPos(player, -73.169998f, 1.0f, -36.759998f);
-        EV_SetAng(player, 0, 2937, 0);
+        EV_SetAng(player, 0, 0xB79, 0);
         EV_Wait(1);
         EV_ClrAction(player);
         EV_SetAction(player, E102_ACTIONS[66], &E102_TEXLIST, 0.2f, 0, 8);
@@ -24,7 +26,7 @@ void ev016F_e_jetbooster(int state)
         EV_CameraChaseFree();
         EV_CameraTargetFree();
         EV_CameraTargetObj(1, 0, player, 0.0f, 13.5f, 0.0f, 0);
-        EV_CameraChaseRM(0, 250, player, 18.0f, 1820, 25486, 0, 28.0f, 0, -63715, 0, 28.0f);
+        EV_CameraChaseRM(0, 250, player, 18.0f, 0x71C, 0x638E, 0, 28.0f, 0, -0xF8E3, 0, 28.0f);
         EV_SetAction(player, E102_ACTIONS[67], &E102_TEXLIST, 0.40000001f, 1, 16);
         EV_Wait(10);
         EV_SerifWait();
@@ -48,7 +50,7 @@ void ev016F_e_jetbooster(int state)
         EV_CameraChaseFree();
         EV_CameraTargetFree();
         EV_CameraPos(1, 100, -70.0f, 17.41f, -18.85f);
-        EV_CameraAng(1, 100, 63874, 1821, 0);
+        EV_CameraAng(1, 100, 0xF982, 0x71D, 0);
         EventSe_Play(0, 760, 1800);
         EV_Wait(35);
         EventSe_Volume(0, -120, 120);

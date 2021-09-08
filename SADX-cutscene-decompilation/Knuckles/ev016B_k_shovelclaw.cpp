@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev016B[] = { 0 };
+
 void ev016B_k_shovelclaw(int state)
 {
 	switch (state) {
@@ -18,7 +20,7 @@ void ev016B_k_shovelclaw(int state)
 		EV_SerifPlay(1718);
 		EV_Wait(1);
 		EV_SetPos(player, 1300.0f, -1.5599999f, -290.0f);
-		EV_SetAng(player, 0, 14584, 0);
+		EV_SetAng(player, 0, 0x38F8, 0);
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, KNUCKLES_ACTIONS[29], &KNUCKLES_TEXLIST, 0.1f, 0, 8);
@@ -45,7 +47,7 @@ void ev016B_k_shovelclaw(int state)
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EV_CameraPos(1, 150, 1308.79f, 8.46f, -288.44f);
-		EV_CameraAng(1, 150, 64058, 14564, 0);
+		EV_CameraAng(1, 150, 0xFA3A, 0x38E4, 0);
 		EV_Wait(30);
 		EV_MsgW(0, msgTbl_ev016B[TextLanguage][1]); // "\aPress the jump and action buttons \ns"...
 		EV_SerifWait();

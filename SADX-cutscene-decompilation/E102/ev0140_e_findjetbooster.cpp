@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0140[] = { 0 };
+
 void ev0140_e_findjetbooster(int state)
 {
     switch(state){

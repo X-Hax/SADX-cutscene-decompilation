@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0056[] = { 0 };
+
 void ev0056_t_casinowake(int state)
 {
 	switch (state) {
@@ -13,11 +15,11 @@ void ev0056_t_casinowake(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		EV_SetPos(player, -526.0f, -2.0f, 941.0f);
-		EV_SetAng(player, 0, 61952, 0);
+		EV_SetAng(player, 0, 0xF200, 0);
 		EV_InitPlayer(0);
-		EV_CreatePlayer(2, SonicTheHedgehog, -535.40002f, -2.0f, 944.5f, 0, 64038, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, -535.40002f, -2.0f, 944.5f, 0, 0xFA26, 0);
 		WHITE = COverlayCreate(1.0f, 0.1f, 1.0f, 1.0f, 1.0f);
-		EV_CameraPerspective(1, 1, 10923);
+		EV_CameraPerspective(1, 1, 0x2AAB);
 		EV_Wait(1);
 		EV_SetAction(player, &action_m_m0106_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_SetFace(player, "VVVVVVVVVVVVVVVVVV");
@@ -26,11 +28,11 @@ void ev0056_t_casinowake(int state)
 		EV_SetFace(sonic, "VVVVVVVVVVVVVVVVVV");
 		EV_Wait(30);
 		EV_CameraPos(1, 0, -520.75299f, 6.1999998f, 951.51501f);
-		EV_CameraAng(1, 0, 59622, 5809, 0);
+		EV_CameraAng(1, 0, 0xE8E6, 0x16B1, 0);
 		COverlaySetSpeed(WHITE, -0.016666668f);
 		EV_Wait(30);
 		EV_CameraPos(0, 100, -520.58002f, 10.5f, 959.35699f);
-		EV_CameraAng(0, 100, 59878, 5041, 0);
+		EV_CameraAng(0, 100, 0xE9E6, 0x13B1, 0);
 		EV_Wait(100);
 		EV_SetFace(sonic, "XW");
 		EV_Wait(5);
@@ -45,7 +47,7 @@ void ev0056_t_casinowake(int state)
 		EV_SetAction(player, &action_m_m0109_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(10);
 		EV_CameraPos(1, 0, -519.90002f, 0.51770002f, 951.46997f);
-		EV_CameraAng(1, 0, 3302, 10161, 65280);
+		EV_CameraAng(1, 0, 0xCE6, 0x27B1, 0xFF00);
 		EV_SetAction(player, &action_m_m0110_miles, &MILES_TEXLIST, 1.0f, 0, 8);
 		EV_LookObject(player, sonic, 0.0f, 3.0f, 0.0f);
 		EV_SetAction(player, &action_m_m0111_miles, &MILES_TEXLIST, 1.3f, 1, 0);
@@ -57,7 +59,7 @@ void ev0056_t_casinowake(int state)
 		EV_Wait(60);
 		EV_MsgClose();
 		EV_CameraPos(0, 350, -524.76459f, 0.46340001f, 956.16998f);
-		EV_CameraAng(0, 350, 3302, 4785, 65280);
+		EV_CameraAng(0, 350, 0xCE6, 0x12B1, 0xFF00);
 		EV_SetAction(sonic, &action_s_s0057_sonic, &SONIC_TEXLIST, 0.80000001f, 0, 8);
 		EV_WaitAction(sonic);
 		EV_SetAction(sonic, &action_s_s0004_sonic, &SONIC_TEXLIST, 0.30000001f, 1, 16);
@@ -84,9 +86,9 @@ void ev0056_t_casinowake(int state)
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_CameraPos(1, 0, -523.90002f, -2.0f, 959.0f);
-		EV_CameraAng(1, 0, 4326, 3249, 65280);
+		EV_CameraAng(1, 0, 0x10E6, 0xCB1, 0xFF00);
 		EV_CameraPos(0, 90, -526.14349f, 0.67000002f, 952.03003f);
-		EV_CameraAng(0, 90, 4326, 3249, 65280);
+		EV_CameraAng(0, 90, 0x10E6, 0xCB1, 0xFF00);
 		EV_SetAction(player, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 8);
 		EV_SerifPlay(678);
 		EV_SetFace(player, "FED");
@@ -99,7 +101,7 @@ void ev0056_t_casinowake(int state)
 		break;
 	case 2:
 		EV_SetPos(player, -527.29999f, -2.0f, 944.70001f);
-		EV_SetAng(player, 0, 61952, 0);
+		EV_SetAng(player, 0, 0xF200, 0);
 		EV_InitPlayer(0);
 		EV_RemovePlayer(2);
 		if(WHITE){

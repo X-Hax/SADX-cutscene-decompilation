@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev004E[] = {
+	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST
+};
+
 void ev004E_t_speedhighway(int state)
 {
 	switch (state) {
@@ -16,11 +20,11 @@ void ev004E_t_speedhighway(int state)
 		EV_CanselOn();
 		SetEventFlag((EventFlags)(EventFlags_Sonic_HotelToCasinoOpen | 0x40)); //idk if this is right
 		BGM_Play(MusicIDs_evtbgm01);
-		create_eggmoble(316.95999f, 10.01f, 1374.8199f, 0, 30720, 0);
+		create_eggmoble(316.95999f, 10.01f, 1374.8199f, 0, 0x7800, 0);
 		EV_SetPos(player, 340.01001f, 0.0099999998f, 1650.25f);
-		EV_SetAng(player, 0, 30720, 0);
+		EV_SetAng(player, 0, 0x7800, 0);
 		EV_CameraPos(1, 0, 312.20999f, 13.23f, 1587.09f);
-		EV_CameraAng(1, 0, 63488, 58112, 0);
+		EV_CameraAng(1, 0, 0xF800, 0xE300, 0);
 		SMOKE = CObjSmoke_Create();
 		SMOKE2 = CObjSmoke_Create();
 		if (SMOKE) {
@@ -40,7 +44,7 @@ void ev004E_t_speedhighway(int state)
 		EV_PlayPad(0, &E004eT);
 		EV_Wait(80);
 		EV_CameraPos(0, 80, 328.81f, 7.0100002f, 1575.926f);
-		EV_CameraAng(0, 80, 65280, 63232, 0);
+		EV_CameraAng(0, 80, 0xFF00, 0xF700, 0);
 		EV_CameraPerspective(0, 80, 0x2000);
 		EV_Wait(80);
 		EventSe_Oneshot(1333, 0, 0, 0);
@@ -64,8 +68,8 @@ void ev004E_t_speedhighway(int state)
 		SMOKE2->twp->ang.x = 60;
 		EV_Wait(5);
 		EV_CameraPos(1, 0, 308.97f, 11.38f, 1328.77f);
-		EV_CameraAng(1, 0, 64768, 39168, 0);
-		EV_CameraPerspective(0, 1, 12561);
+		EV_CameraAng(1, 0, 0xFD00, 0x9900, 0);
+		EV_CameraPerspective(0, 1, 0x3111);
 		EV_Wait(5);
 		EV_MsgCls();
 		eggmoble_move_rapid(615.60602f, 17.837f, 1382.1899f, 60);
@@ -93,7 +97,7 @@ void ev004E_t_speedhighway(int state)
 		EV_MsgW(60, msgTbl_ev004E[TextLanguage][1]); //"\aThe fate of Station Square \ndepends "...
 		EV_ClrFace(player);
 		EV_CameraPos(1, 120, 353.60001f, 13.59f, 1360.97f);
-		EV_CameraAng(1, 120, 61184, 24320, 0);
+		EV_CameraAng(1, 120, 0xEF00, 0x5F00, 0);
 		EV_LookPoint(player,
 			player->twp->pos.x + 20.0f,
 			player->twp->pos.y,
@@ -134,7 +138,7 @@ void ev004E_t_speedhighway(int state)
 		EV_ClrFace(player);
 		EV_Wait(60);
 		EV_CameraPos(1, 0, 351.26001f, 0.36000001f, 1382.4f);
-		EV_CameraAng(1, 0, 4352, 0x2000, 0);
+		EV_CameraAng(1, 0, 0x1100, 0x2000, 0);
 		EV_CameraPos(0, 200, 346.73999f, 3.1900001f, 1377.87f);
 		EV_ClrFace(player);
 		if (VoiceLanguage == Languages_Japanese)
@@ -150,7 +154,7 @@ void ev004E_t_speedhighway(int state)
 		EV_ClrFace(player);
 		EV_Wait(60);
 		EV_CameraPos(1, 0, 352.5f, 0.13f, 1361.89f);
-		EV_CameraAng(1, 0, 4352, 24576, 0);
+		EV_CameraAng(1, 0, 0x1100, 0x6000, 0);
 		EV_CameraPos(0, 200, 346.69f, 3.77f, 1367.71f);
 		EV_ClrFace(player);
 		EV_SetFace(player, "CEDEDC");
@@ -163,9 +167,9 @@ void ev004E_t_speedhighway(int state)
 		EV_Wait(10);
 		EV_SetAction(player, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_CameraPos(1, 0, 306.79999f, 7.0599999f, 1374.22f);
-		EV_CameraAng(1, 0, 65280, 49152, 0);
+		EV_CameraAng(1, 0, 0xFF00, 0xC000, 0);
 		EV_CameraPos(1, 300, 208.78f, 6.27f, 1374.22f);
-		EV_CameraAng(1, 300, 1280, 49152, 0);
+		EV_CameraAng(1, 300, 0x500, 0xC000, 0);
 		EV_ClrAction(player);
 		EV_MovePoint2(player, 443.47f, 11.99f, 1371.1801f, 0.0f, 0.0f);
 		EV_Wait(40);

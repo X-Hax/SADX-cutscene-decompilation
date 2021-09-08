@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0075[] = {
+	(char*)("AMY_EGGROBO"), &AMY_EGGROBO_TEXLIST
+};
+
 void ev0075_a_kidnapped2(int state)
 {
 	switch (state) {
@@ -21,15 +25,15 @@ void ev0075_a_kidnapped2(int state)
 		EV_SetPos(sonic, -409.0f, 0.0f, 1060.3f);
 		EV_SetAng(sonic, 0, 0x8000, 0);
 		BLACKOUT = COverlayCreate(1.0e-32f, 0.0f, 0.0f, 0.0f, 0.0f);
-		EV_CreateObjectFunc(&egg_amy, set_amy, -115.0f, 90.0f, 1242.8f, 0, 1792, 61184);
+		EV_CreateObjectFunc(&egg_amy, set_amy, -115.0f, 90.0f, 1242.8f, 0, 0x700, 0xEF00);
 		EV_Wait(1);
 		EV_SetMode(egg_amy, 0);
 		setamyparam(1.1f);
 		BGM_Play(MusicIDs_eggrobo);
 		EV_CameraPos(1, 0, -261.5f, 176.0f, 1291.0f);
-		EV_CameraAng(1, 0, 61200, 50976, 64768);
+		EV_CameraAng(1, 0, 0xEF10, 0xC720, 0xFD00);
 		EV_CameraPos(0, 70, -266.5f, 156.39999f, 1313.5f);
-		EV_CameraAng(0, 70, 61898, 51152, 64768);
+		EV_CameraAng(0, 70, 0xF1CA, 0xC7D0, 0xFD00);
 		moveObject(egg_amy, -110.0f, 103.0f, 1247.0f, -226.60001f, 143.0f, 1304.7f, 64);
 		EV_Wait(64);
 		stopObject(egg_amy);
@@ -39,7 +43,7 @@ void ev0075_a_kidnapped2(int state)
 		moveObject(egg_amy, -330.0f, 182.0f, 1245.8f, -740.0f, 181.0f, 1248.0f, 290);
 		EV_CameraTargetObj(1, 0, egg_amy, -3.0f, 22.0f, -35.0f, 0);
 		EV_CameraChase(egg_amy);
-		EV_CameraPerspective(1, 60, 5461);
+		EV_CameraPerspective(1, 60, 0x1555);
 		EV_Wait(60);
 		EV_CameraTargetObj(1, 35, sonic, 0.0f, 5.0f, 0.0f, 0);
 		EV_SerifPlay(884);
@@ -47,7 +51,7 @@ void ev0075_a_kidnapped2(int state)
 		EV_Wait(15);
 		EV_SetAction(sonic, SONIC_ACTIONS[122], &SONIC_TEXLIST, 1.7f, 0, 8);
 		EV_WaitAction(sonic);
-		EV_SetAng(sonic, 0, 53760, 0);
+		EV_SetAng(sonic, 0, 0xD200, 0);
 		EV_ClrAction(sonic);
 		EV_SetAction(sonic, SONIC_ACTIONS[4], &SONIC_TEXLIST, 0.89999998f, 1, 8);
 		EV_LookObject(sonic, egg_amy, 0.0f, 5.0f, 0.0f);
@@ -56,12 +60,12 @@ void ev0075_a_kidnapped2(int state)
 		EV_SetFace(sonic, "EEEEE");
 		EV_Wait(63);
 		EV_ClrFace(sonic);
-		EV_SetAng(sonic, 0, 53248, 0);
+		EV_SetAng(sonic, 0, 0xD000, 0);
 		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.2f, 1, 12);
 		EV_CameraTargetFree();
 		EV_CameraChaseFree();
 		EV_CameraPos(1, 160, -666.5f, 150.0f, 1273.0f);
-		EV_CameraAng(1, 50, 64783, 49184, 256);
+		EV_CameraAng(1, 50, 0xFD0F, 0xC020, 0x100);
 		EV_MsgClose();
 		if (BLACKOUT)
 		{
@@ -84,7 +88,7 @@ void ev0075_a_kidnapped2(int state)
 			FreeTask(BLACKOUT);
 			BLACKOUT = 0;
 		}
-		EV_CameraPerspective(1, 0, 12561);
+		EV_CameraPerspective(1, 0, 0x3111);
 		break;
 	}
 }

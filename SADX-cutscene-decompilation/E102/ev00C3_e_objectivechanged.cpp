@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00C3[] = {
+	(char*)("ICM00C3"), &texlist_icm00C3
+};
+
 void ev00C3_e_objectivechanged(int state)
 {
 	switch (state) {
@@ -24,9 +28,9 @@ void ev00C3_e_objectivechanged(int state)
 		SetBankDir(104);
 		EventSe_Init(5);
 		EV_SetPos(player, 222.82001f, 1853.0f, -661.414f);
-		EV_SetAng(player, 0, 3479, 0);
+		EV_SetAng(player, 0, 0xD97, 0);
 		EV_CameraPos(1, 0, 253.94f, 1841.0f, -608.45001f);
-		EV_CameraAng(1, 0, 2048, 13719, 1792);
+		EV_CameraAng(1, 0, 0x800, 0x3597, 0x700);
 		hoge1 = CIchimaie2_Create(&texlist_icm00C3, 0);
 		CIchimaie2_SetTextureId(hoge1, 0);
 		CIchimaie2_SetPriority(hoge1, -2.1400001f);
@@ -212,7 +216,7 @@ void ev00C3_e_objectivechanged(int state)
 		EV_SetPath(player, &epathtag_cube00C3, 0.495f, 1);
 		EV_SetAction(player, E102_ACTIONS[49], &E102_TEXLIST, 1.0f, 1, 0);
 		EV_CameraPos(1, 0, 414.56f, 671.02502f, 523.90002f);
-		EV_CameraAng(1, 0, 5888, 62464, 0);
+		EV_CameraAng(1, 0, 0x1700, 0xF400, 0);
 		EV_CameraPos(0, 100, 287.85001f, 520.33801f, 647.14001f);
 		if (RED)
 		{
@@ -223,7 +227,7 @@ void ev00C3_e_objectivechanged(int state)
 		EV_Msg(msgTbl_ev00C3[TextLanguage][0]); //"\aDr. Robotnik... Enemy... \nMaster reg"...
 		EV_Wait(60);
 		EV_CameraPos(0, 42, 282.57001f, 508.95599f, 656.40002f);
-		EV_CameraAng(0, 30, 57600, 18432, 65280);
+		EV_CameraAng(0, 30, 0xE100, 0x4800, 0xFF00);
 		EV_Wait(30);
 		EV_CameraPos(0, 225, -0.56f, 200.5658f, 852.66998f);
 		EV_Wait(20);
@@ -239,12 +243,12 @@ void ev00C3_e_objectivechanged(int state)
 		CIchimaie2_SetDstAlpha(hoge5, 0.0f, 40);
 		deleteScanLine();
 		EV_CameraPos(0, 0, -148.39999f, 70.0f, 894.5f);
-		EV_CameraAng(0, 0, 3584, 39424, 0);
+		EV_CameraAng(0, 0, 0xE00, 0x9A00, 0);
 		EV_CameraPos(0, 110, -154.89999f, 66.800003f, 889.96002f);
 		EV_ClrPath(player);
 		EV_ClrAction(player);
 		EV_SetPos(player, -132.44f, 125.68f, 919.79999f);
-		EV_SetAng(player, 0, 41216, 0);
+		EV_SetAng(player, 0, 0xA100, 0);
 		EV_Wait(35);
 		EV_SerifPlay(1303);
 		EV_Msg(msgTbl_ev00C3[TextLanguage][2]); //"\aMust save..."
@@ -297,7 +301,7 @@ void ev00C3_e_objectivechanged(int state)
 		deleteBoot();
 		EventSe_Close();
 		EV_SetPos(player, -88.0f, 60.0f, 894.79999f);
-		EV_SetAng(player, 0, 41216, 0);
+		EV_SetAng(player, 0, 0xA100, 0);
 		EV_Wait(1);
 		break;
 	}

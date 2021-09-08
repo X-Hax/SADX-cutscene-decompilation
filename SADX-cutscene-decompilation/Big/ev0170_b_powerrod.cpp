@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0170[] = { 0 };
+
 void ev0170_b_powerrod(int state)
 {
 	switch (state) {

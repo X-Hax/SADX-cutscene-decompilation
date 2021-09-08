@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0141[] = { 0 };
+
 void ev0141_e_hotshelter(int state)
 {
     switch(state){

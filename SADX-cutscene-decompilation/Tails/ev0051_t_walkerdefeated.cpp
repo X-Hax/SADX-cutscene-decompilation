@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0051[] = { 0 };
+
 void ev0051_t_walkerdefeated(int state)
 {
 	switch (state) {
@@ -15,25 +17,25 @@ void ev0051_t_walkerdefeated(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		EV_CameraPos(1, 0, -474.59f, 5.0599999f, 1034.16f);
-		EV_CameraAng(1, 0, 63950, 41661, 0);
+		EV_CameraAng(1, 0, 0xF9CE, 0xA2BD, 0);
 		EV_CameraPos(1, 300, -470.87f, 4.3099999f, 1037.41f);
-		EV_CameraAng(1, 300, 63950, 41661, 0);
+		EV_CameraAng(1, 300, 0xF9CE, 0xA2BD, 0);
 		EventSe_Play(0, 1337, 1800);
 		EV_SetPos(player, -466.10999f, -2.5f, 1043.02f);
-		EV_SetAng(player, 0, 37178, 0);
+		EV_SetAng(player, 0, 0x913A, 0);
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m0001_miles, &MILES_TEXLIST, 1.0f, 1, 0);
-		EV_CreateObject(&BOY, -528.15997f, 6.0f, 1244.91f, 0, 1295, 0);
-		EV_CreateObject(&OYAJI, -532.16998f, 10.0f, 1243.4399f, 0, 1295, 0);
-		EV_CreateObject(&FAT_B, -527.03998f, 8.3000002f, 1272.46f, 0, 1295, 0);
-		EV_CreateObject(&LADY, -538.07001f, 10.0f, 1268.95f, 0, 1295, 0);
-		EV_CreateObject(&GIRL, -533.53003f, 6.0f, 1259.09f, 0, 1295, 0);
-		EV_CreateObject(&BOY2, -534.28998f, 6.0f, 1266.88f, 0, 1295, 0);
-		EV_CreateObject(&OYAJI2, -539.62f, 10.0f, 1281.7f, 0, 1295, 0);
-		EV_CreateObject(&FAT2, -541.08002f, 8.3000002f, 1249.92f, 0, 1295, 0);
-		EV_CreateObject(&LADY2, -534.69f, 10.0f, 1234.08f, 0, 1295, 0);
-		EV_CreateObject(&GIRL2, -526.90997f, 6.0f, 1229.34f, 0, 1295, 0);
+		EV_CreateObject(&BOY, -528.15997f, 6.0f, 1244.91f, 0, 0x50F, 0);
+		EV_CreateObject(&OYAJI, -532.16998f, 10.0f, 1243.4399f, 0, 0x50F, 0);
+		EV_CreateObject(&FAT_B, -527.03998f, 8.3000002f, 1272.46f, 0, 0x50F, 0);
+		EV_CreateObject(&LADY, -538.07001f, 10.0f, 1268.95f, 0, 0x50F, 0);
+		EV_CreateObject(&GIRL, -533.53003f, 6.0f, 1259.09f, 0, 0x50F, 0);
+		EV_CreateObject(&BOY2, -534.28998f, 6.0f, 1266.88f, 0, 0x50F, 0);
+		EV_CreateObject(&OYAJI2, -539.62f, 10.0f, 1281.7f, 0, 0x50F, 0);
+		EV_CreateObject(&FAT2, -541.08002f, 8.3000002f, 1249.92f, 0, 0x50F, 0);
+		EV_CreateObject(&LADY2, -534.69f, 10.0f, 1234.08f, 0, 0x50F, 0);
+		EV_CreateObject(&GIRL2, -526.90997f, 6.0f, 1229.34f, 0, 0x50F, 0);
 		EV_Wait(1);
 		EV_SetMode(BOY, 0);
 		EV_ClrAction(BOY);
@@ -81,9 +83,9 @@ void ev0051_t_walkerdefeated(int state)
 		EV_Wait(100);
 		EV_MsgClose();
 		EV_CameraPos(1, 0, -509.81f, 4.77f, 1239.4301f);
-		EV_CameraAng(1, 0, 3072, 15244, 0);
+		EV_CameraAng(1, 0, 0xC00, 0x3B8C, 0);
 		EV_CameraPos(1, 150, -513.52002f, 4.77f, 1273.22f);
-		EV_CameraAng(1, 150, 3072, 15244, 0);
+		EV_CameraAng(1, 150, 0xC00, 0x3B8C, 0);
 		EV_SerifPlay(825);
 		EV_Wait(30);
 		EV_SerifPlay(821);
@@ -91,29 +93,29 @@ void ev0051_t_walkerdefeated(int state)
 		EV_SerifPlay(824);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, -472.03f, 8.3900003f, 1033.49f);
-		EV_CameraAng(1, 0, 60292, 38770, 0);
+		EV_CameraAng(1, 0, 0xEB84, 0x9772, 0);
 		EV_CameraPos(1, 200, -470.12f, 6.46f, 1036.3199f);
-		EV_CameraAng(1, 200, 60292, 38770, 0);
+		EV_CameraAng(1, 200, 0xEB84, 0x9772, 0);
 		EV_SetPos(BOY, -431.57001f, 3.0f, 1296.59f);
-		EV_SetAng(BOY, 0, 31161, 0);
+		EV_SetAng(BOY, 0, 0x79B9, 0);
 		EV_SetPos(FAT_B, -452.85999f, 7.0f, 1292.42f);
-		EV_SetAng(FAT_B, 0, 31161, 0);
+		EV_SetAng(FAT_B, 0, 0x79B9, 0);
 		EV_SetPos(OYAJI, -460.01999f, 7.3000002f, 1278.92f);
-		EV_SetAng(OYAJI, 0, 31161, 0);
+		EV_SetAng(OYAJI, 0, 0x79B9, 0);
 		EV_SetPos(LADY, -413.94f, 8.0f, 1281.87f);
-		EV_SetAng(LADY, 0, 31161, 0);
+		EV_SetAng(LADY, 0, 0x79B9, 0);
 		EV_SetPos(GIRL, -427.59f, 3.0f, 1286.2f);
-		EV_SetAng(GIRL, 0, 31161, 0);
+		EV_SetAng(GIRL, 0, 0x79B9, 0);
 		EV_SetPos(BOY2, -420.69f, 3.0f, 1287.15f);
-		EV_SetAng(BOY2, 0, 31161, 0);
+		EV_SetAng(BOY2, 0, 0x79B9, 0);
 		EV_SetPos(FAT2, -444.57999f, 7.0f, 1283.58f);
-		EV_SetAng(FAT2, 0, 31161, 0);
+		EV_SetAng(FAT2, 0, 0x79B9, 0);
 		EV_SetPos(OYAJI2, -437.03f, 7.3000002f, 1288.17f);
-		EV_SetAng(OYAJI2, 0, 31161, 0);
+		EV_SetAng(OYAJI2, 0, 0x79B9, 0);
 		EV_SetPos(LADY2, -450.42999f, 8.0f, 1279.9399f);
-		EV_SetAng(LADY2, 0, 31161, 0);
+		EV_SetAng(LADY2, 0, 0x79B9, 0);
 		EV_SetPos(GIRL2, -457.17999f, 3.0f, 1281.1f);
-		EV_SetAng(GIRL2, 0, 31161, 0);
+		EV_SetAng(GIRL2, 0, 0x79B9, 0);
 		EV_Wait(1);
 		EV_SetAction(player, &action_m_m0130_miles, &MILES_TEXLIST, 0.5f, 0, 0);
 		EV_Wait(15);
@@ -141,13 +143,13 @@ void ev0051_t_walkerdefeated(int state)
 		EV_Wait(1);
 		EV_WaitAction(player);
 		EV_CameraPos(1, 0, -463.66f, 51.349998f, 1110.79f);
-		EV_CameraAng(1, 0, 57806, 3517, 0);
+		EV_CameraAng(1, 0, 0xE1CE, 0xDBD, 0);
 		EV_ClrAction(player);
 		EV_PlayPad(0, &EV0051_M_JUMP);
 		EV_Wait(130);
 		EventSe_Volume(0, 120, 60);
 		EV_CameraPos(1, 0, -419.63f, -2.23f, 1316.47f);
-		EV_CameraAng(1, 0, 4996, 4466, 0);
+		EV_CameraAng(1, 0, 0x1384, 0x1172, 0);
 		EV_Wait(60);
 		EventSe_Volume(0, -120, 90);
 		B_OUT = COverlayCreate(0.016666668f, 0.2f, 0.0f, 0.0f, 0.0f);

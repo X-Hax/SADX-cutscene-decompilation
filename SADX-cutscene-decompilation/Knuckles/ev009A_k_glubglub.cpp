@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev009A[] = { 0 };
+
 void ev009A_k_glubglub(int state)
 {
 	int dif = 121;
@@ -18,14 +20,14 @@ void ev009A_k_glubglub(int state)
 		EventSe_Init(5);
 		BGM_Play(MusicIDs_egcarer1);
 		EV_SetPos(player, -1.76f, 734.59998f, 1044.35f);
-		EV_SetAng(player, 0, 36608, 0);
+		EV_SetAng(player, 0, 0x8F00, 0);
 		EV_InitPlayer(0);
 		EV_ClrAction(player);
 		EV_SetAction(player, KNUCKLES_ACTIONS[82], &KNUCKLES_TEXLIST, 1.0f, 1, 8);
 		EV_CameraPos(1, 0, -1.137f, 737.84998f, 1039.165f);
-		EV_CameraAng(1, 0, 4352, 35624, 0);
+		EV_CameraAng(1, 0, 0x1100, 0x8B28, 0);
 		EV_CameraPos(1, 120, -2.1329999f, 737.7876f, 1039.233f);
-		EV_CameraAng(1, 120, 5888, 33064, 64768);
+		EV_CameraAng(1, 120, 0x1700, 0x8128, 0xFD00);
 		EV_ClrFace(player);
 		EV_SetFace(player, "EAAACD");
 		EV_SerifPlay(1156);
@@ -35,7 +37,7 @@ void ev009A_k_glubglub(int state)
 		EV_MsgClose();
 		EV_ClrFace(player);
 		EV_CameraPos(1, 50, -11.55f, 738.27002f, 1034.1f);
-		EV_CameraAng(1, 50, 1280, 39720, 0);
+		EV_CameraAng(1, 50, 0x500, 0x9B28, 0);
 		EV_Wait(10);
 		EV_ClrAction(player);
 		if (enableUnusedCode) {
@@ -62,7 +64,7 @@ void ev009A_k_glubglub(int state)
 		EV_LookPoint(player, -90.474998f, 740.284f, 971.88879f);
 		EV_SetAction(player, &action_k_k0001_knuckles, &KNUCKLES_TEXLIST, 1.5f, 0, 8);
 		EV_SetAction(player, &action_k_k0002_knuckles, &KNUCKLES_TEXLIST, 1.0f, 1, 8);
-		EV_MoveRotation(player, 0, 1064, 0);
+		EV_MoveRotation(player, 0, 0x428, 0);
 		efWhiteOn(1, 1);
 		EV_SetFace(player, "B");
 		EV_Wait(8);
@@ -70,11 +72,11 @@ void ev009A_k_glubglub(int state)
 		EV_SerifPlay(1158);
 		EV_Msg(msgTbl_ev009A[TextLanguage][2]); //"\aHuh!   What's that?  "
 		EV_CameraPos(1, 80, -87.459999f, 736.0f, 994.34003f);
-		EV_CameraAng(1, 80, 2304, 808, 256);
+		EV_CameraAng(1, 80, 0x900, 0x328, 0x100);
 		EV_Wait(100);
 		EV_CameraPos(0, 95, -90.160004f, 740.58801f, 971.09601f);
-		EV_CameraPerspective(0, 95, 5461);
-		EV_CameraAng(1, 95, 1024, 808, 256);
+		EV_CameraPerspective(0, 95, 0x1555);
+		EV_CameraAng(1, 95, 0x400, 0x328, 0x100);
 		EV_Wait(90);
 		efWhiteOn(80, 80);
 		crushLightOn(-125.0655f, 805.31f, 285.23099f, 4, 20, 3.0f, 1.0f, 0x88FFFFFF, 0x88FFFFFF);
@@ -86,9 +88,9 @@ void ev009A_k_glubglub(int state)
 			80, 80, 8.0f);
 		EV_SetAction(player, &action_k_k0003_knuckles, &KNUCKLES_TEXLIST, 1.5f, 0, 1);
 		create_task_light_EV009A();
-		EV_CameraPerspective(1, 20, 12743);
+		EV_CameraPerspective(1, 20, 0x31C7);
 		EV_CameraPos(1, 20, -90.752998f, 740.66199f, 1004.09f);
-		EV_CameraAng(1, 20, 63744, 62760, -256);
+		EV_CameraAng(1, 20, 0xF900, 0xF528, -0x100);
 		EV_Wait(20);
 		EV_SerifPlay(1797);
 		EV_Msg(msgTbl_ev009A[TextLanguage][3]); //"\aWhoa.........."
@@ -108,7 +110,7 @@ void ev009A_k_glubglub(int state)
 		EV_CameraOff();
 		EV_PadOn();
 		EV_SetPos(player, -84.300003f, 733.53998f, 983.18597f);
-		EV_SetAng(player, 0, 40505, 0);
+		EV_SetAng(player, 0, 0x9E39, 0);
 		EV_InitPlayer(0);
 		destroy_p_ShadowTask_EV009A();
 		crushLightOff();

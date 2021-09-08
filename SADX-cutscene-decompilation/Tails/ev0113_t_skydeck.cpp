@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0113[] = { 0 };
+
 void ev0113_t_skydeck(int state)
 {
 	switch (state) {

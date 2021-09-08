@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0014[] = { 0 };
+
 void ev0014_s_aftertwinklepark(int state)
 {
 	switch (state) {
@@ -13,22 +15,22 @@ void ev0014_s_aftertwinklepark(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		EV_SetPos(player, 798.95001f, 50.009998f, 1771.1899f);
-		EV_SetAng(player, 0, 49989, 0);
+		EV_SetAng(player, 0, 0xC345, 0);
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, SONIC_ACTIONS[4], &SONIC_TEXLIST, 2.5f, 1, 0);
 		EV_CameraPos(0, 0, 717.83002f, 87.25f, 1755.5f);
-		EV_CameraAng(0, 0, 61125, 46630, 0);
+		EV_CameraAng(0, 0, 0xEEC5, 0xB626, 0);
 		EV_CameraPos(0, 50, 708.98999f, 67.919998f, 1748.9f);
-		EV_CameraAng(0, 50, 63941, 44326, 0);
+		EV_CameraAng(0, 50, 0xF9C5, 0xAD26, 0);
 		EV_MovePoint2(player, 756.76001f, 50.0f, 1769.88f, 1.75f, 0.059999999f);
 		EV_Wait(60);
 		EV_SetAction(player, &action_s_s0027_sonic, &SONIC_TEXLIST, 0.15000001f, 1, 8);
 		EV_Wait(20);
 		EV_CameraPos(0, 0, 739.20001f, 58.09f, 1788.09f);
-		EV_CameraAng(0, 0, 64453, 56358, 0);
+		EV_CameraAng(0, 0, 0xFBC5, 0xDC26, 0);
 		EV_CameraPos(0, 270, 741.32001f, 55.09f, 1760.51f);
-		EV_CameraAng(0, 270, 64965, 43066, 0);
+		EV_CameraAng(0, 270, 0xFDC5, 0xA83A, 0);
 		EV_ClrFace(player);
 		if (VoiceLanguage == Languages_English) EV_SetFace(player, "DBD");
 		EV_SerifPlay(513);
@@ -62,7 +64,7 @@ void ev0014_s_aftertwinklepark(int state)
 		break;
 	case 2:
 		EV_SetPos(player, 756.76001f, 50.0f, 1769.88f);
-		EV_SetAng(player, 0, 49989, 0);
+		EV_SetAng(player, 0, 0xC345, 0);
 		EV_Wait(1);
 		EV_InitPlayer(0);
 		EV_CameraOff();

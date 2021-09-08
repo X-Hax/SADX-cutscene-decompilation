@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0044[] = { 0 };
+
 void ev0044_t_enterpast(int state)
 {
 	switch (state) {
@@ -16,12 +18,12 @@ void ev0044_t_enterpast(int state)
 		EV_InitPlayer(0);
 		BGM_Play(MusicIDs_tical);
 		EV_SetPos(player, -11.58f, 9.9899998f, 1354.12f);
-		EV_SetAng(player, 0, 32800, 0);
+		EV_SetAng(player, 0, 0x8020, 0);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, -13.38f, 14.09f, 1345.51f);
-		EV_CameraAng(1, 0, 1792, 37340, 0);
+		EV_CameraAng(1, 0, 0x700, 0x91DC, 0);
 		EV_CameraPos(1, 250, -15.19f, 14.09f, 1346.36f);
-		EV_CameraAng(1, 250, 1792, 37340, 0);
+		EV_CameraAng(1, 250, 0x700, 0x91DC, 0);
 		efWhiteOn2(0, 30, 60);
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -120, 120);
@@ -35,16 +37,15 @@ void ev0044_t_enterpast(int state)
 		EventSe_Stop(0);
 		EV_MsgClose();
 		EV_CameraPos(1, 0, -1.63f, 24.15f, 1318.76f);
-		EV_CameraAng(1, 0, 1792, 65500, 0);
+		EV_CameraAng(1, 0, 0x700, 0xFFDC, 0);
 		EV_CameraPos(1, 100, -1.85f, 13.04f, 1382.74f);
-		EV_CameraAng(1, 100, 1792, 65500, 0);
+		EV_CameraAng(1, 100, 0x700, 0xFFDC, 0);
 		EV_Wait(30);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_m_m0127_miles, &MILES_TEXLIST, 0.2f, 1, 0);
 		EV_SerifPlay(730);
 		EV_MsgW(0, msgTbl_ev0044[TextLanguage][1]); //"\aI wonder where I am?"
 		EV_Wait(90);
-		EV_MsgClose();
 		EV_MsgClose();
 		break;
 	case 2:

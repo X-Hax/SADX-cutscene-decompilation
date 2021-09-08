@@ -3,6 +3,11 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00BF[] = {
+	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
+	(char*)("VER2_WING"), &VER2_WING_TEXLIST
+};
+
 void ev00BF_e_prison(int state)
 {
 	switch (state) {
@@ -15,8 +20,8 @@ void ev00BF_e_prison(int state)
 		EV_InitPlayer(0);
 		SetBankDir(96);
 		EV_SetPos(player, 140.0f, 0.0f, 43.0f);
-		EV_SetAng(player, 0, 49152, 0);
-		EV_CreatePlayer(2, AmyRose, -100.0f, 0.1f, -33.369999f, 0, 61973, 0);
+		EV_SetAng(player, 0, 0xC000, 0);
+		EV_CreatePlayer(2, AmyRose, -100.0f, 0.1f, -33.369999f, 0, 0xF215, 0);
 		obj_ver1_wing = SetEventBirdie0();
 		EV_SetPos(obj_ver1_wing, -100.0f, 5.5f, -5.5f);
 		EV_SetAng(obj_ver1_wing, 0, 0, 0);
@@ -25,24 +30,24 @@ void ev00BF_e_prison(int state)
 		EV_SetAction(player, E102_ACTIONS[2], &E102_TEXLIST, 0.5f, 1, 0);
 		amy = EV_GetPlayer(2);
 		EV_SetPos(amy, -100.0f, 0.1f, -33.369999f);
-		EV_SetAng(amy, 0, 61973, 0);
+		EV_SetAng(amy, 0, 0xF215, 0);
 		EV_ClrAction(amy);
 		EV_SetAction(amy, &action_a_a0115_amy, &AMY_TEXLIST, 1.0f, 1, 1);
 		EV_SetMode(obj_ver1_wing, 0);
 		EV_Wait(1);
 		EV_SetPos(player, 140.0f, 0.0f, 43.0f);
-		EV_SetAng(player, 0, 49152, 0);
+		EV_SetAng(player, 0, 0xC000, 0);
 		EV_SetPos(obj_ver1_wing, -100.0f, 0.0f, -33.369999f);
-		EV_SetAng(obj_ver1_wing, 0, 61973, 0);
+		EV_SetAng(obj_ver1_wing, 0, 0xF215, 0);
 		EV_SetAction(obj_ver1_wing, &action_w_w0114_wing, &VER1_WING_TEXLIST, 1.0f, 1, 1);
 		BGM_Play(MusicIDs_e102);
-		EV_CameraPerspective(0, 1, 9102);
+		EV_CameraPerspective(0, 1, 0x238E);
 		EV_CameraPos(0, 0, -92.690002f, 20.879999f, 105.44f);
-		EV_CameraAng(0, 0, 65024, 49152, 0);
+		EV_CameraAng(0, 0, 0xFE00, 0xC000, 0);
 		EV_CameraPos(0, 90, -92.690002f, 20.879999f, 31.440001f);
 		EV_Wait(90);
 		EV_CameraPos(0, 0, 115.31f, 15.67f, 67.440002f);
-		EV_CameraAng(0, 0, 65024, 49152, 0);
+		EV_CameraAng(0, 0, 0xFE00, 0xC000, 0);
 		EV_CameraPos(0, 45, 115.31f, 15.67f, 44.439999f);
 		EV_Wait(45);
 		EV_CameraPos(0, 45, 115.31f, 15.67f, 41.439999f);
@@ -55,13 +60,13 @@ void ev00BF_e_prison(int state)
 		EV_MovePoint2(player, 135.0f, 0.0f, 16.0f, 0.75f, 0.059999999f);
 		EV_Wait(60);
 		EV_CameraPos(0, 0, 127.3f, 15.77f, 46.450001f);
-		EV_CameraAng(1, 0, 65024, 0, 0);
+		EV_CameraAng(1, 0, 0xFE00, 0, 0);
 		EV_CameraChase(player);
 		EV_MovePoint2(player, -100.0f, 0.0f, 20.0f, 0.75f, 0.059999999f);
 		EV_WaitMove(player);
 		EV_CameraChaseFree();
 		EV_CameraPos(0, 45, -129.52f, 16.450001f, 42.860001f);
-		EV_CameraAng(0, 45, 64512, 58880, 0);
+		EV_CameraAng(0, 45, 0xFC00, 0xE600, 0);
 		EV_LookObject(amy, player, 0.0f, 14.0f, 0.0f);
 		EV_SetAction(player, &action_e_e0006_e102, &E102_TEXLIST, 1.0f, 0, 16);
 		EV_WaitAction(player);
@@ -71,9 +76,9 @@ void ev00BF_e_prison(int state)
 		EV_SetAction(player, E102_ACTIONS[1], &E102_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(player, E102_ACTIONS[2], &E102_TEXLIST, 0.5f, 1, 8);
 		EV_Wait(60);
-		EV_CameraPerspective(0, 1, 12561);
+		EV_CameraPerspective(0, 1, 0x3111);
 		EV_CameraPos(0, 0, -99.519997f, 0.23999999f, -26.35f);
-		EV_CameraAng(0, 0, 4836, 62963, 0);
+		EV_CameraAng(0, 0, 0x12E4, 0xF5F3, 0);
 		EV_CameraPos(0, 70, -101.45f, 0.23999999f, -26.84f);
 		EV_ClrFace(amy);
 		if (VoiceLanguage == Languages_Japanese)
@@ -91,17 +96,17 @@ void ev00BF_e_prison(int state)
 		EV_MsgClose();
 		EV_SetAction(obj_ver1_wing, &action_w_w0116_wing, &VER1_WING_TEXLIST, 1.0f, 0, 0);
 		EV_Wait(30);
-		EV_CameraPerspective(0, 1, 5461);
+		EV_CameraPerspective(0, 1, 0x1555);
 		EV_CameraPos(0, 0, -102.08f, 4.23f, -52.950001f);
-		EV_CameraAng(0, 0, 64996, 32755, 0);
+		EV_CameraAng(0, 0, 0xFDE4, 0x7FF3, 0);
 		EV_CameraPos(0, 90, -102.08f, 16.209999f, -52.380001f);
 		EV_Wait(90);
 		EV_SerifPlay(1243);
 		EV_MsgW(55, msgTbl_ev00BF[TextLanguage][1]); //"\aGive me the bird."
 		EV_MsgClose();
-		EV_CameraPerspective(0, 1, 3641);
+		EV_CameraPerspective(0, 1, 0xE39);
 		EV_CameraPos(0, 0, -108.74f, 18.299999f, 11.14f);
-		EV_CameraAng(0, 0, 62444, 62707, 0);
+		EV_CameraAng(0, 0, 0xF3EC, 0xF4F3, 0);
 		EV_SetAction(amy, &action_a_a0117_amy, &AMY_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(obj_ver1_wing, &action_w_w0117_wing, &VER1_WING_TEXLIST, 1.0f, 0, 0);
 		EV_Wait(20);
@@ -116,14 +121,14 @@ void ev00BF_e_prison(int state)
 		EV_MsgClose();
 		EV_Wait(10);
 		EV_CameraPos(0, 0, -100.11f, 2.0599999f, -27.07f);
-		EV_CameraAng(0, 0, 2788, 32755, 0);
+		EV_CameraAng(0, 0, 0xAE4, 0x7FF3, 0);
 		EV_SerifPlay(1245);
 		EV_Msg(msgTbl_ev00BF[TextLanguage][3]); //"\aResistance is futile; \ngive me the b"...
 		EV_SerifWait();
 		EV_MsgClose();
 		EV_Wait(20);
 		EV_CameraPos(0, 0, -107.92f, 14.19f, -5.3200002f);
-		EV_CameraAng(0, 0, 61428, 62707, 0);
+		EV_CameraAng(0, 0, 0xEFF4, 0xF4F3, 0);
 		EV_ClrFace(amy);
 		if (VoiceLanguage == Languages_Japanese)
 		{
@@ -138,9 +143,9 @@ void ev00BF_e_prison(int state)
 		EV_MsgClose();
 		EV_ClrFace(amy);
 		EV_Wait(10);
-		EV_CameraPerspective(0, 1, 5461);
+		EV_CameraPerspective(0, 1, 0x1555);
 		EV_CameraPos(0, 0, -128.35001f, 2.3399999f, -44.91f);
-		EV_CameraAng(0, 0, 996, 38387, 0);
+		EV_CameraAng(0, 0, 0x3E4, 0x95F3, 0);
 		EV_SetAng(amy, 0, 0, 0);
 		EV_CameraPos(0, 70, -127.49f, 2.3399999f, -45.43f);
 		EV_SerifPlay(1247);
@@ -169,22 +174,22 @@ void ev00BF_e_prison(int state)
 			amy->twp->ang.x,
 			0x4000 - amy->twp->ang.y,
 			amy->twp->ang.z);
-		EV_CameraPerspective(0, 1, 9102);
+		EV_CameraPerspective(0, 1, 0x238E);
 		EV_CameraPos(0, 0, -108.49f, 13.74f, -2.05f);
-		EV_CameraAng(0, 0, 228, 37875, 0);
+		EV_CameraAng(0, 0, 0xE4, 0x93F3, 0);
 		EV_SerifPlay(1250);
 		EV_MsgW(40, msgTbl_ev00BF[TextLanguage][8]); //"\aData unavailable."
 		EV_MsgClose();
 		EV_Wait(40);
-		EV_CameraPerspective(0, 1, 7282);
+		EV_CameraPerspective(0, 1, 0x1C72);
 		EV_CameraPos(0, 0, -116.01f, 0.88f, -23.629999f);
-		EV_CameraAng(0, 0, 2788, 54003, 0);
+		EV_CameraAng(0, 0, 0xAE4, 0xD2F3, 0);
 		EV_SetFace(amy, "FF");
 		EV_SerifPlay(1251);
 		EV_MsgW(40, msgTbl_ev00BF[TextLanguage][9]); //"\aYou don't even know?"
 		EV_ClrFace(amy);
 		EV_MsgClose();
-		EV_CameraPerspective(0, 60, 5461);
+		EV_CameraPerspective(0, 60, 0x1555);
 		EV_Wait(60);
 		EV_SetFace(amy, "FFF");
 		EV_SerifPlay(1252);
@@ -192,7 +197,7 @@ void ev00BF_e_prison(int state)
 		EV_ClrFace(amy);
 		EV_MsgClose();
 		EV_CameraPos(0, 0, -116.06f, 9.46f, -5.2800002f);
-		EV_CameraAng(0, 0, 64740, 60403, 0);
+		EV_CameraAng(0, 0, 0xFCE4, 0xEBF3, 0);
 		EV_Wait(60);
 		EV_SetFace(amy, "FF");
 		EV_SerifPlay(1253);
@@ -272,7 +277,7 @@ void ev00BF_e_prison(int state)
 		EV_MsgClose();
 		EV_Wait(30);
 		EV_CameraPos(0, 0, -100.03f, 21.860001f, -57.110001f);
-		EV_CameraAng(0, 0, 63716, 32755, 0);
+		EV_CameraAng(0, 0, 0xF8E4, 0x7FF3, 0);
 		EV_Wait(45);
 		EV_SetAction(player, E102_ACTIONS[2], &E102_TEXLIST, 2.5f, 1, 0);
 		dsPlay_timer(1326, 213385217, 1, 0, 40);
@@ -297,7 +302,7 @@ void ev00BF_e_prison(int state)
 		EV_SetAction(player, E102_ACTIONS[2], &E102_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(20);
 		EV_CameraPos(0, 0, -102.11f, 30.959999f, 47.470001f);
-		EV_CameraAng(0, 0, 60388, 64755, 0);
+		EV_CameraAng(0, 0, 0xEBE4, 0xFCF3, 0);
 		EV_Wait(30);
 		EV_SetFace(amy, "E");
 		EV_SerifPlay(1258); 
@@ -309,16 +314,16 @@ void ev00BF_e_prison(int state)
 		EV_ClrFace(amy);
 		EV_MsgClose();
 		EV_CameraPos(0, 0, -110.56f, 12.99f, 3.6800001f);
-		EV_CameraAng(0, 0, 60939, 58138, 0);
+		EV_CameraAng(0, 0, 0xEE0B, 0xE31A, 0);
 		EV_CameraPos(0, 60, -104.08f, 8.3000002f, -3.8699999f);
 		EV_Wait(30);
 		EV_SetAction(obj_ver1_wing, &action_w_w0121_wing, &VER1_WING_TEXLIST, 1.0f, 1, 0);
 		dsPlay_timer(1336, 213385220, 1, 0, 120);
 		EV_Wait(30);
 		EV_MsgClose();
-		EV_CameraPerspective(0, 1, 12561);
+		EV_CameraPerspective(0, 1, 0x3111);
 		EV_CameraPos(0, 0, -128.5f, 18.389999f, -10.87f);
-		EV_CameraAng(0, 0, 62180, 49395, 0);
+		EV_CameraAng(0, 0, 0xF2E4, 0xC0F3, 0);
 		EV_SetAction(obj_ver1_wing, &action_w_w9001_wing, &VER1_WING_TEXLIST, 1.0f, 1, 0);
 		moveObject(obj_ver1_wing,
 			-100.0f, 0.0f, -11.0f,
@@ -339,25 +344,25 @@ void ev00BF_e_prison(int state)
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(60);
 		EV_CameraPos(0, 0, -100.0f, 16.65f, 27.26f);
-		EV_CameraAng(0, 0, 996, 0, 0);
-		EV_CameraPerspective(0, 60, 9102);
+		EV_CameraAng(0, 0, 0x3E4, 0, 0);
+		EV_CameraPerspective(0, 60, 0x238E);
 		EV_Wait(60);
 		EV_Wait(30);
 		EV_CameraPos(0, 0, -91.660004f, 17.67f, 15.83f);
-		EV_CameraAng(0, 0, 64484, 26099, 0);
+		EV_CameraAng(0, 0, 0xFBE4, 0x65F3, 0);
 		EV_SetAction(player, E102_ACTIONS[2], &E102_TEXLIST, 3.0f, 1, 0);
 		dsPlay_timer(1326, 213385222, 1, 0, 150);
 		EV_CameraPos(0, 90, -79.779999f, 19.690001f, -0.14f);
 		EV_Wait(90);
 		EV_CameraPos(0, 0, -143.59f, 22.68f, 26.860001f);
-		EV_CameraAng(0, 0, 61924, 48627, 0);
+		EV_CameraAng(0, 0, 0xF1E4, 0xBDF3, 0);
 		EV_CameraPos(0, 180, -150.17f, 25.059999f, 26.530001f);
 		EV_Wait(60);
 		EV_ClrAction(player);
 		EV_SetAction(player, E102_ACTIONS[3], &E102_TEXLIST, 1.0f, 1, 0);
 		EV_MovePoint2(player, -123.0f, 0.0f, 31.0f, 0.75f, 0.059999999f);
 		EV_Wait(30);
-		EV_SetAng(obj_ver1_wing, 0, 52007, 0);
+		EV_SetAng(obj_ver1_wing, 0, 0xCB27, 0);
 		EV_CameraPos(0, 180, -150.17f, 25.059999f, 26.530001f);
 		dsPlay_timer(1334, 213385223, 1, 0, 60);
 		EV_SetAction(player, E102_ACTIONS[0], &E102_TEXLIST, 0.30000001f, 1, 16);
@@ -365,9 +370,9 @@ void ev00BF_e_prison(int state)
 		EV_SerifPlay(1261);
 		EV_MsgW(60, msgTbl_ev00BF[TextLanguage][19]); //"\aGet going!"
 		EV_MsgClose();
-		EV_CameraPerspective(0, 1, 3641);
+		EV_CameraPerspective(0, 1, 0xE39);
 		EV_CameraPos(0, 0, -130.14f, 9.1800003f, 69.269997f);
-		EV_CameraAng(0, 0, 64996, 1011, 0);
+		EV_CameraAng(0, 0, 0xFDE4, 0x3F3, 0);
 		EV_CameraPos(0, 20, -97.300003f, 9.1800003f, 48.32f);
 		EV_Wait(20);
 		EV_CameraPos(0, 80, -94.910004f, 9.1800003f, 48.32f);
@@ -378,9 +383,9 @@ void ev00BF_e_prison(int state)
 		EV_ClrFace(amy);
 		EV_Wait(50);
 		EV_MsgClose();
-		EV_CameraPerspective(0, 1, 10012);
+		EV_CameraPerspective(0, 1, 0x271C);
 		EV_CameraPos(0, 0, -145.75999f, 3.5899999f, 41.209999f);
-		EV_CameraAng(0, 0, 570, 54877, 0);
+		EV_CameraAng(0, 0, 0x23A, 0xD65D, 0);
 		EV_CameraPos(0, 50, -146.32001f, 15.57f, 41.549999f);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_e_e0024_e102, &E102_TEXLIST, 0.5f, 0, 32);
@@ -391,13 +396,13 @@ void ev00BF_e_prison(int state)
 		dsPlay_oneshot_v(1333, 0, 0, 120, -123.0f, 0.0f, 31.0f);
 		EV_Wait(15);
 		EV_CameraPos(0, 0, -111.76f, 2.4200001f, 10.19f);
-		EV_CameraAng(0, 0, 880, 58983, 0);
+		EV_CameraAng(0, 0, 0x370, 0xE667, 0);
 		seqVars[35] |= 4u;
 		dsPlay_timer_v(1335, 0xCB80008, 1, 120, 120, -100.0f, 0.1f, -33.369999f);
 		RumbleA(0, 3);
 		EV_CameraPos(0, 120, -120.68f, 2.21f, 22.469999f);
-		EV_CameraAng(0, 120, 3696, 58983, 0);
-		EV_CameraPerspective(0, 120, 12561);
+		EV_CameraAng(0, 120, 0xE70, 0xE667, 0);
+		EV_CameraPerspective(0, 120, 0x3111);
 		EV_Wait(120);
 		EV_CameraPos(0, 270, -123.99f, 2.21f, 27.02f);
 		EV_Wait(60);
@@ -408,7 +413,7 @@ void ev00BF_e_prison(int state)
 		EV_MsgClose();
 		EV_Wait(30);
 		EV_CameraPos(0, 120, -137.38f, 19.48f, 24.08f);
-		EV_CameraAng(0, 120, 62692, 47859, 336);
+		EV_CameraAng(0, 120, 0xF4E4, 0xBAF3, 0x150);
 		EV_LookFree(amy);
 		EV_ClrAction(amy);
 		EV_SetAction(amy, AMY_ACTIONS[45], &AMY_TEXLIST, 1.5f, 1, 32);
@@ -419,25 +424,25 @@ void ev00BF_e_prison(int state)
 		EV_Wait(80);
 		EV_ClrAction(amy);
 		EV_SetAction(amy, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 1);
-		EV_SetAng(amy, 0, 54348, 0);
+		EV_SetAng(amy, 0, 0xD44C, 0);
 		EV_LookObject(amy, player, 0.0f, 14.0f, 0.0f);
 		stopObject(obj_ver1_wing);
 		EV_Wait(1);
-		EV_SetAng(obj_ver1_wing, 0, 49152, 0);
+		EV_SetAng(obj_ver1_wing, 0, 0xC000, 0);
 		EV_Wait(30);
 		EV_SerifPlay(1264);
 		EV_MsgW(60, msgTbl_ev00BF[TextLanguage][22]); //"\aWhy are you letting us go?"
 		EV_Wait(15);
 		EV_CameraPos(0, 150, -139.28999f, 20.02f, 23.84f);
-		EV_CameraAng(0, 150, 62692, 47859, 336);
+		EV_CameraAng(0, 150, 0xF4E4, 0xBAF3, 0x150);
 		EV_Wait(45);
 		EV_SerifPlay(1265);
 		EV_MsgW(120, msgTbl_ev00BF[TextLanguage][23]); //"\aIt is dangerous here."
 		EV_SerifWait();
 		EV_MsgClose();
-		EV_CameraPerspective(0, 1, 7282);
+		EV_CameraPerspective(0, 1, 0x1C72);
 		EV_CameraPos(0, 0, -87.57f, 3.9000001f, 9.8599997f);
-		EV_CameraAng(0, 0, 1764, 43507, 0);
+		EV_CameraAng(0, 0, 0x6E4, 0xA9F3, 0);
 		EV_CameraPos(0, 250, -86.019997f, 3.9000001f, 7.29f);
 		EV_Wait(30);
 		EV_SetFace(amy, "EE");
@@ -452,7 +457,7 @@ void ev00BF_e_prison(int state)
 		EV_MsgClose();
 		EV_Wait(30);
 		EV_CameraPos(0, 0, -35.450001f, 8.3500004f, 18.92f);
-		EV_CameraAng(0, 0, 65252, 16371, 0);
+		EV_CameraAng(0, 0, 0xFEE4, 0x3FF3, 0);
 		EV_LookFree(amy);
 		EV_CameraPos(0, 300, -31.450001f, 8.46f, 18.92f);
 		EV_SetFace(amy, "FF0");
@@ -471,9 +476,9 @@ void ev00BF_e_prison(int state)
 		moveObjectOn(obj_ver1_wing, 0.0f, 12.0f, 2.0f, 200, amy);
 		EV_SetAction(amy, AMY_ACTIONS[45], &AMY_TEXLIST, 2.0f, 1, 16);
 		EV_Wait(90);
-		EV_CameraPerspective(0, 1, 12561);
+		EV_CameraPerspective(0, 1, 0x3111);
 		EV_CameraPos(0, 0, -136.71001f, 18.85f, 11.68f);
-		EV_CameraAng(0, 0, 62180, 49395, 1280);
+		EV_CameraAng(0, 0, 0xF2E4, 0xC0F3, 0x500);
 		EV_SetPos(amy, -74.0f, 0.0f, 15.0f);
 		EV_SetAng(amy, 0, 0x8000, 0);
 		EV_ClrAction(amy);
@@ -482,7 +487,7 @@ void ev00BF_e_prison(int state)
 		EV_CameraPos(0, 80, -136.35001f, 18.85f, 26.67f);
 		EV_Wait(110);
 		EV_CameraPos(0, 0, -104.83f, 11.15f, 4.3000002f);
-		EV_CameraAng(0, 0, 65508, 22259, 0);
+		EV_CameraAng(0, 0, 0xFFE4, 0x56F3, 0);
 		EV_CameraPos(0, 30, -99.5f, 11.15f, 12.77f);
 		EV_Wait(30);
 		break;
@@ -491,7 +496,7 @@ void ev00BF_e_prison(int state)
 		BGM_Stop();
 		EV_InitPlayer(0);
 		EV_SetPos(player, -123.0f, 0.0f, 31.0f);
-		EV_SetAng(player, 0, 49152, 0);
+		EV_SetAng(player, 0, 0xC000, 0);
 		EV_FreeObject(&obj_ver1_wing);
 		EV_RemovePlayer(2);
 		EV_CameraOff();

@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0086[] = { 0 };
+
 void ev0086_k_leavepastfirst(int state)
 {
 	switch (state) {
@@ -22,7 +24,7 @@ void ev0086_k_leavepastfirst(int state)
 		EV_ClrAction(player);
 		EV_SetAction(player, KNUCKLES_ACTIONS[82], &KNUCKLES_TEXLIST, 0.5f, 1, 0);
 		EV_CameraPos(1, 0, -529.21002f, 5.5300002f, 991.09998f);
-		EV_CameraAng(1, 0, 3072, 8448, 0);
+		EV_CameraAng(1, 0, 0xC00, 0x2100, 0);
 		EV_Wait(30);
 		if (WHITE)
 		{
@@ -30,7 +32,7 @@ void ev0086_k_leavepastfirst(int state)
 		}
 		EV_Wait(30);
 		EventSe_Stop(0);
-		EV_CameraAng(1, 60, 256, 8448, 0);
+		EV_CameraAng(1, 60, 0x100, 0x2100, 0);
 		EV_Wait(30);
 		EV_Wait(30);
 		EV_CameraPos(1, 300, -548.03998f, 6.1599998f, 973.17999f);
@@ -80,7 +82,7 @@ void ev0086_k_leavepastfirst(int state)
 		EV_SetPos(player, -564.26001f, -2.5f, 957.17999f);
 		EV_SetAng(player, 0, 0x2000, 0);
 		EV_CameraPos(1, 0, -570.13f, 8.1540003f, 933.28699f);
-		EV_CameraAng(1, 0, 64768, 34816, 0);
+		EV_CameraAng(1, 0, 0xFD00, 0x8800, 0);
 		EV_InitPlayer(0);
 		EventSe_Close();
 		if (WHITE)

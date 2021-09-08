@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev016A[] = { 0 };
+
 void ev016A_k_fightgloves(int state)
 {
 	switch (state) {
@@ -15,7 +17,7 @@ void ev016A_k_fightgloves(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		EV_SetPos(player, 1367.87f, 417.0f, -40.0f);
-		EV_SetAng(player, 84, 40842, 0);
+		EV_SetAng(player, 0x54, 0x9F8A, 0);
 		EV_Wait(1);
 		EV_SerifPlay(1718);
 		EV_Wait(1);
@@ -53,7 +55,7 @@ void ev016A_k_fightgloves(int state)
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EV_CameraPos(0, 70, 1360.77f, 424.38f, -48.490002f);
-		EV_CameraAng(0, 70, 64242, 40031, 0);
+		EV_CameraAng(0, 70, 0xFAF2, 0x9C5F, 0);
 		EV_Wait(30);
 		EV_SerifWait();
 		EventSe_Volume(0, -120, 120);

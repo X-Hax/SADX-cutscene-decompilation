@@ -3,6 +3,7 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0098[] = { 0 };
 
 void ev0098_k_leavepastthird(int state)
 {
@@ -22,9 +23,9 @@ void ev0098_k_leavepastthird(int state)
         EventSe_Play(0, 760, 1800);
         EventSe_Volume(0, -120, 120);
         EV_Wait(25);
-        EV_CameraPerspective(0, 1, 9102);
+        EV_CameraPerspective(0, 1, 0x238E);
         EV_CameraPos(0, 0, -6.8099999f, -61.59f, -4.0300002f);
-        EV_CameraAng(0, 0, 1372, 22479, 0);
+        EV_CameraAng(0, 0, 0x55C, 0x57CF, 0);
         EV_CameraPos(0, 120, 11.38f, -64.470001f, -16.059999f);
         if (W_OUT)
         {
@@ -36,7 +37,7 @@ void ev0098_k_leavepastthird(int state)
         EV_Wait(100);
         EventSe_Stop(0);
         EV_CameraPos(0, 0, -2.9200001f, -64.059998f, 5.04f);
-        EV_CameraAng(0, 0, 2396, 9679, 0);
+        EV_CameraAng(0, 0, 0x95C, 0x25CF, 0);
         EV_CameraPos(0, 200, -6.52f, -64.059998f, 9.8400002f);
         EV_SerifPlay(1144);
         EV_Wait(5);

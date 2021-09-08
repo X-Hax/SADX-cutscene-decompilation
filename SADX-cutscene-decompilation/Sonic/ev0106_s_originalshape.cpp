@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0106[] = { 0 };
+
 void ev0106_s_originalshape(int state)
 {
 	switch (state) {
@@ -15,9 +17,9 @@ void ev0106_s_originalshape(int state)
 		EV_SetPos(player, 137.95f, 1519.77f, 2887.8501f);
 		EV_SetAng(player, 0, 0x8000, 0);
 		EV_CameraPos(0, 0, 259.0f, 2036.0f, 3712.0f);
-		EV_CameraAng(0, 0, 61952, 65349, 62464);
+		EV_CameraAng(0, 0, 0xF200, 0xFF45, 0xF400);
 		EV_CameraPos(0, 100, 151.44f, 1530.22f, 2864.5701f);
-		EV_CameraTargetObj(1, 120, player, 0.0f, 10.0f, 0.0f, 62464);
+		EV_CameraTargetObj(1, 120, player, 0.0f, 10.0f, 0.0f, 0xF400);
 		EV_Wait(130);
 		EV_CameraPos(0, 300, 151.44f, 1520.22f, 2864.5701f);
 		EV_SerifPlay(1531);

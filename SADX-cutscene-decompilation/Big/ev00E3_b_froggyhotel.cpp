@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00E3[] = {
+	(char*)("FROG"), &texlist_frog
+};
+
 void ev00E3_b_froggyhotel(int state)
 {
 	switch (state) {

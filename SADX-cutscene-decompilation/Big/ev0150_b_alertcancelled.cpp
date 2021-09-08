@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0150[] = { 0 };
+
 void ev0150_b_alertcancelled(int state)
 {
 	switch (state) {

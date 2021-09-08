@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0178[] = { 0 };
+
 void ev0178_b_icestone(int state)
 {
     switch(state){

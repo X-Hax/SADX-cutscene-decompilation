@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0171[] = { 0 };
+
 void ev0171_b_lifebelt(int state)
 {
 	switch (state) {

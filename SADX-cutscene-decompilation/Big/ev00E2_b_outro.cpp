@@ -3,6 +3,11 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00E2[] = {
+	(char*)("FROG"), &texlist_frog,
+	(char*)("TR2CRASH"), &texlist_tr2crash
+};
+
 void ev00E2_b_outro(int state)
 {
 	switch (state) {
@@ -81,7 +86,7 @@ void ev00E2_b_outro(int state)
 		EV_CameraPos(0, 90, -1098.4f, 367.16f, 363.66f);
 		EV_Wait(90);
 		EV_CameraPerspective(0, 1, 0x3C72);
-		EV_CameraAng(0, 0, 62464, 57600, 0);
+		EV_CameraAng(0, 0, 0xF400, 0xE100, 0);
 		EV_CameraPos(0, 0, -1152.4f, 388.70001f, 371.79999f);
 		EV_CameraAng(0, 180, 0xF500, 0xE700, 0);
 		EV_CameraPos(0, 180, -1138.3f, 388.22659f, 392.0f);

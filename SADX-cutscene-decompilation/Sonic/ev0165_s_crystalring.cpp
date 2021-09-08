@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0165[] = { 0 };
+
 void ev0165_s_crystalring(int state)
 {
 	switch (state) {
@@ -14,14 +16,14 @@ void ev0165_s_crystalring(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		EV_SetPos(player, -305.0f, 45.0f, 1541.0f);
-		EV_SetAng(player, 62811, 64965, 0);
+		EV_SetAng(player, 0xF55B, 0xFDC5, 0);
 		EV_Wait(1);
 		EV_SerifPlay(1718);
 		EV_Wait(1);
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EV_CameraTargetObj(1, 0, player, 0.0f, 6.0f, 0.0f, 0);
-		EV_CameraChaseRM(0, 250, player, 8.0f, 0, 23666, 0, 11.0f, 0, -65535, 0, 11.0f);
+		EV_CameraChaseRM(0, 250, player, 8.0f, 0, 0x5C72, 0, 11.0f, 0, -0xFFFF, 0, 11.0f);
 		EV_SetAction(player, &action_s_item_r0, &SONIC_TEXLIST, 0.18000001f, 0, 16);
 		EV_Wait(50);
 		tikal = CTikalLight_Create(
@@ -46,7 +48,7 @@ void ev0165_s_crystalring(int state)
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -80, 80);
 		EV_CameraPos(1, 50, -305.0f, 51.790001f, 1550.1f);
-		EV_CameraAng(1, 50, 63661, 1, 0);
+		EV_CameraAng(1, 50, 0xF8AD, 0x1, 0);
 		EV_Wait(50);
 		EV_SerifWait();
 		EV_MsgClose();

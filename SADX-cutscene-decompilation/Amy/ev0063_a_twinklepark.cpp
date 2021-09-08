@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0063[] = {
+	(char*)("VER2_WING"), &VER2_WING_TEXLIST
+};
+
 void ev0063_a_twinklepark(int state)
 {
 	switch (state) {
@@ -23,11 +27,11 @@ void ev0063_a_twinklepark(int state)
 		EV_InitPlayer(2);
 		SetBankDir(95);
 		EventSe_Init(2);
-		EV_CreatePlayer(2, SonicTheHedgehog, 323.0f, 0.0f, 1639.0f, 0, 29696, 0);
+		EV_CreatePlayer(2, SonicTheHedgehog, 323.0f, 0.0f, 1639.0f, 0, 0x7400, 0);
 		EV_Wait(1);
 		sonic = EV_GetPlayer(2);
 		EV_SetPos(sonic, 329.39999f, 0.0f, 1617.0f);
-		EV_SetAng(sonic, 0, 14848, 0);
+		EV_SetAng(sonic, 0, 0x3A00, 0);
 		EV_SetPos(player, 333.5f, 0.0f, 1545.8f);
 		EV_SetAng(player, 0, 0, 0);
 		EV_SetAction(sonic, &action_s_s0018_sonic, &SONIC_TEXLIST, 0.44999999f, 1, 0);
@@ -50,19 +54,19 @@ void ev0063_a_twinklepark(int state)
 			(int)player->twp->pos.x,
 			(int)player->twp->pos.y,
 			(int)player->twp->pos.z);
-		EV_CreatePlayer(3, EggrobForEvent0, 395.10001f, 12.0f, 1201.0f, 0, 49152, 0);
+		EV_CreatePlayer(3, EggrobForEvent0, 395.10001f, 12.0f, 1201.0f, 0, 0xC000, 0);
 		EV_Wait(1);
 		zero = EV_GetPlayer(3);
 		EV_SetPos(zero, 395.10001f, 12.0f, 1200.0f);
-		EV_SetAng(zero, 0, 49152, 0);
+		EV_SetAng(zero, 0, 0xC000, 0);
 		seqVars[2] = 2;
 		BLACKOUT = COverlayCreate(1.0e-32f, 0.0f, 0.0f, 0.0f, 0.0f);
-		EV_CameraPerspective(1, 1, 12561);
+		EV_CameraPerspective(1, 1, 0x3111);
 		EV_Wait(1);
 		EV_CameraPos(1, 0, 326.5f, 14.8f, 1540.4f);
-		EV_CameraAng(1, 0, 62266, 33977, 65280);
+		EV_CameraAng(1, 0, 0xF33A, 0x84B9, 0xFF00);
 		EV_CameraPos(1, 80, 326.5f, 9.1999998f, 1540.4f);
-		EV_CameraAng(1, 80, 63290, 33977, 65280);
+		EV_CameraAng(1, 80, 0xF73A, 0x84B9, 0xFF00);
 		EV_ClrAction(player);
 		EV_SetAction(player, AMY_ACTIONS[44], &AMY_TEXLIST, 1.5f, 1, 0);
 		EV_MovePoint2(player,
@@ -81,18 +85,18 @@ void ev0063_a_twinklepark(int state)
 		EV_Wait(40);
 		EV_SetAction(sonic, &action_s_s0028_sonic, &SONIC_TEXLIST, 0.75f, 1, 16);
 		EV_CameraPos(1, 0, 351.89999f, 2.8f, 1610.5f);
-		EV_CameraAng(1, 0, 1717, 3783, 0);
-		EV_CameraAng(1, 65, 1717, 16583, 0);
-		EV_SetAng(sonic, 0, 13312, 0);
+		EV_CameraAng(1, 0, 0x6B5, 0xEC7, 0);
+		EV_CameraAng(1, 65, 0x6B5, 0x40C7, 0);
+		EV_SetAng(sonic, 0, 0x3400, 0);
 		EV_ClrFace(player);
 		EV_SetFace(player, "SSTSSS");
 		EV_SerifPlay(869);
 		EV_Msg(msgTbl_ev0063[TextLanguage][1]); //"\aI can't run as fast as you!"
 		EV_ClrFace(player);
 		EV_WaitMove(player);
-		EV_SetAng(player, 0, 59904, 0);
+		EV_SetAng(player, 0, 0xEA00, 0);
 		EV_CameraPos(1, 90, 346.5f, 2.8f, 1621.5f);
-		EV_CameraAng(1, 90, 1717, 10203, 0);
+		EV_CameraAng(1, 90, 0x6B5, 0x27DB, 0);
 		EV_ClrAction(player);
 		EV_SetAction(player, AMY_ACTIONS[56], &AMY_TEXLIST, 0.80000001f, 0, 8);
 		EV_WaitAction(player);
@@ -101,8 +105,8 @@ void ev0063_a_twinklepark(int state)
 		EV_Wait(20);
 		EV_Wait(40);
 		EV_MsgClose();
-		EV_SetAng(sonic, 0, 12288, 0);
-		EV_SetAng(player, 0, 53248, 0);
+		EV_SetAng(sonic, 0, 0x3000, 0);
+		EV_SetAng(player, 0, 0xD000, 0);
 		EV_SetPos(obj_wing2,
 			player->twp->pos.x + 6.0f,
 			player->twp->pos.y + 4.0f,
@@ -112,9 +116,9 @@ void ev0063_a_twinklepark(int state)
 			(int)player->twp->pos.y + 0x9000,
 			(int)player->twp->pos.z);
 		EV_CameraPos(1, 0, 337.39999f, 2.3f, 1594.0f);
-		EV_CameraAng(0, 0, 65205, 31687, 0);
+		EV_CameraAng(0, 0, 0xFEB5, 0x7BC7, 0);
 		EV_CameraPos(0, 60, 336.39999f, 4.5f, 1593.0f);
-		EV_CameraAng(0, 60, 65205, 31943, 0);
+		EV_CameraAng(0, 60, 0xFEB5, 0x7CC7, 0);
 		EV_Wait(30);
 		EV_SetAction(sonic, &action_s_s0004_sonic, &SONIC_TEXLIST, 0.80000001f, 1, 8);
 		EV_Wait(35);
@@ -138,11 +142,11 @@ void ev0063_a_twinklepark(int state)
 			(int)player->twp->pos.z);
 		EV_MovePoint2(zero, 326.79999f, 12.0f, 1547.54f, 0.5f, 0.1f);
 		EV_CameraPos(0, 0, 334.79999f, 4.0999999f, 1626.6f);
-		EV_CameraAng(0, 0, 3472, 45, 0);
+		EV_CameraAng(0, 0, 0xD90, 0x2D, 0);
 		EV_CameraPos(0, 80, 334.79999f, 1.27f, 1625.6f);
 		BGM_Play(MusicIDs_eggrobo);
-		EV_SetAng(sonic, 0, 32000, 0);
-		EV_SetAng(player, 0, 37376, 0);
+		EV_SetAng(sonic, 0, 0x7D00, 0);
+		EV_SetAng(player, 0, 0x9200, 0);
 		EV_ClrFace(player);
 		EV_SetFace(player, "IGGAG");
 		EV_Wait(60);
@@ -157,11 +161,11 @@ void ev0063_a_twinklepark(int state)
 			(int)player->twp->pos.y + 0x4000,
 			(int)player->twp->pos.z);
 		EV_CameraPos(1, 0, 344.10001f, 4.3000002f, 1596.9f);
-		EV_CameraAng(0, 0, 63925, 21191, 0);
+		EV_CameraAng(0, 0, 0xF9B5, 0x52C7, 0);
 		EV_CameraPos(1, 100, 346.10001f, 6.6999998f, 1616.5f);
-		EV_CameraAng(0, 100, 437, 16071, 0);
+		EV_CameraAng(0, 100, 0x1B5, 0x3EC7, 0);
 		EV_SetPos(player, 338.89999f, 0.0f, 1617.2f);
-		EV_SetAng(player, 0, 17664, 0);
+		EV_SetAng(player, 0, 0x4500, 0);
 		EV_SetPos(sonic, 329.39999f, 0.0f, 1608.2f);
 		EV_LookFree(player);
 		EV_LookPoint(player, 363.10001f, 22.799999f, 1612.2f);
@@ -197,13 +201,13 @@ void ev0063_a_twinklepark(int state)
 		BGM_Stop();
 		BGM_Play(MusicIDs_theamy);
 		EV_CameraPos(1, 0, 352.5f, 44.779999f, 1607.4f);
-		EV_CameraAng(1, 0, 181, 49351, 0);
+		EV_CameraAng(1, 0, 0xB5, 0xC0C7, 0);
 		EV_CameraPos(0, 120, 313.10999f, 15.53f, 1605.4f);
-		EV_CameraAng(0, 100, 3253, 48940, 256);
+		EV_CameraAng(0, 100, 0xCB5, 0xBF2C, 0x100);
 		EV_SetPos(player, 366.98001f, 0.0f, 1575.95f);
 		EV_SetAng(player, 0, 17740, 0);
 		EV_LookPoint(player, 360.0f, 9.5f, 1587.0f);
-		EV_SetAng(sonic, 0, 20480, 0);
+		EV_SetAng(sonic, 0, 0x5000, 0);
 		EV_LookFree(sonic);
 		EV_SetAction(sonic, &action_s_s0044_sonic, &SONIC_TEXLIST, 0.60000002f, 0, 8);
 		EV_SetAction(sonic, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.2f, 1, 8);
@@ -214,7 +218,7 @@ void ev0063_a_twinklepark(int state)
 		EV_Wait(120);
 		EV_MsgClose();
 		EV_CameraPos(0, 100, 311.0f, 5.8000002f, 1603.2f);
-		EV_CameraAng(0, 100, 3765, 47559, 0);
+		EV_CameraAng(0, 100, 0xEB5, 0xB9C7, 0);
 		EV_Wait(15);
 		EV_SetPos(obj_wing2,
 			player->twp->pos.x + 4.0f,
@@ -230,13 +234,13 @@ void ev0063_a_twinklepark(int state)
 		EV_SetAction(player, AMY_ACTIONS[69], &AMY_TEXLIST, 1.1f, 1, 16);
 		EV_ClrFace(sonic);
 		EV_Wait(55);
-		EV_CameraAng(0, 50, 2229, 50119, 0);
+		EV_CameraAng(0, 50, 0x8B5, 0xC3C7, 0);
 		EV_Wait(55);
 		EV_CameraPos(1, 0, 361.09f, 6.1500001f, 1570.15f);
-		EV_CameraAng(1, 0, 8117, 43975, 4864);
+		EV_CameraAng(1, 0, 0x1FB5, 0xABC7, 0x1300);
 		EV_CameraPos(0, 130, 356.10001f, 0.52999997f, 1567.4f);
-		EV_CameraAng(0, 130, 8117, 43975, 5632);
-		EV_SetAng(sonic, 0, 25856, 0);
+		EV_CameraAng(0, 130, 0x1FB5, 0xABC7, 0x1600);
+		EV_SetAng(sonic, 0, 0x6500, 0);
 		EV_ClrFace(player);
 		EV_SetFace(player, "IIGGAG");
 		EV_SerifPlay(875);
@@ -247,10 +251,10 @@ void ev0063_a_twinklepark(int state)
 		EV_LookFree(sonic);
 		EV_SetAction(sonic, &action_s_s0018_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		EV_CameraPos(1, 0, 357.10001f, 10.2f, 1609.3f);
-		EV_CameraAng(0, 0, 62133, 11463, 512);
+		EV_CameraAng(0, 0, 0xF2B5, 0x2CC7, 0x200);
 		EV_SetAng(sonic, 0, 0x4000, 0);
 		EV_SetPos(player, 345.39999f, 0.0f, 1596.95f);
-		EV_SetAng(player, 0, 56064, 0);
+		EV_SetAng(player, 0, 0xDB00, 0);
 		EV_SetPos(obj_wing2,
 			player->twp->pos.x + 5.5f,
 			player->twp->pos.y + 3.0f,
@@ -259,7 +263,7 @@ void ev0063_a_twinklepark(int state)
 			(int)player->twp->pos.x,
 			(int)player->twp->pos.y + 0xC000,
 			(int)player->twp->pos.z);
-		moveObjectOnAngle(obj_wing2, 4.5f, 3.0f, 5.0f, 0, 20480, 0, 200, player);
+		moveObjectOnAngle(obj_wing2, 4.5f, 3.0f, 5.0f, 0, 0x5000, 0, 200, player);
 		EV_LookObject(player, sonic, 0.0f, 5.0f, 0.0f);
 		EV_LookObject(sonic, player, 0.0f, 5.0f, 0.0f);
 		EV_SetPos(zero, 326.79999f, 0.0f, 1330.54f);
@@ -270,7 +274,7 @@ void ev0063_a_twinklepark(int state)
 		EV_Msg(msgTbl_ev0063[TextLanguage][8]); //"\aWhat are we waiting for?"
 		EV_Wait(50);
 		EV_CameraPos(1, 80, 359.39999f, 4.3000002f, 1611.9f);
-		EV_CameraAng(1, 80, 65205, 9927, 512);
+		EV_CameraAng(1, 80, 0xFEB5, 0x26C7, 0x200);
 		EV_LookFree(player);
 		EV_ClrAction(player);
 		EV_SetAction(player, AMY_ACTIONS[44], &AMY_TEXLIST, 1.1f, 1, 8);
@@ -321,7 +325,7 @@ void ev0063_a_twinklepark(int state)
 		EV_SetAction(player, &action_a_a0004_amy, &AMY_TEXLIST, 1.5f, 1, 8);
 		EV_Wait(60);
 		EV_CameraPos(1, 0, 341.5f, 0.99000001f, 1587.6f);
-		EV_CameraAng(0, 0, 4094, 44985, 65280);
+		EV_CameraAng(0, 0, 0xFFE, 0xAFB9, 0xFF00);
 		EV_SetAng(sonic,
 			(int)player->twp->pos.x,
 			(int)player->twp->pos.y,

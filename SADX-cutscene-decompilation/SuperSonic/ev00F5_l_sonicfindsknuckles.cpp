@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00F5[] = { 
+	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST 
+};
+
 void ev00F5_l_sonicfindsknuckles(int state)
 {
 	switch (state) {

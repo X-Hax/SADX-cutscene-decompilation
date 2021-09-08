@@ -3,6 +3,9 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00F4[] = { 0 };
+
+
 void ev00F4_l_sonicwakesup(int state)
 {
 	switch (state) {

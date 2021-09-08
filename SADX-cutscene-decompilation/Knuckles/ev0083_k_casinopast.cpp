@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0083[] = { 0 };
+
 void ev0083_k_casinopolis(int state)
 {
 	switch (state) {
@@ -54,11 +56,11 @@ void ev0083_k_casinopolis(int state)
 			player->twp->ang.x - 0x800,
 			0x5F00 - player->twp->ang.y,
 			player->twp->ang.z);
-		EV_CameraPerspective(1, 30, 5461);
+		EV_CameraPerspective(1, 30, 0x1555);
 		EV_Wait(30);
 		WHITE = COverlayCreate(0.016666668f, 0.0f, 1.0f, 1.0f, 1.0f);
 		EV_Wait(89);
-		EV_CameraPerspective(1, 1, 12743);
+		EV_CameraPerspective(1, 1, 0x31C7);
 		EV_LookFree(player);
 		EV_Wait(1);
 		break;

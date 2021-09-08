@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0166[] = { 0 };
+
 void ev0166_s_lightshoes(int state)
 {
 	switch (state) {
@@ -16,7 +18,7 @@ void ev0166_s_lightshoes(int state)
 		EV_SerifPlay(1718);
 		EV_Wait(1);
 		EV_SetPos(player, 505.0f, -91.900002f, 858.0f);
-		EV_SetAng(player, 0, 32848, 0);
+		EV_SetAng(player, 0, 0x8050, 0);
 		EV_Wait(1);
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
@@ -52,7 +54,7 @@ void ev0166_s_lightshoes(int state)
 		}
 		EV_Wait(60);
 		EV_CameraTargetObj(1, 0, player, 0.0f, 4.5f, 0.0f, 0);
-		EV_CameraChaseRM(0, 170, player, 5.0f, 0, 10923, 0, 15.0f, 0, -38228, 0, 15.0f);
+		EV_CameraChaseRM(0, 170, player, 5.0f, 0, 0x2AAB, 0, 15.0f, 0, -0x9554, 0, 15.0f);
 		EV_MsgW(90, (msgTbl_ev0166[TextLanguage])[4]); //"\aThe Light Speed Dash lets you \nrace "...
 		EV_Wait(1);
 		tikalb = CTikalLight_Create(
@@ -67,9 +69,9 @@ void ev0166_s_lightshoes(int state)
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EV_CameraPos(0, 0, 510.0f, -88.199997f, 870.29999f);
-		EV_CameraAng(0, 0, 721, 2471, 0);
+		EV_CameraAng(0, 0, 0x2D1, 0x9A7, 0);
 		EV_CameraPos(0, 160, 495.20001f, -90.900002f, 812.5f);
-		EV_CameraAng(0, 160, 2769, 62232, 0);
+		EV_CameraAng(0, 160, 0xAD1, 0xF318, 0);
 		EV_Wait(50);
 		EventSe_Volume(0, -120, 120);
 		EV_MsgW(0, (msgTbl_ev0166[TextLanguage])[5]); //"\aAs long as there's a trail of rings,"...
@@ -80,7 +82,7 @@ void ev0166_s_lightshoes(int state)
 		break;
 	case 2:
 		EV_CameraPos(0, 0, 495.20001f, -90.900002f, 812.5f);
-		EV_CameraAng(0, 0, 2769, 62232, 0);
+		EV_CameraAng(0, 0, 0xAD1, 0xF318, 0);
 		EV_Wait(1);
 		EventSe_Close();
 		EV_ClrPath(tikal);

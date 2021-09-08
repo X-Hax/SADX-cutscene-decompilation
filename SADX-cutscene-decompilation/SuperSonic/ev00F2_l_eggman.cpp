@@ -3,6 +3,12 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00F2[] = {
+	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
+	(char*)("EV_CHAOS0_MANJU"), &EV_CHAOS0_MANJU_TEXLIST,
+	(char*)("CHAOS_SURFACE"), &CHAOS_SURFACE_TEXLIST
+};
+
 void ev00F2_l_eggman(int state)
 {
 	switch (state) {
@@ -63,7 +69,7 @@ void ev00F2_l_eggman(int state)
 		EventSe_Stop(1);
 		EV_CameraPos(0, 0, -1037.21f, 38.02f, -228.94f);
 		EV_CameraAng(0, 0, 0xEE00, 0xAF00, 0);
-		EV_CameraPerspective(1, 30, 4551);
+		EV_CameraPerspective(1, 30, 0x11C7);
 		EV_SerifPlay(1395);
 		EV_Msg(msgTbl_ev00F2[TextLanguage][3]); //"\aChaos!"
 		EV_Wait(1);

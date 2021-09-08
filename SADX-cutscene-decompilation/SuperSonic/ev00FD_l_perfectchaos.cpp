@@ -3,6 +3,14 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00FD[] = {
+	(char*)("LAST1A_HIGHWAY_A"), &LAST1A_HIGHWAY_A_TEXLIST,
+	(char*)("EC_LIGHT"), &texlist_ec_light,
+	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
+	(char*)("M_EM_BLUE"), &M_EM_BLUE_TEXLIST,
+	(char*)("M_EM_BLACK"), &texlist_m_em_black
+};
+
 void ev00FD_l_perfectchaos(int state)
 {
 	switch (state) {
@@ -103,7 +111,7 @@ void ev00FD_l_perfectchaos(int state)
 		EV_SetAng(Y_EME, 0, 0, 0);
 		SetSphereBombParameter(BOM, 0.99000001f, 4.0f, 1800.0f);
 		EV_Wait(1);
-		seteggmobleparam(0.5f, 256);
+		seteggmobleparam(0.5f, 0x100);
 		ChgEggMobleMod(5);
 		playModel(0, 0, 1.0f, -1);
 		EV_SetAction(W_EME, &action_m_em_blue, &M_EM_BLUE_TEXLIST, 1.0f, 1, 0);
@@ -186,7 +194,7 @@ void ev00FD_l_perfectchaos(int state)
 		EV_MsgClose();
 		EV_CameraPerspective(0, 1, 0x18E4);
 		EV_CameraPos(0, 0, 87.169998f, 213.74001f, -720.28998f);
-		EV_CameraAng(0, 0, 0xFB31, 512, 0);
+		EV_CameraAng(0, 0, 0xFB31, 0x200, 0);
 		EV_SerifPlay(1479);
 		EV_MsgW(90, msgTbl_ev00FD[TextLanguage][3]); //"\aThis Egg Carrier 2 was made because\n"...
 		EV_CameraPerspective(0, 1, 0x2AAB);
@@ -294,7 +302,7 @@ void ev00FD_l_perfectchaos(int state)
 		EV_SetAction(eggmoble, &action_gm_gm0036_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 0, 0);
 		EV_SetAction(eggmoble, &action_gm_gm0002_eggmoble, &EV_EGGMOBLE0_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(10);
-		EV_CameraPerspective(0, 1, 10923);
+		EV_CameraPerspective(0, 1, 0x2AAB);
 		EV_CameraPos(0, 0, 65.080002f, 237.60001f, -654.83002f);
 		EV_CameraAng(0, 0, 0x1E31, 0x2600, 0xD00);
 		EV_CameraPos(0, 140, 111.43f, 252.17999f, -694.92999f);

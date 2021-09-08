@@ -3,6 +3,10 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00F0[] = {
+	(char*)("TR2CRASH"), &texlist_tr2crash
+};
+
 void ev00F0_l_intro(int state)
 {
 	switch (state) {

@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00F9[] = { 0 };
+
 void ev00F9_l_snoozecruise(int state)
 {
 	switch (state) {

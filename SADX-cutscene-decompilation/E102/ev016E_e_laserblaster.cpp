@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev016E[] = { 0 };
+
 void ev016E_e_laserblaster(int state)
 {
     switch(state){
@@ -16,14 +18,14 @@ void ev016E_e_laserblaster(int state)
         EV_InitPlayer(0);
         EV_SerifPlay(1718);
         EV_Wait(1);
-        EV_SetAng(player, 0, 46659, 0);
+        EV_SetAng(player, 0, 0xB643, 0);
         EV_Wait(1);
         EV_ClrAction(player);
         EV_SetAction(player, E102_ACTIONS[69], &E102_TEXLIST, 0.30000001f, 0, 16);
         EV_CameraChaseFree();
         EV_CameraTargetFree();
         EV_CameraTargetObj(1, 0, player, 0.0f, 14.5f, 0.0f, 0);
-        EV_CameraChaseRM(0, 250, player, 10.0f, 0, 69177, 0, 30.0f, 0, -18203, 0, 30.0f);
+        EV_CameraChaseRM(0, 250, player, 10.0f, 0, 0x10E39, 0, 30.0f, 0, -0x471B, 0, 30.0f);
         EV_SetAction(player, E102_ACTIONS[70], &E102_TEXLIST, 0.5f, 1, 8);
         EV_Wait(10);
         EV_SerifWait();

@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev016C[] = { 0 };
+
 void ev016C_a_longhammer(int state)
 {
 	switch (state) {
@@ -17,7 +19,7 @@ void ev016C_a_longhammer(int state)
 		EV_SerifPlay(1718);
 		EV_Wait(1);
 		EV_SetPos(player, 0.55000001f, 12.79f, 0.15000001f);
-		EV_SetAng(player, 0, 62586, 0);
+		EV_SetAng(player, 0, 0xF47A, 0);
 		EV_Wait(1);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_a_item_hm0, &AMY_TEXLIST, 0.2f, 0, 16);
@@ -25,7 +27,7 @@ void ev016C_a_longhammer(int state)
 		EV_CameraChaseFree();
 		EV_CameraTargetFree();
 		EV_CameraTargetObj(1, 0, player, 0.0f, 4.5f, 0.0f, 0);
-		EV_CameraChaseRM(0, 200, player, 8.0f, 0, 63716, 0, 16.0f, 0, 5461, 0, 16.0f);
+		EV_CameraChaseRM(0, 200, player, 8.0f, 0, 0xF8E4, 0, 16.0f, 0, 0x1555, 0, 16.0f);
 		EV_SetAction(player, &action_a_item_hm1, &AMY_TEXLIST, 0.2f, 1, 8);
 		EV_Wait(10);
 		EV_SerifWait();
@@ -50,7 +52,7 @@ void ev016C_a_longhammer(int state)
 		EventSe_Play(0, 760, 1800);
 		EventSe_Volume(0, -80, 80);
 		EV_CameraPos(1, 100, -1.21f, 19.51f, 10.13f);
-		EV_CameraAng(1, 100, 63290, 63717, 0);
+		EV_CameraAng(1, 100, 0xF73A, 0xF8E5, 0);
 		EV_Wait(50);
 		AmyForEventHammerScaleIm(0, 0.0f);
 		EV_Wait(60);

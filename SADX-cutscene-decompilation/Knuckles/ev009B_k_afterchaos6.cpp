@@ -3,6 +3,15 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev009B[] = {
+	(char*)("M_EM_WHITE"), &M_EM_WHITE_TEXLIST,
+	(char*)("M_EM_BLUE"), &M_EM_BLUE_TEXLIST,
+	(char*)("M_EM_GREEN"), &M_EM_GREEN_TEXLIST,
+	(char*)("M_EM_PURPLE"), &M_EM_PURPLE_TEXLIST,
+	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST,
+	(char*)("M_EM_YELLOW"), &M_EM_YELLOW_TEXLIST
+};
+
 void ev009B_k_afterchaos6(int state)
 {
 	switch (state) {
@@ -21,9 +30,9 @@ void ev009B_k_afterchaos6(int state)
 		EV_Wait(1);
 		EV_InitPlayer(0);
 		EV_SetPos(player, 0.0f, 745.38f, -224.35001f);
-		EV_SetAng(player, 791, 32525, 281);
+		EV_SetAng(player, 791, 0x7F0D, 281);
 		EV_SetPos(player, 0.0f, 743.94f, -224.59f);
-		EV_SetAng(player, 457, 32525, 0);
+		EV_SetAng(player, 457, 0x7F0D, 0);
 		EV_CreateObject(&W_EME, 32.16f, 773.75f, -231.89999f, 0, 0, 0);
 		EV_CreateObject(&B_EME, 32.16f, 773.75f, -231.89999f, 0, 0, 0);
 		EV_CreateObject(&G_EME, 32.16f, 773.75f, -231.89999f, 0, 0, 0);
@@ -77,14 +86,14 @@ void ev009B_k_afterchaos6(int state)
 		EV_SetAction(S_EME, &action_m_em_green, &M_EM_SKY_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(Y_EME, &action_m_em_purple, &M_EM_YELLOW_TEXLIST, 1.0f, 1, 0);
 		BGM_Play(MusicIDs_egcarer1);
-		EV_CameraPerspective(0, 1, 12561);
+		EV_CameraPerspective(0, 1, 0x3111);
 		EV_CameraPos(0, 0, -16.02f, 764.51001f, -289.14001f);
-		EV_CameraAng(0, 0, 60700, 38926, 0);
+		EV_CameraAng(0, 0, 0xED1C, 0x980E, 0);
 		EV_CameraPos(0, 100, -21.49f, 769.42999f, -297.32001f);
 		EV_Wait(90);
-		EV_CameraPerspective(0, 1, 9102);
+		EV_CameraPerspective(0, 1, 0x238E);
 		EV_CameraPos(0, 0, -1.92f, 745.84003f, -234.45f);
-		EV_CameraAng(0, 0, 5148, 38158, 0);
+		EV_CameraAng(0, 0, 0x141C, 0x950E, 0);
 		EV_CameraPos(0, 300, -6.27f, 745.84003f, -231.98f);
 		EV_ClrFace(player);
 		if (VoiceLanguage == Languages_Japanese)
@@ -127,11 +136,11 @@ void ev009B_k_afterchaos6(int state)
 		EV_MsgClose();
 		EV_Wait(30);
 		EV_CameraPos(0, 0, 7.6599998f, 764.75f, -265.25f);
-		EV_CameraAng(0, 0, 61980, 29198, 0);
+		EV_CameraAng(0, 0, 0xF21C, 0x720E, 0);
 		EV_Wait(1);
-		EV_CameraPerspective(0, 200, 12743);
+		EV_CameraPerspective(0, 200, 0x31C7);
 		EV_CameraPos(0, 300, 62.110001f, 839.58002f, -501.51001f);
-		EV_CameraAng(0, 300, 63260, 30222, 0);
+		EV_CameraAng(0, 300, 0xF71C, 0x760E, 0);
 		EV_Wait(140);
 		B_OUT = COverlayCreate(0.016666668f, 0.2f, 0.0f, 0.0f, 0.0f);
 		EV_Wait(90);

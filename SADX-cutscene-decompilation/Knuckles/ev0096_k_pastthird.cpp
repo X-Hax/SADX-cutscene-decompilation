@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0096[] = { 0 };
+
 void ev0096_k_pastthird(int state)
 {
 	switch (state) {
@@ -22,7 +24,7 @@ void ev0096_k_pastthird(int state)
 		EV_Wait(1);
 		EV_CameraOn();
 		EV_CameraPos(0, 0, -6.8000002f, -69.949997f, 1256.0f);
-		EV_CameraAng(0, 0, 3328, 36352, 0);
+		EV_CameraAng(0, 0, 0xD00, 0x8E00, 0);
 		EV_SetPos(player, -3.0f, -71.0f, 1265.5f);
 		EV_SetAng(player, 0, 0x8000, 0);
 		EV_InitPlayer(0);
@@ -34,7 +36,7 @@ void ev0096_k_pastthird(int state)
 			COverlaySetSpeed(WHITE, -0.016666668f);
 		}
 		EV_CameraPos(1, 150, -4.9565001f, -69.669998f, 1258.172f);
-		EV_CameraAng(1, 150, 5632, 36352, 0);
+		EV_CameraAng(1, 150, 0x1600, 0x8E00, 0);
 		EV_Wait(30);
 		EV_SetFace(player, "XBB");
 		EV_Wait(50);
@@ -57,9 +59,9 @@ void ev0096_k_pastthird(int state)
 		EV_SerifWait();
 		EV_ClrFace(player);
 		EV_CameraPos(0, 0, 7.0f, -68.599998f, 1273.72f);
-		EV_CameraAng(0, 0, 2560, 2048, 0);
+		EV_CameraAng(0, 0, 0xA00, 0x800, 0);
 		EV_CameraPos(0, 80, 3.0f, -68.599998f, 1274.5f);
-		EV_CameraAng(0, 80, 2560, 2048, 0);
+		EV_CameraAng(0, 80, 0xA00, 0x800, 0);
 		EV_Wait(60);
 		EV_MsgClose();
 		break;

@@ -3,6 +3,15 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00B7[] = {
+	(char*)("FROG"), &texlist_frog,
+	(char*)("EGGMAN"), &EGGMAN_TEXLIST,
+	(char*)("EV_E103_BODY"), &texlist_ev_e103_body,
+	(char*)("EV_E104_BODY"), &texlist_ev_e104_body,
+	(char*)("EV_E105_BODY"), &texlist_ev_e105_body,
+	(char*)("EV_SPOTLIGHT"), &EV_SPOTLIGHT_TEXLIST
+};
+
 void ev00B7_e_fanfare(int state)
 {
 	switch (state) {
@@ -18,7 +27,7 @@ void ev00B7_e_fanfare(int state)
 		EV_InitPlayer(0);
 		SetBankDir(104);
 		EventSe_Init(3);
-		EV_CameraPerspective(0, 1, 11469);
+		EV_CameraPerspective(0, 1, 0x2CCD);
 		seqVars[391] = 1;
 		seqVars[44] = 2;
 		EV_SetPos(player, 10.5f, 8.1599998f, -210.0f);
@@ -50,7 +59,7 @@ void ev00B7_e_fanfare(int state)
 		EV_Wait(1);
 		eggman = EV_GetPlayer(6);
 		task_skywalk = CSkyWalk_create2(eggman, 55.0f);
-		EV_CameraAng(1, 0, 3840, 23552, 0);
+		EV_CameraAng(1, 0, 0xF00, 0x5C00, 0);
 		EV_CameraPos(1, 0, 121.25f, 35.099998f, 32.200001f);
 		EV_CameraPos(0, 205, 146.89999f, 14.32f, -215.39999f);
 		BGM_Play(MusicIDs_evtbgm05);
@@ -60,20 +69,20 @@ void ev00B7_e_fanfare(int state)
 		EV_ClrAction(eggman);
 		EV_SetAction(eggman, &action_g_g0001_eggman, &EGGMAN_TEXLIST, 1.0f, 1, 0);
 		dark_on();
-		EV_CameraAng(1, 0, 2048, 0, 0);
+		EV_CameraAng(1, 0, 0x800, 0, 0);
 		EV_CameraPos(1, 0, 0.0f, 163.17f, -28.040001f);
-		EV_CameraAng(0, 205, 2048, 0, 0);
+		EV_CameraAng(0, 205, 0x800, 0, 0);
 		EV_CameraPos(0, 205, 0.0f, 4.29f, -59.639999f);
 		EV_Wait(230);
 		LIGHT_R = light_create(65.0f, 145.0f, -250.44f);
 		LIGHT_L = light_create(-65.0f, 145.0f, -250.44f);
-		EV_CameraAng(1, 150, 63744, 0, 0);
+		EV_CameraAng(1, 150, 0xF900, 0, 0);
 		EV_CameraPos(1, 130, 0.0f, 48.709999f, -144.78f);
 		EV_Wait(150);
 		EV_MsgClose();
-		EV_CameraPerspective(1, 60, 12743);
+		EV_CameraPerspective(1, 60, 0x31C7);
 		EV_CameraPos(1, 60, 0.0f, 57.700001f, -290.56f);
-		EV_CameraAng(1, 60, 3328, 0, 0);
+		EV_CameraAng(1, 60, 0xD00, 0, 0);
 		EV_Wait(90);
 		light_turn(LIGHT_R, 0.0f, 55.0f, -320.44f);
 		light_turn(LIGHT_L, 0.0f, 55.0f, -320.44f);
@@ -86,7 +95,7 @@ void ev00B7_e_fanfare(int state)
 		EV_SetAction(eggman, &action_g_g0001_eggman, &EGGMAN_TEXLIST, 1.0f, 1, 0);
 		BGM_Play(MusicIDs_thee102);
 		EV_Wait(30);
-		EV_MoveRotation(eggman, 0, -12288, 0);
+		EV_MoveRotation(eggman, 0, -0x3000, 0);
 		EV_SerifPlay(1200);
 		EV_Msg(msgTbl_ev00B7[TextLanguage][0]); //"\aAh, hah...  Testing 1, 2, 3..."
 		EV_Wait(1);
@@ -96,12 +105,12 @@ void ev00B7_e_fanfare(int state)
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_MsgClose();
-		EV_MoveRotation(eggman, 0, -12800, 0);
+		EV_MoveRotation(eggman, 0, -0x3200, 0);
 		EV_Wait(15);
 		EV_ClrAction(eggman);
 		EV_SetAction(eggman, &action_g_g0007_eggman, &EGGMAN_TEXLIST, 1.0f, 0, 0);
 		EV_CameraPos(0, 80, -0.56999999f, 3.45f, -149.7f);
-		EV_CameraAng(0, 80, 5120, 65280, 0);
+		EV_CameraAng(0, 80, 0x1400, 0xFF00, 0);
 		EV_SerifPlay(1202);
 		EV_Msg(msgTbl_ev00B7[TextLanguage][2]); //"\aYou, the elite Egg Carrier crew, \nar"...
 		EV_Wait(25);
@@ -111,7 +120,7 @@ void ev00B7_e_fanfare(int state)
 		EV_WaitAction(eggman);
 		EV_SerifWait();
 		EV_MsgClose();
-		EV_CameraAng(0, 0, 4608, 2816, 512);
+		EV_CameraAng(0, 0, 0x1200, 0xB00, 0x200);
 		EV_CameraPos(0, 0, 3.4333999f, 64.457001f, -311.66f);
 		EV_CameraPos(0, 75, 3.5f, 65.360001f, -311.23999f);
 		EV_ClrAction(eggman);
@@ -124,7 +133,7 @@ void ev00B7_e_fanfare(int state)
 		EV_SetAction(eggman, &action_g_g0001_eggman, &EGGMAN_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(55);
 		EV_MsgClose();
-		EV_CameraAng(1, 0, 4608, 63744, 0);
+		EV_CameraAng(1, 0, 0x1200, 0xF900, 0);
 		EV_CameraPos(1, 0, -16.379999f, 50.860001f, -278.95001f);
 		EV_SerifPlay(1204);
 		EV_Msg(msgTbl_ev00B7[TextLanguage][4]); //"\aBehold!   It's a tailed frog!   \nVer"...
@@ -134,13 +143,13 @@ void ev00B7_e_fanfare(int state)
 		frog_create();
 		EV_Wait(25);
 		EV_MsgClose();
-		EV_CameraAng(0, 95, 6656, 0, 0);
+		EV_CameraAng(0, 95, 0x1A00, 0, 0);
 		EV_CameraPos(0, 95, 0.0f, 86.300003f, -356.73999f);
 		EV_SerifPlay(1205);
 		EV_Msg(msgTbl_ev00B7[TextLanguage][5]); //"\aThis frog is absolutely vital \nto my"...
 		EV_SerifWait();
 		EV_MsgClose();
-		EV_CameraAng(1, 0, 60672, 24320, 0);
+		EV_CameraAng(1, 0, 0xED00, 0x5F00, 0);
 		EV_CameraPos(1, 0, -4.9499998f, 33.634998f, -234.74001f);
 		EV_CameraPos(1, 180, 31.08f, 31.02f, -234.5f);
 		EV_Wait(30);
@@ -163,20 +172,20 @@ void ev00B7_e_fanfare(int state)
 		EV_SetAction(e105, &action_e_wait2_e105, &texlist_ev_e105_body, 0.80000001f, 1, 16);
 		EV_Wait(20);
 		EV_MsgClose();
-		EV_CameraAng(1, 0, 5120, 3840, 0);
+		EV_CameraAng(1, 0, 0x1400, 0xF00, 0);
 		EV_CameraPos(1, 0, 30.65f, 9.3800001f, -172.96001f);
-		EV_CameraPerspective(1, 60, 9102);
+		EV_CameraPerspective(1, 60, 0x238E);
 		EV_Wait(35);
 		EV_SerifPlay(1208);
 		EV_Msg(msgTbl_ev00B7[TextLanguage][8]); //"\aWe haven't got time to waste,"
 		EV_Wait(20);
 		EV_MsgClose();
-		EV_CameraAng(1, 0, 3072, 0, 0);
+		EV_CameraAng(1, 0, 0xC00, 0, 0);
 		EV_CameraPos(1, 0, 0.0f, 66.0f, -303.82001f);
 		EV_SetAction(eggman, &action_g_g0009_eggman, &EGGMAN_TEXLIST, 1.0f, 0, 0);
 		EV_Msg(msgTbl_ev00B7[TextLanguage][9]); //"\aSo come to attention!"
-		EV_CameraPerspective(1, 70, 6372);
-		EV_CameraAng(1, 75, 512, 0, 0);
+		EV_CameraPerspective(1, 70, 0x18E4);
+		EV_CameraAng(1, 75, 0x200, 0, 0);
 		EV_CameraPos(1, 75, 0.0f, 18.799999f, -46.34f);
 		EV_WaitAction(eggman);
 		EV_ClrAction(eggman);
@@ -191,9 +200,9 @@ void ev00B7_e_fanfare(int state)
 		EV_ClrAction(e105);
 		EV_SetAction(e105, &action_e_e0007_e105, &texlist_ev_e105_body, 1.0f, 0, 16);
 		EV_Wait(40);
-		EV_CameraPerspective(1, 1, 12743);
+		EV_CameraPerspective(1, 1, 0x31C7);
 		EV_Wait(1);
-		EV_CameraAng(1, 0, 60672, 32256, 0);
+		EV_CameraAng(1, 0, 0xED00, 0x7E00, 0);
 		EV_CameraPos(1, 0, 4.0500002f, 75.400002f, -330.20001f);
 		EV_SetAng(player, 0, 0, 0);
 		EV_SetAng(e103, 0, 0, 0);

@@ -3,6 +3,8 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev0021[] = { 0 };
+
 void ev0021_s_enterpast(int state)
 {
 	switch (state) {
@@ -17,11 +19,11 @@ void ev0021_s_enterpast(int state)
 		WHITE = COverlayCreate(1.0f, 0.0f, 1.0f, 1.0f, 1.0f);
 		EV_CameraPos(1, 0, 0.0f, -20.0f, 1058.215f);
 		EV_CameraAng(1, 0, 0, 0, 0);
-		EV_CameraPerspective(1, 1, 7282);
+		EV_CameraPerspective(1, 1, 0x1C72);
 		EV_Wait(1);
-		EV_CameraPerspective(0, 90, 12743);
+		EV_CameraPerspective(0, 90, 0x31C7);
 		EV_SetPos(player, -0.88499999f, -71.0f, 1279.62f);
-		EV_SetAng(player, 0, 31840, 0);
+		EV_SetAng(player, 0, 0x7C60, 0);
 		EV_SetAction(player, &action_s_s0011_sonic, &SONIC_TEXLIST, 0.5f, 1, 8);
 		COverlaySetSpeed(WHITE, -0.016666668f);
 		EV_Wait(90);
@@ -43,8 +45,8 @@ void ev0021_s_enterpast(int state)
 		EV_SetAction(player, &action_s_s0013_sonic, &SONIC_TEXLIST, 0.25f, 0, 8);
 		EV_SerifWait();
 		EV_ClrFace(player);
-		EV_CameraAng(0, 0, 0, 51200, 0);
-		EV_CameraAng(0, 200, 0, 14848, 0);
+		EV_CameraAng(0, 0, 0, 0xC800, 0);
+		EV_CameraAng(0, 200, 0, 0x3A00, 0);
 		EV_Wait(40);
 		EV_SetFace(player, "DC");
 		EV_SerifPlay(594);
@@ -55,13 +57,13 @@ void ev0021_s_enterpast(int state)
 		EV_CameraPos(1, 0, -1.92f, -56.32f, 1310.62f);
 		EV_CameraAng(1, 0, 0, 0, 0);
 		EV_CameraPos(0, 90, -1.92f, -44.932999f, 1324.853f);
-		EV_CameraAng(0, 90, 64000, 0, 0);
+		EV_CameraAng(0, 90, 0xFA00, 0, 0);
 		EV_Wait(100);
 		break;
 	case 2:
 		EventSe_Close();
 		EV_SetPos(player, -0.88499999f, -71.0f, 1279.62f);
-		EV_SetAng(player, 0, 31840, 0);
+		EV_SetAng(player, 0, 0x7C60, 0);
 		EV_InitPlayer(0);
 		if(WHITE){
 			FreeTask(WHITE);

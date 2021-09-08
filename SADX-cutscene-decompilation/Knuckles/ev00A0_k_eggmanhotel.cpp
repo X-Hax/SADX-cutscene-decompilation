@@ -3,6 +3,9 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev00A0[] = { 0 };
+
+
 void ev00A0_k_eggmanhotel(int state)
 {
 	switch (state) {
@@ -15,25 +18,25 @@ void ev00A0_k_eggmanhotel(int state)
 		EV_CanselOn();
 		EV_InitPlayer(0);
 		BGM_Play(MusicIDs_eggman);
-		EV_CameraPerspective(1, 1, 20025);
+		EV_CameraPerspective(1, 1, 0x4E39);
 		EV_CreatePlayer(2, Eggman, -143.89f, 108.75f, 12.23f, 0, 42748, 0);
 		EV_Wait(1);
 		eggman = EV_GetPlayer(2);
 		EV_SetPos(eggman, -368.29999f, 0.0f, 1666.12f);
-		EV_SetAng(eggman, 0, 49812, 0);
+		EV_SetAng(eggman, 0, 0xC294, 0);
 		EV_ClrAction(eggman);
 		EV_SetAction(eggman, &action_g_0011_eggman, &EGGMAN_TEXLIST, 1.3f, 1, 8);
 		EV_SetPos(player, -342.29999f, 0.0f, 1653.25f);
-		EV_SetAng(player, 0, 56630, 0);
+		EV_SetAng(player, 0, 0xDD36, 0);
 		EV_CameraPos(0, 0, -329.04001f, 9.7200003f, 1658.38f);
-		EV_CameraAng(0, 0, 64905, 17920, 0);
+		EV_CameraAng(0, 0, 0xFD89, 0x4600, 0);
 		EV_Wait(20);
 		EV_CameraPos(0, 50, -355.72f, 8.0900002f, 1662.38f);
-		EV_CameraAng(0, 50, 64905, 17920, 0);
+		EV_CameraAng(0, 50, 0xFD89, 0x4600, 0);
 		EV_Wait(60);
 		EV_CameraPos(0, 0, -364.12f, 3.55f, 1670.98f);
-		EV_CameraAng(0, 0, 649, 56832, 0);
-		EV_CameraPerspective(1, 1, 12561);
+		EV_CameraAng(0, 0, 0x289, 0xDE00, 0);
+		EV_CameraPerspective(1, 1, 0x3111);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_k_k0001_knuckles, &KNUCKLES_TEXLIST, 0.5f, 0, 0);
 		EV_Wait(30);
@@ -76,13 +79,13 @@ void ev00A0_k_eggmanhotel(int state)
 		EV_SerifPlay(1169);
 		EV_MsgW(1, msgTbl_ev00A0[TextLanguage][2]); //"\aIt's gotta be a part of\nthe Master E"...
 		EV_CameraPos(0, 0, -355.12f, 5.4499998f, 1665.17f);
-		EV_CameraAng(0, 0, 531, 57626, 0);
+		EV_CameraAng(0, 0, 0x213, 0xE11A, 0);
 		EV_Wait(1);
 		EV_CameraPos(0, 10, -349.62f, 5.8600001f, 1659.37f);
-		EV_CameraAng(0, 10, 531, 57626, 0);
+		EV_CameraAng(0, 10, 0x213, 0xE11A, 0);
 		EV_Wait(60);
 		EV_CameraPos(0, 0, -351.95001f, 12.08f, 1624.6801f);
-		EV_CameraAng(0, 0, 64787, 25626, 0);
+		EV_CameraAng(0, 0, 0xFD13, 0x641A, 0);
 		EV_Wait(15);
 		EV_ClrFace(player);
 		EV_SetFace(player, "DE");
@@ -95,10 +98,10 @@ void ev00A0_k_eggmanhotel(int state)
 		EV_Wait(1);
 		EV_MovePoint2(player, -364.10001f, 0.0f, 1658.3f, 0.34999999f, 0.059999999f);
 		EV_CameraPos(0, 0, -355.12f, 5.4499998f, 1665.17f);
-		EV_CameraAng(0, 0, 531, 57626, 0);
+		EV_CameraAng(0, 0, 0x213, 0xE11A, 0);
 		EV_Wait(5);
 		EV_CameraPos(0, 30, -329.04001f, 9.7200003f, 1658.38f);
-		EV_CameraAng(0, 30, 64905, 17920, 0);
+		EV_CameraAng(0, 30, 0xFD89, 0x4600, 0);
 		EV_Wait(40);
 		EV_MsgClose();
 		break;
@@ -107,7 +110,7 @@ void ev00A0_k_eggmanhotel(int state)
 		crushLightOff();
 		EV_InitPlayer(0);
 		EV_SetPos(player, -364.10001f, 0.0f, 1658.3f);
-		EV_SetAng(player, 0, 50254, 0);
+		EV_SetAng(player, 0, 0xC44E, 0);
 		EV_Wait(1);
 		EV_RemovePlayer(2);
 		EV_Wait(1);

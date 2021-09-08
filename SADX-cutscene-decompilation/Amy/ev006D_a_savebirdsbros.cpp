@@ -3,6 +3,13 @@
 #include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
+PVMEntry texTbl_ev006D[] = {
+	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
+	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
+	(char*)("LOCKET"), &texlist_locket,
+	(char*)("ICM006D"), &texlist_icm006D
+};
+
 void ev006D_a_savebirdsbros(int state)
 {
 	switch (state) {
@@ -23,11 +30,11 @@ void ev006D_a_savebirdsbros(int state)
 		CIchimaie2_SetTextureId(hoge2, 1);
 		CIchimaie2_SetPriority(hoge2, -3.0f);
 		BGM_Play(MusicIDs_theamy);
-		EV_CreatePlayer(3, MilesTalesPrower, 340.01001f, 0.0099999998f, 1650.25f, 0, 17152, 0);
+		EV_CreatePlayer(3, MilesTalesPrower, 340.01001f, 0.0099999998f, 1650.25f, 0, 0x4300, 0);
 		//tails = EV_GetPlayer(3);
 		//EV_SetMode(tails, 0); //EV_GetPlayer(3) used too soon and tails is off-screen, so this line is useless.
 		EV_SetPos(player, 340.01001f, 0.0099999998f, 1630.25f);
-		EV_SetAng(player, 0, 30720, 0);
+		EV_SetAng(player, 0, 0x7800, 0);
 		KOTORI = SetEventBirdie0();
 		EV_SetPos(KOTORI, 340.01001f, 0.0099999998f, 1630.25f);
 		EV_SetAng(KOTORI,
@@ -42,7 +49,7 @@ void ev006D_a_savebirdsbros(int state)
 		EV_Wait(1);
 		throughplayer_on(player);
 		EV_CameraPos(0, 0, -10.22f, 40.720001f, 1504.89f);
-		EV_CameraAng(0, 0, 65024, 30464, 0);
+		EV_CameraAng(0, 0, 0xFE00, 0x7700, 0);
 		tails->twp->timer.b[3] |= 4u;
 		create_task_gattai_EV006D();
 		EV_Wait(20);
@@ -61,11 +68,11 @@ void ev006D_a_savebirdsbros(int state)
 		EV_ClrPath(KOTORI);
 		EV_SetMode(player, 3);
 		EV_SetPos(player, -18.4f, 0.0f, 1534.46f);
-		EV_SetAng(player, 0, 30720, 0);
+		EV_SetAng(player, 0, 0x7800, 0);
 		EV_SetAction(player, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_SetMode(tails, 3);
 		EV_SetPos(tails, -11.85f, 0.0f, 1545.28f);
-		EV_SetAng(tails, 0, 17152, 0);
+		EV_SetAng(tails, 0, 0x4300, 0);
 		EV_ClrAction(tails);
 		EV_SetAction(tails, &action_m_m0109_miles, &MILES_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(10);
@@ -78,7 +85,7 @@ void ev006D_a_savebirdsbros(int state)
 		EV_SetAction(KOTORI, &action_w_w9001_wing, &VER2_WING_TEXLIST, 1.0f, 1, 0);
 		EV_Wait(10);
 		EV_CameraPos(1, 0, -2.6199999f, 9.3000002f, 1473.1801f);
-		EV_CameraAng(1, 0, 65024, 30720, 0);
+		EV_CameraAng(1, 0, 0xFE00, 0x7800, 0);
 		EV_CameraPos(1, 120, -10.22f, 7.3800001f, 1511.38f);
 		EV_SetAction(player, &action_a_a0827_amy, &AMY_TEXLIST, 1.0f, 0, 8);
 		EV_SetAction(player, AMY_ACTIONS[69], &AMY_TEXLIST, 1.0f, 1, 0);
@@ -101,7 +108,7 @@ void ev006D_a_savebirdsbros(int state)
 		EV_ClrFace(player);
 		EV_Wait(40);
 		EV_CameraPos(1, 180, -15.93f, 2.9200001f, 1519.62f);
-		EV_CameraAng(1, 180, 768, 30720, 0);
+		EV_CameraAng(1, 180, 0x300, 0x7800, 0);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_a_a0831_amy, &AMY_TEXLIST, 0.5f, 1, 32);
 		EV_Wait(60);
@@ -152,7 +159,7 @@ void ev006D_a_savebirdsbros(int state)
 		moveObjectOn(KOTORI, 0.0f, 1.0f, 0.0f, 480, player);
 		EV_CameraTargetObj(1, 0, player, 0.0f, 5.0f, 0.0f, 0);
 		EV_CameraPos(1, 0, 15.409f, 9.6499996f, 1541.035f);
-		EV_CameraAng(1, 0, 64000, 15616, 0);
+		EV_CameraAng(1, 0, 0xFA00, 0x3D00, 0);
 		EV_CameraChase(player);
 		EV_Wait(40);
 		EV_SetFace(player, "CDEDCDEC");
@@ -182,8 +189,8 @@ void ev006D_a_savebirdsbros(int state)
 		EV_Wait(10);
 		EV_CameraTargetFree();
 		EV_CameraPos(1, 0, -113.545f, 10.0f, 1486.52f);
-		EV_CameraAng(1, 0, 0, 48896, 0);
-		EV_CameraPerspective(1, 1, 7282);
+		EV_CameraAng(1, 0, 0, 0xBF00, 0);
+		EV_CameraPerspective(1, 1, 0x1C72);
 		CIchimaie2_SetDstAlpha(hoge1, 1.0f, 1);
 		playModel(1, 0, 0.0000099999997f, 1);
 		EV_Wait(7);
@@ -199,7 +206,7 @@ void ev006D_a_savebirdsbros(int state)
 		EV_CameraPos(0, 0, 102.383f, 7.5229998f, 1506.658f);
 		EV_CameraTargetObj(1, 0, player, 0.0f, 5.0f, 0.0f, 0);
 		CIchimaie2_SetDstAlpha(hoge2, 0.0f, 40);
-		EV_CameraPerspective(1, 30, 12743);
+		EV_CameraPerspective(1, 30, 0x31C7);
 		EV_Wait(1);
 		EV_SetAction(KOTORI, &action_w_w0833_wing, &VER1_WING_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(player, &action_a_a0833_amy, &AMY_TEXLIST, 1.0f, 1, 0);
@@ -225,12 +232,12 @@ void ev006D_a_savebirdsbros(int state)
 		EV_MsgClose();
 		EV_WaitMove(player);
 		stopObject(KOTORI);
-		EV_SetAng(player, 0, 6243, 0);
-		EV_SetAng(KOTORI, 0, 6243, 0);
+		EV_SetAng(player, 0, 0x1863, 0);
+		EV_SetAng(KOTORI, 0, 0x1863, 0);
 		moveObjectOn(KOTORI, 0.0f, 0.5f, 0.0f, 600, player);
 		EV_CameraTargetFree();
 		EV_CameraPos(1, 0, 121.319f, 9.6990004f, 1536.274f);
-		EV_CameraAng(1, 0, 62878, 4288, 0);
+		EV_CameraAng(1, 0, 0xF59E, 0x10C0, 0);
 		EV_SetAction(player, &action_a_a0837_amy, &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_SetAction(KOTORI, &action_w_w0837_wing, &VER1_WING_TEXLIST, 1.0f, 1, 0);
 		EV_SetFace(player, "CD");
@@ -262,7 +269,7 @@ void ev006D_a_savebirdsbros(int state)
 		EV_MsgCls();
 		EV_Wait(1);
 		EV_CameraPos(1, 0, 157.75999f, 17.271f, 1566.0f);
-		EV_CameraAng(1, 0, 1536, 6656, 0);
+		EV_CameraAng(1, 0, 0x600, 0x1A00, 0);
 		EV_ClrAction(player);
 		EV_SetAction(player, &action_a_a0832_amy, &AMY_TEXLIST, 1.0f, 1, 0);
 		EV_FreeObject(&KOTORI);
@@ -275,6 +282,7 @@ void ev006D_a_savebirdsbros(int state)
 		EV_Wait(60);
 		break;
 	case 2:
+		tails = EV_GetPlayer(3);
 		if (tails)
 		{
 			tails->twp->timer.b[3] &= ~4u;
@@ -292,7 +300,6 @@ void ev006D_a_savebirdsbros(int state)
 			hoge2 = 0;
 		}
 		EV_SetPos(player, 82.669998f, 0.0f, 1486.1851f);
-		EV_ClrPath(tails);
 		EV_SetMode(player, 3);
 		EV_SetMode(tails, 3);
 		delete_task_gattai_EV006D();
