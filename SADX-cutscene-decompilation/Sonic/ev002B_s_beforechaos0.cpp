@@ -1,11 +1,11 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev002B[] = {
 	(char*)("MP_10000_POLICE"), &texlist_mp_10000_POLICE,
-	(char*)("BULLET"), &texlist_bullet
+	(char*)("BULLET"), &texlist_bullet,
+	0
 };
 
 void ev002B_s_beforechaos0(int state)

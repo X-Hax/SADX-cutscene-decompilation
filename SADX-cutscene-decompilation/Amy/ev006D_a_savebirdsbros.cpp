@@ -1,13 +1,13 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev006D[] = {
 	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
 	(char*)("LOCKET"), &texlist_locket,
-	(char*)("ICM006D"), &texlist_icm006D
+	(char*)("ICM006D"), &texlist_icm006D,
+	0
 };
 
 void ev006D_a_savebirdsbros(int state)

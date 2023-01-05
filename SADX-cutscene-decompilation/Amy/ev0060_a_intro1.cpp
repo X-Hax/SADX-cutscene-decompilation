@@ -1,12 +1,12 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0060[] = {
 	(char*)("FPACK"), &texlist_fpack,
 	(char*)("EV_S_MSBODY"), &texlist_ev_s_msbody,
-	(char*)("ICM0060"), &texlist_icm0060
+	(char*)("ICM0060"), &texlist_icm0060,
+	0
 };
 
 void ev0060_a_intro1(int state)

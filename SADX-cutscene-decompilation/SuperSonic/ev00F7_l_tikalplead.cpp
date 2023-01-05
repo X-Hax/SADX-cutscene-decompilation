@@ -1,6 +1,5 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00F7[] = {
@@ -16,7 +15,8 @@ PVMEntry texTbl_ev00F7[] = {
 	(char*)("M_EM_WHITE"), &M_EM_WHITE_TEXLIST,
 	(char*)("M_EM_YELLOW"), &M_EM_YELLOW_TEXLIST,
 	(char*)("EV_ALIFE"), ADV03_TEXLISTS[0],
-	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST
+	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST,
+	0
 };
 
 void ev00F7_l_tikalplead(int state)

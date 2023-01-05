@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00DD[] = {
-	(char*)("FROG"), &texlist_frog
+	(char*)("FROG"), &texlist_frog,
+	0
 };
 
 void ev00DD_b_leavepast(int state)

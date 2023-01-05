@@ -1,6 +1,5 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0069[] = {
@@ -8,7 +7,8 @@ PVMEntry texTbl_ev0069[] = {
 	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
 	(char*)("MGHAND"), &MGHAND_TEXLIST,
-	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST
+	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST,
+	0
 };
 
 void ev0069_a_eggmantakesbirdie(int state)

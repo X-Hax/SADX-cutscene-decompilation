@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0055[] = {
-	(char*)("FROG"), &texlist_frog
+	(char*)("FROG"), &texlist_frog,
+	0
 };
 
 void ev0055_t_sandhill(int state)

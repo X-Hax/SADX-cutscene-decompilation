@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0099[] = {
-	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST
+	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
+	0
 };
 
 void ev0099_k_beforechaos6(int state)

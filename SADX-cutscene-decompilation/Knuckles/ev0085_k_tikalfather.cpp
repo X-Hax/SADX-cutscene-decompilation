@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0085[] = {
-	(char*)("EV_K_PATYA"), ADV03_TEXLISTS[1]
+	(char*)("EV_K_PATYA"), ADV03_TEXLISTS[1],
+	0
 };
 
 void ev0085_k_tikalfather(int state)

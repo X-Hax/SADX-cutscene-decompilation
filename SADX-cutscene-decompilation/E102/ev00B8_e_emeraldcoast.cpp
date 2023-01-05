@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00B8[] = {
-	(char*)("BIG_KAERU"), &big_kaeru_TEXLIST
+	(char*)("BIG_KAERU"), &big_kaeru_TEXLIST,
+	0
 };
 
 void ev00B8_e_emeraldcoast(int state)

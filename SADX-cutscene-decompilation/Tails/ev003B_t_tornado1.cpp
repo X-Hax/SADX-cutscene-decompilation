@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev003B[] = {
-	(char*)("EV_TR1_WITH_SONIC"), &EV_TR1_WITH_SONIC_TEXLIST
+	(char*)("EV_TR1_WITH_SONIC"), &EV_TR1_WITH_SONIC_TEXLIST,
+	0
 };
 
 void ev003B_t_tornado1(int state)
@@ -18,7 +18,7 @@ void ev003B_t_tornado1(int state)
 		EV_CameraOn();
 		EV_PadOff();
 		EV_CanselOn();
-		EV_CreateObjectFunc(&PLANE, object_tr1_s_t1_body_s_t1_body, 1475.05f, 209.89999f, 779.59003f, 0, 0x6600, 0);
+		EV_CreateObjectFunc(&PLANE, CreateEventObjectTR, 1475.05f, 209.89999f, 779.59003f, 0, 0x6600, 0);
 		EV_SetMode(PLANE, 0);
 		EV_SetAction(PLANE, action_tr1_s_t1_body, &EV_TR1_WITH_SONIC_TEXLIST, 0.001f, 1, 1);
 		g_SonicObj_EV003B();

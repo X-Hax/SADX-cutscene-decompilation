@@ -1,6 +1,5 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00DE[] = {
@@ -8,7 +7,8 @@ PVMEntry texTbl_ev00DE[] = {
 	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST,
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("CHAOS4_COMMON"), &CHAOS4_COMMON_TEXLIST,
-	(char*)("SHAPE_FROG"), &texlist_shape_frog
+	(char*)("SHAPE_FROG"), &texlist_shape_frog,
+	0
 };
 
 void ev00DE_b_chaos6(int state)

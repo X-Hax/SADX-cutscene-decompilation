@@ -1,6 +1,6 @@
 #pragma once
 #include "SADXModLoader.h"
-#include "SADXEventStructs.h"
+#include "SADXModelsNew.h"
 
 //Character Faces Table
 DataArray(FACETBL, faceTable, 0x91CEC8, 160);
@@ -280,7 +280,6 @@ extern task* zero;
 extern int enableUnusedCode;
 
 //EV0001
-DataArray(char, seqVars, 0x3B18808, 512);
 DataPointer(NJS_ACTION, action_sspatcar_body, 0x2DC028C);
 DataPointer(NJS_ACTION, action_c0_heli_body, 0x2DBD864);
 DataPointer(NJS_ACTION, action_s_s0089_sonic, 0x03C84A08);
@@ -378,7 +377,6 @@ DataPointer(NJS_ACTION, action_gm_gm0032_eggmoble, 0x2D44434);
 DataPointer(NJS_TEXLIST, CAPTUREBEAM_TEXLIST, 0x30B0104);
 
 //EV000C
-DataPointer(NJS_OBJECT, object_ecff_bf_s_fbody_bf_s_fbody, 0x24960A8);
 DataPointer(NJS_TEXLIST, texlist_ec_light, 0x2BF4F2C);
 DataPointer(NJS_ACTION, action_ecff_bf_s_fbody, 0x24983CC);
 
@@ -446,7 +444,6 @@ DataPointer(NJS_ACTION, action_e_e0002_e102, 0x3C84AB0);
 DataPointer(NJS_ACTION, action_s_s0007_sonic, 0x3C84A78);
 DataPointer(NJS_ACTION, action_s_s0005_sonic, 0x3C84A90);
 DataPointer(NJS_ACTION, action_s_s0012_sonic, 0x3C84AA0);
-DataPointer(NJS_OBJECT, object_sonic_s_r_a5_01_s_r_a5_01, 0x2DD8708);
 
 //EV001C
 DataPointer(NJS_ACTION, action_b_b0014_big, 0x3C84A28);
@@ -525,7 +522,6 @@ DataPointer(NJS_ACTION, action_m_m0109_miles, 0x3C84E44);
 DataPointer(NJS_ACTION, action_m_m0111_miles, 0x3C84E4C);
 
 //EV002B
-DataPointer(int, pause_flg, 0x3B28114);
 DataPointer(NJS_ACTION, action_mp_10001_POLICE, 0x337E734);
 DataPointer(NJS_ACTION, action_mp_10002_POLICE, 0x3380B7C);
 DataPointer(NJS_ACTION, action_mp_10003_POLICE, 0x3382FB4);
@@ -597,7 +593,6 @@ DataPointer(NJS_ACTION, action_m_m0129_miles, 0x3C854AC);
 
 //EV0042
 DataPointer(NJS_ACTION, action_m_em_red, 0x2CBDF44);
-DataPointer(NJS_TEXLIST, texlist_m_em_red, 0x2CBCF48);
 DataPointer(NJS_ACTION, _action_f_f0001_frog, 0x2CBB4DC);
 DataPointer(NJS_TEXLIST, texlist_frog, 0x2DC95D8);
 DataPointer(NJS_ACTION, _action_f_f0002_frog, 0x2CBCF34);
@@ -649,8 +644,6 @@ DataPointer(EPATHTAG, epathtag_cube004c_22, 0x2BEC368);
 DataPointer(EPATHTAG, epathtag_cube004c_19, 0x2BEB6E0);
 
 //EV004D
-DataPointer(int, ssActNumber, 0x3B22DEC);
-DataPointer(NJS_POINT3, gSkyScale, 0x3ABDC94);
 DataPointer(NJS_ACTION, action_m_m0002_miles, 0x3C60034);
 DataPointer(EPATHTAG, epathtag_cube_006d_14, 0x2BE9A18);
 DataPointer(NJS_ACTION, action_a_a0011_amy, 0x3C84868);
@@ -764,7 +757,6 @@ DataPointer(NJS_ACTION, action_a_a0137_amy, 0x3C85398);
 DataPointer(NJS_ACTION, action_a_a0114_amy, 0x3C850A4);
 
 //EV0066
-DataPointer(NJS_OBJECT, object_baloon_esc_baloon_esc_baloon, 0x8BE194);
 DataPointer(EPATHTAG, epathtag_ev0066_amy, 0x2BE3678);
 
 //EV0068
@@ -796,7 +788,6 @@ DataPointer(NJS_ACTION, action_a_a0833_amy, 0x3C852E8);
 DataPointer(NJS_ACTION, action_w_w0833_wing, 0x32034F4);
 DataPointer(NJS_ACTION, action_a_a0836_amy, 0x3C852A8);
 DataPointer(NJS_ACTION, action_w_w0836_wing, 0x320584C);
-DataPointer(NJS_OBJECT, object_locket_locket, 0x2BE2E28);
 DataPointer(NJS_TEXLIST, texlist_locket, 0x2BE1FA0);
 DataPointer(NJS_ACTION, action_locket, 0x2BE311C);
 DataPointer(NJS_ACTION, action_a_a0837_amy, 0x3C852D8);
@@ -992,9 +983,6 @@ DataPointer(NJS_ACTION, action_e_hwait0_e103, 0x30B6344);
 DataPointer(NJS_ACTION, action_e_hwait0_e104, 0x30BB44C);
 DataPointer(NJS_ACTION, action_e_hwait0_e105, 0x30C0554);
 DataPointer(NJS_ACTION, _action_f_f0003_frog, 0x30C8D7C);
-DataPointer(NJS_OBJECT, object_f_frog1_f_frog1, 0x30CB4F8);
-DataPointer(NJS_OBJECT, object_f_frog2_f_frog2, 0x30CDB28);
-DataPointer(NJS_OBJECT, object_f_frog3_f_frog3, 0x30D0160);
 DataPointer(NJS_MOTION, motion_ff_00001, 0x30D24A8);
 DataPointer(NJS_MOTION, motion_ff_00002, 0x30D54B0);
 DataPointer(NJS_MOTION, motion_ff_00003, 0x30D7878);
@@ -1119,7 +1107,6 @@ DataPointer(EPATHTAG, epathtag_CEMS00DE, 0x2BD6E90);
 
 //EV00DF
 DataPointer(NJS_ACTION, action_b_b0035_big, 0x3C84FEC);
-DataPointer(NJS_OBJECT, object_shape_frog_frog, 0x2FF48B4);
 DataPointer(NJS_MOTION*, motion_f_f0017_frog, 0x300A7C8);
 DataPointer(NJS_MOTION*, motion_f_f0018_frog, 0x3014EA8);
 DataPointer(NJS_MOTION*, motion_f_f0015_frog, 0x3007920);
@@ -1127,7 +1114,6 @@ DataPointer(NJS_MOTION*, motion_f_f0016_frog, 0x3013750);
 DataPointer(NJS_ACTION, action_b_b0034_big, 0x3C84FF4);
 
 //EV00E2
-DataPointer(NJS_OBJECT, _object_tr2crash_tr2crash, 0x2F67B78);
 DataPointer(NJS_TEXLIST, texlist_tr2crash, 0x2F61C00);
 DataPointer(PADREC_DATA_TAG, EV00E2B, 0x84F578);
 DataPointer(NJS_ACTION, action_b_b0032_big, 0x3C84D84);
@@ -1201,7 +1187,6 @@ DataPointer(NJS_ACTION, action_gm_gm0036_eggmoble, 0x2E2C844);
 DataPointer(NJS_ACTION, action_s_s0072_sonic, 0x3C84B58);
 DataPointer(NJS_ACTION, action_s_s0073_sonic, 0x3C84B60);
 DataPointer(EPATHTAG, epathtag_EV00FD_TK, 0x2BD4E28);
-DataPointer(NJS_TEXLIST, texlist_m_em_black, 0x2E2C858);
 DataPointer(NJS_TEXLIST, LAST1A_HIGHWAY_A_TEXLIST, 0x2E387F8);
 
 //EV00FE

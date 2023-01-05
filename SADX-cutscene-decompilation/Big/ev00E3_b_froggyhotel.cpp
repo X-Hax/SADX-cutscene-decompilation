@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00E3[] = {
-	(char*)("FROG"), &texlist_frog
+	(char*)("FROG"), &texlist_frog,
+	0
 };
 
 void ev00E3_b_froggyhotel(int state)

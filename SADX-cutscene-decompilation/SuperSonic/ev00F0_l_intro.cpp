@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00F0[] = {
-	(char*)("TR2CRASH"), &texlist_tr2crash
+	(char*)("TR2CRASH"), &texlist_tr2crash,
+	0
 };
 
 void ev00F0_l_intro(int state)

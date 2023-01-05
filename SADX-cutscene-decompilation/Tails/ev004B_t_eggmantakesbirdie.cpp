@@ -1,13 +1,13 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev004B[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("MGHAND"), &MGHAND_TEXLIST,
 	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST,
-	(char*)("VER2_WING"), &VER2_WING_TEXLIST
+	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
+	0
 };
 
 void ev004B_t_eggmantakesbirdie(int state)

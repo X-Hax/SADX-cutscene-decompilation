@@ -1,13 +1,13 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0087[] = {
 	(char*)("M_EM_WHITE"), &M_EM_WHITE_TEXLIST,
 	(char*)("EV_CHAOS1"), &EV_CHAOS1_TEXLIST,
 	(char*)("EV_CHAOS0_MANJU"), &EV_CHAOS0_MANJU_TEXLIST,
-	(char*)("CHAOS_SURFACE"), &CHAOS_SURFACE_TEXLIST
+	(char*)("CHAOS_SURFACE"), &CHAOS_SURFACE_TEXLIST,
+	0
 };
 
 void ev0087_k_chaos2(int state)

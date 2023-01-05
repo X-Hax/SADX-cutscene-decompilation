@@ -1,11 +1,11 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev006A[] = {
 	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
-	(char*)("VER2_WING"), &VER2_WING_TEXLIST
+	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
+	0
 };
 
 void ev006A_a_escapecarrier(int state)

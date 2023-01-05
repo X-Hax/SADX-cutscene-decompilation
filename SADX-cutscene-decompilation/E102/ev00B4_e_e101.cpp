@@ -1,11 +1,11 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00B4[] = {
 	(char*)("EV_E101_BODY"), &texlist_ev_e101_body,
-	(char*)("EV_E101_FUN"), &EV_E101_FUN_TEXLIST
+	(char*)("EV_E101_FUN"), &EV_E101_FUN_TEXLIST,
+	0
 };
 
 void ev00B4_e_e101(int state)

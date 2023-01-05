@@ -1,7 +1,6 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
 #include "SADXEventList.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 extern "C"
@@ -9,6 +8,11 @@ extern "C"
 	__declspec(dllexport) ModInfo SADXModInfo = { ModLoaderVer };
 	__declspec(dllexport) void __cdecl Init(const char* path, const HelperFunctions& helperFunctions)
 	{
+		/* ***DELETE ANY EVENTS YOU DON'T USE***
+		* It makes build time a lot faster and you won't run into problems with other mods from overwriting all of them.
+		* texTbls must end with 0 or the game will crash.
+		*/
+
 		//Main event code
 		CutsceneDataList[0x0001]->Function = ev0001_s_intro;
 		CutsceneDataList[0x0002]->Function = ev0002_s_chaos0defeated;

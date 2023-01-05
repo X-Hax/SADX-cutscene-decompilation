@@ -1,12 +1,12 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0016[] = {
 	(char*)("CAPTUREBEAM"), &CAPTUREBEAM_TEXLIST,
 	(char*)("AMY_EGGROBO"), &AMY_EGGROBO_TEXLIST,
-	(char*)("EC_LIGHT"), &texlist_ec_light
+	(char*)("EC_LIGHT"), &texlist_ec_light,
+	0
 };
 
 void ev0016_s_zeroboardsec(int state)

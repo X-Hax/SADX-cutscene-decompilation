@@ -1,11 +1,11 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00FA[] = {
 	(char*)("TR2CRASH"), &texlist_tr2crash,
-	(char*)("L_SIBUKI"), &L_SIBUKI_TEXLIST
+	(char*)("L_SIBUKI"), &L_SIBUKI_TEXLIST,
+	0
 };
 
 void ev00FA_l_tornado2(int state)

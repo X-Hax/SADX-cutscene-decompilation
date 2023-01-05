@@ -1,6 +1,5 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00B7[] = {
@@ -9,7 +8,8 @@ PVMEntry texTbl_ev00B7[] = {
 	(char*)("EV_E103_BODY"), &texlist_ev_e103_body,
 	(char*)("EV_E104_BODY"), &texlist_ev_e104_body,
 	(char*)("EV_E105_BODY"), &texlist_ev_e105_body,
-	(char*)("EV_SPOTLIGHT"), &EV_SPOTLIGHT_TEXLIST
+	(char*)("EV_SPOTLIGHT"), &EV_SPOTLIGHT_TEXLIST,
+	0
 };
 
 void ev00B7_e_fanfare(int state)

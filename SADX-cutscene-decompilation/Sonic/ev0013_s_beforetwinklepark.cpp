@@ -1,12 +1,12 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0013[] = {
 	(char*)("AMY"), &AMY_TEXLIST,
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
-	(char*)("EGGROB"), &EGGROB_TEXLIST
+	(char*)("EGGROB"), &EGGROB_TEXLIST,
+	0
 };
 
 void ev0013_s_beforetwinklepark(int state)

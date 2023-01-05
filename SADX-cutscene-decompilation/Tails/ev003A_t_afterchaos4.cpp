@@ -1,12 +1,12 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev003A[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("CAPTUREBEAM"), &CAPTUREBEAM_TEXLIST,
-	(char*)("EC_LIGHT"), &texlist_ec_light
+	(char*)("EC_LIGHT"), &texlist_ec_light,
+	0
 };
 
 void ev003A_t_afterchaos4(int state)

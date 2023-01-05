@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0003[] = {
-	(char*)("EV_S_T2C_BODY"), &EV_S_T2C_BODY_TEXLIST
+	(char*)("EV_S_T2C_BODY"), &EV_S_T2C_BODY_TEXLIST,
+	0
 };
 
 void ev0003_s_tailscrash(int state)

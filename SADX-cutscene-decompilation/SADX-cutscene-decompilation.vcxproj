@@ -35,7 +35,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v140_xp</PlatformToolset>
+    <PlatformToolset>v141_xp</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -102,7 +102,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\josh\source\repos\SADX-cutscene-decompilation\SADX-cutscene-decompilation;C:\Users\josh\source\repos\SADX-cutscene-decompilation\sadx-mod-loader\SADXModLoader\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)sadx-mod-loader\SADXModLoader\include;$(SolutionDir)SADX-cutscene-decompilation\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -350,10 +350,9 @@
     <ClCompile Include="Tails\ev0040_t_afterflashback.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SADXEventFunctions.h" />
-    <ClInclude Include="SADXEventList.h" />
-    <ClInclude Include="SADXEventStructs.h" />
-    <ClInclude Include="SADXEventVariables.h" />
+    <ClInclude Include="include\SADXEventFunctions.h" />
+    <ClInclude Include="include\SADXEventList.h" />
+    <ClInclude Include="include\SADXEventVariables.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
