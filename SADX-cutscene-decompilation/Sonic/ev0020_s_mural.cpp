@@ -3,7 +3,8 @@
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0020[] = {
-	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST
+	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST,
+	0
 };
 
 void ev0020_s_mural(int state)

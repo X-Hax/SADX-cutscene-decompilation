@@ -1,12 +1,12 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0009[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("CAPTUREBEAM"), &CAPTUREBEAM_TEXLIST,
-	(char*)("M_EM_WHITE"), &M_EM_WHITE_TEXLIST
+	(char*)("M_EM_WHITE"), &M_EM_WHITE_TEXLIST,
+	0
 };
 
 void ev0009_s_aftercasinopolis(int state)

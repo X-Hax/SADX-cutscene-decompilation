@@ -1,11 +1,11 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00E2[] = {
 	(char*)("FROG"), &texlist_frog,
-	(char*)("TR2CRASH"), &texlist_tr2crash
+	(char*)("TR2CRASH"), &texlist_tr2crash,
+	0
 };
 
 void ev00E2_b_outro(int state)

@@ -1,6 +1,5 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00FD[] = {
@@ -8,7 +7,8 @@ PVMEntry texTbl_ev00FD[] = {
 	(char*)("EC_LIGHT"), &texlist_ec_light,
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("M_EM_BLUE"), &M_EM_BLUE_TEXLIST,
-	(char*)("M_EM_BLACK"), &texlist_m_em_black
+	(char*)("M_EM_BLACK"), &texlist_m_em_black,
+	0
 };
 
 void ev00FD_l_perfectchaos(int state)

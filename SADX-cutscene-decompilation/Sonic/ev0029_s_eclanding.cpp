@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0029[] = {
-	(char*)("EV_TR2CHANGE_WITH_SONIC"), &texlist_tr2b_s_tru2_body
+	(char*)("EV_TR2CHANGE_WITH_SONIC"), &texlist_tr2b_s_tru2_body,
+	0
 };
 
 void ev0029_s_eclanding(int state)

@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0006[] = {
-	(char*)("M_EM_PURPLE"), &M_EM_PURPLE_TEXLIST
+	(char*)("M_EM_PURPLE"), &M_EM_PURPLE_TEXLIST,
+	0
 };
 
 void ev0006_s_poolsidewithtails(int state)

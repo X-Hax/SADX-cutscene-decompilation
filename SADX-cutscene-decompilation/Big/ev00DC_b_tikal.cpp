@@ -1,10 +1,10 @@
 ﻿#include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00DC[] = {
-	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST
+	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST,
+	0
 };
 
 void ev00DC_b_tikal(int state)

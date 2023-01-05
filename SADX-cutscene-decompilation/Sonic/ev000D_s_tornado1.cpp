@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev000D[] = {
-	(char*)("EV_TR1_WITH_SONIC"), &EV_TR1_WITH_SONIC_TEXLIST
+	(char*)("EV_TR1_WITH_SONIC"), &EV_TR1_WITH_SONIC_TEXLIST,
+	0
 };
 
 void ev000D_s_tornado1(int state)
@@ -24,7 +24,7 @@ void ev000D_s_tornado1(int state)
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 0);
 		EV_CreatePlayer(3, MilesTalesPrower, 1418.05f, 201.80896f, 844.42999f, 0, 0x7A2D, 0);
 		EV_Wait(1);
-		EV_CreateObjectFunc(&PLANE, object_tr1_s_t1_body_s_t1_body, 1475.05f, 211.89999f, 779.59003f, 0, 0x6600, 0);
+		EV_CreateObjectFunc(&PLANE, CreateEventObjectTR, 1475.05f, 211.89999f, 779.59003f, 0, 0x6600, 0);
 		EV_SetMode(PLANE, 0);
 		EV_Wait(1);
 		EV_SetAction(PLANE, action_tr1_s_t1_body, &EV_TR1_WITH_SONIC_TEXLIST, 0.69999999f, 1, 1);

@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0052[] = {
-	(char*)("EV_ECCLOUD"), &EV_ECCLOUD_TEXLIST
+	(char*)("EV_ECCLOUD"), &EV_ECCLOUD_TEXLIST,
+	0
 };
 
 void ev0052_t_outro(int state)

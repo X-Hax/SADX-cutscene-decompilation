@@ -1,12 +1,12 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
 #include "SADXEventList.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0017[] = {
 	(char*)("EC_LIGHT"), &texlist_ec_light,
-	(char*)("EV_TR2BEFORE_WITH_SONIC"), &tr2_texlist
+	(char*)("EV_TR2BEFORE_WITH_SONIC"), &tr2_texlist,
+	0
 };
 
 void ev0017_s_tailsreunion(int state)

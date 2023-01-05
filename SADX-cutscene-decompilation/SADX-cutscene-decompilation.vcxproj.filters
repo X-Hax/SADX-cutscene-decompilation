@@ -662,16 +662,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SADXEventFunctions.h">
+    <ClInclude Include="include\SADXEventFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SADXEventList.h">
+    <ClInclude Include="include\SADXEventList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SADXEventStructs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SADXEventVariables.h">
+    <ClInclude Include="include\SADXEventVariables.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

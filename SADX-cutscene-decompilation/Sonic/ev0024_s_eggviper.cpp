@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0024[] = {
-	(char*)("F_EGG_ZANGAI"), &F_EGG_ZANGAI_TEXLIST
+	(char*)("F_EGG_ZANGAI"), &F_EGG_ZANGAI_TEXLIST,
+	0
 };
 
 void ev0024_s_eggviper(int state)

@@ -1,11 +1,11 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0047[] = {
 	(char*)("M_EM_RED"), &M_EM_RED_TEXLIST,
-	(char*)("EV_TR2BEFORE_WITH_SONIC"), &tr2_texlist
+	(char*)("EV_TR2BEFORE_WITH_SONIC"), &tr2_texlist,
+	0
 };
 
 void ev0047_t_tornado2(int state)

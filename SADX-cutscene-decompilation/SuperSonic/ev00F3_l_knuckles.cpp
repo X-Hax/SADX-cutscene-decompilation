@@ -1,6 +1,5 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00F3[] = {
@@ -12,7 +11,8 @@ PVMEntry texTbl_ev00F3[] = {
 	(char*)("M_EM_WHITE"), &M_EM_WHITE_TEXLIST,
 	(char*)("M_EM_YELLOW"), &M_EM_YELLOW_TEXLIST,
 	(char*)("EV_CHAOS0_MANJU"), &EV_CHAOS0_MANJU_TEXLIST,
-	(char*)("CHAOS_SURFACE"), &CHAOS_SURFACE_TEXLIST
+	(char*)("CHAOS_SURFACE"), &CHAOS_SURFACE_TEXLIST,
+	0
 };
 
 void ev00F3_l_knuckles(int state)

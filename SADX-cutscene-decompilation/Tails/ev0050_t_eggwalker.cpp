@@ -1,12 +1,12 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0050[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("EV_EGGMOBLE2"), &EV_EGGMOBLE2_TEXLIST,
-	(char*)("EV_EGGMAN_BODY"), & EV_EGGMAN_BODY_TEXLIST
+	(char*)("EV_EGGMAN_BODY"), & EV_EGGMAN_BODY_TEXLIST,
+	0
 };
 
 void ev0050_t_eggwalker(int state)

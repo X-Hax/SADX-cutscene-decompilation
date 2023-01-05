@@ -1,11 +1,11 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev008F[] = {
 	(char*)("EV_ALIFE"), ADV03_TEXLISTS[0],
-	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST
+	(char*)("WAVE7_WA"), &WAVE7_WA_TEXLIST,
+	0
 };
 
 void ev008F_k_tikalaltar(int state)

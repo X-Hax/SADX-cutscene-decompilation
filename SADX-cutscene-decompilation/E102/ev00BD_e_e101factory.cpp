@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00BD[] = {
-	(char*)("PVME101FACTORY"), &PVME101FACTORY_TEXLIST
+	(char*)("PVME101FACTORY"), &PVME101FACTORY_TEXLIST,
+	0
 };
 
 void ev00BD_e_e101factory(int state)

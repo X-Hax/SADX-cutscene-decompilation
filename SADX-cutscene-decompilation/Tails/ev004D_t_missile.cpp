@@ -1,12 +1,12 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev004D[] = {
 	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
-	(char*)("EGG_MISSILE"), &EGG_MISSILE_TEXLIST
+	(char*)("EGG_MISSILE"), &EGG_MISSILE_TEXLIST,
+	0
 };
 
 void ev004D_t_missile(int state)

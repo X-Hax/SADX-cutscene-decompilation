@@ -1,6 +1,5 @@
 ﻿#include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00E1[] = { 0 };

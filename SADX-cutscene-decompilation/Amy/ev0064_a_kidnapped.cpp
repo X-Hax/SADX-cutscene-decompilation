@@ -1,11 +1,11 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0064[] = {
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
-	(char*)("AMY_EGGROBO"), &AMY_EGGROBO_TEXLIST
+	(char*)("AMY_EGGROBO"), &AMY_EGGROBO_TEXLIST,
+	0
 };
 
 void ev0064_a_kidnapped(int state)

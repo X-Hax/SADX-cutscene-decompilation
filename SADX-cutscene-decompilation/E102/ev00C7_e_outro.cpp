@@ -1,6 +1,5 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00C7[] = {
@@ -8,7 +7,8 @@ PVMEntry texTbl_ev00C7[] = {
 	(char*)("WING_T"), &texlist_wing_t,
 	(char*)("WING_P"), &texlist_wing_p,
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
-	(char*)("ICM00C7"), &texlist_icm00C7
+	(char*)("ICM00C7"), &texlist_icm00C7,
+	0
 };
 
 void ev00C7_e_outro(int state)

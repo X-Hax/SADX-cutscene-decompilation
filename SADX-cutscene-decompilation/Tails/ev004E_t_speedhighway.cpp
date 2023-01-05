@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev004E[] = {
-	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST
+	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
+	0
 };
 
 void ev004E_t_speedhighway(int state)

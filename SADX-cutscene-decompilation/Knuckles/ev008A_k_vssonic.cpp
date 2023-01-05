@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev008A[] = {
-	(char*)("M_EM_GREEN"), & M_EM_GREEN_TEXLIST
+	(char*)("M_EM_GREEN"), & M_EM_GREEN_TEXLIST,
+	0
 };
 
 

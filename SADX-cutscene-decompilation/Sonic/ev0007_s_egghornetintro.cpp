@@ -1,6 +1,5 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0007[] = {
@@ -8,7 +7,8 @@ PVMEntry texTbl_ev0007[] = {
 	(char*)("EGM1JET"), &EGM1JET_TEXLIST,
 	(char*)("EGM1JETB"), &EGM1JETB_TEXLIST,
 	(char*)("EV_EGGMOBLE1"), &EV_EGGMOBLE1_TEXLIST,
-	(char*)("EV_EGGMAN_BODY"), &EV_EGGMAN_BODY_TEXLIST
+	(char*)("EV_EGGMAN_BODY"), &EV_EGGMAN_BODY_TEXLIST,
+	0
 };
 
 void ev0007_s_egghornetintro(int state)

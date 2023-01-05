@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0048[] = {
-	(char*)("EV_TR2BEFORE_WITH_SONIC"), &tr2_texlist
+	(char*)("EV_TR2BEFORE_WITH_SONIC"), &tr2_texlist,
+	0
 };
 
 void ev0048_t_sonicreunion(int state)

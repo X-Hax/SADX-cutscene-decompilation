@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0091[] = {
-	(char*)("EC_LIGHT"), &texlist_ec_light
+	(char*)("EC_LIGHT"), &texlist_ec_light,
+	0
 };
 
 void ev0091_k_leavepastsecond(int state)

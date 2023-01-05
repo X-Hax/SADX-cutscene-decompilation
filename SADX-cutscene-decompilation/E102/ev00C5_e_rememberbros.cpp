@@ -1,10 +1,10 @@
 #include "SADXModLoader.h"
 #include "SADXEventFunctions.h"
-#include "SADXEventStructs.h"
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00C5[] = {
-	(char*)("ICM00C5"), &texlist_icm00C5
+	(char*)("ICM00C5"), &texlist_icm00C5,
+	0
 };
 
 void ev00C5_e_rememberbros(int state)
