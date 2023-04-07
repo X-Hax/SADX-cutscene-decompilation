@@ -19,7 +19,7 @@ void ev0003_s_tailscrash(int state)
 		EV_InitPlayer(0);
 		SetBankDir(74);
 		EventSe_Init(3);
-		BGM_Play(MusicIDs_s_square);
+		BGM_Play(MusicIDs_thesonic);
 		BLACK = COverlayCreate(1.0f, 0.1f, 0.0f, 0.0f, 0.0f);
 		EV_LookFree(player);
 		EV_CameraPerspective(1, 1, 0x438E);
@@ -87,8 +87,6 @@ void ev0003_s_tailscrash(int state)
 		EV_SetAction(player, SONIC_ACTIONS[1], &SONIC_TEXLIST, 1.0f, 1, 0);
 		EV_SetFace(player, "CD");
 		EV_CameraChase(task_tornado);
-		EV_SerifPlay(414);
-		EV_Msg((msgTbl_ev0003[TextLanguage])[1]); // "\aWhat? Tails?"
 		EV_LookFree(player);
 		EV_LookPoint(player, -436.25f, 73.690002f, 1988.8666f);
 		EV_SetAng(player, 0, 0xE600, 0);
