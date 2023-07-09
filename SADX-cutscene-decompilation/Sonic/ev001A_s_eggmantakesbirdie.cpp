@@ -3,10 +3,10 @@
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev001A[] = {
-	(char*)("EV_TR1_WITH_SONIC"), &EV_EGGMOBLE0_TEXLIST,
-	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
+	(char*)("EV_EGGMOBLE0"), &EV_EGGMOBLE0_TEXLIST,
 	(char*)("MGHAND"), &MGHAND_TEXLIST,
 	(char*)("M_EM_SKY"), &M_EM_SKY_TEXLIST,
+	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
 	0
 };
 
