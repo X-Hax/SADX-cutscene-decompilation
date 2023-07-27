@@ -52,7 +52,7 @@ void ev004E_t_speedhighway(int state)
 		EV_ClrFace(player);
 		EV_SetFace(player, "F");
 		EV_SerifPlay(804);
-		EV_MsgW(60, msgTbl_ev004E[TextLanguage][0]); //"\aI've gotta get it \nbefore Eggman."
+		EV_MsgW(60, msgTbl_ev004E[TextLanguage][0]); //"\aI see it!"
 		EV_ClrFace(player);
 		EventSe_Play(0, 1338, 1800);
 		ChgEggMobleSMod(1);
@@ -94,7 +94,7 @@ void ev004E_t_speedhighway(int state)
 		EV_ClrFace(player);
 		EV_SetFace(player, "DADE");
 		EV_SerifPlay(805);
-		EV_MsgW(60, msgTbl_ev004E[TextLanguage][1]); //"\aThe fate of Station Square \ndepends "...
+		EV_MsgW(60, msgTbl_ev004E[TextLanguage][1]); //"\aI've gotta get it \nbefore Eggman."
 		EV_ClrFace(player);
 		EV_CameraPos(1, 120, 353.60001f, 13.59f, 1360.97f);
 		EV_CameraAng(1, 120, 0xEF00, 0x5F00, 0);
@@ -106,7 +106,7 @@ void ev004E_t_speedhighway(int state)
 		EV_ClrFace(player);
 		EV_SetFace(player, "NAANON");
 		EV_SerifPlay(806);
-		EV_MsgW(60, msgTbl_ev004E[TextLanguage][2]); //"\aSonic!"
+		EV_MsgW(60, msgTbl_ev004E[TextLanguage][2]); //"\aThe fate of Station Square \ndepends "...
 		EV_ClrFace(player);
 		EV_Wait(60);
 		EV_LookPoint(player,
@@ -114,7 +114,7 @@ void ev004E_t_speedhighway(int state)
 			player->twp->pos.y,
 			player->twp->pos.z);
 		EV_SerifPlay(807);
-		EV_Msg(msgTbl_ev004E[TextLanguage][3]); //"\aI've changed a lot since \nI started "...
+		EV_Msg(msgTbl_ev004E[TextLanguage][3]); //"\aSonic!"
 		EV_Wait(1);
 		EV_SerifWait();
 		EV_MsgCls();
@@ -134,7 +134,7 @@ void ev004E_t_speedhighway(int state)
 		EV_ClrFace(player);
 		EV_SetFace(player, "CAED");
 		EV_SerifPlay(808);
-		EV_MsgW(90, msgTbl_ev004E[TextLanguage][4]); //"\aBut I can't depend on him\nforever."
+		EV_MsgW(90, msgTbl_ev004E[TextLanguage][4]); //"\aI've changed a lot since \nI started "...
 		EV_ClrFace(player);
 		EV_Wait(60);
 		EV_CameraPos(1, 0, 351.26001f, 0.36000001f, 1382.4f);
@@ -150,7 +150,7 @@ void ev004E_t_speedhighway(int state)
 			EV_SetFace(player, "CE");
 		}
 		EV_SerifPlay(809);
-		EV_MsgW(90, msgTbl_ev004E[TextLanguage][5]);
+		EV_MsgW(90, msgTbl_ev004E[TextLanguage][5]); //"\aBut I can't depend on him\nforever."
 		EV_ClrFace(player);
 		EV_Wait(60);
 		EV_CameraPos(1, 0, 352.5f, 0.13f, 1361.89f);

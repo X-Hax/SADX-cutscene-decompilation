@@ -3,6 +3,7 @@
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev0048[] = {
+	(char*)("EC_LIGHT"), &texlist_ec_light,
 	(char*)("EV_TR2BEFORE_WITH_SONIC"), &tr2_texlist,
 	0
 };
