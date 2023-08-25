@@ -3,6 +3,7 @@
 #include "SADXEventVariables.h"
 
 PVMEntry texTbl_ev00C2[] = {
+	(char*)("VER1_WING"), &VER1_WING_TEXLIST,
 	(char*)("VER2_WING"), &VER2_WING_TEXLIST,
 	0
 };

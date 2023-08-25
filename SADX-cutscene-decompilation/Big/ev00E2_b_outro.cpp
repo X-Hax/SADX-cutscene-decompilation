@@ -4,6 +4,7 @@
 
 PVMEntry texTbl_ev00E2[] = {
 	(char*)("FROG"), &texlist_frog,
+	(char*)("SHAPE_FROG"), &texlist_shape_frog,
 	(char*)("TR2CRASH"), &texlist_tr2crash,
 	0
 };
